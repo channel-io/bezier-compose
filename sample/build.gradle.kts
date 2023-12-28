@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "io.channel.bezier.compose"
+    namespace = "io.channel.bezier.compose.sample"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "io.channel.bezier.compose"
+        applicationId = "io.channel.bezier.compose.sample"
         minSdk = 21
         targetSdk = 34
         versionCode = 1

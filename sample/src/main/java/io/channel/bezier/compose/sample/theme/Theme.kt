@@ -1,4 +1,4 @@
-package io.channel.bezier.compose.ui.theme
+package io.channel.bezier.compose.sample.theme
 
 import android.app.Activity
 import android.os.Build
