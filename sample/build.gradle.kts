@@ -48,6 +48,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":bezier"))
 
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
