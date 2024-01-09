@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- bg -->
+    <color name="bg_grey_darkest">@color/grey900</color>
+    <color name="bg_grey_dark">@color/grey500</color>
+    <color name="bg_grey_light">@color/grey200</color>
+    <color name="bg_grey_lighter">@color/grey100</color>
+    <color name="bg_grey_lightest">@color/grey50</color>
+
+    <color name="bg_black_darkest">@color/black_60</color>
+    <color name="bg_black_darker">@color/black_40</color>
+    <color name="bg_black_dark">@color/black_15</color>
+    <color name="bg_black_light">@color/black_8</color>
+    <color name="bg_black_lighter">@color/black_5</color>
+    <color name="bg_black_lightest">@color/black_3</color>
+
+    <color name="bg_white_high">@color/white</color>
+    <color name="bg_white_low">@color/white</color>
+    <color name="bg_white_normal">@color/white</color>
+
+    <!-- bdr -->
+    <color name="bdr_black_light">@color/black_8</color>
+    <color name="bdr_black_lightest">@color/black_3</color>
+
+    <!-- shdw -->
+    <color name="shdw_xlarge">@color/black_30</color>
+    <color name="shdw_large">@color/black_22</color>
+    <color name="shdw_medium">@color/black_15</color>
+    <color name="shdw_small">@color/black_8</color>
+    <color name="shdw_base">@color/black_5</color>
+    <color name="shdw_base_inner">@color/white_12</color>
+
+    <!-- txt -->
+    <color name="txt_black_darkest">@color/black_85</color>
+    <color name="txt_black_darker">@color/black_60</color>
+    <color name="txt_black_dark">@color/black_40</color>
+
+    <!-- dim -->
+    <color name="bg_white_dim_dark">@color/white_60</color>
+
+    <color name="txt_white_normal">@color/white</color>
+
+    <!-- bgtxt -->
+    <color name="bgtxt_red_dark">@color/red500</color>
+    <color name="bgtxt_red_normal">@color/red400</color>
+    <color name="bgtxt_red_light">@color/red400_30</color>
+    <color name="bgtxt_red_lighter">@color/red400_20</color>
+    <color name="bgtxt_red_lightest">@color/red400_10</color>
+
+    <color name="bgtxt_cobalt_dark">@color/cobalt500</color>
+    <color name="bgtxt_cobalt_normal">@color/cobalt400</color>
+    <color name="bgtxt_cobalt_light">@color/cobalt400_30</color>
+    <color name="bgtxt_cobalt_lighter">@color/cobalt400_20</color>
+    <color name="bgtxt_cobalt_lightest">@color/cobalt400_10</color>
+
+    <color name="bgtxt_green_dark">@color/green500</color>
+    <color name="bgtxt_green_normal">@color/green400</color>
+    <color name="bgtxt_green_light">@color/green400_30</color>
+    <color name="bgtxt_green_lighter">@color/green400_20</color>
+    <color name="bgtxt_green_lightest">@color/green400_10</color>
+    <color name="inverted_bgtxt_green_normal">@color/green300</color>
+
+    <color name="bgtxt_teal_normal">@color/teal400</color>
+
+    <color name="bgtxt_orange_dark">@color/orange500</color>
+    <color name="bgtxt_orange_normal">@color/orange400</color>
+    <color name="bgtxt_orange_light">@color/orange400_30</color>
+    <color name="bgtxt_orange_lighter">@color/orange400_20</color>
+    <color name="bgtxt_orange_lightest">@color/orange400_10</color>
+
+    <color name="bgtxt_yellow_dark">@color/yellow500</color>
+    <color name="bgtxt_yellow_normal">@color/yellow400</color>
+    <color name="bgtxt_yellow_light">@color/yellow400_30</color>
+    <color name="bgtxt_yellow_lighter">@color/yellow400_20</color>
+    <color name="bgtxt_yellow_lightest">@color/yellow400_10</color>
+
+    <color name="bgtxt_olive_dark">@color/olive500</color>
+    <color name="bgtxt_olive_normal">@color/olive400</color>
+    <color name="bgtxt_olive_light">@color/olive400_30</color>
+    <color name="bgtxt_olive_lighter">@color/olive400_20</color>
+    <color name="bgtxt_olive_lightest">@color/olive400_10</color>
+
+    <color name="bgtxt_pink_dark">@color/pink500</color>
+    <color name="bgtxt_pink_normal">@color/pink400</color>
+    <color name="bgtxt_pink_light">@color/pink400_30</color>
+    <color name="bgtxt_pink_lighter">@color/pink400_20</color>
+    <color name="bgtxt_pink_lightest">@color/pink400_10</color>
+
+    <color name="bgtxt_navy_dark">@color/navy500</color>
+    <color name="bgtxt_navy_normal">@color/navy400</color>
+    <color name="bgtxt_navy_light">@color/navy400_30</color>
+    <color name="bgtxt_navy_lighter">@color/navy400_20</color>
+    <color name="bgtxt_navy_lightest">@color/navy400_10</color>
+
+    <color name="bgtxt_blue_dark">@color/blue500</color>
+    <color name="bgtxt_blue_normal">@color/blue400</color>
+    <color name="bgtxt_blue_light">@color/blue400_30</color>
+    <color name="bgtxt_blue_lighter">@color/blue400_20</color>
+    <color name="bgtxt_blue_lightest">@color/blue400_10</color>
+
+    <color name="bgtxt_purple_dark">@color/purple500</color>
+    <color name="bgtxt_purple_normal">@color/purple400</color>
+    <color name="bgtxt_purple_light">@color/purple400_30</color>
+    <color name="bgtxt_purple_lighter">@color/purple400_20</color>
+    <color name="bgtxt_purple_lightest">@color/purple400_10</color>
+
+    <color name="bgtxt_absolute_white_dark">@color/white</color>
+    <color name="bgtxt_absolute_white_normal">@color/white_90</color>
+    <color name="bgtxt_absolute_white_light">@color/white_60</color>
+    <color name="bgtxt_absolute_white_lighter">@color/white_40</color>
+    <color name="bgtxt_absolute_white_lightest">@color/white_20</color>
+
+    <color name="bgtxt_absolute_black_dark">@color/black</color>
+    <color name="bgtxt_absolute_black_normal">@color/black_85</color>
+    <color name="bgtxt_absolute_black_light">@color/black_60</color>
+    <color name="bgtxt_absolute_black_lighter">@color/black_40</color>
+    <color name="bgtxt_absolute_black_lightest">@color/black_20</color>
+
+    <color name="bg_transparent">@color/white_0</color>
+
+</resources>

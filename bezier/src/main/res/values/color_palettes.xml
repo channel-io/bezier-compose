@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- blue -->
+
+    <color name="blue500">#4E40C9</color>
+
+    <color name="blue400">#5E56F0</color>
+    <color name="blue400_30">#4D5E56F0</color>
+    <color name="blue400_20">#335E56F0</color>
+    <color name="blue400_10">#1A5E56F0</color>
+
+    <color name="blue300">#6687FF</color>
+    <color name="blue300_40">#666687FF</color>
+    <color name="blue300_30">#4D6687FF</color>
+    <color name="blue300_20">#336687FF</color>
+
+
+    <!-- cobalt -->
+
+    <color name="cobalt500">#327AB8</color>
+
+    <color name="cobalt400">#329BE7</color>
+    <color name="cobalt400_30">#4D329BE7</color>
+    <color name="cobalt400_20">#33329BE7</color>
+    <color name="cobalt400_10">#1A329BE7</color>
+
+    <color name="cobalt300">#47C8FF</color>
+    <color name="cobalt300_40">#6647C8FF</color>
+    <color name="cobalt300_30">#4D47C8FF</color>
+    <color name="cobalt300_20">#3347C8FF</color>
+
+
+    <!-- teal -->
+
+    <color name="teal500">#449C8A</color>
+
+    <color name="teal400">#0FB3A3</color>
+    <color name="teal400_30">#4D0FB3A3</color>
+    <color name="teal400_20">#330FB3A3</color>
+    <color name="teal400_10">#1A0FB3A3</color>
+
+    <color name="teal300">#3CDDCD</color>
+    <color name="teal300_40">#663CDDCD</color>
+    <color name="teal300_30">#4D3CDDCD</color>
+    <color name="teal300_20">#333CDDCD</color>
+
+
+    <!-- green -->
+
+    <color name="green500">#41904F</color>
+
+    <color name="green400">#31A552</color>
+    <color name="green400_30">#4D31A552</color>
+    <color name="green400_20">#3331A552</color>
+    <color name="green400_10">#1A31A552</color>
+
+    <color name="green300">#3ACF5A</color>
+    <color name="green300_40">#663ACF5A</color>
+    <color name="green300_30">#4D3ACF5A</color>
+    <color name="green300_20">#333ACF5A</color>
+
+
+    <!-- olive -->
+
+    <color name="olive500">#818628</color>
+
+    <color name="olive400">#A0A540</color>
+    <color name="olive400_30">#4DA0A540</color>
+    <color name="olive400_20">#33A0A540</color>
+    <color name="olive400_10">#1AA0A540</color>
+
+    <color name="olive300">#CAD548</color>
+    <color name="olive300_40">#66CAD548</color>
+    <color name="olive300_30">#4DCAD548</color>
+    <color name="olive300_20">#33CAD548</color>
+
+
+    <!-- yellow -->
+
+    <color name="yellow500">#C39E37</color>
+
+    <color name="yellow400">#EDBC40</color>
+    <color name="yellow400_30">#4DEDBC40</color>
+    <color name="yellow400_20">#33EDBC40</color>
+    <color name="yellow400_10">#1AEDBC40</color>
+
+    <color name="yellow300">#FDD353</color>
+    <color name="yellow300_40">#66FDD353</color>
+    <color name="yellow300_30">#4DFDD353</color>
+    <color name="yellow300_20">#33FDD353</color>
+
+
+    <!-- orange -->
+
+    <color name="orange500">#C57417</color>
+
+    <color name="orange400">#F4800B</color>
+    <color name="orange400_30">#4DF4800B</color>
+    <color name="orange400_20">#33F4800B</color>
+    <color name="orange400_10">#1AF4800B</color>
+
+    <color name="orange300">#FFAB5C</color>
+    <color name="orange300_40">#66FFAB5C</color>
+    <color name="orange300_30">#4DFFAB5C</color>
+    <color name="orange300_20">#33FFAB5C</color>
+
+
+    <!-- red -->
+
+    <color name="red500">#AC3E46</color>
+
+    <color name="red400">#E94E58</color>
+    <color name="red400_30">#4DE94E58</color>
+    <color name="red400_20">#33E94E58</color>
+    <color name="red400_10">#1AE94E58</color>
+
+    <color name="red300">#FF5C5C</color>
+    <color name="red300_40">#66FF5C5C</color>
+    <color name="red300_30">#4DFF5C5C</color>
+    <color name="red300_20">#33FF5C5C</color>
+
+
+    <!-- pink -->
+
+    <color name="pink500">#A32E92</color>
+
+    <color name="pink400">#CB48AD</color>
+    <color name="pink400_30">#4DCB48AD</color>
+    <color name="pink400_20">#33CB48AD</color>
+    <color name="pink400_10">#1ACB48AD</color>
+
+    <color name="pink300">#EC6FD3</color>
+    <color name="pink300_40">#66EC6FD3</color>
+    <color name="pink300_30">#4DEC6FD3</color>
+    <color name="pink300_20">#33EC6FD3</color>
+
+
+    <!-- purple -->
+
+    <color name="purple500">#6B23B3</color>
+
+    <color name="purple400">#915CE0</color>
+    <color name="purple400_30">#4D915CE0</color>
+    <color name="purple400_20">#33915CE0</color>
+    <color name="purple400_10">#1A915CE0</color>
+
+    <color name="purple300">#B570FF</color>
+    <color name="purple300_40">#66B570FF</color>
+    <color name="purple300_30">#4DB570FF</color>
+    <color name="purple300_20">#33B570FF</color>
+
+
+    <!-- navy -->
+
+    <color name="navy500">#333D5B</color>
+
+    <color name="navy400">#3A4F8D</color>
+    <color name="navy400_30">#4D3A4F8D</color>
+    <color name="navy400_20">#333A4F8D</color>
+    <color name="navy400_10">#1A3A4F8D</color>
+
+    <color name="navy300">#647CC9</color>
+    <color name="navy300_40">#66647CC9</color>
+    <color name="navy300_30">#4D647CC9</color>
+    <color name="navy300_20">#33647CC9</color>
+
+
+    <!-- grey -->
+
+    <color name="grey900">#242428</color>
+    <color name="grey850">#2A2B2D</color>
+    <color name="grey800">#313234</color>
+    <color name="grey800_80">#CC313234</color>
+    <color name="grey700">#464748</color>
+    <color name="grey700_80">#CC464748</color>
+    <color name="grey500">#A7A7AA</color>
+    <color name="grey200">#EFEFF0</color>
+    <color name="grey200_80">#CCEFEFF0</color>
+    <color name="grey100">#F7F7F8</color>
+    <color name="grey100_80">#CCF7F7F8</color>
+    <color name="grey50">#FCFCFC</color>
+
+
+    <!--  black -->
+
+    <color name="black">#000000</color>
+    <color name="black_85">#D9000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="black_40">#66000000</color>
+    <color name="black_30">#4D000000</color>
+    <color name="black_22">#38000000</color>
+    <color name="black_20">#33000000</color>
+    <color name="black_15">#26000000</color>
+    <color name="black_8">#14000000</color>
+    <color name="black_5">#0D000000</color>
+    <color name="black_3">#08000000</color>
+    <color name="black_0">#00000000</color>
+
+
+    <!-- white -->
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_90">#E6FFFFFF</color>
+    <color name="white_80">#CCFFFFFF</color>
+    <color name="white_60">#99FFFFFF</color>
+    <color name="white_40">#66FFFFFF</color>
+    <color name="white_20">#33FFFFFF</color>
+    <color name="white_12">#1FFFFFFF</color>
+    <color name="white_8">#14FFFFFF</color>
+    <color name="white_5">#0DFFFFFF</color>
+    <color name="white_0">#00FFFFFF</color>
+
+</resources>

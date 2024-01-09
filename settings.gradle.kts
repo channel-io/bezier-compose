@@ -14,4 +14,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "BezierCompose"
-include(":app")
+include(":sample")
+include(":bezier")
