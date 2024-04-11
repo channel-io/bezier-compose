@@ -1,6 +1,6 @@
 package io.channel.bezier.compose.color_v2
 
-class SemanticTokens(functionalTokens: FunctionalTokens) {
+internal class SemanticTokens(functionalTokens: FunctionalTokens) {
     val success: BezierColor = SemanticToken(functionalTokens.bgTxtBlue)
     val failure: BezierColor = SemanticToken(functionalTokens.bgTxtRed)
 }

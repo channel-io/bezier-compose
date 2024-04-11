@@ -1,6 +1,6 @@
 package io.channel.bezier.compose.color_v2
 
-data class FunctionalTokens internal constructor(
+internal data class FunctionalTokens(
     val bgTxtBlue: BezierColor,
     val bgTxtRed: BezierColor,
 )

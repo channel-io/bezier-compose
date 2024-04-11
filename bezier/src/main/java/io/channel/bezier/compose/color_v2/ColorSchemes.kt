@@ -1,6 +1,6 @@
 package io.channel.bezier.compose.color_v2
 
-class ColorSchemes(
+class ColorSchemes internal constructor(
     functionalTokens: FunctionalTokens,
     semanticTokens: SemanticTokens,
 ) {
