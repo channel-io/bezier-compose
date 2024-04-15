@@ -10,7 +10,7 @@ internal class SemanticTokens(functionalTokens: FunctionalTokens) {
     val primaryFgLight: BezierColor = SemanticToken(functionalTokens.fgBlueLight)
     val primaryFgDark: BezierColor = SemanticToken(functionalTokens.fgBlueDark)
     val criticalBgDark: BezierColor = SemanticToken(functionalTokens.bgRedDark)
-    val criticalBgNormal: BezierColor = SemanticToken(functionalTokens.fgRedNormal)
+    val criticalBgNormal: BezierColor = SemanticToken(functionalTokens.bgRedNormal)
     val criticalBgLight: BezierColor = SemanticToken(functionalTokens.bgRedLight)
     val criticalBgLighter: BezierColor = SemanticToken(functionalTokens.bgRedLighter)
     val criticalBgLightest: BezierColor = SemanticToken(functionalTokens.bgRedLightest)
