@@ -15,9 +15,9 @@ color_palette_xml = os.path.join(root_path, "bezier/src/main/res/values/color_pa
 light_color_xml = os.path.join(root_path, "bezier/src/main/res/values/colors.xml")
 dark_color_xml = os.path.join(root_path, "bezier/src/main/res/values-night/colors.xml")
 
-f = open(os.path.join(root_path, "bezier/src/main/java/io/channel/bezier/compose/color/Colors.kt"), 'w')
+f = open(os.path.join(root_path, "bezier/src/main/java/io/channel/bezier/color/Colors.kt"), 'w')
 
-f.write("""package io.channel.bezier.compose.color
+f.write("""package io.channel.bezier.color
 
 import androidx.compose.ui.graphics.Color
 
