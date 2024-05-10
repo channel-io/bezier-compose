@@ -41,9 +41,9 @@ typealias TagSize = Tag.Size
 typealias TagColor = Tag.Color
 
 class Tag @JvmOverloads constructor(
-    context: Context,
-    attrs: AttributeSet? = null,
-    defStyleAttr: Int = 0,
+        context: Context,
+        attrs: AttributeSet? = null,
+        defStyleAttr: Int = 0,
 ) : AbstractComposeView(context, attrs, defStyleAttr) {
 
     var size by mutableStateOf(Size.L)
@@ -54,10 +54,10 @@ class Tag @JvmOverloads constructor(
 
     init {
         context.theme.obtainStyledAttributes(
-            attrs,
-            R.styleable.Tag,
-            0,
-            0,
+                attrs,
+                R.styleable.Tag,
+                0,
+                0,
         ).use { typedArray ->
             color = Color.fromId(typedArray.getInt(R.styleable.Tag_tag_color, color.id))
             size = Size.fromId(typedArray.getInt(R.styleable.Tag_tag_size, size.id))
@@ -68,18 +68,18 @@ class Tag @JvmOverloads constructor(
     @Composable
     override fun Content() {
         Tag(
-            text = text,
-            size = size,
-            color = color,
-            onRemove = onRemoveListener,
+                text = text,
+                size = size,
+                color = color,
+                onRemove = onRemoveListener,
         )
     }
 
     enum class Size(
-        val id: Int,
-        val layoutRadius: Dp,
-        val padding: PaddingValues,
-        val textSize: TextUnit,
+            val id: Int,
+            val layoutRadius: Dp,
+            val padding: PaddingValues,
+            val textSize: TextUnit,
     ) {
         XS(0, 4.dp, PaddingValues(horizontal = 3.dp, vertical = 1.dp), 12.sp),
         S(1, 6.dp, PaddingValues(horizontal = 3.dp, vertical = 2.dp), 14.sp),
@@ -94,8 +94,8 @@ class Tag @JvmOverloads constructor(
     }
 
     enum class Color(
-        val id: Int,
-        val colorNameKey: String,
+            val id: Int,
+            val colorNameKey: String,
     ) {
         Normal(0, "tag.color.default"),
         Red(1, "tag.color.red"),
@@ -149,45 +149,45 @@ class Tag @JvmOverloads constructor(
 
 @Composable
 fun Tag(
-    modifier: Modifier = Modifier,
-    text: String,
-    size: TagSize = TagSize.L,
-    color: TagColor = TagColor.Normal,
-    onRemove: (() -> Unit)? = null,
+        modifier: Modifier = Modifier,
+        text: String,
+        size: TagSize = TagSize.L,
+        color: TagColor = TagColor.Normal,
+        onRemove: (() -> Unit)? = null,
 ) {
     Row(
-        modifier = modifier
-            .wrapContentSize()
-            .background(
-                color = color.getColor(),
-                shape = RoundedCornerShape(size.layoutRadius),
-            )
-            .padding(size.padding),
-        verticalAlignment = Alignment.CenterVertically,
+            modifier = modifier
+                    .wrapContentSize()
+                    .background(
+                            color = color.getColor(),
+                            shape = RoundedCornerShape(size.layoutRadius),
+                    )
+                    .padding(size.padding),
+            verticalAlignment = Alignment.CenterVertically,
     ) {
         Text(
-            text = text,
-            modifier = Modifier
-                .padding(horizontal = 2.dp)
-                .weight(1f, false),
-            fontSize = size.textSize,
-            color = colorResource(id = R.color.txt_black_darkest),
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
+                text = text,
+                modifier = Modifier
+                        .padding(horizontal = 2.dp)
+                        .weight(1f, false),
+                fontSize = size.textSize,
+                color = colorResource(id = R.color.txt_black_darkest),
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
         )
 
         if (onRemove != null) {
             Icon(
-                modifier = Modifier
-                    .size(16.dp)
-                    .clickable(
-                        interactionSource = remember { MutableInteractionSource() },
-                        indication = null,
-                        onClick = onRemove,
-                    ),
-                painter = painterResource(id = R.drawable.icon_cancel),
-                contentDescription = null,
-                tint = colorResource(id = R.color.txt_black_darker),
+                    modifier = Modifier
+                            .size(16.dp)
+                            .clickable(
+                                    interactionSource = remember { MutableInteractionSource() },
+                                    indication = null,
+                                    onClick = onRemove,
+                            ),
+                    painter = painterResource(id = R.drawable.icon_cancel),
+                    contentDescription = null,
+                    tint = colorResource(id = R.color.txt_black_darker),
             )
         }
     }
@@ -199,12 +199,12 @@ private fun TagColorVariantWithCloseButtonPreview() {
     LazyVerticalGrid(columns = GridCells.Fixed(3)) {
         items(TagColor.values()) { color ->
             Tag(
-                modifier = Modifier
-                    .padding(8.dp),
-                text = "Tag",
-                size = TagSize.L,
-                color = color,
-                onRemove = { },
+                    modifier = Modifier
+                            .padding(8.dp),
+                    text = "Tag",
+                    size = TagSize.L,
+                    color = color,
+                    onRemove = { },
             )
         }
     }
@@ -216,10 +216,10 @@ private fun TagColorVariantPreview() {
     LazyVerticalGrid(columns = GridCells.Fixed(3)) {
         items(TagColor.values()) { color ->
             Tag(
-                modifier = Modifier.padding(8.dp),
-                text = "Tag",
-                size = TagSize.L,
-                color = color,
+                    modifier = Modifier.padding(8.dp),
+                    text = "Tag",
+                    size = TagSize.L,
+                    color = color,
             )
         }
     }
@@ -231,11 +231,11 @@ private fun TagSizeVariantWithCloseButtonPreview() {
     LazyVerticalGrid(columns = GridCells.Fixed(3)) {
         items(TagSize.values()) { size ->
             Tag(
-                modifier = Modifier.padding(8.dp),
-                text = "Tag",
-                size = size,
-                color = TagColor.Pink,
-                onRemove = { },
+                    modifier = Modifier.padding(8.dp),
+                    text = "Tag",
+                    size = size,
+                    color = TagColor.Pink,
+                    onRemove = { },
             )
         }
     }
@@ -247,10 +247,10 @@ private fun TagSizeVariantPreview() {
     LazyVerticalGrid(columns = GridCells.Fixed(3)) {
         items(TagSize.values()) { size ->
             Tag(
-                modifier = Modifier.padding(8.dp),
-                text = "Tag",
-                size = size,
-                color = TagColor.Pink,
+                    modifier = Modifier.padding(8.dp),
+                    text = "Tag",
+                    size = size,
+                    color = TagColor.Pink,
             )
         }
     }

@@ -24,15 +24,15 @@ import io.channel.bezier.component.ListItemContainerSize
 
 @Composable
 fun IconActionListItem(
-    title: String,
-    modifier: Modifier = Modifier,
-    size: ListItemContainerSize = ListItemContainerSize.M,
-    description: String? = null,
-    titleColor: Color = BezierTheme.colors.txtBlackDarkest,
-    icon: Painter? = null,
-    iconColor: Color = BezierTheme.colors.txtBlackDarker,
-    showNavigator: Boolean = true,
-    content: @Composable () -> Unit = {},
+        title: String,
+        modifier: Modifier = Modifier,
+        size: ListItemContainerSize = ListItemContainerSize.M,
+        description: String? = null,
+        titleColor: Color = BezierTheme.colors.txtBlackDarkest,
+        icon: Painter? = null,
+        iconColor: Color = BezierTheme.colors.txtBlackDarker,
+        showNavigator: Boolean = true,
+        content: @Composable () -> Unit = {},
 ) {
     ListItemContainer(
             modifier = modifier,
@@ -95,7 +95,7 @@ fun IconActionListItem(
                         }
                     }
                 }
-           },
+            },
     )
 }
 

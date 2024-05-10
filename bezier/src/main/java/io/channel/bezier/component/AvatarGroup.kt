@@ -39,7 +39,7 @@ fun AvatarGroup(
         }
 
         Row(
-                horizontalArrangement = Arrangement.spacedBy(gap - borderWidth)
+                horizontalArrangement = Arrangement.spacedBy(gap - borderWidth),
         ) {
             painters.take(count).forEach { painter ->
                 Avatar(
@@ -61,7 +61,7 @@ fun AvatarGroup(
                         else -> "$otherProfileCount"
                     },
                     color = BezierTheme.colors.txtBlackDark,
-                    fontSize = 16.sp
+                    fontSize = 16.sp,
             )
         }
     }

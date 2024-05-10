@@ -47,21 +47,21 @@ import kotlin.math.max
 
 @Composable
 fun ListItemContainer(
-    modifier: Modifier = Modifier,
-    size: ListItemContainerSize = ListItemContainerSize.M,
-    buttonType: ListItemContainerButtonType = ListItemContainerButtonType.NonButton,
-    leftContent: (@Composable () -> Unit)? = null,
-    centerContent: (@Composable () -> Unit)? = null,
-    rightContent: (@Composable () -> Unit)? = null,
-    bottomContent: (@Composable ColumnScope.() -> Unit)? = null,
+        modifier: Modifier = Modifier,
+        size: ListItemContainerSize = ListItemContainerSize.M,
+        buttonType: ListItemContainerButtonType = ListItemContainerButtonType.NonButton,
+        leftContent: (@Composable () -> Unit)? = null,
+        centerContent: (@Composable () -> Unit)? = null,
+        rightContent: (@Composable () -> Unit)? = null,
+        bottomContent: (@Composable ColumnScope.() -> Unit)? = null,
 ) {
     Column(
-        modifier = modifier
-            .fillMaxWidth()
-            .heightIn(min = size.minHeight)
-            .padding(start = 6.dp)
-            .padding(vertical = size.basePadding),
-        verticalArrangement = Arrangement.SpaceEvenly,
+            modifier = modifier
+                    .fillMaxWidth()
+                    .heightIn(min = size.minHeight)
+                    .padding(start = 6.dp)
+                    .padding(vertical = size.basePadding),
+            verticalArrangement = Arrangement.SpaceEvenly,
     ) {
         ListItemContainerRowLayout(modifier = Modifier.fillMaxWidth()) {
             if (leftContent != null) {
@@ -94,8 +94,8 @@ fun ListItemContainer(
 }
 
 enum class ListItemContainerSize(
-    val minHeight: Dp,
-    val basePadding: Dp,
+        val minHeight: Dp,
+        val basePadding: Dp,
 ) {
     S(40.dp, 6.dp),
     M(48.dp, 8.dp),
@@ -108,17 +108,17 @@ enum class ListItemContainerButtonType(val endPadding: Dp) {
 }
 
 fun Modifier.listItemPadding() =
-    padding(horizontal = 10.dp)
+        padding(horizontal = 10.dp)
 
 @Composable
 private fun ListItemContainerRowLayout(
-    modifier: Modifier = Modifier,
-    children: @Composable () -> Unit,
+        modifier: Modifier = Modifier,
+        children: @Composable () -> Unit,
 ) {
     Layout(
-        content = children,
-        modifier = modifier,
-        measurePolicy = listItemRowMeasurePolicy(),
+            content = children,
+            modifier = modifier,
+            measurePolicy = listItemRowMeasurePolicy(),
     )
 }
 
@@ -171,17 +171,17 @@ private fun listItemRowMeasurePolicy(): MeasurePolicy {
 
             // Step 2. 길이를 제한해야 하는 measurable들을 측정한다
             data class OppressedMeasurable(
-                val placeableIndex: Int,
-                val measurable: Measurable,
-                val desiredWidth: Int,
+                    val placeableIndex: Int,
+                    val measurable: Measurable,
+                    val desiredWidth: Int,
             )
 
             val oppressedMeasurables = measurables.mapIndexedNotNull { index, measurable ->
                 if (placeables[index] == null) {
                     OppressedMeasurable(
-                        placeableIndex = index,
-                        measurable = measurable,
-                        desiredWidth = measurable.maxIntrinsicWidth(constraints.maxHeight),
+                            placeableIndex = index,
+                            measurable = measurable,
+                            desiredWidth = measurable.maxIntrinsicWidth(constraints.maxHeight),
                     )
                 } else {
                     null
@@ -200,15 +200,15 @@ private fun listItemRowMeasurePolicy(): MeasurePolicy {
                 oppressedMeasurables.forEach { oppressed ->
                     val childConstraints = if (oppressed.desiredWidth > guaranteedWidth) {
                         constraints.copy(
-                            minWidth = 0,
-                            minHeight = 0,
-                            maxWidth = guaranteedWidth + (oppressed.desiredWidth - guaranteedWidth) * underflowWidth / overflowedWidth,
+                                minWidth = 0,
+                                minHeight = 0,
+                                maxWidth = guaranteedWidth + (oppressed.desiredWidth - guaranteedWidth) * underflowWidth / overflowedWidth,
                         )
                     } else {
                         constraints.copy(
-                            minWidth = 0,
-                            minHeight = 0,
-                            maxWidth = oppressed.desiredWidth,
+                                minWidth = 0,
+                                minHeight = 0,
+                                maxWidth = oppressed.desiredWidth,
                         )
                     }
 
@@ -218,11 +218,11 @@ private fun listItemRowMeasurePolicy(): MeasurePolicy {
                 // 남아있는 공간이 크다면 원하는 크기를 가질 수 있게 한다
                 oppressedMeasurables.forEach { oppressed ->
                     placeables[oppressed.placeableIndex] = oppressed.measurable.measure(
-                        constraints.copy(
-                            minWidth = 0,
-                            minHeight = 0,
-                            maxWidth = oppressed.desiredWidth,
-                        )
+                            constraints.copy(
+                                    minWidth = 0,
+                                    minHeight = 0,
+                                    maxWidth = oppressed.desiredWidth,
+                            ),
                     )
                 }
             }
@@ -258,14 +258,14 @@ private enum class ListItemWidthOppressionTarget {
 @Composable
 private fun ListItemContainerPreview() {
     ListItemContainer(
-        modifier = Modifier.fillMaxWidth(),
-        leftContent = { Icon(painter = rememberVectorPainter(image = Icons.Default.Check), contentDescription = null) },
-        centerContent = {
-            Text("Hello World puasdlfkjasldkfjasldkfj", maxLines = 1, overflow = TextOverflow.Ellipsis)
-        },
-        rightContent = {
-            Text("Good asdfasdfasdfasdfasdfasdfa asdf asd asdfasdfasdf", maxLines = 1, overflow = TextOverflow.Ellipsis)
-        }
+            modifier = Modifier.fillMaxWidth(),
+            leftContent = { Icon(painter = rememberVectorPainter(image = Icons.Default.Check), contentDescription = null) },
+            centerContent = {
+                Text("Hello World puasdlfkjasldkfjasldkfj", maxLines = 1, overflow = TextOverflow.Ellipsis)
+            },
+            rightContent = {
+                Text("Good asdfasdfasdfasdfasdfasdfa asdf asd asdfasdfasdf", maxLines = 1, overflow = TextOverflow.Ellipsis)
+            },
     )
 }
 
@@ -273,64 +273,64 @@ private fun ListItemContainerPreview() {
 @Composable
 fun ProfileEmailListItemPreview() {
     Column(
-        // SectionGroup
-        modifier = Modifier
-            .padding(16.dp)
-            .shadow(elevation = 3.dp, shape = RoundedCornerShape(16.dp))
-            .clip(RoundedCornerShape(16.dp))
-            .background(Color.White)
-            .padding(vertical = 10.dp),
+            // SectionGroup
+            modifier = Modifier
+                    .padding(16.dp)
+                    .shadow(elevation = 3.dp, shape = RoundedCornerShape(16.dp))
+                    .clip(RoundedCornerShape(16.dp))
+                    .background(Color.White)
+                    .padding(vertical = 10.dp),
     ) {
         ListItemContainer(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clickable { }
-                .listItemPadding(),
-            leftContent = { Icon(painter = rememberVectorPainter(image = Icons.Default.Email), contentDescription = null) },
-            centerContent = {
-                Text(
-                    "Email",
-                    color = colorResource(id = R.color.txt_black_darkest),
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    fontSize = 16.sp,
-                )
-            },
-            rightContent = {
-                Text(
-                    "longemailaddress@example.com",
-                    color = colorResource(id = R.color.bgtxt_cobalt_normal),
-                    fontSize = 16.sp,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            },
+                modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { }
+                        .listItemPadding(),
+                leftContent = { Icon(painter = rememberVectorPainter(image = Icons.Default.Email), contentDescription = null) },
+                centerContent = {
+                    Text(
+                            "Email",
+                            color = colorResource(id = R.color.txt_black_darkest),
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                            fontSize = 16.sp,
+                    )
+                },
+                rightContent = {
+                    Text(
+                            "longemailaddress@example.com",
+                            color = colorResource(id = R.color.bgtxt_cobalt_normal),
+                            fontSize = 16.sp,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                    )
+                },
         )
 
         ListItemContainer(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clickable { }
-                .listItemPadding(),
-            leftContent = { Icon(painter = rememberVectorPainter(image = Icons.Default.Call), contentDescription = null) },
-            centerContent = {
-                Text(
-                    "Call",
-                    color = colorResource(id = R.color.txt_black_darkest),
-                    fontSize = 16.sp,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            },
-            rightContent = {
-                Text(
-                    "010-1234-5678",
-                    color = colorResource(id = R.color.bgtxt_cobalt_normal),
-                    fontSize = 16.sp,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            },
+                modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { }
+                        .listItemPadding(),
+                leftContent = { Icon(painter = rememberVectorPainter(image = Icons.Default.Call), contentDescription = null) },
+                centerContent = {
+                    Text(
+                            "Call",
+                            color = colorResource(id = R.color.txt_black_darkest),
+                            fontSize = 16.sp,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                    )
+                },
+                rightContent = {
+                    Text(
+                            "010-1234-5678",
+                            color = colorResource(id = R.color.bgtxt_cobalt_normal),
+                            fontSize = 16.sp,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                    )
+                },
         )
     }
 }

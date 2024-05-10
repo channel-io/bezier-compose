@@ -24,16 +24,16 @@ private val IndentWidth = 12.dp
 
 @Composable
 fun OutlineItem(
-    modifier: Modifier = Modifier,
-    toggle: OutlineToggle = OutlineToggle.Leaf,
-    indentLevel: Int = 0,
-    onClickExpand: (() -> Unit)? = null,
-    content: @Composable () -> Unit,
+        modifier: Modifier = Modifier,
+        toggle: OutlineToggle = OutlineToggle.Leaf,
+        indentLevel: Int = 0,
+        onClickExpand: (() -> Unit)? = null,
+        content: @Composable () -> Unit,
 ) {
     Row(
-        modifier = modifier
-            .padding(start = IndentWidth * indentLevel),
-        verticalAlignment = Alignment.CenterVertically,
+            modifier = modifier
+                    .padding(start = IndentWidth * indentLevel),
+            verticalAlignment = Alignment.CenterVertically,
     ) {
         val icon = when (toggle) {
             OutlineToggle.Leaf -> R.drawable.icon_hashtag
@@ -42,19 +42,19 @@ fun OutlineItem(
         }
 
         Icon(
-            modifier = Modifier
-                .clickable(
-                    enabled = onClickExpand != null && toggle != OutlineToggle.Leaf,
-                    indication = rememberRipple(radius = 12.dp),
-                    interactionSource = remember { MutableInteractionSource() },
-                    onClick = { onClickExpand?.invoke() },
-                )
-                .padding(6.dp)
-                .size(24.dp)
-                .alpha(toggle.iconAlpha),
-            painter = painterResource(id = icon),
-            contentDescription = null,
-            tint = BezierTheme.colors.txtBlackDark,
+                modifier = Modifier
+                        .clickable(
+                                enabled = onClickExpand != null && toggle != OutlineToggle.Leaf,
+                                indication = rememberRipple(radius = 12.dp),
+                                interactionSource = remember { MutableInteractionSource() },
+                                onClick = { onClickExpand?.invoke() },
+                        )
+                        .padding(6.dp)
+                        .size(24.dp)
+                        .alpha(toggle.iconAlpha),
+                painter = painterResource(id = icon),
+                contentDescription = null,
+                tint = BezierTheme.colors.txtBlackDark,
         )
 
         content()
@@ -79,15 +79,15 @@ private fun OutlineItemPreview() = Column {
     }
 
     OutlineItem(
-        toggle = OutlineToggle.Expanded,
-        onClickExpand = {},
+            toggle = OutlineToggle.Expanded,
+            onClickExpand = {},
     ) {
         Text(text = "Hello World 2", color = BezierTheme.colors.txtBlackDark)
     }
 
     OutlineItem(
-        toggle = OutlineToggle.Collapsed,
-        onClickExpand = {},
+            toggle = OutlineToggle.Collapsed,
+            onClickExpand = {},
     ) {
         Text(text = "Hello World 3", color = BezierTheme.colors.txtBlackDark)
     }

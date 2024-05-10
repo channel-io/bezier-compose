@@ -80,6 +80,6 @@ fun Modifier.shimmer(
                     colors = shimmerColors,
                     start = Offset.Zero,
                     end = Offset(x = translateAnimation.value, y = translateAnimation.value),
-            )
+            ),
     )
 }

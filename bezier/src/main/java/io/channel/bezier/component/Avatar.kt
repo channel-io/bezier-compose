@@ -227,7 +227,7 @@ private fun AvatarMoreOverlayPreview() {
                         tint = BezierTheme.colors.bgtxtAbsoluteWhiteNormal,
                         contentDescription = null,
                 )
-            }
+            },
     )
 }
 

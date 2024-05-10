@@ -34,8 +34,8 @@ fun Alert(
                         )
                         .padding(
                                 vertical = 2.dp,
-                                horizontal = 5.dp
-                        )
+                                horizontal = 5.dp,
+                        ),
         ) {
             val alertCount = if (alert > 99) {
                 "99+"

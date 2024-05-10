@@ -60,33 +60,33 @@ private const val TimeOutMilliSecond = 10000L
 
 @Composable
 fun Switch(
-    checked: Boolean,
-    onCheckedChange: ((Boolean) -> Unit)?,
-    enabled: Boolean = true,
+        checked: Boolean,
+        onCheckedChange: ((Boolean) -> Unit)?,
+        enabled: Boolean = true,
 ) {
     val currentChecked by rememberUpdatedState(checked)
     var forceAnimationCheck by remember { mutableStateOf(false) }
     var interactionEnable by remember { mutableStateOf(true) }
 
     val switchState = rememberSwitchState(
-        initialValue = checked,
-        onCheckedChange = {
-            interactionEnable = false
-            onCheckedChange?.invoke(it)
-        },
+            initialValue = checked,
+            onCheckedChange = {
+                interactionEnable = false
+                onCheckedChange?.invoke(it)
+            },
     )
 
     LaunchedEffect(switchState) {
         snapshotFlow { switchState.currentValue }
-            .collectLatest { newValue ->
-                if (currentChecked == newValue) {
-                    return@collectLatest
-                }
+                .collectLatest { newValue ->
+                    if (currentChecked == newValue) {
+                        return@collectLatest
+                    }
 
-                interactionEnable = false
-                delay(TimeOutMilliSecond)
-                forceAnimationCheck = !forceAnimationCheck
-            }
+                    interactionEnable = false
+                    delay(TimeOutMilliSecond)
+                    forceAnimationCheck = !forceAnimationCheck
+                }
     }
 
     LaunchedEffect(checked, forceAnimationCheck) {
@@ -107,16 +107,16 @@ fun Switch(
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun Switch(
-    state: SwitchState,
-    enabled: Boolean = true,
+        state: SwitchState,
+        enabled: Boolean = true,
 ) {
     val coroutineScope = rememberCoroutineScope()
 
     val sizePx = with(LocalDensity.current) { switchButtonOffset.toPx() }
     val anchors = remember(sizePx) {
         mapOf(
-            0F to SwitchOff,
-            sizePx to SwitchOn,
+                0F to SwitchOff,
+                sizePx to SwitchOn,
         )
     }
 
@@ -127,39 +127,39 @@ fun Switch(
     }
 
     Row(
-        modifier = Modifier
-            .swipeable(
-                enabled = enabled,
-                state = state.swipeableState,
-                anchors = anchors,
-                thresholds = { _, _ -> FractionalThreshold(0.3f) },
-                orientation = Orientation.Horizontal,
-            )
-            .clickable(
-                enabled = enabled,
-                interactionSource = remember { MutableInteractionSource() },
-                indication = null,
-            ) {
-                state.onCheckChanged(!state.currentValue)
+            modifier = Modifier
+                    .swipeable(
+                            enabled = enabled,
+                            state = state.swipeableState,
+                            anchors = anchors,
+                            thresholds = { _, _ -> FractionalThreshold(0.3f) },
+                            orientation = Orientation.Horizontal,
+                    )
+                    .clickable(
+                            enabled = enabled,
+                            interactionSource = remember { MutableInteractionSource() },
+                            indication = null,
+                    ) {
+                        state.onCheckChanged(!state.currentValue)
 
-                coroutineScope.launch {
-                    state.switch()
-                }
-            },
+                        coroutineScope.launch {
+                            state.switch()
+                        }
+                    },
     ) {
         Box(
-            modifier = Modifier
-                .width(50.dp)
-                .height(28.dp)
-                .alpha(if (enabled) 1f else 0.4f)
-                .roundedBackground(backgroundColor = backgroundColor)
-                .padding(2.dp),
+                modifier = Modifier
+                        .width(50.dp)
+                        .height(28.dp)
+                        .alpha(if (enabled) 1f else 0.4f)
+                        .roundedBackground(backgroundColor = backgroundColor)
+                        .padding(2.dp),
         ) {
             Thumb(
-                modifier = Modifier
-                    .offset {
-                        IntOffset(state.swipeableState.offset.value.roundToInt(), 0)
-                    },
+                    modifier = Modifier
+                            .offset {
+                                IntOffset(state.swipeableState.offset.value.roundToInt(), 0)
+                            },
             )
         }
     }
@@ -167,30 +167,30 @@ fun Switch(
 
 @Composable
 private fun Thumb(
-    modifier: Modifier = Modifier,
+        modifier: Modifier = Modifier,
 ) {
     Box(
-        modifier = modifier
-            .size(24.dp)
-            .shadow(
-                elevation = 6.dp,
-                shape = CircleShape,
-            )
-            .background(
-                color = BezierTheme.colors.bgtxtAbsoluteWhiteDark,
-            ),
+            modifier = modifier
+                    .size(24.dp)
+                    .shadow(
+                            elevation = 6.dp,
+                            shape = CircleShape,
+                    )
+                    .background(
+                            color = BezierTheme.colors.bgtxtAbsoluteWhiteDark,
+                    ),
     )
 }
 
 @Composable
 fun rememberSwitchState(
-    initialValue: Boolean,
-    onCheckedChange: ((Boolean) -> Unit)?
+        initialValue: Boolean,
+        onCheckedChange: ((Boolean) -> Unit)?
 ): SwitchState {
     return remember {
         SwitchState(
-            initialValue = initialValue,
-            onCheckedChange = onCheckedChange,
+                initialValue = initialValue,
+                onCheckedChange = onCheckedChange,
         )
     }
 }
@@ -200,23 +200,23 @@ private val AnimationSpec = tween<Float>(durationMillis = 50)
 @OptIn(ExperimentalMaterialApi::class)
 @Stable
 class SwitchState(
-    initialValue: Boolean,
-    val onCheckedChange: ((Boolean) -> Unit)?,
+        initialValue: Boolean,
+        val onCheckedChange: ((Boolean) -> Unit)?,
 ) {
     internal val swipeableState = SwipeableState(
-        initialValue = initialValue,
-        animationSpec = AnimationSpec,
-        confirmStateChange = { curr ->
-            val result = if (currentValue != curr && onCheckedChange != null) {
-                onCheckedChange.invoke(curr)
+            initialValue = initialValue,
+            animationSpec = AnimationSpec,
+            confirmStateChange = { curr ->
+                val result = if (currentValue != curr && onCheckedChange != null) {
+                    onCheckedChange.invoke(curr)
 
-                true
-            } else {
-                false
-            }
+                    true
+                } else {
+                    false
+                }
 
-            result
-        },
+                result
+            },
     )
 
     internal fun onCheckChanged(checked: Boolean) {
@@ -236,21 +236,21 @@ class SwitchState(
 
     suspend fun on() {
         swipeableState.animateTo(
-            targetValue = SwitchOn,
-            anim = tween(
-                durationMillis = 200,
-                easing = EaseInOut,
-            ),
+                targetValue = SwitchOn,
+                anim = tween(
+                        durationMillis = 200,
+                        easing = EaseInOut,
+                ),
         )
     }
 
     suspend fun off() {
         swipeableState.animateTo(
-            targetValue = SwitchOff,
-            anim = tween(
-                durationMillis = 200,
-                easing = EaseInOut,
-            ),
+                targetValue = SwitchOff,
+                anim = tween(
+                        durationMillis = 200,
+                        easing = EaseInOut,
+                ),
         )
     }
 
@@ -267,51 +267,51 @@ class SwitchState(
 @Composable
 private fun SwitchStatefulPreview() {
     val isChecked1 = rememberSwitchState(
-        initialValue = false,
-        onCheckedChange = {},
+            initialValue = false,
+            onCheckedChange = {},
     )
     val isChecked2 = rememberSwitchState(
-        initialValue = true,
-        onCheckedChange = {},
+            initialValue = true,
+            onCheckedChange = {},
     )
     val isChecked3 = rememberSwitchState(
-        initialValue = false,
-        onCheckedChange = {},
+            initialValue = false,
+            onCheckedChange = {},
     )
     val isChecked4 = rememberSwitchState(
-        initialValue = true,
-        onCheckedChange = {},
+            initialValue = true,
+            onCheckedChange = {},
     )
 
     Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(10.dp),
-        verticalArrangement = Arrangement.spacedBy(10.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(10.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Row(
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             Switch(
-                state = isChecked1,
+                    state = isChecked1,
             )
 
             Switch(
-                state = isChecked2,
+                    state = isChecked2,
             )
         }
 
         Row(
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             Switch(
-                state = isChecked3,
-                enabled = false,
+                    state = isChecked3,
+                    enabled = false,
             )
             Switch(
-                state = isChecked4,
-                enabled = false,
+                    state = isChecked4,
+                    enabled = false,
             )
         }
     }
@@ -321,11 +321,11 @@ private fun SwitchStatefulPreview() {
 @Composable
 private fun SwitchStatelessCallbackPreview() {
     Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(10.dp),
-        verticalArrangement = Arrangement.spacedBy(15.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(10.dp),
+            verticalArrangement = Arrangement.spacedBy(15.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         var checked1 by remember { mutableStateOf(false) }
         var checked2 by remember { mutableStateOf(false) }
@@ -335,21 +335,21 @@ private fun SwitchStatelessCallbackPreview() {
         Text(text = "딜레이가 있는 케이스\n스위치의 상태값 : $checked1")
 
         Switch(
-            checked = checked1,
-            onCheckedChange = {
-                coroutineScope.launch {
-                    // api 콜에 대한 상태를 기다립니다.
-                    delay(300L)
-                    checked1 = it
-                }
-            },
+                checked = checked1,
+                onCheckedChange = {
+                    coroutineScope.launch {
+                        // api 콜에 대한 상태를 기다립니다.
+                        delay(300L)
+                        checked1 = it
+                    }
+                },
         )
 
         Text(text = "타임아웃 케이스\n실제 스위치의 상태값 : $checked2")
 
         Switch(
-            checked = checked2,
-            onCheckedChange = {},
+                checked = checked2,
+                onCheckedChange = {},
         )
     }
 }
@@ -363,47 +363,47 @@ private fun SwitchStatelessPreview() {
     var checked4 by remember { mutableStateOf(true) }
 
     Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(10.dp),
-        verticalArrangement = Arrangement.spacedBy(10.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(10.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Row(
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             Switch(
-                checked = checked1,
-                onCheckedChange = {
-                    checked1 = it
-                },
+                    checked = checked1,
+                    onCheckedChange = {
+                        checked1 = it
+                    },
             )
 
             Switch(
-                checked = checked2,
-                onCheckedChange = {
-                    checked2 = it
-                },
+                    checked = checked2,
+                    onCheckedChange = {
+                        checked2 = it
+                    },
             )
         }
 
         Row(
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             Switch(
-                checked = checked3,
-                onCheckedChange = {
-                    checked3 = it
-                },
-                enabled = false,
+                    checked = checked3,
+                    onCheckedChange = {
+                        checked3 = it
+                    },
+                    enabled = false,
             )
 
             Switch(
-                checked = checked4,
-                onCheckedChange = {
-                    checked4 = it
-                },
-                enabled = false,
+                    checked = checked4,
+                    onCheckedChange = {
+                        checked4 = it
+                    },
+                    enabled = false,
             )
         }
     }
@@ -433,23 +433,23 @@ private fun SwitchStatelessInLazyColumnPreview() {
     }
 
     LazyColumn(
-        modifier = Modifier.fillMaxSize(),
+            modifier = Modifier.fillMaxSize(),
     ) {
         checkList.forEachIndexed { index, checked ->
             item {
                 Row(
-                    modifier = Modifier.padding(vertical = 8.dp),
-                    verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.padding(vertical = 8.dp),
+                        verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Text(text = "Check ${index + 1}")
 
                     Spacer(modifier = Modifier.width(16.dp))
 
                     Switch(
-                        checked = checked,
-                        onCheckedChange = {
-                            checkList[index] = it
-                        },
+                            checked = checked,
+                            onCheckedChange = {
+                                checkList[index] = it
+                            },
                     )
                 }
             }

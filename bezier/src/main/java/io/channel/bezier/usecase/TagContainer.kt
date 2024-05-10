@@ -26,10 +26,10 @@ private const val SINGLE_LINE_MAXIMUM_TAG_COUNT = 3
 
 @Composable
 fun TagContainer(
-    tagContainerElements: List<TagContainerElement>,
-    modifier: Modifier = Modifier,
-    tagSize: TagSize = TagSize.L,
-    singleLine: Boolean = true,
+        tagContainerElements: List<TagContainerElement>,
+        modifier: Modifier = Modifier,
+        tagSize: TagSize = TagSize.L,
+        singleLine: Boolean = true,
 ) {
     val resolvedElements = remember(tagContainerElements, singleLine) {
         resolveTagContainerElements(tagContainerElements, singleLine)
@@ -51,8 +51,8 @@ fun TagContainer(
 }
 
 private fun resolveTagContainerElements(
-    elements: List<TagContainerElement>,
-    singleLine: Boolean,
+        elements: List<TagContainerElement>,
+        singleLine: Boolean,
 ): List<TagContainerElement> {
     val orderedElements = if (singleLine) {
         elements.reversed()
@@ -75,9 +75,9 @@ private fun resolveTagContainerElements(
 
 @Composable
 private fun SingleLineTagContainer(
-    tagContainerElements: List<TagContainerElement>,
-    modifier: Modifier = Modifier,
-    tagSize: TagSize = TagSize.L,
+        tagContainerElements: List<TagContainerElement>,
+        modifier: Modifier = Modifier,
+        tagSize: TagSize = TagSize.L,
 ) {
     Row(
             modifier = modifier,
@@ -109,9 +109,9 @@ private fun SingleLineTagContainer(
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun MultiLineTagContainer(
-    tagContainerElements: List<TagContainerElement>,
-    modifier: Modifier = Modifier,
-    tagSize: TagSize = TagSize.L,
+        tagContainerElements: List<TagContainerElement>,
+        modifier: Modifier = Modifier,
+        tagSize: TagSize = TagSize.L,
 ) {
     FlowRow(
             modifier = modifier,
@@ -129,8 +129,8 @@ private fun MultiLineTagContainer(
 }
 
 data class TagContainerElement(
-    val name: String,
-    val color: TagColor = TagColor.Normal,
+        val name: String,
+        val color: TagColor = TagColor.Normal,
 )
 
 @Preview(showBackground = true)

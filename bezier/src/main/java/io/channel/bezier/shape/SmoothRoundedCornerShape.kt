@@ -83,12 +83,14 @@ fun SmoothRoundedCornerShape(
         topRightRadius: Dp = 8.dp,
 ): Shape {
     fun getRadius(direction: SuperellipseDirection, density: Density): Float = with(density) {
-        ceil(when (direction) {
-            SuperellipseDirection.BottomLeft -> bottomLeftRadius
-            SuperellipseDirection.BottomRight -> bottomRightRadius
-            SuperellipseDirection.TopLeft -> topLeftRadius
-            SuperellipseDirection.TopRight -> topRightRadius
-        }.toPx())
+        ceil(
+                when (direction) {
+                    SuperellipseDirection.BottomLeft -> bottomLeftRadius
+                    SuperellipseDirection.BottomRight -> bottomRightRadius
+                    SuperellipseDirection.TopLeft -> topLeftRadius
+                    SuperellipseDirection.TopRight -> topRightRadius
+                }.toPx(),
+        )
     }
 
     return Superellipse(
@@ -141,14 +143,14 @@ fun SmoothRoundedCornerShape(
                 } else {
                     0f
                 }
-            }
+            },
     )
 }
 
 // https://www.notion.so/channelio/Smooth-Corners-6a65f2f2ae334482979dfa1d01d34eef (SmoothCornerLayout 참고 자료)
 private class Superellipse(
-    val m: (SuperellipseDirection, Size, Density) -> Float,
-    val n: (SuperellipseDirection, Size, Density) -> Float,
+        val m: (SuperellipseDirection, Size, Density) -> Float,
+        val n: (SuperellipseDirection, Size, Density) -> Float,
 ) : Shape {
     override fun createOutline(size: Size, layoutDirection: LayoutDirection, density: Density): Outline {
         var radian = 0f
@@ -223,7 +225,15 @@ private fun SmoothCornerPreview2() {
 @Preview
 @Composable
 private fun SmoothCornerPreview3() {
-    SquareSmoothCornerPreviewHelper(shape = SmoothRoundedCornerShape(radius = 16.dp, smoothTopLeft = false, smoothTopRight = false, smoothBottomRight = false, smoothBottomLeft = false))
+    SquareSmoothCornerPreviewHelper(
+            shape = SmoothRoundedCornerShape(
+                    radius = 16.dp,
+                    smoothTopLeft = false,
+                    smoothTopRight = false,
+                    smoothBottomRight = false,
+                    smoothBottomLeft = false,
+            ),
+    )
 }
 
 @Preview
@@ -235,7 +245,13 @@ private fun SmoothCornerPreview4() {
 @Preview
 @Composable
 private fun SmoothCornerPreview5() {
-    RectangleSmoothCornerPreviewHelper(shape = SmoothRoundedCornerShape(radius = 16.dp, smoothBottomRight = false, smoothBottomLeft = false))
+    RectangleSmoothCornerPreviewHelper(
+            shape = SmoothRoundedCornerShape(
+                    radius = 16.dp,
+                    smoothBottomRight = false,
+                    smoothBottomLeft = false,
+            ),
+    )
 }
 
 @Preview
@@ -253,7 +269,14 @@ private fun SmoothCornerPreview7() {
 @Preview
 @Composable
 private fun SmoothCornerPreview8() {
-    RectangleSmoothCornerPreviewHelper(shape = SmoothRoundedCornerShape(bottomLeftRadius = 16.dp, bottomRightRadius = 16.dp, topLeftRadius = 1.dp, topRightRadius = 1.dp))
+    RectangleSmoothCornerPreviewHelper(
+            shape = SmoothRoundedCornerShape(
+                    bottomLeftRadius = 16.dp,
+                    bottomRightRadius = 16.dp,
+                    topLeftRadius = 1.dp,
+                    topRightRadius = 1.dp,
+            ),
+    )
 }
 
 @Composable
@@ -262,7 +285,7 @@ private fun SquareSmoothCornerPreviewHelper(shape: Shape) {
             modifier = Modifier
                     .size(36.dp)
                     .clip(shape)
-                    .background(Color.Yellow)
+                    .background(Color.Yellow),
     )
 }
 
@@ -272,6 +295,6 @@ private fun RectangleSmoothCornerPreviewHelper(shape: Shape) {
             modifier = Modifier
                     .size(width = 36.dp, height = 100.dp)
                     .clip(shape)
-                    .background(Color.Yellow)
+                    .background(Color.Yellow),
     )
 }
