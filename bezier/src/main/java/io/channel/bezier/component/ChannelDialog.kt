@@ -16,6 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -27,16 +28,17 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import io.channel.bezier.BezierTheme
 
+@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun ChannelDialog(
-    onDismissRequest: () -> Unit,
-    modifier: Modifier = Modifier,
-    buttonOrientation: ButtonOrientation = ButtonOrientation.Auto,
-    cancellable: Boolean = true,
-    title: (@Composable () -> Unit)? = null,
-    description: (@Composable () -> Unit)? = null,
-    content: (@Composable () -> Unit)? = null,
-    buttonBuilder: ChannelDialogButtonBuilder.() -> Unit,
+        onDismissRequest: () -> Unit,
+        modifier: Modifier = Modifier,
+        buttonOrientation: ButtonOrientation = ButtonOrientation.Auto,
+        cancellable: Boolean = true,
+        title: (@Composable () -> Unit)? = null,
+        description: (@Composable () -> Unit)? = null,
+        content: (@Composable () -> Unit)? = null,
+        buttonBuilder: ChannelDialogButtonBuilder.() -> Unit,
 ) {
     val properties = remember(cancellable) {
         DialogProperties(
@@ -63,12 +65,12 @@ fun ChannelDialog(
 
 @Composable
 private fun ChannelDialogLayout(
-    modifier: Modifier = Modifier,
-    buttonOrientation: ButtonOrientation = ButtonOrientation.Auto,
-    title: @Composable (() -> Unit)? = null,
-    description: @Composable (() -> Unit)? = null,
-    content: @Composable (() -> Unit)? = null,
-    buttonBuilder: ChannelDialogButtonBuilder.() -> Unit,
+        modifier: Modifier = Modifier,
+        buttonOrientation: ButtonOrientation = ButtonOrientation.Auto,
+        title: @Composable (() -> Unit)? = null,
+        description: @Composable (() -> Unit)? = null,
+        content: @Composable (() -> Unit)? = null,
+        buttonBuilder: ChannelDialogButtonBuilder.() -> Unit,
 ) {
     Surface(
             modifier = modifier
@@ -170,11 +172,11 @@ enum class ButtonOrientation {
 
 interface ChannelDialogButtonBuilder {
     fun button(
-        text: @Composable () -> String,
-        size: ButtonSize = ButtonSize.L,
-        type: ButtonType = ButtonType.Secondary,
-        color: ButtonColor = ButtonColor.MonochromeLight,
-        onClick: () -> Unit,
+            text: @Composable () -> String,
+            size: ButtonSize = ButtonSize.L,
+            type: ButtonType = ButtonType.Secondary,
+            color: ButtonColor = ButtonColor.MonochromeLight,
+            onClick: () -> Unit,
     )
 }
 
@@ -182,11 +184,11 @@ private class ChannelDialogButtonBuilderImpl : ChannelDialogButtonBuilder {
     val buttons = mutableListOf<ButtonInfo>()
 
     override fun button(
-        text: @Composable () -> String,
-        size: ButtonSize,
-        type: ButtonType,
-        color: ButtonColor,
-        onClick: () -> Unit,
+            text: @Composable () -> String,
+            size: ButtonSize,
+            type: ButtonType,
+            color: ButtonColor,
+            onClick: () -> Unit,
     ) {
         buttons += ButtonInfo(
                 text = text,
@@ -199,11 +201,11 @@ private class ChannelDialogButtonBuilderImpl : ChannelDialogButtonBuilder {
 }
 
 private class ButtonInfo(
-    val text: @Composable () -> String,
-    val size: ButtonSize,
-    val type: ButtonType,
-    val color: ButtonColor,
-    val onClick: () -> Unit,
+        val text: @Composable () -> String,
+        val size: ButtonSize,
+        val type: ButtonType,
+        val color: ButtonColor,
+        val onClick: () -> Unit,
 )
 
 @Preview

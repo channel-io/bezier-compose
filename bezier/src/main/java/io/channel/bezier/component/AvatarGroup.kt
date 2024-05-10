@@ -20,13 +20,13 @@ import io.channel.bezier.compose.R
 
 @Composable
 fun AvatarGroup(
-    painters: List<Painter>,
-    modifier: Modifier = Modifier,
-    size: AvatarSize = Avatar.Size.Size24,
-    count: Int = 3,
-    gap: Dp = (-4).dp,
-    showText: Boolean = true,
-    showBorder: Boolean = true,
+        painters: List<Painter>,
+        modifier: Modifier = Modifier,
+        size: AvatarSize = AvatarSize.Size24,
+        count: Int = 3,
+        gap: Dp = (-4).dp,
+        showText: Boolean = true,
+        showBorder: Boolean = true,
 ) {
     Row(
             modifier = modifier,

@@ -2,7 +2,6 @@ package io.channel.bezier.component
 
 import android.content.Context
 import android.util.AttributeSet
-import androidx.annotation.ColorRes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -34,6 +33,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.res.use
+import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
 import io.channel.bezier.extension.orElse
 
@@ -41,9 +41,9 @@ typealias TagSize = Tag.Size
 typealias TagColor = Tag.Color
 
 class Tag @JvmOverloads constructor(
-        context: Context,
-        attrs: AttributeSet? = null,
-        defStyleAttr: Int = 0,
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0,
 ) : AbstractComposeView(context, attrs, defStyleAttr) {
 
     var size by mutableStateOf(Size.L)
@@ -54,10 +54,10 @@ class Tag @JvmOverloads constructor(
 
     init {
         context.theme.obtainStyledAttributes(
-                attrs,
-                R.styleable.Tag,
-                0,
-                0,
+            attrs,
+            R.styleable.Tag,
+            0,
+            0,
         ).use { typedArray ->
             color = Color.fromId(typedArray.getInt(R.styleable.Tag_tag_color, color.id))
             size = Size.fromId(typedArray.getInt(R.styleable.Tag_tag_size, size.id))
@@ -68,18 +68,18 @@ class Tag @JvmOverloads constructor(
     @Composable
     override fun Content() {
         Tag(
-                text = text,
-                size = size,
-                color = color,
-                onRemove = onRemoveListener,
+            text = text,
+            size = size,
+            color = color,
+            onRemove = onRemoveListener,
         )
     }
 
     enum class Size(
-            val id: Int,
-            val layoutRadius: Dp,
-            val padding: PaddingValues,
-            val textSize: TextUnit,
+        val id: Int,
+        val layoutRadius: Dp,
+        val padding: PaddingValues,
+        val textSize: TextUnit,
     ) {
         XS(0, 4.dp, PaddingValues(horizontal = 3.dp, vertical = 1.dp), 12.sp),
         S(1, 6.dp, PaddingValues(horizontal = 3.dp, vertical = 2.dp), 14.sp),
@@ -94,33 +94,48 @@ class Tag @JvmOverloads constructor(
     }
 
     enum class Color(
-            val id: Int,
-            val colorNameKey: String,
-            @ColorRes val color: Int,
+        val id: Int,
+        val colorNameKey: String,
     ) {
-        Normal(0, "tag.color.default", R.color.bg_black_lighter),
-        Red(1, "tag.color.red", R.color.bgtxt_red_lighter),
-        Orange(2, "tag.color.orange", R.color.bgtxt_orange_lighter),
-        Yellow(3, "tag.color.yellow", R.color.bgtxt_yellow_lighter),
-        Olive(4, "tag.color.olive", R.color.bgtxt_olive_lighter),
-        Green(5, "tag.color.green", R.color.bgtxt_green_lighter),
-        Cobalt(6, "tag.color.cobalt", R.color.bgtxt_cobalt_lighter),
-        Purple(7, "tag.color.purple", R.color.bgtxt_purple_lighter),
-        Pink(8, "tag.color.pink", R.color.bgtxt_pink_lighter),
-        Navy(9, "tag.color.navy", R.color.bgtxt_navy_lighter);
+        Normal(0, "tag.color.default"),
+        Red(1, "tag.color.red"),
+        Orange(2, "tag.color.orange"),
+        Yellow(3, "tag.color.yellow"),
+        Olive(4, "tag.color.olive"),
+        Green(5, "tag.color.green"),
+        Cobalt(6, "tag.color.cobalt"),
+        Purple(7, "tag.color.purple"),
+        Pink(8, "tag.color.pink"),
+        Navy(9, "tag.color.navy");
 
         fun asFieldValue(): String? {
             return when (this) {
-                Normal -> null
-                Red -> "red"
-                Orange -> "orange"
-                Yellow -> "yellow"
-                Olive -> "olive"
-                Green -> "green"
-                Cobalt -> "cobalt"
-                Purple -> "purple"
-                Pink -> "pink"
-                Navy -> "navy"
+                TagColor.Normal -> null
+                TagColor.Red -> "red"
+                TagColor.Orange -> "orange"
+                TagColor.Yellow -> "yellow"
+                TagColor.Olive -> "olive"
+                TagColor.Green -> "green"
+                TagColor.Cobalt -> "cobalt"
+                TagColor.Purple -> "purple"
+                TagColor.Pink -> "pink"
+                TagColor.Navy -> "navy"
+            }
+        }
+
+        @Composable
+        fun getColor(): androidx.compose.ui.graphics.Color {
+            return when (this) {
+                TagColor.Normal -> BezierTheme.colors.bgBlackLighter
+                TagColor.Red -> BezierTheme.colors.bgtxtRedLighter
+                TagColor.Orange -> BezierTheme.colors.bgtxtOrangeLighter
+                TagColor.Yellow -> BezierTheme.colors.bgtxtYellowLighter
+                TagColor.Olive -> BezierTheme.colors.bgtxtOliveLighter
+                TagColor.Green -> BezierTheme.colors.bgtxtGreenLighter
+                TagColor.Cobalt -> BezierTheme.colors.bgtxtCobaltLighter
+                TagColor.Purple -> BezierTheme.colors.bgtxtPurpleLighter
+                TagColor.Pink -> BezierTheme.colors.bgtxtPinkLighter
+                TagColor.Navy -> BezierTheme.colors.bgtxtNavyLighter
             }
         }
 
@@ -136,43 +151,43 @@ class Tag @JvmOverloads constructor(
 fun Tag(
     modifier: Modifier = Modifier,
     text: String,
-    size: TagSize = Tag.Size.L,
-    color: TagColor = Tag.Color.Normal,
+    size: TagSize = TagSize.L,
+    color: TagColor = TagColor.Normal,
     onRemove: (() -> Unit)? = null,
 ) {
     Row(
-            modifier = modifier
-                    .wrapContentSize()
-                    .background(
-                            color = colorResource(color.color),
-                            shape = RoundedCornerShape(size.layoutRadius),
-                    )
-                    .padding(size.padding),
-            verticalAlignment = Alignment.CenterVertically,
+        modifier = modifier
+            .wrapContentSize()
+            .background(
+                color = color.getColor(),
+                shape = RoundedCornerShape(size.layoutRadius),
+            )
+            .padding(size.padding),
+        verticalAlignment = Alignment.CenterVertically,
     ) {
         Text(
-                text = text,
-                modifier = Modifier
-                        .padding(horizontal = 2.dp)
-                        .weight(1f, false),
-                fontSize = size.textSize,
-                color = colorResource(id = R.color.txt_black_darkest),
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
+            text = text,
+            modifier = Modifier
+                .padding(horizontal = 2.dp)
+                .weight(1f, false),
+            fontSize = size.textSize,
+            color = colorResource(id = R.color.txt_black_darkest),
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
         )
 
         if (onRemove != null) {
             Icon(
-                    modifier = Modifier
-                            .size(16.dp)
-                            .clickable(
-                                    interactionSource = remember { MutableInteractionSource() },
-                                    indication = null,
-                                    onClick = onRemove,
-                            ),
-                    painter = painterResource(id = R.drawable.icon_cancel),
-                    contentDescription = null,
-                    tint = colorResource(id = R.color.txt_black_darker)
+                modifier = Modifier
+                    .size(16.dp)
+                    .clickable(
+                        interactionSource = remember { MutableInteractionSource() },
+                        indication = null,
+                        onClick = onRemove,
+                    ),
+                painter = painterResource(id = R.drawable.icon_cancel),
+                contentDescription = null,
+                tint = colorResource(id = R.color.txt_black_darker),
             )
         }
     }
@@ -184,12 +199,12 @@ private fun TagColorVariantWithCloseButtonPreview() {
     LazyVerticalGrid(columns = GridCells.Fixed(3)) {
         items(TagColor.values()) { color ->
             Tag(
-                    modifier = Modifier
-                            .padding(8.dp),
-                    text = "Tag",
-                    size = Tag.Size.L,
-                    color = color,
-                    onRemove = { },
+                modifier = Modifier
+                    .padding(8.dp),
+                text = "Tag",
+                size = TagSize.L,
+                color = color,
+                onRemove = { },
             )
         }
     }
@@ -201,10 +216,10 @@ private fun TagColorVariantPreview() {
     LazyVerticalGrid(columns = GridCells.Fixed(3)) {
         items(TagColor.values()) { color ->
             Tag(
-                    modifier = Modifier.padding(8.dp),
-                    text = "Tag",
-                    size = Tag.Size.L,
-                    color = color,
+                modifier = Modifier.padding(8.dp),
+                text = "Tag",
+                size = TagSize.L,
+                color = color,
             )
         }
     }
@@ -216,11 +231,11 @@ private fun TagSizeVariantWithCloseButtonPreview() {
     LazyVerticalGrid(columns = GridCells.Fixed(3)) {
         items(TagSize.values()) { size ->
             Tag(
-                    modifier = Modifier.padding(8.dp),
-                    text = "Tag",
-                    size = size,
-                    color = Tag.Color.Pink,
-                    onRemove = { },
+                modifier = Modifier.padding(8.dp),
+                text = "Tag",
+                size = size,
+                color = TagColor.Pink,
+                onRemove = { },
             )
         }
     }
@@ -232,10 +247,10 @@ private fun TagSizeVariantPreview() {
     LazyVerticalGrid(columns = GridCells.Fixed(3)) {
         items(TagSize.values()) { size ->
             Tag(
-                    modifier = Modifier.padding(8.dp),
-                    text = "Tag",
-                    size = size,
-                    color = Tag.Color.Pink,
+                modifier = Modifier.padding(8.dp),
+                text = "Tag",
+                size = size,
+                color = TagColor.Pink,
             )
         }
     }

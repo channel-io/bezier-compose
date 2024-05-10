@@ -1,7 +1,6 @@
 package io.channel.bezier.component
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
-import android.graphics.Color
 import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -25,9 +24,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -42,16 +41,16 @@ import io.channel.bezier.compose.R
 
 @Composable
 fun Button(
-    size: ButtonSize,
-    type: ButtonType,
-    color: ButtonColor,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-    enabled: Boolean = true,
-    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
-    text: String? = null,
-    leftIcon: (@Composable (iconSize: Dp) -> Unit)? = null,
-    rightIcon: (@Composable (iconSize: Dp) -> Unit)? = null,
+        size: ButtonSize,
+        type: ButtonType,
+        color: ButtonColor,
+        onClick: () -> Unit,
+        modifier: Modifier = Modifier,
+        enabled: Boolean = true,
+        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        text: String? = null,
+        leftIcon: (@Composable (iconSize: Dp) -> Unit)? = null,
+        rightIcon: (@Composable (iconSize: Dp) -> Unit)? = null,
 ) {
     val isOnlyIcon = (leftIcon != null || rightIcon != null) && text == null
 
@@ -62,14 +61,14 @@ fun Button(
                                 RoundedCornerShape(50)
                             } else {
                                 RoundedCornerShape(size.radius)
-                            }
+                            },
                     )
                     .graphicsLayer(
-                            alpha = if (enabled) 1f else 0.4f
+                            alpha = if (enabled) 1f else 0.4f,
                     )
                     .heightIn(min = size.height)
                     .background(
-                            color = colorResource(id = color.getBackgroundColor(type)),
+                            color = color.getBackgroundColor(type),
                     )
                     .clickable(
                             interactionSource = interactionSource,
@@ -97,7 +96,7 @@ fun Button(
                     modifier = Modifier
                             .padding(horizontal = 2.dp),
                     text = text,
-                    color = colorResource(id = color.getTextColor(type)),
+                    color = color.getTextColor(type),
                     fontSize = size.fontSize,
                     fontWeight = FontWeight.Bold,
                     maxLines = 1,
@@ -114,14 +113,14 @@ fun Button(
 
 @Composable
 fun Button(
-    size: ButtonSize,
-    type: ButtonType,
-    color: ButtonColor,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-    enabled: Boolean = true,
-    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
-    text: String? = null,
+        size: ButtonSize,
+        type: ButtonType,
+        color: ButtonColor,
+        onClick: () -> Unit,
+        modifier: Modifier = Modifier,
+        enabled: Boolean = true,
+        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        text: String? = null,
 ) {
     Button(
             size = size,
@@ -139,16 +138,16 @@ fun Button(
 
 @Composable
 fun Button(
-    size: ButtonSize,
-    type: ButtonType,
-    color: ButtonColor,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-    enabled: Boolean = true,
-    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
-    text: String? = null,
-    leftIconPainter: Painter? = null,
-    rightIconPainter: Painter? = null,
+        size: ButtonSize,
+        type: ButtonType,
+        color: ButtonColor,
+        onClick: () -> Unit,
+        modifier: Modifier = Modifier,
+        enabled: Boolean = true,
+        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        text: String? = null,
+        leftIconPainter: Painter? = null,
+        rightIconPainter: Painter? = null,
 ) {
     Button(
             size = size,
@@ -164,7 +163,7 @@ fun Button(
                     Icon(
                             modifier = Modifier.size(iconSize),
                             painter = leftIconPainter,
-                            tint = colorResource(id = color.getIconColor(type)),
+                            tint = color.getIconColor(type),
                             contentDescription = null,
                     )
                 }
@@ -174,7 +173,7 @@ fun Button(
                     Icon(
                             modifier = Modifier.size(iconSize),
                             painter = rightIconPainter,
-                            tint = colorResource(id = color.getIconColor(type)),
+                            tint = color.getIconColor(type),
                             contentDescription = null,
                     )
                 }
@@ -192,11 +191,56 @@ enum class ButtonSize(
         val contentPadding: Dp,
         val extraPadding: Dp,
 ) {
-    XS(height = 24.dp, radius = 6.dp, fontSize = 13.sp, iconSize = 16.dp, horizontalPadding = 3.dp, verticalPadding = 4.dp, contentPadding = 2.dp, extraPadding = 3.dp),
-    S(height = 30.dp, radius = 8.dp, fontSize = 14.sp, iconSize = 20.dp, horizontalPadding = 5.dp, verticalPadding = 5.dp, contentPadding = 2.dp, extraPadding = 1.dp),
-    M(height = 40.dp, radius = 12.dp, fontSize = 15.sp, iconSize = 24.dp, horizontalPadding = 8.dp, verticalPadding = 8.dp, contentPadding = 2.dp, extraPadding = 0.dp),
-    L(height = 44.dp, radius = 12.dp, fontSize = 16.sp, iconSize = 24.dp, horizontalPadding = 10.dp, verticalPadding = 10.dp, contentPadding = 3.dp, extraPadding = 0.dp),
-    XL(height = 54.dp, radius = 16.dp, fontSize = 16.sp, iconSize = 24.dp, horizontalPadding = 15.dp, verticalPadding = 15.dp, contentPadding = 4.dp, extraPadding = (-3).dp),
+    XS(
+            height = 24.dp,
+            radius = 6.dp,
+            fontSize = 13.sp,
+            iconSize = 16.dp,
+            horizontalPadding = 3.dp,
+            verticalPadding = 4.dp,
+            contentPadding = 2.dp,
+            extraPadding = 3.dp,
+    ),
+    S(
+            height = 30.dp,
+            radius = 8.dp,
+            fontSize = 14.sp,
+            iconSize = 20.dp,
+            horizontalPadding = 5.dp,
+            verticalPadding = 5.dp,
+            contentPadding = 2.dp,
+            extraPadding = 1.dp,
+    ),
+    M(
+            height = 40.dp,
+            radius = 12.dp,
+            fontSize = 15.sp,
+            iconSize = 24.dp,
+            horizontalPadding = 8.dp,
+            verticalPadding = 8.dp,
+            contentPadding = 2.dp,
+            extraPadding = 0.dp,
+    ),
+    L(
+            height = 44.dp,
+            radius = 12.dp,
+            fontSize = 16.sp,
+            iconSize = 24.dp,
+            horizontalPadding = 10.dp,
+            verticalPadding = 10.dp,
+            contentPadding = 3.dp,
+            extraPadding = 0.dp,
+    ),
+    XL(
+            height = 54.dp,
+            radius = 16.dp,
+            fontSize = 16.sp,
+            iconSize = 24.dp,
+            horizontalPadding = 15.dp,
+            verticalPadding = 15.dp,
+            contentPadding = 4.dp,
+            extraPadding = (-3).dp,
+    ),
 }
 
 enum class ButtonType {
@@ -213,91 +257,99 @@ enum class ButtonColor {
     Green,
     MonochromeLight,
     MonochromeDark,
+    Orange,
     AbsoluteWhite;
 
-    fun getBackgroundColor(type: ButtonType): Int {
+    @Composable
+    fun getBackgroundColor(type: ButtonType): Color {
         return when (type) {
             ButtonType.Primary, ButtonType.Floating -> {
                 when (this) {
-                    Blue -> R.color.bgtxt_blue_normal
-                    Red -> R.color.bgtxt_red_normal
-                    Cobalt -> R.color.bgtxt_cobalt_normal
-                    Green -> R.color.bgtxt_green_normal
-                    MonochromeLight -> R.color.bg_black_lighter
-                    MonochromeDark -> R.color.bg_grey_darkest
-                    AbsoluteWhite -> R.color.bg_transparent
+                    Blue -> BezierTheme.colors.bgtxtBlueNormal
+                    Red -> BezierTheme.colors.bgtxtRedNormal
+                    Cobalt -> BezierTheme.colors.bgtxtCobaltNormal
+                    Green -> BezierTheme.colors.bgtxtGreenNormal
+                    MonochromeLight -> BezierTheme.colors.bgBlackLighter
+                    MonochromeDark -> BezierTheme.colors.bgGreyDarkest
+                    AbsoluteWhite -> BezierTheme.colors.bgTransparent
+                    Orange -> BezierTheme.colors.bgtxtOrangeNormal
                 }
             }
 
             ButtonType.Secondary -> {
                 when (this) {
-                    Blue -> R.color.bgtxt_blue_lightest
-                    Red -> R.color.bgtxt_red_lightest
-                    Cobalt -> R.color.bgtxt_cobalt_lightest
-                    Green -> R.color.bgtxt_green_lightest
-                    MonochromeLight, MonochromeDark -> R.color.bg_black_lighter
-                    AbsoluteWhite -> R.color.bg_transparent
+                    Blue -> BezierTheme.colors.bgtxtBlueLightest
+                    Red -> BezierTheme.colors.bgtxtRedLightest
+                    Cobalt -> BezierTheme.colors.bgtxtCobaltLightest
+                    Green -> BezierTheme.colors.bgtxtGreenLightest
+                    MonochromeLight, MonochromeDark -> BezierTheme.colors.bgBlackLighter
+                    AbsoluteWhite -> BezierTheme.colors.bgTransparent
+                    Orange -> BezierTheme.colors.bgtxtOrangeLightest
                 }
             }
 
-            ButtonType.Tertiary -> R.color.bg_transparent
+            ButtonType.Tertiary -> BezierTheme.colors.bgTransparent
         }
     }
 
-    fun getTextColor(type: ButtonType): Int {
+    @Composable
+    fun getTextColor(type: ButtonType): Color {
         return when (type) {
             ButtonType.Primary, ButtonType.Floating -> {
                 when (this) {
-                    MonochromeDark -> R.color.txt_white_normal
-                    else -> R.color.bgtxt_absolute_white_dark
+                    MonochromeDark -> BezierTheme.colors.txtWhiteNormal
+                    else -> BezierTheme.colors.bgtxtAbsoluteWhiteDark
                 }
             }
 
             ButtonType.Secondary, ButtonType.Tertiary -> {
                 when (this) {
-                    Blue -> R.color.bgtxt_blue_normal
-                    Red -> R.color.bgtxt_red_normal
-                    Cobalt -> R.color.bgtxt_cobalt_normal
-                    Green -> R.color.bgtxt_green_normal
-                    MonochromeLight -> R.color.txt_black_darker
-                    MonochromeDark -> R.color.txt_black_darkest
-                    AbsoluteWhite -> R.color.bgtxt_absolute_white_dark
+                    Blue -> BezierTheme.colors.bgtxtBlueNormal
+                    Red -> BezierTheme.colors.bgtxtRedNormal
+                    Cobalt -> BezierTheme.colors.bgtxtCobaltNormal
+                    Green -> BezierTheme.colors.bgtxtGreenNormal
+                    MonochromeLight -> BezierTheme.colors.txtBlackDarker
+                    MonochromeDark -> BezierTheme.colors.txtBlackDarkest
+                    AbsoluteWhite -> BezierTheme.colors.bgtxtAbsoluteWhiteDark
+                    Orange -> BezierTheme.colors.bgtxtOrangeNormal
                 }
             }
         }
     }
 
-    fun getIconColor(type: ButtonType): Int {
+    @Composable
+    fun getIconColor(type: ButtonType): Color {
+
         return when (type) {
             ButtonType.Primary, ButtonType.Floating -> {
                 when (this) {
-                    MonochromeDark -> R.color.txt_white_normal
-                    else -> R.color.bgtxt_absolute_white_dark
+                    MonochromeDark -> BezierTheme.colors.txtWhiteNormal
+                    else -> BezierTheme.colors.bgtxtAbsoluteWhiteDark
                 }
             }
 
             ButtonType.Secondary, ButtonType.Tertiary -> {
                 when (this) {
-                    Blue -> R.color.bgtxt_blue_normal
-                    Red -> R.color.bgtxt_red_normal
-                    Cobalt -> R.color.bgtxt_cobalt_normal
-                    Green -> R.color.bgtxt_green_normal
-                    MonochromeLight -> R.color.txt_black_dark
-                    MonochromeDark -> R.color.txt_black_darker
-                    AbsoluteWhite -> R.color.bgtxt_absolute_white_dark
+                    Blue -> BezierTheme.colors.bgtxtBlueNormal
+                    Red -> BezierTheme.colors.bgtxtRedNormal
+                    Cobalt -> BezierTheme.colors.bgtxtCobaltNormal
+                    Green -> BezierTheme.colors.bgtxtGreenNormal
+                    MonochromeLight -> BezierTheme.colors.txtBlackDark
+                    MonochromeDark -> BezierTheme.colors.txtBlackDarker
+                    AbsoluteWhite -> BezierTheme.colors.bgtxtAbsoluteWhiteDark
+                    Orange -> BezierTheme.colors.bgtxtOrangeNormal
                 }
             }
         }
     }
 }
 
-
 @Preview(showBackground = true, widthDp = 1500)
 @Preview(
         showBackground = true,
         widthDp = 1500,
         uiMode = UI_MODE_NIGHT_YES,
-        backgroundColor = Color.BLACK.toLong(),
+        backgroundColor = 0x000000,
 )
 @Composable
 fun ButtonColorAndTypePreview() {
@@ -307,7 +359,7 @@ fun ButtonColorAndTypePreview() {
                             color = BezierTheme.colors.bgBlackLightest,
                     )
                     .padding(10.dp),
-            columns = GridCells.Fixed(7),
+            columns = GridCells.Fixed(ButtonColor.values().size),
     ) {
         items(ButtonColor.values()) {
             Button(
@@ -382,7 +434,7 @@ fun ButtonSizeAndTypePreview() {
                     .padding(10.dp),
     ) {
         Column(
-                modifier = Modifier.padding(end = 10.dp)
+                modifier = Modifier.padding(end = 10.dp),
         ) {
             ButtonSize.values().forEach { size ->
                 Button(
@@ -401,7 +453,7 @@ fun ButtonSizeAndTypePreview() {
         }
 
         Column(
-                modifier = Modifier.padding(end = 10.dp)
+                modifier = Modifier.padding(end = 10.dp),
         ) {
             ButtonSize.values().forEach { size ->
                 Button(
@@ -420,7 +472,7 @@ fun ButtonSizeAndTypePreview() {
         }
 
         Column(
-                modifier = Modifier.padding(end = 10.dp)
+                modifier = Modifier.padding(end = 10.dp),
         ) {
             ButtonSize.values().forEach { size ->
                 Button(
@@ -439,7 +491,7 @@ fun ButtonSizeAndTypePreview() {
         }
 
         Column(
-                modifier = Modifier.padding(end = 10.dp)
+                modifier = Modifier.padding(end = 10.dp),
         ) {
             ButtonSize.values().forEach { size ->
                 Button(
@@ -470,7 +522,7 @@ fun ButtonFillMaxWidthPreview() {
                     space = 10.dp,
                     alignment = Alignment.CenterVertically,
             ),
-            horizontalAlignment = Alignment.CenterHorizontally
+            horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Button(
                 modifier = Modifier.fillMaxWidth(),
@@ -493,7 +545,6 @@ fun ButtonFillMaxWidthPreview() {
     }
 }
 
-
 @Preview(showBackground = true)
 @Composable
 fun ButtonEnabledPreview() {
@@ -505,7 +556,7 @@ fun ButtonEnabledPreview() {
                     space = 10.dp,
                     alignment = Alignment.CenterVertically,
             ),
-            horizontalAlignment = Alignment.CenterHorizontally
+            horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Button(
                 size = ButtonSize.L,
@@ -540,7 +591,7 @@ fun ButtonOnlyIconPreview() {
                     space = 10.dp,
                     alignment = Alignment.CenterVertically,
             ),
-            horizontalAlignment = Alignment.CenterHorizontally
+            horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Button(
                 size = ButtonSize.XS,

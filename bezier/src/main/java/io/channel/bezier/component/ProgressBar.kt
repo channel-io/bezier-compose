@@ -38,9 +38,9 @@ import io.channel.bezier.compose.R
 import io.channel.bezier.extension.roundedBackground
 
 class ProgressBar @JvmOverloads constructor(
-        context: Context,
-        attrs: AttributeSet? = null,
-        defStyleAttr: Int = 0,
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0,
 ) : AbstractComposeView(context, attrs, defStyleAttr) {
 
     var progress by mutableStateOf(0)
@@ -50,15 +50,15 @@ class ProgressBar @JvmOverloads constructor(
     init {
         if (attrs != null) {
             context.theme.obtainStyledAttributes(
-                    attrs,
-                    R.styleable.ProgressBar,
-                    0,
-                    0,
+                attrs,
+                R.styleable.ProgressBar,
+                0,
+                0,
             ).use { typedArray ->
                 size = ProgressBarSize.fromId(typedArray.getInt(R.styleable.ProgressBar_pb_size, ProgressBarSize.S.id))
-                        ?: throw NoSuchElementException("unsupported attribute")
+                    ?: throw NoSuchElementException("unsupported attribute")
                 color = ProgressBarColor.fromId(typedArray.getInt(R.styleable.ProgressBar_pb_color, ProgressBarColor.Green.id))
-                        ?: throw NoSuchElementException("unsupported attribute")
+                    ?: throw NoSuchElementException("unsupported attribute")
             }
         }
     }
@@ -67,11 +67,11 @@ class ProgressBar @JvmOverloads constructor(
     override fun Content() {
         BezierTheme {
             ProgressBar(
-                    progress = progress,
-                    modifier = Modifier
-                            .fillMaxWidth(),
-                    size = size,
-                    color = color,
+                progress = progress,
+                modifier = Modifier
+                    .fillMaxWidth(),
+                size = size,
+                color = color,
             )
         }
     }
@@ -85,32 +85,32 @@ fun ProgressBar(
     color: ProgressBarColor = ProgressBarColor.Green,
 ) {
     val progressRatio: Float by animateFloatAsState(
-            targetValue = progress / 100f,
-            animationSpec = tween(
-                    durationMillis = 1000,
-                    easing = CubicBezierEasing(0.24f, 1f, 0.24f, 1f),
-            ),
-            label = "ProgressAnimation",
+        targetValue = progress / 100f,
+        animationSpec = tween(
+            durationMillis = 1000,
+            easing = CubicBezierEasing(0.24f, 1f, 0.24f, 1f),
+        ),
+        label = "ProgressAnimation",
     )
 
     Box(
-            modifier = modifier
-                    .height(size.heightDp.dp)
-                    .roundedBackground(color.backgroundColor),
+        modifier = modifier
+            .height(size.heightDp.dp)
+            .roundedBackground(color.backgroundColor),
     ) {
         Box(
-                modifier = Modifier
-                        .fillMaxWidth(progressRatio)
-                        .fillMaxHeight()
-                        .clip(RoundedCornerShape(50))
-                        .background(Brush.horizontalGradient(0f to color.startColor, 1f to color.endColor))
+            modifier = Modifier
+                .fillMaxWidth(progressRatio)
+                .fillMaxHeight()
+                .clip(RoundedCornerShape(50))
+                .background(Brush.horizontalGradient(0f to color.startColor, 1f to color.endColor))
         )
     }
 }
 
 enum class ProgressBarSize(
-        val id: Int,
-        val heightDp: Int,
+    val id: Int,
+    val heightDp: Int,
 ) {
     S(id = 0, heightDp = 4),
     M(id = 1, heightDp = 6);
@@ -123,7 +123,7 @@ enum class ProgressBarSize(
 }
 
 enum class ProgressBarColor(
-        val id: Int
+    val id: Int
 ) {
     Green(id = 0),
     GreenAlt(id = 1),
@@ -164,45 +164,45 @@ enum class ProgressBarColor(
 }
 
 @Preview(
-        widthDp = 300,
-        uiMode = Configuration.UI_MODE_NIGHT_NO,
-        showBackground = true,
+    widthDp = 300,
+    uiMode = Configuration.UI_MODE_NIGHT_NO,
+    showBackground = true,
 )
 @Composable
 private fun ProgressBarPreview() {
     var progress by remember { mutableStateOf(50) }
 
     Column(
-            modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(10.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(10.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp),
     ) {
         Row(
-                modifier = Modifier
-                        .fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(10.dp),
+            modifier = Modifier
+                .fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             Button(
-                    onClick = { progress = 0 },
-                    modifier = Modifier
-                            .weight(1f)
+                onClick = { progress = 0 },
+                modifier = Modifier
+                    .weight(1f)
             ) {
                 Text(text = "0")
             }
 
             Button(
-                    onClick = { progress = 50 },
-                    modifier = Modifier
-                            .weight(1f)
+                onClick = { progress = 50 },
+                modifier = Modifier
+                    .weight(1f)
             ) {
                 Text(text = "50")
             }
 
             Button(
-                    onClick = { progress = 100 },
-                    modifier = Modifier
-                            .weight(1f)
+                onClick = { progress = 100 },
+                modifier = Modifier
+                    .weight(1f)
             ) {
                 Text(text = "100")
             }
@@ -211,11 +211,11 @@ private fun ProgressBarPreview() {
         ProgressBarSize.values().forEach { size ->
             ProgressBarColor.values().forEach { color ->
                 ProgressBar(
-                        modifier = Modifier
-                                .fillMaxWidth(),
-                        progress = progress,
-                        size = size,
-                        color = color
+                    modifier = Modifier
+                        .fillMaxWidth(),
+                    progress = progress,
+                    size = size,
+                    color = color
                 )
             }
         }

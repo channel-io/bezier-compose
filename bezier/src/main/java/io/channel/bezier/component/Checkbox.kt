@@ -39,9 +39,9 @@ typealias CheckboxState = Checkbox.State
 typealias CheckboxColor = Checkbox.Color
 
 class Checkbox @JvmOverloads constructor(
-        context: Context,
-        attrs: AttributeSet? = null,
-        defStyleAttr: Int = 0,
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0,
 ) : AbstractComposeView(context, attrs, defStyleAttr) {
 
     private var _enabled by mutableStateOf(isEnabled)
@@ -62,10 +62,10 @@ class Checkbox @JvmOverloads constructor(
 
     init {
         val typedArray = context.theme.obtainStyledAttributes(
-                attrs,
-                R.styleable.Checkbox,
-                0,
-                0,
+            attrs,
+            R.styleable.Checkbox,
+            0,
+            0,
         )
 
         type = Type.fromId(typedArray.getInt(R.styleable.Checkbox_ckb_type, type.id))
@@ -81,16 +81,16 @@ class Checkbox @JvmOverloads constructor(
     override fun Content() {
         BezierTheme {
             Checkbox(
-                    state = state,
-                    type = type,
-                    enabled = _enabled,
-                    text = text,
-                    color = color,
-                    onStateChange = {
-                        state = it
+                state = state,
+                type = type,
+                enabled = _enabled,
+                text = text,
+                color = color,
+                onStateChange = {
+                    state = it
 
-                        onCheckChangedListener?.invoke(it)
-                    },
+                    onCheckChangedListener?.invoke(it)
+                },
             )
         }
     }
@@ -102,7 +102,7 @@ class Checkbox @JvmOverloads constructor(
     }
 
     enum class Color(
-            val id: Int,
+        val id: Int,
     ) {
         Normal(0),
         Green(1),
@@ -119,6 +119,7 @@ class Checkbox @JvmOverloads constructor(
                     Type.Rectangle -> BezierTheme.colors.bgtxtGreenNormal
                     Type.Circle -> BezierTheme.colors.bgtxtBlueNormal
                 }
+
                 Green -> BezierTheme.colors.bgtxtGreenNormal
                 Blue -> BezierTheme.colors.bgtxtBlueNormal
             }
@@ -132,9 +133,9 @@ class Checkbox @JvmOverloads constructor(
     }
 
     enum class Type(
-            val id: Int,
-            val checkboxSize: Dp,
-            val borderRadius: Dp,
+        val id: Int,
+        val checkboxSize: Dp,
+        val borderRadius: Dp,
     ) {
         Rectangle(0, 22.dp, 6.dp),
         Circle(1, 24.dp, 12.dp);
@@ -166,50 +167,50 @@ fun Checkbox(
     modifier: Modifier = Modifier,
     state: CheckboxState,
     onStateChange: (CheckboxState) -> Unit,
-    type: CheckboxType = Checkbox.Type.Rectangle,
+    type: CheckboxType = CheckboxType.Rectangle,
     enabled: Boolean = true,
     text: String? = null,
     color: CheckboxColor = Checkbox.Color.Normal,
 ) {
     Row(
-            modifier = modifier
-                    .padding(2.dp)
-                    .alpha(enabled.ifTrue(1.0f, 0.4f))
-                    .clickable(
-                            interactionSource = remember { MutableInteractionSource() },
-                            indication = null,
-                            enabled = enabled,
-                    ) {
-                        onStateChange(state.toggle())
-                    },
-            verticalAlignment = Alignment.CenterVertically,
+        modifier = modifier
+            .padding(2.dp)
+            .alpha(enabled.ifTrue(1.0f, 0.4f))
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+                enabled = enabled,
+            ) {
+                onStateChange(state.toggle())
+            },
+        verticalAlignment = Alignment.CenterVertically,
     ) {
         Box(
-                modifier = Modifier
-                        .size(type.checkboxSize)
-                        .clip(RoundedCornerShape(type.borderRadius))
-                        .border(
-                                width = state.borderWidth,
-                                color = BezierTheme.colors.bdrBlackLight,
-                                shape = RoundedCornerShape(type.borderRadius),
-                        )
-                        .background(color.backgroundColor(type, state))
-                        .clickable(
-                                interactionSource = remember { MutableInteractionSource() },
-                                indication = rememberRipple(),
-                                enabled = enabled,
-                        ) {
-                            onStateChange(state.toggle())
-                        },
+            modifier = Modifier
+                .size(type.checkboxSize)
+                .clip(RoundedCornerShape(type.borderRadius))
+                .border(
+                    width = state.borderWidth,
+                    color = BezierTheme.colors.bdrBlackLight,
+                    shape = RoundedCornerShape(type.borderRadius),
+                )
+                .background(color.backgroundColor(type, state))
+                .clickable(
+                    interactionSource = remember { MutableInteractionSource() },
+                    indication = rememberRipple(),
+                    enabled = enabled,
+                ) {
+                    onStateChange(state.toggle())
+                },
         ) {
             if (state.drawableRes != 0) {
                 Icon(
-                        modifier = Modifier
-                                .fillMaxSize()
-                                .clip(RoundedCornerShape(type.borderRadius)),
-                        painter = painterResource(id = state.drawableRes),
-                        contentDescription = null,
-                        tint = BezierTheme.colors.bgtxtAbsoluteWhiteDark,
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .clip(RoundedCornerShape(type.borderRadius)),
+                    painter = painterResource(id = state.drawableRes),
+                    contentDescription = null,
+                    tint = BezierTheme.colors.bgtxtAbsoluteWhiteDark,
                 )
             }
         }
@@ -217,9 +218,9 @@ fun Checkbox(
         if (text != null) {
             Spacer(modifier = Modifier.width(8.dp))
             Text(
-                    text = text,
-                    fontSize = 15.sp,
-                    color = BezierTheme.colors.txtBlackDarkest,
+                text = text,
+                fontSize = 15.sp,
+                color = BezierTheme.colors.txtBlackDarkest,
             )
         }
     }
@@ -228,87 +229,87 @@ fun Checkbox(
 @Preview(showBackground = true)
 @Composable
 private fun RectangleCheckBoxPreview() {
-    var state by remember { mutableStateOf(Checkbox.State.Off) }
+    var state by remember { mutableStateOf(CheckboxState.Off) }
 
     Checkbox(
-            enabled = true,
-            text = "This is a rectangle checkbox",
-            state = state,
-            type = Checkbox.Type.Rectangle,
-            onStateChange = { state = it },
+        enabled = true,
+        text = "This is a rectangle checkbox",
+        state = state,
+        type = CheckboxType.Rectangle,
+        onStateChange = { state = it },
     )
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun CircleCheckBoxPreview() {
-    var state by remember { mutableStateOf(Checkbox.State.Off) }
+    var state by remember { mutableStateOf(CheckboxState.Off) }
 
     Checkbox(
-            enabled = true,
-            text = "This is a circle checkbox",
-            state = state,
-            type = Checkbox.Type.Circle,
-            onStateChange = { state = it },
+        enabled = true,
+        text = "This is a circle checkbox",
+        state = state,
+        type = CheckboxType.Circle,
+        onStateChange = { state = it },
     )
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun RectangleIndeterminateCheckBoxPreview() {
-    var state by remember { mutableStateOf(Checkbox.State.Indeterminate) }
+    var state by remember { mutableStateOf(CheckboxState.Indeterminate) }
 
     Checkbox(
-            enabled = true,
-            text = "This is a rectangle checkbox",
-            state = state,
-            type = Checkbox.Type.Rectangle,
-            onStateChange = { state = it },
+        enabled = true,
+        text = "This is a rectangle checkbox",
+        state = state,
+        type = CheckboxType.Rectangle,
+        onStateChange = { state = it },
     )
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun CircleIndeterminateCheckBoxPreview() {
-    var state by remember { mutableStateOf(Checkbox.State.Indeterminate) }
+    var state by remember { mutableStateOf(CheckboxState.Indeterminate) }
 
     Checkbox(
-            enabled = true,
-            text = "This is a circle checkbox",
-            state = state,
-            type = Checkbox.Type.Circle,
-            onStateChange = { state = it },
+        enabled = true,
+        text = "This is a circle checkbox",
+        state = state,
+        type = CheckboxType.Circle,
+        onStateChange = { state = it },
     )
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun DisabledRectangleCheckBoxPreview() {
-    var state by remember { mutableStateOf(Checkbox.State.Off) }
+    var state by remember { mutableStateOf(CheckboxState.Off) }
 
     Checkbox(
-            enabled = false,
-            text = "This is a rectangle checkbox",
-            state = state,
-            type = Checkbox.Type.Rectangle,
-            onStateChange = { state = it },
+        enabled = false,
+        text = "This is a rectangle checkbox",
+        state = state,
+        type = CheckboxType.Rectangle,
+        onStateChange = { state = it },
     )
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun DisabledCircleCheckBoxPreview() {
-    var state by remember { mutableStateOf(Checkbox.State.Off) }
+    var state by remember { mutableStateOf(CheckboxState.Off) }
 
     Checkbox(
-            enabled = false,
-            text = "This is a circle checkbox",
-            state = state,
-            type = Checkbox.Type.Circle,
-            onStateChange = { state = it },
+        enabled = false,
+        text = "This is a circle checkbox",
+        state = state,
+        type = CheckboxType.Circle,
+        onStateChange = { state = it },
     )
 }
 
 fun CheckboxState.toggle(): CheckboxState {
-    return if (this == Checkbox.State.On) Checkbox.State.Off else Checkbox.State.On
+    return if (this == CheckboxState.On) CheckboxState.Off else CheckboxState.On
 }

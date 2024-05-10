@@ -46,22 +46,22 @@ fun KeyValueItem(
     bottomContent: @Composable (() -> Unit)? = null,
 ) {
     KeyValueItem(
-            modifier = modifier,
-            key = key,
-            icon = icon,
-            blockContent = blockContent,
-            leftContentBuilder = leftContentBuilder,
-            rightIconBuilder = rightIconBuilder,
-            bottomContent = bottomContent,
-            valueContent = {
-                Text(
-                        text = value,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                        fontSize = 15.sp,
-                        color = BezierTheme.colors.txtBlackDarkest,
-                )
-            }
+        modifier = modifier,
+        key = key,
+        icon = icon,
+        blockContent = blockContent,
+        leftContentBuilder = leftContentBuilder,
+        rightIconBuilder = rightIconBuilder,
+        bottomContent = bottomContent,
+        valueContent = {
+            Text(
+                text = value,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                fontSize = 15.sp,
+                color = BezierTheme.colors.txtBlackDarkest,
+            )
+        }
     )
 }
 
@@ -78,39 +78,39 @@ fun KeyValueItem(
     bottomContent: @Composable (() -> Unit)? = null,
 ) {
     Column(
-            modifier = modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 4.dp, horizontal = 6.dp),
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(vertical = 4.dp, horizontal = 6.dp),
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Row(
-                    modifier = Modifier.sizeIn(minHeight = 24.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                modifier = Modifier.sizeIn(minHeight = 24.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 if (icon != null) {
                     Icon(
-                            modifier = Modifier.size(20.dp),
-                            imageVector = icon,
-                            contentDescription = null,
-                            tint = BezierTheme.colors.txtBlackDark,
+                        modifier = Modifier.size(20.dp),
+                        imageVector = icon,
+                        contentDescription = null,
+                        tint = BezierTheme.colors.txtBlackDark,
                     )
                 }
 
                 Text(
-                        modifier = Modifier.sizeIn(maxWidth = 152.dp),
-                        text = key,
-                        color = BezierTheme.colors.txtBlackDark,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 14.sp,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.sizeIn(maxWidth = 152.dp),
+                    text = key,
+                    color = BezierTheme.colors.txtBlackDark,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 14.sp,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
                 )
 
                 val leftContentInfoList = remember(leftContentBuilder) {
                     KeyValueItemLeftContentBuilderImpl()
-                            .apply(leftContentBuilder)
-                            .contentInfoList
+                        .apply(leftContentBuilder)
+                        .contentInfoList
                 }
                 leftContentInfoList.forEach { it.content() }
             }
@@ -118,14 +118,14 @@ fun KeyValueItem(
 
             if (blockContent) {
                 Box(
-                        modifier = Modifier
-                                .weight(1f)
-                                .height(6.dp)
-                                .padding(end = 4.dp)
-                                .background(
-                                        color = BezierTheme.colors.bgGreyLight,
-                                        shape = RoundedCornerShape(2.dp),
-                                ),
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(6.dp)
+                        .padding(end = 4.dp)
+                        .background(
+                            color = BezierTheme.colors.bgGreyLight,
+                            shape = RoundedCornerShape(2.dp),
+                        ),
                 )
             } else {
                 Box(modifier = Modifier.weight(1f)) {
@@ -134,20 +134,20 @@ fun KeyValueItem(
                 Spacer(modifier = Modifier.width(8.dp))
 
                 Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
                     val iconInfoList = remember(rightIconBuilder) {
                         KeyValueItemIconBuilderImpl()
-                                .apply(rightIconBuilder)
-                                .iconInfoList
+                            .apply(rightIconBuilder)
+                            .iconInfoList
                     }
                     iconInfoList.forEach {
                         Icon(
-                                modifier = Modifier.size(it.size.dp),
-                                imageVector = it.icon,
-                                contentDescription = null,
-                                tint = it.tint(),
+                            modifier = Modifier.size(it.size.dp),
+                            imageVector = it.icon,
+                            contentDescription = null,
+                            tint = it.tint(),
                         )
                     }
                 }
@@ -177,9 +177,9 @@ private class LeftContentInfo(val content: @Composable () -> Unit)
 
 interface KeyValueItemIconBuilder {
     fun icon(
-            icon: ImageVector,
-            size: Int = 20,
-            tint: @Composable () -> Color = { LocalContentColor.current.copy(alpha = LocalContentAlpha.current) },
+        icon: ImageVector,
+        size: Int = 20,
+        tint: @Composable () -> Color = { LocalContentColor.current.copy(alpha = LocalContentAlpha.current) },
     )
 
     fun navigationIcon()
@@ -194,36 +194,36 @@ private class KeyValueItemIconBuilderImpl : KeyValueItemIconBuilder {
 
     override fun navigationIcon() {
         iconInfoList += IconInfo(
-                icon = BezierIcon.ChevronSmallRight,
-                size = 24,
-                tint = { BezierTheme.colors.txtBlackDark },
+            icon = BezierIcon.ChevronSmallRight,
+            size = 24,
+            tint = { BezierTheme.colors.txtBlackDark },
         )
     }
 }
 
 private class IconInfo(
-        val icon: ImageVector,
-        val size: Int,
-        val tint: @Composable () -> Color,
+    val icon: ImageVector,
+    val size: Int,
+    val tint: @Composable () -> Color,
 )
 
 @Composable
 @Preview(showBackground = true)
 private fun KeyValueItemPreview() {
     KeyValueItem(
-            icon = BezierIcon.ListNumber,
-            key = "아이폰사용자",
-            leftContentBuilder = {
-                content { Text(text = "아이폰이 진리") }
-                content { Text(text = "인정!", color = Color.Red) }
-            },
-            rightIconBuilder = {
-                icon(BezierIcon.String, size = 16, tint = { Color.Red })
-                navigationIcon()
-            },
-            valueContent = {
-                Text(text = "Hello world 긴 텍스트 Hello world 긴 텍스트 Hello world 긴 텍스트 Hello world 긴 텍스트 Hello world 긴 텍스트")
-            }
+        icon = BezierIcon.ListNumber,
+        key = "아이폰사용자",
+        leftContentBuilder = {
+            content { Text(text = "아이폰이 진리") }
+            content { Text(text = "인정!", color = Color.Red) }
+        },
+        rightIconBuilder = {
+            icon(BezierIcon.String, size = 16, tint = { Color.Red })
+            navigationIcon()
+        },
+        valueContent = {
+            Text(text = "Hello world 긴 텍스트 Hello world 긴 텍스트 Hello world 긴 텍스트 Hello world 긴 텍스트 Hello world 긴 텍스트")
+        }
     )
 }
 
@@ -231,15 +231,15 @@ private fun KeyValueItemPreview() {
 @Preview(showBackground = true)
 private fun KeyValueItemPreview_Block() {
     KeyValueItem(
-            icon = BezierIcon.ListNumber,
-            key = "아이폰사용자",
-            blockContent = true,
-            leftContentBuilder = {
-                content { Text(text = "아이폰이 진리") }
-                content { Text(text = "인정!", color = Color.Red) }
-            },
-            rightIconBuilder = { navigationIcon() },
-            valueContent = { Text("Value") },
+        icon = BezierIcon.ListNumber,
+        key = "아이폰사용자",
+        blockContent = true,
+        leftContentBuilder = {
+            content { Text(text = "아이폰이 진리") }
+            content { Text(text = "인정!", color = Color.Red) }
+        },
+        rightIconBuilder = { navigationIcon() },
+        valueContent = { Text("Value") },
     )
 }
 
@@ -247,19 +247,19 @@ private fun KeyValueItemPreview_Block() {
 @Preview(showBackground = true)
 private fun KeyValueItemPreview_BottomContent() {
     KeyValueItem(
-            key = "아이폰사용자",
-            leftContentBuilder = {
-                content { Text(text = "아이폰이 진리") }
-                content { Text(text = "인정!", color = Color.Red) }
-            },
-            rightIconBuilder = { navigationIcon() },
-            valueContent = { Text("Value") },
-            bottomContent = {
-                Column {
-                    Text(text = "아이폰 사랑해")
-                    Text(text = "아이폰 사랑해222")
-                }
+        key = "아이폰사용자",
+        leftContentBuilder = {
+            content { Text(text = "아이폰이 진리") }
+            content { Text(text = "인정!", color = Color.Red) }
+        },
+        rightIconBuilder = { navigationIcon() },
+        valueContent = { Text("Value") },
+        bottomContent = {
+            Column {
+                Text(text = "아이폰 사랑해")
+                Text(text = "아이폰 사랑해222")
             }
+        }
     )
 }
 
@@ -267,19 +267,19 @@ private fun KeyValueItemPreview_BottomContent() {
 @Preview(showBackground = true)
 private fun KeyValueItemPreview_SimpleValue() {
     KeyValueItem(
-            key = "아이폰사용자",
-            value = "Value",
-            leftContentBuilder = {
-                content { Text(text = "아이폰이 진리") }
-                content { Text(text = "인정!", color = Color.Red) }
-            },
-            rightIconBuilder = { navigationIcon() },
-            bottomContent = {
-                Column {
-                    Text(text = "아이폰 사랑해")
-                    Text(text = "아이폰 사랑해222")
-                }
+        key = "아이폰사용자",
+        value = "Value",
+        leftContentBuilder = {
+            content { Text(text = "아이폰이 진리") }
+            content { Text(text = "인정!", color = Color.Red) }
+        },
+        rightIconBuilder = { navigationIcon() },
+        bottomContent = {
+            Column {
+                Text(text = "아이폰 사랑해")
+                Text(text = "아이폰 사랑해222")
             }
+        }
     )
 }
 
@@ -287,19 +287,19 @@ private fun KeyValueItemPreview_SimpleValue() {
 @Preview(showBackground = true)
 private fun KeyValueItemPreview_SimpleValueLongText() {
     KeyValueItem(
-            key = "아이폰사용자",
-            value = "긴 텍스트긴 텍스트 긴 텍스트 긴 텍스트 긴 텍스트 ㅍ 긴 텍스트 긴 텍스트 긴 텍스트 긴 텍스트 긴 텍스트 긴 텍스트",
-            leftContentBuilder = {
-                content { Text(text = "아이폰이 진리") }
-                content { Text(text = "인정!", color = Color.Red) }
-            },
-            rightIconBuilder = { navigationIcon() },
-            bottomContent = {
-                Column {
-                    Text(text = "아이폰 사랑해")
-                    Text(text = "아이폰 사랑해222")
-                }
+        key = "아이폰사용자",
+        value = "긴 텍스트긴 텍스트 긴 텍스트 긴 텍스트 긴 텍스트 ㅍ 긴 텍스트 긴 텍스트 긴 텍스트 긴 텍스트 긴 텍스트 긴 텍스트",
+        leftContentBuilder = {
+            content { Text(text = "아이폰이 진리") }
+            content { Text(text = "인정!", color = Color.Red) }
+        },
+        rightIconBuilder = { navigationIcon() },
+        bottomContent = {
+            Column {
+                Text(text = "아이폰 사랑해")
+                Text(text = "아이폰 사랑해222")
             }
+        }
     )
 }
 

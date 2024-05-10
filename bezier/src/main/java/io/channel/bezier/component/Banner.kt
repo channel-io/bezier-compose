@@ -52,21 +52,21 @@ fun Banner(
     content: (@Composable () -> Unit)? = null,
 ) {
     BannerLayout(
-            type = type,
-            description = {
-                Text(
-                        text = description,
-                        color = colorResource(id = type.descriptionColor),
-                        fontSize = 14.sp,
-                )
-            },
-            modifier = modifier,
-            title = title,
-            icon = icon,
-            iconColor = iconColor,
-            onClick = onClick,
-            onRemove = onRemove,
-            content = content,
+        type = type,
+        description = {
+            Text(
+                text = description,
+                color = colorResource(id = type.descriptionColor),
+                fontSize = 14.sp,
+            )
+        },
+        modifier = modifier,
+        title = title,
+        icon = icon,
+        iconColor = iconColor,
+        onClick = onClick,
+        onRemove = onRemove,
+        content = content,
     )
 }
 
@@ -83,21 +83,21 @@ fun Banner(
     content: (@Composable () -> Unit)? = null,
 ) {
     BannerLayout(
-            type = type,
-            description = {
-                Text(
-                        text = description,
-                        color = colorResource(id = type.descriptionColor),
-                        fontSize = 14.sp,
-                )
-            },
-            modifier = modifier,
-            title = title,
-            icon = icon,
-            iconColor = iconColor,
-            onClick = onClick,
-            onRemove = onRemove,
-            content = content,
+        type = type,
+        description = {
+            Text(
+                text = description,
+                color = colorResource(id = type.descriptionColor),
+                fontSize = 14.sp,
+            )
+        },
+        modifier = modifier,
+        title = title,
+        icon = icon,
+        iconColor = iconColor,
+        onClick = onClick,
+        onRemove = onRemove,
+        content = content,
     )
 }
 
@@ -114,52 +114,52 @@ private fun BannerLayout(
     content: (@Composable () -> Unit)?,
 ) {
     Row(
-            modifier = modifier
-                    .widthIn(
-                            max = if (type == BannerType.Floating) {
-                                460.dp
-                            } else {
-                                Dp.Unspecified
-                            }
-                    )
-                    .shadow(
-                            elevation = type.elevation,
-                            clip = true,
-                            shape = RoundedCornerShape(16.dp),
-                    )
-                    .background(colorResource(id = type.backgroundColor))
-                    .let {
-                        if (onClick != null) {
-                            it.clickable(onClick = onClick)
-                        } else {
-                            it
-                        }
-                    }
-                    .padding(vertical = 10.dp, horizontal = 8.dp)
+        modifier = modifier
+            .widthIn(
+                max = if (type == BannerType.Floating) {
+                    460.dp
+                } else {
+                    Dp.Unspecified
+                }
+            )
+            .shadow(
+                elevation = type.elevation,
+                clip = true,
+                shape = RoundedCornerShape(16.dp),
+            )
+            .background(colorResource(id = type.backgroundColor))
+            .let {
+                if (onClick != null) {
+                    it.clickable(onClick = onClick)
+                } else {
+                    it
+                }
+            }
+            .padding(vertical = 10.dp, horizontal = 8.dp)
     ) {
         if (icon != null) {
             Icon(
-                    modifier = Modifier
-                            .padding(start = 6.dp, top = 5.dp, bottom = 5.dp)
-                            .size(20.dp),
-                    painter = icon,
-                    tint = iconColor.takeOrElse { BezierTheme.colors.txtBlackDark },
-                    contentDescription = null,
+                modifier = Modifier
+                    .padding(start = 6.dp, top = 5.dp, bottom = 5.dp)
+                    .size(20.dp),
+                painter = icon,
+                tint = iconColor.takeOrElse { BezierTheme.colors.txtBlackDark },
+                contentDescription = null,
             )
         }
 
         Column(
-                modifier = Modifier
-                        .padding(6.dp)
-                        .weight(1F),
-                verticalArrangement = Arrangement.spacedBy(4.dp)
+            modifier = Modifier
+                .padding(6.dp)
+                .weight(1F),
+            verticalArrangement = Arrangement.spacedBy(4.dp)
         ) {
             if (type == BannerType.Inner && title != null) {
                 Text(
-                        text = title,
-                        color = BezierTheme.colors.txtBlackDarker,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 14.sp,
+                    text = title,
+                    color = BezierTheme.colors.txtBlackDarker,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 14.sp,
                 )
             }
 
@@ -168,8 +168,8 @@ private fun BannerLayout(
 
         if (type == BannerType.Inner && content != null) {
             Box(
-                    modifier = Modifier
-                            .padding(start = 4.dp, end = 6.dp),
+                modifier = Modifier
+                    .padding(start = 4.dp, end = 6.dp),
             ) {
                 content()
             }
@@ -178,50 +178,50 @@ private fun BannerLayout(
 
         if (onRemove != null) {
             Icon(
-                    modifier = Modifier
-                            .size(30.dp)
-                            .clickable(
-                                    interactionSource = remember { MutableInteractionSource() },
-                                    indication = null,
-                                    onClick = onRemove,
-                            )
-                            .padding(5.dp),
-                    painter = painterResource(id = R.drawable.icon_cancel_small),
-                    tint = BezierTheme.colors.txtBlackDark,
-                    contentDescription = null,
+                modifier = Modifier
+                    .size(30.dp)
+                    .clickable(
+                        interactionSource = remember { MutableInteractionSource() },
+                        indication = null,
+                        onClick = onRemove,
+                    )
+                    .padding(5.dp),
+                painter = painterResource(id = R.drawable.icon_cancel_small),
+                tint = BezierTheme.colors.txtBlackDark,
+                contentDescription = null,
             )
         } else if (onClick != null) {
             Icon(
-                    modifier = Modifier
-                            .size(30.dp)
-                            .padding(5.dp),
-                    painter = painterResource(id = R.drawable.icon_chevron_small_right),
-                    tint = BezierTheme.colors.txtBlackDark,
-                    contentDescription = null,
+                modifier = Modifier
+                    .size(30.dp)
+                    .padding(5.dp),
+                painter = painterResource(id = R.drawable.icon_chevron_small_right),
+                tint = BezierTheme.colors.txtBlackDark,
+                contentDescription = null,
             )
         }
     }
 }
 
 enum class BannerType(
-        @ColorRes val backgroundColor: Int,
-        val elevation: Dp,
-        @ColorRes val descriptionColor: Int,
+    @ColorRes val backgroundColor: Int,
+    val elevation: Dp,
+    @ColorRes val descriptionColor: Int,
 ) {
     Inner(
-            backgroundColor = R.color.bg_black_lightest,
-            elevation = 0.dp,
-            descriptionColor = R.color.txt_black_darker,
+        backgroundColor = R.color.bg_black_lightest,
+        elevation = 0.dp,
+        descriptionColor = R.color.txt_black_darker,
     ),
     Floating(
-            backgroundColor = R.color.bg_grey_lighter,
-            elevation = 20.dp,
-            descriptionColor = R.color.txt_black_darkest,
+        backgroundColor = R.color.bg_grey_lighter,
+        elevation = 20.dp,
+        descriptionColor = R.color.txt_black_darkest,
     ),
     Card(
-            backgroundColor = R.color.bg_white_low,
-            elevation = 6.dp,
-            descriptionColor = R.color.txt_black_darkest,
+        backgroundColor = R.color.bg_white_low,
+        elevation = 6.dp,
+        descriptionColor = R.color.txt_black_darkest,
     ),
 }
 
@@ -229,13 +229,13 @@ enum class BannerType(
 @Composable
 private fun FloatingBannerPreview() {
     Banner(
-            modifier = Modifier.padding(10.dp),
-            type = BannerType.Floating,
-            title = null,
-            description = "componet ia properies, parent cmobil iespetc",
-            icon = painterResource(id = R.drawable.icon_lock),
-            iconColor = BezierTheme.colors.txtBlackDark,
-            onRemove = {},
+        modifier = Modifier.padding(10.dp),
+        type = BannerType.Floating,
+        title = null,
+        description = "componet ia properies, parent cmobil iespetc",
+        icon = painterResource(id = R.drawable.icon_lock),
+        iconColor = BezierTheme.colors.txtBlackDark,
+        onRemove = {},
     )
 }
 
@@ -243,13 +243,13 @@ private fun FloatingBannerPreview() {
 @Composable
 private fun CardBannerPreview() {
     Banner(
-            modifier = Modifier.padding(10.dp),
-            type = BannerType.Card,
-            title = null,
-            description = "componet ia properies, parent cmobil iespetc",
-            icon = painterResource(id = R.drawable.icon_lock),
-            iconColor = BezierTheme.colors.txtBlackDark,
-            onRemove = {},
+        modifier = Modifier.padding(10.dp),
+        type = BannerType.Card,
+        title = null,
+        description = "componet ia properies, parent cmobil iespetc",
+        icon = painterResource(id = R.drawable.icon_lock),
+        iconColor = BezierTheme.colors.txtBlackDark,
+        onRemove = {},
     )
 }
 
@@ -257,21 +257,21 @@ private fun CardBannerPreview() {
 @Composable
 private fun InnerBannerPreview() {
     Banner(
-            modifier = Modifier
-                    .padding(10.dp),
-            type = BannerType.Inner,
-            title = "componet ia properies, palent",
-            description = "shape viw imlaouy",
-            icon = painterResource(id = R.drawable.icon_lock),
-            iconColor = BezierTheme.colors.txtBlackDark,
-            onRemove = {},
+        modifier = Modifier
+            .padding(10.dp),
+        type = BannerType.Inner,
+        title = "componet ia properies, palent",
+        description = "shape viw imlaouy",
+        icon = painterResource(id = R.drawable.icon_lock),
+        iconColor = BezierTheme.colors.txtBlackDark,
+        onRemove = {},
     ) {
         Box(
-                modifier = Modifier
-                        .size(64.dp, 52.dp)
-                        .background(
-                                color = BezierTheme.colors.bgtxtBlueNormal,
-                        ),
+            modifier = Modifier
+                .size(64.dp, 52.dp)
+                .background(
+                    color = BezierTheme.colors.bgtxtBlueNormal,
+                ),
         )
     }
 }
@@ -280,14 +280,14 @@ private fun InnerBannerPreview() {
 @Composable
 private fun InnerBannerWithoutTitlePreview() {
     Banner(
-            modifier = Modifier
-                    .padding(10.dp),
-            type = BannerType.Inner,
-            title = null,
-            description = "shape viw imlaouy",
-            icon = painterResource(id = R.drawable.icon_lock),
-            iconColor = BezierTheme.colors.txtBlackDark,
-            onRemove = {},
+        modifier = Modifier
+            .padding(10.dp),
+        type = BannerType.Inner,
+        title = null,
+        description = "shape viw imlaouy",
+        icon = painterResource(id = R.drawable.icon_lock),
+        iconColor = BezierTheme.colors.txtBlackDark,
+        onRemove = {},
     )
 }
 
@@ -297,38 +297,38 @@ private fun InnerBannerWithoutTitlePreview() {
 private fun BannerOnRemovePreview() {
     var visibleState by remember { mutableStateOf(true) }
     Column(
-            modifier = Modifier
-                    .fillMaxWidth()
+        modifier = Modifier
+            .fillMaxWidth()
     ) {
         Button(
-                modifier = Modifier
-                        .align(Alignment.CenterHorizontally),
-                onClick = {
-                    visibleState = true
-                }
+            modifier = Modifier
+                .align(Alignment.CenterHorizontally),
+            onClick = {
+                visibleState = true
+            }
         ) {
             Text(text = "원복")
         }
 
         Banner(
-                modifier = Modifier
-                        .padding(10.dp)
-                        .graphicsLayer {
-                            alpha = if (visibleState) 1f else 0f
-                        },
-                type = BannerType.Inner,
-                title = "componet ia properies, palent",
-                description = "shape viw imlaouy",
-                icon = painterResource(id = R.drawable.icon_lock),
-                iconColor = BezierTheme.colors.txtBlackDark,
-                onRemove = { visibleState = false },
+            modifier = Modifier
+                .padding(10.dp)
+                .graphicsLayer {
+                    alpha = if (visibleState) 1f else 0f
+                },
+            type = BannerType.Inner,
+            title = "componet ia properies, palent",
+            description = "shape viw imlaouy",
+            icon = painterResource(id = R.drawable.icon_lock),
+            iconColor = BezierTheme.colors.txtBlackDark,
+            onRemove = { visibleState = false },
         ) {
             Box(
-                    modifier = Modifier
-                            .size(64.dp, 52.dp)
-                            .background(
-                                    color = BezierTheme.colors.bgtxtBlueNormal,
-                            ),
+                modifier = Modifier
+                    .size(64.dp, 52.dp)
+                    .background(
+                        color = BezierTheme.colors.bgtxtBlueNormal,
+                    ),
             )
         }
     }
@@ -338,24 +338,24 @@ private fun BannerOnRemovePreview() {
 @Composable
 private fun BannerOnClickPreview() {
     Column(
-            modifier = Modifier
-                    .fillMaxWidth()
+        modifier = Modifier
+            .fillMaxWidth()
     ) {
         Banner(
-                modifier = Modifier.padding(10.dp),
-                type = BannerType.Inner,
-                title = "componet ia properies, palent",
-                description = "shape viw imlaouy",
-                icon = painterResource(id = R.drawable.icon_lock),
-                iconColor = BezierTheme.colors.txtBlackDark,
-                onClick = {},
+            modifier = Modifier.padding(10.dp),
+            type = BannerType.Inner,
+            title = "componet ia properies, palent",
+            description = "shape viw imlaouy",
+            icon = painterResource(id = R.drawable.icon_lock),
+            iconColor = BezierTheme.colors.txtBlackDark,
+            onClick = {},
         ) {
             Box(
-                    modifier = Modifier
-                            .size(64.dp, 52.dp)
-                            .background(
-                                    color = BezierTheme.colors.bgtxtBlueNormal,
-                            ),
+                modifier = Modifier
+                    .size(64.dp, 52.dp)
+                    .background(
+                        color = BezierTheme.colors.bgtxtBlueNormal,
+                    ),
             )
         }
     }
@@ -365,25 +365,25 @@ private fun BannerOnClickPreview() {
 @Composable
 private fun BannerOnClickOnRemovePreview() {
     Column(
-            modifier = Modifier
-                    .fillMaxWidth()
+        modifier = Modifier
+            .fillMaxWidth()
     ) {
         Banner(
-                modifier = Modifier.padding(10.dp),
-                type = BannerType.Inner,
-                title = "componet ia properies, palent",
-                description = "shape viw imlaouy",
-                icon = painterResource(id = R.drawable.icon_lock),
-                iconColor = BezierTheme.colors.txtBlackDark,
-                onClick = {},
-                onRemove = {},
+            modifier = Modifier.padding(10.dp),
+            type = BannerType.Inner,
+            title = "componet ia properies, palent",
+            description = "shape viw imlaouy",
+            icon = painterResource(id = R.drawable.icon_lock),
+            iconColor = BezierTheme.colors.txtBlackDark,
+            onClick = {},
+            onRemove = {},
         ) {
             Box(
-                    modifier = Modifier
-                            .size(64.dp, 52.dp)
-                            .background(
-                                    color = BezierTheme.colors.bgtxtBlueNormal,
-                            ),
+                modifier = Modifier
+                    .size(64.dp, 52.dp)
+                    .background(
+                        color = BezierTheme.colors.bgtxtBlueNormal,
+                    ),
             )
         }
     }

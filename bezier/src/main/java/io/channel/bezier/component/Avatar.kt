@@ -97,11 +97,11 @@ class Avatar @JvmOverloads constructor(
     }
 
     enum class Size(
-        val id: Int,
-        val avatarSize: Dp,
-        val overflowOffset: Dp,
-        val borderWidth: Dp,
-        val statusSize: StatusSize,
+            val id: Int,
+            val avatarSize: Dp,
+            val overflowOffset: Dp,
+            val borderWidth: Dp,
+            val statusSize: StatusSize,
     ) {
         Size16(0, 16.dp, 4.dp, 2.dp, StatusSize.M),
         Size20(1, 20.dp, 4.dp, 2.dp, StatusSize.M),
@@ -128,13 +128,13 @@ class Avatar @JvmOverloads constructor(
 
 @Composable
 fun Avatar(
-    painter: Painter,
-    modifier: Modifier = Modifier,
-    showBorder: Boolean = false,
-    shape: Shape = SmoothRoundedCornerShape(percent = AvatarRadiusFraction),
-    size: AvatarSize = Avatar.Size.Size20,
-    overlay: (@Composable () -> Unit)? = null,
-    overflow: (@Composable () -> Unit)? = null,
+        painter: Painter,
+        modifier: Modifier = Modifier,
+        showBorder: Boolean = false,
+        shape: Shape = SmoothRoundedCornerShape(percent = AvatarRadiusFraction),
+        size: AvatarSize = AvatarSize.Size20,
+        overlay: (@Composable () -> Unit)? = null,
+        overflow: (@Composable () -> Unit)? = null,
 ) {
     val avatarModifier = modifier
             .let {
@@ -186,13 +186,13 @@ fun Avatar(
 
 @Composable
 fun Avatar(
-    painter: Painter,
-    status: StatusType?,
-    modifier: Modifier = Modifier,
-    showBorder: Boolean = false,
-    shape: Shape = SmoothRoundedCornerShape(percent = AvatarRadiusFraction),
-    size: AvatarSize = Avatar.Size.Size20,
-    overlay: (@Composable () -> Unit)? = null,
+        painter: Painter,
+        status: StatusType?,
+        modifier: Modifier = Modifier,
+        showBorder: Boolean = false,
+        shape: Shape = SmoothRoundedCornerShape(percent = AvatarRadiusFraction),
+        size: AvatarSize = AvatarSize.Size20,
+        overlay: (@Composable () -> Unit)? = null,
 ) {
     Avatar(
             painter = painter,
@@ -217,7 +217,7 @@ fun Avatar(
 private fun AvatarMoreOverlayPreview() {
     Avatar(
             painter = painterResource(id = R.drawable.unknown),
-            size = Avatar.Size.Size120,
+            size = AvatarSize.Size120,
             overlay = {
                 Icon(
                         painter = painterResource(id = R.drawable.icon_more),
@@ -244,23 +244,23 @@ private fun AvatarPreview() {
         Avatar(
                 painter = painterResource(id = R.drawable.unknown),
                 status = StatusType.Online,
-                size = Avatar.Size.Size90,
+                size = AvatarSize.Size90,
         )
 
         Avatar(
                 painter = painterResource(id = R.drawable.unknown),
                 showBorder = true,
                 status = StatusType.Online,
-                size = Avatar.Size.Size90,
+                size = AvatarSize.Size90,
         )
 
         Avatar(
                 painter = painterResource(id = R.drawable.unknown),
-                size = Avatar.Size.Size90,
+                size = AvatarSize.Size90,
         ) {
             Avatar(
                     painter = painterResource(R.drawable.unknown),
-                    size = Avatar.Size.Size20,
+                    size = AvatarSize.Size20,
                     showBorder = true,
             )
         }
@@ -268,14 +268,14 @@ private fun AvatarPreview() {
         Avatar(
                 painter = painterResource(id = R.drawable.unknown),
                 shape = RectangleShape,
-                size = Avatar.Size.Size90,
+                size = AvatarSize.Size90,
         )
 
         Avatar(
                 painter = painterResource(id = R.drawable.unknown),
                 status = StatusType.Online,
                 shape = RectangleShape,
-                size = Avatar.Size.Size48,
+                size = AvatarSize.Size48,
         )
     }
 }

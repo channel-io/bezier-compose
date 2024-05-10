@@ -25,51 +25,51 @@ import io.channel.bezier.compose.R
 
 @Composable
 fun SectionLabel(
-        text: String,
-        modifier: Modifier = Modifier,
-        painter: Painter? = null,
-        leftContents: (@Composable RowScope.() -> Unit)? = null,
-        rightContents: (@Composable RowScope.() -> Unit)? = null,
+    text: String,
+    modifier: Modifier = Modifier,
+    painter: Painter? = null,
+    leftContents: (@Composable RowScope.() -> Unit)? = null,
+    rightContents: (@Composable RowScope.() -> Unit)? = null,
 ) {
     Row(
-            modifier = modifier
-                    .sizeIn(minHeight = 32.dp),
-            verticalAlignment = Alignment.CenterVertically,
+        modifier = modifier
+            .sizeIn(minHeight = 32.dp),
+        verticalAlignment = Alignment.CenterVertically,
     ) {
         Row(
-                modifier = Modifier
-                        .padding(
-                                start = 6.dp,
-                                top = 4.dp,
-                                end = 12.dp,
-                                bottom = 4.dp,
-                        )
-                        .sizeIn(minHeight = 24.dp)
-                        .weight(1F),
-                verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier
+                .padding(
+                    start = 6.dp,
+                    top = 4.dp,
+                    end = 12.dp,
+                    bottom = 4.dp,
+                )
+                .sizeIn(minHeight = 24.dp)
+                .weight(1F),
+            verticalAlignment = Alignment.CenterVertically,
         ) {
             if (painter != null) {
                 Icon(
-                        modifier = Modifier
-                                .padding(end = 8.dp)
-                                .size(20.dp),
-                        painter = painter,
-                        tint = BezierTheme.colors.txtBlackDark,
-                        contentDescription = null,
+                    modifier = Modifier
+                        .padding(end = 8.dp)
+                        .size(20.dp),
+                    painter = painter,
+                    tint = BezierTheme.colors.txtBlackDark,
+                    contentDescription = null,
                 )
             }
 
             Row(
-                    verticalAlignment = Alignment.CenterVertically,
+                verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                        modifier = Modifier.weight(1F, false),
-                        text = text,
-                        overflow = TextOverflow.Ellipsis,
-                        maxLines = 1,
-                        fontSize = 14.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = BezierTheme.colors.txtBlackDark,
+                    modifier = Modifier.weight(1F, false),
+                    text = text,
+                    overflow = TextOverflow.Ellipsis,
+                    maxLines = 1,
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = BezierTheme.colors.txtBlackDark,
                 )
 
                 if (leftContents != null) {
@@ -81,10 +81,10 @@ fun SectionLabel(
         if (rightContents != null) {
             CompositionLocalProvider(LocalContentColor provides BezierTheme.colors.txtBlackDark) {
                 Row(
-                        modifier = Modifier
-                                .padding(vertical = 1.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(4.dp),
+                    modifier = Modifier
+                        .padding(vertical = 1.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(4.dp),
                 ) {
                     rightContents()
                 }
@@ -97,7 +97,7 @@ fun SectionLabel(
 @Composable
 fun SectionLabelTextPreview() {
     SectionLabel(
-            text = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        text = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     )
 }
 
@@ -106,8 +106,8 @@ fun SectionLabelTextPreview() {
 @Composable
 fun SectionLabelTextAndPainterPreview() {
     SectionLabel(
-            painter = painterResource(R.drawable.icon_person),
-            text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        painter = painterResource(R.drawable.icon_person),
+        text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     )
 }
 
@@ -115,34 +115,34 @@ fun SectionLabelTextAndPainterPreview() {
 @Composable
 fun SectionLabelWithRightContentsPreview() {
     SectionLabel(
-            painter = painterResource(R.drawable.icon_person),
-            text = "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.",
+        painter = painterResource(R.drawable.icon_person),
+        text = "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.",
     ) {
         Icon(
-                modifier = Modifier
-                        .padding(end = 10.dp)
-                        .size(20.dp),
-                painter = painterResource(R.drawable.icon_lock),
-                tint = BezierTheme.colors.txtBlackDark,
-                contentDescription = null,
+            modifier = Modifier
+                .padding(end = 10.dp)
+                .size(20.dp),
+            painter = painterResource(R.drawable.icon_lock),
+            tint = BezierTheme.colors.txtBlackDark,
+            contentDescription = null,
         )
 
         Icon(
-                modifier = Modifier
-                        .padding(end = 10.dp)
-                        .size(20.dp),
-                painter = painterResource(R.drawable.icon_hyphen_bold),
-                tint = BezierTheme.colors.txtBlackDark,
-                contentDescription = null,
+            modifier = Modifier
+                .padding(end = 10.dp)
+                .size(20.dp),
+            painter = painterResource(R.drawable.icon_hyphen_bold),
+            tint = BezierTheme.colors.txtBlackDark,
+            contentDescription = null,
         )
 
         Icon(
-                modifier = Modifier
-                        .padding(end = 5.dp)
-                        .size(20.dp),
-                painter = painterResource(R.drawable.icon_cancel),
-                tint = BezierTheme.colors.txtBlackDark,
-                contentDescription = null,
+            modifier = Modifier
+                .padding(end = 5.dp)
+                .size(20.dp),
+            painter = painterResource(R.drawable.icon_cancel),
+            tint = BezierTheme.colors.txtBlackDark,
+            contentDescription = null,
         )
     }
 }
@@ -151,15 +151,15 @@ fun SectionLabelWithRightContentsPreview() {
 @Composable
 fun SectionLabelWithLeftContentsPreview() {
     SectionLabel(
-            text = "Chat tags",
-            leftContents = {
-                Badge(
-                        modifier = Modifier.padding(start = 8.dp),
-                        text = "Service Plan",
-                        color = Badge.Color.Purple,
-                        size = Badge.Size.S,
-                )
-            }
+        text = "Chat tags",
+        leftContents = {
+            Badge(
+                modifier = Modifier.padding(start = 8.dp),
+                text = "Service Plan",
+                color = Badge.Color.Purple,
+                size = Badge.Size.S,
+            )
+        }
     )
 }
 
@@ -167,42 +167,42 @@ fun SectionLabelWithLeftContentsPreview() {
 @Composable
 fun SectionLabelWithAllContentsPreview() {
     SectionLabel(
-            painter = painterResource(R.drawable.icon_person),
-            text = "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.",
-            leftContents = {
-                Badge(
-                        modifier = Modifier.padding(start = 8.dp),
-                        text = "Service Plan",
-                        color = Badge.Color.Purple,
-                        size = Badge.Size.S,
-                )
-            },
+        painter = painterResource(R.drawable.icon_person),
+        text = "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.",
+        leftContents = {
+            Badge(
+                modifier = Modifier.padding(start = 8.dp),
+                text = "Service Plan",
+                color = Badge.Color.Purple,
+                size = Badge.Size.S,
+            )
+        },
     ) {
         Icon(
-                modifier = Modifier
-                        .padding(5.dp)
-                        .size(20.dp),
-                painter = painterResource(R.drawable.icon_lock),
-                tint = BezierTheme.colors.txtBlackDark,
-                contentDescription = null,
+            modifier = Modifier
+                .padding(5.dp)
+                .size(20.dp),
+            painter = painterResource(R.drawable.icon_lock),
+            tint = BezierTheme.colors.txtBlackDark,
+            contentDescription = null,
         )
 
         Icon(
-                modifier = Modifier
-                        .padding(5.dp)
-                        .size(20.dp),
-                painter = painterResource(R.drawable.icon_hyphen_bold),
-                tint = BezierTheme.colors.txtBlackDark,
-                contentDescription = null,
+            modifier = Modifier
+                .padding(5.dp)
+                .size(20.dp),
+            painter = painterResource(R.drawable.icon_hyphen_bold),
+            tint = BezierTheme.colors.txtBlackDark,
+            contentDescription = null,
         )
 
         Icon(
-                modifier = Modifier
-                        .padding(5.dp)
-                        .size(20.dp),
-                painter = painterResource(R.drawable.icon_cancel),
-                tint = BezierTheme.colors.txtBlackDark,
-                contentDescription = null,
+            modifier = Modifier
+                .padding(5.dp)
+                .size(20.dp),
+            painter = painterResource(R.drawable.icon_cancel),
+            tint = BezierTheme.colors.txtBlackDark,
+            contentDescription = null,
         )
     }
 }

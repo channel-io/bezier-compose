@@ -92,8 +92,8 @@ fun TextField(
     cursorBrush: Brush = SolidColor(Color.Black),
 ) {
     fun isPassword() =
-            keyboardOptions.keyboardType == KeyboardType.Password
-                    || keyboardOptions.keyboardType == KeyboardType.NumberPassword
+        keyboardOptions.keyboardType == KeyboardType.Password
+                || keyboardOptions.keyboardType == KeyboardType.NumberPassword
 
     val focused by interactionSource.collectIsFocusedAsState()
 
@@ -116,134 +116,134 @@ fun TextField(
     var isPasswordVisible by remember { mutableStateOf(false) }
 
     BasicTextField(
-            value = value,
-            onValueChange = onValueChange,
-            modifier = modifier
-                    .heightIn(min = size.minHeight)
-                    .alpha(if (enabled || normalAlphaRegardlessOfEnabledState) 1f else 0.4f)
-                    .drawWithContent {
-                        if (outerBorderColor != null) {
-                            val outerBorderWidthPx = TextFieldOuterBorderWidth.toPx()
-                            val outerBorderRadiusPx = TextFieldOuterBorderRadius.toPx()
+        value = value,
+        onValueChange = onValueChange,
+        modifier = modifier
+            .heightIn(min = size.minHeight)
+            .alpha(if (enabled || normalAlphaRegardlessOfEnabledState) 1f else 0.4f)
+            .drawWithContent {
+                if (outerBorderColor != null) {
+                    val outerBorderWidthPx = TextFieldOuterBorderWidth.toPx()
+                    val outerBorderRadiusPx = TextFieldOuterBorderRadius.toPx()
 
-                            drawRoundRect(
-                                    color = outerBorderColor,
-                                    topLeft = Offset(-outerBorderWidthPx / 2, -outerBorderWidthPx / 2),
-                                    size = Size(this.size.width + outerBorderWidthPx, this.size.height + outerBorderWidthPx),
-                                    cornerRadius = CornerRadius(
-                                            x = outerBorderRadiusPx - outerBorderWidthPx / 2f,
-                                            y = outerBorderRadiusPx - outerBorderWidthPx / 2f
-                                    ),
-                                    style = Stroke(width = outerBorderWidthPx),
+                    drawRoundRect(
+                        color = outerBorderColor,
+                        topLeft = Offset(-outerBorderWidthPx / 2, -outerBorderWidthPx / 2),
+                        size = Size(this.size.width + outerBorderWidthPx, this.size.height + outerBorderWidthPx),
+                        cornerRadius = CornerRadius(
+                            x = outerBorderRadiusPx - outerBorderWidthPx / 2f,
+                            y = outerBorderRadiusPx - outerBorderWidthPx / 2f
+                        ),
+                        style = Stroke(width = outerBorderWidthPx),
+                    )
+                }
+
+                drawContent()
+            }
+            .border(
+                color = innerBorderColor,
+                width = InnerBorderWidth,
+                shape = RoundedCornerShape(InnerBorderRadius),
+            )
+            .clip(RoundedCornerShape(8.dp))
+            .background(colorResource(type.backColorId))
+            .padding(horizontal = 10.dp, vertical = size.verticalPadding),
+        enabled = enabled,
+        readOnly = readOnly,
+        textStyle = textStyle,
+        keyboardOptions = keyboardOptions,
+        keyboardActions = keyboardActions,
+        singleLine = singleLine,
+        maxLines = maxLines,
+        visualTransformation = if (isPassword() && !isPasswordVisible) {
+            PasswordVisualTransformation()
+        } else {
+            visualTransformation
+        },
+        onTextLayout = onTextLayout,
+        interactionSource = interactionSource,
+        cursorBrush = cursorBrush,
+        decorationBox = { innerTextField ->
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                if (leftContent != null) {
+                    leftContent()
+                    Spacer(modifier = Modifier.width(12.dp))
+                }
+
+                Box(modifier = Modifier.weight(1f)) {
+                    innerTextField()
+
+                    if (placeholder != null && transformedText.text.isEmpty()) {
+                        Box(modifier = Modifier.align(Alignment.CenterStart)) {
+                            CompositionLocalProvider(
+                                LocalTextStyle provides TextStyle(
+                                    color = BezierTheme.colors.txtBlackDark,
+                                    fontSize = 16.sp,
+                                ),
+                                content = placeholder,
                             )
                         }
-
-                        drawContent()
-                    }
-                    .border(
-                            color = innerBorderColor,
-                            width = InnerBorderWidth,
-                            shape = RoundedCornerShape(InnerBorderRadius),
-                    )
-                    .clip(RoundedCornerShape(8.dp))
-                    .background(colorResource(type.backColorId))
-                    .padding(horizontal = 10.dp, vertical = size.verticalPadding),
-            enabled = enabled,
-            readOnly = readOnly,
-            textStyle = textStyle,
-            keyboardOptions = keyboardOptions,
-            keyboardActions = keyboardActions,
-            singleLine = singleLine,
-            maxLines = maxLines,
-            visualTransformation = if (isPassword() && !isPasswordVisible) {
-                PasswordVisualTransformation()
-            } else {
-                visualTransformation
-            },
-            onTextLayout = onTextLayout,
-            interactionSource = interactionSource,
-            cursorBrush = cursorBrush,
-            decorationBox = { innerTextField ->
-                Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                ) {
-                    if (leftContent != null) {
-                        leftContent()
-                        Spacer(modifier = Modifier.width(12.dp))
-                    }
-
-                    Box(modifier = Modifier.weight(1f)) {
-                        innerTextField()
-
-                        if (placeholder != null && transformedText.text.isEmpty()) {
-                            Box(modifier = Modifier.align(Alignment.CenterStart)) {
-                                CompositionLocalProvider(
-                                        LocalTextStyle provides TextStyle(
-                                                color = BezierTheme.colors.txtBlackDark,
-                                                fontSize = 16.sp,
-                                        ),
-                                        content = placeholder,
-                                )
-                            }
-                        }
-                    }
-
-                    if ((focused && (isPassword() || value.text.isNotEmpty())) || rightContent != null) {
-                        // if rightContent or delete all button or visibility toggle button is visible, then put a spacer between
-                        //  textfield and them
-                        Spacer(modifier = Modifier.width(6.dp))
-                    }
-
-                    if (focused && isPassword()) {
-                        Icon(
-                                modifier = Modifier
-                                        .padding(5.dp)
-                                        .size(20.dp)
-                                        .clickable(
-                                                interactionSource = remember { MutableInteractionSource() },
-                                                indication = null,
-                                                onClick = {
-                                                    isPasswordVisible = !isPasswordVisible
-                                                },
-                                        ),
-                                imageVector = if (isPasswordVisible) {
-                                    BezierIcon.View
-                                } else {
-                                    BezierIcon.ViewOff
-                                },
-                                contentDescription = null,
-                                tint = BezierTheme.colors.txtBlackDark,
-                        )
-                    }
-
-                    /**
-                     * TextField에 x 버튼이 있는 것이 피그마 가이드에 존재하지 않았음.
-                     * 기존 iOS의 스펙을 따라 만든 것이었음.
-                     * 기존 iOS에서는 singleLine일 때만 x버튼이 나타나고 있음. 그래서 그 히스토리를 기반으로 반영함.
-                     */
-                    if (focused && value.text.isNotEmpty() && (maxLines <= 1 || singleLine)) {
-                        Icon(
-                                modifier = Modifier
-                                        .padding(5.dp)
-                                        .size(20.dp)
-                                        .clickable(
-                                                interactionSource = remember { MutableInteractionSource() },
-                                                indication = null,
-                                                onClick = {
-                                                    onValueChange(TextFieldValue())
-                                                },
-                                        ),
-                                imageVector = BezierIcon.CancelCircleFilled,
-                                contentDescription = null,
-                                tint = BezierTheme.colors.txtBlackDark,
-                        )
-                    }
-
-                    if (rightContent != null) {
-                        rightContent()
                     }
                 }
-            },
+
+                if ((focused && (isPassword() || value.text.isNotEmpty())) || rightContent != null) {
+                    // if rightContent or delete all button or visibility toggle button is visible, then put a spacer between
+                    //  textfield and them
+                    Spacer(modifier = Modifier.width(6.dp))
+                }
+
+                if (focused && isPassword()) {
+                    Icon(
+                        modifier = Modifier
+                            .padding(5.dp)
+                            .size(20.dp)
+                            .clickable(
+                                interactionSource = remember { MutableInteractionSource() },
+                                indication = null,
+                                onClick = {
+                                    isPasswordVisible = !isPasswordVisible
+                                },
+                            ),
+                        imageVector = if (isPasswordVisible) {
+                            BezierIcon.View
+                        } else {
+                            BezierIcon.ViewOff
+                        },
+                        contentDescription = null,
+                        tint = BezierTheme.colors.txtBlackDark,
+                    )
+                }
+
+                /**
+                 * TextField에 x 버튼이 있는 것이 피그마 가이드에 존재하지 않았음.
+                 * 기존 iOS의 스펙을 따라 만든 것이었음.
+                 * 기존 iOS에서는 singleLine일 때만 x버튼이 나타나고 있음. 그래서 그 히스토리를 기반으로 반영함.
+                 */
+                if (focused && value.text.isNotEmpty() && (maxLines <= 1 || singleLine)) {
+                    Icon(
+                        modifier = Modifier
+                            .padding(5.dp)
+                            .size(20.dp)
+                            .clickable(
+                                interactionSource = remember { MutableInteractionSource() },
+                                indication = null,
+                                onClick = {
+                                    onValueChange(TextFieldValue())
+                                },
+                            ),
+                        imageVector = BezierIcon.CancelCircleFilled,
+                        contentDescription = null,
+                        tint = BezierTheme.colors.txtBlackDark,
+                    )
+                }
+
+                if (rightContent != null) {
+                    rightContent()
+                }
+            }
+        },
     )
 }
 
@@ -278,74 +278,74 @@ fun TextField(
     val textFieldValue = textFieldValueState.copy(text = value)
 
     TextField(
-            value = textFieldValue,
-            onValueChange = {
-                val lastText = textFieldValue.text
-                textFieldValueState = it
+        value = textFieldValue,
+        onValueChange = {
+            val lastText = textFieldValue.text
+            textFieldValueState = it
 
-                if (lastText != it.text) {
-                    onValueChange(it.text)
-                }
-            },
-            modifier = modifier,
-            type = type,
-            size = size,
-            placeholder = placeholder,
-            leftContent = leftContent,
-            rightContent = rightContent,
-            hasError = hasError,
-            enabled = enabled,
-            normalAlphaRegardlessOfEnabledState = normalAlphaRegardlessOfEnabledState,
-            readOnly = readOnly,
-            textStyle = textStyle,
-            keyboardOptions = keyboardOptions,
-            keyboardActions = keyboardActions,
-            singleLine = singleLine,
-            maxLines = maxLines,
-            visualTransformation = visualTransformation,
-            onTextLayout = onTextLayout,
-            interactionSource = interactionSource,
-            cursorBrush = cursorBrush,
+            if (lastText != it.text) {
+                onValueChange(it.text)
+            }
+        },
+        modifier = modifier,
+        type = type,
+        size = size,
+        placeholder = placeholder,
+        leftContent = leftContent,
+        rightContent = rightContent,
+        hasError = hasError,
+        enabled = enabled,
+        normalAlphaRegardlessOfEnabledState = normalAlphaRegardlessOfEnabledState,
+        readOnly = readOnly,
+        textStyle = textStyle,
+        keyboardOptions = keyboardOptions,
+        keyboardActions = keyboardActions,
+        singleLine = singleLine,
+        maxLines = maxLines,
+        visualTransformation = visualTransformation,
+        onTextLayout = onTextLayout,
+        interactionSource = interactionSource,
+        cursorBrush = cursorBrush,
     )
 }
 
 enum class TextFieldType(
-        @ColorRes val backColorId: Int,
-        @ColorRes val borderColorId: Int,
-        @ColorRes val outerFocusedBorderColorId: Int,
-        @ColorRes val innerFocusedBorderColorId: Int,
-        @ColorRes val outerErrorBorderColorId: Int,
-        @ColorRes val innerErrorBorderColorId: Int,
+    @ColorRes val backColorId: Int,
+    @ColorRes val borderColorId: Int,
+    @ColorRes val outerFocusedBorderColorId: Int,
+    @ColorRes val innerFocusedBorderColorId: Int,
+    @ColorRes val outerErrorBorderColorId: Int,
+    @ColorRes val innerErrorBorderColorId: Int,
 ) {
     Primary(
-            backColorId = R.color.bg_grey_lightest,
-            borderColorId = R.color.bdr_black_light,
-            outerFocusedBorderColorId = R.color.bgtxt_blue_light,
-            innerFocusedBorderColorId = R.color.bgtxt_blue_normal,
-            outerErrorBorderColorId = R.color.bgtxt_orange_light,
-            innerErrorBorderColorId = R.color.bgtxt_orange_normal,
+        backColorId = R.color.bg_grey_lightest,
+        borderColorId = R.color.bdr_black_light,
+        outerFocusedBorderColorId = R.color.bgtxt_blue_light,
+        innerFocusedBorderColorId = R.color.bgtxt_blue_normal,
+        outerErrorBorderColorId = R.color.bgtxt_orange_light,
+        innerErrorBorderColorId = R.color.bgtxt_orange_normal,
     ),
     Secondary(
-            backColorId = R.color.bg_black_lighter,
-            borderColorId = R.color.bg_transparent,
-            outerFocusedBorderColorId = R.color.bg_transparent,
-            innerFocusedBorderColorId = R.color.bg_transparent,
-            outerErrorBorderColorId = R.color.bg_transparent,
-            innerErrorBorderColorId = R.color.bg_transparent,
+        backColorId = R.color.bg_black_lighter,
+        borderColorId = R.color.bg_transparent,
+        outerFocusedBorderColorId = R.color.bg_transparent,
+        innerFocusedBorderColorId = R.color.bg_transparent,
+        outerErrorBorderColorId = R.color.bg_transparent,
+        innerErrorBorderColorId = R.color.bg_transparent,
     ),
     Tertiary(
-            backColorId = R.color.bg_transparent,
-            borderColorId = R.color.bg_transparent,
-            outerFocusedBorderColorId = R.color.bg_transparent,
-            innerFocusedBorderColorId = R.color.bg_transparent,
-            outerErrorBorderColorId = R.color.bg_transparent,
-            innerErrorBorderColorId = R.color.bg_transparent,
+        backColorId = R.color.bg_transparent,
+        borderColorId = R.color.bg_transparent,
+        outerFocusedBorderColorId = R.color.bg_transparent,
+        innerFocusedBorderColorId = R.color.bg_transparent,
+        outerErrorBorderColorId = R.color.bg_transparent,
+        innerErrorBorderColorId = R.color.bg_transparent,
     ),
 }
 
 enum class TextFieldSize(
-        val minHeight: Dp,
-        val verticalPadding: Dp,
+    val minHeight: Dp,
+    val verticalPadding: Dp,
 ) {
     M(40.dp, 5.dp),
     L(44.dp, 7.dp),
@@ -362,124 +362,126 @@ private fun TextFieldPreview() = Column(Modifier.background(color = Color.White)
     var value5 by remember { mutableStateOf("") }
 
     TextField(
-            modifier = Modifier
-                    .padding(16.dp)
-                    .fillMaxWidth(),
-            value = value1,
-            onValueChange = { value1 = it },
-            type = TextFieldType.Primary,
-            placeholder = { Text("Placeholder") },
-            leftContent = {
-                Icon(
-                        modifier = Modifier.padding(2.dp),
-                        imageVector = BezierIcon.Search,
-                        contentDescription = null,
-                        tint = BezierTheme.colors.txtBlackDark,
-                )
-            },
-            rightContent = {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Spacer(modifier = Modifier.height(6.dp))
+        modifier = Modifier
+            .padding(16.dp)
+            .fillMaxWidth(),
+        value = value1,
+        onValueChange = { value1 = it },
+        type = TextFieldType.Primary,
+        placeholder = { Text("Placeholder") },
+        leftContent = {
+            Icon(
+                modifier = Modifier.padding(2.dp),
+                imageVector = BezierIcon.Search,
+                contentDescription = null,
+                tint = BezierTheme.colors.txtBlackDark,
+            )
+        },
+        rightContent = {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Spacer(modifier = Modifier.height(6.dp))
 
-                    Icon(
-                            modifier = Modifier
-                                    .padding(5.dp)
-                                    .size(20.dp),
-                            imageVector = BezierIcon.ChevronDown,
-                            contentDescription = null,
-                            tint = BezierTheme.colors.txtBlackDark,
-                    )
-                }
-            },
+                Icon(
+                    modifier = Modifier
+                        .padding(5.dp)
+                        .size(20.dp),
+                    imageVector = BezierIcon.ChevronDown,
+                    contentDescription = null,
+                    tint = BezierTheme.colors.txtBlackDark,
+                )
+            }
+        },
     )
 
     TextField(
-            modifier = Modifier
-                    .padding(16.dp)
-                    .fillMaxWidth(),
-            value = value2,
-            onValueChange = { value2 = it },
-            type = TextFieldType.Secondary,
+        modifier = Modifier
+            .padding(16.dp)
+            .fillMaxWidth(),
+        value = value2,
+        onValueChange = { value2 = it },
+        type = TextFieldType.Secondary,
     )
 
     TextField(
-            modifier = Modifier
-                    .padding(16.dp)
-                    .fillMaxWidth(),
-            value = value3,
-            onValueChange = { value3 = it },
-            type = TextFieldType.Primary,
-            enabled = false,
-            placeholder = { Text("Placeholder") },
-            leftContent = {
-                Icon(
-                        modifier = Modifier.padding(2.dp),
-                        imageVector = BezierIcon.Search,
-                        contentDescription = null,
-                        tint = BezierTheme.colors.txtBlackDark,
-                )
-            },
-            rightContent = {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Spacer(modifier = Modifier.height(6.dp))
+        modifier = Modifier
+            .padding(16.dp)
+            .fillMaxWidth(),
+        value = value3,
+        onValueChange = { value3 = it },
+        type = TextFieldType.Primary,
+        enabled = false,
+        placeholder = { Text("Placeholder") },
+        leftContent = {
+            Icon(
+                modifier = Modifier.padding(2.dp),
+                imageVector = BezierIcon.Search,
+                contentDescription = null,
+                tint = BezierTheme.colors.txtBlackDark,
+            )
+        },
+        rightContent = {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Spacer(modifier = Modifier.height(6.dp))
 
-                    Icon(
-                            modifier = Modifier
-                                    .padding(5.dp)
-                                    .size(20.dp),
-                            imageVector = BezierIcon.ChevronDown,
-                            contentDescription = null,
-                            tint = BezierTheme.colors.txtBlackDark,
-                    )
-                }
-            },
+                Icon(
+                    modifier = Modifier
+                        .padding(5.dp)
+                        .size(20.dp),
+                    imageVector = BezierIcon.ChevronDown,
+                    contentDescription = null,
+                    tint = BezierTheme.colors.txtBlackDark,
+                )
+            }
+        },
     )
 
-    SectionGroup(modifier = Modifier
+    SectionGroup(
+        modifier = Modifier
             .padding(vertical = 16.dp)
-            .fillMaxWidth()) {
+            .fillMaxWidth()
+    ) {
         TextField(
-                modifier = Modifier
-                        .fillMaxWidth(),
-                value = value4,
-                onValueChange = { value4 = it },
-                type = TextFieldType.Tertiary,
-                size = TextFieldSize.L,
-                placeholder = { Text("String overload of TextField") },
-                leftContent = { Icon(imageVector = BezierIcon.BookEditing, contentDescription = null, tint = BezierTheme.colors.txtBlackDark) },
+            modifier = Modifier
+                .fillMaxWidth(),
+            value = value4,
+            onValueChange = { value4 = it },
+            type = TextFieldType.Tertiary,
+            size = TextFieldSize.L,
+            placeholder = { Text("String overload of TextField") },
+            leftContent = { Icon(imageVector = BezierIcon.BookEditing, contentDescription = null, tint = BezierTheme.colors.txtBlackDark) },
         )
     }
 
     TextField(
-            modifier = Modifier
-                    .padding(16.dp)
-                    .fillMaxWidth(),
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
-            value = value5,
-            onValueChange = { value5 = it },
-            type = TextFieldType.Primary,
-            placeholder = { Text("Password") },
-            leftContent = {
-                Icon(
-                        modifier = Modifier.padding(2.dp),
-                        imageVector = BezierIcon.Search,
-                        contentDescription = null,
-                        tint = BezierTheme.colors.txtBlackDark,
-                )
-            },
-            rightContent = {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Spacer(modifier = Modifier.height(6.dp))
+        modifier = Modifier
+            .padding(16.dp)
+            .fillMaxWidth(),
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+        value = value5,
+        onValueChange = { value5 = it },
+        type = TextFieldType.Primary,
+        placeholder = { Text("Password") },
+        leftContent = {
+            Icon(
+                modifier = Modifier.padding(2.dp),
+                imageVector = BezierIcon.Search,
+                contentDescription = null,
+                tint = BezierTheme.colors.txtBlackDark,
+            )
+        },
+        rightContent = {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Spacer(modifier = Modifier.height(6.dp))
 
-                    Icon(
-                            modifier = Modifier
-                                    .padding(5.dp)
-                                    .size(20.dp),
-                            imageVector = BezierIcon.ChevronDown,
-                            contentDescription = null,
-                            tint = BezierTheme.colors.txtBlackDark,
-                    )
-                }
-            },
+                Icon(
+                    modifier = Modifier
+                        .padding(5.dp)
+                        .size(20.dp),
+                    imageVector = BezierIcon.ChevronDown,
+                    contentDescription = null,
+                    tint = BezierTheme.colors.txtBlackDark,
+                )
+            }
+        },
     )
 }

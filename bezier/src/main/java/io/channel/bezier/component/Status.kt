@@ -38,8 +38,8 @@ sealed interface StatusType {
 }
 
 enum class StatusSize(
-        val size: Dp,
-        val borderWidth: Dp,
+    val size: Dp,
+    val borderWidth: Dp,
 ) {
     M(12.dp, 2.dp),
     L(20.dp, 3.dp);
@@ -52,31 +52,31 @@ fun Status(
     size: StatusSize = StatusSize.M,
 ) {
     Box(
-            modifier = modifier
-                    .size(size.size)
-                    .background(
-                            color = colorResource(id = R.color.bg_white_high),
-                            shape = CircleShape,
-                    )
-                    .padding(size.borderWidth),
-            contentAlignment = Alignment.Center,
+        modifier = modifier
+            .size(size.size)
+            .background(
+                color = colorResource(id = R.color.bg_white_high),
+                shape = CircleShape,
+            )
+            .padding(size.borderWidth),
+        contentAlignment = Alignment.Center,
     ) {
         when (type) {
             is StatusType.ColoredStatus -> Box(
-                    modifier = Modifier
-                            .fillMaxSize()
-                            .align(Alignment.Center)
-                            .background(
-                                    color = colorResource(id = type.colorId),
-                                    shape = CircleShape,
-                            ),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .align(Alignment.Center)
+                    .background(
+                        color = colorResource(id = type.colorId),
+                        shape = CircleShape,
+                    ),
             )
 
             is StatusType.IconStatus -> Icon(
-                    modifier = Modifier.fillMaxSize(),
-                    painter = painterResource(id = type.iconId),
-                    contentDescription = null,
-                    tint = colorResource(id = type.tintColorId),
+                modifier = Modifier.fillMaxSize(),
+                painter = painterResource(id = type.iconId),
+                contentDescription = null,
+                tint = colorResource(id = type.tintColorId),
             )
         }
     }
@@ -107,15 +107,15 @@ private fun StatusPreview() {
     Row {
         statuses.forEach { type ->
             Column(
-                    modifier = Modifier.width(IntrinsicSize.Min),
-                    horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier.width(IntrinsicSize.Min),
+                horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Box(
-                        modifier = Modifier
-                                .background(Color.LightGray)
-                                .fillMaxWidth()
-                                .padding(8.dp),
-                        contentAlignment = Alignment.Center,
+                    modifier = Modifier
+                        .background(Color.LightGray)
+                        .fillMaxWidth()
+                        .padding(8.dp),
+                    contentAlignment = Alignment.Center,
                 ) {
                     Status(type = type, size = StatusSize.M)
                 }

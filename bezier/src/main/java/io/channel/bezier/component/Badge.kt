@@ -88,7 +88,7 @@ class Badge @JvmOverloads constructor(
 
         companion object {
             fun fromId(id: Int): Size {
-                return entries.firstOrNull { it.id == id } ?: XS
+                return values().firstOrNull { it.id == id } ?: XS
             }
         }
     }
@@ -106,7 +106,7 @@ class Badge @JvmOverloads constructor(
 
         companion object {
             fun fromId(id: Int): Color {
-                return entries.find { it.id == id } ?: Normal
+                return values().find { it.id == id } ?: Normal
             }
         }
     }
@@ -114,11 +114,11 @@ class Badge @JvmOverloads constructor(
 
 @Composable
 fun Badge(
-    modifier: Modifier = Modifier,
-    text: String? = null,
-    painter: Painter? = null,
-    color: BadgeColor = Badge.Color.Normal,
-    size: BadgeSize = Badge.Size.XS,
+        text: String? = null,
+        modifier: Modifier = Modifier,
+        painter: Painter? = null,
+        color: BadgeColor = BadgeColor.Normal,
+        size: BadgeSize = BadgeSize.XS,
 ) {
     Row(
             modifier = modifier
@@ -161,7 +161,7 @@ private fun BadgePreview() {
                     painter = painterResource(id = R.drawable.icon_person),
                     text = it.name,
                     color = it,
-                    size = Badge.Size.L,
+                    size = BadgeSize.L,
             )
         }
 
@@ -170,8 +170,8 @@ private fun BadgePreview() {
                     modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp),
                     painter = painterResource(id = R.drawable.icon_person),
                     text = null,
-                    color = Badge.Color.Blue,
-                    size = Badge.Size.L,
+                    color = BadgeColor.Blue,
+                    size = BadgeSize.L,
             )
         }
 
@@ -179,8 +179,8 @@ private fun BadgePreview() {
             Badge(
                     modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp),
                     text = "text",
-                    color = Badge.Color.Blue,
-                    size = Badge.Size.L,
+                    color = BadgeColor.Blue,
+                    size = BadgeSize.L,
             )
         }
     }
