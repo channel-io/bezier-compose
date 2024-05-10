@@ -263,7 +263,7 @@ enum class ButtonColor {
     @Composable
     fun getBackgroundColor(type: ButtonType): Color {
         return when (type) {
-            ButtonType.Primary, ButtonType.Floating -> {
+            ButtonType.Primary -> {
                 when (this) {
                     Blue -> BezierTheme.colors.bgtxtBlueNormal
                     Red -> BezierTheme.colors.bgtxtRedNormal
@@ -271,6 +271,18 @@ enum class ButtonColor {
                     Green -> BezierTheme.colors.bgtxtGreenNormal
                     MonochromeLight -> BezierTheme.colors.bgBlackLighter
                     MonochromeDark -> BezierTheme.colors.bgGreyDarkest
+                    AbsoluteWhite -> BezierTheme.colors.bgTransparent
+                    Orange -> BezierTheme.colors.bgtxtOrangeNormal
+                }
+            }
+
+            ButtonType.Floating -> {
+                when (this) {
+                    Blue -> BezierTheme.colors.bgtxtBlueNormal
+                    Red -> BezierTheme.colors.bgtxtRedNormal
+                    Cobalt -> BezierTheme.colors.bgtxtCobaltNormal
+                    Green -> BezierTheme.colors.bgtxtGreenNormal
+                    MonochromeLight, MonochromeDark -> BezierTheme.colors.bgWhiteLow
                     AbsoluteWhite -> BezierTheme.colors.bgTransparent
                     Orange -> BezierTheme.colors.bgtxtOrangeNormal
                 }
