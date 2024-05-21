@@ -2,6 +2,7 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinAndroid)
+    `maven-publish`
 }
 
 android {
@@ -49,4 +50,16 @@ dependencies {
     debugImplementation(libs.ui.tooling)
     androidTestImplementation(platform(libs.compose.bom))
     androidTestImplementation(libs.ui.test.junit4)
+}
+
+publishing {
+    publications {
+        register("release", MavenPublication::class) {
+            from(components["java"])
+
+            groupId = "io.channel.bezier"
+            artifactId = "bezier-compose"
+            version = "1.0.0"
+        }
+    }
 }

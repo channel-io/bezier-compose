@@ -1,5 +1,6 @@
 [versions]
 agp = "8.2.0"
+android-maven-gradle-plugin = "2.1"
 kotlin = "1.9.0"
 core-ktx = "1.10.1"
 junit = "4.13.2"
@@ -12,6 +13,7 @@ compose-compiler = "1.5.1"
 coil = "2.4.0"
 
 [libraries]
+android-maven-gradle-plugin = { group = "com.github.dcendents", name = "android-maven-gradle-plugin", version.ref = "android-maven-gradle-plugin" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
