@@ -55,8 +55,6 @@ dependencies {
 publishing {
     publications {
         register("release", MavenPublication::class) {
-            from(components["java"])
-
             groupId = "io.channel.bezier"
             artifactId = "bezier-compose"
             version = "1.0.0"
