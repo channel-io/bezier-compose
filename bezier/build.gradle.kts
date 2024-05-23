@@ -52,12 +52,16 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
 }
 
-publishing {
-    publications {
-        register("release", MavenPublication::class) {
-            groupId = "io.channel.bezier"
-            artifactId = "bezier-compose"
-            version = "1.0.0"
+afterEvaluate {
+    publishing {
+        publications {
+            register<MavenPublication>("release") {
+                groupId = "io.channel.bezier"
+                artifactId = "bezier-compose"
+                version = "1.0.0"
+
+                from(components["release"])
+            }
         }
     }
 }
