@@ -52,13 +52,14 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
 }
 
+
 afterEvaluate {
     publishing {
         publications {
             register<MavenPublication>("release") {
                 groupId = "io.channel.bezier"
                 artifactId = "bezier-compose"
-                version = "1.0.0"
+                version = properties["sdkVersion"].toString()
 
                 from(components["release"])
             }
