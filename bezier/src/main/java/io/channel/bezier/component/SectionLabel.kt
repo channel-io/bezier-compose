@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -21,6 +22,7 @@ fun SectionLabel(
         text: String,
         modifier: Modifier = Modifier,
         painter: Painter? = null,
+        textColor: Color = BezierTheme.colors.txtBlackDark,
         leftContents: (@Composable RowScope.() -> Unit)? = null,
         nonButtonContents: (@Composable RowScope.() -> Unit)? = null,
         buttonContents: (@Composable RowScope.() -> Unit)? = null,
@@ -63,7 +65,7 @@ fun SectionLabel(
                         maxLines = 1,
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = BezierTheme.colors.txtBlackDark,
+                        color = textColor,
                 )
 
                 if (leftContents != null) {
@@ -98,9 +100,16 @@ fun SectionLabel(
 @Preview(showBackground = true)
 @Composable
 fun SectionLabelTextPreview() {
-    SectionLabel(
-            text = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    )
+    Column {
+        SectionLabel(
+                text = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        )
+        SectionLabel(
+                text = "It is a txtBlackDarkest color text",
+                textColor = BezierTheme.colors.txtBlackDarkest,
+        )
+    }
+
 }
 
 @Preview(showBackground = true)
