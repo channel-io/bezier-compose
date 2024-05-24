@@ -57,10 +57,6 @@ afterEvaluate {
     publishing {
         publications {
             register<MavenPublication>("release") {
-                groupId = "io.channel.bezier"
-                artifactId = "bezier-compose"
-                version = properties["sdkVersion"].toString()
-
                 from(components["release"])
             }
         }
