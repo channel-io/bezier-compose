@@ -18,10 +18,12 @@ import androidx.compose.ui.graphics.Color
 import io.channel.bezier.color.Colors
 import io.channel.bezier.color.darkColors
 import io.channel.bezier.color.lightColors
+import io.channel.bezier.compose.typography.Typography
 
 @Composable
 fun BezierTheme(
         isDark: Boolean = BezierTheme.isDark,
+        typography: Typography = BezierTheme.typography,
         content: @Composable () -> Unit,
 ) {
     val colors = remember(isDark) {
@@ -33,6 +35,7 @@ fun BezierTheme(
 
     CompositionLocalProvider(
             LocalColors provides colors,
+            LocalTypography provides typography,
             LocalIndication provides rememberRipple(),
             LocalRippleTheme provides BezierRippleTheme,
     ) {
@@ -47,10 +50,17 @@ object BezierTheme {
         @ReadOnlyComposable
         get() = LocalColors.current
 
+    val typography: Typography
+        @Composable
+        @ReadOnlyComposable
+        get() = LocalTypography.current
+
     var isDark by mutableStateOf(false)
 }
 
 internal val LocalColors = staticCompositionLocalOf { lightColors() }
+
+internal val LocalTypography = staticCompositionLocalOf { Typography() }
 
 private object BezierRippleTheme : RippleTheme {
     @Composable
