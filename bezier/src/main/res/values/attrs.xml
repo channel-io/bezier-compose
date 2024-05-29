@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Avatar">
+        <attr name="av_size" format="enum">
+            <enum name="size_16" value="0" />
+            <enum name="size_20" value="1" />
+            <enum name="size_24" value="2" />
+            <enum name="size_30" value="3" />
+            <enum name="size_36" value="4" />
+            <enum name="size_42" value="5" />
+            <enum name="size_48" value="6" />
+            <enum name="size_72" value="7" />
+            <enum name="size_90" value="8" />
+            <enum name="size_120" value="9" />
+            <enum name="size_160" value="10" />
+        </attr>
+        <attr name="av_showBorder" format="boolean" />
+        <attr name="av_clip" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="Badge">
+        <attr name="bdg_text" format="string" />
+        <attr name="bdg_icon" format="reference" />
+        <attr name="bdg_size" format="enum">
+            <enum name="xs" value="0" />
+            <enum name="s" value="1" />
+            <enum name="m" value="2" />
+            <enum name="l" value="3" />
+        </attr>
+        <attr name="bdg_color" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="blue" value="1" />
+            <enum name="cobalt" value="2" />
+            <enum name="green" value="3" />
+            <enum name="orange" value="4" />
+            <enum name="red" value="5" />
+            <enum name="purple" value="6" />
+            <enum name="monochrome_dark" value="7" />
+            <enum name="monochrome_light" value="8" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="Checkbox">
+        <attr name="ckb_type" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="circle" value="1" />
+        </attr>
+        <attr name="ckb_state" format="enum">
+            <enum name="on" value="0" />
+            <enum name="indeterminate" value="1" />
+            <enum name="off" value="2" />
+        </attr>
+        <attr name="ckb_enabled" format="boolean" />
+        <attr name="ckb_text" format="string" />
+        <attr name="ckb_color" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="green" value="1" />
+            <enum name="blue" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="Tag">
+        <attr name="tag_color" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="red" value="1" />
+            <enum name="orange" value="2" />
+            <enum name="yellow" value="3" />
+            <enum name="olive" value="4" />
+            <enum name="green" value="5" />
+            <enum name="cobalt" value="6" />
+            <enum name="purple" value="7" />
+            <enum name="pink" value="8" />
+            <enum name="navy" value="9" />
+        </attr>
+        <attr name="tag_size" format="enum">
+            <enum name="xs" value="0" />
+            <enum name="s" value="1" />
+            <enum name="m" value="2" />
+            <enum name="l" value="3" />
+        </attr>
+        <attr name="tag_text" format="string" />
+        <attr name="tag_removable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressBar">
+        <attr name="pb_size" format="enum">
+            <enum name="s" value="0" />
+            <enum name="m" value="1" />
+        </attr>
+        <attr name="pb_color" format="enum">
+            <enum name="green" value="0" />
+            <enum name="green_alt" value="1" />
+            <enum name="grey" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>
