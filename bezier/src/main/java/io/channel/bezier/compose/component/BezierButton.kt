@@ -1,0 +1,201 @@
+package io.channel.bezier.compose.component
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
+import io.channel.bezier.BezierTheme
+import io.channel.bezier.compose.color_v2.BezierColor
+
+@Composable
+fun BezierButton(
+    text: String,
+    size: BezierButtonSize,
+    variant: BezierButtonVariants,
+    color: BezierButtonColors,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Box(
+        modifier = modifier
+            .clip(RoundedCornerShape(size.radius))
+            .background(getBackgroundColor(variant, color))
+            .padding(size.padding)
+            .clickable { onClick() },
+    ) {
+        Text(
+            text = text,
+            style = size.textStyle,
+            color = getContentsColor(variant, color)
+        )
+    }
+}
+
+@Composable
+private fun getContentsColor(variant: BezierButtonVariants, color: BezierButtonColors): Color {
+    return when (variant) {
+        BezierButtonVariants.Primary -> when (color) {
+            BezierButtonColors.Blue,
+            BezierButtonColors.Cobalt,
+            BezierButtonColors.Red,
+            BezierButtonColors.Orange,
+            BezierButtonColors.Green,
+            BezierButtonColors.Pink,
+            BezierButtonColors.Purple,
+            BezierButtonColors.DarkGrey,
+            BezierButtonColors.LightGrey -> BezierTheme.colorSchemes.fgAbsoluteWhiteDark
+
+            BezierButtonColors.White -> BezierTheme.colorSchemes.fgAbsoluteBlackNormal
+        }
+
+        BezierButtonVariants.Secondary,
+        BezierButtonVariants.Tertiary -> when (color) {
+            BezierButtonColors.Blue -> BezierTheme.colorSchemes.primaryFgNormal
+            BezierButtonColors.Cobalt -> BezierTheme.colorSchemes.accentFgNormal
+            BezierButtonColors.Red -> BezierTheme.colorSchemes.criticalFgNormal
+            BezierButtonColors.Orange -> BezierTheme.colorSchemes.warningFgNormal
+            BezierButtonColors.Green -> BezierTheme.colorSchemes.successFgNormal
+            BezierButtonColors.Pink -> BezierTheme.colorSchemes.fgPinkNormal
+            BezierButtonColors.Purple -> BezierTheme.colorSchemes.fgPurpleNormal
+            BezierButtonColors.DarkGrey -> BezierTheme.colorSchemes.fgBlackDarkest
+            BezierButtonColors.LightGrey -> BezierTheme.colorSchemes.fgBlackDarker
+            BezierButtonColors.White -> BezierTheme.colorSchemes.bgAbsoluteWhiteNormal
+        }
+    }.color
+}
+
+@Composable
+private fun getBackgroundColor(variant: BezierButtonVariants, color: BezierButtonColors): Color {
+    return when (variant) {
+        BezierButtonVariants.Primary -> when (color) {
+            BezierButtonColors.Blue -> BezierTheme.colorSchemes.primaryBgNormal
+            BezierButtonColors.Cobalt -> BezierTheme.colorSchemes.accentBgNormal
+            BezierButtonColors.Red -> BezierTheme.colorSchemes.criticalBgNormal
+            BezierButtonColors.Orange -> BezierTheme.colorSchemes.warningBgNormal
+            BezierButtonColors.Green -> BezierTheme.colorSchemes.successBgNormal
+            BezierButtonColors.Pink -> BezierTheme.colorSchemes.bgPinkNormal
+            BezierButtonColors.Purple -> BezierTheme.colorSchemes.bgPurpleNormal
+            BezierButtonColors.DarkGrey -> BezierTheme.colorSchemes.bgGreyDarkest
+            BezierButtonColors.LightGrey -> BezierTheme.colorSchemes.bgBlackDark
+            BezierButtonColors.White -> BezierTheme.colorSchemes.bgAbsoluteWhiteDark
+        }
+
+        BezierButtonVariants.Secondary -> when (color) {
+            BezierButtonColors.Blue -> BezierTheme.colorSchemes.primaryBgLightest
+            BezierButtonColors.Cobalt -> BezierTheme.colorSchemes.accentBgLightest
+            BezierButtonColors.Red -> BezierTheme.colorSchemes.criticalBgLightest
+            BezierButtonColors.Orange -> BezierTheme.colorSchemes.warningBgLightest
+            BezierButtonColors.Green -> BezierTheme.colorSchemes.successBgLightest
+            BezierButtonColors.Pink -> BezierTheme.colorSchemes.bgPinkLightest
+            BezierButtonColors.Purple -> BezierTheme.colorSchemes.bgPurpleLightest
+            BezierButtonColors.DarkGrey -> BezierTheme.colorSchemes.bgBlackLighter
+            BezierButtonColors.LightGrey -> BezierTheme.colorSchemes.bgBlackLighter
+            BezierButtonColors.White -> BezierTheme.colorSchemes.bgAbsoluteWhiteLightest
+        }
+
+        // TODO : Transparent 교체 필요
+        BezierButtonVariants.Tertiary -> object : BezierColor {
+            override val color: Color
+                get() = Color(0x00000000)
+        }
+    }.color
+}
+
+enum class BezierButtonVariants {
+    Primary,
+    Secondary,
+    Tertiary,
+}
+
+enum class BezierButtonSize {
+    XsSmall,
+    Small,
+    Medium,
+    Large,
+    XLarge;
+
+    val textStyle: TextStyle
+        @Composable
+        get() = when (this) {
+            XsSmall -> BezierTheme.typography.caption2SemiBold
+            Small -> BezierTheme.typography.caption1SemiBold
+            Medium -> BezierTheme.typography.body2SemiBold
+            Large -> BezierTheme.typography.body1SemiBold
+            XLarge -> BezierTheme.typography.title2SemiBold
+        }
+
+    val radius: Dp
+        get() = when (this) {
+            XsSmall -> 8.dp
+            Small -> 10.dp
+            Medium -> 12.dp
+            Large -> 14.dp
+            XLarge -> 16.dp
+        }
+
+    val padding: PaddingValues
+        get() = when (this) {
+            XsSmall -> PaddingValues(horizontal = 6.dp, vertical = 3.dp)
+            Small -> PaddingValues(horizontal = 8.dp, vertical = 6.dp)
+            Medium -> PaddingValues(horizontal = 12.dp, vertical = 9.dp)
+            Large -> PaddingValues(horizontal = 14.dp, vertical = 11.dp)
+            XLarge -> PaddingValues(horizontal = 16.dp, vertical = 15.dp)
+        }
+}
+
+enum class BezierButtonColors {
+    Blue,
+    Cobalt,
+    Red,
+    Orange,
+    Green,
+    Pink,
+    Purple,
+    DarkGrey,
+    LightGrey,
+    White,
+}
+
+@Composable
+@Preview(showBackground = true)
+private fun BezierButtonPreview() {
+    BezierTheme {
+        Column {
+            BezierButton(
+                text = "hello world",
+                size = BezierButtonSize.Large,
+                variant = BezierButtonVariants.Primary,
+                color = BezierButtonColors.Blue,
+                onClick = {},
+            )
+
+            BezierButton(
+                text = "hello world",
+                size = BezierButtonSize.Large,
+                variant = BezierButtonVariants.Secondary,
+                color = BezierButtonColors.Blue,
+                onClick = {},
+            )
+
+            BezierButton(
+                text = "hello world",
+                size = BezierButtonSize.Large,
+                variant = BezierButtonVariants.Tertiary,
+                color = BezierButtonColors.Blue,
+                onClick = {},
+            )
+        }
+    }
+}
