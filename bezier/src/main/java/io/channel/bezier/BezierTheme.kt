@@ -18,6 +18,10 @@ import androidx.compose.ui.graphics.Color
 import io.channel.bezier.color.Colors
 import io.channel.bezier.color.darkColors
 import io.channel.bezier.color.lightColors
+import io.channel.bezier.compose.color_v2.ColorSchemes
+import io.channel.bezier.compose.color_v2.SemanticTokens
+import io.channel.bezier.compose.color_v2.darkFunctionalTokens
+import io.channel.bezier.compose.color_v2.lightFunctionalTokens
 import io.channel.bezier.compose.typography.Typography
 
 @Composable
@@ -33,11 +37,26 @@ fun BezierTheme(
         }
     }
 
+    val functionalColorsV2 = remember(isDark) {
+        when (isDark) {
+            true -> darkFunctionalTokens()
+            false -> lightFunctionalTokens()
+        }
+    }
+
+    val semanticTokens = remember(functionalColorsV2) {
+        SemanticTokens(functionalColorsV2)
+    }
+
+    val colorSchemes = ColorSchemes(functionalColorsV2, semanticTokens)
+
+
     CompositionLocalProvider(
             LocalColors provides colors,
-            LocalTypography provides typography,
+            LocalColorsV2 provides colorSchemes,
             LocalIndication provides rememberRipple(),
             LocalRippleTheme provides BezierRippleTheme,
+            LocalTypography provides typography,
     ) {
         content()
     }
@@ -50,6 +69,11 @@ object BezierTheme {
         @ReadOnlyComposable
         get() = LocalColors.current
 
+    val colorSchemes: ColorSchemes
+        @Composable
+        @ReadOnlyComposable
+        get() = LocalColorsV2.current
+
     val typography: Typography
         @Composable
         @ReadOnlyComposable
@@ -60,6 +84,7 @@ object BezierTheme {
 
 internal val LocalColors = staticCompositionLocalOf { lightColors() }
 
+internal val LocalColorsV2 = staticCompositionLocalOf<ColorSchemes> { throw UnsupportedOperationException() }
 internal val LocalTypography = staticCompositionLocalOf { Typography() }
 
 private object BezierRippleTheme : RippleTheme {
