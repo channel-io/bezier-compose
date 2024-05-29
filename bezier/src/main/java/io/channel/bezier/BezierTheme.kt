@@ -21,9 +21,9 @@ import io.channel.bezier.color.lightColors
 
 @Composable
 fun BezierTheme(
+        isDark: Boolean = BezierTheme.isDark,
         content: @Composable () -> Unit,
 ) {
-    val isDark = BezierTheme.isDark
     val colors = remember(isDark) {
         when (isDark) {
             true -> darkColors()
