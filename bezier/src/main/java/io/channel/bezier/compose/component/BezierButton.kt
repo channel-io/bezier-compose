@@ -2,6 +2,7 @@ package io.channel.bezier.compose.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -217,38 +218,74 @@ enum class BezierButtonColors {
 }
 
 @Composable
-@Preview(showBackground = true)
-private fun BezierButtonPreview() {
+@Preview(
+        showBackground = true,
+        widthDp = 1200,
+)
+private fun BezierButtonStylePreview() {
     BezierTheme {
-        Column {
+        Column(
+                modifier = Modifier.padding(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            BezierButtonVariants.entries.forEach { variant ->
+                Row(
+                        horizontalArrangement = Arrangement.spacedBy(4.dp),
+                ) {
+                    BezierButtonColors.entries.forEach { color ->
+                        BezierButton(
+                                text = "Label",
+                                size = BezierButtonSize.Medium,
+                                variant = variant,
+                                color = color,
+                                prefixContent = painterResource(id = R.drawable.icon_plus),
+                                suffixContent = painterResource(id = R.drawable.icon_arrow_right),
+                                onClick = { },
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+@Preview(showBackground = true)
+private fun BezierButtonSizePreview() {
+    BezierTheme {
+        Column(
+                modifier = Modifier.padding(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            BezierButtonSize.entries.forEach { size ->
+                BezierButton(
+                        text = "Label",
+                        size = size,
+                        variant = BezierButtonVariants.Primary,
+                        color = BezierButtonColors.Blue,
+                        prefixContent = painterResource(id = R.drawable.icon_plus),
+                        suffixContent = painterResource(id = R.drawable.icon_arrow_right),
+                        onClick = { },
+                )
+            }
+        }
+    }
+}
+
+@Composable
+@Preview(showBackground = true)
+private fun BezierButtonOnlyTextPreview() {
+    BezierTheme {
+        Column(
+                modifier = Modifier.padding(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
             BezierButton(
-                    text = "hello world",
-                    size = BezierButtonSize.Large,
+                    text = "Label",
+                    size = BezierButtonSize.Medium,
                     variant = BezierButtonVariants.Primary,
                     color = BezierButtonColors.Blue,
-                    prefixContent = painterResource(id = R.drawable.icon_plus),
-                    suffixContent = painterResource(id = R.drawable.icon_minus_circle),
-                    onClick = {},
-            )
-
-            BezierButton(
-                    text = "hello world",
-                    size = BezierButtonSize.Large,
-                    variant = BezierButtonVariants.Secondary,
-                    color = BezierButtonColors.Blue,
-                    prefixContent = painterResource(id = R.drawable.icon_plus),
-                    suffixContent = painterResource(id = R.drawable.icon_minus_circle),
-                    onClick = {},
-            )
-
-            BezierButton(
-                    text = "hello world",
-                    size = BezierButtonSize.Large,
-                    variant = BezierButtonVariants.Tertiary,
-                    color = BezierButtonColors.Blue,
-                    prefixContent = painterResource(id = R.drawable.icon_plus),
-                    suffixContent = painterResource(id = R.drawable.icon_minus_circle),
-                    onClick = {},
+                    onClick = { },
             )
         }
     }
