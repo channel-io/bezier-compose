@@ -9,53 +9,55 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Moon: ImageVector
-    get() {
-        return io.channel.bezier.icon._moon ?: ImageVector.Builder(
-                name = "Moon",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(9.7782f, 2.8985f)
-                curveTo(10.1305f, 3.3084f, 10.2744f, 3.9229f, 10.0373f, 4.504f)
-                curveTo(9.6933f, 5.3475f, 9.5032f, 6.2713f, 9.5032f, 7.242f)
-                curveTo(9.5032f, 11.2487f, 12.7513f, 14.4968f, 16.758f, 14.4968f)
-                curveTo(17.7286f, 14.4968f, 18.6524f, 14.3067f, 19.496f, 13.9626f)
-                curveTo(20.0771f, 13.7256f, 20.6915f, 13.8694f, 21.1014f, 14.2218f)
-                curveTo(21.5311f, 14.5911f, 21.7829f, 15.2461f, 21.4903f, 15.9128f)
-                curveTo(19.918f, 19.4949f, 16.3386f, 22.0f, 12.172f, 22.0f)
-                curveTo(6.5542f, 22.0f, 2.0f, 17.4458f, 2.0f, 11.828f)
-                curveTo(2.0f, 7.6613f, 4.5051f, 4.082f, 8.0871f, 2.5097f)
-                curveTo(8.7538f, 2.2171f, 9.4089f, 2.4689f, 9.7782f, 2.8985f)
-                close()
-                moveTo(7.7959f, 4.925f)
-                curveTo(5.5129f, 6.3753f, 4.0f, 8.9258f, 4.0f, 11.828f)
-                curveTo(4.0f, 16.3412f, 7.6587f, 20.0f, 12.172f, 20.0f)
-                curveTo(15.0742f, 20.0f, 17.6246f, 18.487f, 19.075f, 16.2041f)
-                curveTo(18.3338f, 16.3952f, 17.5572f, 16.4968f, 16.758f, 16.4968f)
-                curveTo(11.6467f, 16.4968f, 7.5032f, 12.3533f, 7.5032f, 7.242f)
-                curveTo(7.5032f, 6.4427f, 7.6047f, 5.6662f, 7.7959f, 4.925f)
-                close()
+val BezierIcons.Moon: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _moon ?: ImageVector.Builder(
+                    name = "Moon",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(9.7782f, 2.89854f)
+                    curveTo(10.1305f, 3.30845f, 10.2744f, 3.92291f, 10.0373f, 4.50399f)
+                    curveTo(9.69328f, 5.34753f, 9.50319f, 6.27131f, 9.50319f, 7.24198f)
+                    curveTo(9.50319f, 11.2487f, 12.7513f, 14.4968f, 16.758f, 14.4968f)
+                    curveTo(17.7286f, 14.4968f, 18.6524f, 14.3067f, 19.496f, 13.9626f)
+                    curveTo(20.0771f, 13.7256f, 20.6915f, 13.8694f, 21.1014f, 14.2218f)
+                    curveTo(21.5311f, 14.5911f, 21.7829f, 15.2461f, 21.4903f, 15.9128f)
+                    curveTo(19.918f, 19.4949f, 16.3386f, 22.0f, 12.172f, 22.0f)
+                    curveTo(6.55415f, 22.0f, 2.0f, 17.4458f, 2.0f, 11.828f)
+                    curveTo(2.0f, 7.66132f, 4.50507f, 4.08198f, 8.08715f, 2.50969f)
+                    curveTo(8.75382f, 2.21706f, 9.40889f, 2.46887f, 9.7782f, 2.89854f)
+                    close()
+                    moveTo(7.79586f, 4.92499f)
+                    curveTo(5.51295f, 6.37532f, 4.0f, 8.9258f, 4.0f, 11.828f)
+                    curveTo(4.0f, 16.3412f, 7.65872f, 20.0f, 12.172f, 20.0f)
+                    curveTo(15.0742f, 20.0f, 17.6246f, 18.487f, 19.075f, 16.2041f)
+                    curveTo(18.3338f, 16.3952f, 17.5572f, 16.4968f, 16.758f, 16.4968f)
+                    curveTo(11.6467f, 16.4968f, 7.50319f, 12.3533f, 7.50319f, 7.24198f)
+                    curveTo(7.50319f, 6.44275f, 7.60473f, 5.66618f, 7.79586f, 4.92499f)
+                    close()
+                }
+            }.build().also {
+                _moon = it
             }
-        }.build().also {
-            io.channel.bezier.icon._moon = it
-        }
     }
+
 
 private var _moon: ImageVector? = null
 
@@ -64,7 +66,7 @@ private var _moon: ImageVector? = null
 private fun MoonIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Moon,
+            imageVector = BezierIcons.Moon.imageVector,
             contentDescription = null,
     )
 }

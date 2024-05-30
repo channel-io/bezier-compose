@@ -15,58 +15,62 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ButtonRoute: ImageVector
-    get() {
-        return io.channel.bezier.icon._buttonRoute ?: ImageVector.Builder(
-                name = "ButtonRoute",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(4.0f, 9.0f)
-                lineTo(4.0f, 16.0f)
-                lineTo(7.0f, 16.0f)
-                lineTo(7.0f, 18.0f)
-                lineTo(3.5f, 18.0f)
-                curveTo(2.6716f, 18.0f, 2.0f, 17.3284f, 2.0f, 16.5f)
-                lineTo(2.0f, 3.0f)
-                lineTo(4.0f, 3.0f)
-                lineTo(4.0f, 7.0f)
-                lineTo(7.0f, 7.0f)
-                lineTo(7.0f, 9.0f)
-                lineTo(4.0f, 9.0f)
-                close()
-                moveTo(9.5f, 4.0f)
-                curveTo(8.6716f, 4.0f, 8.0f, 4.6716f, 8.0f, 5.5f)
-                lineTo(8.0f, 9.5f)
-                curveTo(8.0f, 10.3284f, 8.6716f, 11.0f, 9.5f, 11.0f)
-                lineTo(20.5f, 11.0f)
-                curveTo(21.3284f, 11.0f, 22.0f, 10.3284f, 22.0f, 9.5f)
-                lineTo(22.0f, 5.5f)
-                curveTo(22.0f, 4.6716f, 21.3284f, 4.0f, 20.5f, 4.0f)
-                lineTo(9.5f, 4.0f)
-                close()
-                moveTo(9.5f, 13.0f)
-                curveTo(8.6716f, 13.0f, 8.0f, 13.6716f, 8.0f, 14.5f)
-                lineTo(8.0f, 18.5f)
-                curveTo(8.0f, 19.3284f, 8.6716f, 20.0f, 9.5f, 20.0f)
-                lineTo(20.5f, 20.0f)
-                curveTo(21.3284f, 20.0f, 22.0f, 19.3284f, 22.0f, 18.5f)
-                lineTo(22.0f, 14.5f)
-                curveTo(22.0f, 13.6716f, 21.3284f, 13.0f, 20.5f, 13.0f)
-                lineTo(9.5f, 13.0f)
-                close()
+val BezierIcons.ButtonRoute: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _buttonRoute ?: ImageVector.Builder(
+                    name = "ButtonRoute",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(4.0f, 9.0f)
+                    lineTo(4.0f, 16.0f)
+                    lineTo(7.0f, 16.0f)
+                    lineTo(7.0f, 18.0f)
+                    lineTo(3.5f, 18.0f)
+                    curveTo(2.67157f, 18.0f, 2.0f, 17.3284f, 2.0f, 16.5f)
+                    lineTo(2.0f, 3.0f)
+                    lineTo(4.0f, 3.0f)
+                    lineTo(4.0f, 7.0f)
+                    lineTo(7.0f, 7.0f)
+                    lineTo(7.0f, 9.0f)
+                    lineTo(4.0f, 9.0f)
+                    close()
+                    moveTo(9.5f, 4.0f)
+                    curveTo(8.67157f, 4.0f, 8.0f, 4.67157f, 8.0f, 5.5f)
+                    lineTo(8.0f, 9.5f)
+                    curveTo(8.0f, 10.3284f, 8.67157f, 11.0f, 9.5f, 11.0f)
+                    lineTo(20.5f, 11.0f)
+                    curveTo(21.3284f, 11.0f, 22.0f, 10.3284f, 22.0f, 9.5f)
+                    lineTo(22.0f, 5.5f)
+                    curveTo(22.0f, 4.67157f, 21.3284f, 4.0f, 20.5f, 4.0f)
+                    lineTo(9.5f, 4.0f)
+                    close()
+                    moveTo(9.5f, 13.0f)
+                    curveTo(8.67157f, 13.0f, 8.0f, 13.6716f, 8.0f, 14.5f)
+                    lineTo(8.0f, 18.5f)
+                    curveTo(8.0f, 19.3284f, 8.67157f, 20.0f, 9.5f, 20.0f)
+                    lineTo(20.5f, 20.0f)
+                    curveTo(21.3284f, 20.0f, 22.0f, 19.3284f, 22.0f, 18.5f)
+                    lineTo(22.0f, 14.5f)
+                    curveTo(22.0f, 13.6716f, 21.3284f, 13.0f, 20.5f, 13.0f)
+                    lineTo(9.5f, 13.0f)
+                    close()
+                }
+            }.build().also {
+                _buttonRoute = it
             }
-        }.build().also {
-            io.channel.bezier.icon._buttonRoute = it
-        }
     }
+
 
 private var _buttonRoute: ImageVector? = null
 
@@ -75,7 +79,7 @@ private var _buttonRoute: ImageVector? = null
 private fun ButtonRouteIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ButtonRoute,
+            imageVector = BezierIcons.ButtonRoute.imageVector,
             contentDescription = null,
     )
 }

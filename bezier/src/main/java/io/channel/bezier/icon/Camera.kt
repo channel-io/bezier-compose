@@ -9,79 +9,81 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Camera: ImageVector
-    get() {
-        return _camera ?: ImageVector.Builder(
-                name = "Camera",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(9.2361f, 3.0f)
-                curveTo(8.0997f, 3.0f, 7.061f, 3.642f, 6.5528f, 4.6584f)
-                lineTo(6.382f, 5.0f)
-                lineTo(5.0f, 5.0f)
-                curveTo(3.3431f, 5.0f, 2.0f, 6.3432f, 2.0f, 8.0f)
-                lineTo(2.0f, 17.0f)
-                curveTo(2.0f, 18.6569f, 3.3431f, 20.0f, 5.0f, 20.0f)
-                lineTo(19.0f, 20.0f)
-                curveTo(20.6569f, 20.0f, 22.0f, 18.6569f, 22.0f, 17.0f)
-                lineTo(22.0f, 8.0f)
-                curveTo(22.0f, 6.3432f, 20.6569f, 5.0f, 19.0f, 5.0f)
-                lineTo(17.618f, 5.0f)
-                lineTo(17.4472f, 4.6584f)
-                curveTo(16.939f, 3.642f, 15.9002f, 3.0f, 14.7639f, 3.0f)
-                lineTo(9.2361f, 3.0f)
-                close()
-                moveTo(8.3416f, 5.5528f)
-                curveTo(8.511f, 5.214f, 8.8573f, 5.0f, 9.2361f, 5.0f)
-                lineTo(14.7639f, 5.0f)
-                curveTo(15.1427f, 5.0f, 15.489f, 5.214f, 15.6584f, 5.5528f)
-                lineTo(16.1056f, 6.4472f)
-                curveTo(16.275f, 6.786f, 16.6212f, 7.0f, 17.0f, 7.0f)
-                lineTo(19.0f, 7.0f)
-                curveTo(19.5523f, 7.0f, 20.0f, 7.4477f, 20.0f, 8.0f)
-                lineTo(20.0f, 17.0f)
-                curveTo(20.0f, 17.5523f, 19.5523f, 18.0f, 19.0f, 18.0f)
-                lineTo(5.0f, 18.0f)
-                curveTo(4.4477f, 18.0f, 4.0f, 17.5523f, 4.0f, 17.0f)
-                lineTo(4.0f, 8.0f)
-                curveTo(4.0f, 7.4477f, 4.4477f, 7.0f, 5.0f, 7.0f)
-                lineTo(7.0f, 7.0f)
-                curveTo(7.3788f, 7.0f, 7.725f, 6.786f, 7.8944f, 6.4472f)
-                lineTo(8.3416f, 5.5528f)
-                close()
-                moveTo(7.0f, 12.0f)
-                curveTo(7.0f, 14.7564f, 9.2427f, 17.0f, 12.0f, 17.0f)
-                curveTo(14.7573f, 17.0f, 17.0f, 14.7564f, 17.0f, 12.0f)
-                curveTo(17.0f, 9.2427f, 14.7573f, 7.0f, 12.0f, 7.0f)
-                curveTo(9.2427f, 7.0f, 7.0f, 9.2427f, 7.0f, 12.0f)
-                close()
-                moveTo(9.0f, 12.0f)
-                curveTo(9.0f, 10.3432f, 10.3433f, 9.0f, 12.0f, 9.0f)
-                curveTo(13.6567f, 9.0f, 15.0f, 10.3432f, 15.0f, 12.0f)
-                curveTo(15.0f, 13.6567f, 13.6567f, 15.0f, 12.0f, 15.0f)
-                curveTo(10.3433f, 15.0f, 9.0f, 13.6567f, 9.0f, 12.0f)
-                close()
+val BezierIcons.Camera: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _camera ?: ImageVector.Builder(
+                    name = "Camera",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(9.23607f, 3.0f)
+                    curveTo(8.09975f, 3.0f, 7.06096f, 3.64201f, 6.55279f, 4.65836f)
+                    lineTo(6.38197f, 5.0f)
+                    lineTo(5.0f, 5.0f)
+                    curveTo(3.34315f, 5.0f, 2.0f, 6.34315f, 2.0f, 8.0f)
+                    lineTo(2.0f, 17.0f)
+                    curveTo(2.0f, 18.6569f, 3.34315f, 20.0f, 5.0f, 20.0f)
+                    lineTo(19.0f, 20.0f)
+                    curveTo(20.6569f, 20.0f, 22.0f, 18.6569f, 22.0f, 17.0f)
+                    lineTo(22.0f, 8.0f)
+                    curveTo(22.0f, 6.34315f, 20.6569f, 5.0f, 19.0f, 5.0f)
+                    lineTo(17.618f, 5.0f)
+                    lineTo(17.4472f, 4.65836f)
+                    curveTo(16.939f, 3.64201f, 15.9002f, 3.0f, 14.7639f, 3.0f)
+                    lineTo(9.23607f, 3.0f)
+                    close()
+                    moveTo(8.34164f, 5.55279f)
+                    curveTo(8.51103f, 5.214f, 8.8573f, 5.0f, 9.23607f, 5.0f)
+                    lineTo(14.7639f, 5.0f)
+                    curveTo(15.1427f, 5.0f, 15.489f, 5.214f, 15.6584f, 5.55279f)
+                    lineTo(16.1056f, 6.44721f)
+                    curveTo(16.275f, 6.786f, 16.6212f, 7.0f, 17.0f, 7.0f)
+                    lineTo(19.0f, 7.0f)
+                    curveTo(19.5523f, 7.0f, 20.0f, 7.44772f, 20.0f, 8.0f)
+                    lineTo(20.0f, 17.0f)
+                    curveTo(20.0f, 17.5523f, 19.5523f, 18.0f, 19.0f, 18.0f)
+                    lineTo(5.0f, 18.0f)
+                    curveTo(4.44772f, 18.0f, 4.0f, 17.5523f, 4.0f, 17.0f)
+                    lineTo(4.0f, 8.0f)
+                    curveTo(4.0f, 7.44772f, 4.44772f, 7.0f, 5.0f, 7.0f)
+                    lineTo(7.0f, 7.0f)
+                    curveTo(7.37877f, 7.0f, 7.72504f, 6.786f, 7.89443f, 6.44721f)
+                    lineTo(8.34164f, 5.55279f)
+                    close()
+                    moveTo(7.0f, 12.0f)
+                    curveTo(7.0f, 14.7564f, 9.24273f, 17.0f, 12.0f, 17.0f)
+                    curveTo(14.7573f, 17.0f, 17.0f, 14.7564f, 17.0f, 12.0f)
+                    curveTo(17.0f, 9.24273f, 14.7573f, 7.0f, 12.0f, 7.0f)
+                    curveTo(9.24273f, 7.0f, 7.0f, 9.24273f, 7.0f, 12.0f)
+                    close()
+                    moveTo(9.0f, 12.0f)
+                    curveTo(9.0f, 10.3432f, 10.3433f, 9.0f, 12.0f, 9.0f)
+                    curveTo(13.6567f, 9.0f, 15.0f, 10.3432f, 15.0f, 12.0f)
+                    curveTo(15.0f, 13.6567f, 13.6567f, 15.0f, 12.0f, 15.0f)
+                    curveTo(10.3433f, 15.0f, 9.0f, 13.6567f, 9.0f, 12.0f)
+                    close()
+                }
+            }.build().also {
+                _camera = it
             }
-        }.build().also {
-            _camera = it
-        }
     }
+
 
 private var _camera: ImageVector? = null
 
@@ -90,7 +92,7 @@ private var _camera: ImageVector? = null
 private fun CameraIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Camera,
+            imageVector = BezierIcons.Camera.imageVector,
             contentDescription = null,
     )
 }

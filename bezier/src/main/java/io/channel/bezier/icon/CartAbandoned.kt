@@ -9,77 +9,79 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CartAbandoned: ImageVector
-    get() {
-        return io.channel.bezier.icon._cartAbandoned ?: ImageVector.Builder(
-                name = "CartAbandoned",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(2.0f, 5.0f)
-                lineTo(4.7747f, 5.0f)
-                lineTo(5.7102f, 13.4406f)
-                curveTo(5.9348f, 15.4668f, 7.6473f, 17.0f, 9.6859f, 17.0f)
-                lineTo(16.3149f, 17.0f)
-                curveTo(18.3531f, 17.0f, 20.0653f, 15.4675f, 20.2904f, 13.4417f)
-                lineTo(20.4506f, 12.0f)
-                lineTo(18.4383f, 12.0f)
-                lineTo(18.3026f, 13.2209f)
-                curveTo(18.1901f, 14.2337f, 17.334f, 15.0f, 16.3149f, 15.0f)
-                lineTo(9.6859f, 15.0f)
-                curveTo(8.6666f, 15.0f, 7.8103f, 14.2334f, 7.698f, 13.2203f)
-                lineTo(7.1195f, 8.0f)
-                lineTo(10.0f, 8.0f)
-                lineTo(10.0f, 6.0f)
-                lineTo(6.8978f, 6.0f)
-                lineTo(6.7625f, 4.7797f)
-                curveTo(6.6502f, 3.7666f, 5.794f, 3.0f, 4.7747f, 3.0f)
-                lineTo(2.0f, 3.0f)
-                lineTo(2.0f, 5.0f)
-                close()
-                moveTo(5.9997f, 20.0f)
-                curveTo(5.9997f, 18.899f, 6.8997f, 18.0f, 7.9997f, 18.0f)
-                curveTo(9.0997f, 18.0f, 9.9997f, 18.899f, 9.9997f, 20.0f)
-                curveTo(9.9997f, 21.1f, 9.0997f, 22.0f, 7.9997f, 22.0f)
-                curveTo(6.8997f, 22.0f, 5.9997f, 21.1f, 5.9997f, 20.0f)
-                close()
-                moveTo(15.9997f, 20.0f)
-                curveTo(15.9997f, 18.899f, 16.8997f, 18.0f, 17.9997f, 18.0f)
-                curveTo(19.0997f, 18.0f, 19.9997f, 18.899f, 19.9997f, 20.0f)
-                curveTo(19.9997f, 21.1f, 19.0997f, 22.0f, 17.9997f, 22.0f)
-                curveTo(16.8997f, 22.0f, 15.9997f, 21.1f, 15.9997f, 20.0f)
-                close()
-                moveTo(16.3009f, 11.5986f)
-                curveTo(16.1109f, 11.7706f, 15.8259f, 11.7706f, 15.6359f, 11.5986f)
-                curveTo(14.5439f, 10.6126f, 12.7459f, 8.9346f, 11.6849f, 7.6596f)
-                curveTo(10.6989f, 6.4746f, 10.7239f, 4.8366f, 11.8009f, 3.7606f)
-                curveTo(12.0039f, 3.5576f, 12.2709f, 3.3946f, 12.5589f, 3.2636f)
-                curveTo(13.7549f, 2.7236f, 15.3199f, 3.1176f, 15.9689f, 4.3426f)
-                curveTo(16.6169f, 3.1176f, 18.1819f, 2.7236f, 19.3779f, 3.2636f)
-                curveTo(19.6659f, 3.3946f, 19.9329f, 3.5576f, 20.1359f, 3.7606f)
-                curveTo(21.2129f, 4.8366f, 21.2379f, 6.4746f, 20.2529f, 7.6596f)
-                curveTo(19.1909f, 8.9346f, 17.3929f, 10.6126f, 16.3009f, 11.5986f)
-                close()
+val BezierIcons.CartAbandoned: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _cartAbandoned ?: ImageVector.Builder(
+                    name = "CartAbandoned",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(2.0f, 5.0f)
+                    lineTo(4.77471f, 5.0f)
+                    lineTo(5.71021f, 13.4406f)
+                    curveTo(5.93479f, 15.4668f, 7.64725f, 17.0f, 9.68587f, 17.0f)
+                    lineTo(16.3149f, 17.0f)
+                    curveTo(18.3531f, 17.0f, 20.0653f, 15.4675f, 20.2904f, 13.4417f)
+                    lineTo(20.4506f, 12.0f)
+                    lineTo(18.4383f, 12.0f)
+                    lineTo(18.3026f, 13.2209f)
+                    curveTo(18.1901f, 14.2337f, 17.334f, 15.0f, 16.3149f, 15.0f)
+                    lineTo(9.68587f, 15.0f)
+                    curveTo(8.66656f, 15.0f, 7.81033f, 14.2334f, 7.69804f, 13.2203f)
+                    lineTo(7.11946f, 8.0f)
+                    lineTo(10.0f, 8.0f)
+                    lineTo(10.0f, 6.0f)
+                    lineTo(6.89779f, 6.0f)
+                    lineTo(6.76254f, 4.77968f)
+                    curveTo(6.65025f, 3.76658f, 5.79402f, 3.0f, 4.77471f, 3.0f)
+                    lineTo(2.0f, 3.0f)
+                    lineTo(2.0f, 5.0f)
+                    close()
+                    moveTo(5.99969f, 20.0f)
+                    curveTo(5.99969f, 18.899f, 6.89969f, 18.0f, 7.99969f, 18.0f)
+                    curveTo(9.09969f, 18.0f, 9.99969f, 18.899f, 9.99969f, 20.0f)
+                    curveTo(9.99969f, 21.1f, 9.09969f, 22.0f, 7.99969f, 22.0f)
+                    curveTo(6.89969f, 22.0f, 5.99969f, 21.1f, 5.99969f, 20.0f)
+                    close()
+                    moveTo(15.9997f, 20.0f)
+                    curveTo(15.9997f, 18.899f, 16.8997f, 18.0f, 17.9997f, 18.0f)
+                    curveTo(19.0997f, 18.0f, 19.9997f, 18.899f, 19.9997f, 20.0f)
+                    curveTo(19.9997f, 21.1f, 19.0997f, 22.0f, 17.9997f, 22.0f)
+                    curveTo(16.8997f, 22.0f, 15.9997f, 21.1f, 15.9997f, 20.0f)
+                    close()
+                    moveTo(16.3009f, 11.5986f)
+                    curveTo(16.1109f, 11.7706f, 15.8259f, 11.7706f, 15.6359f, 11.5986f)
+                    curveTo(14.5439f, 10.6126f, 12.7459f, 8.9346f, 11.6849f, 7.6596f)
+                    curveTo(10.6989f, 6.4746f, 10.7239f, 4.8366f, 11.8009f, 3.7606f)
+                    curveTo(12.0039f, 3.5576f, 12.2709f, 3.3946f, 12.5589f, 3.2636f)
+                    curveTo(13.7549f, 2.7236f, 15.3199f, 3.1176f, 15.9689f, 4.3426f)
+                    curveTo(16.6169f, 3.1176f, 18.1819f, 2.7236f, 19.3779f, 3.2636f)
+                    curveTo(19.6659f, 3.3946f, 19.9329f, 3.5576f, 20.1359f, 3.7606f)
+                    curveTo(21.2129f, 4.8366f, 21.2379f, 6.4746f, 20.2529f, 7.6596f)
+                    curveTo(19.1909f, 8.9346f, 17.3929f, 10.6126f, 16.3009f, 11.5986f)
+                    close()
+                }
+            }.build().also {
+                _cartAbandoned = it
             }
-        }.build().also {
-            io.channel.bezier.icon._cartAbandoned = it
-        }
     }
+
 
 private var _cartAbandoned: ImageVector? = null
 
@@ -88,7 +90,7 @@ private var _cartAbandoned: ImageVector? = null
 private fun CartAbandonedIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CartAbandoned,
+            imageVector = BezierIcons.CartAbandoned.imageVector,
             contentDescription = null,
     )
 }

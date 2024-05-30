@@ -9,52 +9,54 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Rotate: ImageVector
-    get() {
-        return io.channel.bezier.icon._rotate ?: ImageVector.Builder(
-                name = "Rotate",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0031f, 2.2179f)
-                curveTo(9.3521f, 2.2179f, 6.8601f, 3.2449f, 4.9761f, 5.1069f)
-                lineTo(2.8571f, 2.9879f)
-                curveTo(2.5421f, 2.6729f, 2.0031f, 2.8959f, 2.0031f, 3.3409f)
-                lineTo(2.0031f, 8.9679f)
-                curveTo(2.0031f, 9.2439f, 2.2271f, 9.4679f, 2.5031f, 9.4679f)
-                lineTo(8.1301f, 9.4679f)
-                curveTo(8.5751f, 9.4679f, 8.7981f, 8.9289f, 8.4831f, 8.6139f)
-                lineTo(6.3901f, 6.5209f)
-                curveTo(7.8971f, 5.0359f, 9.8861f, 4.2179f, 12.0031f, 4.2179f)
-                curveTo(16.4141f, 4.2179f, 20.0031f, 7.8069f, 20.0031f, 12.2179f)
-                curveTo(20.0031f, 16.6289f, 16.4141f, 20.2179f, 12.0031f, 20.2179f)
-                curveTo(7.93f, 20.2179f, 4.5578f, 17.1577f, 4.0651f, 13.2159f)
-                curveTo(3.9966f, 12.6679f, 3.5554f, 12.2179f, 3.0031f, 12.2179f)
-                curveTo(2.4508f, 12.2179f, 1.9978f, 12.6669f, 2.0526f, 13.2165f)
-                curveTo(2.5552f, 18.2634f, 6.8261f, 22.2179f, 12.0031f, 22.2179f)
-                curveTo(17.5171f, 22.2179f, 22.0031f, 17.7319f, 22.0031f, 12.2179f)
-                curveTo(22.0031f, 6.7039f, 17.5171f, 2.2179f, 12.0031f, 2.2179f)
-                close()
+val BezierIcons.Rotate: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _rotate ?: ImageVector.Builder(
+                    name = "Rotate",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.0031f, 2.2179f)
+                    curveTo(9.35211f, 2.2179f, 6.86011f, 3.2449f, 4.97611f, 5.1069f)
+                    lineTo(2.85711f, 2.9879f)
+                    curveTo(2.54211f, 2.6729f, 2.00311f, 2.8959f, 2.00311f, 3.3409f)
+                    lineTo(2.00311f, 8.9679f)
+                    curveTo(2.00311f, 9.2439f, 2.22711f, 9.4679f, 2.50311f, 9.4679f)
+                    lineTo(8.13011f, 9.4679f)
+                    curveTo(8.57511f, 9.4679f, 8.79811f, 8.9289f, 8.48311f, 8.6139f)
+                    lineTo(6.39011f, 6.5209f)
+                    curveTo(7.89711f, 5.0359f, 9.88611f, 4.2179f, 12.0031f, 4.2179f)
+                    curveTo(16.4141f, 4.2179f, 20.0031f, 7.8069f, 20.0031f, 12.2179f)
+                    curveTo(20.0031f, 16.6289f, 16.4141f, 20.2179f, 12.0031f, 20.2179f)
+                    curveTo(7.93001f, 20.2179f, 4.5578f, 17.1577f, 4.06505f, 13.2159f)
+                    curveTo(3.99655f, 12.6679f, 3.5554f, 12.2179f, 3.00311f, 12.2179f)
+                    curveTo(2.45083f, 12.2179f, 1.99785f, 12.6669f, 2.05258f, 13.2165f)
+                    curveTo(2.55523f, 18.2634f, 6.82607f, 22.2179f, 12.0031f, 22.2179f)
+                    curveTo(17.5171f, 22.2179f, 22.0031f, 17.7319f, 22.0031f, 12.2179f)
+                    curveTo(22.0031f, 6.7039f, 17.5171f, 2.2179f, 12.0031f, 2.2179f)
+                    close()
+                }
+            }.build().also {
+                _rotate = it
             }
-        }.build().also {
-            io.channel.bezier.icon._rotate = it
-        }
     }
+
 
 private var _rotate: ImageVector? = null
 
@@ -63,7 +65,7 @@ private var _rotate: ImageVector? = null
 private fun RotateIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Rotate,
+            imageVector = BezierIcons.Rotate.imageVector,
             contentDescription = null,
     )
 }

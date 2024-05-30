@@ -9,67 +9,69 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Archive: ImageVector
-    get() {
-        return io.channel.bezier.icon._archive ?: ImageVector.Builder(
-                name = "Archive",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(18.994f, 19.0f)
-                lineTo(4.994f, 19.0f)
-                lineTo(4.994f, 9.0f)
-                lineTo(18.994f, 9.0f)
-                lineTo(18.994f, 19.0f)
-                close()
-                moveTo(20.0f, 5.0f)
-                lineTo(4.0f, 5.0f)
-                lineTo(4.0f, 7.0f)
-                lineTo(4.494f, 7.0f)
-                lineTo(19.494f, 7.0f)
-                lineTo(20.0f, 7.0f)
-                lineTo(20.0f, 5.0f)
-                close()
-                moveTo(20.5f, 3.0f)
-                curveTo(21.327f, 3.0f, 22.0f, 3.673f, 22.0f, 4.5f)
-                lineTo(22.0f, 9.0f)
-                lineTo(20.994f, 9.0f)
-                lineTo(20.994f, 19.5f)
-                curveTo(20.994f, 20.327f, 20.321f, 21.0f, 19.494f, 21.0f)
-                lineTo(4.494f, 21.0f)
-                curveTo(3.667f, 21.0f, 2.994f, 20.327f, 2.994f, 19.5f)
-                lineTo(2.994f, 9.0f)
-                lineTo(2.0f, 9.0f)
-                lineTo(2.0f, 4.5f)
-                curveTo(2.0f, 3.673f, 2.673f, 3.0f, 3.5f, 3.0f)
-                lineTo(20.5f, 3.0f)
-                close()
-                moveTo(14.494f, 13.0f)
-                lineTo(9.494f, 13.0f)
-                lineTo(9.494f, 11.0f)
-                lineTo(14.494f, 11.0f)
-                lineTo(14.494f, 13.0f)
-                close()
+val BezierIcons.Archive: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _archive ?: ImageVector.Builder(
+                    name = "Archive",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(18.994f, 19.0f)
+                    lineTo(4.99399f, 19.0f)
+                    lineTo(4.99399f, 9.0f)
+                    lineTo(18.994f, 9.0f)
+                    lineTo(18.994f, 19.0f)
+                    close()
+                    moveTo(20.0f, 5.0f)
+                    lineTo(4.0f, 5.0f)
+                    lineTo(4.0f, 7.0f)
+                    lineTo(4.494f, 7.0f)
+                    lineTo(19.494f, 7.0f)
+                    lineTo(20.0f, 7.0f)
+                    lineTo(20.0f, 5.0f)
+                    close()
+                    moveTo(20.5f, 3.0f)
+                    curveTo(21.327f, 3.0f, 22.0f, 3.673f, 22.0f, 4.5f)
+                    lineTo(22.0f, 9.0f)
+                    lineTo(20.994f, 9.0f)
+                    lineTo(20.994f, 19.5f)
+                    curveTo(20.994f, 20.327f, 20.321f, 21.0f, 19.494f, 21.0f)
+                    lineTo(4.494f, 21.0f)
+                    curveTo(3.667f, 21.0f, 2.994f, 20.327f, 2.994f, 19.5f)
+                    lineTo(2.994f, 9.0f)
+                    lineTo(2.0f, 9.0f)
+                    lineTo(2.0f, 4.5f)
+                    curveTo(2.0f, 3.673f, 2.673f, 3.0f, 3.5f, 3.0f)
+                    lineTo(20.5f, 3.0f)
+                    close()
+                    moveTo(14.494f, 13.0f)
+                    lineTo(9.49399f, 13.0f)
+                    lineTo(9.49399f, 11.0f)
+                    lineTo(14.494f, 11.0f)
+                    lineTo(14.494f, 13.0f)
+                    close()
+                }
+            }.build().also {
+                _archive = it
             }
-        }.build().also {
-            io.channel.bezier.icon._archive = it
-        }
     }
+
 
 private var _archive: ImageVector? = null
 
@@ -78,7 +80,7 @@ private var _archive: ImageVector? = null
 private fun ArchiveIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Archive,
+            imageVector = BezierIcons.Archive.imageVector,
             contentDescription = null,
     )
 }

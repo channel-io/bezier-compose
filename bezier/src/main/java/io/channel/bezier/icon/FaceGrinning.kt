@@ -9,64 +9,66 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.FaceGrinning: ImageVector
-    get() {
-        return io.channel.bezier.icon._faceGrinning ?: ImageVector.Builder(
-                name = "FaceGrinning",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(4.0002f, 12.0001f)
-                curveTo(4.0002f, 16.4111f, 7.5892f, 20.0001f, 12.0002f, 20.0001f)
-                curveTo(16.4112f, 20.0001f, 20.0002f, 16.4111f, 20.0002f, 12.0001f)
-                curveTo(20.0002f, 7.5891f, 16.4112f, 4.0001f, 12.0002f, 4.0001f)
-                curveTo(7.5892f, 4.0001f, 4.0002f, 7.5891f, 4.0002f, 12.0001f)
-                close()
-                moveTo(2.0002f, 12.0001f)
-                curveTo(2.0002f, 6.4781f, 6.4772f, 2.0001f, 12.0002f, 2.0001f)
-                curveTo(17.5222f, 2.0001f, 22.0002f, 6.4781f, 22.0002f, 12.0001f)
-                curveTo(22.0002f, 17.5221f, 17.5222f, 22.0001f, 12.0002f, 22.0001f)
-                curveTo(6.4772f, 22.0001f, 2.0002f, 17.5221f, 2.0002f, 12.0001f)
-                close()
-                moveTo(6.286f, 13.4698f)
-                lineTo(17.714f, 13.4698f)
-                curveTo(17.964f, 13.4698f, 18.158f, 13.7158f, 18.081f, 13.9538f)
-                curveTo(17.253f, 16.5298f, 14.847f, 18.4038f, 12.0f, 18.4038f)
-                curveTo(9.153f, 18.4038f, 6.747f, 16.5298f, 5.919f, 13.9538f)
-                curveTo(5.842f, 13.7158f, 6.035f, 13.4698f, 6.286f, 13.4698f)
-                close()
-                moveTo(8.7863f, 11.6555f)
-                curveTo(9.6313f, 11.6555f, 9.9843f, 11.0455f, 9.9843f, 9.5505f)
-                curveTo(9.9843f, 8.0545f, 9.6313f, 7.4445f, 8.7863f, 7.4445f)
-                curveTo(7.9413f, 7.4445f, 7.5873f, 8.0545f, 7.5873f, 9.5505f)
-                curveTo(7.5873f, 11.0455f, 7.9413f, 11.6555f, 8.7863f, 11.6555f)
-                close()
-                moveTo(16.412f, 9.5505f)
-                curveTo(16.412f, 11.0455f, 16.059f, 11.6555f, 15.214f, 11.6555f)
-                curveTo(14.369f, 11.6555f, 14.015f, 11.0455f, 14.015f, 9.5505f)
-                curveTo(14.015f, 8.0545f, 14.369f, 7.4445f, 15.214f, 7.4445f)
-                curveTo(16.059f, 7.4445f, 16.412f, 8.0545f, 16.412f, 9.5505f)
-                close()
+val BezierIcons.FaceGrinning: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _faceGrinning ?: ImageVector.Builder(
+                    name = "FaceGrinning",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(4.00018f, 12.0001f)
+                    curveTo(4.00018f, 16.4111f, 7.58918f, 20.0001f, 12.0002f, 20.0001f)
+                    curveTo(16.4112f, 20.0001f, 20.0002f, 16.4111f, 20.0002f, 12.0001f)
+                    curveTo(20.0002f, 7.58912f, 16.4112f, 4.00012f, 12.0002f, 4.00012f)
+                    curveTo(7.58918f, 4.00012f, 4.00018f, 7.58912f, 4.00018f, 12.0001f)
+                    close()
+                    moveTo(2.00018f, 12.0001f)
+                    curveTo(2.00018f, 6.47812f, 6.47718f, 2.00012f, 12.0002f, 2.00012f)
+                    curveTo(17.5222f, 2.00012f, 22.0002f, 6.47812f, 22.0002f, 12.0001f)
+                    curveTo(22.0002f, 17.5221f, 17.5222f, 22.0001f, 12.0002f, 22.0001f)
+                    curveTo(6.47718f, 22.0001f, 2.00018f, 17.5221f, 2.00018f, 12.0001f)
+                    close()
+                    moveTo(6.286f, 13.4698f)
+                    lineTo(17.714f, 13.4698f)
+                    curveTo(17.964f, 13.4698f, 18.158f, 13.7158f, 18.081f, 13.9538f)
+                    curveTo(17.253f, 16.5298f, 14.847f, 18.4038f, 12.0f, 18.4038f)
+                    curveTo(9.153f, 18.4038f, 6.747f, 16.5298f, 5.919f, 13.9538f)
+                    curveTo(5.842f, 13.7158f, 6.035f, 13.4698f, 6.286f, 13.4698f)
+                    close()
+                    moveTo(8.78628f, 11.6555f)
+                    curveTo(9.63128f, 11.6555f, 9.98428f, 11.0455f, 9.98428f, 9.55046f)
+                    curveTo(9.98428f, 8.05446f, 9.63128f, 7.44446f, 8.78628f, 7.44446f)
+                    curveTo(7.94128f, 7.44446f, 7.58728f, 8.05446f, 7.58728f, 9.55046f)
+                    curveTo(7.58728f, 11.0455f, 7.94128f, 11.6555f, 8.78628f, 11.6555f)
+                    close()
+                    moveTo(16.412f, 9.55046f)
+                    curveTo(16.412f, 11.0455f, 16.059f, 11.6555f, 15.214f, 11.6555f)
+                    curveTo(14.369f, 11.6555f, 14.015f, 11.0455f, 14.015f, 9.55046f)
+                    curveTo(14.015f, 8.05446f, 14.369f, 7.44446f, 15.214f, 7.44446f)
+                    curveTo(16.059f, 7.44446f, 16.412f, 8.05446f, 16.412f, 9.55046f)
+                    close()
+                }
+            }.build().also {
+                _faceGrinning = it
             }
-        }.build().also {
-            io.channel.bezier.icon._faceGrinning = it
-        }
     }
+
 
 private var _faceGrinning: ImageVector? = null
 
@@ -75,7 +77,7 @@ private var _faceGrinning: ImageVector? = null
 private fun FaceGrinningIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.FaceGrinning,
+            imageVector = BezierIcons.FaceGrinning.imageVector,
             contentDescription = null,
     )
 }

@@ -9,114 +9,117 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.HandWave: ImageVector
-    get() {
-        return _handWave ?: ImageVector.Builder(
-                name = "HandWave",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(18.0002f, 3.0001f)
-                lineTo(18.0002f, 1.0001f)
-                curveTo(20.7572f, 1.0001f, 23.0002f, 3.2391f, 23.0002f, 5.9921f)
-                lineTo(21.0002f, 5.9921f)
-                curveTo(21.0002f, 4.3431f, 19.6542f, 3.0001f, 18.0002f, 3.0001f)
-                close()
-                moveTo(3.0002f, 17.004f)
-                lineTo(1.0002f, 17.004f)
-                curveTo(1.0002f, 19.757f, 3.2392f, 21.996f, 5.9922f, 21.996f)
-                lineTo(5.9922f, 19.996f)
-                curveTo(4.3422f, 19.996f, 3.0002f, 18.653f, 3.0002f, 17.004f)
-                close()
-            }
+val BezierIcons.HandWave: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _handWave ?: ImageVector.Builder(
+                    name = "HandWave",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(18.0002f, 3.00012f)
+                    lineTo(18.0002f, 1.00012f)
+                    curveTo(20.7572f, 1.00012f, 23.0002f, 3.23912f, 23.0002f, 5.99212f)
+                    lineTo(21.0002f, 5.99212f)
+                    curveTo(21.0002f, 4.34312f, 19.6542f, 3.00012f, 18.0002f, 3.00012f)
+                    close()
+                    moveTo(3.00018f, 17.004f)
+                    lineTo(1.00018f, 17.004f)
+                    curveTo(1.00018f, 19.757f, 3.23918f, 21.996f, 5.99218f, 21.996f)
+                    lineTo(5.99218f, 19.996f)
+                    curveTo(4.34218f, 19.996f, 3.00018f, 18.653f, 3.00018f, 17.004f)
+                    close()
+                }
 
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(15.7213f, 4.7482f)
-                curveTo(15.2493f, 5.2202f, 14.9913f, 5.8482f, 14.9923f, 6.5152f)
-                lineTo(14.9923f, 7.5322f)
-                lineTo(9.9253f, 2.4652f)
-                curveTo(8.9503f, 1.4902f, 7.3653f, 1.4902f, 6.3903f, 2.4652f)
-                curveTo(6.1673f, 2.6872f, 6.0013f, 2.9442f, 5.8803f, 3.2172f)
-                curveTo(5.0713f, 3.0342f, 4.1893f, 3.2512f, 3.5613f, 3.8802f)
-                curveTo(3.0883f, 4.3512f, 2.8283f, 4.9802f, 2.8303f, 5.6502f)
-                curveTo(2.8303f, 5.8382f, 2.8563f, 6.0212f, 2.8963f, 6.2002f)
-                curveTo(2.6253f, 6.3212f, 2.3693f, 6.4862f, 2.1473f, 6.7082f)
-                curveTo(1.1723f, 7.6832f, 1.1743f, 9.2692f, 2.1503f, 10.2472f)
-                lineTo(2.5303f, 10.6272f)
-                curveTo(2.3973f, 10.7162f, 2.2703f, 10.8182f, 2.1523f, 10.9352f)
-                curveTo(1.6783f, 11.4102f, 1.4153f, 12.0402f, 1.4153f, 12.7102f)
-                curveTo(1.4143f, 13.3812f, 1.6753f, 14.0122f, 2.1493f, 14.4872f)
-                lineTo(7.2223f, 19.5612f)
-                curveTo(7.9323f, 20.2712f, 8.7613f, 20.8332f, 9.6863f, 21.2292f)
-                curveTo(10.5843f, 21.6142f, 11.5253f, 21.8022f, 12.4563f, 21.8022f)
-                curveTo(14.2713f, 21.8022f, 16.0483f, 21.0912f, 17.3933f, 19.7452f)
-                lineTo(17.9453f, 19.1942f)
-                curveTo(19.2663f, 17.8732f, 19.9943f, 16.1172f, 19.9953f, 14.2492f)
-                lineTo(20.0003f, 6.4752f)
-                curveTo(20.0003f, 5.8162f, 19.7453f, 5.1982f, 19.2793f, 4.7322f)
-                curveTo(18.3643f, 3.8162f, 16.6843f, 3.7842f, 15.7213f, 4.7482f)
-                close()
-                moveTo(17.9953f, 14.2472f)
-                curveTo(17.9943f, 15.5822f, 17.4743f, 16.8372f, 16.5313f, 17.7802f)
-                lineTo(15.9793f, 18.3312f)
-                curveTo(14.5253f, 19.7852f, 12.3653f, 20.2012f, 10.4743f, 19.3922f)
-                curveTo(9.7843f, 19.0962f, 9.1653f, 18.6772f, 8.6373f, 18.1472f)
-                lineTo(3.5643f, 13.0742f)
-                curveTo(3.4683f, 12.9772f, 3.4143f, 12.8492f, 3.4153f, 12.7132f)
-                curveTo(3.4153f, 12.5762f, 3.4693f, 12.4482f, 3.5663f, 12.3502f)
-                curveTo(3.7523f, 12.1642f, 4.0553f, 12.1632f, 4.2423f, 12.3502f)
-                lineTo(6.7403f, 14.8372f)
-                lineTo(7.4503f, 15.5472f)
-                lineTo(8.8643f, 14.1332f)
-                lineTo(3.5653f, 8.8332f)
-                curveTo(3.3683f, 8.6362f, 3.3663f, 8.3172f, 3.5613f, 8.1222f)
-                curveTo(3.6873f, 7.9962f, 3.8353f, 7.9762f, 3.9133f, 7.9762f)
-                curveTo(4.0483f, 7.9772f, 4.1763f, 8.0302f, 4.2723f, 8.1262f)
-                lineTo(9.5723f, 13.4262f)
-                lineTo(10.9863f, 12.0122f)
-                lineTo(4.9793f, 6.0052f)
-                curveTo(4.8493f, 5.8752f, 4.8303f, 5.7252f, 4.8303f, 5.6462f)
-                curveTo(4.8303f, 5.5692f, 4.8493f, 5.4212f, 4.9753f, 5.2942f)
-                curveTo(5.1703f, 5.1002f, 5.4893f, 5.1012f, 5.6863f, 5.2972f)
-                lineTo(6.3883f, 5.9982f)
-                curveTo(6.3883f, 5.9992f, 6.3893f, 6.0002f, 6.3903f, 6.0012f)
-                lineTo(11.6933f, 11.3042f)
-                lineTo(13.1073f, 9.8902f)
-                lineTo(7.8033f, 4.5852f)
-                curveTo(7.6093f, 4.3902f, 7.6093f, 4.0742f, 7.8033f, 3.8802f)
-                curveTo(7.9983f, 3.6852f, 8.3163f, 3.6842f, 8.5113f, 3.8792f)
-                lineTo(15.1183f, 10.4872f)
-                curveTo(15.4353f, 10.8022f, 15.9053f, 10.8952f, 16.3173f, 10.7222f)
-                curveTo(16.7273f, 10.5512f, 16.9933f, 10.1522f, 16.9933f, 9.7072f)
-                lineTo(16.9923f, 6.5122f)
-                curveTo(16.9923f, 6.3792f, 17.0433f, 6.2552f, 17.1363f, 6.1612f)
-                curveTo(17.3233f, 5.9742f, 17.7603f, 6.0432f, 17.8653f, 6.1462f)
-                curveTo(17.9153f, 6.1972f, 18.0003f, 6.3072f, 18.0003f, 6.4732f)
-                lineTo(17.9953f, 14.2472f)
-                close()
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(15.7213f, 4.74823f)
+                    curveTo(15.2493f, 5.22023f, 14.9913f, 5.84823f, 14.9923f, 6.51523f)
+                    lineTo(14.9923f, 7.53223f)
+                    lineTo(9.92528f, 2.46523f)
+                    curveTo(8.95028f, 1.49023f, 7.36528f, 1.49023f, 6.39028f, 2.46523f)
+                    curveTo(6.16728f, 2.68723f, 6.00128f, 2.94423f, 5.88028f, 3.21723f)
+                    curveTo(5.07128f, 3.03423f, 4.18928f, 3.25123f, 3.56128f, 3.88023f)
+                    curveTo(3.08828f, 4.35123f, 2.82828f, 4.98023f, 2.83028f, 5.65023f)
+                    curveTo(2.83028f, 5.83823f, 2.85628f, 6.02123f, 2.89628f, 6.20023f)
+                    curveTo(2.62528f, 6.32123f, 2.36928f, 6.48623f, 2.14728f, 6.70823f)
+                    curveTo(1.17228f, 7.68323f, 1.17428f, 9.26923f, 2.15028f, 10.2472f)
+                    lineTo(2.53028f, 10.6272f)
+                    curveTo(2.39728f, 10.7162f, 2.27028f, 10.8182f, 2.15228f, 10.9352f)
+                    curveTo(1.67828f, 11.4102f, 1.41528f, 12.0402f, 1.41528f, 12.7102f)
+                    curveTo(1.41428f, 13.3812f, 1.67528f, 14.0122f, 2.14928f, 14.4872f)
+                    lineTo(7.22228f, 19.5612f)
+                    curveTo(7.93228f, 20.2712f, 8.76128f, 20.8332f, 9.68628f, 21.2292f)
+                    curveTo(10.5843f, 21.6142f, 11.5253f, 21.8022f, 12.4563f, 21.8022f)
+                    curveTo(14.2713f, 21.8022f, 16.0483f, 21.0912f, 17.3933f, 19.7452f)
+                    lineTo(17.9453f, 19.1942f)
+                    curveTo(19.2663f, 17.8732f, 19.9943f, 16.1172f, 19.9953f, 14.2492f)
+                    lineTo(20.0003f, 6.47523f)
+                    curveTo(20.0003f, 5.81623f, 19.7453f, 5.19823f, 19.2793f, 4.73223f)
+                    curveTo(18.3643f, 3.81623f, 16.6843f, 3.78423f, 15.7213f, 4.74823f)
+                    close()
+                    moveTo(17.9953f, 14.2472f)
+                    curveTo(17.9943f, 15.5822f, 17.4743f, 16.8372f, 16.5313f, 17.7802f)
+                    lineTo(15.9793f, 18.3312f)
+                    curveTo(14.5253f, 19.7852f, 12.3653f, 20.2012f, 10.4743f, 19.3922f)
+                    curveTo(9.78428f, 19.0962f, 9.16528f, 18.6772f, 8.63728f, 18.1472f)
+                    lineTo(3.56428f, 13.0742f)
+                    curveTo(3.46828f, 12.9772f, 3.41428f, 12.8492f, 3.41528f, 12.7132f)
+                    curveTo(3.41528f, 12.5762f, 3.46928f, 12.4482f, 3.56628f, 12.3502f)
+                    curveTo(3.75228f, 12.1642f, 4.05528f, 12.1632f, 4.24228f, 12.3502f)
+                    lineTo(6.74028f, 14.8372f)
+                    lineTo(7.45028f, 15.5472f)
+                    lineTo(8.86428f, 14.1332f)
+                    lineTo(3.56528f, 8.83323f)
+                    curveTo(3.36828f, 8.63623f, 3.36628f, 8.31723f, 3.56128f, 8.12223f)
+                    curveTo(3.68728f, 7.99623f, 3.83528f, 7.97623f, 3.91328f, 7.97623f)
+                    curveTo(4.04828f, 7.97723f, 4.17628f, 8.03023f, 4.27228f, 8.12623f)
+                    lineTo(9.57228f, 13.4262f)
+                    lineTo(10.9863f, 12.0122f)
+                    lineTo(4.97928f, 6.00523f)
+                    curveTo(4.84928f, 5.87523f, 4.83028f, 5.72523f, 4.83028f, 5.64623f)
+                    curveTo(4.83028f, 5.56923f, 4.84928f, 5.42123f, 4.97528f, 5.29423f)
+                    curveTo(5.17028f, 5.10023f, 5.48928f, 5.10123f, 5.68628f, 5.29723f)
+                    lineTo(6.38828f, 5.99823f)
+                    curveTo(6.38828f, 5.99923f, 6.38928f, 6.00023f, 6.39028f, 6.00123f)
+                    lineTo(11.6933f, 11.3042f)
+                    lineTo(13.1073f, 9.89023f)
+                    lineTo(7.80328f, 4.58523f)
+                    curveTo(7.60928f, 4.39023f, 7.60928f, 4.07423f, 7.80328f, 3.88023f)
+                    curveTo(7.99828f, 3.68523f, 8.31628f, 3.68423f, 8.51128f, 3.87923f)
+                    lineTo(15.1183f, 10.4872f)
+                    curveTo(15.4353f, 10.8022f, 15.9053f, 10.8952f, 16.3173f, 10.7222f)
+                    curveTo(16.7273f, 10.5512f, 16.9933f, 10.1522f, 16.9933f, 9.70723f)
+                    lineTo(16.9923f, 6.51223f)
+                    curveTo(16.9923f, 6.37923f, 17.0433f, 6.25523f, 17.1363f, 6.16123f)
+                    curveTo(17.3233f, 5.97423f, 17.7603f, 6.04323f, 17.8653f, 6.14623f)
+                    curveTo(17.9153f, 6.19723f, 18.0003f, 6.30723f, 18.0003f, 6.47323f)
+                    lineTo(17.9953f, 14.2472f)
+                    close()
+                }
+            }.build().also {
+                _handWave = it
             }
-        }.build().also {
-            _handWave = it
-        }
     }
+
 
 private var _handWave: ImageVector? = null
 
@@ -125,7 +128,7 @@ private var _handWave: ImageVector? = null
 private fun HandWaveIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.HandWave,
+            imageVector = BezierIcons.HandWave.imageVector,
             contentDescription = null,
     )
 }

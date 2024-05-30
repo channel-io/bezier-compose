@@ -9,77 +9,79 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ChatBubbleAltAdd: ImageVector
-    get() {
-        return io.channel.bezier.icon._chatBubbleAltAdd ?: ImageVector.Builder(
-                name = "ChatBubbleAltAdd",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0f, 3.0f)
-                curveTo(6.3689f, 3.0f, 1.5f, 6.8753f, 1.5f, 12.0f)
-                curveTo(1.5f, 14.8483f, 3.0311f, 17.3352f, 5.3352f, 18.9584f)
-                curveTo(5.0952f, 19.592f, 4.7899f, 20.1768f, 4.5203f, 20.6348f)
-                curveTo(4.2088f, 21.1639f, 4.254f, 21.7844f, 4.5536f, 22.2407f)
-                curveTo(4.8646f, 22.7145f, 5.4626f, 23.017f, 6.1243f, 22.8496f)
-                curveTo(7.1768f, 22.5834f, 8.7919f, 22.0248f, 10.2749f, 20.8793f)
-                curveTo(10.8368f, 20.9588f, 11.4131f, 21.0f, 12.0f, 21.0f)
-                curveTo(15.0904f, 21.0f, 17.9513f, 19.8328f, 19.9037f, 17.9324f)
-                curveTo(19.609f, 17.9769f, 19.3072f, 18.0f, 19.0f, 18.0f)
-                curveTo(18.2999f, 18.0f, 17.6279f, 17.8801f, 17.0032f, 17.6597f)
-                curveTo(15.6198f, 18.4959f, 13.9038f, 19.0f, 12.0f, 19.0f)
-                curveTo(11.3709f, 19.0f, 10.7588f, 18.9436f, 10.1704f, 18.837f)
-                lineTo(9.7031f, 18.7523f)
-                lineTo(9.3422f, 19.0609f)
-                curveTo(8.5352f, 19.751f, 7.6379f, 20.2159f, 6.8396f, 20.5258f)
-                curveTo(7.0843f, 20.0074f, 7.3186f, 19.4215f, 7.4887f, 18.804f)
-                lineTo(7.6912f, 18.0688f)
-                lineTo(7.0359f, 17.679f)
-                curveTo(4.8434f, 16.3746f, 3.5f, 14.2833f, 3.5f, 12.0f)
-                curveTo(3.5f, 8.2881f, 7.1377f, 5.0f, 12.0f, 5.0f)
-                curveTo(13.9038f, 5.0f, 15.6198f, 5.5041f, 17.0032f, 6.3403f)
-                curveTo(17.6279f, 6.1199f, 18.2999f, 6.0f, 19.0f, 6.0f)
-                curveTo(19.3072f, 6.0f, 19.609f, 6.0231f, 19.9037f, 6.0676f)
-                curveTo(17.9513f, 4.1672f, 15.0904f, 3.0f, 12.0f, 3.0f)
-                close()
-                moveTo(18.0f, 9.0f)
-                curveTo(18.0f, 8.4477f, 18.4477f, 8.0f, 19.0f, 8.0f)
-                curveTo(19.5523f, 8.0f, 20.0f, 8.4477f, 20.0f, 9.0f)
-                lineTo(20.0f, 11.0f)
-                lineTo(22.0f, 11.0f)
-                curveTo(22.5523f, 11.0f, 23.0f, 11.4477f, 23.0f, 12.0f)
-                curveTo(23.0f, 12.5523f, 22.5523f, 13.0f, 22.0f, 13.0f)
-                lineTo(20.0f, 13.0f)
-                lineTo(20.0f, 15.0f)
-                curveTo(20.0f, 15.5523f, 19.5523f, 16.0f, 19.0f, 16.0f)
-                curveTo(18.4477f, 16.0f, 18.0f, 15.5523f, 18.0f, 15.0f)
-                lineTo(18.0f, 13.0f)
-                lineTo(16.0f, 13.0f)
-                curveTo(15.4477f, 13.0f, 15.0f, 12.5523f, 15.0f, 12.0f)
-                curveTo(15.0f, 11.4477f, 15.4477f, 11.0f, 16.0f, 11.0f)
-                lineTo(18.0f, 11.0f)
-                lineTo(18.0f, 9.0f)
-                close()
+val BezierIcons.ChatBubbleAltAdd: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _chatBubbleAltAdd ?: ImageVector.Builder(
+                    name = "ChatBubbleAltAdd",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.0f, 3.0f)
+                    curveTo(6.36893f, 3.0f, 1.5f, 6.87529f, 1.5f, 12.0f)
+                    curveTo(1.5f, 14.8483f, 3.03108f, 17.3352f, 5.33525f, 18.9584f)
+                    curveTo(5.09523f, 19.592f, 4.78995f, 20.1768f, 4.52033f, 20.6348f)
+                    curveTo(4.20883f, 21.1639f, 4.25404f, 21.7844f, 4.55356f, 22.2407f)
+                    curveTo(4.86463f, 22.7145f, 5.46261f, 23.017f, 6.12433f, 22.8496f)
+                    curveTo(7.17683f, 22.5834f, 8.7919f, 22.0248f, 10.2749f, 20.8793f)
+                    curveTo(10.8368f, 20.9588f, 11.4131f, 21.0f, 12.0f, 21.0f)
+                    curveTo(15.0904f, 21.0f, 17.9513f, 19.8328f, 19.9037f, 17.9324f)
+                    curveTo(19.609f, 17.9769f, 19.3072f, 18.0f, 19.0f, 18.0f)
+                    curveTo(18.2999f, 18.0f, 17.6279f, 17.8801f, 17.0032f, 17.6597f)
+                    curveTo(15.6198f, 18.4959f, 13.9038f, 19.0f, 12.0f, 19.0f)
+                    curveTo(11.3709f, 19.0f, 10.7588f, 18.9436f, 10.1704f, 18.837f)
+                    lineTo(9.70311f, 18.7523f)
+                    lineTo(9.3422f, 19.0609f)
+                    curveTo(8.53521f, 19.751f, 7.63792f, 20.2159f, 6.83962f, 20.5258f)
+                    curveTo(7.08427f, 20.0074f, 7.31856f, 19.4215f, 7.48867f, 18.804f)
+                    lineTo(7.69118f, 18.0688f)
+                    lineTo(7.03588f, 17.679f)
+                    curveTo(4.84342f, 16.3746f, 3.5f, 14.2833f, 3.5f, 12.0f)
+                    curveTo(3.5f, 8.28815f, 7.13766f, 5.0f, 12.0f, 5.0f)
+                    curveTo(13.9038f, 5.0f, 15.6198f, 5.50407f, 17.0032f, 6.34027f)
+                    curveTo(17.6279f, 6.11989f, 18.2999f, 6.0f, 19.0f, 6.0f)
+                    curveTo(19.3072f, 6.0f, 19.609f, 6.02308f, 19.9037f, 6.06761f)
+                    curveTo(17.9513f, 4.16722f, 15.0904f, 3.0f, 12.0f, 3.0f)
+                    close()
+                    moveTo(18.0f, 9.0f)
+                    curveTo(18.0f, 8.44772f, 18.4477f, 8.0f, 19.0f, 8.0f)
+                    curveTo(19.5523f, 8.0f, 20.0f, 8.44772f, 20.0f, 9.0f)
+                    lineTo(20.0f, 11.0f)
+                    lineTo(22.0f, 11.0f)
+                    curveTo(22.5523f, 11.0f, 23.0f, 11.4477f, 23.0f, 12.0f)
+                    curveTo(23.0f, 12.5523f, 22.5523f, 13.0f, 22.0f, 13.0f)
+                    lineTo(20.0f, 13.0f)
+                    lineTo(20.0f, 15.0f)
+                    curveTo(20.0f, 15.5523f, 19.5523f, 16.0f, 19.0f, 16.0f)
+                    curveTo(18.4477f, 16.0f, 18.0f, 15.5523f, 18.0f, 15.0f)
+                    lineTo(18.0f, 13.0f)
+                    lineTo(16.0f, 13.0f)
+                    curveTo(15.4477f, 13.0f, 15.0f, 12.5523f, 15.0f, 12.0f)
+                    curveTo(15.0f, 11.4477f, 15.4477f, 11.0f, 16.0f, 11.0f)
+                    lineTo(18.0f, 11.0f)
+                    lineTo(18.0f, 9.0f)
+                    close()
+                }
+            }.build().also {
+                _chatBubbleAltAdd = it
             }
-        }.build().also {
-            io.channel.bezier.icon._chatBubbleAltAdd = it
-        }
     }
+
 
 private var _chatBubbleAltAdd: ImageVector? = null
 
@@ -88,7 +90,7 @@ private var _chatBubbleAltAdd: ImageVector? = null
 private fun ChatBubbleAltAddIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ChatBubbleAltAdd,
+            imageVector = BezierIcons.ChatBubbleAltAdd.imageVector,
             contentDescription = null,
     )
 }

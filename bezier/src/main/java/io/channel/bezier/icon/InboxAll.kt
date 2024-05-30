@@ -9,61 +9,63 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.InboxAll: ImageVector
-    get() {
-        return io.channel.bezier.icon._inboxAll ?: ImageVector.Builder(
-                name = "InboxAll",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(19.0002f, 7.5001f)
-                lineTo(14.5002f, 7.5001f)
-                curveTo(14.5002f, 8.8801f, 13.3812f, 10.0001f, 12.0002f, 10.0001f)
-                curveTo(10.6192f, 10.0001f, 9.5002f, 8.8801f, 9.5002f, 7.5001f)
-                lineTo(5.0002f, 7.5001f)
-                lineTo(5.0002f, 5.0001f)
-                lineTo(19.0002f, 5.0001f)
-                lineTo(19.0002f, 7.5001f)
-                close()
-                moveTo(19.0002f, 14.5001f)
-                lineTo(14.5002f, 14.5001f)
-                curveTo(14.5002f, 15.8801f, 13.3812f, 17.0001f, 12.0002f, 17.0001f)
-                curveTo(10.6192f, 17.0001f, 9.5002f, 15.8801f, 9.5002f, 14.5001f)
-                lineTo(5.0002f, 14.5001f)
-                lineTo(5.0002f, 12.0001f)
-                lineTo(19.0002f, 12.0001f)
-                lineTo(19.0002f, 14.5001f)
-                close()
-                moveTo(19.5002f, 3.0001f)
-                lineTo(4.5002f, 3.0001f)
-                curveTo(3.6732f, 3.0001f, 3.0002f, 3.6731f, 3.0002f, 4.5001f)
-                lineTo(3.0002f, 19.5001f)
-                curveTo(3.0002f, 20.3271f, 3.6732f, 21.0001f, 4.5002f, 21.0001f)
-                lineTo(19.5002f, 21.0001f)
-                curveTo(20.3272f, 21.0001f, 21.0002f, 20.3271f, 21.0002f, 19.5001f)
-                lineTo(21.0002f, 4.5001f)
-                curveTo(21.0002f, 3.6731f, 20.3272f, 3.0001f, 19.5002f, 3.0001f)
-                close()
+val BezierIcons.InboxAll: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _inboxAll ?: ImageVector.Builder(
+                    name = "InboxAll",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(19.0002f, 7.5001f)
+                    lineTo(14.5002f, 7.5001f)
+                    curveTo(14.5002f, 8.8801f, 13.3812f, 10.0001f, 12.0002f, 10.0001f)
+                    curveTo(10.6192f, 10.0001f, 9.50021f, 8.8801f, 9.50021f, 7.5001f)
+                    lineTo(5.00021f, 7.5001f)
+                    lineTo(5.00021f, 5.0001f)
+                    lineTo(19.0002f, 5.0001f)
+                    lineTo(19.0002f, 7.5001f)
+                    close()
+                    moveTo(19.0002f, 14.5001f)
+                    lineTo(14.5002f, 14.5001f)
+                    curveTo(14.5002f, 15.8801f, 13.3812f, 17.0001f, 12.0002f, 17.0001f)
+                    curveTo(10.6192f, 17.0001f, 9.50021f, 15.8801f, 9.50021f, 14.5001f)
+                    lineTo(5.00021f, 14.5001f)
+                    lineTo(5.00021f, 12.0001f)
+                    lineTo(19.0002f, 12.0001f)
+                    lineTo(19.0002f, 14.5001f)
+                    close()
+                    moveTo(19.5002f, 3.0001f)
+                    lineTo(4.50021f, 3.0001f)
+                    curveTo(3.67321f, 3.0001f, 3.00021f, 3.6731f, 3.00021f, 4.5001f)
+                    lineTo(3.00021f, 19.5001f)
+                    curveTo(3.00021f, 20.3271f, 3.67321f, 21.0001f, 4.50021f, 21.0001f)
+                    lineTo(19.5002f, 21.0001f)
+                    curveTo(20.3272f, 21.0001f, 21.0002f, 20.3271f, 21.0002f, 19.5001f)
+                    lineTo(21.0002f, 4.5001f)
+                    curveTo(21.0002f, 3.6731f, 20.3272f, 3.0001f, 19.5002f, 3.0001f)
+                    close()
+                }
+            }.build().also {
+                _inboxAll = it
             }
-        }.build().also {
-            io.channel.bezier.icon._inboxAll = it
-        }
     }
+
 
 private var _inboxAll: ImageVector? = null
 
@@ -72,7 +74,7 @@ private var _inboxAll: ImageVector? = null
 private fun InboxAllIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.InboxAll,
+            imageVector = BezierIcons.InboxAll.imageVector,
             contentDescription = null,
     )
 }

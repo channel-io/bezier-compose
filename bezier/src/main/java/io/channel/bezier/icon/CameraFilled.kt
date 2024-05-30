@@ -9,63 +9,65 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CameraFilled: ImageVector
-    get() {
-        return _cameraFilled ?: ImageVector.Builder(
-                name = "CameraFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(16.5826f, 4.471f)
-                curveTo(16.2212f, 3.8686f, 15.5701f, 3.5f, 14.8676f, 3.5f)
-                lineTo(9.1324f, 3.5f)
-                curveTo(8.4298f, 3.5f, 7.7788f, 3.8686f, 7.4174f, 4.471f)
-                lineTo(6.7913f, 5.5145f)
-                curveTo(6.6106f, 5.8157f, 6.2851f, 6.0f, 5.9338f, 6.0f)
-                lineTo(5.0f, 6.0f)
-                curveTo(3.3431f, 6.0f, 2.0f, 7.3432f, 2.0f, 9.0f)
-                lineTo(2.0f, 17.0f)
-                curveTo(2.0f, 18.6569f, 3.3431f, 20.0f, 5.0f, 20.0f)
-                lineTo(19.0f, 20.0f)
-                curveTo(20.6569f, 20.0f, 22.0f, 18.6569f, 22.0f, 17.0f)
-                lineTo(22.0f, 9.0f)
-                curveTo(22.0f, 7.3432f, 20.6569f, 6.0f, 19.0f, 6.0f)
-                lineTo(18.0662f, 6.0f)
-                curveTo(17.7149f, 6.0f, 17.3894f, 5.8157f, 17.2087f, 5.5145f)
-                lineTo(16.5826f, 4.471f)
-                close()
-                moveTo(12.0002f, 18.0f)
-                curveTo(8.9672f, 18.0f, 6.5002f, 15.532f, 6.5002f, 12.5f)
-                curveTo(6.5002f, 9.467f, 8.9672f, 7.0f, 12.0002f, 7.0f)
-                curveTo(15.0332f, 7.0f, 17.5002f, 9.467f, 17.5002f, 12.5f)
-                curveTo(17.5002f, 15.532f, 15.0332f, 18.0f, 12.0002f, 18.0f)
-                close()
-                moveTo(8.0002f, 12.5f)
-                curveTo(8.0002f, 10.291f, 9.7912f, 8.5f, 12.0002f, 8.5f)
-                curveTo(14.2092f, 8.5f, 16.0002f, 10.291f, 16.0002f, 12.5f)
-                curveTo(16.0002f, 14.709f, 14.2092f, 16.5f, 12.0002f, 16.5f)
-                curveTo(9.7912f, 16.5f, 8.0002f, 14.709f, 8.0002f, 12.5f)
-                close()
+val BezierIcons.CameraFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _cameraFilled ?: ImageVector.Builder(
+                    name = "CameraFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(16.5826f, 4.47101f)
+                    curveTo(16.2212f, 3.8686f, 15.5701f, 3.5f, 14.8676f, 3.5f)
+                    lineTo(9.13238f, 3.5f)
+                    curveTo(8.42985f, 3.5f, 7.77884f, 3.8686f, 7.41739f, 4.47101f)
+                    lineTo(6.7913f, 5.5145f)
+                    curveTo(6.61058f, 5.8157f, 6.28507f, 6.0f, 5.93381f, 6.0f)
+                    lineTo(5.0f, 6.0f)
+                    curveTo(3.34315f, 6.0f, 2.0f, 7.34315f, 2.0f, 9.0f)
+                    lineTo(2.0f, 17.0f)
+                    curveTo(2.0f, 18.6569f, 3.34315f, 20.0f, 5.0f, 20.0f)
+                    lineTo(19.0f, 20.0f)
+                    curveTo(20.6569f, 20.0f, 22.0f, 18.6569f, 22.0f, 17.0f)
+                    lineTo(22.0f, 9.0f)
+                    curveTo(22.0f, 7.34315f, 20.6569f, 6.0f, 19.0f, 6.0f)
+                    lineTo(18.0662f, 6.0f)
+                    curveTo(17.7149f, 6.0f, 17.3894f, 5.8157f, 17.2087f, 5.5145f)
+                    lineTo(16.5826f, 4.47101f)
+                    close()
+                    moveTo(12.0002f, 18.0f)
+                    curveTo(8.9672f, 18.0f, 6.5002f, 15.532f, 6.5002f, 12.5f)
+                    curveTo(6.5002f, 9.467f, 8.9672f, 7.0f, 12.0002f, 7.0f)
+                    curveTo(15.0332f, 7.0f, 17.5002f, 9.467f, 17.5002f, 12.5f)
+                    curveTo(17.5002f, 15.532f, 15.0332f, 18.0f, 12.0002f, 18.0f)
+                    close()
+                    moveTo(8.0002f, 12.5f)
+                    curveTo(8.0002f, 10.291f, 9.7912f, 8.5f, 12.0002f, 8.5f)
+                    curveTo(14.2092f, 8.5f, 16.0002f, 10.291f, 16.0002f, 12.5f)
+                    curveTo(16.0002f, 14.709f, 14.2092f, 16.5f, 12.0002f, 16.5f)
+                    curveTo(9.7912f, 16.5f, 8.0002f, 14.709f, 8.0002f, 12.5f)
+                    close()
+                }
+            }.build().also {
+                _cameraFilled = it
             }
-        }.build().also {
-            _cameraFilled = it
-        }
     }
+
 
 private var _cameraFilled: ImageVector? = null
 
@@ -74,7 +76,7 @@ private var _cameraFilled: ImageVector? = null
 private fun CameraFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CameraFilled,
+            imageVector = BezierIcons.CameraFilled.imageVector,
             contentDescription = null,
     )
 }

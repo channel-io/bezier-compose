@@ -9,48 +9,50 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ArrowLeftUp: ImageVector
-    get() {
-        return io.channel.bezier.icon._arrowLeftUp ?: ImageVector.Builder(
-                name = "ArrowLeftUp",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(20.0002f, 20.0001f)
-                curveTo(20.3906f, 19.6097f, 20.3906f, 18.9766f, 20.0002f, 18.5861f)
-                lineTo(7.4142f, 6.0001f)
-                lineTo(19.0002f, 6.0001f)
-                curveTo(19.5525f, 6.0001f, 20.0002f, 5.5524f, 20.0002f, 5.0001f)
-                curveTo(20.0002f, 4.4478f, 19.5525f, 4.0001f, 19.0002f, 4.0001f)
-                lineTo(5.5002f, 4.0001f)
-                curveTo(4.6732f, 4.0001f, 4.0002f, 4.6731f, 4.0002f, 5.5001f)
-                lineTo(4.0002f, 19.0001f)
-                curveTo(4.0002f, 19.5524f, 4.4479f, 20.0001f, 5.0002f, 20.0001f)
-                curveTo(5.5525f, 20.0001f, 6.0002f, 19.5524f, 6.0002f, 19.0001f)
-                lineTo(6.0002f, 7.4141f)
-                lineTo(18.5862f, 20.0001f)
-                curveTo(18.9766f, 20.3906f, 19.6097f, 20.3906f, 20.0002f, 20.0001f)
-                close()
+val BezierIcons.ArrowLeftUp: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _arrowLeftUp ?: ImageVector.Builder(
+                    name = "ArrowLeftUp",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(20.0002f, 20.0001f)
+                    curveTo(20.3906f, 19.6097f, 20.3906f, 18.9766f, 20.0002f, 18.5861f)
+                    lineTo(7.41418f, 6.00012f)
+                    lineTo(19.0002f, 6.00012f)
+                    curveTo(19.5525f, 6.00012f, 20.0002f, 5.55241f, 20.0002f, 5.00012f)
+                    curveTo(20.0002f, 4.44784f, 19.5525f, 4.00012f, 19.0002f, 4.00012f)
+                    lineTo(5.50018f, 4.00012f)
+                    curveTo(4.67318f, 4.00012f, 4.00018f, 4.67312f, 4.00018f, 5.50012f)
+                    lineTo(4.00018f, 19.0001f)
+                    curveTo(4.00018f, 19.5524f, 4.4479f, 20.0001f, 5.00018f, 20.0001f)
+                    curveTo(5.55247f, 20.0001f, 6.00018f, 19.5524f, 6.00018f, 19.0001f)
+                    lineTo(6.00018f, 7.41412f)
+                    lineTo(18.5862f, 20.0001f)
+                    curveTo(18.9766f, 20.3906f, 19.6097f, 20.3906f, 20.0002f, 20.0001f)
+                    close()
+                }
+            }.build().also {
+                _arrowLeftUp = it
             }
-        }.build().also {
-            io.channel.bezier.icon._arrowLeftUp = it
-        }
     }
+
 
 private var _arrowLeftUp: ImageVector? = null
 
@@ -59,7 +61,7 @@ private var _arrowLeftUp: ImageVector? = null
 private fun ArrowLeftUpIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ArrowLeftUp,
+            imageVector = BezierIcons.ArrowLeftUp.imageVector,
             contentDescription = null,
     )
 }

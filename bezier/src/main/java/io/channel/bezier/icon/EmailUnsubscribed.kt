@@ -9,96 +9,98 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.EmailUnsubscribed: ImageVector
-    get() {
-        return io.channel.bezier.icon._emailUnsubscribed ?: ImageVector.Builder(
-                name = "EmailUnsubscribed",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(2.0018f, 9.4391f)
-                curveTo(1.9996f, 9.4761f, 1.9994f, 9.5132f, 2.0013f, 9.55f)
-                curveTo(2.0002f, 9.8142f, 2.0002f, 10.0969f, 2.0002f, 10.4f)
-                lineTo(2.0002f, 13.6f)
-                curveTo(2.0002f, 15.8402f, 2.0002f, 16.9603f, 2.4362f, 17.816f)
-                curveTo(2.8197f, 18.5686f, 3.4316f, 19.1805f, 4.1842f, 19.564f)
-                curveTo(5.0399f, 20.0f, 6.16f, 20.0f, 8.4002f, 20.0f)
-                lineTo(13.0002f, 20.0f)
-                lineTo(13.0002f, 18.0f)
-                lineTo(8.4002f, 18.0f)
-                curveTo(7.2471f, 18.0f, 6.5026f, 17.9984f, 5.9359f, 17.9521f)
-                curveTo(5.3926f, 17.9078f, 5.1911f, 17.8324f, 5.0922f, 17.782f)
-                curveTo(4.7159f, 17.5903f, 4.4099f, 17.2843f, 4.2182f, 16.908f)
-                curveTo(4.1678f, 16.8091f, 4.0925f, 16.6077f, 4.0481f, 16.0643f)
-                curveTo(4.0018f, 15.4977f, 4.0002f, 14.7531f, 4.0002f, 13.6f)
-                lineTo(4.0002f, 11.118f)
-                lineTo(10.6586f, 14.4472f)
-                curveTo(11.5032f, 14.8695f, 12.4973f, 14.8695f, 13.3419f, 14.4472f)
-                lineTo(22.0002f, 10.1211f)
-                curveTo(22.0001f, 9.9217f, 21.9999f, 9.7316f, 21.9991f, 9.5502f)
-                curveTo(22.001f, 9.5133f, 22.0009f, 9.4761f, 21.9986f, 9.4389f)
-                curveTo(21.9898f, 7.82f, 21.9329f, 6.9075f, 21.5642f, 6.184f)
-                curveTo(21.1807f, 5.4314f, 20.5688f, 4.8195f, 19.8162f, 4.436f)
-                curveTo(18.9605f, 4.0f, 17.8404f, 4.0f, 15.6002f, 4.0f)
-                lineTo(8.4002f, 4.0f)
-                curveTo(6.16f, 4.0f, 5.0399f, 4.0f, 4.1842f, 4.436f)
-                curveTo(3.4316f, 4.8195f, 2.8197f, 5.4314f, 2.4362f, 6.184f)
-                curveTo(2.0675f, 6.9075f, 2.0106f, 7.8201f, 2.0018f, 9.4391f)
-                close()
-                moveTo(8.4002f, 6.0f)
-                lineTo(15.6002f, 6.0f)
-                curveTo(16.7533f, 6.0f, 17.4979f, 6.0016f, 18.0645f, 6.0479f)
-                curveTo(18.6079f, 6.0922f, 18.8093f, 6.1676f, 18.9082f, 6.218f)
-                curveTo(19.2845f, 6.4097f, 19.5905f, 6.7157f, 19.7822f, 7.092f)
-                curveTo(19.8326f, 7.1909f, 19.908f, 7.3924f, 19.9524f, 7.9357f)
-                curveTo(19.9743f, 8.2042f, 19.9862f, 8.5127f, 19.9926f, 8.8858f)
-                lineTo(12.4474f, 12.6584f)
-                curveTo(12.1659f, 12.7991f, 11.8345f, 12.7991f, 11.553f, 12.6584f)
-                lineTo(4.0078f, 8.8857f)
-                curveTo(4.0142f, 8.5127f, 4.0261f, 8.2042f, 4.0481f, 7.9357f)
-                curveTo(4.0925f, 7.3924f, 4.1678f, 7.1909f, 4.2182f, 7.092f)
-                curveTo(4.4099f, 6.7157f, 4.7159f, 6.4097f, 5.0922f, 6.218f)
-                curveTo(5.1911f, 6.1676f, 5.3926f, 6.0922f, 5.9359f, 6.0479f)
-                curveTo(6.5026f, 6.0016f, 7.2471f, 6.0f, 8.4002f, 6.0f)
-                close()
-                moveTo(19.5f, 22.0f)
-                curveTo(21.9853f, 22.0f, 24.0f, 19.9853f, 24.0f, 17.5f)
-                curveTo(24.0f, 15.0147f, 21.9853f, 13.0f, 19.5f, 13.0f)
-                curveTo(17.0147f, 13.0f, 15.0f, 15.0147f, 15.0f, 17.5f)
-                curveTo(15.0f, 19.9853f, 17.0147f, 22.0f, 19.5f, 22.0f)
-                close()
-                moveTo(19.5f, 20.4f)
-                curveTo(21.1016f, 20.4f, 22.4f, 19.1016f, 22.4f, 17.5f)
-                curveTo(22.4f, 16.99f, 22.2683f, 16.5107f, 22.0371f, 16.0943f)
-                lineTo(18.0943f, 20.0371f)
-                curveTo(18.5107f, 20.2683f, 18.99f, 20.4f, 19.5f, 20.4f)
-                close()
-                moveTo(20.9057f, 14.9629f)
-                lineTo(16.9629f, 18.9057f)
-                curveTo(16.7317f, 18.4893f, 16.6f, 18.01f, 16.6f, 17.5f)
-                curveTo(16.6f, 15.8984f, 17.8984f, 14.6f, 19.5f, 14.6f)
-                curveTo(20.01f, 14.6f, 20.4893f, 14.7317f, 20.9057f, 14.9629f)
-                close()
+val BezierIcons.EmailUnsubscribed: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _emailUnsubscribed ?: ImageVector.Builder(
+                    name = "EmailUnsubscribed",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(2.00182f, 9.43906f)
+                    curveTo(1.99957f, 9.47614f, 1.99942f, 9.51318f, 2.00129f, 9.55f)
+                    curveTo(2.00021f, 9.81424f, 2.00021f, 10.0969f, 2.00021f, 10.4f)
+                    lineTo(2.00021f, 13.6f)
+                    curveTo(2.00021f, 15.8402f, 2.00021f, 16.9603f, 2.43619f, 17.816f)
+                    curveTo(2.81968f, 18.5686f, 3.4316f, 19.1805f, 4.18425f, 19.564f)
+                    curveTo(5.0399f, 20.0f, 6.16f, 20.0f, 8.40021f, 20.0f)
+                    lineTo(13.0002f, 20.0f)
+                    lineTo(13.0002f, 18.0f)
+                    lineTo(8.40021f, 18.0f)
+                    curveTo(7.24711f, 18.0f, 6.50256f, 17.9984f, 5.93589f, 17.9521f)
+                    curveTo(5.39256f, 17.9078f, 5.19112f, 17.8324f, 5.09223f, 17.782f)
+                    curveTo(4.71591f, 17.5903f, 4.40995f, 17.2843f, 4.2182f, 16.908f)
+                    curveTo(4.16781f, 16.8091f, 4.09246f, 16.6077f, 4.04807f, 16.0643f)
+                    curveTo(4.00177f, 15.4977f, 4.00021f, 14.7531f, 4.00021f, 13.6f)
+                    lineTo(4.00021f, 11.118f)
+                    lineTo(10.6586f, 14.4472f)
+                    curveTo(11.5032f, 14.8695f, 12.4973f, 14.8695f, 13.3419f, 14.4472f)
+                    lineTo(22.0002f, 10.1211f)
+                    curveTo(22.0001f, 9.92167f, 21.9999f, 9.7316f, 21.9991f, 9.5502f)
+                    curveTo(22.001f, 9.51325f, 22.0009f, 9.47608f, 21.9986f, 9.43886f)
+                    curveTo(21.9898f, 7.82004f, 21.9329f, 6.90751f, 21.5642f, 6.18404f)
+                    curveTo(21.1807f, 5.43139f, 20.5688f, 4.81947f, 19.8162f, 4.43597f)
+                    curveTo(18.9605f, 4.0f, 17.8404f, 4.0f, 15.6002f, 4.0f)
+                    lineTo(8.40021f, 4.0f)
+                    curveTo(6.16f, 4.0f, 5.0399f, 4.0f, 4.18425f, 4.43597f)
+                    curveTo(3.4316f, 4.81947f, 2.81968f, 5.43139f, 2.43619f, 6.18404f)
+                    curveTo(2.06755f, 6.90754f, 2.01061f, 7.82012f, 2.00182f, 9.43906f)
+                    close()
+                    moveTo(8.40021f, 6.0f)
+                    lineTo(15.6002f, 6.0f)
+                    curveTo(16.7533f, 6.0f, 17.4979f, 6.00156f, 18.0645f, 6.04785f)
+                    curveTo(18.6079f, 6.09225f, 18.8093f, 6.1676f, 18.9082f, 6.21799f)
+                    curveTo(19.2845f, 6.40973f, 19.5905f, 6.71569f, 19.7822f, 7.09202f)
+                    curveTo(19.8326f, 7.19091f, 19.908f, 7.39235f, 19.9524f, 7.93567f)
+                    curveTo(19.9743f, 8.20423f, 19.9862f, 8.51274f, 19.9926f, 8.88576f)
+                    lineTo(12.4474f, 12.6584f)
+                    curveTo(12.1659f, 12.7991f, 11.8345f, 12.7991f, 11.553f, 12.6584f)
+                    lineTo(4.00779f, 8.88575f)
+                    curveTo(4.01423f, 8.51274f, 4.02613f, 8.20423f, 4.04807f, 7.93567f)
+                    curveTo(4.09246f, 7.39235f, 4.16781f, 7.19091f, 4.2182f, 7.09202f)
+                    curveTo(4.40995f, 6.71569f, 4.71591f, 6.40973f, 5.09223f, 6.21799f)
+                    curveTo(5.19112f, 6.1676f, 5.39256f, 6.09225f, 5.93589f, 6.04785f)
+                    curveTo(6.50256f, 6.00156f, 7.24711f, 6.0f, 8.40021f, 6.0f)
+                    close()
+                    moveTo(19.5f, 22.0f)
+                    curveTo(21.9853f, 22.0f, 24.0f, 19.9853f, 24.0f, 17.5f)
+                    curveTo(24.0f, 15.0147f, 21.9853f, 13.0f, 19.5f, 13.0f)
+                    curveTo(17.0147f, 13.0f, 15.0f, 15.0147f, 15.0f, 17.5f)
+                    curveTo(15.0f, 19.9853f, 17.0147f, 22.0f, 19.5f, 22.0f)
+                    close()
+                    moveTo(19.5f, 20.4f)
+                    curveTo(21.1016f, 20.4f, 22.4f, 19.1016f, 22.4f, 17.5f)
+                    curveTo(22.4f, 16.99f, 22.2683f, 16.5107f, 22.0371f, 16.0943f)
+                    lineTo(18.0943f, 20.0371f)
+                    curveTo(18.5107f, 20.2683f, 18.99f, 20.4f, 19.5f, 20.4f)
+                    close()
+                    moveTo(20.9057f, 14.9629f)
+                    lineTo(16.9629f, 18.9057f)
+                    curveTo(16.7317f, 18.4893f, 16.6f, 18.01f, 16.6f, 17.5f)
+                    curveTo(16.6f, 15.8984f, 17.8984f, 14.6f, 19.5f, 14.6f)
+                    curveTo(20.01f, 14.6f, 20.4893f, 14.7317f, 20.9057f, 14.9629f)
+                    close()
+                }
+            }.build().also {
+                _emailUnsubscribed = it
             }
-        }.build().also {
-            io.channel.bezier.icon._emailUnsubscribed = it
-        }
     }
+
 
 private var _emailUnsubscribed: ImageVector? = null
 
@@ -107,7 +109,7 @@ private var _emailUnsubscribed: ImageVector? = null
 private fun EmailUnsubscribedIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.EmailUnsubscribed,
+            imageVector = BezierIcons.EmailUnsubscribed.imageVector,
             contentDescription = null,
     )
 }

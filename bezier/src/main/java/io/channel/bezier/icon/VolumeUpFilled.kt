@@ -9,65 +9,67 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.VolumeUpFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._volumeUpFilled ?: ImageVector.Builder(
-                name = "VolumeUpFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(13.0138f, 1.9995f)
-                lineTo(14.0138f, 1.9995f)
-                curveTo(14.5658f, 1.9995f, 15.0138f, 2.4475f, 15.0138f, 2.9995f)
-                lineTo(15.0138f, 20.9995f)
-                curveTo(15.0138f, 21.5515f, 14.5658f, 21.9995f, 14.0138f, 21.9995f)
-                lineTo(13.0138f, 21.9995f)
-                curveTo(12.7488f, 21.9995f, 12.4938f, 21.8945f, 12.3068f, 21.7065f)
-                lineTo(7.5998f, 16.9995f)
-                lineTo(3.0138f, 16.9995f)
-                curveTo(2.4618f, 16.9995f, 2.0138f, 16.5515f, 2.0138f, 15.9995f)
-                lineTo(2.0138f, 7.9995f)
-                curveTo(2.0138f, 7.4475f, 2.4618f, 6.9995f, 3.0138f, 6.9995f)
-                lineTo(7.5998f, 6.9995f)
-                lineTo(12.3068f, 2.2925f)
-                curveTo(12.4938f, 2.1045f, 12.7488f, 1.9995f, 13.0138f, 1.9995f)
-                close()
-                moveTo(19.4069f, 6.4135f)
-                curveTo(19.7974f, 6.0231f, 20.4359f, 6.0202f, 20.7804f, 6.4517f)
-                curveTo(23.3617f, 9.6849f, 23.3617f, 14.3142f, 20.7804f, 17.5474f)
-                curveTo(20.4359f, 17.9789f, 19.7974f, 17.976f, 19.4069f, 17.5855f)
-                curveTo(19.0164f, 17.1951f, 19.0236f, 16.5656f, 19.3539f, 16.123f)
-                curveTo(21.1719f, 13.6866f, 21.1719f, 10.3124f, 19.3539f, 7.8761f)
-                curveTo(19.0236f, 7.4335f, 19.0164f, 6.804f, 19.4069f, 6.4135f)
-                close()
-                moveTo(16.9904f, 8.8301f)
-                curveTo(17.3809f, 8.4396f, 18.0235f, 8.4357f, 18.3369f, 8.8903f)
-                curveTo(19.6222f, 10.7552f, 19.6222f, 13.2447f, 18.3369f, 15.109f)
-                curveTo(18.0235f, 15.5636f, 17.3809f, 15.5596f, 16.9905f, 15.1691f)
-                curveTo(16.6f, 14.7786f, 16.6167f, 14.1491f, 16.8804f, 13.6639f)
-                curveTo(17.4424f, 12.6298f, 17.4424f, 11.3692f, 16.8803f, 10.3351f)
-                curveTo(16.6166f, 9.8499f, 16.5999f, 9.2205f, 16.9904f, 8.8301f)
-                close()
+val BezierIcons.VolumeUpFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _volumeUpFilled ?: ImageVector.Builder(
+                    name = "VolumeUpFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(13.0138f, 1.99951f)
+                    lineTo(14.0138f, 1.99951f)
+                    curveTo(14.5658f, 1.99951f, 15.0138f, 2.44751f, 15.0138f, 2.99951f)
+                    lineTo(15.0138f, 20.9995f)
+                    curveTo(15.0138f, 21.5515f, 14.5658f, 21.9995f, 14.0138f, 21.9995f)
+                    lineTo(13.0138f, 21.9995f)
+                    curveTo(12.7488f, 21.9995f, 12.4938f, 21.8945f, 12.3068f, 21.7065f)
+                    lineTo(7.59979f, 16.9995f)
+                    lineTo(3.01379f, 16.9995f)
+                    curveTo(2.46179f, 16.9995f, 2.01379f, 16.5515f, 2.01379f, 15.9995f)
+                    lineTo(2.01379f, 7.99951f)
+                    curveTo(2.01379f, 7.44751f, 2.46179f, 6.99951f, 3.01379f, 6.99951f)
+                    lineTo(7.59979f, 6.99951f)
+                    lineTo(12.3068f, 2.29251f)
+                    curveTo(12.4938f, 2.10451f, 12.7488f, 1.99951f, 13.0138f, 1.99951f)
+                    close()
+                    moveTo(19.4069f, 6.41354f)
+                    curveTo(19.7974f, 6.02308f, 20.4359f, 6.02017f, 20.7804f, 6.45171f)
+                    curveTo(23.3617f, 9.68489f, 23.3617f, 14.3142f, 20.7804f, 17.5474f)
+                    curveTo(20.4359f, 17.9789f, 19.7974f, 17.976f, 19.4069f, 17.5855f)
+                    curveTo(19.0164f, 17.1951f, 19.0236f, 16.5656f, 19.3539f, 16.123f)
+                    curveTo(21.1719f, 13.6866f, 21.1719f, 10.3124f, 19.3539f, 7.87609f)
+                    curveTo(19.0236f, 7.43352f, 19.0164f, 6.80401f, 19.4069f, 6.41354f)
+                    close()
+                    moveTo(16.9904f, 8.83005f)
+                    curveTo(17.3809f, 8.43958f, 18.0235f, 8.43567f, 18.3369f, 8.89034f)
+                    curveTo(19.6222f, 10.7552f, 19.6222f, 13.2447f, 18.3369f, 15.109f)
+                    curveTo(18.0235f, 15.5636f, 17.3809f, 15.5596f, 16.9905f, 15.1691f)
+                    curveTo(16.6f, 14.7786f, 16.6167f, 14.1491f, 16.8804f, 13.6639f)
+                    curveTo(17.4424f, 12.6298f, 17.4424f, 11.3692f, 16.8803f, 10.3351f)
+                    curveTo(16.6166f, 9.84993f, 16.5999f, 9.22051f, 16.9904f, 8.83005f)
+                    close()
+                }
+            }.build().also {
+                _volumeUpFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._volumeUpFilled = it
-        }
     }
+
 
 private var _volumeUpFilled: ImageVector? = null
 
@@ -76,7 +78,7 @@ private var _volumeUpFilled: ImageVector? = null
 private fun VolumeUpFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.VolumeUpFilled,
+            imageVector = BezierIcons.VolumeUpFilled.imageVector,
             contentDescription = null,
     )
 }

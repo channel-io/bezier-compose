@@ -15,33 +15,37 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.VerticalBarBold: ImageVector
-    get() {
-        return io.channel.bezier.icon._verticalBarBold ?: ImageVector.Builder(
-                name = "VerticalBarBold",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(10.5f, 5.5f)
-                curveTo(10.5f, 4.6716f, 11.1716f, 4.0f, 12.0f, 4.0f)
-                curveTo(12.8284f, 4.0f, 13.5f, 4.6716f, 13.5f, 5.5f)
-                lineTo(13.5f, 18.5f)
-                curveTo(13.5f, 19.3284f, 12.8284f, 20.0f, 12.0f, 20.0f)
-                curveTo(11.1716f, 20.0f, 10.5f, 19.3284f, 10.5f, 18.5f)
-                lineTo(10.5f, 5.5f)
-                close()
+val BezierIcons.VerticalBarBold: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _verticalBarBold ?: ImageVector.Builder(
+                    name = "VerticalBarBold",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(10.5f, 5.5f)
+                    curveTo(10.5f, 4.67157f, 11.1716f, 4.0f, 12.0f, 4.0f)
+                    curveTo(12.8284f, 4.0f, 13.5f, 4.67157f, 13.5f, 5.5f)
+                    lineTo(13.5f, 18.5f)
+                    curveTo(13.5f, 19.3284f, 12.8284f, 20.0f, 12.0f, 20.0f)
+                    curveTo(11.1716f, 20.0f, 10.5f, 19.3284f, 10.5f, 18.5f)
+                    lineTo(10.5f, 5.5f)
+                    close()
+                }
+            }.build().also {
+                _verticalBarBold = it
             }
-        }.build().also {
-            io.channel.bezier.icon._verticalBarBold = it
-        }
     }
+
 
 private var _verticalBarBold: ImageVector? = null
 
@@ -50,7 +54,7 @@ private var _verticalBarBold: ImageVector? = null
 private fun VerticalBarBoldIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.VerticalBarBold,
+            imageVector = BezierIcons.VerticalBarBold.imageVector,
             contentDescription = null,
     )
 }

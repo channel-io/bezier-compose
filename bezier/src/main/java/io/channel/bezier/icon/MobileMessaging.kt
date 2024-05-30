@@ -9,75 +9,77 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.MobileMessaging: ImageVector
-    get() {
-        return _mobileMessaging ?: ImageVector.Builder(
-                name = "MobileMessaging",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(16.25f, 13.1871f)
-                curveTo(19.7018f, 13.1871f, 22.5f, 10.7886f, 22.5f, 7.8299f)
-                curveTo(22.5f, 4.8713f, 19.7018f, 2.4728f, 16.25f, 2.4728f)
-                curveTo(12.7982f, 2.4728f, 10.0f, 4.8713f, 10.0f, 7.8299f)
-                curveTo(10.0f, 9.6229f, 11.0276f, 11.2101f, 12.6055f, 12.1825f)
-                curveTo(12.3941f, 12.8727f, 12.053f, 13.4993f, 11.8032f, 13.9048f)
-                curveTo(11.689f, 14.0901f, 11.8347f, 14.3263f, 12.047f, 14.2783f)
-                curveTo(12.6879f, 14.1332f, 13.7753f, 13.7925f, 14.7462f, 13.031f)
-                curveTo(15.2279f, 13.133f, 15.7316f, 13.1871f, 16.25f, 13.1871f)
-                close()
-                moveTo(16.2503f, 8.7228f)
-                curveTo(15.7595f, 8.7228f, 15.3571f, 8.3211f, 15.3571f, 7.8296f)
-                curveTo(15.3571f, 7.3388f, 15.7595f, 6.9371f, 16.2503f, 6.9371f)
-                curveTo(16.7418f, 6.9371f, 17.1435f, 7.3388f, 17.1435f, 7.8296f)
-                curveTo(17.1435f, 8.3211f, 16.7418f, 8.7228f, 16.2503f, 8.7228f)
-                close()
-                moveTo(13.5718f, 8.7228f)
-                curveTo(13.0809f, 8.7228f, 12.6786f, 8.3211f, 12.6786f, 7.8296f)
-                curveTo(12.6786f, 7.3388f, 13.0809f, 6.9371f, 13.5718f, 6.9371f)
-                curveTo(14.0633f, 6.9371f, 14.4649f, 7.3388f, 14.4649f, 7.8296f)
-                curveTo(14.4649f, 8.3211f, 14.0633f, 8.7228f, 13.5718f, 8.7228f)
-                close()
-                moveTo(18.0357f, 7.8296f)
-                curveTo(18.0357f, 8.3211f, 18.438f, 8.7228f, 18.9289f, 8.7228f)
-                curveTo(19.4204f, 8.7228f, 19.8221f, 8.3211f, 19.8221f, 7.8296f)
-                curveTo(19.8221f, 7.3388f, 19.4204f, 6.9371f, 18.9289f, 6.9371f)
-                curveTo(18.438f, 6.9371f, 18.0357f, 7.3388f, 18.0357f, 7.8296f)
-                close()
-                moveTo(5.761f, 18.239f)
-                curveTo(1.4451f, 13.9231f, 1.4451f, 10.1467f, 2.7938f, 8.7979f)
-                curveTo(3.603f, 7.9887f, 4.7861f, 7.7691f, 5.4913f, 8.2584f)
-                curveTo(6.1386f, 8.69f, 7.1097f, 9.9081f, 7.1097f, 10.9559f)
-                curveTo(7.1097f, 11.5878f, 6.6435f, 12.1312f, 6.2593f, 12.5791f)
-                curveTo(5.9875f, 12.8959f, 5.7567f, 13.1649f, 5.761f, 13.3836f)
-                curveTo(5.7715f, 13.9114f, 6.3519f, 15.2846f, 7.5336f, 16.4664f)
-                curveTo(8.7154f, 17.6481f, 10.0886f, 18.2285f, 10.6164f, 18.239f)
-                curveTo(10.8351f, 18.2433f, 11.1041f, 18.0125f, 11.4209f, 17.7407f)
-                curveTo(11.8688f, 17.3565f, 12.4122f, 16.8903f, 13.0441f, 16.8903f)
-                curveTo(14.0919f, 16.8903f, 15.31f, 17.8614f, 15.7416f, 18.5087f)
-                curveTo(16.2309f, 19.2138f, 16.0113f, 20.3969f, 15.2021f, 21.2062f)
-                curveTo(13.8534f, 22.5549f, 10.0769f, 22.5549f, 5.761f, 18.239f)
-                close()
+val BezierIcons.MobileMessaging: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _mobileMessaging ?: ImageVector.Builder(
+                    name = "MobileMessaging",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(16.25f, 13.1871f)
+                    curveTo(19.7018f, 13.1871f, 22.5f, 10.7886f, 22.5f, 7.82995f)
+                    curveTo(22.5f, 4.87128f, 19.7018f, 2.47281f, 16.25f, 2.47281f)
+                    curveTo(12.7982f, 2.47281f, 10.0f, 4.87128f, 10.0f, 7.82995f)
+                    curveTo(10.0f, 9.6229f, 11.0276f, 11.2101f, 12.6055f, 12.1825f)
+                    curveTo(12.3941f, 12.8727f, 12.053f, 13.4993f, 11.8032f, 13.9048f)
+                    curveTo(11.689f, 14.0901f, 11.8347f, 14.3263f, 12.047f, 14.2783f)
+                    curveTo(12.6879f, 14.1332f, 13.7753f, 13.7925f, 14.7462f, 13.031f)
+                    curveTo(15.2279f, 13.133f, 15.7316f, 13.1871f, 16.25f, 13.1871f)
+                    close()
+                    moveTo(16.2503f, 8.72281f)
+                    curveTo(15.7595f, 8.72281f, 15.3571f, 8.32114f, 15.3571f, 7.82962f)
+                    curveTo(15.3571f, 7.33876f, 15.7595f, 6.93709f, 16.2503f, 6.93709f)
+                    curveTo(16.7418f, 6.93709f, 17.1435f, 7.33876f, 17.1435f, 7.82962f)
+                    curveTo(17.1435f, 8.32114f, 16.7418f, 8.72281f, 16.2503f, 8.72281f)
+                    close()
+                    moveTo(13.5718f, 8.72281f)
+                    curveTo(13.0809f, 8.72281f, 12.6786f, 8.32114f, 12.6786f, 7.82962f)
+                    curveTo(12.6786f, 7.33876f, 13.0809f, 6.93709f, 13.5718f, 6.93709f)
+                    curveTo(14.0633f, 6.93709f, 14.4649f, 7.33876f, 14.4649f, 7.82962f)
+                    curveTo(14.4649f, 8.32114f, 14.0633f, 8.72281f, 13.5718f, 8.72281f)
+                    close()
+                    moveTo(18.0357f, 7.82962f)
+                    curveTo(18.0357f, 8.32114f, 18.438f, 8.72281f, 18.9289f, 8.72281f)
+                    curveTo(19.4204f, 8.72281f, 19.8221f, 8.32114f, 19.8221f, 7.82962f)
+                    curveTo(19.8221f, 7.33876f, 19.4204f, 6.93709f, 18.9289f, 6.93709f)
+                    curveTo(18.438f, 6.93709f, 18.0357f, 7.33876f, 18.0357f, 7.82962f)
+                    close()
+                    moveTo(5.76101f, 18.239f)
+                    curveTo(1.44509f, 13.9231f, 1.44509f, 10.1467f, 2.79382f, 8.79794f)
+                    curveTo(3.60305f, 7.9887f, 4.78615f, 7.76913f, 5.49126f, 8.25844f)
+                    curveTo(6.13865f, 8.69004f, 7.10973f, 9.9081f, 7.10973f, 10.9559f)
+                    curveTo(7.10973f, 11.5878f, 6.64352f, 12.1312f, 6.25929f, 12.5791f)
+                    curveTo(5.98747f, 12.8959f, 5.75668f, 13.1649f, 5.76101f, 13.3836f)
+                    curveTo(5.77146f, 13.9114f, 6.35187f, 15.2846f, 7.53361f, 16.4664f)
+                    curveTo(8.71535f, 17.6481f, 10.0886f, 18.2285f, 10.6164f, 18.239f)
+                    curveTo(10.8351f, 18.2433f, 11.1041f, 18.0125f, 11.4209f, 17.7407f)
+                    curveTo(11.8688f, 17.3565f, 12.4122f, 16.8903f, 13.0441f, 16.8903f)
+                    curveTo(14.0919f, 16.8903f, 15.31f, 17.8614f, 15.7416f, 18.5087f)
+                    curveTo(16.2309f, 19.2138f, 16.0113f, 20.3969f, 15.2021f, 21.2062f)
+                    curveTo(13.8534f, 22.5549f, 10.0769f, 22.5549f, 5.76101f, 18.239f)
+                    close()
+                }
+            }.build().also {
+                _mobileMessaging = it
             }
-        }.build().also {
-            _mobileMessaging = it
-        }
     }
+
 
 private var _mobileMessaging: ImageVector? = null
 
@@ -86,7 +88,7 @@ private var _mobileMessaging: ImageVector? = null
 private fun MobileMessagingIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.MobileMessaging,
+            imageVector = BezierIcons.MobileMessaging.imageVector,
             contentDescription = null,
     )
 }

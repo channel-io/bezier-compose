@@ -15,47 +15,51 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Google: ImageVector
-    get() {
-        return _google ?: ImageVector.Builder(
-                name = "Google",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(11.9996f, 10.1981f)
-                lineTo(11.9996f, 14.0487f)
-                lineTo(17.4009f, 14.0487f)
-                curveTo(17.1767f, 15.2907f, 16.4566f, 16.3893f, 15.402f, 17.0874f)
-                lineTo(15.402f, 17.09f)
-                curveTo(14.5059f, 17.6984f, 13.3499f, 18.0427f, 12.0033f, 18.0427f)
-                curveTo(9.3946f, 18.0427f, 7.1826f, 16.2827f, 6.389f, 13.9165f)
-                lineTo(6.3853f, 13.9165f)
-                curveTo(5.9664f, 12.6745f, 5.9664f, 11.3297f, 6.3853f, 10.0878f)
-                curveTo(7.1753f, 7.7179f, 9.3909f, 5.9579f, 11.9996f, 5.9579f)
-                curveTo(13.4253f, 5.9359f, 14.8031f, 6.4723f, 15.8356f, 7.457f)
-                lineTo(18.6905f, 4.6021f)
-                curveTo(16.8828f, 2.9046f, 14.4835f, 1.9713f, 11.9996f, 2.0007f)
-                curveTo(8.2188f, 2.0007f, 4.7612f, 4.1318f, 3.0637f, 7.5121f)
-                curveTo(1.6454f, 10.3377f, 1.6454f, 13.6666f, 3.0637f, 16.4921f)
-                curveTo(4.7612f, 19.8688f, 8.2188f, 21.9999f, 11.9996f, 21.9999f)
-                curveTo(14.6966f, 21.9999f, 16.971f, 21.1144f, 18.6281f, 19.5859f)
-                lineTo(18.6262f, 19.5844f)
-                curveTo(20.5174f, 17.8428f, 21.6043f, 15.2715f, 21.6043f, 12.23f)
-                curveTo(21.6043f, 11.5502f, 21.5492f, 10.8668f, 21.4316f, 10.1981f)
-                lineTo(11.9996f, 10.1981f)
-                close()
+val BezierIcons.Google: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _google ?: ImageVector.Builder(
+                    name = "Google",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(11.9996f, 10.1981f)
+                    lineTo(11.9996f, 14.0487f)
+                    lineTo(17.4009f, 14.0487f)
+                    curveTo(17.1767f, 15.2907f, 16.4566f, 16.3893f, 15.402f, 17.0874f)
+                    lineTo(15.402f, 17.09f)
+                    curveTo(14.5059f, 17.6984f, 13.3499f, 18.0427f, 12.0033f, 18.0427f)
+                    curveTo(9.39455f, 18.0427f, 7.18261f, 16.2827f, 6.38896f, 13.9165f)
+                    lineTo(6.38529f, 13.9165f)
+                    curveTo(5.96642f, 12.6745f, 5.96642f, 11.3297f, 6.38529f, 10.0878f)
+                    curveTo(7.17526f, 7.7179f, 9.39087f, 5.9579f, 11.9996f, 5.9579f)
+                    curveTo(13.4253f, 5.93586f, 14.8031f, 6.47231f, 15.8356f, 7.45702f)
+                    lineTo(18.6905f, 4.60208f)
+                    curveTo(16.8828f, 2.90455f, 14.4835f, 1.97128f, 11.9996f, 2.00067f)
+                    curveTo(8.21877f, 2.00067f, 4.76124f, 4.13177f, 3.06371f, 7.51214f)
+                    curveTo(1.64543f, 10.3377f, 1.64543f, 13.6666f, 3.06371f, 16.4921f)
+                    curveTo(4.76124f, 19.8688f, 8.21877f, 21.9999f, 11.9996f, 21.9999f)
+                    curveTo(14.6966f, 21.9999f, 16.971f, 21.1144f, 18.6281f, 19.5859f)
+                    lineTo(18.6262f, 19.5844f)
+                    curveTo(20.5174f, 17.8428f, 21.6043f, 15.2715f, 21.6043f, 12.23f)
+                    curveTo(21.6043f, 11.5502f, 21.5492f, 10.8668f, 21.4316f, 10.1981f)
+                    lineTo(11.9996f, 10.1981f)
+                    close()
+                }
+            }.build().also {
+                _google = it
             }
-        }.build().also {
-            _google = it
-        }
     }
+
 
 private var _google: ImageVector? = null
 
@@ -64,7 +68,7 @@ private var _google: ImageVector? = null
 private fun GoogleIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Google,
+            imageVector = BezierIcons.Google.imageVector,
             contentDescription = null,
     )
 }

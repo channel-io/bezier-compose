@@ -9,61 +9,63 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Baseball: ImageVector
-    get() {
-        return io.channel.bezier.icon._baseball ?: ImageVector.Builder(
-                name = "Baseball",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0005f, 1.9997f)
-                curveTo(6.4776f, 1.9997f, 2.0005f, 6.4769f, 2.0005f, 11.9997f)
-                curveTo(2.0005f, 17.5225f, 6.4776f, 21.9997f, 12.0005f, 21.9997f)
-                curveTo(17.5233f, 21.9997f, 22.0005f, 17.5225f, 22.0005f, 11.9997f)
-                curveTo(22.0005f, 6.4769f, 17.5233f, 1.9997f, 12.0005f, 1.9997f)
-                close()
-                moveTo(12.0005f, 3.9997f)
-                curveTo(10.2317f, 3.9997f, 8.5969f, 4.5738f, 7.2724f, 5.5457f)
-                curveTo(8.9548f, 7.181f, 10.0f, 9.4685f, 10.0f, 12.0f)
-                curveTo(10.0f, 14.5314f, 8.9549f, 16.8186f, 7.2727f, 18.4539f)
-                curveTo(8.5972f, 19.4257f, 10.2318f, 19.9997f, 12.0005f, 19.9997f)
-                curveTo(13.7689f, 19.9997f, 15.4033f, 19.4259f, 16.7277f, 18.4543f)
-                curveTo(15.0452f, 16.819f, 14.0f, 14.5316f, 14.0f, 12.0f)
-                curveTo(14.0f, 9.4682f, 15.0454f, 7.1807f, 16.728f, 5.5453f)
-                curveTo(15.4036f, 4.5736f, 13.7691f, 3.9997f, 12.0005f, 3.9997f)
-                close()
-                moveTo(18.1824f, 6.9215f)
-                curveTo(16.8382f, 8.1971f, 16.0f, 10.0006f, 16.0f, 12.0f)
-                curveTo(16.0f, 13.9992f, 16.8381f, 15.8027f, 18.1821f, 17.0782f)
-                curveTo(19.3183f, 15.6968f, 20.0005f, 13.9279f, 20.0005f, 11.9997f)
-                curveTo(20.0005f, 10.0716f, 19.3184f, 8.3028f, 18.1824f, 6.9215f)
-                close()
-                moveTo(4.0005f, 11.9997f)
-                curveTo(4.0005f, 10.0719f, 4.6824f, 8.3033f, 5.8182f, 6.9221f)
-                curveTo(7.162f, 8.1976f, 8.0f, 10.0009f, 8.0f, 12.0f)
-                curveTo(8.0f, 13.9989f, 7.1621f, 15.8022f, 5.8184f, 17.0777f)
-                curveTo(4.6825f, 15.6964f, 4.0005f, 13.9277f, 4.0005f, 11.9997f)
-                close()
+val BezierIcons.Baseball: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _baseball ?: ImageVector.Builder(
+                    name = "Baseball",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.0005f, 1.99969f)
+                    curveTo(6.47764f, 1.99969f, 2.00049f, 6.47685f, 2.00049f, 11.9997f)
+                    curveTo(2.00049f, 17.5225f, 6.47764f, 21.9997f, 12.0005f, 21.9997f)
+                    curveTo(17.5233f, 21.9997f, 22.0005f, 17.5225f, 22.0005f, 11.9997f)
+                    curveTo(22.0005f, 6.47685f, 17.5233f, 1.99969f, 12.0005f, 1.99969f)
+                    close()
+                    moveTo(12.0005f, 3.99969f)
+                    curveTo(10.2317f, 3.99969f, 8.5969f, 4.57376f, 7.27237f, 5.54574f)
+                    curveTo(8.95478f, 7.18104f, 9.99999f, 9.46846f, 9.99999f, 12.0f)
+                    curveTo(9.99999f, 14.5314f, 8.95492f, 16.8186f, 7.27272f, 18.4539f)
+                    curveTo(8.59718f, 19.4257f, 10.2318f, 19.9997f, 12.0005f, 19.9997f)
+                    curveTo(13.7689f, 19.9997f, 15.4033f, 19.4259f, 16.7277f, 18.4543f)
+                    curveTo(15.0452f, 16.819f, 14.0f, 14.5316f, 14.0f, 12.0f)
+                    curveTo(14.0f, 9.46824f, 15.0454f, 7.18065f, 16.728f, 5.54533f)
+                    curveTo(15.4036f, 4.5736f, 13.7691f, 3.99969f, 12.0005f, 3.99969f)
+                    close()
+                    moveTo(18.1824f, 6.92152f)
+                    curveTo(16.8382f, 8.19708f, 16.0f, 10.0006f, 16.0f, 12.0f)
+                    curveTo(16.0f, 13.9992f, 16.8381f, 15.8027f, 18.1821f, 17.0782f)
+                    curveTo(19.3183f, 15.6968f, 20.0005f, 13.9279f, 20.0005f, 11.9997f)
+                    curveTo(20.0005f, 10.0716f, 19.3184f, 8.30285f, 18.1824f, 6.92152f)
+                    close()
+                    moveTo(4.00049f, 11.9997f)
+                    curveTo(4.00049f, 10.0719f, 4.68239f, 8.30331f, 5.81815f, 6.92206f)
+                    curveTo(7.16201f, 8.19758f, 7.99999f, 10.0009f, 7.99999f, 12.0f)
+                    curveTo(7.99999f, 13.9989f, 7.16212f, 15.8022f, 5.81843f, 17.0777f)
+                    curveTo(4.6825f, 15.6964f, 4.00049f, 13.9277f, 4.00049f, 11.9997f)
+                    close()
+                }
+            }.build().also {
+                _baseball = it
             }
-        }.build().also {
-            io.channel.bezier.icon._baseball = it
-        }
     }
+
 
 private var _baseball: ImageVector? = null
 
@@ -72,7 +74,7 @@ private var _baseball: ImageVector? = null
 private fun BaseballIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Baseball,
+            imageVector = BezierIcons.Baseball.imageVector,
             contentDescription = null,
     )
 }

@@ -9,67 +9,69 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ChatPush: ImageVector
-    get() {
-        return io.channel.bezier.icon._chatPush ?: ImageVector.Builder(
-                name = "ChatPush",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(18.5f, 9.0f)
-                curveTo(20.433f, 9.0f, 22.0f, 7.433f, 22.0f, 5.5f)
-                curveTo(22.0f, 3.567f, 20.433f, 2.0f, 18.5f, 2.0f)
-                curveTo(16.567f, 2.0f, 15.0f, 3.567f, 15.0f, 5.5f)
-                curveTo(15.0f, 7.433f, 16.567f, 9.0f, 18.5f, 9.0f)
-                close()
-                moveTo(19.0603f, 15.7482f)
-                curveTo(19.8716f, 14.2294f, 20.1632f, 12.5337f, 19.9143f, 10.8164f)
-                curveTo(20.5997f, 10.6346f, 21.2326f, 10.3237f, 21.7854f, 9.9113f)
-                lineTo(21.7953f, 9.9602f)
-                curveTo(22.2653f, 12.2942f, 21.9303f, 14.6212f, 20.8253f, 16.6892f)
-                curveTo(20.7773f, 16.7782f, 20.7063f, 16.9562f, 20.7653f, 17.1322f)
-                lineTo(21.6333f, 19.7352f)
-                curveTo(21.8133f, 20.2782f, 21.6753f, 20.8662f, 21.2703f, 21.2702f)
-                curveTo(20.8663f, 21.6752f, 20.2773f, 21.8112f, 19.7353f, 21.6332f)
-                lineTo(17.1303f, 20.7652f)
-                curveTo(16.9563f, 20.7062f, 16.7793f, 20.7762f, 16.6903f, 20.8242f)
-                curveTo(15.2343f, 21.6022f, 13.6363f, 22.0002f, 12.0003f, 22.0002f)
-                curveTo(11.5143f, 22.0002f, 11.0253f, 21.9652f, 10.5363f, 21.8942f)
-                curveTo(6.2663f, 21.2782f, 2.8103f, 17.8842f, 2.1323f, 13.6432f)
-                curveTo(1.6134f, 10.3972f, 2.6353f, 7.2192f, 4.9363f, 4.9222f)
-                curveTo(7.2373f, 2.6252f, 10.4153f, 1.6112f, 13.6643f, 2.1352f)
-                curveTo(13.807f, 2.1583f, 13.9487f, 2.1844f, 14.0894f, 2.2136f)
-                curveTo(13.6769f, 2.7664f, 13.3658f, 3.3993f, 13.1838f, 4.0848f)
-                curveTo(12.7866f, 4.0282f, 12.3905f, 4.0002f, 11.9983f, 4.0002f)
-                curveTo(9.8773f, 4.0002f, 7.8713f, 4.8182f, 6.3493f, 6.3382f)
-                curveTo(4.5083f, 8.1752f, 3.6903f, 10.7232f, 4.1063f, 13.3272f)
-                curveTo(4.6483f, 16.7132f, 7.4093f, 19.4222f, 10.8223f, 19.9152f)
-                curveTo(12.5333f, 20.1622f, 14.2383f, 19.8662f, 15.7483f, 19.0612f)
-                curveTo(16.3903f, 18.7172f, 17.1053f, 18.6482f, 17.7633f, 18.8672f)
-                lineTo(19.4193f, 19.4192f)
-                lineTo(18.8673f, 17.7642f)
-                curveTo(18.6493f, 17.1082f, 18.7173f, 16.3922f, 19.0603f, 15.7482f)
-                close()
+val BezierIcons.ChatPush: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _chatPush ?: ImageVector.Builder(
+                    name = "ChatPush",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(18.5f, 9.0f)
+                    curveTo(20.433f, 9.0f, 22.0f, 7.433f, 22.0f, 5.5f)
+                    curveTo(22.0f, 3.567f, 20.433f, 2.0f, 18.5f, 2.0f)
+                    curveTo(16.567f, 2.0f, 15.0f, 3.567f, 15.0f, 5.5f)
+                    curveTo(15.0f, 7.433f, 16.567f, 9.0f, 18.5f, 9.0f)
+                    close()
+                    moveTo(19.0603f, 15.7482f)
+                    curveTo(19.8716f, 14.2294f, 20.1632f, 12.5337f, 19.9143f, 10.8164f)
+                    curveTo(20.5997f, 10.6346f, 21.2326f, 10.3237f, 21.7854f, 9.91134f)
+                    lineTo(21.7953f, 9.96018f)
+                    curveTo(22.2653f, 12.2942f, 21.9303f, 14.6212f, 20.8253f, 16.6892f)
+                    curveTo(20.7773f, 16.7782f, 20.7063f, 16.9562f, 20.7653f, 17.1322f)
+                    lineTo(21.6333f, 19.7352f)
+                    curveTo(21.8133f, 20.2782f, 21.6753f, 20.8662f, 21.2703f, 21.2702f)
+                    curveTo(20.8663f, 21.6752f, 20.2773f, 21.8112f, 19.7353f, 21.6332f)
+                    lineTo(17.1303f, 20.7652f)
+                    curveTo(16.9563f, 20.7062f, 16.7793f, 20.7762f, 16.6903f, 20.8242f)
+                    curveTo(15.2343f, 21.6022f, 13.6363f, 22.0002f, 12.0003f, 22.0002f)
+                    curveTo(11.5143f, 22.0002f, 11.0253f, 21.9652f, 10.5363f, 21.8942f)
+                    curveTo(6.26635f, 21.2782f, 2.81035f, 17.8842f, 2.13235f, 13.6432f)
+                    curveTo(1.61335f, 10.3972f, 2.63535f, 7.21918f, 4.93635f, 4.92218f)
+                    curveTo(7.23735f, 2.62518f, 10.4153f, 1.61118f, 13.6643f, 2.13518f)
+                    curveTo(13.807f, 2.15828f, 13.9487f, 2.18445f, 14.0894f, 2.21364f)
+                    curveTo(13.6769f, 2.76639f, 13.3658f, 3.39929f, 13.1838f, 4.08475f)
+                    curveTo(12.7866f, 4.02815f, 12.3905f, 4.00018f, 11.9983f, 4.00018f)
+                    curveTo(9.87734f, 4.00018f, 7.87134f, 4.81818f, 6.34934f, 6.33818f)
+                    curveTo(4.50834f, 8.17518f, 3.69033f, 10.7232f, 4.10633f, 13.3272f)
+                    curveTo(4.64833f, 16.7132f, 7.40933f, 19.4222f, 10.8223f, 19.9152f)
+                    curveTo(12.5333f, 20.1622f, 14.2383f, 19.8662f, 15.7483f, 19.0612f)
+                    curveTo(16.3903f, 18.7172f, 17.1053f, 18.6482f, 17.7633f, 18.8672f)
+                    lineTo(19.4193f, 19.4192f)
+                    lineTo(18.8673f, 17.7642f)
+                    curveTo(18.6493f, 17.1082f, 18.7173f, 16.3922f, 19.0603f, 15.7482f)
+                    close()
+                }
+            }.build().also {
+                _chatPush = it
             }
-        }.build().also {
-            io.channel.bezier.icon._chatPush = it
-        }
     }
+
 
 private var _chatPush: ImageVector? = null
 
@@ -78,7 +80,7 @@ private var _chatPush: ImageVector? = null
 private fun ChatPushIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ChatPush,
+            imageVector = BezierIcons.ChatPush.imageVector,
             contentDescription = null,
     )
 }

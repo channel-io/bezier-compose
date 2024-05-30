@@ -9,54 +9,56 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ArrowHookLeftDown: ImageVector
-    get() {
-        return io.channel.bezier.icon._arrowHookLeftDown ?: ImageVector.Builder(
-                name = "ArrowHookLeftDown",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(14.5002f, 3.0265f)
-                lineTo(11.0002f, 3.0265f)
-                curveTo(10.4479f, 3.0265f, 10.0002f, 3.4742f, 10.0002f, 4.0265f)
-                curveTo(10.0002f, 4.5788f, 10.4479f, 5.0265f, 11.0002f, 5.0265f)
-                lineTo(14.5002f, 5.0265f)
-                curveTo(16.9812f, 5.0265f, 19.0002f, 7.0455f, 19.0002f, 9.5265f)
-                curveTo(19.0002f, 12.0075f, 16.9812f, 14.0265f, 14.5002f, 14.0265f)
-                lineTo(5.1812f, 14.0265f)
-                lineTo(8.4733f, 10.7335f)
-                curveTo(8.8637f, 10.343f, 8.8637f, 9.71f, 8.4732f, 9.3195f)
-                curveTo(8.0827f, 8.929f, 7.4496f, 8.929f, 7.0591f, 9.3195f)
-                lineTo(2.4392f, 13.9395f)
-                curveTo(1.8542f, 14.5245f, 1.8542f, 15.4755f, 2.4392f, 16.0605f)
-                lineTo(7.0592f, 20.6805f)
-                curveTo(7.4496f, 21.071f, 8.0827f, 21.071f, 8.4732f, 20.6805f)
-                curveTo(8.8636f, 20.29f, 8.8636f, 19.657f, 8.4732f, 19.2665f)
-                lineTo(5.2332f, 16.0265f)
-                lineTo(14.5002f, 16.0265f)
-                curveTo(18.0842f, 16.0265f, 21.0002f, 13.1105f, 21.0002f, 9.5265f)
-                curveTo(21.0002f, 5.9425f, 18.0842f, 3.0265f, 14.5002f, 3.0265f)
-                close()
+val BezierIcons.ArrowHookLeftDown: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _arrowHookLeftDown ?: ImageVector.Builder(
+                    name = "ArrowHookLeftDown",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(14.5002f, 3.02649f)
+                    lineTo(11.0002f, 3.02649f)
+                    curveTo(10.4479f, 3.02649f, 10.0002f, 3.4742f, 10.0002f, 4.02649f)
+                    curveTo(10.0002f, 4.57877f, 10.4479f, 5.02649f, 11.0002f, 5.02649f)
+                    lineTo(14.5002f, 5.02649f)
+                    curveTo(16.9812f, 5.02649f, 19.0002f, 7.04549f, 19.0002f, 9.52649f)
+                    curveTo(19.0002f, 12.0075f, 16.9812f, 14.0265f, 14.5002f, 14.0265f)
+                    lineTo(5.18118f, 14.0265f)
+                    lineTo(8.47331f, 10.7335f)
+                    curveTo(8.86372f, 10.343f, 8.86368f, 9.70999f, 8.47322f, 9.31953f)
+                    curveTo(8.08273f, 8.92904f, 7.44962f, 8.92904f, 7.05913f, 9.31953f)
+                    lineTo(2.43918f, 13.9395f)
+                    curveTo(1.85418f, 14.5245f, 1.85418f, 15.4755f, 2.43918f, 16.0605f)
+                    lineTo(7.05918f, 20.6805f)
+                    curveTo(7.44964f, 21.071f, 8.08271f, 21.071f, 8.47318f, 20.6805f)
+                    curveTo(8.86364f, 20.29f, 8.86364f, 19.657f, 8.47318f, 19.2665f)
+                    lineTo(5.23318f, 16.0265f)
+                    lineTo(14.5002f, 16.0265f)
+                    curveTo(18.0842f, 16.0265f, 21.0002f, 13.1105f, 21.0002f, 9.52649f)
+                    curveTo(21.0002f, 5.94249f, 18.0842f, 3.02649f, 14.5002f, 3.02649f)
+                    close()
+                }
+            }.build().also {
+                _arrowHookLeftDown = it
             }
-        }.build().also {
-            io.channel.bezier.icon._arrowHookLeftDown = it
-        }
     }
+
 
 private var _arrowHookLeftDown: ImageVector? = null
 
@@ -65,7 +67,7 @@ private var _arrowHookLeftDown: ImageVector? = null
 private fun ArrowHookLeftDownIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ArrowHookLeftDown,
+            imageVector = BezierIcons.ArrowHookLeftDown.imageVector,
             contentDescription = null,
     )
 }

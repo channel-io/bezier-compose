@@ -9,69 +9,74 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ChatCheck: ImageVector
-    get() {
-        return io.channel.bezier.icon._chatCheck ?: ImageVector.Builder(
-                name = "ChatCheck",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(18.8674f, 17.7642f)
-                curveTo(18.6494f, 17.1082f, 18.7174f, 16.3922f, 19.0604f, 15.7482f)
-                curveTo(19.9444f, 14.0932f, 20.2114f, 12.2282f, 19.8344f, 10.3542f)
-                curveTo(19.1874f, 7.1432f, 16.5804f, 4.6332f, 13.3444f, 4.1092f)
-                curveTo(12.8934f, 4.0362f, 12.4434f, 4.0002f, 11.9984f, 4.0002f)
-                curveTo(9.8774f, 4.0002f, 7.8714f, 4.8182f, 6.3494f, 6.3382f)
-                curveTo(4.5084f, 8.1752f, 3.6904f, 10.7232f, 4.1064f, 13.3272f)
-                curveTo(4.6484f, 16.7132f, 7.4094f, 19.4222f, 10.8224f, 19.9152f)
-                curveTo(12.5334f, 20.1622f, 14.2384f, 19.8662f, 15.7484f, 19.0612f)
-                curveTo(16.3904f, 18.7172f, 17.1054f, 18.6482f, 17.7634f, 18.8672f)
-                lineTo(19.4194f, 19.4192f)
-                lineTo(18.8674f, 17.7642f)
-                close()
-                moveTo(20.8254f, 16.6892f)
-                curveTo(20.7774f, 16.7782f, 20.7064f, 16.9562f, 20.7654f, 17.1322f)
-                lineTo(21.6334f, 19.7352f)
-                curveTo(21.8134f, 20.2782f, 21.6754f, 20.8662f, 21.2704f, 21.2702f)
-                curveTo(20.8664f, 21.6752f, 20.2774f, 21.8112f, 19.7354f, 21.6332f)
-                lineTo(17.1304f, 20.7652f)
-                curveTo(16.9564f, 20.7062f, 16.7794f, 20.7762f, 16.6904f, 20.8242f)
-                curveTo(15.2344f, 21.6022f, 13.6364f, 22.0002f, 12.0004f, 22.0002f)
-                curveTo(11.5144f, 22.0002f, 11.0254f, 21.9652f, 10.5364f, 21.8942f)
-                curveTo(6.2664f, 21.2782f, 2.8104f, 17.8842f, 2.1324f, 13.6432f)
-                curveTo(1.6134f, 10.3972f, 2.6354f, 7.2192f, 4.9364f, 4.9222f)
-                curveTo(7.2374f, 2.6252f, 10.4154f, 1.6112f, 13.6644f, 2.1352f)
-                curveTo(17.7174f, 2.7912f, 20.9854f, 5.9352f, 21.7954f, 9.9602f)
-                curveTo(22.2654f, 12.2942f, 21.9304f, 14.6212f, 20.8254f, 16.6892f)
-                close()
-                moveTo(7.3625f, 10.978f)
-                lineTo(10.4035f, 13.898f)
-                lineTo(16.5805f, 8.094f)
-                lineTo(17.9495f, 9.551f)
-                lineTo(10.3885f, 16.657f)
-                lineTo(5.9775f, 12.421f)
-                lineTo(7.3625f, 10.978f)
-                close()
+val BezierIcons.ChatCheck: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _chatCheck ?: ImageVector.Builder(
+                    name = "ChatCheck",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(18.8674f, 17.7642f)
+                    curveTo(18.6494f, 17.1082f, 18.7174f, 16.3922f, 19.0604f, 15.7482f)
+                    curveTo(19.9444f, 14.0932f, 20.2114f, 12.2282f, 19.8344f, 10.3542f)
+                    curveTo(19.1874f, 7.14318f, 16.5804f, 4.63318f, 13.3444f, 4.10918f)
+                    curveTo(12.8934f, 4.03618f, 12.4434f, 4.00018f, 11.9984f, 4.00018f)
+                    curveTo(9.87737f, 4.00018f, 7.87137f, 4.81818f, 6.34937f, 6.33818f)
+                    curveTo(4.50837f, 8.17518f, 3.69037f, 10.7232f, 4.10637f, 13.3272f)
+                    curveTo(4.64837f, 16.7132f, 7.40937f, 19.4222f, 10.8224f, 19.9152f)
+                    curveTo(12.5334f, 20.1622f, 14.2384f, 19.8662f, 15.7484f, 19.0612f)
+                    curveTo(16.3904f, 18.7172f, 17.1054f, 18.6482f, 17.7634f, 18.8672f)
+                    lineTo(19.4194f, 19.4192f)
+                    lineTo(18.8674f, 17.7642f)
+                    close()
+                    moveTo(20.8254f, 16.6892f)
+                    curveTo(20.7774f, 16.7782f, 20.7064f, 16.9562f, 20.7654f, 17.1322f)
+                    lineTo(21.6334f, 19.7352f)
+                    curveTo(21.8134f, 20.2782f, 21.6754f, 20.8662f, 21.2704f, 21.2702f)
+                    curveTo(20.8664f, 21.6752f, 20.2774f, 21.8112f, 19.7354f, 21.6332f)
+                    lineTo(17.1304f, 20.7652f)
+                    curveTo(16.9564f, 20.7062f, 16.7794f, 20.7762f, 16.6904f, 20.8242f)
+                    curveTo(15.2344f, 21.6022f, 13.6364f, 22.0002f, 12.0004f, 22.0002f)
+                    curveTo(11.5144f, 22.0002f, 11.0254f, 21.9652f, 10.5364f, 21.8942f)
+                    curveTo(6.26638f, 21.2782f, 2.81038f, 17.8842f, 2.13238f, 13.6432f)
+                    curveTo(1.61338f, 10.3972f, 2.63538f, 7.21918f, 4.93638f, 4.92218f)
+                    curveTo(7.23738f, 2.62518f, 10.4154f, 1.61118f, 13.6644f, 2.13518f)
+                    curveTo(17.7174f, 2.79118f, 20.9854f, 5.93518f, 21.7954f, 9.96018f)
+                    curveTo(22.2654f, 12.2942f, 21.9304f, 14.6212f, 20.8254f, 16.6892f)
+                    close()
+                    moveTo(8.08404f, 11.6708f)
+                    lineTo(10.4035f, 13.898f)
+                    lineTo(15.852f, 8.77854f)
+                    curveTo(16.2543f, 8.40048f, 16.887f, 8.42018f, 17.2651f, 8.82254f)
+                    curveTo(17.6431f, 9.22487f, 17.6234f, 9.85746f, 17.2211f, 10.2355f)
+                    lineTo(11.1002f, 15.9881f)
+                    curveTo(10.7014f, 16.3629f, 10.0788f, 16.3596f, 9.68406f, 15.9805f)
+                    lineTo(6.69865f, 13.1135f)
+                    curveTo(6.30034f, 12.731f, 6.28745f, 12.0981f, 6.66984f, 11.6997f)
+                    curveTo(7.05237f, 11.3011f, 7.68557f, 11.2882f, 8.08404f, 11.6708f)
+                    close()
+                }
+            }.build().also {
+                _chatCheck = it
             }
-        }.build().also {
-            io.channel.bezier.icon._chatCheck = it
-        }
     }
+
 
 private var _chatCheck: ImageVector? = null
 
@@ -80,7 +85,7 @@ private var _chatCheck: ImageVector? = null
 private fun ChatCheckIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ChatCheck,
+            imageVector = BezierIcons.ChatCheck.imageVector,
             contentDescription = null,
     )
 }

@@ -9,109 +9,112 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Instagram: ImageVector
-    get() {
-        return io.channel.bezier.icon._instagram ?: ImageVector.Builder(
-                name = "Instagram",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(7.25f, 12.0f)
-                curveTo(7.25f, 9.3766f, 9.3766f, 7.25f, 12.0f, 7.25f)
-                curveTo(14.6234f, 7.25f, 16.75f, 9.3766f, 16.75f, 12.0f)
-                curveTo(16.75f, 14.6234f, 14.6234f, 16.75f, 12.0f, 16.75f)
-                curveTo(9.3766f, 16.75f, 7.25f, 14.6234f, 7.25f, 12.0f)
-                close()
-                moveTo(12.0f, 9.25f)
-                curveTo(10.4812f, 9.25f, 9.25f, 10.4812f, 9.25f, 12.0f)
-                curveTo(9.25f, 13.5188f, 10.4812f, 14.75f, 12.0f, 14.75f)
-                curveTo(13.5188f, 14.75f, 14.75f, 13.5188f, 14.75f, 12.0f)
-                curveTo(14.75f, 10.4812f, 13.5188f, 9.25f, 12.0f, 9.25f)
-                close()
-                moveTo(20.528f, 6.1048f)
-                curveTo(20.75f, 6.6768f, 20.902f, 7.3308f, 20.946f, 8.2888f)
-                curveTo(20.99f, 9.2488f, 21.0f, 9.5558f, 21.0f, 11.9998f)
-                curveTo(21.0f, 14.4448f, 20.99f, 14.7508f, 20.946f, 15.7108f)
-                curveTo(20.902f, 16.6688f, 20.75f, 17.3238f, 20.528f, 17.8958f)
-                curveTo(20.298f, 18.4878f, 19.99f, 18.9898f, 19.49f, 19.4898f)
-                curveTo(18.989f, 19.9898f, 18.487f, 20.2978f, 17.895f, 20.5278f)
-                curveTo(17.323f, 20.7498f, 16.669f, 20.9028f, 15.711f, 20.9468f)
-                curveTo(14.751f, 20.9898f, 14.444f, 20.9998f, 12.0f, 20.9998f)
-                curveTo(9.556f, 20.9998f, 9.249f, 20.9898f, 8.289f, 20.9468f)
-                curveTo(7.331f, 20.9028f, 6.677f, 20.7498f, 6.105f, 20.5278f)
-                curveTo(5.513f, 20.2978f, 5.011f, 19.9898f, 4.511f, 19.4898f)
-                curveTo(4.011f, 18.9898f, 3.702f, 18.4878f, 3.472f, 17.8958f)
-                curveTo(3.25f, 17.3238f, 3.098f, 16.6688f, 3.054f, 15.7108f)
-                curveTo(3.011f, 14.7508f, 3.0f, 14.4448f, 3.0f, 11.9998f)
-                curveTo(3.0f, 9.5558f, 3.011f, 9.2488f, 3.054f, 8.2888f)
-                curveTo(3.098f, 7.3308f, 3.25f, 6.6768f, 3.472f, 6.1048f)
-                curveTo(3.702f, 5.5128f, 4.011f, 5.0108f, 4.511f, 4.5108f)
-                curveTo(5.011f, 4.0098f, 5.513f, 3.7018f, 6.105f, 3.4728f)
-                curveTo(6.677f, 3.2498f, 7.331f, 3.0978f, 8.289f, 3.0538f)
-                curveTo(9.249f, 3.0098f, 9.556f, 2.9998f, 12.0f, 2.9998f)
-                curveTo(14.444f, 2.9998f, 14.751f, 3.0098f, 15.711f, 3.0538f)
-                curveTo(16.669f, 3.0978f, 17.323f, 3.2498f, 17.895f, 3.4728f)
-                curveTo(18.487f, 3.7018f, 18.989f, 4.0098f, 19.49f, 4.5108f)
-                curveTo(19.99f, 5.0108f, 20.298f, 5.5128f, 20.528f, 6.1048f)
-                close()
-                moveTo(18.6556f, 17.0362f)
-                curveTo(18.7723f, 16.7354f, 18.9118f, 16.2839f, 18.9497f, 15.4509f)
-                curveTo(18.9905f, 14.5506f, 19.0f, 14.2812f, 19.0f, 12.0005f)
-                curveTo(19.0f, 9.7207f, 18.9905f, 9.4513f, 18.9497f, 8.551f)
-                curveTo(18.9118f, 7.718f, 18.7723f, 7.2655f, 18.6556f, 6.9657f)
-                curveTo(18.501f, 6.5663f, 18.316f, 6.2817f, 18.0171f, 5.9838f)
-                curveTo(17.7183f, 5.684f, 17.4337f, 5.5f, 17.0352f, 5.3444f)
-                curveTo(16.7345f, 5.2277f, 16.282f, 5.0882f, 15.45f, 5.0503f)
-                curveTo(14.5496f, 5.0095f, 14.2793f, 5.0f, 11.9995f, 5.0f)
-                curveTo(9.7198f, 5.0f, 9.4494f, 5.0095f, 8.5491f, 5.0503f)
-                curveTo(7.7171f, 5.0882f, 7.2646f, 5.2277f, 6.9638f, 5.3444f)
-                curveTo(6.5654f, 5.5f, 6.2807f, 5.684f, 5.9829f, 5.9838f)
-                curveTo(5.684f, 6.2817f, 5.4981f, 6.5663f, 5.3434f, 6.9657f)
-                curveTo(5.2267f, 7.2655f, 5.0873f, 7.718f, 5.0493f, 8.551f)
-                curveTo(5.0085f, 9.4513f, 5.0f, 9.7207f, 5.0f, 12.0005f)
-                curveTo(5.0f, 14.2812f, 5.0085f, 14.5506f, 5.0493f, 15.4509f)
-                curveTo(5.0873f, 16.2839f, 5.2267f, 16.7354f, 5.3434f, 17.0362f)
-                curveTo(5.4981f, 17.4346f, 5.684f, 17.7193f, 5.9829f, 18.0181f)
-                curveTo(6.2807f, 18.3169f, 6.5654f, 18.5019f, 6.9638f, 18.6566f)
-                curveTo(7.2646f, 18.7742f, 7.7171f, 18.9127f, 8.5491f, 18.9507f)
-                curveTo(9.4494f, 18.9915f, 9.7198f, 19.0f, 11.9995f, 19.0f)
-                curveTo(14.2802f, 19.0f, 14.5496f, 18.9915f, 15.45f, 18.9507f)
-                curveTo(16.282f, 18.9127f, 16.7345f, 18.7742f, 17.0352f, 18.6566f)
-                curveTo(17.4337f, 18.5019f, 17.7183f, 18.3169f, 18.0171f, 18.0181f)
-                curveTo(18.316f, 17.7193f, 18.501f, 17.4346f, 18.6556f, 17.0362f)
-                close()
-            }
+val BezierIcons.Instagram: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _instagram ?: ImageVector.Builder(
+                    name = "Instagram",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(7.25f, 12.0f)
+                    curveTo(7.25f, 9.37665f, 9.37665f, 7.25f, 12.0f, 7.25f)
+                    curveTo(14.6234f, 7.25f, 16.75f, 9.37665f, 16.75f, 12.0f)
+                    curveTo(16.75f, 14.6234f, 14.6234f, 16.75f, 12.0f, 16.75f)
+                    curveTo(9.37665f, 16.75f, 7.25f, 14.6234f, 7.25f, 12.0f)
+                    close()
+                    moveTo(12.0f, 9.25f)
+                    curveTo(10.4812f, 9.25f, 9.25f, 10.4812f, 9.25f, 12.0f)
+                    curveTo(9.25f, 13.5188f, 10.4812f, 14.75f, 12.0f, 14.75f)
+                    curveTo(13.5188f, 14.75f, 14.75f, 13.5188f, 14.75f, 12.0f)
+                    curveTo(14.75f, 10.4812f, 13.5188f, 9.25f, 12.0f, 9.25f)
+                    close()
+                    moveTo(20.528f, 6.10476f)
+                    curveTo(20.75f, 6.67676f, 20.902f, 7.33076f, 20.946f, 8.28876f)
+                    curveTo(20.99f, 9.24876f, 21.0f, 9.55576f, 21.0f, 11.9998f)
+                    curveTo(21.0f, 14.4448f, 20.99f, 14.7508f, 20.946f, 15.7108f)
+                    curveTo(20.902f, 16.6688f, 20.75f, 17.3238f, 20.528f, 17.8958f)
+                    curveTo(20.298f, 18.4878f, 19.99f, 18.9898f, 19.49f, 19.4898f)
+                    curveTo(18.989f, 19.9898f, 18.487f, 20.2978f, 17.895f, 20.5278f)
+                    curveTo(17.323f, 20.7498f, 16.669f, 20.9028f, 15.711f, 20.9468f)
+                    curveTo(14.751f, 20.9898f, 14.444f, 20.9998f, 12.0f, 20.9998f)
+                    curveTo(9.556f, 20.9998f, 9.249f, 20.9898f, 8.289f, 20.9468f)
+                    curveTo(7.331f, 20.9028f, 6.677f, 20.7498f, 6.105f, 20.5278f)
+                    curveTo(5.513f, 20.2978f, 5.011f, 19.9898f, 4.511f, 19.4898f)
+                    curveTo(4.011f, 18.9898f, 3.702f, 18.4878f, 3.472f, 17.8958f)
+                    curveTo(3.25f, 17.3238f, 3.098f, 16.6688f, 3.054f, 15.7108f)
+                    curveTo(3.011f, 14.7508f, 3.0f, 14.4448f, 3.0f, 11.9998f)
+                    curveTo(3.0f, 9.55576f, 3.011f, 9.24876f, 3.054f, 8.28876f)
+                    curveTo(3.098f, 7.33076f, 3.25f, 6.67676f, 3.472f, 6.10476f)
+                    curveTo(3.702f, 5.51276f, 4.011f, 5.01076f, 4.511f, 4.51076f)
+                    curveTo(5.011f, 4.00976f, 5.513f, 3.70176f, 6.105f, 3.47276f)
+                    curveTo(6.677f, 3.24976f, 7.331f, 3.09776f, 8.289f, 3.05376f)
+                    curveTo(9.249f, 3.00976f, 9.556f, 2.99976f, 12.0f, 2.99976f)
+                    curveTo(14.444f, 2.99976f, 14.751f, 3.00976f, 15.711f, 3.05376f)
+                    curveTo(16.669f, 3.09776f, 17.323f, 3.24976f, 17.895f, 3.47276f)
+                    curveTo(18.487f, 3.70176f, 18.989f, 4.00976f, 19.49f, 4.51076f)
+                    curveTo(19.99f, 5.01076f, 20.298f, 5.51276f, 20.528f, 6.10476f)
+                    close()
+                    moveTo(18.6556f, 17.0362f)
+                    curveTo(18.7723f, 16.7354f, 18.9118f, 16.2839f, 18.9497f, 15.4509f)
+                    curveTo(18.9905f, 14.5506f, 19.0f, 14.2812f, 19.0f, 12.0005f)
+                    curveTo(19.0f, 9.72074f, 18.9905f, 9.45131f, 18.9497f, 8.55099f)
+                    curveTo(18.9118f, 7.71803f, 18.7723f, 7.2655f, 18.6556f, 6.96571f)
+                    curveTo(18.501f, 6.56631f, 18.316f, 6.2817f, 18.0171f, 5.9838f)
+                    curveTo(17.7183f, 5.68401f, 17.4337f, 5.49997f, 17.0352f, 5.34438f)
+                    curveTo(16.7345f, 5.22769f, 16.282f, 5.08823f, 15.45f, 5.05028f)
+                    curveTo(14.5496f, 5.00949f, 14.2793f, 5.0f, 11.9995f, 5.0f)
+                    curveTo(9.71979f, 5.0f, 9.44941f, 5.00949f, 8.5491f, 5.05028f)
+                    curveTo(7.71708f, 5.08823f, 7.26455f, 5.22769f, 6.96381f, 5.34438f)
+                    curveTo(6.56536f, 5.49997f, 6.28075f, 5.68401f, 5.98286f, 5.9838f)
+                    curveTo(5.68401f, 6.2817f, 5.49807f, 6.56631f, 5.34343f, 6.96571f)
+                    curveTo(5.22674f, 7.2655f, 5.08728f, 7.71803f, 5.04933f, 8.55099f)
+                    curveTo(5.00854f, 9.45131f, 5.0f, 9.72074f, 5.0f, 12.0005f)
+                    curveTo(5.0f, 14.2812f, 5.00854f, 14.5506f, 5.04933f, 15.4509f)
+                    curveTo(5.08728f, 16.2839f, 5.22674f, 16.7354f, 5.34343f, 17.0362f)
+                    curveTo(5.49807f, 17.4346f, 5.68401f, 17.7193f, 5.98286f, 18.0181f)
+                    curveTo(6.28075f, 18.3169f, 6.56536f, 18.5019f, 6.96381f, 18.6566f)
+                    curveTo(7.26455f, 18.7742f, 7.71708f, 18.9127f, 8.5491f, 18.9507f)
+                    curveTo(9.44941f, 18.9915f, 9.71979f, 19.0f, 11.9995f, 19.0f)
+                    curveTo(14.2802f, 19.0f, 14.5496f, 18.9915f, 15.45f, 18.9507f)
+                    curveTo(16.282f, 18.9127f, 16.7345f, 18.7742f, 17.0352f, 18.6566f)
+                    curveTo(17.4337f, 18.5019f, 17.7183f, 18.3169f, 18.0171f, 18.0181f)
+                    curveTo(18.316f, 17.7193f, 18.501f, 17.4346f, 18.6556f, 17.0362f)
+                    close()
+                }
 
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(16.625f, 8.5f)
-                curveTo(17.2463f, 8.5f, 17.75f, 7.9963f, 17.75f, 7.375f)
-                curveTo(17.75f, 6.7537f, 17.2463f, 6.25f, 16.625f, 6.25f)
-                curveTo(16.0037f, 6.25f, 15.5f, 6.7537f, 15.5f, 7.375f)
-                curveTo(15.5f, 7.9963f, 16.0037f, 8.5f, 16.625f, 8.5f)
-                close()
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(16.625f, 8.5f)
+                    curveTo(17.2463f, 8.5f, 17.75f, 7.99632f, 17.75f, 7.375f)
+                    curveTo(17.75f, 6.75368f, 17.2463f, 6.25f, 16.625f, 6.25f)
+                    curveTo(16.0037f, 6.25f, 15.5f, 6.75368f, 15.5f, 7.375f)
+                    curveTo(15.5f, 7.99632f, 16.0037f, 8.5f, 16.625f, 8.5f)
+                    close()
+                }
+            }.build().also {
+                _instagram = it
             }
-        }.build().also {
-            io.channel.bezier.icon._instagram = it
-        }
     }
+
 
 private var _instagram: ImageVector? = null
 
@@ -120,7 +123,7 @@ private var _instagram: ImageVector? = null
 private fun InstagramIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Instagram,
+            imageVector = BezierIcons.Instagram.imageVector,
             contentDescription = null,
     )
 }

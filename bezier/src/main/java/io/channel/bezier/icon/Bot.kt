@@ -9,66 +9,68 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Bot: ImageVector
-    get() {
-        return io.channel.bezier.icon._bot ?: ImageVector.Builder(
-                name = "Bot",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0231f, 1.9999f)
-                curveTo(13.6801f, 1.9999f, 15.0231f, 3.3429f, 15.0231f, 4.9999f)
-                lineTo(9.0231f, 4.9999f)
-                curveTo(9.0231f, 3.3429f, 10.3661f, 1.9999f, 12.0231f, 1.9999f)
-                close()
-                moveTo(20.0002f, 19.998f)
-                lineTo(4.0002f, 19.998f)
-                curveTo(2.896f, 19.998f, 2.0002f, 19.1023f, 2.0002f, 17.998f)
-                lineTo(2.0002f, 7.998f)
-                curveTo(2.0002f, 6.8937f, 2.896f, 5.998f, 4.0002f, 5.998f)
-                lineTo(20.0002f, 5.998f)
-                curveTo(21.1045f, 5.998f, 22.0002f, 6.8937f, 22.0002f, 7.998f)
-                lineTo(22.0002f, 17.998f)
-                curveTo(22.0002f, 19.1023f, 21.1045f, 19.998f, 20.0002f, 19.998f)
-                close()
-                moveTo(20.0002f, 17.998f)
-                lineTo(20.0002f, 7.998f)
-                lineTo(4.0002f, 7.998f)
-                lineTo(4.0002f, 17.998f)
-                lineTo(20.0002f, 17.998f)
-                close()
-                moveTo(6.7416f, 12.9722f)
-                curveTo(6.7416f, 14.7592f, 7.1636f, 15.4882f, 8.1736f, 15.4882f)
-                curveTo(9.1836f, 15.4882f, 9.6056f, 14.7592f, 9.6056f, 12.9722f)
-                curveTo(9.6056f, 11.1862f, 9.1836f, 10.4572f, 8.1736f, 10.4572f)
-                curveTo(7.1636f, 10.4572f, 6.7416f, 11.1862f, 6.7416f, 12.9722f)
-                close()
-                moveTo(15.8538f, 15.4882f)
-                curveTo(14.8438f, 15.4882f, 14.4218f, 14.7592f, 14.4218f, 12.9722f)
-                curveTo(14.4218f, 11.1862f, 14.8438f, 10.4572f, 15.8538f, 10.4572f)
-                curveTo(16.8638f, 10.4572f, 17.2858f, 11.1862f, 17.2858f, 12.9722f)
-                curveTo(17.2858f, 14.7592f, 16.8638f, 15.4882f, 15.8538f, 15.4882f)
-                close()
+val BezierIcons.Bot: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _bot ?: ImageVector.Builder(
+                    name = "Bot",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.0231f, 1.99988f)
+                    curveTo(13.6801f, 1.99988f, 15.0231f, 3.34288f, 15.0231f, 4.99988f)
+                    lineTo(9.02314f, 4.99988f)
+                    curveTo(9.02314f, 3.34288f, 10.3661f, 1.99988f, 12.0231f, 1.99988f)
+                    close()
+                    moveTo(20.0002f, 19.998f)
+                    lineTo(4.00024f, 19.998f)
+                    curveTo(2.89596f, 19.998f, 2.00024f, 19.1023f, 2.00024f, 17.998f)
+                    lineTo(2.00024f, 7.99799f)
+                    curveTo(2.00024f, 6.8937f, 2.89596f, 5.99799f, 4.00024f, 5.99799f)
+                    lineTo(20.0002f, 5.99799f)
+                    curveTo(21.1045f, 5.99799f, 22.0002f, 6.8937f, 22.0002f, 7.99799f)
+                    lineTo(22.0002f, 17.998f)
+                    curveTo(22.0002f, 19.1023f, 21.1045f, 19.998f, 20.0002f, 19.998f)
+                    close()
+                    moveTo(20.0002f, 17.998f)
+                    lineTo(20.0002f, 7.99799f)
+                    lineTo(4.00024f, 7.99799f)
+                    lineTo(4.00024f, 17.998f)
+                    lineTo(20.0002f, 17.998f)
+                    close()
+                    moveTo(6.74158f, 12.9722f)
+                    curveTo(6.74158f, 14.7592f, 7.16358f, 15.4882f, 8.17358f, 15.4882f)
+                    curveTo(9.18358f, 15.4882f, 9.60558f, 14.7592f, 9.60558f, 12.9722f)
+                    curveTo(9.60558f, 11.1862f, 9.18358f, 10.4572f, 8.17358f, 10.4572f)
+                    curveTo(7.16358f, 10.4572f, 6.74158f, 11.1862f, 6.74158f, 12.9722f)
+                    close()
+                    moveTo(15.8538f, 15.4882f)
+                    curveTo(14.8438f, 15.4882f, 14.4218f, 14.7592f, 14.4218f, 12.9722f)
+                    curveTo(14.4218f, 11.1862f, 14.8438f, 10.4572f, 15.8538f, 10.4572f)
+                    curveTo(16.8638f, 10.4572f, 17.2858f, 11.1862f, 17.2858f, 12.9722f)
+                    curveTo(17.2858f, 14.7592f, 16.8638f, 15.4882f, 15.8538f, 15.4882f)
+                    close()
+                }
+            }.build().also {
+                _bot = it
             }
-        }.build().also {
-            io.channel.bezier.icon._bot = it
-        }
     }
+
 
 private var _bot: ImageVector? = null
 
@@ -77,7 +79,7 @@ private var _bot: ImageVector? = null
 private fun BotIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Bot,
+            imageVector = BezierIcons.Bot.imageVector,
             contentDescription = null,
     )
 }

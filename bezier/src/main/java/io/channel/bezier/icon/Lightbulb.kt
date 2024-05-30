@@ -9,83 +9,85 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Lightbulb: ImageVector
-    get() {
-        return io.channel.bezier.icon._lightbulb ?: ImageVector.Builder(
-                name = "Lightbulb",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(11.0f, 3.0f)
-                curveTo(11.0f, 3.5523f, 11.4477f, 4.0f, 12.0f, 4.0f)
-                curveTo(12.5523f, 4.0f, 13.0f, 3.5523f, 13.0f, 3.0f)
-                lineTo(13.0f, 1.0f)
-                curveTo(13.0f, 0.4477f, 12.5523f, 0.0f, 12.0f, 0.0f)
-                curveTo(11.4477f, 0.0f, 11.0f, 0.4477f, 11.0f, 1.0f)
-                lineTo(11.0f, 3.0f)
-                close()
-                moveTo(5.1213f, 5.5355f)
-                curveTo(5.5118f, 5.9261f, 6.145f, 5.9261f, 6.5355f, 5.5355f)
-                curveTo(6.9261f, 5.145f, 6.9261f, 4.5118f, 6.5355f, 4.1213f)
-                lineTo(5.1213f, 2.7071f)
-                curveTo(4.7308f, 2.3166f, 4.0976f, 2.3166f, 3.7071f, 2.7071f)
-                curveTo(3.3166f, 3.0976f, 3.3166f, 3.7308f, 3.7071f, 4.1213f)
-                lineTo(5.1213f, 5.5355f)
-                close()
-                moveTo(17.7071f, 5.5355f)
-                curveTo(17.3166f, 5.145f, 17.3166f, 4.5118f, 17.7071f, 4.1213f)
-                lineTo(19.1213f, 2.7071f)
-                curveTo(19.5118f, 2.3166f, 20.145f, 2.3166f, 20.5355f, 2.7071f)
-                curveTo(20.9261f, 3.0976f, 20.9261f, 3.7308f, 20.5355f, 4.1213f)
-                lineTo(19.1213f, 5.5355f)
-                curveTo(18.7308f, 5.9261f, 18.0976f, 5.9261f, 17.7071f, 5.5355f)
-                close()
-                moveTo(13.0061f, 17.0f)
-                curveTo(13.0711f, 15.87f, 13.6041f, 14.816f, 14.4601f, 14.148f)
-                curveTo(15.4391f, 13.384f, 16.0001f, 12.237f, 16.0001f, 11.0f)
-                curveTo(16.0001f, 9.79f, 15.4611f, 8.658f, 14.5211f, 7.894f)
-                curveTo(13.5671f, 7.119f, 12.3621f, 6.836f, 11.1271f, 7.092f)
-                curveTo(9.5901f, 7.413f, 8.3301f, 8.725f, 8.0621f, 10.284f)
-                curveTo(7.8111f, 11.744f, 8.3381f, 13.169f, 9.4731f, 14.094f)
-                curveTo(10.3801f, 14.835f, 10.9261f, 15.883f, 10.9931f, 17.0f)
-                lineTo(13.0061f, 17.0f)
-                close()
-                moveTo(10.7181f, 5.134f)
-                curveTo(12.5241f, 4.756f, 14.3721f, 5.196f, 15.7821f, 6.342f)
-                curveTo(17.1911f, 7.487f, 18.0001f, 9.185f, 18.0001f, 11.0f)
-                curveTo(18.0001f, 12.857f, 17.1581f, 14.579f, 15.6901f, 15.725f)
-                curveTo(15.2581f, 16.062f, 15.0001f, 16.625f, 15.0001f, 17.231f)
-                lineTo(15.0001f, 19.0f)
-                lineTo(15.0001f, 21.0f)
-                curveTo(15.0001f, 21.552f, 14.5521f, 22.0f, 14.0001f, 22.0f)
-                lineTo(10.0001f, 22.0f)
-                curveTo(9.4481f, 22.0f, 9.0001f, 21.552f, 9.0001f, 21.0f)
-                lineTo(9.0001f, 18.0f)
-                lineTo(9.0001f, 17.232f)
-                curveTo(9.0001f, 16.633f, 8.7111f, 16.054f, 8.2091f, 15.644f)
-                curveTo(6.5071f, 14.256f, 5.7161f, 12.126f, 6.0911f, 9.945f)
-                curveTo(6.5011f, 7.56f, 8.3601f, 5.626f, 10.7181f, 5.134f)
-                close()
+val BezierIcons.Lightbulb: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _lightbulb ?: ImageVector.Builder(
+                    name = "Lightbulb",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(11.0f, 3.0f)
+                    curveTo(11.0f, 3.55228f, 11.4477f, 4.0f, 12.0f, 4.0f)
+                    curveTo(12.5523f, 4.0f, 13.0f, 3.55228f, 13.0f, 3.0f)
+                    lineTo(13.0f, 1.0f)
+                    curveTo(13.0f, 0.447715f, 12.5523f, 0.0f, 12.0f, 0.0f)
+                    curveTo(11.4477f, 0.0f, 11.0f, 0.447715f, 11.0f, 1.0f)
+                    lineTo(11.0f, 3.0f)
+                    close()
+                    moveTo(5.12132f, 5.53554f)
+                    curveTo(5.51185f, 5.92606f, 6.14501f, 5.92606f, 6.53554f, 5.53554f)
+                    curveTo(6.92606f, 5.14501f, 6.92606f, 4.51185f, 6.53554f, 4.12132f)
+                    lineTo(5.12132f, 2.70711f)
+                    curveTo(4.7308f, 2.31658f, 4.09763f, 2.31658f, 3.70711f, 2.70711f)
+                    curveTo(3.31658f, 3.09763f, 3.31658f, 3.7308f, 3.70711f, 4.12132f)
+                    lineTo(5.12132f, 5.53554f)
+                    close()
+                    moveTo(17.7071f, 5.53553f)
+                    curveTo(17.3166f, 5.14501f, 17.3166f, 4.51184f, 17.7071f, 4.12132f)
+                    lineTo(19.1213f, 2.70711f)
+                    curveTo(19.5118f, 2.31658f, 20.145f, 2.31658f, 20.5355f, 2.70711f)
+                    curveTo(20.9261f, 3.09763f, 20.9261f, 3.7308f, 20.5355f, 4.12132f)
+                    lineTo(19.1213f, 5.53553f)
+                    curveTo(18.7308f, 5.92606f, 18.0976f, 5.92606f, 17.7071f, 5.53553f)
+                    close()
+                    moveTo(13.0061f, 17.0f)
+                    curveTo(13.0711f, 15.87f, 13.6041f, 14.816f, 14.4601f, 14.148f)
+                    curveTo(15.4391f, 13.384f, 16.0001f, 12.237f, 16.0001f, 11.0f)
+                    curveTo(16.0001f, 9.79f, 15.4611f, 8.658f, 14.5211f, 7.894f)
+                    curveTo(13.5671f, 7.119f, 12.3621f, 6.836f, 11.1271f, 7.092f)
+                    curveTo(9.59011f, 7.413f, 8.33011f, 8.725f, 8.06211f, 10.284f)
+                    curveTo(7.81111f, 11.744f, 8.33811f, 13.169f, 9.47311f, 14.094f)
+                    curveTo(10.3801f, 14.835f, 10.9261f, 15.883f, 10.9931f, 17.0f)
+                    lineTo(13.0061f, 17.0f)
+                    close()
+                    moveTo(10.7181f, 5.134f)
+                    curveTo(12.5241f, 4.756f, 14.3721f, 5.196f, 15.7821f, 6.342f)
+                    curveTo(17.1911f, 7.487f, 18.0001f, 9.185f, 18.0001f, 11.0f)
+                    curveTo(18.0001f, 12.857f, 17.1581f, 14.579f, 15.6901f, 15.725f)
+                    curveTo(15.2581f, 16.062f, 15.0001f, 16.625f, 15.0001f, 17.231f)
+                    lineTo(15.0001f, 19.0f)
+                    lineTo(15.0001f, 21.0f)
+                    curveTo(15.0001f, 21.552f, 14.5521f, 22.0f, 14.0001f, 22.0f)
+                    lineTo(10.0001f, 22.0f)
+                    curveTo(9.44812f, 22.0f, 9.00012f, 21.552f, 9.00012f, 21.0f)
+                    lineTo(9.00012f, 18.0f)
+                    lineTo(9.00012f, 17.232f)
+                    curveTo(9.00012f, 16.633f, 8.71112f, 16.054f, 8.20912f, 15.644f)
+                    curveTo(6.50712f, 14.256f, 5.71612f, 12.126f, 6.09112f, 9.945f)
+                    curveTo(6.50112f, 7.56f, 8.36012f, 5.626f, 10.7181f, 5.134f)
+                    close()
+                }
+            }.build().also {
+                _lightbulb = it
             }
-        }.build().also {
-            io.channel.bezier.icon._lightbulb = it
-        }
     }
+
 
 private var _lightbulb: ImageVector? = null
 
@@ -94,7 +96,7 @@ private var _lightbulb: ImageVector? = null
 private fun LightbulbIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Lightbulb,
+            imageVector = BezierIcons.Lightbulb.imageVector,
             contentDescription = null,
     )
 }

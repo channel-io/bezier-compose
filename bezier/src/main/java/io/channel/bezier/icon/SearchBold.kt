@@ -9,50 +9,52 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.SearchBold: ImageVector
-    get() {
-        return io.channel.bezier.icon._searchBold ?: ImageVector.Builder(
-                name = "SearchBold",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(18.0002f, 10.0001f)
-                curveTo(18.0002f, 5.5818f, 14.4185f, 2.0001f, 10.0002f, 2.0001f)
-                curveTo(5.5819f, 2.0001f, 2.0002f, 5.5818f, 2.0002f, 10.0001f)
-                curveTo(2.0002f, 14.4184f, 5.5819f, 18.0001f, 10.0002f, 18.0001f)
-                curveTo(11.6672f, 18.0001f, 13.2152f, 17.4902f, 14.4966f, 16.6179f)
-                lineTo(18.9393f, 21.0607f)
-                curveTo(19.5251f, 21.6464f, 20.4749f, 21.6464f, 21.0607f, 21.0607f)
-                curveTo(21.6464f, 20.4749f, 21.6464f, 19.5251f, 21.0607f, 18.9393f)
-                lineTo(16.6179f, 14.4966f)
-                curveTo(17.4903f, 13.2152f, 18.0002f, 11.6672f, 18.0002f, 10.0001f)
-                close()
-                moveTo(15.0f, 10.0f)
-                curveTo(15.0f, 12.7614f, 12.7614f, 15.0f, 10.0f, 15.0f)
-                curveTo(7.2386f, 15.0f, 5.0f, 12.7614f, 5.0f, 10.0f)
-                curveTo(5.0f, 7.2386f, 7.2386f, 5.0f, 10.0f, 5.0f)
-                curveTo(12.7614f, 5.0f, 15.0f, 7.2386f, 15.0f, 10.0f)
-                close()
+val BezierIcons.SearchBold: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _searchBold ?: ImageVector.Builder(
+                    name = "SearchBold",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(18.0002f, 10.0001f)
+                    curveTo(18.0002f, 5.58181f, 14.4185f, 2.00009f, 10.0002f, 2.00009f)
+                    curveTo(5.5819f, 2.00009f, 2.00018f, 5.58181f, 2.00018f, 10.0001f)
+                    curveTo(2.00018f, 14.4184f, 5.5819f, 18.0001f, 10.0002f, 18.0001f)
+                    curveTo(11.6672f, 18.0001f, 13.2152f, 17.4902f, 14.4966f, 16.6179f)
+                    lineTo(18.9393f, 21.0607f)
+                    curveTo(19.5251f, 21.6464f, 20.4749f, 21.6464f, 21.0607f, 21.0607f)
+                    curveTo(21.6464f, 20.4749f, 21.6464f, 19.5251f, 21.0607f, 18.9393f)
+                    lineTo(16.6179f, 14.4966f)
+                    curveTo(17.4903f, 13.2152f, 18.0002f, 11.6672f, 18.0002f, 10.0001f)
+                    close()
+                    moveTo(15.0f, 10.0f)
+                    curveTo(15.0f, 12.7614f, 12.7614f, 15.0f, 10.0f, 15.0f)
+                    curveTo(7.23858f, 15.0f, 5.0f, 12.7614f, 5.0f, 10.0f)
+                    curveTo(5.0f, 7.23858f, 7.23858f, 5.0f, 10.0f, 5.0f)
+                    curveTo(12.7614f, 5.0f, 15.0f, 7.23858f, 15.0f, 10.0f)
+                    close()
+                }
+            }.build().also {
+                _searchBold = it
             }
-        }.build().also {
-            io.channel.bezier.icon._searchBold = it
-        }
     }
+
 
 private var _searchBold: ImageVector? = null
 
@@ -61,7 +63,7 @@ private var _searchBold: ImageVector? = null
 private fun SearchBoldIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.SearchBold,
+            imageVector = BezierIcons.SearchBold.imageVector,
             contentDescription = null,
     )
 }

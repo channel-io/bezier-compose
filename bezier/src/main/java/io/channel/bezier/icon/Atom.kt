@@ -9,91 +9,93 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Atom: ImageVector
-    get() {
-        return io.channel.bezier.icon._atom ?: ImageVector.Builder(
-                name = "Atom",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(10.0185f, 18.1897f)
-                curveTo(9.6472f, 18.3479f, 9.285f, 18.4785f, 8.9357f, 18.5813f)
-                curveTo(7.0565f, 19.134f, 6.0475f, 18.7754f, 5.636f, 18.364f)
-                curveTo(5.2246f, 17.9525f, 4.866f, 16.9435f, 5.4187f, 15.0643f)
-                curveTo(5.5215f, 14.715f, 5.6521f, 14.3528f, 5.8103f, 13.9815f)
-                curveTo(6.3772f, 14.7531f, 7.0282f, 15.5135f, 7.7574f, 16.2427f)
-                curveTo(8.4865f, 16.9718f, 9.247f, 17.6228f, 10.0185f, 18.1897f)
-                close()
-                moveTo(12.0f, 17.1276f)
-                curveTo(11.0535f, 16.5175f, 10.0926f, 15.7494f, 9.1716f, 14.8284f)
-                curveTo(8.2506f, 13.9074f, 7.4826f, 12.9465f, 6.8724f, 12.0f)
-                curveTo(7.4826f, 11.0535f, 8.2506f, 10.0926f, 9.1716f, 9.1716f)
-                curveTo(10.0926f, 8.2506f, 11.0535f, 7.4826f, 12.0f, 6.8724f)
-                curveTo(12.9465f, 7.4826f, 13.9074f, 8.2506f, 14.8284f, 9.1716f)
-                curveTo(15.7494f, 10.0926f, 16.5174f, 11.0535f, 17.1276f, 12.0f)
-                curveTo(16.5174f, 12.9465f, 15.7494f, 13.9074f, 14.8284f, 14.8284f)
-                curveTo(13.9074f, 15.7494f, 12.9465f, 16.5175f, 12.0f, 17.1276f)
-                close()
-                moveTo(12.0f, 19.4506f)
-                curveTo(8.8651f, 21.1455f, 5.8288f, 21.3852f, 4.2218f, 19.7782f)
-                curveTo(2.6149f, 18.1712f, 2.8545f, 15.135f, 4.5494f, 12.0f)
-                curveTo(2.8545f, 8.8651f, 2.6149f, 5.8288f, 4.2218f, 4.2218f)
-                curveTo(5.8288f, 2.6149f, 8.8651f, 2.8545f, 12.0f, 4.5494f)
-                curveTo(15.1349f, 2.8545f, 18.1712f, 2.6149f, 19.7782f, 4.2218f)
-                curveTo(21.3852f, 5.8288f, 21.1455f, 8.8651f, 19.4506f, 12.0f)
-                curveTo(21.1455f, 15.135f, 21.3852f, 18.1712f, 19.7782f, 19.7782f)
-                curveTo(18.1712f, 21.3852f, 15.1349f, 21.1455f, 12.0f, 19.4506f)
-                close()
-                moveTo(18.1897f, 13.9815f)
-                curveTo(18.3479f, 14.3528f, 18.4785f, 14.715f, 18.5813f, 15.0643f)
-                curveTo(19.134f, 16.9435f, 18.7754f, 17.9525f, 18.364f, 18.364f)
-                curveTo(17.9525f, 18.7754f, 16.9435f, 19.134f, 15.0643f, 18.5813f)
-                curveTo(14.715f, 18.4785f, 14.3528f, 18.3479f, 13.9815f, 18.1897f)
-                curveTo(14.753f, 17.6228f, 15.5135f, 16.9718f, 16.2426f, 16.2426f)
-                curveTo(16.9718f, 15.5135f, 17.6228f, 14.7531f, 18.1897f, 13.9815f)
-                close()
-                moveTo(18.1897f, 10.0185f)
-                curveTo(18.3479f, 9.6472f, 18.4785f, 9.285f, 18.5813f, 8.9357f)
-                curveTo(19.134f, 7.0565f, 18.7754f, 6.0475f, 18.364f, 5.636f)
-                curveTo(17.9525f, 5.2246f, 16.9435f, 4.866f, 15.0643f, 5.4187f)
-                curveTo(14.715f, 5.5215f, 14.3528f, 5.6521f, 13.9815f, 5.8103f)
-                curveTo(14.753f, 6.3772f, 15.5135f, 7.0282f, 16.2426f, 7.7574f)
-                curveTo(16.9718f, 8.4865f, 17.6228f, 9.247f, 18.1897f, 10.0185f)
-                close()
-                moveTo(10.0185f, 5.8103f)
-                curveTo(9.6472f, 5.6521f, 9.285f, 5.5215f, 8.9357f, 5.4187f)
-                curveTo(7.0565f, 4.8661f, 6.0475f, 5.2246f, 5.636f, 5.6361f)
-                curveTo(5.2246f, 6.0475f, 4.866f, 7.0566f, 5.4187f, 8.9357f)
-                curveTo(5.5215f, 9.285f, 5.6521f, 9.6472f, 5.8103f, 10.0185f)
-                curveTo(6.3772f, 9.247f, 7.0282f, 8.4865f, 7.7574f, 7.7574f)
-                curveTo(8.4865f, 7.0282f, 9.247f, 6.3772f, 10.0185f, 5.8103f)
-                close()
-                moveTo(14.0f, 12.0f)
-                curveTo(14.0f, 13.1046f, 13.1046f, 14.0f, 12.0f, 14.0f)
-                curveTo(10.8954f, 14.0f, 10.0f, 13.1046f, 10.0f, 12.0f)
-                curveTo(10.0f, 10.8954f, 10.8954f, 10.0f, 12.0f, 10.0f)
-                curveTo(13.1046f, 10.0f, 14.0f, 10.8954f, 14.0f, 12.0f)
-                close()
+val BezierIcons.Atom: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _atom ?: ImageVector.Builder(
+                    name = "Atom",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(10.0185f, 18.1897f)
+                    curveTo(9.6472f, 18.3479f, 9.28497f, 18.4785f, 8.93567f, 18.5813f)
+                    curveTo(7.05654f, 19.134f, 6.04749f, 18.7754f, 5.63604f, 18.364f)
+                    curveTo(5.2246f, 17.9525f, 4.86605f, 16.9435f, 5.41874f, 15.0643f)
+                    curveTo(5.52147f, 14.715f, 5.65212f, 14.3528f, 5.81032f, 13.9815f)
+                    curveTo(6.37722f, 14.7531f, 7.02821f, 15.5135f, 7.75736f, 16.2427f)
+                    curveTo(8.48651f, 16.9718f, 9.24695f, 17.6228f, 10.0185f, 18.1897f)
+                    close()
+                    moveTo(12.0f, 17.1276f)
+                    curveTo(11.0535f, 16.5175f, 10.0926f, 15.7494f, 9.17158f, 14.8284f)
+                    curveTo(8.25058f, 13.9074f, 7.48256f, 12.9465f, 6.87239f, 12.0f)
+                    curveTo(7.48256f, 11.0535f, 8.25058f, 10.0926f, 9.17158f, 9.17158f)
+                    curveTo(10.0926f, 8.25059f, 11.0535f, 7.48257f, 12.0f, 6.8724f)
+                    curveTo(12.9465f, 7.48257f, 13.9074f, 8.25059f, 14.8284f, 9.17159f)
+                    curveTo(15.7494f, 10.0926f, 16.5174f, 11.0535f, 17.1276f, 12.0f)
+                    curveTo(16.5174f, 12.9465f, 15.7494f, 13.9074f, 14.8284f, 14.8284f)
+                    curveTo(13.9074f, 15.7494f, 12.9465f, 16.5175f, 12.0f, 17.1276f)
+                    close()
+                    moveTo(12.0f, 19.4506f)
+                    curveTo(8.86506f, 21.1455f, 5.82881f, 21.3852f, 4.22183f, 19.7782f)
+                    curveTo(2.61486f, 18.1712f, 2.8545f, 15.135f, 4.54941f, 12.0f)
+                    curveTo(2.85449f, 8.86507f, 2.61485f, 5.82882f, 4.22183f, 4.22184f)
+                    curveTo(5.8288f, 2.61486f, 8.86505f, 2.8545f, 12.0f, 4.54941f)
+                    curveTo(15.1349f, 2.8545f, 18.1712f, 2.61485f, 19.7782f, 4.22183f)
+                    curveTo(21.3852f, 5.82881f, 21.1455f, 8.86506f, 19.4506f, 12.0f)
+                    curveTo(21.1455f, 15.135f, 21.3852f, 18.1712f, 19.7782f, 19.7782f)
+                    curveTo(18.1712f, 21.3852f, 15.1349f, 21.1455f, 12.0f, 19.4506f)
+                    close()
+                    moveTo(18.1897f, 13.9815f)
+                    curveTo(18.3479f, 14.3528f, 18.4785f, 14.715f, 18.5813f, 15.0643f)
+                    curveTo(19.134f, 16.9435f, 18.7754f, 17.9525f, 18.364f, 18.364f)
+                    curveTo(17.9525f, 18.7754f, 16.9435f, 19.134f, 15.0643f, 18.5813f)
+                    curveTo(14.715f, 18.4785f, 14.3528f, 18.3479f, 13.9815f, 18.1897f)
+                    curveTo(14.753f, 17.6228f, 15.5135f, 16.9718f, 16.2426f, 16.2426f)
+                    curveTo(16.9718f, 15.5135f, 17.6228f, 14.7531f, 18.1897f, 13.9815f)
+                    close()
+                    moveTo(18.1897f, 10.0185f)
+                    curveTo(18.3479f, 9.64721f, 18.4785f, 9.28498f, 18.5813f, 8.93567f)
+                    curveTo(19.134f, 7.05654f, 18.7754f, 6.04749f, 18.364f, 5.63604f)
+                    curveTo(17.9525f, 5.2246f, 16.9435f, 4.86605f, 15.0643f, 5.41874f)
+                    curveTo(14.715f, 5.52147f, 14.3528f, 5.65212f, 13.9815f, 5.81033f)
+                    curveTo(14.753f, 6.37723f, 15.5135f, 7.02822f, 16.2426f, 7.75737f)
+                    curveTo(16.9718f, 8.48652f, 17.6228f, 9.24696f, 18.1897f, 10.0185f)
+                    close()
+                    moveTo(10.0185f, 5.81033f)
+                    curveTo(9.6472f, 5.65212f, 9.28497f, 5.52148f, 8.93567f, 5.41874f)
+                    curveTo(7.05654f, 4.86606f, 6.04749f, 5.22461f, 5.63604f, 5.63605f)
+                    curveTo(5.2246f, 6.0475f, 4.86605f, 7.05655f, 5.41874f, 8.93568f)
+                    curveTo(5.52147f, 9.28498f, 5.65212f, 9.64721f, 5.81032f, 10.0185f)
+                    curveTo(6.37722f, 9.24696f, 7.02821f, 8.48651f, 7.75737f, 7.75736f)
+                    curveTo(8.48651f, 7.02822f, 9.24695f, 6.37723f, 10.0185f, 5.81033f)
+                    close()
+                    moveTo(14.0f, 12.0f)
+                    curveTo(14.0f, 13.1046f, 13.1046f, 14.0f, 12.0f, 14.0f)
+                    curveTo(10.8954f, 14.0f, 10.0f, 13.1046f, 10.0f, 12.0f)
+                    curveTo(10.0f, 10.8954f, 10.8954f, 10.0f, 12.0f, 10.0f)
+                    curveTo(13.1046f, 10.0f, 14.0f, 10.8954f, 14.0f, 12.0f)
+                    close()
+                }
+            }.build().also {
+                _atom = it
             }
-        }.build().also {
-            io.channel.bezier.icon._atom = it
-        }
     }
+
 
 private var _atom: ImageVector? = null
 
@@ -102,7 +104,7 @@ private var _atom: ImageVector? = null
 private fun AtomIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Atom,
+            imageVector = BezierIcons.Atom.imageVector,
             contentDescription = null,
     )
 }

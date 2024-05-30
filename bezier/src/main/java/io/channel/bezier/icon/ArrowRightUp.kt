@@ -9,56 +9,58 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ArrowRightUp: ImageVector
-    get() {
-        return _arrowRightUp ?: ImageVector.Builder(
-                name = "ArrowRightUp",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(17.9971f, 6.0002f)
-                lineTo(17.9971f, 6.0001f)
-                lineTo(17.9971f, 6.0001f)
-                curveTo(17.9971f, 6.0001f, 17.9971f, 6.0001f, 17.9971f, 6.0001f)
-                curveTo(17.9971f, 6.0001f, 17.9971f, 6.0002f, 17.9971f, 6.0002f)
-                close()
-                moveTo(17.9971f, 7.4143f)
-                curveTo(17.9971f, 7.4143f, 17.9971f, 7.4143f, 17.9971f, 7.4144f)
-                lineTo(5.4113f, 20.0001f)
-                curveTo(5.0208f, 20.3907f, 4.3876f, 20.3907f, 3.9971f, 20.0001f)
-                curveTo(3.6066f, 19.6096f, 3.6066f, 18.9764f, 3.9971f, 18.5859f)
-                lineTo(16.5829f, 6.0001f)
-                curveTo(16.5829f, 6.0001f, 16.5829f, 6.0001f, 16.5829f, 6.0001f)
-                lineTo(4.9971f, 6.0001f)
-                curveTo(4.4448f, 6.0001f, 3.9971f, 5.5524f, 3.9971f, 5.0001f)
-                curveTo(3.9971f, 4.4478f, 4.4448f, 4.0001f, 4.9971f, 4.0001f)
-                lineTo(18.4971f, 4.0001f)
-                curveTo(19.3255f, 4.0001f, 19.9971f, 4.6717f, 19.9971f, 5.5001f)
-                lineTo(19.9971f, 19.0001f)
-                curveTo(19.9971f, 19.5524f, 19.5494f, 20.0001f, 18.9971f, 20.0001f)
-                curveTo(18.4448f, 20.0001f, 17.9971f, 19.5524f, 17.9971f, 19.0001f)
-                lineTo(17.9971f, 7.4143f)
-                close()
+val BezierIcons.ArrowRightUp: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _arrowRightUp ?: ImageVector.Builder(
+                    name = "ArrowRightUp",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(17.9971f, 6.00016f)
+                    lineTo(17.9971f, 6.00012f)
+                    lineTo(17.9971f, 6.00012f)
+                    curveTo(17.9971f, 6.00013f, 17.9971f, 6.00013f, 17.9971f, 6.00014f)
+                    curveTo(17.9971f, 6.00014f, 17.9971f, 6.00015f, 17.9971f, 6.00016f)
+                    close()
+                    moveTo(17.9971f, 7.41433f)
+                    curveTo(17.9971f, 7.41434f, 17.9971f, 7.41434f, 17.9971f, 7.41435f)
+                    lineTo(5.4113f, 20.0001f)
+                    curveTo(5.02078f, 20.3907f, 4.38761f, 20.3907f, 3.99709f, 20.0001f)
+                    curveTo(3.60656f, 19.6096f, 3.60656f, 18.9764f, 3.99709f, 18.5859f)
+                    lineTo(16.5829f, 6.00014f)
+                    curveTo(16.5829f, 6.00013f, 16.5829f, 6.00013f, 16.5829f, 6.00012f)
+                    lineTo(4.99711f, 6.00012f)
+                    curveTo(4.44482f, 6.00012f, 3.99711f, 5.55241f, 3.99711f, 5.00012f)
+                    curveTo(3.99711f, 4.44784f, 4.44482f, 4.00012f, 4.99711f, 4.00012f)
+                    lineTo(18.4971f, 4.00012f)
+                    curveTo(19.3255f, 4.00012f, 19.9971f, 4.67169f, 19.9971f, 5.50012f)
+                    lineTo(19.9971f, 19.0001f)
+                    curveTo(19.9971f, 19.5524f, 19.5494f, 20.0001f, 18.9971f, 20.0001f)
+                    curveTo(18.4448f, 20.0001f, 17.9971f, 19.5524f, 17.9971f, 19.0001f)
+                    lineTo(17.9971f, 7.41433f)
+                    close()
+                }
+            }.build().also {
+                _arrowRightUp = it
             }
-        }.build().also {
-            _arrowRightUp = it
-        }
     }
+
 
 private var _arrowRightUp: ImageVector? = null
 
@@ -67,7 +69,7 @@ private var _arrowRightUp: ImageVector? = null
 private fun ArrowRightUpIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ArrowRightUp,
+            imageVector = BezierIcons.ArrowRightUp.imageVector,
             contentDescription = null,
     )
 }
