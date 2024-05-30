@@ -29,6 +29,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.icon.ChevronSmallRight
 import io.channel.bezier.icon.ListNumber
@@ -193,7 +194,7 @@ private class KeyValueItemIconBuilderImpl : KeyValueItemIconBuilder {
 
     override fun navigationIcon() {
         iconInfoList += IconInfo(
-                icon = BezierIcon.ChevronSmallRight,
+                icon = BezierIcons.ChevronSmallRight.imageVector,
                 size = 24,
                 tint = { BezierTheme.colors.txtBlackDark },
         )
@@ -210,14 +211,14 @@ private class IconInfo(
 @Preview(showBackground = true)
 private fun KeyValueItemPreview() {
     KeyValueItem(
-            icon = BezierIcon.ListNumber,
+            icon = BezierIcons.ListNumber.imageVector,
             key = "아이폰사용자",
             leftContentBuilder = {
                 content { Text(text = "아이폰이 진리") }
                 content { Text(text = "인정!", color = Color.Red) }
             },
             rightIconBuilder = {
-                icon(BezierIcon.String, size = 16, tint = { Color.Red })
+                icon(BezierIcons.String.imageVector, size = 16, tint = { Color.Red })
                 navigationIcon()
             },
             valueContent = {
@@ -230,7 +231,7 @@ private fun KeyValueItemPreview() {
 @Preview(showBackground = true)
 private fun KeyValueItemPreview_Block() {
     KeyValueItem(
-            icon = BezierIcon.ListNumber,
+            icon = BezierIcons.ListNumber.imageVector,
             key = "아이폰사용자",
             blockContent = true,
             leftContentBuilder = {
