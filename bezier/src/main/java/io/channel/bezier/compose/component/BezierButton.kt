@@ -41,29 +41,34 @@ fun BezierButton(
         prefixContent: Painter? = null, // TODO : 스펙이 확장되기 이전까지는 Painter로 합니다.
         suffixContent: Painter? = null,
         isLoading: Boolean = false,
+        enabled: Boolean = true,
 ) {
-    val backgroundColor = getBackgroundColor(variant, color)
-    val contentColor = getContentColor(variant, color)
+    val colorSchemes = BezierButtonColorSchemes(
+            backgroundColor = getBackgroundColor(variant, color),
+            contentColor = getContentColor(variant, color),
+    )
 
     Box(
             modifier = modifier
                     .clip(RoundedCornerShape(size.radius))
-                    .background(backgroundColor)
-                    .clickable { onClick() }
+                    .background(colorSchemes.backgroundColor(enabled))
+                    .thenIf(enabled) {
+                        clickable { onClick() }
+                    }
                     .padding(size.containerPadding),
             contentAlignment = Alignment.Center,
     ) {
         if (isLoading) {
             CircularProgressIndicator(
                     modifier = Modifier.size(size.iconSize),
-                    color = contentColor,
+                    color = colorSchemes.contentColor(enabled),
             )
         }
 
         Row(
                 modifier = Modifier
                         .thenIf(isLoading) {
-                            Modifier.alpha(0f)
+                            alpha(0f)
                         },
                 verticalAlignment = Alignment.CenterVertically,
         ) {
@@ -72,7 +77,7 @@ fun BezierButton(
                         modifier = Modifier.size(size.iconSize),
                         painter = prefixContent,
                         contentDescription = null,
-                        tint = contentColor,
+                        tint = colorSchemes.contentColor(enabled),
                 )
             }
 
@@ -80,7 +85,7 @@ fun BezierButton(
                     modifier = Modifier.padding(size.textPadding),
                     text = text,
                     style = size.textStyle,
-                    color = contentColor,
+                    color = colorSchemes.contentColor(enabled),
             )
 
             if (suffixContent != null) {
@@ -88,9 +93,37 @@ fun BezierButton(
                         modifier = Modifier.size(size.iconSize),
                         painter = suffixContent,
                         contentDescription = null,
-                        tint = contentColor,
+                        tint = colorSchemes.contentColor(enabled),
                 )
             }
+        }
+    }
+}
+
+private class BezierButtonColorSchemes(
+        private val backgroundColor: Color,
+        private val contentColor: Color,
+) {
+    private val disabledBackgroundColor: Color = backgroundColor.toDisabledColor()
+    private val disabledContentColor: Color = contentColor.toDisabledColor()
+
+    private fun Color.toDisabledColor(): Color {
+        return copy(alpha = alpha * 0.4f)
+    }
+
+    fun backgroundColor(enabled: Boolean): Color {
+        return if (enabled) {
+            backgroundColor
+        } else {
+            disabledBackgroundColor
+        }
+    }
+
+    fun contentColor(enabled: Boolean): Color {
+        return if (enabled) {
+            contentColor
+        } else {
+            disabledContentColor
         }
     }
 }
@@ -323,5 +356,38 @@ private fun BezierButtonLoadingPreview() {
                 suffixContent = painterResource(id = R.drawable.icon_arrow_right),
                 isLoading = true,
         )
+    }
+}
+
+@Composable
+@Preview(showBackground = true)
+private fun BezierButtonEnabledPreview() {
+    BezierTheme {
+        Column(
+                modifier = Modifier.padding(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            BezierButton(
+                    text = "Label",
+                    size = BezierButtonSize.Large,
+                    variant = BezierButtonVariants.Primary,
+                    color = BezierButtonColors.Blue,
+                    onClick = { },
+                    prefixContent = painterResource(id = R.drawable.icon_plus),
+                    suffixContent = painterResource(id = R.drawable.icon_arrow_right),
+                    enabled = true,
+            )
+
+            BezierButton(
+                    text = "Label",
+                    size = BezierButtonSize.Large,
+                    variant = BezierButtonVariants.Primary,
+                    color = BezierButtonColors.Blue,
+                    onClick = { },
+                    prefixContent = painterResource(id = R.drawable.icon_plus),
+                    suffixContent = painterResource(id = R.drawable.icon_arrow_right),
+                    enabled = false,
+            )
+        }
     }
 }
