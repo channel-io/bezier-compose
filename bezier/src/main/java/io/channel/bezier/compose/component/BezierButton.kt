@@ -3,17 +3,21 @@ package io.channel.bezier.compose.component
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
@@ -25,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
 import io.channel.bezier.compose.color_v2.BezierColor
+import io.channel.bezier.extension.thenIf
 
 @Composable
 fun BezierButton(
@@ -36,38 +41,54 @@ fun BezierButton(
         modifier: Modifier = Modifier,
         prefixContent: Painter? = null, // TODO : 스펙이 확장되기 이전까지는 Painter로 합니다.
         suffixContent: Painter? = null,
+        isLoading: Boolean = false,
 ) {
-    Row(
+    Box(
             modifier = modifier
                     .clip(RoundedCornerShape(size.radius))
                     .background(getBackgroundColor(variant, color))
-                    .padding(size.containerPadding)
-                    .clickable { onClick() },
-            verticalAlignment = Alignment.CenterVertically,
+                    .clickable { onClick() }
+                    .padding(size.containerPadding),
+            contentAlignment = Alignment.Center,
     ) {
-        if (prefixContent != null) {
-            Icon(
+        if (isLoading) {
+            CircularProgressIndicator(
                     modifier = Modifier.size(size.iconSize),
-                    painter = prefixContent,
-                    contentDescription = null,
-                    tint = getContentsColor(variant, color),
+                    color = getContentsColor(variant, color),
             )
         }
 
-        Text(
-                modifier = Modifier.padding(size.textPadding),
-                text = text,
-                style = size.textStyle,
-                color = getContentsColor(variant, color),
-        )
+        Row(
+                modifier = Modifier
+                        .thenIf(isLoading) {
+                            Modifier.alpha(0f)
+                        },
+                verticalAlignment = Alignment.CenterVertically,
+        ) {
+            if (prefixContent != null) {
+                Icon(
+                        modifier = Modifier.size(size.iconSize),
+                        painter = prefixContent,
+                        contentDescription = null,
+                        tint = getContentsColor(variant, color),
+                )
+            }
 
-        if (suffixContent != null) {
-            Icon(
-                    modifier = Modifier.size(size.iconSize),
-                    painter = suffixContent,
-                    contentDescription = null,
-                    tint = getContentsColor(variant, color),
+            Text(
+                    modifier = Modifier.padding(size.textPadding),
+                    text = text,
+                    style = size.textStyle,
+                    color = getContentsColor(variant, color),
             )
+
+            if (suffixContent != null) {
+                Icon(
+                        modifier = Modifier.size(size.iconSize),
+                        painter = suffixContent,
+                        contentDescription = null,
+                        tint = getContentsColor(variant, color),
+                )
+            }
         }
     }
 }
@@ -276,17 +297,29 @@ private fun BezierButtonSizePreview() {
 @Preview(showBackground = true)
 private fun BezierButtonOnlyTextPreview() {
     BezierTheme {
-        Column(
-                modifier = Modifier.padding(8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            BezierButton(
-                    text = "Label",
-                    size = BezierButtonSize.Medium,
-                    variant = BezierButtonVariants.Primary,
-                    color = BezierButtonColors.Blue,
-                    onClick = { },
-            )
-        }
+        BezierButton(
+                text = "Label",
+                size = BezierButtonSize.Medium,
+                variant = BezierButtonVariants.Primary,
+                color = BezierButtonColors.Blue,
+                onClick = { },
+        )
+    }
+}
+
+@Composable
+@Preview(showBackground = true)
+private fun BezierButtonLoadingPreview() {
+    BezierTheme {
+        BezierButton(
+                text = "Label",
+                size = BezierButtonSize.Large,
+                variant = BezierButtonVariants.Primary,
+                color = BezierButtonColors.Blue,
+                onClick = { },
+                prefixContent = painterResource(id = R.drawable.icon_plus),
+                suffixContent = painterResource(id = R.drawable.icon_arrow_right),
+                isLoading = true,
+        )
     }
 }
