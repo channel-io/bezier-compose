@@ -52,9 +52,7 @@ fun BezierButton(
             modifier = modifier
                     .clip(RoundedCornerShape(size.radius))
                     .background(colorSchemes.backgroundColor(enabled))
-                    .thenIf(enabled) {
-                        clickable { onClick() }
-                    }
+                    .clickable(enabled = enabled) { onClick() }
                     .padding(size.containerPadding),
             contentAlignment = Alignment.Center,
     ) {
