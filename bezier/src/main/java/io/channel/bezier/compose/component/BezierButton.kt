@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -43,10 +42,13 @@ fun BezierButton(
         suffixContent: Painter? = null,
         isLoading: Boolean = false,
 ) {
+    val backgroundColor = getBackgroundColor(variant, color)
+    val contentColor = getContentColor(variant, color)
+
     Box(
             modifier = modifier
                     .clip(RoundedCornerShape(size.radius))
-                    .background(getBackgroundColor(variant, color))
+                    .background(backgroundColor)
                     .clickable { onClick() }
                     .padding(size.containerPadding),
             contentAlignment = Alignment.Center,
@@ -54,7 +56,7 @@ fun BezierButton(
         if (isLoading) {
             CircularProgressIndicator(
                     modifier = Modifier.size(size.iconSize),
-                    color = getContentsColor(variant, color),
+                    color = contentColor,
             )
         }
 
@@ -70,7 +72,7 @@ fun BezierButton(
                         modifier = Modifier.size(size.iconSize),
                         painter = prefixContent,
                         contentDescription = null,
-                        tint = getContentsColor(variant, color),
+                        tint = contentColor,
                 )
             }
 
@@ -78,7 +80,7 @@ fun BezierButton(
                     modifier = Modifier.padding(size.textPadding),
                     text = text,
                     style = size.textStyle,
-                    color = getContentsColor(variant, color),
+                    color = contentColor,
             )
 
             if (suffixContent != null) {
@@ -86,7 +88,7 @@ fun BezierButton(
                         modifier = Modifier.size(size.iconSize),
                         painter = suffixContent,
                         contentDescription = null,
-                        tint = getContentsColor(variant, color),
+                        tint = contentColor,
                 )
             }
         }
@@ -94,7 +96,7 @@ fun BezierButton(
 }
 
 @Composable
-private fun getContentsColor(variant: BezierButtonVariants, color: BezierButtonColors): Color {
+private fun getContentColor(variant: BezierButtonVariants, color: BezierButtonColors): Color {
     return when (variant) {
         BezierButtonVariants.Primary -> when (color) {
             BezierButtonColors.Blue,
