@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -33,20 +32,24 @@ val BezierIcons.CancelBold: BezierIcon
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
                 ) {
-                    moveTo(4.929f, 4.929f)
-                    arcTo(1.5f, 1.5f, 224.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 4.929f, 7.050000000000001f)
-                    lineTo(9.879f, 12.0f)
-                    lineTo(4.928999999999999f, 16.95f)
-                    arcTo(1.5f, 1.5f, 223.39306813951018f, isMoreThanHalf = false, isPositiveArc = false, 7.05f, 19.07f)
-                    lineTo(12.0f, 14.120000000000001f)
-                    lineTo(16.95f, 19.07f)
-                    arcTo(1.5f, 1.5f, 134.00425538641872f, isMoreThanHalf = false, isPositiveArc = false, 19.070999999999998f, 16.949f)
-                    lineTo(14.121f, 12.0f)
-                    lineTo(19.071f, 7.05f)
-                    arcTo(1.5f, 1.5f, 46.5799119225261f, isMoreThanHalf = true, isPositiveArc = false, 16.95f, 4.93f)
-                    lineTo(12.0f, 9.879f)
-                    lineTo(7.05f, 4.928999999999999f)
-                    arcTo(1.5f, 1.5f, 314.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 4.929f, 4.928999999999999f)
+                    moveTo(4.92893f, 4.92893f)
+                    curveTo(4.34315f, 5.51472f, 4.34315f, 6.46447f, 4.92893f, 7.05025f)
+                    lineTo(9.87868f, 12.0f)
+                    lineTo(4.92893f, 16.9497f)
+                    curveTo(4.34315f, 17.5355f, 4.34315f, 18.4853f, 4.92893f, 19.0711f)
+                    curveTo(5.51472f, 19.6569f, 6.46447f, 19.6569f, 7.05025f, 19.0711f)
+                    lineTo(12.0f, 14.1213f)
+                    lineTo(16.9497f, 19.0711f)
+                    curveTo(17.5355f, 19.6569f, 18.4853f, 19.6569f, 19.0711f, 19.0711f)
+                    curveTo(19.6569f, 18.4853f, 19.6569f, 17.5355f, 19.0711f, 16.9497f)
+                    lineTo(14.1213f, 12.0f)
+                    lineTo(19.0711f, 7.05025f)
+                    curveTo(19.6569f, 6.46447f, 19.6569f, 5.51472f, 19.0711f, 4.92893f)
+                    curveTo(18.4853f, 4.34315f, 17.5355f, 4.34315f, 16.9497f, 4.92893f)
+                    lineTo(12.0f, 9.87868f)
+                    lineTo(7.05025f, 4.92893f)
+                    curveTo(6.46447f, 4.34315f, 5.51472f, 4.34315f, 4.92893f, 4.92893f)
+                    close()
                 }
             }.build().also {
                 _cancelBold = it

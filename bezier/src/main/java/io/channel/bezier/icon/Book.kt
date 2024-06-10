@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,42 +31,44 @@ val BezierIcons.Book: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(16.071f, 3.0f)
-                    lineTo(20.501f, 3.0f)
-                    arcTo(1.5f, 1.5f, 270.0381971891701f, isMoreThanHalf = false, isPositiveArc = true, 22.0f, 4.5f)
-                    lineTo(22.0f, 18.5f)
-                    arcTo(1.5f, 1.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 20.5f, 20.0f)
-                    lineTo(16.07f, 20.0f)
-                    curveTo(15.01f, 20.0f, 13.992f, 20.422f, 13.242f, 21.17f)
-                    lineTo(12.707f, 21.707f)
-                    arcTo(1.0f, 1.0f, 44.9681292160717f, isMoreThanHalf = false, isPositiveArc = true, 11.292000000000002f, 21.707f)
-                    lineTo(10.756000000000002f, 21.171f)
-                    arcTo(4.0f, 4.0f, 314.9681325461011f, isMoreThanHalf = false, isPositiveArc = false, 7.928000000000003f, 20.000999999999998f)
-                    lineTo(3.5f, 20.000999999999998f)
-                    arcTo(1.5f, 1.5f, 89.99998726760315f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 18.5f)
-                    lineTo(2.0f, 4.5f)
-                    arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 3.5f, 3.0f)
-                    lineTo(7.93f, 3.0f)
-                    arcTo(6.0f, 6.0f, 269.9950950519491f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 4.591f)
-                    arcTo(6.0f, 6.0f, 227.29313455664192f, isMoreThanHalf = false, isPositiveArc = true, 16.07f, 3.0f)
-                    moveTo(20.0f, 5.0f)
-                    lineTo(16.07f, 5.0f)
-                    curveTo(15.01f, 5.0f, 13.992f, 5.422f, 13.242f, 6.17f)
-                    lineTo(13.0f, 6.415f)
-                    lineTo(13.0f, 18.846f)
-                    arcTo(6.0f, 6.0f, 239.20448655340527f, isMoreThanHalf = false, isPositiveArc = true, 16.071f, 18.0f)
-                    lineTo(20.001f, 18.0f)
+                    moveTo(16.0712f, 3.00012f)
+                    lineTo(20.5002f, 3.00012f)
+                    curveTo(21.3285f, 3.00012f, 22.0002f, 3.67184f, 22.0002f, 4.50012f)
+                    lineTo(22.0002f, 18.5001f)
+                    curveTo(22.0002f, 19.3284f, 21.3285f, 20.0001f, 20.5002f, 20.0001f)
+                    lineTo(16.0712f, 20.0001f)
+                    curveTo(15.0106f, 20.0001f, 13.9927f, 20.4216f, 13.243f, 21.1706f)
+                    lineTo(12.708f, 21.7066f)
+                    curveTo(12.3176f, 22.0977f, 11.6839f, 22.098f, 11.2931f, 21.7072f)
+                    lineTo(10.7571f, 21.1712f)
+                    curveTo(10.0075f, 20.4216f, 8.98982f, 20.0001f, 7.92921f, 20.0001f)
+                    lineTo(3.50021f, 20.0001f)
+                    curveTo(2.67193f, 20.0001f, 2.00021f, 19.3284f, 2.00021f, 18.5001f)
+                    lineTo(2.00021f, 4.50012f)
+                    curveTo(2.00021f, 3.67184f, 2.67193f, 3.00012f, 3.50021f, 3.00012f)
+                    lineTo(7.92921f, 3.00012f)
+                    curveTo(9.44075f, 3.00012f, 10.894f, 3.57075f, 11.9998f, 4.59215f)
+                    curveTo(13.1065f, 3.57071f, 14.5597f, 3.00012f, 16.0712f, 3.00012f)
                     close()
-                    moveTo(11.0f, 18.846f)
-                    lineTo(11.0f, 6.414f)
-                    lineTo(10.756f, 6.170999999999999f)
-                    arcTo(4.0f, 4.0f, 314.96813254610106f, isMoreThanHalf = false, isPositiveArc = false, 7.928000000000001f, 5.0009999999999994f)
-                    lineTo(4.0f, 5.0009999999999994f)
-                    lineTo(4.0f, 18.000999999999998f)
-                    lineTo(7.93f, 18.000999999999998f)
-                    arcTo(6.0f, 6.0f, 270.00167189781865f, isMoreThanHalf = false, isPositiveArc = true, 11.0f, 18.845999999999997f)
+                    moveTo(20.0002f, 5.00012f)
+                    lineTo(16.0712f, 5.00012f)
+                    curveTo(15.0106f, 5.00012f, 13.9927f, 5.42164f, 13.243f, 6.17057f)
+                    lineTo(13.0002f, 6.41379f)
+                    lineTo(13.0002f, 18.8454f)
+                    curveTo(13.9215f, 18.2969f, 14.9812f, 18.0001f, 16.0712f, 18.0001f)
+                    lineTo(20.0002f, 18.0001f)
+                    lineTo(20.0002f, 5.00012f)
+                    close()
+                    moveTo(11.0002f, 18.8456f)
+                    lineTo(11.0002f, 6.41434f)
+                    lineTo(10.7571f, 6.17123f)
+                    curveTo(10.0075f, 5.42164f, 8.98982f, 5.00012f, 7.92921f, 5.00012f)
+                    lineTo(4.00021f, 5.00012f)
+                    lineTo(4.00021f, 18.0001f)
+                    lineTo(7.92921f, 18.0001f)
+                    curveTo(9.01936f, 18.0001f, 10.0792f, 18.2969f, 11.0002f, 18.8456f)
+                    close()
                 }
             }.build().also {
                 _book = it

@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,29 +31,35 @@ val BezierIcons.Microphone: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(14.0f, 13.0f)
                     lineTo(14.0f, 6.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = false, 10.0f, 6.0f)
-                    lineTo(10.0f, 13.0f)
-                    arcTo(2.0f, 2.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 14.0f, 13.0f)
+                    curveTo(14.0f, 4.89543f, 13.1046f, 4.0f, 12.0f, 4.0f)
+                    curveTo(10.8954f, 4.0f, 9.99999f, 4.89543f, 9.99999f, 6.0f)
+                    lineTo(9.99999f, 13.0f)
+                    curveTo(9.99999f, 14.1046f, 10.8954f, 15.0f, 12.0f, 15.0f)
+                    curveTo(13.1046f, 15.0f, 14.0f, 14.1046f, 14.0f, 13.0f)
+                    close()
                     moveTo(12.0f, 2.0f)
-                    arcTo(4.0f, 4.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 8.0f, 6.0f)
-                    lineTo(8.0f, 13.0f)
-                    arcTo(4.0f, 4.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 16.0f, 13.0f)
+                    curveTo(9.79086f, 2.0f, 7.99999f, 3.79086f, 7.99999f, 6.0f)
+                    lineTo(7.99999f, 13.0f)
+                    curveTo(7.99999f, 15.2091f, 9.79086f, 17.0f, 12.0f, 17.0f)
+                    curveTo(14.2091f, 17.0f, 16.0f, 15.2091f, 16.0f, 13.0f)
                     lineTo(16.0f, 6.0f)
-                    arcTo(4.0f, 4.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 2.0f)
-                    moveTo(11.0f, 20.938f)
-                    arcTo(8.004f, 8.004f, 97.20004919071103f, isMoreThanHalf = false, isPositiveArc = true, 4.062f, 13.997999999999998f)
-                    curveTo(3.993f, 13.45f, 4.448f, 13.0f, 5.0f, 13.0f)
-                    curveTo(5.552f, 13.0f, 5.991f, 13.451f, 6.082f, 13.996f)
-                    arcTo(6.002f, 6.002f, 170.4029647399896f, isMoreThanHalf = false, isPositiveArc = false, 17.918f, 13.996f)
-                    curveTo(18.008f, 13.451f, 18.448f, 13.0f, 19.0f, 13.0f)
-                    curveTo(19.552f, 13.0f, 20.007f, 13.45f, 19.938f, 13.998f)
-                    arcTo(8.004f, 8.004f, 7.183535059246383f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 20.938f)
+                    curveTo(16.0f, 3.79086f, 14.2091f, 2.0f, 12.0f, 2.0f)
+                    close()
+                    moveTo(11.0f, 20.9381f)
+                    curveTo(7.38061f, 20.4868f, 4.51209f, 17.6177f, 4.06164f, 13.998f)
+                    curveTo(3.99344f, 13.45f, 4.44771f, 13.0f, 4.99999f, 13.0f)
+                    curveTo(5.55228f, 13.0f, 5.99126f, 13.4511f, 6.08225f, 13.9958f)
+                    curveTo(6.5566f, 16.8356f, 9.02554f, 19.0f, 12.0f, 19.0f)
+                    curveTo(14.9745f, 19.0f, 17.4434f, 16.8356f, 17.9177f, 13.9958f)
+                    curveTo(18.0087f, 13.4511f, 18.4477f, 13.0f, 19.0f, 13.0f)
+                    curveTo(19.5523f, 13.0f, 20.0066f, 13.45f, 19.9383f, 13.998f)
+                    curveTo(19.4879f, 17.6177f, 16.6194f, 20.4868f, 13.0f, 20.9381f)
                     lineTo(13.0f, 23.0f)
                     lineTo(11.0f, 23.0f)
+                    lineTo(11.0f, 20.9381f)
                     close()
                 }
             }.build().also {

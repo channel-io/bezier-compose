@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,31 +31,37 @@ val BezierIcons.ErrorTriangle: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(20.158f, 16.737f)
-                    lineTo(13.29f, 5.117f)
-                    arcTo(1.5f, 1.5f, 329.3915187863913f, isMoreThanHalf = false, isPositiveArc = false, 10.707999999999998f, 5.117f)
-                    lineTo(3.8409999999999984f, 16.737f)
-                    arcTo(1.5f, 1.5f, 210.57509359185138f, isMoreThanHalf = false, isPositiveArc = false, 5.134f, 19.0f)
-                    lineTo(18.866f, 19.0f)
-                    arcTo(1.5f, 1.5f, 90.02118974595606f, isMoreThanHalf = false, isPositiveArc = false, 20.158f, 16.737000000000002f)
-                    moveTo(15.013f, 4.099f)
-                    curveTo(13.658999999999999f, 1.8070000000000004f, 10.341999999999999f, 1.8070000000000004f, 8.987f, 4.099f)
-                    lineTo(2.12f, 15.72f)
-                    curveTo(0.742f, 18.053f, 2.424f, 21.0f, 5.134f, 21.0f)
-                    lineTo(18.866f, 21.0f)
-                    curveTo(21.576f, 21.0f, 23.258f, 18.053f, 21.88f, 15.719999999999999f)
+                    moveTo(20.1578f, 16.7369f)
+                    lineTo(13.2914f, 5.11679f)
+                    curveTo(12.7108f, 4.13424f, 11.2892f, 4.13425f, 10.7086f, 5.11679f)
+                    lineTo(3.84218f, 16.7369f)
+                    curveTo(3.25131f, 17.7368f, 3.97212f, 19.0f, 5.13357f, 19.0f)
+                    lineTo(18.8664f, 19.0f)
+                    curveTo(20.0279f, 19.0f, 20.7487f, 17.7368f, 20.1578f, 16.7369f)
                     close()
-                    moveTo(12.001f, 17.8f)
-                    arcTo(1.4f, 1.4f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 12.001f, 14.999f)
-                    arcTo(1.4f, 1.4f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 12.001f, 17.8f)
+                    moveTo(15.0132f, 4.09933f)
+                    curveTo(13.6585f, 1.80674f, 10.3415f, 1.80673f, 8.98676f, 4.09933f)
+                    lineTo(2.12033f, 15.7194f)
+                    curveTo(0.741644f, 18.0526f, 2.42352f, 21.0f, 5.13357f, 21.0f)
+                    lineTo(18.8664f, 21.0f)
+                    curveTo(21.5765f, 21.0f, 23.2584f, 18.0526f, 21.8797f, 15.7195f)
+                    lineTo(15.0132f, 4.09933f)
+                    close()
+                    moveTo(12.0005f, 17.8f)
+                    curveTo(11.2278f, 17.8f, 10.6f, 17.1733f, 10.6f, 16.4005f)
+                    curveTo(10.6f, 15.6267f, 11.2278f, 15.0f, 12.0005f, 15.0f)
+                    curveTo(12.7733f, 15.0f, 13.4f, 15.6267f, 13.4f, 16.4005f)
+                    curveTo(13.4f, 17.1733f, 12.7733f, 17.8f, 12.0005f, 17.8f)
+                    close()
                     moveTo(12.0f, 7.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 11.0f, 8.0f)
+                    curveTo(11.4477f, 7.0f, 11.0f, 7.44771f, 11.0f, 8.0f)
                     lineTo(11.0f, 13.0f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 13.0f, 13.0f)
+                    curveTo(11.0f, 13.5523f, 11.4477f, 14.0f, 12.0f, 14.0f)
+                    curveTo(12.5523f, 14.0f, 13.0f, 13.5523f, 13.0f, 13.0f)
                     lineTo(13.0f, 8.0f)
-                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 7.0f)
+                    curveTo(13.0f, 7.44771f, 12.5523f, 7.0f, 12.0f, 7.0f)
+                    close()
                 }
             }.build().also {
                 _errorTriangle = it

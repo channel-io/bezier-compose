@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,11 +31,13 @@ val BezierIcons.Dot: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(17.0f, 12.0f)
-                    arcTo(5.0f, 5.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 7.0f, 12.0f)
-                    arcTo(5.0f, 5.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 17.0f, 12.0f)
+                    moveTo(17.0002f, 12.0001f)
+                    curveTo(17.0002f, 14.7613f, 14.7615f, 17.0001f, 12.0002f, 17.0001f)
+                    curveTo(9.23896f, 17.0001f, 7.00021f, 14.7613f, 7.00021f, 12.0001f)
+                    curveTo(7.00021f, 9.23884f, 9.23896f, 7.00009f, 12.0002f, 7.00009f)
+                    curveTo(14.7615f, 7.00009f, 17.0002f, 9.23884f, 17.0002f, 12.0001f)
+                    close()
                 }
             }.build().also {
                 _dot = it

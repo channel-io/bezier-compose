@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,32 +31,37 @@ val BezierIcons.BrowserSafari: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(22.0f, 12.0f)
-                    curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
-                    curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
-                    curveTo(2.0f, 6.477f, 6.477f, 2.0f, 12.0f, 2.0f)
-                    curveTo(17.523f, 2.0f, 22.0f, 6.477f, 22.0f, 12.0f)
-                    moveTo(20.0f, 12.0f)
-                    arcTo(8.0f, 8.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = false, 4.0f, 12.0f)
-                    arcTo(8.0f, 8.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 20.0f, 12.0f)
-                    moveTo(9.286f, 14.716f)
-                    lineTo(12.916f, 12.915999999999999f)
-                    lineTo(12.923f, 12.902f)
-                    lineTo(11.485f, 11.443999999999999f)
-                    lineTo(11.099f, 11.078f)
-                    lineTo(11.086f, 11.084999999999999f)
+                    curveTo(22.0f, 17.523f, 17.5226f, 22.0f, 12.0f, 22.0f)
+                    curveTo(6.47672f, 22.0f, 2.0f, 17.5233f, 2.0f, 12.0f)
+                    curveTo(2.0f, 6.47672f, 6.47672f, 2.0f, 12.0f, 2.0f)
+                    curveTo(17.5226f, 2.0f, 22.0f, 6.47704f, 22.0f, 12.0f)
                     close()
-                    moveTo(10.48f, 10.129999999999999f)
-                    lineTo(16.604f, 7.093999999999999f)
-                    curveTo(16.797f, 6.997999999999999f, 17.003f, 7.204f, 16.907f, 7.395999999999999f)
-                    lineTo(13.872f, 13.52f)
-                    arcTo(0.78f, 0.78f, 26.50079461675215f, isMoreThanHalf = false, isPositiveArc = true, 13.522f, 13.87f)
-                    lineTo(7.399f, 16.906f)
-                    arcTo(0.226f, 0.226f, 63.55408789139505f, isMoreThanHalf = false, isPositiveArc = true, 7.096f, 16.602999999999998f)
-                    lineTo(10.131f, 10.479f)
-                    arcTo(0.78f, 0.78f, 206.55555734336875f, isMoreThanHalf = false, isPositiveArc = true, 10.48f, 10.129999999999999f)
+                    moveTo(20.0f, 12.0f)
+                    curveTo(20.0f, 7.58165f, 16.4181f, 4.0f, 12.0f, 4.0f)
+                    curveTo(7.58128f, 4.0f, 4.0f, 7.58128f, 4.0f, 12.0f)
+                    curveTo(4.0f, 16.4187f, 7.58128f, 20.0f, 12.0f, 20.0f)
+                    curveTo(16.4181f, 20.0f, 20.0f, 16.4184f, 20.0f, 12.0f)
+                    close()
+                    moveTo(9.28571f, 14.7161f)
+                    lineTo(12.9167f, 12.9151f)
+                    lineTo(12.9227f, 12.9021f)
+                    lineTo(11.4847f, 11.4441f)
+                    lineTo(11.0987f, 11.0781f)
+                    lineTo(11.0857f, 11.0851f)
+                    lineTo(9.28571f, 14.7161f)
+                    close()
+                    moveTo(10.4797f, 10.1301f)
+                    lineTo(16.6037f, 7.09413f)
+                    curveTo(16.7967f, 6.99813f, 17.0027f, 7.20313f, 16.9067f, 7.39613f)
+                    lineTo(13.8717f, 13.5201f)
+                    curveTo(13.7957f, 13.6721f, 13.6727f, 13.7951f, 13.5217f, 13.8701f)
+                    lineTo(7.39871f, 16.9061f)
+                    curveTo(7.20471f, 17.0021f, 6.99971f, 16.7971f, 7.09571f, 16.6031f)
+                    lineTo(10.1307f, 10.4791f)
+                    curveTo(10.2067f, 10.3281f, 10.3287f, 10.2051f, 10.4797f, 10.1301f)
+                    close()
                 }
             }.build().also {
                 _browserSafari = it

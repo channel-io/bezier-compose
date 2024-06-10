@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,35 +31,61 @@ val BezierIcons.Keypad: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(7.5f, 5.25f)
-                    arcTo(2.25f, 2.25f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 3.0f, 5.25f)
-                    arcTo(2.25f, 2.25f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 7.5f, 5.25f)
+                    curveTo(7.5f, 6.49264f, 6.49264f, 7.5f, 5.25f, 7.5f)
+                    curveTo(4.00736f, 7.5f, 3.0f, 6.49264f, 3.0f, 5.25f)
+                    curveTo(3.0f, 4.00736f, 4.00736f, 3.0f, 5.25f, 3.0f)
+                    curveTo(6.49264f, 3.0f, 7.5f, 4.00736f, 7.5f, 5.25f)
+                    close()
                     moveTo(7.5f, 18.75f)
-                    arcTo(2.25f, 2.25f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 3.0f, 18.75f)
-                    arcTo(2.25f, 2.25f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 7.5f, 18.75f)
+                    curveTo(7.5f, 19.9926f, 6.49264f, 21.0f, 5.25f, 21.0f)
+                    curveTo(4.00736f, 21.0f, 3.0f, 19.9926f, 3.0f, 18.75f)
+                    curveTo(3.0f, 17.5074f, 4.00736f, 16.5f, 5.25f, 16.5f)
+                    curveTo(6.49264f, 16.5f, 7.5f, 17.5074f, 7.5f, 18.75f)
+                    close()
                     moveTo(5.25f, 14.25f)
-                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 5.25f, 9.75f)
-                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 5.25f, 14.25f)
+                    curveTo(6.49264f, 14.25f, 7.5f, 13.2426f, 7.5f, 12.0f)
+                    curveTo(7.5f, 10.7574f, 6.49264f, 9.75f, 5.25f, 9.75f)
+                    curveTo(4.00736f, 9.75f, 3.0f, 10.7574f, 3.0f, 12.0f)
+                    curveTo(3.0f, 13.2426f, 4.00736f, 14.25f, 5.25f, 14.25f)
+                    close()
                     moveTo(14.25f, 5.25f)
-                    arcTo(2.25f, 2.25f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 9.75f, 5.25f)
-                    arcTo(2.25f, 2.25f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 14.25f, 5.25f)
+                    curveTo(14.25f, 6.49264f, 13.2426f, 7.5f, 12.0f, 7.5f)
+                    curveTo(10.7574f, 7.5f, 9.75f, 6.49264f, 9.75f, 5.25f)
+                    curveTo(9.75f, 4.00736f, 10.7574f, 3.0f, 12.0f, 3.0f)
+                    curveTo(13.2426f, 3.0f, 14.25f, 4.00736f, 14.25f, 5.25f)
+                    close()
                     moveTo(12.0f, 21.0f)
-                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 12.0f, 16.5f)
-                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 21.0f)
+                    curveTo(13.2426f, 21.0f, 14.25f, 19.9926f, 14.25f, 18.75f)
+                    curveTo(14.25f, 17.5074f, 13.2426f, 16.5f, 12.0f, 16.5f)
+                    curveTo(10.7574f, 16.5f, 9.75f, 17.5074f, 9.75f, 18.75f)
+                    curveTo(9.75f, 19.9926f, 10.7574f, 21.0f, 12.0f, 21.0f)
+                    close()
                     moveTo(14.25f, 12.0f)
-                    arcTo(2.25f, 2.25f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 9.75f, 12.0f)
-                    arcTo(2.25f, 2.25f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 14.25f, 12.0f)
+                    curveTo(14.25f, 13.2426f, 13.2426f, 14.25f, 12.0f, 14.25f)
+                    curveTo(10.7574f, 14.25f, 9.75f, 13.2426f, 9.75f, 12.0f)
+                    curveTo(9.75f, 10.7574f, 10.7574f, 9.75f, 12.0f, 9.75f)
+                    curveTo(13.2426f, 9.75f, 14.25f, 10.7574f, 14.25f, 12.0f)
+                    close()
                     moveTo(18.75f, 7.5f)
-                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 18.75f, 3.0f)
-                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 18.75f, 7.5f)
+                    curveTo(19.9926f, 7.5f, 21.0f, 6.49264f, 21.0f, 5.25f)
+                    curveTo(21.0f, 4.00736f, 19.9926f, 3.0f, 18.75f, 3.0f)
+                    curveTo(17.5074f, 3.0f, 16.5f, 4.00736f, 16.5f, 5.25f)
+                    curveTo(16.5f, 6.49264f, 17.5074f, 7.5f, 18.75f, 7.5f)
+                    close()
                     moveTo(21.0f, 18.75f)
-                    arcTo(2.25f, 2.25f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 16.5f, 18.75f)
-                    arcTo(2.25f, 2.25f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 21.0f, 18.75f)
+                    curveTo(21.0f, 19.9926f, 19.9926f, 21.0f, 18.75f, 21.0f)
+                    curveTo(17.5074f, 21.0f, 16.5f, 19.9926f, 16.5f, 18.75f)
+                    curveTo(16.5f, 17.5074f, 17.5074f, 16.5f, 18.75f, 16.5f)
+                    curveTo(19.9926f, 16.5f, 21.0f, 17.5074f, 21.0f, 18.75f)
+                    close()
                     moveTo(18.75f, 14.25f)
-                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 18.75f, 9.75f)
-                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 18.75f, 14.25f)
+                    curveTo(19.9926f, 14.25f, 21.0f, 13.2426f, 21.0f, 12.0f)
+                    curveTo(21.0f, 10.7574f, 19.9926f, 9.75f, 18.75f, 9.75f)
+                    curveTo(17.5074f, 9.75f, 16.5f, 10.7574f, 16.5f, 12.0f)
+                    curveTo(16.5f, 13.2426f, 17.5074f, 14.25f, 18.75f, 14.25f)
+                    close()
                 }
             }.build().also {
                 _keypad = it

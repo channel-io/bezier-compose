@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -34,9 +33,12 @@ val BezierIcons.VerticalBarBold: BezierIcon
                         strokeAlpha = 1.0f,
                 ) {
                     moveTo(10.5f, 5.5f)
-                    arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 13.5f, 5.5f)
+                    curveTo(10.5f, 4.67157f, 11.1716f, 4.0f, 12.0f, 4.0f)
+                    curveTo(12.8284f, 4.0f, 13.5f, 4.67157f, 13.5f, 5.5f)
                     lineTo(13.5f, 18.5f)
-                    arcTo(1.5f, 1.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 10.5f, 18.5f)
+                    curveTo(13.5f, 19.3284f, 12.8284f, 20.0f, 12.0f, 20.0f)
+                    curveTo(11.1716f, 20.0f, 10.5f, 19.3284f, 10.5f, 18.5f)
+                    lineTo(10.5f, 5.5f)
                     close()
                 }
             }.build().also {

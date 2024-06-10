@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,31 +31,35 @@ val BezierIcons.InboxAll: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(19.0f, 7.5f)
-                    lineTo(14.5f, 7.5f)
-                    arcTo(2.5f, 2.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 9.5f, 7.5f)
-                    lineTo(5.0f, 7.5f)
-                    lineTo(5.0f, 5.0f)
-                    lineTo(19.0f, 5.0f)
+                    moveTo(19.0002f, 7.5001f)
+                    lineTo(14.5002f, 7.5001f)
+                    curveTo(14.5002f, 8.8801f, 13.3812f, 10.0001f, 12.0002f, 10.0001f)
+                    curveTo(10.6192f, 10.0001f, 9.50021f, 8.8801f, 9.50021f, 7.5001f)
+                    lineTo(5.00021f, 7.5001f)
+                    lineTo(5.00021f, 5.0001f)
+                    lineTo(19.0002f, 5.0001f)
+                    lineTo(19.0002f, 7.5001f)
                     close()
-                    moveTo(19.0f, 14.5f)
-                    lineTo(14.5f, 14.5f)
-                    arcTo(2.5f, 2.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 9.5f, 14.5f)
-                    lineTo(5.0f, 14.5f)
-                    lineTo(5.0f, 12.0f)
-                    lineTo(19.0f, 12.0f)
+                    moveTo(19.0002f, 14.5001f)
+                    lineTo(14.5002f, 14.5001f)
+                    curveTo(14.5002f, 15.8801f, 13.3812f, 17.0001f, 12.0002f, 17.0001f)
+                    curveTo(10.6192f, 17.0001f, 9.50021f, 15.8801f, 9.50021f, 14.5001f)
+                    lineTo(5.00021f, 14.5001f)
+                    lineTo(5.00021f, 12.0001f)
+                    lineTo(19.0002f, 12.0001f)
+                    lineTo(19.0002f, 14.5001f)
                     close()
-                    moveTo(19.5f, 3.0f)
-                    lineTo(4.5f, 3.0f)
-                    curveTo(3.673f, 3.0f, 3.0f, 3.673f, 3.0f, 4.5f)
-                    lineTo(3.0f, 19.5f)
-                    curveTo(3.0f, 20.326999999999998f, 3.673f, 21.0f, 4.5f, 21.0f)
-                    lineTo(19.5f, 21.0f)
-                    curveTo(20.326999999999998f, 21.0f, 21.0f, 20.326999999999998f, 21.0f, 19.5f)
-                    lineTo(21.0f, 4.5f)
-                    curveTo(21.0f, 3.673f, 20.326999999999998f, 3.0f, 19.5f, 3.0f)
+                    moveTo(19.5002f, 3.0001f)
+                    lineTo(4.50021f, 3.0001f)
+                    curveTo(3.67321f, 3.0001f, 3.00021f, 3.6731f, 3.00021f, 4.5001f)
+                    lineTo(3.00021f, 19.5001f)
+                    curveTo(3.00021f, 20.3271f, 3.67321f, 21.0001f, 4.50021f, 21.0001f)
+                    lineTo(19.5002f, 21.0001f)
+                    curveTo(20.3272f, 21.0001f, 21.0002f, 20.3271f, 21.0002f, 19.5001f)
+                    lineTo(21.0002f, 4.5001f)
+                    curveTo(21.0002f, 3.6731f, 20.3272f, 3.0001f, 19.5002f, 3.0001f)
+                    close()
                 }
             }.build().also {
                 _inboxAll = it

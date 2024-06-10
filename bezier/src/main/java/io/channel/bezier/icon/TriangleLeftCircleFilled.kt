@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,28 +31,29 @@ val BezierIcons.TriangleLeftCircleFilled: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(13.808f, 7.356f)
-                    curveTo(13.823f, 7.356f, 13.836f, 7.362f, 13.850999999999999f, 7.364f)
-                    arcTo(0.3f, 0.3f, 276.26133941529577f, isMoreThanHalf = false, isPositiveArc = true, 13.998f, 7.422f)
-                    quadTo(14.020999999999999f, 7.436f, 14.039f, 7.457f)
-                    arcTo(0.28f, 0.28f, 314.7060068789848f, isMoreThanHalf = false, isPositiveArc = true, 14.122f, 7.652f)
-                    lineTo(14.122f, 16.371f)
-                    curveTo(14.122f, 16.450999999999997f, 14.086f, 16.514999999999997f, 14.039f, 16.566f)
-                    quadTo(14.020999999999999f, 16.584999999999997f, 13.999f, 16.601f)
-                    arcTo(0.3f, 0.3f, 53.237286093726254f, isMoreThanHalf = false, isPositiveArc = true, 13.851f, 16.659f)
-                    curveTo(13.836f, 16.660999999999998f, 13.823f, 16.668f, 13.808000000000002f, 16.666999999999998f)
-                    arcTo(0.3f, 0.3f, 91.6498062746004f, isMoreThanHalf = false, isPositiveArc = true, 13.63f, 16.601999999999997f)
-                    lineTo(8.4f, 12.241999999999997f)
-                    arcTo(0.3f, 0.3f, 129.79554135618025f, isMoreThanHalf = false, isPositiveArc = true, 8.4f, 11.780999999999997f)
-                    lineTo(13.63f, 7.420999999999997f)
-                    arcTo(0.3f, 0.3f, 231.52860023375789f, isMoreThanHalf = false, isPositiveArc = true, 13.808000000000002f, 7.355999999999996f)
-                    moveTo(12.0f, 2.0f)
-                    curveTo(6.477f, 2.0f, 2.0f, 6.478f, 2.0f, 12.0f)
-                    curveTo(2.0f, 17.522f, 6.477f, 22.0f, 12.0f, 22.0f)
-                    curveTo(17.523f, 22.0f, 22.0f, 17.522f, 22.0f, 12.0f)
-                    curveTo(22.0f, 6.4780000000000015f, 17.522f, 2.0f, 12.0f, 2.0f)
+                    moveTo(13.8083f, 7.35559f)
+                    curveTo(13.8233f, 7.35559f, 13.8363f, 7.36159f, 13.8513f, 7.36359f)
+                    curveTo(13.9053f, 7.36959f, 13.9553f, 7.38959f, 13.9983f, 7.42159f)
+                    curveTo(14.0133f, 7.43259f, 14.0273f, 7.44259f, 14.0393f, 7.45659f)
+                    curveTo(14.0863f, 7.50759f, 14.1223f, 7.57159f, 14.1223f, 7.65159f)
+                    lineTo(14.1223f, 16.3706f)
+                    curveTo(14.1223f, 16.4506f, 14.0863f, 16.5146f, 14.0393f, 16.5656f)
+                    curveTo(14.0273f, 16.5786f, 14.0133f, 16.5896f, 13.9993f, 16.6006f)
+                    curveTo(13.9553f, 16.6326f, 13.9053f, 16.6526f, 13.8513f, 16.6586f)
+                    curveTo(13.8363f, 16.6606f, 13.8233f, 16.6676f, 13.8083f, 16.6666f)
+                    curveTo(13.7463f, 16.6636f, 13.6843f, 16.6466f, 13.6303f, 16.6016f)
+                    lineTo(8.39929f, 12.2416f)
+                    curveTo(8.25529f, 12.1216f, 8.25529f, 11.9006f, 8.39929f, 11.7806f)
+                    lineTo(13.6303f, 7.42059f)
+                    curveTo(13.6843f, 7.37659f, 13.7463f, 7.35859f, 13.8083f, 7.35559f)
+                    close()
+                    moveTo(12.0003f, 2.00061f)
+                    curveTo(6.47731f, 2.00061f, 2.00031f, 6.47761f, 2.00031f, 12.0006f)
+                    curveTo(2.00031f, 17.5226f, 6.47731f, 22.0006f, 12.0003f, 22.0006f)
+                    curveTo(17.5223f, 22.0006f, 22.0003f, 17.5226f, 22.0003f, 12.0006f)
+                    curveTo(22.0003f, 6.47761f, 17.5223f, 2.00061f, 12.0003f, 2.00061f)
+                    close()
                 }
             }.build().also {
                 _triangleLeftCircleFilled = it

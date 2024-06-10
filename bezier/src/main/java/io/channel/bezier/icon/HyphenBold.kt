@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -34,11 +33,13 @@ val BezierIcons.HyphenBold: BezierIcon
                         strokeAlpha = 1.0f,
                 ) {
                     moveTo(5.0f, 12.0f)
-                    arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 6.5f, 10.5f)
+                    curveTo(5.0f, 11.1716f, 5.67157f, 10.5f, 6.5f, 10.5f)
                     lineTo(17.5f, 10.5f)
-                    arcTo(1.5f, 1.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 17.5f, 13.5f)
+                    curveTo(18.3284f, 10.5f, 19.0f, 11.1716f, 19.0f, 12.0f)
+                    curveTo(19.0f, 12.8284f, 18.3284f, 13.5f, 17.5f, 13.5f)
                     lineTo(6.5f, 13.5f)
-                    arcTo(1.5f, 1.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 5.0f, 12.0f)
+                    curveTo(5.67157f, 13.5f, 5.0f, 12.8284f, 5.0f, 12.0f)
+                    close()
                 }
             }.build().also {
                 _hyphenBold = it

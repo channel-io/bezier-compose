@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,20 +31,22 @@ val BezierIcons.DialogUp: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(6.0f, 6.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 5.0f, 7.0f)
+                    curveTo(5.44772f, 6.0f, 5.0f, 6.44772f, 5.0f, 7.0f)
                     lineTo(5.0f, 19.0f)
-                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 3.0f, 19.0f)
+                    curveTo(5.0f, 19.5523f, 4.55228f, 20.0f, 4.0f, 20.0f)
+                    curveTo(3.44772f, 20.0f, 3.0f, 19.5523f, 3.0f, 19.0f)
                     lineTo(3.0f, 7.0f)
-                    arcTo(3.0f, 3.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 6.0f, 4.0f)
+                    curveTo(3.0f, 5.34315f, 4.34315f, 4.0f, 6.0f, 4.0f)
                     lineTo(18.0f, 4.0f)
-                    arcTo(3.0f, 3.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 21.0f, 7.0f)
+                    curveTo(19.6569f, 4.0f, 21.0f, 5.34315f, 21.0f, 7.0f)
                     lineTo(21.0f, 19.0f)
-                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 19.0f, 19.0f)
+                    curveTo(21.0f, 19.5523f, 20.5523f, 20.0f, 20.0f, 20.0f)
+                    curveTo(19.4477f, 20.0f, 19.0f, 19.5523f, 19.0f, 19.0f)
                     lineTo(19.0f, 7.0f)
-                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 18.0f, 6.0f)
+                    curveTo(19.0f, 6.44772f, 18.5523f, 6.0f, 18.0f, 6.0f)
+                    lineTo(6.0f, 6.0f)
                     close()
                 }
 
@@ -55,13 +56,14 @@ val BezierIcons.DialogUp: BezierIcon
                         strokeAlpha = 1.0f,
                 ) {
                     moveTo(6.0f, 8.0f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 7.0f, 7.0f)
+                    curveTo(6.0f, 7.44772f, 6.44772f, 7.0f, 7.0f, 7.0f)
                     lineTo(17.0f, 7.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 18.0f, 8.0f)
+                    curveTo(17.5523f, 7.0f, 18.0f, 7.44772f, 18.0f, 8.0f)
                     lineTo(18.0f, 12.0f)
-                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 17.0f, 13.0f)
+                    curveTo(18.0f, 12.5523f, 17.5523f, 13.0f, 17.0f, 13.0f)
                     lineTo(7.0f, 13.0f)
-                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 6.0f, 12.0f)
+                    curveTo(6.44772f, 13.0f, 6.0f, 12.5523f, 6.0f, 12.0f)
+                    lineTo(6.0f, 8.0f)
                     close()
                 }
             }.build().also {

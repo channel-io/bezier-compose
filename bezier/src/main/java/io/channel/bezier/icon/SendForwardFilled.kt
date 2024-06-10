@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,20 +31,23 @@ val BezierIcons.SendForwardFilled: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(20.919f, 5.01f)
-                    lineTo(2.9190000000000005f, 5.01f)
-                    arcTo(1.0f, 1.0f, 269.94630457259603f, isMoreThanHalf = false, isPositiveArc = false, 2.1990000000000007f, 6.702999999999999f)
-                    lineTo(7.748000000000001f, 12.475999999999999f)
-                    lineTo(17.718000000000004f, 7.454999999999999f)
-                    lineTo(18.068000000000005f, 8.062f)
-                    lineTo(8.745000000000005f, 14.209999999999999f)
-                    lineTo(10.921000000000005f, 21.930999999999997f)
-                    arcTo(0.998f, 0.998f, 164.43539605599003f, isMoreThanHalf = false, isPositiveArc = false, 12.384000000000004f, 22.525999999999996f)
-                    curveTo(12.533000000000003f, 22.439999999999998f, 12.660000000000004f, 22.315999999999995f, 12.750000000000004f, 22.159999999999997f)
-                    lineTo(21.785000000000004f, 6.509999999999996f)
-                    arcTo(1.0f, 1.0f, 30.00000002134776f, isMoreThanHalf = false, isPositiveArc = false, 20.919000000000004f, 5.009999999999996f)
+                    moveTo(20.9186f, 5.01067f)
+                    lineTo(2.91895f, 5.01044f)
+                    curveTo(2.51794f, 5.00987f, 2.15508f, 5.24939f, 1.99895f, 5.61896f)
+                    curveTo(1.84146f, 5.98818f, 1.92039f, 6.41488f, 2.19802f, 6.70376f)
+                    lineTo(7.74779f, 12.4762f)
+                    lineTo(17.7176f, 7.45454f)
+                    lineTo(18.0686f, 8.06249f)
+                    lineTo(8.74519f, 14.2098f)
+                    lineTo(10.9214f, 21.9311f)
+                    curveTo(11.0307f, 22.3184f, 11.3609f, 22.6023f, 11.7599f, 22.6514f)
+                    curveTo(11.9807f, 22.6798f, 12.1991f, 22.6322f, 12.3836f, 22.5257f)
+                    curveTo(12.5326f, 22.4397f, 12.6604f, 22.3151f, 12.7501f, 22.1605f)
+                    lineTo(21.7846f, 6.51062f)
+                    curveTo(21.964f, 6.20147f, 21.9636f, 5.82068f, 21.7846f, 5.51065f)
+                    curveTo(21.6061f, 5.20148f, 21.2765f, 5.01069f, 20.9186f, 5.01067f)
+                    close()
                 }
             }.build().also {
                 _sendForwardFilled = it

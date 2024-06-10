@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,35 +31,39 @@ val BezierIcons.CallMissed: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(21.207f, 9.707f)
-                    arcTo(1.0f, 1.0f, 45.00865166283792f, isMoreThanHalf = false, isPositiveArc = true, 19.793f, 9.707f)
-                    lineTo(17.75f, 7.664f)
-                    lineTo(15.707f, 9.707f)
-                    arcTo(1.0f, 1.0f, 45.99574461357973f, isMoreThanHalf = false, isPositiveArc = true, 14.293000000000001f, 8.293000000000001f)
-                    lineTo(16.336000000000002f, 6.250000000000001f)
-                    lineTo(14.293000000000003f, 4.207000000000001f)
-                    arcTo(1.0f, 1.0f, 135.99574461357975f, isMoreThanHalf = false, isPositiveArc = true, 15.707000000000003f, 2.793000000000001f)
-                    lineTo(17.750000000000004f, 4.836000000000001f)
-                    lineTo(19.793000000000003f, 2.793000000000001f)
-                    arcTo(1.0f, 1.0f, 224.00425538642233f, isMoreThanHalf = true, isPositiveArc = true, 21.207000000000004f, 4.207000000000001f)
-                    lineTo(19.164f, 6.25f)
-                    lineTo(21.207f, 8.293f)
-                    arcTo(1.0f, 1.0f, 315.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 21.207f, 9.706999999999999f)
-                    moveTo(7.751f, 16.253f)
-                    curveTo(2.586f, 11.088f, 2.586f, 6.57f, 4.2f, 4.955f)
-                    curveTo(5.168f, 3.986f, 6.584f, 3.724f, 7.428000000000001f, 4.309f)
-                    curveTo(8.203000000000001f, 4.8260000000000005f, 9.365f, 6.283f, 9.365f, 7.537000000000001f)
-                    curveTo(9.365f, 8.294f, 8.807f, 8.944f, 8.347f, 9.48f)
-                    curveTo(8.022f, 9.859f, 7.7459999999999996f, 10.181000000000001f, 7.7509999999999994f, 10.443f)
-                    curveTo(7.762999999999999f, 11.074f, 8.458f, 12.718f, 9.872f, 14.132f)
-                    curveTo(11.286f, 15.546f, 12.93f, 16.241f, 13.562f, 16.253f)
-                    curveTo(13.822999999999999f, 16.258f, 14.145f, 15.983f, 14.524f, 15.657f)
-                    curveTo(15.059999999999999f, 15.197f, 15.710999999999999f, 14.639f, 16.467f, 14.639f)
-                    curveTo(17.721f, 14.639f, 19.177999999999997f, 15.800999999999998f, 19.695f, 16.576f)
-                    curveTo(20.28f, 17.42f, 20.018f, 18.836f, 19.049f, 19.804000000000002f)
-                    curveTo(17.435f, 21.418000000000003f, 12.916f, 21.418000000000003f, 7.7509999999999994f, 16.254f)
+                    moveTo(21.2071f, 9.70711f)
+                    curveTo(20.8166f, 10.0976f, 20.1834f, 10.0976f, 19.7929f, 9.70711f)
+                    lineTo(17.75f, 7.66421f)
+                    lineTo(15.7071f, 9.70711f)
+                    curveTo(15.3166f, 10.0976f, 14.6834f, 10.0976f, 14.2929f, 9.70711f)
+                    curveTo(13.9024f, 9.31658f, 13.9024f, 8.68342f, 14.2929f, 8.29289f)
+                    lineTo(16.3358f, 6.25f)
+                    lineTo(14.2929f, 4.20711f)
+                    curveTo(13.9024f, 3.81658f, 13.9024f, 3.18342f, 14.2929f, 2.79289f)
+                    curveTo(14.6834f, 2.40237f, 15.3166f, 2.40237f, 15.7071f, 2.79289f)
+                    lineTo(17.75f, 4.83579f)
+                    lineTo(19.7929f, 2.79289f)
+                    curveTo(20.1834f, 2.40237f, 20.8166f, 2.40237f, 21.2071f, 2.79289f)
+                    curveTo(21.5976f, 3.18342f, 21.5976f, 3.81658f, 21.2071f, 4.20711f)
+                    lineTo(19.1642f, 6.25f)
+                    lineTo(21.2071f, 8.29289f)
+                    curveTo(21.5976f, 8.68342f, 21.5976f, 9.31658f, 21.2071f, 9.70711f)
+                    close()
+                    moveTo(7.75088f, 16.2532f)
+                    curveTo(2.58593f, 11.0883f, 2.58593f, 6.56896f, 4.19998f, 4.95491f)
+                    curveTo(5.16841f, 3.98648f, 6.58425f, 3.72371f, 7.42807f, 4.30928f)
+                    curveTo(8.20282f, 4.82579f, 9.36494f, 6.28347f, 9.36493f, 7.53739f)
+                    curveTo(9.36493f, 8.29362f, 8.80701f, 8.94392f, 8.34719f, 9.47987f)
+                    curveTo(8.0219f, 9.85903f, 7.7457f, 10.181f, 7.75088f, 10.4427f)
+                    curveTo(7.76339f, 11.0743f, 8.45799f, 12.7177f, 9.8722f, 14.1319f)
+                    curveTo(11.2864f, 15.5461f, 12.9298f, 16.2407f, 13.5615f, 16.2532f)
+                    curveTo(13.8232f, 16.2584f, 14.1451f, 15.9822f, 14.5243f, 15.6569f)
+                    curveTo(15.0602f, 15.1971f, 15.7105f, 14.6392f, 16.4667f, 14.6392f)
+                    curveTo(17.7207f, 14.6392f, 19.1783f, 15.8013f, 19.6948f, 16.5761f)
+                    curveTo(20.2804f, 17.4199f, 20.0176f, 18.8357f, 19.0492f, 19.8042f)
+                    curveTo(17.4352f, 21.4182f, 12.9158f, 21.4182f, 7.75088f, 16.2532f)
+                    close()
                 }
             }.build().also {
                 _callMissed = it

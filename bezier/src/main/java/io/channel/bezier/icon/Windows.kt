@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,27 +31,30 @@ val BezierIcons.Windows: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(21.0f, 11.573f)
-                    lineTo(21.0f, 2.966f)
-                    lineTo(11.223f, 4.41f)
-                    lineTo(11.223f, 11.614f)
+                    moveTo(21.0002f, 11.5733f)
+                    lineTo(21.0002f, 2.96631f)
+                    lineTo(11.2232f, 4.41031f)
+                    lineTo(11.2232f, 11.6143f)
+                    lineTo(21.0002f, 11.5733f)
                     close()
-                    moveTo(3.0f, 5.626f)
-                    lineTo(10.361f, 4.538f)
-                    lineTo(10.361f, 11.618f)
-                    lineTo(3.0010000000000003f, 11.648f)
+                    moveTo(3.0005f, 5.62621f)
+                    lineTo(10.3615f, 4.53821f)
+                    lineTo(10.3615f, 11.6172f)
+                    lineTo(3.0005f, 11.6482f)
+                    lineTo(3.0005f, 5.62621f)
                     close()
-                    moveTo(3.0f, 18.513f)
-                    lineTo(3.0f, 12.421000000000003f)
-                    lineTo(10.361f, 12.451000000000002f)
-                    lineTo(10.361f, 19.544000000000004f)
+                    moveTo(3.0002f, 18.513f)
+                    lineTo(3.0002f, 12.421f)
+                    lineTo(10.3612f, 12.451f)
+                    lineTo(10.3612f, 19.544f)
+                    lineTo(3.0002f, 18.513f)
                     close()
-                    moveTo(21.0f, 21.034000000000002f)
-                    lineTo(11.223f, 19.665000000000003f)
-                    lineTo(11.223f, 12.455000000000002f)
-                    lineTo(21.0f, 12.496000000000002f)
+                    moveTo(20.9998f, 21.0341f)
+                    lineTo(11.2228f, 19.6651f)
+                    lineTo(11.2228f, 12.4551f)
+                    lineTo(20.9998f, 12.4961f)
+                    lineTo(20.9998f, 21.0341f)
                     close()
                 }
             }.build().also {

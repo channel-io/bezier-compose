@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,21 +31,21 @@ val BezierIcons.TrendingLeft: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(6.151f, 11.635f)
-                    lineTo(11.317f, 6.468999999999999f)
-                    arcTo(0.4f, 0.4f, 224.9681041109744f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 6.752f)
-                    lineTo(12.0f, 9.998999999999999f)
-                    lineTo(17.5f, 9.998999999999999f)
-                    arcTo(0.5f, 0.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 18.0f, 10.498999999999999f)
-                    lineTo(18.0f, 13.498999999999999f)
-                    arcTo(0.5f, 0.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 17.5f, 13.998999999999999f)
-                    lineTo(12.0f, 13.998999999999999f)
-                    lineTo(12.0f, 17.249f)
-                    arcTo(0.4f, 0.4f, 359.9549101409432f, isMoreThanHalf = false, isPositiveArc = true, 11.317f, 17.532f)
-                    lineTo(6.151f, 12.367f)
-                    arcTo(0.52f, 0.52f, 135.18599010267613f, isMoreThanHalf = false, isPositiveArc = true, 6.151f, 11.634f)
+                    moveTo(6.15107f, 11.6345f)
+                    lineTo(11.3171f, 6.46853f)
+                    curveTo(11.5691f, 6.21653f, 12.0001f, 6.39453f, 12.0001f, 6.75153f)
+                    lineTo(12.0001f, 9.99936f)
+                    lineTo(17.4996f, 9.99936f)
+                    curveTo(17.7756f, 9.99936f, 17.9996f, 10.2234f, 17.9996f, 10.4994f)
+                    lineTo(17.9996f, 13.4994f)
+                    curveTo(17.9996f, 13.7754f, 17.7756f, 13.9994f, 17.4996f, 13.9994f)
+                    lineTo(12.0001f, 13.9994f)
+                    lineTo(12.0001f, 17.2485f)
+                    curveTo(12.0001f, 17.6055f, 11.5691f, 17.7835f, 11.3171f, 17.5315f)
+                    lineTo(6.15107f, 12.3665f)
+                    curveTo(5.94907f, 12.1635f, 5.94907f, 11.8365f, 6.15107f, 11.6345f)
+                    close()
                 }
             }.build().also {
                 _trendingLeft = it

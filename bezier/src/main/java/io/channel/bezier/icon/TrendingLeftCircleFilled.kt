@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,26 +31,27 @@ val BezierIcons.TrendingLeftCircleFilled: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(2.0f, 12.0f)
                     curveTo(2.0f, 6.478f, 6.477f, 2.0f, 12.0f, 2.0f)
                     curveTo(17.523f, 2.0f, 22.0f, 6.478f, 22.0f, 12.0f)
-                    curveTo(22.0f, 17.522f, 17.523f, 22.0f, 12.0f, 22.0f)
+                    curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
                     curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
-                    moveTo(11.317f, 6.469f)
-                    lineTo(6.151f, 11.634f)
-                    arcTo(0.52f, 0.52f, 224.73640179187365f, isMoreThanHalf = false, isPositiveArc = false, 6.151f, 12.366f)
-                    lineTo(11.317f, 17.532f)
-                    arcTo(0.4f, 0.4f, 135.03231011641648f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 17.248f)
-                    lineTo(12.0f, 14.0f)
-                    lineTo(16.642f, 14.0f)
-                    curveTo(16.84f, 14.0f, 17.0f, 13.776f, 17.0f, 13.5f)
+                    close()
+                    moveTo(11.3171f, 6.4685f)
+                    lineTo(6.15107f, 11.6345f)
+                    curveTo(5.94907f, 11.8365f, 5.94907f, 12.1635f, 6.15107f, 12.3665f)
+                    lineTo(11.3171f, 17.5315f)
+                    curveTo(11.5691f, 17.7835f, 12.0001f, 17.6055f, 12.0001f, 17.2485f)
+                    lineTo(12.0001f, 14.0f)
+                    lineTo(16.6421f, 14.0f)
+                    curveTo(16.8397f, 14.0f, 17.0f, 13.776f, 17.0f, 13.5f)
                     lineTo(17.0f, 10.5f)
-                    curveTo(17.0f, 10.224f, 16.84f, 10.0f, 16.642f, 10.0f)
-                    lineTo(12.0f, 10.0f)
-                    lineTo(12.0f, 6.752f)
-                    arcTo(0.4f, 0.4f, 0.18862271096810787f, isMoreThanHalf = false, isPositiveArc = false, 11.317f, 6.468f)
+                    curveTo(17.0f, 10.224f, 16.8397f, 10.0f, 16.6421f, 10.0f)
+                    lineTo(12.0001f, 10.0f)
+                    lineTo(12.0001f, 6.7515f)
+                    curveTo(12.0001f, 6.3945f, 11.5691f, 6.2165f, 11.3171f, 6.4685f)
+                    close()
                 }
             }.build().also {
                 _trendingLeftCircleFilled = it

@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -33,17 +32,18 @@ val BezierIcons.CallOff: BezierIcon
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
                 ) {
-                    moveTo(22.5f, 13.478f)
-                    curveTo(22.5f, 11.196f, 19.304f, 8.0f, 12.0f, 8.0f)
-                    curveTo(4.6960000000000015f, 8.0f, 1.5f, 11.196f, 1.5f, 13.478f)
-                    curveTo(1.5f, 14.847999999999999f, 2.315f, 16.035f, 3.326f, 16.218f)
-                    curveTo(4.239f, 16.4f, 6.0920000000000005f, 16.191f, 6.978f, 15.304f)
-                    curveTo(7.891f, 14.391f, 7.436f, 12.546f, 7.891f, 12.109f)
-                    curveTo(8.347f, 11.67f, 10.0f, 11.0f, 12.0f, 11.0f)
-                    curveTo(14.0f, 11.0f, 15.653f, 11.67f, 16.109f, 12.109f)
-                    curveTo(16.565000000000005f, 12.548f, 16.109f, 14.391f, 17.022000000000002f, 15.304f)
-                    curveTo(17.908f, 16.191f, 19.761000000000003f, 16.4f, 20.674000000000003f, 16.217f)
-                    curveTo(21.684000000000005f, 16.035f, 22.500000000000004f, 14.846999999999998f, 22.500000000000004f, 13.477999999999998f)
+                    moveTo(22.5f, 13.4783f)
+                    curveTo(22.5f, 11.1957f, 19.3044f, 8.0f, 12.0f, 8.0f)
+                    curveTo(4.69565f, 8.0f, 1.49999f, 11.1957f, 1.5f, 13.4783f)
+                    curveTo(1.50001f, 14.8478f, 2.31536f, 16.0348f, 3.32609f, 16.2174f)
+                    curveTo(4.23913f, 16.4f, 6.09161f, 16.191f, 6.97826f, 15.3043f)
+                    curveTo(7.8913f, 14.3913f, 7.43581f, 12.5465f, 7.89131f, 12.1087f)
+                    curveTo(8.3468f, 11.6709f, 10.0f, 11.0f, 12.0f, 11.0f)
+                    curveTo(14.0f, 11.0f, 15.6532f, 11.6709f, 16.1087f, 12.1087f)
+                    curveTo(16.5642f, 12.5465f, 16.1087f, 14.3913f, 17.0217f, 15.3043f)
+                    curveTo(17.9084f, 16.191f, 19.7609f, 16.4f, 20.6739f, 16.2174f)
+                    curveTo(21.6847f, 16.0348f, 22.5f, 14.8478f, 22.5f, 13.4783f)
+                    close()
                 }
             }.build().also {
                 _callOff = it

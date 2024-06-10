@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,21 +31,14 @@ val BezierIcons.Play: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(8.581f, 5.073f)
-                    arcTo(1.0f, 1.0f, 305.5209368068365f, isMoreThanHalf = false, isPositiveArc = false, 7.0f, 5.886f)
-                    lineTo(7.0f, 18.114f)
-                    arcTo(1.0f, 1.0f, 179.94824667877901f, isMoreThanHalf = false, isPositiveArc = false, 8.581f, 18.927f)
-                    lineTo(17.141f, 12.814f)
-                    arcTo(1.0f, 1.0f, 54.48860382649843f, isMoreThanHalf = false, isPositiveArc = false, 17.141f, 11.186f)
-                    close()
-                    moveTo(5.0f, 5.886f)
-                    curveTo(5.0f, 3.446f, 7.758f, 2.0260000000000002f, 9.744f, 3.446f)
-                    lineTo(18.302999999999997f, 9.559000000000001f)
-                    arcTo(3.0f, 3.0f, 305.54426254560684f, isMoreThanHalf = false, isPositiveArc = true, 18.302999999999997f, 14.441f)
-                    lineTo(9.742999999999997f, 20.555f)
-                    curveTo(7.759f, 21.973f, 5.0f, 20.554f, 5.0f, 18.114f)
+                    moveTo(19.1279f, 10.752f)
+                    curveTo(20.0185f, 11.3457f, 20.0185f, 12.6544f, 19.1279f, 13.2481f)
+                    lineTo(8.33205f, 20.4453f)
+                    curveTo(7.33522f, 21.1099f, 6.0f, 20.3953f, 6.0f, 19.1973f)
+                    lineTo(6.0f, 4.80282f)
+                    curveTo(6.0f, 3.60477f, 7.33522f, 2.89018f, 8.33205f, 3.55474f)
+                    lineTo(19.1279f, 10.752f)
                     close()
                 }
             }.build().also {

@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,25 +31,27 @@ val BezierIcons.TriangleLeftCircle: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(4.0f, 12.0f)
-                    curveTo(4.0f, 16.411f, 7.59f, 20.0f, 12.0f, 20.0f)
-                    curveTo(16.41f, 20.0f, 20.0f, 16.411f, 20.0f, 12.0f)
-                    curveTo(20.0f, 7.588999999999999f, 16.411f, 4.0f, 12.0f, 4.0f)
-                    curveTo(7.588999999999999f, 4.0f, 4.0f, 7.59f, 4.0f, 12.0f)
-                    moveTo(12.0f, 22.0f)
-                    curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
-                    curveTo(2.0f, 6.477f, 6.477f, 2.0f, 12.0f, 2.0f)
-                    curveTo(17.523f, 2.0f, 22.0f, 6.477f, 22.0f, 12.0f)
-                    curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
-                    moveTo(8.4f, 11.78f)
-                    lineTo(13.63f, 7.420999999999999f)
-                    arcTo(0.3f, 0.3f, 230.20807185749317f, isMoreThanHalf = false, isPositiveArc = true, 14.122f, 7.651f)
-                    lineTo(14.122f, 16.371000000000002f)
-                    arcTo(0.3f, 0.3f, 0.09780556290756846f, isMoreThanHalf = false, isPositiveArc = true, 13.629999999999999f, 16.601000000000003f)
-                    lineTo(8.399999999999999f, 12.241000000000003f)
-                    arcTo(0.3f, 0.3f, 129.79554135618025f, isMoreThanHalf = false, isPositiveArc = true, 8.399999999999999f, 11.780000000000003f)
+                    moveTo(4.00018f, 12.0001f)
+                    curveTo(4.00018f, 16.4111f, 7.58918f, 20.0001f, 12.0002f, 20.0001f)
+                    curveTo(16.4112f, 20.0001f, 20.0002f, 16.4111f, 20.0002f, 12.0001f)
+                    curveTo(20.0002f, 7.58912f, 16.4112f, 4.00012f, 12.0002f, 4.00012f)
+                    curveTo(7.58918f, 4.00012f, 4.00018f, 7.58912f, 4.00018f, 12.0001f)
+                    close()
+                    moveTo(12.0002f, 22.0001f)
+                    curveTo(6.47718f, 22.0001f, 2.00018f, 17.5231f, 2.00018f, 12.0001f)
+                    curveTo(2.00018f, 6.47712f, 6.47718f, 2.00012f, 12.0002f, 2.00012f)
+                    curveTo(17.5232f, 2.00012f, 22.0002f, 6.47712f, 22.0002f, 12.0001f)
+                    curveTo(22.0002f, 17.5231f, 17.5232f, 22.0001f, 12.0002f, 22.0001f)
+                    close()
+                    moveTo(8.3995f, 11.78f)
+                    lineTo(13.6305f, 7.42104f)
+                    curveTo(13.8255f, 7.25804f, 14.1225f, 7.39704f, 14.1225f, 7.65104f)
+                    lineTo(14.1225f, 16.371f)
+                    curveTo(14.1225f, 16.625f, 13.8255f, 16.764f, 13.6305f, 16.601f)
+                    lineTo(8.3995f, 12.241f)
+                    curveTo(8.2555f, 12.122f, 8.2555f, 11.9f, 8.3995f, 11.78f)
+                    close()
                 }
             }.build().also {
                 _triangleLeftCircle = it

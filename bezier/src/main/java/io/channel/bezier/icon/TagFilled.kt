@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,22 +31,25 @@ val BezierIcons.TagFilled: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(13.0f, 2.515f)
-                    arcTo(1.0f, 1.0f, 269.98776339474546f, isMoreThanHalf = false, isPositiveArc = false, 12.293f, 2.8080000000000003f)
-                    lineTo(3.392999999999999f, 11.708f)
-                    arcTo(3.0f, 3.0f, 224.99134833716198f, isMoreThanHalf = false, isPositiveArc = false, 3.392999999999999f, 15.95f)
-                    lineTo(9.049999999999999f, 21.607f)
-                    arcTo(3.0f, 3.0f, 135.0048526342381f, isMoreThanHalf = false, isPositiveArc = false, 13.293f, 21.607f)
-                    lineTo(22.192999999999998f, 12.706999999999999f)
-                    arcTo(1.0f, 1.0f, 44.92760319898687f, isMoreThanHalf = false, isPositiveArc = false, 22.485f, 11.999999999999998f)
-                    lineTo(22.485f, 4.515f)
-                    arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 20.485f, 2.5149999999999997f)
+                    moveTo(13.0f, 2.51474f)
+                    curveTo(12.7348f, 2.51474f, 12.4804f, 2.6201f, 12.2929f, 2.80763f)
+                    lineTo(3.3934f, 11.7071f)
+                    curveTo(2.22183f, 12.8787f, 2.22183f, 14.7782f, 3.3934f, 15.9498f)
+                    lineTo(9.05025f, 21.6066f)
+                    curveTo(10.2218f, 22.7782f, 12.1213f, 22.7782f, 13.2929f, 21.6066f)
+                    lineTo(22.1924f, 12.7071f)
+                    curveTo(22.3799f, 12.5196f, 22.4853f, 12.2652f, 22.4853f, 12.0f)
+                    lineTo(22.4853f, 4.51474f)
+                    curveTo(22.4853f, 3.41017f, 21.5899f, 2.51474f, 20.4853f, 2.51474f)
+                    lineTo(13.0f, 2.51474f)
                     close()
-                    moveTo(19.0f, 8.0f)
-                    arcTo(1.999f, 1.999f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 15.0f, 8.0f)
-                    arcTo(2.0f, 2.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 19.0f, 8.0f)
+                    moveTo(19.0f, 7.99997f)
+                    curveTo(19.0f, 9.1053f, 18.1053f, 9.99997f, 17.0f, 9.99997f)
+                    curveTo(15.896f, 9.99997f, 15.0f, 9.1053f, 15.0f, 7.99997f)
+                    curveTo(15.0f, 6.89464f, 15.896f, 5.99997f, 17.0f, 5.99997f)
+                    curveTo(18.1053f, 5.99997f, 19.0f, 6.89464f, 19.0f, 7.99997f)
+                    close()
                 }
             }.build().also {
                 _tagFilled = it

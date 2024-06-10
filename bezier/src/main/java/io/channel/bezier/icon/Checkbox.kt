@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,33 +31,37 @@ val BezierIcons.Checkbox: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(16.0f, 5.0f)
                     lineTo(8.0f, 5.0f)
-                    arcTo(3.0f, 3.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 5.0f, 8.0f)
+                    curveTo(6.34315f, 5.0f, 5.0f, 6.34315f, 5.0f, 8.0f)
                     lineTo(5.0f, 16.0f)
-                    arcTo(3.0f, 3.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 8.0f, 19.0f)
+                    curveTo(5.0f, 17.6569f, 6.34315f, 19.0f, 8.0f, 19.0f)
                     lineTo(16.0f, 19.0f)
-                    arcTo(3.0f, 3.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 19.0f, 16.0f)
+                    curveTo(17.6569f, 19.0f, 19.0f, 17.6569f, 19.0f, 16.0f)
                     lineTo(19.0f, 8.0f)
-                    arcTo(3.0f, 3.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 16.0f, 5.0f)
-                    moveTo(8.0f, 3.0f)
-                    arcTo(5.0f, 5.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 3.0f, 8.0f)
-                    lineTo(3.0f, 16.0f)
-                    arcTo(5.0f, 5.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 8.0f, 21.0f)
-                    lineTo(16.0f, 21.0f)
-                    arcTo(5.0f, 5.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 21.0f, 16.0f)
-                    lineTo(21.0f, 8.0f)
-                    arcTo(5.0f, 5.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 16.0f, 3.0f)
+                    curveTo(19.0f, 6.34315f, 17.6569f, 5.0f, 16.0f, 5.0f)
                     close()
-                    moveTo(10.667f, 13.376f)
-                    lineTo(15.381f, 8.661999999999999f)
-                    arcTo(1.0f, 1.0f, 224.00425538642233f, isMoreThanHalf = true, isPositiveArc = true, 16.795f, 10.075999999999999f)
-                    lineTo(10.975000000000001f, 15.895999999999999f)
-                    arcTo(0.437f, 0.437f, 45.093683472396286f, isMoreThanHalf = false, isPositiveArc = true, 10.358f, 15.895999999999999f)
-                    lineTo(7.205f, 12.741999999999999f)
-                    arcTo(1.0f, 1.0f, 134.00425538642028f, isMoreThanHalf = true, isPositiveArc = true, 8.619f, 11.328f)
+                    moveTo(8.0f, 3.0f)
+                    curveTo(5.23858f, 3.0f, 3.0f, 5.23858f, 3.0f, 8.0f)
+                    lineTo(3.0f, 16.0f)
+                    curveTo(3.0f, 18.7614f, 5.23858f, 21.0f, 8.0f, 21.0f)
+                    lineTo(16.0f, 21.0f)
+                    curveTo(18.7614f, 21.0f, 21.0f, 18.7614f, 21.0f, 16.0f)
+                    lineTo(21.0f, 8.0f)
+                    curveTo(21.0f, 5.23858f, 18.7614f, 3.0f, 16.0f, 3.0f)
+                    lineTo(8.0f, 3.0f)
+                    close()
+                    moveTo(10.6666f, 13.3756f)
+                    lineTo(15.3806f, 8.66154f)
+                    curveTo(15.7712f, 8.27102f, 16.4043f, 8.27102f, 16.7948f, 8.66154f)
+                    curveTo(17.1854f, 9.05207f, 17.1854f, 9.68523f, 16.7948f, 10.0758f)
+                    lineTo(10.9754f, 15.8952f)
+                    curveTo(10.8048f, 16.0658f, 10.5283f, 16.0658f, 10.3578f, 15.8952f)
+                    lineTo(7.20499f, 12.7424f)
+                    curveTo(6.81447f, 12.3519f, 6.81447f, 11.7187f, 7.20499f, 11.3282f)
+                    curveTo(7.59552f, 10.9377f, 8.22868f, 10.9377f, 8.61921f, 11.3282f)
+                    lineTo(10.6666f, 13.3756f)
                     close()
                 }
             }.build().also {

@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,11 +31,13 @@ val BezierIcons.Bullet: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(14.0f, 12.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 10.0f, 12.0f)
-                    arcTo(2.0f, 2.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 14.0f, 12.0f)
+                    curveTo(14.0f, 13.1045f, 13.1045f, 14.0f, 12.0f, 14.0f)
+                    curveTo(10.8955f, 14.0f, 10.0f, 13.1045f, 10.0f, 12.0f)
+                    curveTo(10.0f, 10.8955f, 10.8955f, 10.0f, 12.0f, 10.0f)
+                    curveTo(13.1045f, 10.0f, 14.0f, 10.8955f, 14.0f, 12.0f)
+                    close()
                 }
             }.build().also {
                 _bullet = it

@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -33,24 +32,30 @@ val BezierIcons.MenuUnfold: BezierIcon
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
                 ) {
-                    moveTo(3.016f, 5.0f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 4.016f, 6.0f)
-                    lineTo(20.016f, 6.0f)
-                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 20.016f, 4.0f)
-                    lineTo(4.015999999999998f, 4.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 3.0159999999999982f, 5.0f)
-                    moveTo(12.0f, 12.0f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 13.0f, 13.0f)
-                    lineTo(20.0f, 13.0f)
-                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 20.0f, 11.0f)
-                    lineTo(13.0f, 11.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 12.0f)
-                    moveTo(21.016f, 19.0f)
-                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 20.016f, 20.0f)
-                    lineTo(13.015999999999998f, 20.0f)
-                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 13.015999999999998f, 18.0f)
-                    lineTo(20.016f, 18.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 21.016f, 19.0f)
+                    moveTo(3.01599f, 5.00009f)
+                    curveTo(3.01599f, 5.55238f, 3.46371f, 6.00009f, 4.01599f, 6.00009f)
+                    lineTo(20.016f, 6.00009f)
+                    curveTo(20.5683f, 6.00009f, 21.016f, 5.55238f, 21.016f, 5.00009f)
+                    curveTo(21.016f, 4.44781f, 20.5683f, 4.00009f, 20.016f, 4.00009f)
+                    lineTo(4.01599f, 4.00009f)
+                    curveTo(3.46371f, 4.00009f, 3.01599f, 4.44781f, 3.01599f, 5.00009f)
+                    close()
+                    moveTo(12.0f, 12.0001f)
+                    curveTo(12.0f, 12.5524f, 12.4477f, 13.0001f, 13.0f, 13.0001f)
+                    lineTo(20.0f, 13.0001f)
+                    curveTo(20.5523f, 13.0001f, 21.0f, 12.5524f, 21.0f, 12.0001f)
+                    curveTo(21.0f, 11.4478f, 20.5523f, 11.0001f, 20.0f, 11.0001f)
+                    lineTo(13.0f, 11.0001f)
+                    curveTo(12.4477f, 11.0001f, 12.0f, 11.4478f, 12.0f, 12.0001f)
+                    close()
+                    moveTo(21.016f, 19.0001f)
+                    curveTo(21.016f, 19.5524f, 20.5683f, 20.0001f, 20.016f, 20.0001f)
+                    lineTo(13.016f, 20.0001f)
+                    curveTo(12.4637f, 20.0001f, 12.016f, 19.5524f, 12.016f, 19.0001f)
+                    curveTo(12.016f, 18.4478f, 12.4637f, 18.0001f, 13.016f, 18.0001f)
+                    lineTo(20.016f, 18.0001f)
+                    curveTo(20.5683f, 18.0001f, 21.016f, 18.4478f, 21.016f, 19.0001f)
+                    close()
                 }
             }.build().also {
                 _menuUnfold = it

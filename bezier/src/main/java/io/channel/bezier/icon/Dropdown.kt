@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -33,12 +32,13 @@ val BezierIcons.Dropdown: BezierIcon
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
                 ) {
-                    moveTo(16.26f, 14.26f)
-                    arcTo(0.5f, 0.5f, 33.90126199686626f, isMoreThanHalf = false, isPositiveArc = true, 15.430000000000001f, 14.26f)
-                    lineTo(13.086000000000002f, 10.78f)
-                    arcTo(0.5f, 0.5f, 145.94412360716152f, isMoreThanHalf = false, isPositiveArc = true, 13.501000000000001f, 10.0f)
-                    lineTo(18.189f, 10.0f)
-                    arcTo(0.5f, 0.5f, 269.91358867113877f, isMoreThanHalf = false, isPositiveArc = true, 18.604f, 10.78f)
+                    moveTo(16.2596f, 14.2593f)
+                    curveTo(16.0614f, 14.5536f, 15.6284f, 14.5536f, 15.4302f, 14.2593f)
+                    lineTo(13.0861f, 10.7793f)
+                    curveTo(12.8624f, 10.4472f, 13.1004f, 10.0f, 13.5008f, 10.0f)
+                    lineTo(18.1889f, 10.0f)
+                    curveTo(18.5894f, 10.0f, 18.8273f, 10.4472f, 18.6036f, 10.7793f)
+                    lineTo(16.2596f, 14.2593f)
                     close()
                 }
 
@@ -46,26 +46,27 @@ val BezierIcons.Dropdown: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(1.0f, 8.0f)
-                    arcTo(3.0f, 3.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 4.0f, 5.0f)
+                    curveTo(1.0f, 6.34315f, 2.34315f, 5.0f, 4.0f, 5.0f)
                     lineTo(20.0f, 5.0f)
-                    arcTo(3.0f, 3.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 23.0f, 8.0f)
+                    curveTo(21.6569f, 5.0f, 23.0f, 6.34315f, 23.0f, 8.0f)
                     lineTo(23.0f, 16.0f)
-                    arcTo(3.0f, 3.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 20.0f, 19.0f)
+                    curveTo(23.0f, 17.6569f, 21.6569f, 19.0f, 20.0f, 19.0f)
                     lineTo(4.0f, 19.0f)
-                    arcTo(3.0f, 3.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 1.0f, 16.0f)
+                    curveTo(2.34315f, 19.0f, 1.0f, 17.6569f, 1.0f, 16.0f)
+                    lineTo(1.0f, 8.0f)
                     close()
                     moveTo(4.0f, 7.0f)
                     lineTo(20.0f, 7.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 21.0f, 8.0f)
+                    curveTo(20.5523f, 7.0f, 21.0f, 7.44771f, 21.0f, 8.0f)
                     lineTo(21.0f, 16.0f)
-                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 20.0f, 17.0f)
+                    curveTo(21.0f, 16.5523f, 20.5523f, 17.0f, 20.0f, 17.0f)
                     lineTo(4.0f, 17.0f)
-                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 3.0f, 16.0f)
+                    curveTo(3.44772f, 17.0f, 3.0f, 16.5523f, 3.0f, 16.0f)
                     lineTo(3.0f, 8.0f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 4.0f, 7.0f)
+                    curveTo(3.0f, 7.44772f, 3.44772f, 7.0f, 4.0f, 7.0f)
+                    close()
                 }
             }.build().also {
                 _dropdown = it

@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,20 +31,20 @@ val BezierIcons.WindowsClose: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(7.404f, 6.697f)
-                    lineTo(6.697f, 7.404f)
-                    lineTo(11.293f, 12.0f)
-                    lineTo(6.696999999999999f, 16.596f)
-                    lineTo(7.403999999999999f, 17.303f)
-                    lineTo(12.0f, 12.707f)
-                    lineTo(16.596f, 17.303f)
-                    lineTo(17.303f, 16.596f)
-                    lineTo(12.707f, 12.0f)
-                    lineTo(17.303f, 7.404f)
-                    lineTo(16.596f, 6.697f)
-                    lineTo(12.0f, 11.293f)
+                    moveTo(7.4038f, 6.6967f)
+                    lineTo(6.69669f, 7.40381f)
+                    lineTo(11.2929f, 12.0f)
+                    lineTo(6.69669f, 16.5962f)
+                    lineTo(7.4038f, 17.3033f)
+                    lineTo(12.0f, 12.7071f)
+                    lineTo(16.5962f, 17.3033f)
+                    lineTo(17.3033f, 16.5962f)
+                    lineTo(12.7071f, 12.0f)
+                    lineTo(17.3033f, 7.40381f)
+                    lineTo(16.5962f, 6.6967f)
+                    lineTo(12.0f, 11.2929f)
+                    lineTo(7.4038f, 6.6967f)
                     close()
                 }
             }.build().also {

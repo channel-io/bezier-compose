@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,25 +31,28 @@ val BezierIcons.CheckboxFilled: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(8.0f, 3.0f)
-                    arcTo(5.0f, 5.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 3.0f, 8.0f)
+                    curveTo(5.23858f, 3.0f, 3.0f, 5.23858f, 3.0f, 8.0f)
                     lineTo(3.0f, 16.0f)
-                    arcTo(5.0f, 5.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 8.0f, 21.0f)
+                    curveTo(3.0f, 18.7614f, 5.23858f, 21.0f, 8.0f, 21.0f)
                     lineTo(16.0f, 21.0f)
-                    arcTo(5.0f, 5.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 21.0f, 16.0f)
+                    curveTo(18.7614f, 21.0f, 21.0f, 18.7614f, 21.0f, 16.0f)
                     lineTo(21.0f, 8.0f)
-                    arcTo(5.0f, 5.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 16.0f, 3.0f)
+                    curveTo(21.0f, 5.23858f, 18.7614f, 3.0f, 16.0f, 3.0f)
+                    lineTo(8.0f, 3.0f)
                     close()
-                    moveTo(15.379999999999999f, 8.661999999999999f)
-                    lineTo(10.666999999999998f, 13.376f)
-                    lineTo(8.618999999999998f, 11.328f)
-                    arcTo(1.0f, 1.0f, 314.00425538642025f, isMoreThanHalf = false, isPositiveArc = false, 7.204999999999998f, 12.741999999999999f)
-                    lineTo(10.357999999999999f, 15.895f)
-                    curveTo(10.527999999999999f, 16.065f, 10.804999999999998f, 16.065f, 10.974999999999998f, 15.895f)
-                    lineTo(16.794999999999998f, 10.075f)
-                    arcTo(1.0f, 1.0f, 43.15966534909231f, isMoreThanHalf = false, isPositiveArc = false, 15.380999999999998f, 8.661999999999999f)
+                    moveTo(15.3806f, 8.66155f)
+                    lineTo(10.6666f, 13.3756f)
+                    lineTo(8.61922f, 11.3282f)
+                    curveTo(8.22869f, 10.9377f, 7.59553f, 10.9377f, 7.205f, 11.3282f)
+                    curveTo(6.81448f, 11.7187f, 6.81448f, 12.3519f, 7.205f, 12.7424f)
+                    lineTo(10.3578f, 15.8952f)
+                    curveTo(10.5283f, 16.0658f, 10.8048f, 16.0658f, 10.9754f, 15.8952f)
+                    lineTo(16.7949f, 10.0758f)
+                    curveTo(17.1854f, 9.68524f, 17.1854f, 9.05207f, 16.7949f, 8.66155f)
+                    curveTo(16.4043f, 8.27102f, 15.7712f, 8.27102f, 15.3806f, 8.66155f)
+                    close()
                 }
             }.build().also {
                 _checkboxFilled = it

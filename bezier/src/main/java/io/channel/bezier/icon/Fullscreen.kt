@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,39 +31,42 @@ val BezierIcons.Fullscreen: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(19.0f, 10.0f)
-                    lineTo(21.0f, 10.0f)
-                    lineTo(21.0f, 4.5f)
-                    curveTo(21.0f, 3.673f, 20.326999999999998f, 3.0f, 19.5f, 3.0f)
-                    lineTo(14.0f, 3.0f)
-                    lineTo(14.0f, 5.0f)
-                    lineTo(19.0f, 5.0f)
+                    moveTo(19.0002f, 10.0001f)
+                    lineTo(21.0002f, 10.0001f)
+                    lineTo(21.0002f, 4.50009f)
+                    curveTo(21.0002f, 3.67309f, 20.3272f, 3.00009f, 19.5002f, 3.00009f)
+                    lineTo(14.0002f, 3.00009f)
+                    lineTo(14.0002f, 5.00009f)
+                    lineTo(19.0002f, 5.00009f)
+                    lineTo(19.0002f, 10.0001f)
                     close()
-                    moveTo(14.0f, 21.0f)
-                    lineTo(19.5f, 21.0f)
-                    curveTo(20.326999999999998f, 21.0f, 21.0f, 20.326999999999998f, 21.0f, 19.5f)
-                    lineTo(21.0f, 14.0f)
-                    lineTo(19.0f, 14.0f)
-                    lineTo(19.0f, 19.0f)
-                    lineTo(14.0f, 19.0f)
+                    moveTo(14.0002f, 21.0001f)
+                    lineTo(19.5002f, 21.0001f)
+                    curveTo(20.3272f, 21.0001f, 21.0002f, 20.3271f, 21.0002f, 19.5001f)
+                    lineTo(21.0002f, 14.0001f)
+                    lineTo(19.0002f, 14.0001f)
+                    lineTo(19.0002f, 19.0001f)
+                    lineTo(14.0002f, 19.0001f)
+                    lineTo(14.0002f, 21.0001f)
                     close()
-                    moveTo(10.0f, 21.0f)
-                    lineTo(4.5f, 21.0f)
-                    curveTo(3.673f, 21.0f, 3.0f, 20.326999999999998f, 3.0f, 19.5f)
-                    lineTo(3.0f, 14.0f)
-                    lineTo(5.0f, 14.0f)
-                    lineTo(5.0f, 19.0f)
-                    lineTo(10.0f, 19.0f)
+                    moveTo(10.0002f, 21.0001f)
+                    lineTo(4.50018f, 21.0001f)
+                    curveTo(3.67318f, 21.0001f, 3.00018f, 20.3271f, 3.00018f, 19.5001f)
+                    lineTo(3.00018f, 14.0001f)
+                    lineTo(5.00018f, 14.0001f)
+                    lineTo(5.00018f, 19.0001f)
+                    lineTo(10.0002f, 19.0001f)
+                    lineTo(10.0002f, 21.0001f)
                     close()
-                    moveTo(3.0f, 10.0f)
-                    lineTo(5.0f, 10.0f)
-                    lineTo(5.0f, 5.0f)
-                    lineTo(10.0f, 5.0f)
-                    lineTo(10.0f, 3.0f)
-                    lineTo(4.5f, 3.0f)
-                    curveTo(3.673f, 3.0f, 3.0f, 3.673f, 3.0f, 4.5f)
+                    moveTo(3.00018f, 10.0001f)
+                    lineTo(5.00018f, 10.0001f)
+                    lineTo(5.00018f, 5.00009f)
+                    lineTo(10.0002f, 5.00009f)
+                    lineTo(10.0002f, 3.00009f)
+                    lineTo(4.50018f, 3.00009f)
+                    curveTo(3.67318f, 3.00009f, 3.00018f, 3.67309f, 3.00018f, 4.50009f)
+                    lineTo(3.00018f, 10.0001f)
                     close()
                 }
             }.build().also {

@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,20 +31,22 @@ val BezierIcons.ArrowUp: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(3.285f, 11.837f)
-                    arcTo(1.0f, 1.0f, 136.76216668213655f, isMoreThanHalf = false, isPositiveArc = false, 4.698f, 11.881f)
-                    lineTo(11.0f, 5.959f)
+                    moveTo(3.28481f, 11.8367f)
+                    curveTo(3.66302f, 12.2392f, 4.29589f, 12.2588f, 4.69835f, 11.8806f)
+                    lineTo(11.0f, 5.95864f)
                     lineTo(11.0f, 20.0f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 13.0f, 20.0f)
-                    lineTo(13.0f, 5.933f)
-                    lineTo(19.329f, 11.881f)
-                    arcTo(1.0f, 1.0f, 133.21767883821073f, isMoreThanHalf = false, isPositiveArc = false, 20.699f, 10.423f)
-                    lineTo(13.04f, 3.227f)
-                    arcTo(1.5f, 1.5f, 313.2356071489822f, isMoreThanHalf = false, isPositiveArc = false, 10.985f, 3.227f)
-                    lineTo(3.33f, 10.423f)
-                    arcTo(1.0f, 1.0f, 226.80139991888007f, isMoreThanHalf = false, isPositiveArc = false, 3.286f, 11.837f)
+                    curveTo(11.0f, 20.5523f, 11.4477f, 21.0f, 12.0f, 21.0f)
+                    curveTo(12.5523f, 21.0f, 13.0f, 20.5523f, 13.0f, 20.0f)
+                    lineTo(13.0f, 5.9332f)
+                    lineTo(19.3287f, 11.8806f)
+                    curveTo(19.7312f, 12.2588f, 20.364f, 12.2392f, 20.7423f, 11.8367f)
+                    curveTo(21.1205f, 11.4343f, 21.1008f, 10.8014f, 20.6983f, 10.4232f)
+                    lineTo(13.0408f, 3.22696f)
+                    curveTo(12.4634f, 2.68439f, 11.5637f, 2.68439f, 10.9863f, 3.22696f)
+                    lineTo(3.32872f, 10.4232f)
+                    curveTo(2.92626f, 10.8014f, 2.9066f, 11.4343f, 3.28481f, 11.8367f)
+                    close()
                 }
             }.build().also {
                 _arrowUp = it

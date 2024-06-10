@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,19 +31,31 @@ val BezierIcons.Voicemail: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(10.0f, 15.0f)
-                    arcTo(5.0f, 5.0f, 36.86989764584401f, isMoreThanHalf = true, isPositiveArc = false, 6.0f, 17.0f)
+                    moveTo(10.0004f, 15.0f)
+                    curveTo(10.6281f, 14.1643f, 11.0f, 13.1256f, 11.0f, 12.0f)
+                    curveTo(11.0f, 9.23858f, 8.76142f, 7.0f, 6.0f, 7.0f)
+                    curveTo(3.23858f, 7.0f, 1.0f, 9.23858f, 1.0f, 12.0f)
+                    curveTo(1.0f, 14.7614f, 3.23858f, 17.0f, 6.0f, 17.0f)
                     lineTo(18.0f, 17.0f)
-                    arcTo(5.0f, 5.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 14.0f, 15.0f)
+                    curveTo(20.7614f, 17.0f, 23.0f, 14.7614f, 23.0f, 12.0f)
+                    curveTo(23.0f, 9.23858f, 20.7614f, 7.0f, 18.0f, 7.0f)
+                    curveTo(15.2386f, 7.0f, 13.0f, 9.23858f, 13.0f, 12.0f)
+                    curveTo(13.0f, 13.1256f, 13.3719f, 14.1643f, 13.9996f, 15.0f)
+                    lineTo(10.0004f, 15.0f)
                     close()
                     moveTo(6.0f, 15.0f)
-                    arcTo(3.0f, 3.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 6.0f, 9.0f)
-                    arcTo(3.0f, 3.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 6.0f, 15.0f)
+                    curveTo(7.65685f, 15.0f, 9.0f, 13.6569f, 9.0f, 12.0f)
+                    curveTo(9.0f, 10.3431f, 7.65685f, 9.0f, 6.0f, 9.0f)
+                    curveTo(4.34315f, 9.0f, 3.0f, 10.3431f, 3.0f, 12.0f)
+                    curveTo(3.0f, 13.6569f, 4.34315f, 15.0f, 6.0f, 15.0f)
+                    close()
                     moveTo(18.0f, 15.0f)
-                    arcTo(3.0f, 3.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 18.0f, 9.0f)
-                    arcTo(3.0f, 3.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 18.0f, 15.0f)
+                    curveTo(19.6569f, 15.0f, 21.0f, 13.6569f, 21.0f, 12.0f)
+                    curveTo(21.0f, 10.3431f, 19.6569f, 9.0f, 18.0f, 9.0f)
+                    curveTo(16.3431f, 9.0f, 15.0f, 10.3431f, 15.0f, 12.0f)
+                    curveTo(15.0f, 13.6569f, 16.3431f, 15.0f, 18.0f, 15.0f)
+                    close()
                 }
             }.build().also {
                 _voicemail = it

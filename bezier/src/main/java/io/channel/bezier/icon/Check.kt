@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,15 +31,17 @@ val BezierIcons.Check: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(9.071f, 16.142f)
-                    lineTo(4.1209999999999996f, 11.192f)
-                    arcTo(1.0f, 1.0f, 315.99574461357975f, isMoreThanHalf = true, isPositiveArc = false, 2.707f, 12.606f)
-                    lineTo(8.364f, 18.262999999999998f)
-                    arcTo(1.0f, 1.0f, 134.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 9.778f, 18.262999999999998f)
-                    lineTo(20.846f, 7.194f)
-                    arcTo(1.0f, 1.0f, 45.995744613577585f, isMoreThanHalf = true, isPositiveArc = false, 19.432f, 5.78f)
+                    moveTo(9.07097f, 16.142f)
+                    lineTo(4.12097f, 11.192f)
+                    curveTo(3.73051f, 10.8015f, 3.09744f, 10.8015f, 2.70697f, 11.192f)
+                    curveTo(2.31651f, 11.5825f, 2.31651f, 12.2155f, 2.70697f, 12.606f)
+                    lineTo(8.36386f, 18.2629f)
+                    curveTo(8.75439f, 18.6534f, 9.38756f, 18.6534f, 9.77808f, 18.2629f)
+                    lineTo(20.8464f, 7.19439f)
+                    curveTo(21.2369f, 6.80393f, 21.2369f, 6.17086f, 20.8464f, 5.7804f)
+                    curveTo(20.456f, 5.38993f, 19.8229f, 5.38993f, 19.4324f, 5.7804f)
+                    lineTo(9.07097f, 16.142f)
                     close()
                 }
             }.build().also {
