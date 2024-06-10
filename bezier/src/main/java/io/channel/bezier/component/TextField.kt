@@ -53,6 +53,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
 import io.channel.bezier.icon.BookEditing
@@ -207,9 +208,9 @@ fun TextField(
                                                 },
                                         ),
                                 imageVector = if (isPasswordVisible) {
-                                    BezierIcon.View
+                                    BezierIcons.View.imageVector
                                 } else {
-                                    BezierIcon.ViewOff
+                                    BezierIcons.ViewOff.imageVector
                                 },
                                 contentDescription = null,
                                 tint = BezierTheme.colors.txtBlackDark,
@@ -233,7 +234,7 @@ fun TextField(
                                                     onValueChange(TextFieldValue())
                                                 },
                                         ),
-                                imageVector = BezierIcon.CancelCircleFilled,
+                                imageVector = BezierIcons.CancelCircleFilled.imageVector,
                                 contentDescription = null,
                                 tint = BezierTheme.colors.txtBlackDark,
                         )
@@ -372,7 +373,7 @@ private fun TextFieldPreview() = Column(Modifier.background(color = Color.White)
             leftContent = {
                 Icon(
                         modifier = Modifier.padding(2.dp),
-                        imageVector = BezierIcon.Search,
+                        imageVector = BezierIcons.Search.imageVector,
                         contentDescription = null,
                         tint = BezierTheme.colors.txtBlackDark,
                 )
@@ -385,7 +386,7 @@ private fun TextFieldPreview() = Column(Modifier.background(color = Color.White)
                             modifier = Modifier
                                     .padding(5.dp)
                                     .size(20.dp),
-                            imageVector = BezierIcon.ChevronDown,
+                            imageVector = BezierIcons.ChevronDown.imageVector,
                             contentDescription = null,
                             tint = BezierTheme.colors.txtBlackDark,
                     )
@@ -414,7 +415,7 @@ private fun TextFieldPreview() = Column(Modifier.background(color = Color.White)
             leftContent = {
                 Icon(
                         modifier = Modifier.padding(2.dp),
-                        imageVector = BezierIcon.Search,
+                        imageVector = BezierIcons.Search.imageVector,
                         contentDescription = null,
                         tint = BezierTheme.colors.txtBlackDark,
                 )
@@ -427,7 +428,7 @@ private fun TextFieldPreview() = Column(Modifier.background(color = Color.White)
                             modifier = Modifier
                                     .padding(5.dp)
                                     .size(20.dp),
-                            imageVector = BezierIcon.ChevronDown,
+                            imageVector = BezierIcons.ChevronDown.imageVector,
                             contentDescription = null,
                             tint = BezierTheme.colors.txtBlackDark,
                     )
@@ -450,7 +451,7 @@ private fun TextFieldPreview() = Column(Modifier.background(color = Color.White)
                 placeholder = { Text("String overload of TextField") },
                 leftContent = {
                     Icon(
-                            imageVector = BezierIcon.BookEditing,
+                            imageVector = BezierIcons.BookEditing.imageVector,
                             contentDescription = null,
                             tint = BezierTheme.colors.txtBlackDark,
                     )
@@ -470,7 +471,7 @@ private fun TextFieldPreview() = Column(Modifier.background(color = Color.White)
             leftContent = {
                 Icon(
                         modifier = Modifier.padding(2.dp),
-                        imageVector = BezierIcon.Search,
+                        imageVector = BezierIcons.Search.imageVector,
                         contentDescription = null,
                         tint = BezierTheme.colors.txtBlackDark,
                 )
@@ -483,7 +484,7 @@ private fun TextFieldPreview() = Column(Modifier.background(color = Color.White)
                             modifier = Modifier
                                     .padding(5.dp)
                                     .size(20.dp),
-                            imageVector = BezierIcon.ChevronDown,
+                            imageVector = BezierIcons.ChevronDown.imageVector,
                             contentDescription = null,
                             tint = BezierTheme.colors.txtBlackDark,
                     )
