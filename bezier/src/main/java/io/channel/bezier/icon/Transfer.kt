@@ -9,59 +9,61 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Transfer: ImageVector
-    get() {
-        return _transfer ?: ImageVector.Builder(
-                name = "Transfer",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(17.0f, 10.0686f)
-                lineTo(17.0f, 8.0f)
-                lineTo(5.0f, 8.0f)
-                curveTo(4.4477f, 8.0f, 4.0f, 7.5523f, 4.0f, 7.0f)
-                curveTo(4.0f, 6.4477f, 4.4477f, 6.0f, 5.0f, 6.0f)
-                lineTo(17.0f, 6.0f)
-                lineTo(17.0f, 3.9314f)
-                curveTo(17.0f, 3.2186f, 17.8617f, 2.8617f, 18.3657f, 3.3657f)
-                lineTo(21.2929f, 6.2929f)
-                curveTo(21.6834f, 6.6834f, 21.6834f, 7.3166f, 21.2929f, 7.7071f)
-                lineTo(18.3657f, 10.6343f)
-                curveTo(17.8617f, 11.1383f, 17.0f, 10.7813f, 17.0f, 10.0686f)
-                close()
-                moveTo(7.0f, 18.0f)
-                lineTo(7.0f, 20.0684f)
-                curveTo(7.0f, 20.7811f, 6.1383f, 21.138f, 5.6343f, 20.6341f)
-                lineTo(2.7071f, 17.7069f)
-                curveTo(2.3166f, 17.3163f, 2.3166f, 16.6832f, 2.7071f, 16.2927f)
-                lineTo(5.6343f, 13.3654f)
-                curveTo(6.1383f, 12.8615f, 7.0f, 13.2184f, 7.0f, 13.9311f)
-                lineTo(7.0f, 16.0f)
-                lineTo(19.0f, 16.0f)
-                curveTo(19.5523f, 16.0f, 20.0f, 16.4477f, 20.0f, 17.0f)
-                curveTo(20.0f, 17.5523f, 19.5523f, 18.0f, 19.0f, 18.0f)
-                lineTo(7.0f, 18.0f)
-                close()
+val BezierIcons.Transfer: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _transfer ?: ImageVector.Builder(
+                    name = "Transfer",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(17.0f, 10.0686f)
+                    lineTo(17.0f, 8.0f)
+                    lineTo(5.0f, 8.0f)
+                    curveTo(4.44772f, 8.0f, 4.0f, 7.55228f, 4.0f, 7.0f)
+                    curveTo(4.0f, 6.44772f, 4.44772f, 6.0f, 5.0f, 6.0f)
+                    lineTo(17.0f, 6.0f)
+                    lineTo(17.0f, 3.93137f)
+                    curveTo(17.0f, 3.21864f, 17.8617f, 2.86171f, 18.3657f, 3.36568f)
+                    lineTo(21.2929f, 6.29289f)
+                    curveTo(21.6834f, 6.68341f, 21.6834f, 7.31658f, 21.2929f, 7.7071f)
+                    lineTo(18.3657f, 10.6343f)
+                    curveTo(17.8617f, 11.1383f, 17.0f, 10.7813f, 17.0f, 10.0686f)
+                    close()
+                    moveTo(7.0f, 18.0f)
+                    lineTo(7.0f, 20.0684f)
+                    curveTo(7.0f, 20.7811f, 6.13829f, 21.138f, 5.63432f, 20.6341f)
+                    lineTo(2.70711f, 17.7069f)
+                    curveTo(2.31658f, 17.3163f, 2.31658f, 16.6832f, 2.70711f, 16.2927f)
+                    lineTo(5.63432f, 13.3654f)
+                    curveTo(6.13829f, 12.8615f, 7.0f, 13.2184f, 7.0f, 13.9311f)
+                    lineTo(7.0f, 16.0f)
+                    lineTo(19.0f, 16.0f)
+                    curveTo(19.5523f, 16.0f, 20.0f, 16.4477f, 20.0f, 17.0f)
+                    curveTo(20.0f, 17.5523f, 19.5523f, 18.0f, 19.0f, 18.0f)
+                    lineTo(7.0f, 18.0f)
+                    close()
+                }
+            }.build().also {
+                _transfer = it
             }
-        }.build().also {
-            _transfer = it
-        }
     }
+
 
 private var _transfer: ImageVector? = null
 
@@ -70,7 +72,7 @@ private var _transfer: ImageVector? = null
 private fun TransferIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Transfer,
+            imageVector = BezierIcons.Transfer.imageVector,
             contentDescription = null,
     )
 }

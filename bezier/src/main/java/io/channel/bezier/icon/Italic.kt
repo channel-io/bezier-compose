@@ -9,55 +9,57 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Italic: ImageVector
-    get() {
-        return io.channel.bezier.icon._italic ?: ImageVector.Builder(
-                name = "Italic",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(13.9776f, 3.0f)
-                lineTo(10.0f, 3.0f)
-                curveTo(9.4477f, 3.0f, 9.0f, 3.4477f, 9.0f, 4.0f)
-                curveTo(9.0f, 4.5523f, 9.4477f, 5.0f, 10.0f, 5.0f)
-                lineTo(12.7192f, 5.0f)
-                lineTo(9.2192f, 19.0f)
-                lineTo(6.0f, 19.0f)
-                curveTo(5.4477f, 19.0f, 5.0f, 19.4477f, 5.0f, 20.0f)
-                curveTo(5.0f, 20.5523f, 5.4477f, 21.0f, 6.0f, 21.0f)
-                lineTo(9.9791f, 21.0f)
-                curveTo(9.9936f, 21.0003f, 10.008f, 21.0003f, 10.0224f, 21.0f)
-                lineTo(14.0f, 21.0f)
-                curveTo(14.5523f, 21.0f, 15.0f, 20.5523f, 15.0f, 20.0f)
-                curveTo(15.0f, 19.4477f, 14.5523f, 19.0f, 14.0f, 19.0f)
-                lineTo(11.2808f, 19.0f)
-                lineTo(14.7808f, 5.0f)
-                lineTo(18.0f, 5.0f)
-                curveTo(18.5523f, 5.0f, 19.0f, 4.5523f, 19.0f, 4.0f)
-                curveTo(19.0f, 3.4477f, 18.5523f, 3.0f, 18.0f, 3.0f)
-                lineTo(14.0209f, 3.0f)
-                curveTo(14.0064f, 2.9997f, 13.992f, 2.9997f, 13.9776f, 3.0f)
-                close()
+val BezierIcons.Italic: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _italic ?: ImageVector.Builder(
+                    name = "Italic",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(13.9776f, 2.99999f)
+                    lineTo(10.0f, 2.99999f)
+                    curveTo(9.44772f, 2.99999f, 9.0f, 3.44771f, 9.0f, 3.99999f)
+                    curveTo(9.0f, 4.55228f, 9.44772f, 4.99999f, 10.0f, 4.99999f)
+                    lineTo(12.7192f, 4.99999f)
+                    lineTo(9.21922f, 19.0f)
+                    lineTo(6.0f, 19.0f)
+                    curveTo(5.44772f, 19.0f, 5.0f, 19.4477f, 5.0f, 20.0f)
+                    curveTo(5.0f, 20.5523f, 5.44772f, 21.0f, 6.0f, 21.0f)
+                    lineTo(9.97908f, 21.0f)
+                    curveTo(9.99357f, 21.0003f, 10.008f, 21.0003f, 10.0224f, 21.0f)
+                    lineTo(14.0f, 21.0f)
+                    curveTo(14.5523f, 21.0f, 15.0f, 20.5523f, 15.0f, 20.0f)
+                    curveTo(15.0f, 19.4477f, 14.5523f, 19.0f, 14.0f, 19.0f)
+                    lineTo(11.2808f, 19.0f)
+                    lineTo(14.7808f, 4.99999f)
+                    lineTo(18.0f, 4.99999f)
+                    curveTo(18.5523f, 4.99999f, 19.0f, 4.55228f, 19.0f, 3.99999f)
+                    curveTo(19.0f, 3.44771f, 18.5523f, 2.99999f, 18.0f, 2.99999f)
+                    lineTo(14.0209f, 2.99999f)
+                    curveTo(14.0064f, 2.99968f, 13.992f, 2.99968f, 13.9776f, 2.99999f)
+                    close()
+                }
+            }.build().also {
+                _italic = it
             }
-        }.build().also {
-            io.channel.bezier.icon._italic = it
-        }
     }
+
 
 private var _italic: ImageVector? = null
 
@@ -66,7 +68,7 @@ private var _italic: ImageVector? = null
 private fun ItalicIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Italic,
+            imageVector = BezierIcons.Italic.imageVector,
             contentDescription = null,
     )
 }

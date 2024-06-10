@@ -9,57 +9,62 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Tag: ImageVector
-    get() {
-        return io.channel.bezier.icon._tag ?: ImageVector.Builder(
-                name = "Tag",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(10.0467f, 19.6033f)
-                lineTo(19.9973f, 9.6528f)
-                lineTo(19.9973f, 3.9997f)
-                lineTo(14.3441f, 3.9997f)
-                lineTo(4.3935f, 13.9502f)
-                lineTo(10.0467f, 19.6033f)
-                close()
-                moveTo(2.6257f, 12.8893f)
-                lineTo(13.5162f, 2.0f)
-                lineTo(21.997f, 2.0f)
-                lineTo(21.997f, 10.4807f)
-                lineTo(11.1065f, 21.3711f)
-                curveTo(10.8236f, 21.654f, 10.4466f, 21.81f, 10.0467f, 21.81f)
-                lineTo(10.0457f, 21.81f)
-                curveTo(9.6447f, 21.81f, 9.2688f, 21.654f, 8.9858f, 21.3711f)
-                lineTo(2.6257f, 15.01f)
-                curveTo(2.0408f, 14.4251f, 2.0408f, 13.4743f, 2.6257f, 12.8893f)
-                close()
-                moveTo(18.6122f, 7.0282f)
-                curveTo(18.6122f, 7.8571f, 17.9413f, 8.528f, 17.1124f, 8.528f)
-                curveTo(16.2845f, 8.528f, 15.6126f, 7.8571f, 15.6126f, 7.0282f)
-                curveTo(15.6126f, 6.1994f, 16.2845f, 5.5285f, 17.1124f, 5.5285f)
-                curveTo(17.9413f, 5.5285f, 18.6122f, 6.1994f, 18.6122f, 7.0282f)
-                close()
+val BezierIcons.Tag: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _tag ?: ImageVector.Builder(
+                    name = "Tag",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(19.9706f, 11.0711f)
+                    lineTo(12.0711f, 18.9706f)
+                    curveTo(11.29f, 19.7516f, 10.0237f, 19.7516f, 9.24264f, 18.9706f)
+                    lineTo(5.0f, 14.7279f)
+                    curveTo(4.21895f, 13.9469f, 4.21895f, 12.6805f, 5.0f, 11.8995f)
+                    lineTo(12.8995f, 4.0f)
+                    lineTo(19.9706f, 4.0f)
+                    lineTo(19.9706f, 11.0711f)
+                    close()
+                    moveTo(11.4853f, 2.58579f)
+                    curveTo(11.8604f, 2.21071f, 12.3691f, 2.0f, 12.8995f, 2.0f)
+                    lineTo(19.9706f, 2.0f)
+                    curveTo(21.0751f, 2.0f, 21.9706f, 2.89543f, 21.9706f, 4.0f)
+                    lineTo(21.9706f, 11.0711f)
+                    curveTo(21.9706f, 11.6015f, 21.7598f, 12.1102f, 21.3848f, 12.4853f)
+                    lineTo(13.4853f, 20.3848f)
+                    curveTo(11.9232f, 21.9469f, 9.39052f, 21.9469f, 7.82842f, 20.3848f)
+                    lineTo(3.58578f, 16.1421f)
+                    curveTo(2.02369f, 14.58f, 2.02369f, 12.0474f, 3.58578f, 10.4853f)
+                    lineTo(11.4853f, 2.58579f)
+                    close()
+                    moveTo(18.4853f, 7.48523f)
+                    curveTo(18.4853f, 8.59056f, 17.5906f, 9.48523f, 16.4853f, 9.48523f)
+                    curveTo(15.3813f, 9.48523f, 14.4853f, 8.59056f, 14.4853f, 7.48523f)
+                    curveTo(14.4853f, 6.3799f, 15.3813f, 5.48523f, 16.4853f, 5.48523f)
+                    curveTo(17.5906f, 5.48523f, 18.4853f, 6.3799f, 18.4853f, 7.48523f)
+                    close()
+                }
+            }.build().also {
+                _tag = it
             }
-        }.build().also {
-            io.channel.bezier.icon._tag = it
-        }
     }
+
 
 private var _tag: ImageVector? = null
 
@@ -68,7 +73,7 @@ private var _tag: ImageVector? = null
 private fun TagIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Tag,
+            imageVector = BezierIcons.Tag.imageVector,
             contentDescription = null,
     )
 }

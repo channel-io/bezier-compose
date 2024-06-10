@@ -9,63 +9,65 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Badge: ImageVector
-    get() {
-        return io.channel.bezier.icon._badge ?: ImageVector.Builder(
-                name = "Badge",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0f, 3.0f)
-                curveTo(8.4101f, 3.0f, 5.5f, 5.9102f, 5.5f, 9.5f)
-                curveTo(5.5f, 13.0899f, 8.4101f, 16.0f, 12.0f, 16.0f)
-                curveTo(15.5899f, 16.0f, 18.5f, 13.0899f, 18.5f, 9.5f)
-                curveTo(18.5f, 5.9102f, 15.5899f, 3.0f, 12.0f, 3.0f)
-                close()
-                moveTo(16.0f, 17.0019f)
-                curveTo(18.6779f, 15.5711f, 20.5f, 12.7483f, 20.5f, 9.5f)
-                curveTo(20.5f, 4.8056f, 16.6944f, 1.0f, 12.0f, 1.0f)
-                curveTo(7.3056f, 1.0f, 3.5f, 4.8056f, 3.5f, 9.5f)
-                curveTo(3.5f, 12.7483f, 5.3221f, 15.5711f, 8.0f, 17.0019f)
-                lineTo(8.0f, 22.1629f)
-                curveTo(8.0f, 22.5412f, 8.4039f, 22.7825f, 8.7371f, 22.6031f)
-                lineTo(12.0f, 20.8462f)
-                lineTo(15.263f, 22.6031f)
-                curveTo(15.5961f, 22.7825f, 16.0f, 22.5412f, 16.0f, 22.1629f)
-                lineTo(16.0f, 17.0019f)
-                close()
-                moveTo(15.6965f, 7.2824f)
-                curveTo(16.0928f, 7.6671f, 16.1022f, 8.3002f, 15.7176f, 8.6965f)
-                lineTo(11.8352f, 12.6965f)
-                curveTo(11.6469f, 12.8905f, 11.388f, 13.0f, 11.1176f, 13.0f)
-                curveTo(10.8473f, 13.0f, 10.5884f, 12.8905f, 10.4001f, 12.6965f)
-                lineTo(8.2824f, 10.5147f)
-                curveTo(7.8978f, 10.1183f, 7.9072f, 9.4853f, 8.3035f, 9.1006f)
-                curveTo(8.6998f, 8.716f, 9.3329f, 8.7254f, 9.7176f, 9.1217f)
-                lineTo(11.1176f, 10.5642f)
-                lineTo(14.2824f, 7.3035f)
-                curveTo(14.6671f, 6.9072f, 15.3002f, 6.8978f, 15.6965f, 7.2824f)
-                close()
+val BezierIcons.Badge: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _badge ?: ImageVector.Builder(
+                    name = "Badge",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.0f, 3.0f)
+                    curveTo(8.41015f, 3.0f, 5.5f, 5.91015f, 5.5f, 9.5f)
+                    curveTo(5.5f, 13.0899f, 8.41015f, 16.0f, 12.0f, 16.0f)
+                    curveTo(15.5899f, 16.0f, 18.5f, 13.0899f, 18.5f, 9.5f)
+                    curveTo(18.5f, 5.91015f, 15.5899f, 3.0f, 12.0f, 3.0f)
+                    close()
+                    moveTo(16.0f, 17.0019f)
+                    curveTo(18.6779f, 15.5711f, 20.5f, 12.7483f, 20.5f, 9.5f)
+                    curveTo(20.5f, 4.80558f, 16.6944f, 1.0f, 12.0f, 1.0f)
+                    curveTo(7.30558f, 1.0f, 3.5f, 4.80558f, 3.5f, 9.5f)
+                    curveTo(3.5f, 12.7483f, 5.32211f, 15.5711f, 8.0f, 17.0019f)
+                    lineTo(8.0f, 22.1629f)
+                    curveTo(8.0f, 22.5412f, 8.40393f, 22.7825f, 8.73705f, 22.6031f)
+                    lineTo(12.0f, 20.8462f)
+                    lineTo(15.263f, 22.6031f)
+                    curveTo(15.5961f, 22.7825f, 16.0f, 22.5412f, 16.0f, 22.1629f)
+                    lineTo(16.0f, 17.0019f)
+                    close()
+                    moveTo(15.6965f, 7.28242f)
+                    curveTo(16.0928f, 7.66707f, 16.1022f, 8.30017f, 15.7176f, 8.69648f)
+                    lineTo(11.8352f, 12.6965f)
+                    curveTo(11.6469f, 12.8905f, 11.388f, 13.0f, 11.1176f, 13.0f)
+                    curveTo(10.8473f, 13.0f, 10.5884f, 12.8905f, 10.4001f, 12.6965f)
+                    lineTo(8.28242f, 10.5147f)
+                    curveTo(7.89777f, 10.1183f, 7.90722f, 9.48525f, 8.30353f, 9.1006f)
+                    curveTo(8.69983f, 8.71595f, 9.33293f, 8.7254f, 9.71758f, 9.12171f)
+                    lineTo(11.1176f, 10.5642f)
+                    lineTo(14.2824f, 7.30353f)
+                    curveTo(14.6671f, 6.90722f, 15.3002f, 6.89777f, 15.6965f, 7.28242f)
+                    close()
+                }
+            }.build().also {
+                _badge = it
             }
-        }.build().also {
-            io.channel.bezier.icon._badge = it
-        }
     }
+
 
 private var _badge: ImageVector? = null
 
@@ -74,7 +76,7 @@ private var _badge: ImageVector? = null
 private fun BadgeIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Badge,
+            imageVector = BezierIcons.Badge.imageVector,
             contentDescription = null,
     )
 }

@@ -15,78 +15,82 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.GooglePlay: ImageVector
-    get() {
-        return _googlePlay ?: ImageVector.Builder(
-                name = "GooglePlay",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0x66313234)),
-                    strokeLineWidth = 1f,
-                    strokeAlpha = 0.4f,
-            ) {
-                moveTo(13.0f, 12.0f)
-                lineTo(5.0739f, 19.5024f)
-                curveTo(5.3177f, 20.3632f, 6.1452f, 20.993f, 7.1278f, 20.993f)
-                curveTo(7.5193f, 20.993f, 7.8888f, 20.895f, 8.2064f, 20.7131f)
-                lineTo(8.2286f, 20.6991f)
-                lineTo(17.0795f, 15.8632f)
-                lineTo(13.0f, 12.0f)
-                close()
-            }
+val BezierIcons.GooglePlay: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _googlePlay ?: ImageVector.Builder(
+                    name = "GooglePlay",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0x66313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(13.0f, 12.0f)
+                    lineTo(5.07388f, 19.5024f)
+                    curveTo(5.31769f, 20.3632f, 6.14516f, 20.993f, 7.12777f, 20.993f)
+                    curveTo(7.51934f, 20.993f, 7.88875f, 20.895f, 8.20643f, 20.7131f)
+                    lineTo(8.2286f, 20.6991f)
+                    lineTo(17.0795f, 15.8632f)
+                    lineTo(13.0f, 12.0f)
+                    close()
+                }
 
-            path(
-                    fill = SolidColor(Color(0x99313234)),
-                    strokeLineWidth = 1f,
-                    strokeAlpha = 0.6f,
-            ) {
-                moveTo(20.8992f, 10.2503f)
-                lineTo(20.8918f, 10.2503f)
-                lineTo(17.0721f, 8.1438f)
-                lineTo(13.0f, 12.0f)
-                lineTo(17.0869f, 15.8701f)
-                lineTo(20.8918f, 13.7915f)
-                curveTo(21.5567f, 13.4486f, 22.0074f, 12.7838f, 22.0074f, 12.0209f)
-                curveTo(22.0074f, 11.2581f, 21.5641f, 10.5933f, 20.8992f, 10.2573f)
-                lineTo(20.8992f, 10.2503f)
-                close()
-            }
+                path(
+                        fill = SolidColor(Color(0x99313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(20.8992f, 10.2503f)
+                    lineTo(20.8918f, 10.2503f)
+                    lineTo(17.0721f, 8.1438f)
+                    lineTo(13.0f, 12.0f)
+                    lineTo(17.0869f, 15.8701f)
+                    lineTo(20.8918f, 13.7915f)
+                    curveTo(21.5567f, 13.4486f, 22.0074f, 12.7838f, 22.0074f, 12.0209f)
+                    curveTo(22.0074f, 11.2581f, 21.5641f, 10.5933f, 20.8992f, 10.2573f)
+                    lineTo(20.8992f, 10.2503f)
+                    close()
+                }
 
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(5.0739f, 4.4977f)
-                curveTo(5.0296f, 4.6656f, 5.0f, 4.8336f, 5.0f, 5.0156f)
-                lineTo(5.0f, 18.9915f)
-                curveTo(5.0f, 19.1734f, 5.0222f, 19.3414f, 5.0739f, 19.5093f)
-                lineTo(13.0f, 12.0f)
-                lineTo(5.0739f, 4.4977f)
-                close()
-            }
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(5.07388f, 4.49768f)
+                    curveTo(5.02955f, 4.66564f, 5.0f, 4.83361f, 5.0f, 5.01557f)
+                    lineTo(5.0f, 18.9915f)
+                    curveTo(5.0f, 19.1734f, 5.02216f, 19.3414f, 5.07388f, 19.5093f)
+                    lineTo(13.0f, 12.0f)
+                    lineTo(5.07388f, 4.49768f)
+                    close()
+                }
 
-            path(
-                    fill = SolidColor(Color(0xCC313234)),
-                    strokeLineWidth = 1f,
-                    strokeAlpha = 0.8f,
-            ) {
-                moveTo(13.0f, 12.0f)
-                lineTo(17.0742f, 8.1445f)
-                lineTo(8.2212f, 3.2869f)
-                curveTo(7.9035f, 3.105f, 7.5267f, 3.0f, 7.1204f, 3.0f)
-                curveTo(6.1452f, 3.0f, 5.3106f, 3.6501f, 5.0742f, 4.5039f)
-                lineTo(13.0f, 12.0f)
-                close()
+                path(
+                        fill = SolidColor(Color(0xCC313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(13.0f, 12.0f)
+                    lineTo(17.0742f, 8.14453f)
+                    lineTo(8.22121f, 3.28694f)
+                    curveTo(7.90352f, 3.10498f, 7.52673f, 3.0f, 7.12038f, 3.0f)
+                    curveTo(6.14516f, 3.0f, 5.31064f, 3.6501f, 5.07422f, 4.50391f)
+                    lineTo(13.0f, 12.0f)
+                    close()
+                }
+            }.build().also {
+                _googlePlay = it
             }
-        }.build().also {
-            _googlePlay = it
-        }
     }
+
 
 private var _googlePlay: ImageVector? = null
 
@@ -95,7 +99,7 @@ private var _googlePlay: ImageVector? = null
 private fun GooglePlayIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.GooglePlay,
+            imageVector = BezierIcons.GooglePlay.imageVector,
             contentDescription = null,
     )
 }

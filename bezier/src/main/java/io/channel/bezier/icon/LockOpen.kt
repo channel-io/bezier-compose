@@ -9,63 +9,65 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.LockOpen: ImageVector
-    get() {
-        return io.channel.bezier.icon._lockOpen ?: ImageVector.Builder(
-                name = "LockOpen",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(5.5002f, 9.0001f)
-                lineTo(16.0002f, 9.0001f)
-                lineTo(16.0002f, 7.0f)
-                curveTo(16.0002f, 4.7907f, 14.2093f, 3.0f, 12.0002f, 3.0f)
-                curveTo(10.7245f, 3.0f, 9.5514f, 3.5993f, 8.8f, 4.6003f)
-                lineTo(7.2004f, 3.3997f)
-                curveTo(8.3257f, 1.9005f, 10.0886f, 1.0f, 12.0002f, 1.0f)
-                curveTo(15.3138f, 1.0f, 18.0002f, 3.686f, 18.0002f, 7.0f)
-                lineTo(18.0002f, 9.0001f)
-                lineTo(18.5002f, 9.0001f)
-                curveTo(19.3285f, 9.0001f, 20.0002f, 9.6718f, 20.0002f, 10.5001f)
-                lineTo(20.0002f, 20.5001f)
-                curveTo(20.0002f, 21.3284f, 19.3285f, 22.0001f, 18.5002f, 22.0001f)
-                lineTo(5.5002f, 22.0001f)
-                curveTo(4.6719f, 22.0001f, 4.0002f, 21.3284f, 4.0002f, 20.5001f)
-                lineTo(4.0002f, 10.5001f)
-                curveTo(4.0002f, 9.6718f, 4.6719f, 9.0001f, 5.5002f, 9.0001f)
-                close()
-                moveTo(18.0002f, 11.0001f)
-                lineTo(18.0002f, 20.0001f)
-                lineTo(6.0002f, 20.0001f)
-                lineTo(6.0002f, 11.0001f)
-                lineTo(18.0002f, 11.0001f)
-                close()
-                moveTo(9.4982f, 14.5001f)
-                lineTo(14.4982f, 14.5001f)
-                lineTo(14.4982f, 16.5001f)
-                lineTo(9.4982f, 16.5001f)
-                lineTo(9.4982f, 14.5001f)
-                close()
+val BezierIcons.LockOpen: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _lockOpen ?: ImageVector.Builder(
+                    name = "LockOpen",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(5.5002f, 9.0001f)
+                    lineTo(16.0002f, 9.0001f)
+                    lineTo(16.0002f, 7.0f)
+                    curveTo(16.0002f, 4.79066f, 14.2093f, 3.0f, 12.0002f, 3.0f)
+                    curveTo(10.7245f, 3.0f, 9.55136f, 3.59927f, 8.79996f, 4.60032f)
+                    lineTo(7.20044f, 3.39968f)
+                    curveTo(8.32573f, 1.90053f, 10.0886f, 1.0f, 12.0002f, 1.0f)
+                    curveTo(15.3138f, 1.0f, 18.0002f, 3.68603f, 18.0002f, 7.0f)
+                    lineTo(18.0002f, 9.0001f)
+                    lineTo(18.5002f, 9.0001f)
+                    curveTo(19.3285f, 9.0001f, 20.0002f, 9.67181f, 20.0002f, 10.5001f)
+                    lineTo(20.0002f, 20.5001f)
+                    curveTo(20.0002f, 21.3284f, 19.3285f, 22.0001f, 18.5002f, 22.0001f)
+                    lineTo(5.5002f, 22.0001f)
+                    curveTo(4.67191f, 22.0001f, 4.0002f, 21.3284f, 4.0002f, 20.5001f)
+                    lineTo(4.0002f, 10.5001f)
+                    curveTo(4.0002f, 9.67181f, 4.67191f, 9.0001f, 5.5002f, 9.0001f)
+                    close()
+                    moveTo(18.0002f, 11.0001f)
+                    lineTo(18.0002f, 20.0001f)
+                    lineTo(6.0002f, 20.0001f)
+                    lineTo(6.0002f, 11.0001f)
+                    lineTo(18.0002f, 11.0001f)
+                    close()
+                    moveTo(9.4982f, 14.5001f)
+                    lineTo(14.4982f, 14.5001f)
+                    lineTo(14.4982f, 16.5001f)
+                    lineTo(9.4982f, 16.5001f)
+                    lineTo(9.4982f, 14.5001f)
+                    close()
+                }
+            }.build().also {
+                _lockOpen = it
             }
-        }.build().also {
-            io.channel.bezier.icon._lockOpen = it
-        }
     }
+
 
 private var _lockOpen: ImageVector? = null
 
@@ -74,7 +76,7 @@ private var _lockOpen: ImageVector? = null
 private fun LockOpenIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.LockOpen,
+            imageVector = BezierIcons.LockOpen.imageVector,
             contentDescription = null,
     )
 }

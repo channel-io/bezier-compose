@@ -9,39 +9,41 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Dot: ImageVector
-    get() {
-        return io.channel.bezier.icon._dot ?: ImageVector.Builder(
-                name = "Dot",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(17.0002f, 12.0001f)
-                curveTo(17.0002f, 14.7613f, 14.7615f, 17.0001f, 12.0002f, 17.0001f)
-                curveTo(9.239f, 17.0001f, 7.0002f, 14.7613f, 7.0002f, 12.0001f)
-                curveTo(7.0002f, 9.2388f, 9.239f, 7.0001f, 12.0002f, 7.0001f)
-                curveTo(14.7615f, 7.0001f, 17.0002f, 9.2388f, 17.0002f, 12.0001f)
-                close()
+val BezierIcons.Dot: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _dot ?: ImageVector.Builder(
+                    name = "Dot",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(17.0002f, 12.0001f)
+                    curveTo(17.0002f, 14.7613f, 14.7615f, 17.0001f, 12.0002f, 17.0001f)
+                    curveTo(9.23896f, 17.0001f, 7.00021f, 14.7613f, 7.00021f, 12.0001f)
+                    curveTo(7.00021f, 9.23884f, 9.23896f, 7.00009f, 12.0002f, 7.00009f)
+                    curveTo(14.7615f, 7.00009f, 17.0002f, 9.23884f, 17.0002f, 12.0001f)
+                    close()
+                }
+            }.build().also {
+                _dot = it
             }
-        }.build().also {
-            io.channel.bezier.icon._dot = it
-        }
     }
+
 
 private var _dot: ImageVector? = null
 
@@ -50,7 +52,7 @@ private var _dot: ImageVector? = null
 private fun DotIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Dot,
+            imageVector = BezierIcons.Dot.imageVector,
             contentDescription = null,
     )
 }

@@ -9,75 +9,77 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Flashlight: ImageVector
-    get() {
-        return io.channel.bezier.icon._flashlight ?: ImageVector.Builder(
-                name = "Flashlight",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(11.0f, 3.0f)
-                curveTo(11.0f, 3.5523f, 11.4477f, 4.0f, 12.0f, 4.0f)
-                curveTo(12.5523f, 4.0f, 13.0f, 3.5523f, 13.0f, 3.0f)
-                lineTo(13.0f, 1.0f)
-                curveTo(13.0f, 0.4477f, 12.5523f, 0.0f, 12.0f, 0.0f)
-                curveTo(11.4477f, 0.0f, 11.0f, 0.4477f, 11.0f, 1.0f)
-                lineTo(11.0f, 3.0f)
-                close()
-                moveTo(5.1213f, 5.5355f)
-                curveTo(5.5118f, 5.9261f, 6.145f, 5.9261f, 6.5355f, 5.5355f)
-                curveTo(6.9261f, 5.145f, 6.9261f, 4.5118f, 6.5355f, 4.1213f)
-                lineTo(5.1213f, 2.7071f)
-                curveTo(4.7308f, 2.3166f, 4.0976f, 2.3166f, 3.7071f, 2.7071f)
-                curveTo(3.3166f, 3.0976f, 3.3166f, 3.7308f, 3.7071f, 4.1213f)
-                lineTo(5.1213f, 5.5355f)
-                close()
-                moveTo(17.7071f, 5.5355f)
-                curveTo(17.3166f, 5.145f, 17.3166f, 4.5118f, 17.7071f, 4.1213f)
-                lineTo(19.1213f, 2.7071f)
-                curveTo(19.5118f, 2.3166f, 20.145f, 2.3166f, 20.5355f, 2.7071f)
-                curveTo(20.9261f, 3.0976f, 20.9261f, 3.7308f, 20.5355f, 4.1213f)
-                lineTo(19.1213f, 5.5355f)
-                curveTo(18.7308f, 5.9261f, 18.0976f, 5.9261f, 17.7071f, 5.5355f)
-                close()
-                moveTo(7.0002f, 8.0001f)
-                lineTo(17.0002f, 8.0001f)
-                curveTo(17.5522f, 8.0001f, 18.0002f, 8.4481f, 18.0002f, 9.0001f)
-                lineTo(18.0002f, 11.6671f)
-                curveTo(18.0002f, 11.8831f, 17.9302f, 12.0931f, 17.8002f, 12.2671f)
-                lineTo(15.2002f, 15.7331f)
-                curveTo(15.0702f, 15.9061f, 15.0002f, 16.1171f, 15.0002f, 16.3331f)
-                lineTo(15.0002f, 21.0001f)
-                curveTo(15.0002f, 21.5521f, 14.5522f, 22.0001f, 14.0002f, 22.0001f)
-                lineTo(10.0002f, 22.0001f)
-                curveTo(9.4482f, 22.0001f, 9.0002f, 21.5521f, 9.0002f, 21.0001f)
-                lineTo(9.0002f, 16.3331f)
-                curveTo(9.0002f, 16.1171f, 8.9302f, 15.9061f, 8.8002f, 15.7331f)
-                lineTo(6.2002f, 12.2671f)
-                curveTo(6.0702f, 12.0931f, 6.0002f, 11.8831f, 6.0002f, 11.6671f)
-                lineTo(6.0002f, 9.0001f)
-                curveTo(6.0002f, 8.4481f, 6.4482f, 8.0001f, 7.0002f, 8.0001f)
-                close()
+val BezierIcons.Flashlight: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _flashlight ?: ImageVector.Builder(
+                    name = "Flashlight",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(11.0f, 3.0f)
+                    curveTo(11.0f, 3.55228f, 11.4477f, 4.0f, 12.0f, 4.0f)
+                    curveTo(12.5523f, 4.0f, 13.0f, 3.55228f, 13.0f, 3.0f)
+                    lineTo(13.0f, 1.0f)
+                    curveTo(13.0f, 0.447715f, 12.5523f, 0.0f, 12.0f, 0.0f)
+                    curveTo(11.4477f, 0.0f, 11.0f, 0.447715f, 11.0f, 1.0f)
+                    lineTo(11.0f, 3.0f)
+                    close()
+                    moveTo(5.12132f, 5.53554f)
+                    curveTo(5.51185f, 5.92606f, 6.14501f, 5.92606f, 6.53554f, 5.53554f)
+                    curveTo(6.92606f, 5.14501f, 6.92606f, 4.51185f, 6.53554f, 4.12132f)
+                    lineTo(5.12132f, 2.70711f)
+                    curveTo(4.7308f, 2.31658f, 4.09763f, 2.31658f, 3.70711f, 2.70711f)
+                    curveTo(3.31659f, 3.09763f, 3.31659f, 3.7308f, 3.70711f, 4.12132f)
+                    lineTo(5.12132f, 5.53554f)
+                    close()
+                    moveTo(17.7071f, 5.53553f)
+                    curveTo(17.3166f, 5.14501f, 17.3166f, 4.51184f, 17.7071f, 4.12132f)
+                    lineTo(19.1213f, 2.70711f)
+                    curveTo(19.5118f, 2.31658f, 20.145f, 2.31658f, 20.5355f, 2.70711f)
+                    curveTo(20.9261f, 3.09763f, 20.9261f, 3.7308f, 20.5355f, 4.12132f)
+                    lineTo(19.1213f, 5.53553f)
+                    curveTo(18.7308f, 5.92606f, 18.0976f, 5.92606f, 17.7071f, 5.53553f)
+                    close()
+                    moveTo(7.00022f, 8.0001f)
+                    lineTo(17.0002f, 8.0001f)
+                    curveTo(17.5522f, 8.0001f, 18.0002f, 8.4481f, 18.0002f, 9.0001f)
+                    lineTo(18.0002f, 11.6671f)
+                    curveTo(18.0002f, 11.8831f, 17.9302f, 12.0931f, 17.8002f, 12.2671f)
+                    lineTo(15.2002f, 15.7331f)
+                    curveTo(15.0702f, 15.9061f, 15.0002f, 16.1171f, 15.0002f, 16.3331f)
+                    lineTo(15.0002f, 21.0001f)
+                    curveTo(15.0002f, 21.5521f, 14.5522f, 22.0001f, 14.0002f, 22.0001f)
+                    lineTo(10.0002f, 22.0001f)
+                    curveTo(9.44822f, 22.0001f, 9.00022f, 21.5521f, 9.00022f, 21.0001f)
+                    lineTo(9.00022f, 16.3331f)
+                    curveTo(9.00022f, 16.1171f, 8.93022f, 15.9061f, 8.80022f, 15.7331f)
+                    lineTo(6.20022f, 12.2671f)
+                    curveTo(6.07022f, 12.0931f, 6.00022f, 11.8831f, 6.00022f, 11.6671f)
+                    lineTo(6.00022f, 9.0001f)
+                    curveTo(6.00022f, 8.4481f, 6.44822f, 8.0001f, 7.00022f, 8.0001f)
+                    close()
+                }
+            }.build().also {
+                _flashlight = it
             }
-        }.build().also {
-            io.channel.bezier.icon._flashlight = it
-        }
     }
+
 
 private var _flashlight: ImageVector? = null
 
@@ -86,7 +88,7 @@ private var _flashlight: ImageVector? = null
 private fun FlashlightIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Flashlight,
+            imageVector = BezierIcons.Flashlight.imageVector,
             contentDescription = null,
     )
 }

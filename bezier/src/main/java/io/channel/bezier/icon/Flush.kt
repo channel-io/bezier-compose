@@ -9,63 +9,65 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Flush: ImageVector
-    get() {
-        return io.channel.bezier.icon._flush ?: ImageVector.Builder(
-                name = "Flush",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0006f, 7.4132f)
-                lineTo(9.8786f, 9.5352f)
-                lineTo(8.4646f, 8.1212f)
-                lineTo(10.5866f, 5.9992f)
-                lineTo(8.4646f, 3.8782f)
-                lineTo(9.8786f, 2.4642f)
-                lineTo(12.0006f, 4.5852f)
-                lineTo(14.1216f, 2.4642f)
-                lineTo(15.5356f, 3.8782f)
-                lineTo(13.4146f, 5.9992f)
-                lineTo(15.5356f, 8.1212f)
-                lineTo(14.1216f, 9.5352f)
-                lineTo(12.0006f, 7.4132f)
-                close()
-                moveTo(7.0f, 7.0f)
-                curveTo(7.0f, 6.4477f, 6.5523f, 6.0f, 6.0f, 6.0f)
-                curveTo(5.4477f, 6.0f, 5.0f, 6.4477f, 5.0f, 7.0f)
-                lineTo(5.0f, 18.0f)
-                curveTo(5.0f, 20.2091f, 6.7909f, 22.0f, 9.0f, 22.0f)
-                lineTo(15.0f, 22.0f)
-                curveTo(17.2091f, 22.0f, 19.0f, 20.2091f, 19.0f, 18.0f)
-                lineTo(19.0f, 7.0f)
-                curveTo(19.0f, 6.4477f, 18.5523f, 6.0f, 18.0f, 6.0f)
-                curveTo(17.4477f, 6.0f, 17.0f, 6.4477f, 17.0f, 7.0f)
-                lineTo(17.0f, 18.0f)
-                curveTo(17.0f, 19.1046f, 16.1046f, 20.0f, 15.0f, 20.0f)
-                lineTo(9.0f, 20.0f)
-                curveTo(7.8954f, 20.0f, 7.0f, 19.1046f, 7.0f, 18.0f)
-                lineTo(7.0f, 7.0f)
-                close()
+val BezierIcons.Flush: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _flush ?: ImageVector.Builder(
+                    name = "Flush",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.0006f, 7.4132f)
+                    lineTo(9.87858f, 9.5352f)
+                    lineTo(8.46458f, 8.1212f)
+                    lineTo(10.5866f, 5.9992f)
+                    lineTo(8.46458f, 3.8782f)
+                    lineTo(9.87858f, 2.4642f)
+                    lineTo(12.0006f, 4.5852f)
+                    lineTo(14.1216f, 2.4642f)
+                    lineTo(15.5356f, 3.8782f)
+                    lineTo(13.4146f, 5.9992f)
+                    lineTo(15.5356f, 8.1212f)
+                    lineTo(14.1216f, 9.5352f)
+                    lineTo(12.0006f, 7.4132f)
+                    close()
+                    moveTo(7.0f, 7.0f)
+                    curveTo(7.0f, 6.44772f, 6.55228f, 6.0f, 6.0f, 6.0f)
+                    curveTo(5.44772f, 6.0f, 5.0f, 6.44772f, 5.0f, 7.0f)
+                    lineTo(5.0f, 18.0f)
+                    curveTo(5.0f, 20.2091f, 6.79086f, 22.0f, 9.0f, 22.0f)
+                    lineTo(15.0f, 22.0f)
+                    curveTo(17.2091f, 22.0f, 19.0f, 20.2091f, 19.0f, 18.0f)
+                    lineTo(19.0f, 7.0f)
+                    curveTo(19.0f, 6.44772f, 18.5523f, 6.0f, 18.0f, 6.0f)
+                    curveTo(17.4477f, 6.0f, 17.0f, 6.44772f, 17.0f, 7.0f)
+                    lineTo(17.0f, 18.0f)
+                    curveTo(17.0f, 19.1046f, 16.1046f, 20.0f, 15.0f, 20.0f)
+                    lineTo(9.0f, 20.0f)
+                    curveTo(7.89543f, 20.0f, 7.0f, 19.1046f, 7.0f, 18.0f)
+                    lineTo(7.0f, 7.0f)
+                    close()
+                }
+            }.build().also {
+                _flush = it
             }
-        }.build().also {
-            io.channel.bezier.icon._flush = it
-        }
     }
+
 
 private var _flush: ImageVector? = null
 
@@ -74,7 +76,7 @@ private var _flush: ImageVector? = null
 private fun FlushIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Flush,
+            imageVector = BezierIcons.Flush.imageVector,
             contentDescription = null,
     )
 }

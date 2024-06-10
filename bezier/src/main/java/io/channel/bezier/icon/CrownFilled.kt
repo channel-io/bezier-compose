@@ -15,41 +15,45 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CrownFilled: ImageVector
-    get() {
-        return _crownFilled ?: ImageVector.Builder(
-                name = "CrownFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(2.2699f, 7.8893f)
-                lineTo(3.6321f, 17.4242f)
-                curveTo(3.8432f, 18.9022f, 5.109f, 20.0f, 6.6019f, 20.0f)
-                lineTo(17.3981f, 20.0f)
-                curveTo(18.8911f, 20.0f, 20.1568f, 18.9022f, 20.368f, 17.4242f)
-                lineTo(21.7301f, 7.8893f)
-                curveTo(21.8442f, 7.0908f, 21.0144f, 6.4928f, 20.2929f, 6.8535f)
-                lineTo(16.7896f, 8.6052f)
-                curveTo(16.3385f, 8.8307f, 15.7901f, 8.6851f, 15.5103f, 8.2654f)
-                lineTo(12.8321f, 4.248f)
-                curveTo(12.4362f, 3.6543f, 11.5638f, 3.6543f, 11.168f, 4.248f)
-                lineTo(8.4897f, 8.2654f)
-                curveTo(8.2099f, 8.6851f, 7.6615f, 8.8307f, 7.2104f, 8.6052f)
-                lineTo(3.7071f, 6.8535f)
-                curveTo(2.9856f, 6.4928f, 2.1558f, 7.0908f, 2.2699f, 7.8893f)
-                close()
+val BezierIcons.CrownFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _crownFilled ?: ImageVector.Builder(
+                    name = "CrownFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(2.26992f, 7.88934f)
+                    lineTo(3.63205f, 17.4242f)
+                    curveTo(3.84319f, 18.9022f, 5.10895f, 20.0f, 6.6019f, 20.0f)
+                    lineTo(17.3981f, 20.0f)
+                    curveTo(18.8911f, 20.0f, 20.1568f, 18.9022f, 20.368f, 17.4242f)
+                    lineTo(21.7301f, 7.88935f)
+                    curveTo(21.8442f, 7.09079f, 21.0144f, 6.49275f, 20.2929f, 6.8535f)
+                    lineTo(16.7896f, 8.60517f)
+                    curveTo(16.3385f, 8.83071f, 15.7901f, 8.68506f, 15.5103f, 8.26544f)
+                    lineTo(12.8321f, 4.24803f)
+                    curveTo(12.4362f, 3.6543f, 11.5638f, 3.6543f, 11.168f, 4.24803f)
+                    lineTo(8.48969f, 8.26544f)
+                    curveTo(8.20994f, 8.68506f, 7.66151f, 8.83071f, 7.21043f, 8.60517f)
+                    lineTo(3.70709f, 6.8535f)
+                    curveTo(2.98559f, 6.49275f, 2.15585f, 7.09079f, 2.26992f, 7.88934f)
+                    close()
+                }
+            }.build().also {
+                _crownFilled = it
             }
-        }.build().also {
-            _crownFilled = it
-        }
     }
+
 
 private var _crownFilled: ImageVector? = null
 
@@ -58,7 +62,7 @@ private var _crownFilled: ImageVector? = null
 private fun CrownFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CrownFilled,
+            imageVector = BezierIcons.CrownFilled.imageVector,
             contentDescription = null,
     )
 }

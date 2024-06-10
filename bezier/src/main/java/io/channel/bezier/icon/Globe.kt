@@ -9,69 +9,71 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Globe: ImageVector
-    get() {
-        return io.channel.bezier.icon._globe ?: ImageVector.Builder(
-                name = "Globe",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(15.3335f, 19.2627f)
-                curveTo(16.1525f, 17.5717f, 16.6315f, 15.2967f, 16.7385f, 12.9997f)
-                lineTo(19.9305f, 12.9997f)
-                curveTo(19.5805f, 15.7877f, 17.7925f, 18.1287f, 15.3335f, 19.2627f)
-                close()
-                moveTo(4.0695f, 12.9997f)
-                lineTo(7.2625f, 12.9997f)
-                curveTo(7.3705f, 15.2967f, 7.8495f, 17.5727f, 8.6685f, 19.2637f)
-                curveTo(6.2085f, 18.1307f, 4.4195f, 15.7877f, 4.0695f, 12.9997f)
-                close()
-                moveTo(8.6685f, 4.7357f)
-                curveTo(7.8495f, 6.4267f, 7.3705f, 8.7017f, 7.2625f, 10.9997f)
-                lineTo(4.0695f, 10.9997f)
-                curveTo(4.4195f, 8.2107f, 6.2085f, 5.8687f, 8.6685f, 4.7357f)
-                close()
-                moveTo(9.2625f, 10.9997f)
-                curveTo(9.4665f, 6.6967f, 10.9535f, 4.0007f, 12.0005f, 4.0007f)
-                curveTo(13.0485f, 4.0007f, 14.5345f, 6.6967f, 14.7385f, 10.9997f)
-                lineTo(9.2625f, 10.9997f)
-                close()
-                moveTo(12.0005f, 19.9987f)
-                curveTo(10.9535f, 19.9987f, 9.4665f, 17.3027f, 9.2625f, 12.9997f)
-                lineTo(14.7385f, 12.9997f)
-                curveTo(14.5345f, 17.3027f, 13.0485f, 19.9987f, 12.0005f, 19.9987f)
-                close()
-                moveTo(19.9305f, 10.9997f)
-                lineTo(16.7385f, 10.9997f)
-                curveTo(16.6315f, 8.7027f, 16.1525f, 6.4277f, 15.3335f, 4.7367f)
-                curveTo(17.7925f, 5.8707f, 19.5805f, 8.2117f, 19.9305f, 10.9997f)
-                close()
-                moveTo(12.0005f, 1.9997f)
-                curveTo(6.4855f, 1.9997f, 2.0005f, 6.4857f, 2.0005f, 11.9997f)
-                curveTo(2.0005f, 17.5137f, 6.4855f, 21.9997f, 12.0005f, 21.9997f)
-                curveTo(17.5145f, 21.9997f, 22.0005f, 17.5137f, 22.0005f, 11.9997f)
-                curveTo(22.0005f, 6.4857f, 17.5145f, 1.9997f, 12.0005f, 1.9997f)
-                close()
+val BezierIcons.Globe: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _globe ?: ImageVector.Builder(
+                    name = "Globe",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(15.3335f, 19.2627f)
+                    curveTo(16.1525f, 17.5717f, 16.6315f, 15.2967f, 16.7385f, 12.9997f)
+                    lineTo(19.9305f, 12.9997f)
+                    curveTo(19.5805f, 15.7877f, 17.7925f, 18.1287f, 15.3335f, 19.2627f)
+                    close()
+                    moveTo(4.06949f, 12.9997f)
+                    lineTo(7.26249f, 12.9997f)
+                    curveTo(7.37049f, 15.2967f, 7.84949f, 17.5727f, 8.66849f, 19.2637f)
+                    curveTo(6.20849f, 18.1307f, 4.41949f, 15.7877f, 4.06949f, 12.9997f)
+                    close()
+                    moveTo(8.66849f, 4.73569f)
+                    curveTo(7.84949f, 6.42669f, 7.37049f, 8.70169f, 7.26249f, 10.9997f)
+                    lineTo(4.06949f, 10.9997f)
+                    curveTo(4.41949f, 8.21069f, 6.20849f, 5.86869f, 8.66849f, 4.73569f)
+                    close()
+                    moveTo(9.26249f, 10.9997f)
+                    curveTo(9.46649f, 6.69669f, 10.9535f, 4.00069f, 12.0005f, 4.00069f)
+                    curveTo(13.0485f, 4.00069f, 14.5345f, 6.69669f, 14.7385f, 10.9997f)
+                    lineTo(9.26249f, 10.9997f)
+                    close()
+                    moveTo(12.0005f, 19.9987f)
+                    curveTo(10.9535f, 19.9987f, 9.46649f, 17.3027f, 9.26249f, 12.9997f)
+                    lineTo(14.7385f, 12.9997f)
+                    curveTo(14.5345f, 17.3027f, 13.0485f, 19.9987f, 12.0005f, 19.9987f)
+                    close()
+                    moveTo(19.9305f, 10.9997f)
+                    lineTo(16.7385f, 10.9997f)
+                    curveTo(16.6315f, 8.70269f, 16.1525f, 6.42769f, 15.3335f, 4.73669f)
+                    curveTo(17.7925f, 5.87069f, 19.5805f, 8.21169f, 19.9305f, 10.9997f)
+                    close()
+                    moveTo(12.0005f, 1.99969f)
+                    curveTo(6.48549f, 1.99969f, 2.00049f, 6.48569f, 2.00049f, 11.9997f)
+                    curveTo(2.00049f, 17.5137f, 6.48549f, 21.9997f, 12.0005f, 21.9997f)
+                    curveTo(17.5145f, 21.9997f, 22.0005f, 17.5137f, 22.0005f, 11.9997f)
+                    curveTo(22.0005f, 6.48569f, 17.5145f, 1.99969f, 12.0005f, 1.99969f)
+                    close()
+                }
+            }.build().also {
+                _globe = it
             }
-        }.build().also {
-            io.channel.bezier.icon._globe = it
-        }
     }
+
 
 private var _globe: ImageVector? = null
 
@@ -80,7 +82,7 @@ private var _globe: ImageVector? = null
 private fun GlobeIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Globe,
+            imageVector = BezierIcons.Globe.imageVector,
             contentDescription = null,
     )
 }

@@ -15,40 +15,44 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ArrowDownSmall: ImageVector
-    get() {
-        return io.channel.bezier.icon._arrowDownSmall ?: ImageVector.Builder(
-                name = "ArrowDownSmall",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(12.0f, 5.0f)
-                curveTo(11.4477f, 5.0f, 11.0f, 5.4477f, 11.0f, 6.0f)
-                lineTo(11.0f, 15.5858f)
-                lineTo(7.2071f, 11.7929f)
-                curveTo(6.8166f, 11.4024f, 6.1834f, 11.4024f, 5.7929f, 11.7929f)
-                curveTo(5.4024f, 12.1834f, 5.4024f, 12.8166f, 5.7929f, 13.2071f)
-                lineTo(11.2929f, 18.7071f)
-                curveTo(11.6834f, 19.0976f, 12.3166f, 19.0976f, 12.7071f, 18.7071f)
-                lineTo(18.2071f, 13.2071f)
-                curveTo(18.5976f, 12.8166f, 18.5976f, 12.1834f, 18.2071f, 11.7929f)
-                curveTo(17.8166f, 11.4024f, 17.1834f, 11.4024f, 16.7929f, 11.7929f)
-                lineTo(13.0f, 15.5858f)
-                lineTo(13.0f, 6.0f)
-                curveTo(13.0f, 5.4477f, 12.5523f, 5.0f, 12.0f, 5.0f)
-                close()
+val BezierIcons.ArrowDownSmall: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _arrowDownSmall ?: ImageVector.Builder(
+                    name = "ArrowDownSmall",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.0f, 5.0f)
+                    curveTo(11.4477f, 5.0f, 11.0f, 5.44772f, 11.0f, 6.0f)
+                    lineTo(11.0f, 15.5858f)
+                    lineTo(7.20711f, 11.7929f)
+                    curveTo(6.81658f, 11.4024f, 6.18342f, 11.4024f, 5.79289f, 11.7929f)
+                    curveTo(5.40237f, 12.1834f, 5.40237f, 12.8166f, 5.79289f, 13.2071f)
+                    lineTo(11.2929f, 18.7071f)
+                    curveTo(11.6834f, 19.0976f, 12.3166f, 19.0976f, 12.7071f, 18.7071f)
+                    lineTo(18.2071f, 13.2071f)
+                    curveTo(18.5976f, 12.8166f, 18.5976f, 12.1834f, 18.2071f, 11.7929f)
+                    curveTo(17.8166f, 11.4024f, 17.1834f, 11.4024f, 16.7929f, 11.7929f)
+                    lineTo(13.0f, 15.5858f)
+                    lineTo(13.0f, 6.0f)
+                    curveTo(13.0f, 5.44772f, 12.5523f, 5.0f, 12.0f, 5.0f)
+                    close()
+                }
+            }.build().also {
+                _arrowDownSmall = it
             }
-        }.build().also {
-            io.channel.bezier.icon._arrowDownSmall = it
-        }
     }
+
 
 private var _arrowDownSmall: ImageVector? = null
 
@@ -57,7 +61,7 @@ private var _arrowDownSmall: ImageVector? = null
 private fun ArrowDownSmallIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ArrowDownSmall,
+            imageVector = BezierIcons.ArrowDownSmall.imageVector,
             contentDescription = null,
     )
 }

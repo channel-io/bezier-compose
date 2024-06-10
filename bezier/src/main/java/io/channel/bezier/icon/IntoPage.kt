@@ -9,100 +9,103 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.IntoPage: ImageVector
-    get() {
-        return io.channel.bezier.icon._intoPage ?: ImageVector.Builder(
-                name = "IntoPage",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(13.6428f, 21.0f)
-                lineTo(12.0f, 21.0f)
-                lineTo(12.0f, 19.0f)
-                lineTo(13.6f, 19.0f)
-                curveTo(14.7366f, 19.0f, 15.5289f, 18.9992f, 16.1458f, 18.9488f)
-                curveTo(16.7509f, 18.8994f, 17.0986f, 18.8072f, 17.362f, 18.673f)
-                curveTo(17.9265f, 18.3854f, 18.3854f, 17.9265f, 18.673f, 17.362f)
-                curveTo(18.8072f, 17.0986f, 18.8994f, 16.7509f, 18.9488f, 16.1458f)
-                curveTo(18.9992f, 15.5289f, 19.0f, 14.7366f, 19.0f, 13.6f)
-                lineTo(19.0f, 10.4f)
-                curveTo(19.0f, 9.2634f, 18.9992f, 8.4711f, 18.9488f, 7.8542f)
-                curveTo(18.8994f, 7.2491f, 18.8072f, 6.9014f, 18.673f, 6.638f)
-                curveTo(18.3854f, 6.0735f, 17.9265f, 5.6146f, 17.362f, 5.327f)
-                curveTo(17.0986f, 5.1928f, 16.7509f, 5.1006f, 16.1458f, 5.0512f)
-                curveTo(15.5289f, 5.0008f, 14.7366f, 5.0f, 13.6f, 5.0f)
-                lineTo(10.4f, 5.0f)
-                curveTo(9.2634f, 5.0f, 8.4711f, 5.0008f, 7.8542f, 5.0512f)
-                curveTo(7.2491f, 5.1006f, 6.9014f, 5.1928f, 6.638f, 5.327f)
-                curveTo(6.0735f, 5.6146f, 5.6146f, 6.0735f, 5.327f, 6.638f)
-                curveTo(5.1928f, 6.9014f, 5.1006f, 7.2491f, 5.0512f, 7.8542f)
-                curveTo(5.0008f, 8.4711f, 5.0f, 9.2634f, 5.0f, 10.4f)
-                lineTo(5.0f, 12.0f)
-                lineTo(3.0f, 12.0f)
-                lineTo(3.0f, 10.3572f)
-                curveTo(3.0f, 9.2734f, 3.0f, 8.3993f, 3.0578f, 7.6914f)
-                curveTo(3.1174f, 6.9625f, 3.2432f, 6.3223f, 3.545f, 5.7301f)
-                curveTo(4.0243f, 4.7892f, 4.7892f, 4.0243f, 5.7301f, 3.545f)
-                curveTo(6.3223f, 3.2432f, 6.9625f, 3.1174f, 7.6914f, 3.0578f)
-                curveTo(8.3993f, 3.0f, 9.2734f, 3.0f, 10.3572f, 3.0f)
-                lineTo(13.6428f, 3.0f)
-                curveTo(14.7266f, 3.0f, 15.6008f, 3.0f, 16.3086f, 3.0578f)
-                curveTo(17.0375f, 3.1174f, 17.6777f, 3.2432f, 18.27f, 3.545f)
-                curveTo(19.2108f, 4.0243f, 19.9757f, 4.7892f, 20.455f, 5.7301f)
-                curveTo(20.7568f, 6.3223f, 20.8826f, 6.9625f, 20.9422f, 7.6914f)
-                curveTo(21.0f, 8.3993f, 21.0f, 9.2734f, 21.0f, 10.3572f)
-                lineTo(21.0f, 13.6428f)
-                curveTo(21.0f, 14.7266f, 21.0f, 15.6007f, 20.9422f, 16.3086f)
-                curveTo(20.8826f, 17.0375f, 20.7568f, 17.6777f, 20.455f, 18.27f)
-                curveTo(19.9757f, 19.2108f, 19.2108f, 19.9757f, 18.27f, 20.455f)
-                curveTo(17.6777f, 20.7568f, 17.0375f, 20.8826f, 16.3086f, 20.9422f)
-                curveTo(15.6007f, 21.0f, 14.7266f, 21.0f, 13.6428f, 21.0f)
-                close()
-            }
+val BezierIcons.IntoPage: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _intoPage ?: ImageVector.Builder(
+                    name = "IntoPage",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(13.6428f, 21.0f)
+                    lineTo(12.0f, 21.0f)
+                    lineTo(12.0f, 19.0f)
+                    lineTo(13.6f, 19.0f)
+                    curveTo(14.7366f, 19.0f, 15.5289f, 18.9992f, 16.1458f, 18.9488f)
+                    curveTo(16.7509f, 18.8994f, 17.0986f, 18.8072f, 17.362f, 18.673f)
+                    curveTo(17.9265f, 18.3854f, 18.3854f, 17.9265f, 18.673f, 17.362f)
+                    curveTo(18.8072f, 17.0986f, 18.8994f, 16.7509f, 18.9488f, 16.1458f)
+                    curveTo(18.9992f, 15.5289f, 19.0f, 14.7366f, 19.0f, 13.6f)
+                    lineTo(19.0f, 10.4f)
+                    curveTo(19.0f, 9.26339f, 18.9992f, 8.47108f, 18.9488f, 7.85424f)
+                    curveTo(18.8994f, 7.24907f, 18.8072f, 6.90138f, 18.673f, 6.63803f)
+                    curveTo(18.3854f, 6.07354f, 17.9265f, 5.6146f, 17.362f, 5.32698f)
+                    curveTo(17.0986f, 5.19279f, 16.7509f, 5.10062f, 16.1458f, 5.05118f)
+                    curveTo(15.5289f, 5.00078f, 14.7366f, 5.0f, 13.6f, 5.0f)
+                    lineTo(10.4f, 5.0f)
+                    curveTo(9.26339f, 5.0f, 8.47108f, 5.00078f, 7.85424f, 5.05118f)
+                    curveTo(7.24907f, 5.10062f, 6.90138f, 5.19279f, 6.63803f, 5.32698f)
+                    curveTo(6.07354f, 5.6146f, 5.6146f, 6.07354f, 5.32698f, 6.63803f)
+                    curveTo(5.19279f, 6.90138f, 5.10062f, 7.24907f, 5.05118f, 7.85424f)
+                    curveTo(5.00078f, 8.47108f, 5.0f, 9.26339f, 5.0f, 10.4f)
+                    lineTo(5.0f, 12.0f)
+                    lineTo(3.0f, 12.0f)
+                    lineTo(3.0f, 10.3572f)
+                    curveTo(2.99999f, 9.27339f, 2.99998f, 8.39925f, 3.05782f, 7.69137f)
+                    curveTo(3.11737f, 6.96252f, 3.24318f, 6.32234f, 3.54497f, 5.73005f)
+                    curveTo(4.02433f, 4.78924f, 4.78924f, 4.02433f, 5.73005f, 3.54497f)
+                    curveTo(6.32234f, 3.24318f, 6.96253f, 3.11737f, 7.69138f, 3.05782f)
+                    curveTo(8.39925f, 2.99998f, 9.27339f, 2.99999f, 10.3572f, 3.0f)
+                    lineTo(13.6428f, 3.0f)
+                    curveTo(14.7266f, 2.99999f, 15.6008f, 2.99998f, 16.3086f, 3.05782f)
+                    curveTo(17.0375f, 3.11737f, 17.6777f, 3.24318f, 18.27f, 3.54497f)
+                    curveTo(19.2108f, 4.02434f, 19.9757f, 4.78924f, 20.455f, 5.73005f)
+                    curveTo(20.7568f, 6.32234f, 20.8826f, 6.96253f, 20.9422f, 7.69138f)
+                    curveTo(21.0f, 8.39925f, 21.0f, 9.27341f, 21.0f, 10.3572f)
+                    lineTo(21.0f, 13.6428f)
+                    curveTo(21.0f, 14.7266f, 21.0f, 15.6007f, 20.9422f, 16.3086f)
+                    curveTo(20.8826f, 17.0375f, 20.7568f, 17.6777f, 20.455f, 18.27f)
+                    curveTo(19.9757f, 19.2108f, 19.2108f, 19.9757f, 18.27f, 20.455f)
+                    curveTo(17.6777f, 20.7568f, 17.0375f, 20.8826f, 16.3086f, 20.9422f)
+                    curveTo(15.6007f, 21.0f, 14.7266f, 21.0f, 13.6428f, 21.0f)
+                    close()
+                }
 
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(13.8083f, 15.5882f)
-                curveTo(14.0f, 15.3638f, 14.0f, 14.8791f, 14.0f, 13.9098f)
-                lineTo(14.0f, 11.6f)
-                curveTo(14.0f, 11.04f, 14.0f, 10.7599f, 13.891f, 10.546f)
-                curveTo(13.7951f, 10.3578f, 13.6421f, 10.2049f, 13.454f, 10.109f)
-                curveTo(13.2401f, 10.0f, 12.96f, 10.0f, 12.4f, 10.0f)
-                lineTo(10.0902f, 10.0f)
-                curveTo(9.1209f, 10.0f, 8.6362f, 10.0f, 8.4118f, 10.1917f)
-                curveTo(8.2171f, 10.358f, 8.1137f, 10.6075f, 8.1338f, 10.8628f)
-                curveTo(8.157f, 11.157f, 8.4997f, 11.4997f, 9.1851f, 12.1851f)
-                lineTo(9.7929f, 12.7929f)
-                lineTo(4.7929f, 17.7929f)
-                curveTo(4.4024f, 18.1834f, 4.4024f, 18.8166f, 4.7929f, 19.2071f)
-                curveTo(5.1834f, 19.5976f, 5.8166f, 19.5976f, 6.2071f, 19.2071f)
-                lineTo(11.2071f, 14.2071f)
-                lineTo(11.8149f, 14.8149f)
-                curveTo(12.5003f, 15.5003f, 12.843f, 15.843f, 13.1372f, 15.8662f)
-                curveTo(13.3925f, 15.8863f, 13.642f, 15.7829f, 13.8083f, 15.5882f)
-                close()
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(13.8083f, 15.5882f)
+                    curveTo(14.0f, 15.3638f, 14.0f, 14.8791f, 14.0f, 13.9098f)
+                    lineTo(14.0f, 11.6f)
+                    curveTo(14.0f, 11.04f, 14.0f, 10.7599f, 13.891f, 10.546f)
+                    curveTo(13.7951f, 10.3578f, 13.6421f, 10.2049f, 13.454f, 10.109f)
+                    curveTo(13.2401f, 10.0f, 12.96f, 10.0f, 12.4f, 10.0f)
+                    lineTo(10.0902f, 10.0f)
+                    curveTo(9.12089f, 10.0f, 8.63623f, 10.0f, 8.41181f, 10.1917f)
+                    curveTo(8.21708f, 10.358f, 8.11374f, 10.6075f, 8.13383f, 10.8628f)
+                    curveTo(8.15699f, 11.157f, 8.49969f, 11.4997f, 9.18509f, 12.1851f)
+                    lineTo(9.79289f, 12.7929f)
+                    lineTo(4.79289f, 17.7929f)
+                    curveTo(4.40237f, 18.1834f, 4.40237f, 18.8166f, 4.79289f, 19.2071f)
+                    curveTo(5.18342f, 19.5976f, 5.81658f, 19.5976f, 6.20711f, 19.2071f)
+                    lineTo(11.2071f, 14.2071f)
+                    lineTo(11.8149f, 14.8149f)
+                    curveTo(12.5003f, 15.5003f, 12.843f, 15.843f, 13.1372f, 15.8662f)
+                    curveTo(13.3925f, 15.8863f, 13.642f, 15.7829f, 13.8083f, 15.5882f)
+                    close()
+                }
+            }.build().also {
+                _intoPage = it
             }
-        }.build().also {
-            io.channel.bezier.icon._intoPage = it
-        }
     }
+
 
 private var _intoPage: ImageVector? = null
 
@@ -111,7 +114,7 @@ private var _intoPage: ImageVector? = null
 private fun IntoPageIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.IntoPage,
+            imageVector = BezierIcons.IntoPage.imageVector,
             contentDescription = null,
     )
 }

@@ -9,70 +9,72 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Book: ImageVector
-    get() {
-        return _book ?: ImageVector.Builder(
-                name = "Book",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(16.0712f, 3.0001f)
-                lineTo(20.5002f, 3.0001f)
-                curveTo(21.3285f, 3.0001f, 22.0002f, 3.6718f, 22.0002f, 4.5001f)
-                lineTo(22.0002f, 18.5001f)
-                curveTo(22.0002f, 19.3284f, 21.3285f, 20.0001f, 20.5002f, 20.0001f)
-                lineTo(16.0712f, 20.0001f)
-                curveTo(15.0106f, 20.0001f, 13.9927f, 20.4216f, 13.243f, 21.1706f)
-                lineTo(12.708f, 21.7066f)
-                curveTo(12.3176f, 22.0977f, 11.6839f, 22.098f, 11.2931f, 21.7072f)
-                lineTo(10.7571f, 21.1712f)
-                curveTo(10.0075f, 20.4216f, 8.9898f, 20.0001f, 7.9292f, 20.0001f)
-                lineTo(3.5002f, 20.0001f)
-                curveTo(2.6719f, 20.0001f, 2.0002f, 19.3284f, 2.0002f, 18.5001f)
-                lineTo(2.0002f, 4.5001f)
-                curveTo(2.0002f, 3.6718f, 2.6719f, 3.0001f, 3.5002f, 3.0001f)
-                lineTo(7.9292f, 3.0001f)
-                curveTo(9.4408f, 3.0001f, 10.894f, 3.5707f, 11.9998f, 4.5922f)
-                curveTo(13.1065f, 3.5707f, 14.5597f, 3.0001f, 16.0712f, 3.0001f)
-                close()
-                moveTo(20.0002f, 5.0001f)
-                lineTo(16.0712f, 5.0001f)
-                curveTo(15.0106f, 5.0001f, 13.9927f, 5.4216f, 13.243f, 6.1706f)
-                lineTo(13.0002f, 6.4138f)
-                lineTo(13.0002f, 18.8454f)
-                curveTo(13.9215f, 18.2969f, 14.9812f, 18.0001f, 16.0712f, 18.0001f)
-                lineTo(20.0002f, 18.0001f)
-                lineTo(20.0002f, 5.0001f)
-                close()
-                moveTo(11.0002f, 18.8456f)
-                lineTo(11.0002f, 6.4143f)
-                lineTo(10.7571f, 6.1712f)
-                curveTo(10.0075f, 5.4216f, 8.9898f, 5.0001f, 7.9292f, 5.0001f)
-                lineTo(4.0002f, 5.0001f)
-                lineTo(4.0002f, 18.0001f)
-                lineTo(7.9292f, 18.0001f)
-                curveTo(9.0194f, 18.0001f, 10.0792f, 18.2969f, 11.0002f, 18.8456f)
-                close()
+val BezierIcons.Book: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _book ?: ImageVector.Builder(
+                    name = "Book",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(16.0712f, 3.00012f)
+                    lineTo(20.5002f, 3.00012f)
+                    curveTo(21.3285f, 3.00012f, 22.0002f, 3.67184f, 22.0002f, 4.50012f)
+                    lineTo(22.0002f, 18.5001f)
+                    curveTo(22.0002f, 19.3284f, 21.3285f, 20.0001f, 20.5002f, 20.0001f)
+                    lineTo(16.0712f, 20.0001f)
+                    curveTo(15.0106f, 20.0001f, 13.9927f, 20.4216f, 13.243f, 21.1706f)
+                    lineTo(12.708f, 21.7066f)
+                    curveTo(12.3176f, 22.0977f, 11.6839f, 22.098f, 11.2931f, 21.7072f)
+                    lineTo(10.7571f, 21.1712f)
+                    curveTo(10.0075f, 20.4216f, 8.98982f, 20.0001f, 7.92921f, 20.0001f)
+                    lineTo(3.50021f, 20.0001f)
+                    curveTo(2.67193f, 20.0001f, 2.00021f, 19.3284f, 2.00021f, 18.5001f)
+                    lineTo(2.00021f, 4.50012f)
+                    curveTo(2.00021f, 3.67184f, 2.67193f, 3.00012f, 3.50021f, 3.00012f)
+                    lineTo(7.92921f, 3.00012f)
+                    curveTo(9.44075f, 3.00012f, 10.894f, 3.57075f, 11.9998f, 4.59215f)
+                    curveTo(13.1065f, 3.57071f, 14.5597f, 3.00012f, 16.0712f, 3.00012f)
+                    close()
+                    moveTo(20.0002f, 5.00012f)
+                    lineTo(16.0712f, 5.00012f)
+                    curveTo(15.0106f, 5.00012f, 13.9927f, 5.42164f, 13.243f, 6.17057f)
+                    lineTo(13.0002f, 6.41379f)
+                    lineTo(13.0002f, 18.8454f)
+                    curveTo(13.9215f, 18.2969f, 14.9812f, 18.0001f, 16.0712f, 18.0001f)
+                    lineTo(20.0002f, 18.0001f)
+                    lineTo(20.0002f, 5.00012f)
+                    close()
+                    moveTo(11.0002f, 18.8456f)
+                    lineTo(11.0002f, 6.41434f)
+                    lineTo(10.7571f, 6.17123f)
+                    curveTo(10.0075f, 5.42164f, 8.98982f, 5.00012f, 7.92921f, 5.00012f)
+                    lineTo(4.00021f, 5.00012f)
+                    lineTo(4.00021f, 18.0001f)
+                    lineTo(7.92921f, 18.0001f)
+                    curveTo(9.01936f, 18.0001f, 10.0792f, 18.2969f, 11.0002f, 18.8456f)
+                    close()
+                }
+            }.build().also {
+                _book = it
             }
-        }.build().also {
-            _book = it
-        }
     }
+
 
 private var _book: ImageVector? = null
 
@@ -81,7 +83,7 @@ private var _book: ImageVector? = null
 private fun BookIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Book,
+            imageVector = BezierIcons.Book.imageVector,
             contentDescription = null,
     )
 }

@@ -9,63 +9,65 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Realtime: ImageVector
-    get() {
-        return io.channel.bezier.icon._realtime ?: ImageVector.Builder(
-                name = "Realtime",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0002f, 20.0001f)
-                curveTo(7.5892f, 20.0001f, 4.0002f, 16.4111f, 4.0002f, 12.0001f)
-                curveTo(4.0002f, 7.5891f, 7.5892f, 4.0001f, 12.0002f, 4.0001f)
-                curveTo(13.8462f, 4.0001f, 15.5422f, 4.6341f, 16.8972f, 5.6881f)
-                lineTo(16.2072f, 6.3791f)
-                curveTo(13.4562f, 4.3191f, 9.5302f, 4.5311f, 7.0302f, 7.0301f)
-                lineTo(8.0912f, 8.0911f)
-                curveTo(10.0042f, 6.1791f, 12.9782f, 5.9721f, 15.1312f, 7.4551f)
-                lineTo(14.3682f, 8.2181f)
-                curveTo(13.3772f, 7.5941f, 12.1772f, 7.3761f, 11.0022f, 7.6441f)
-                curveTo(10.1852f, 7.8311f, 9.4372f, 8.2451f, 8.8412f, 8.8411f)
-                lineTo(9.9012f, 9.9011f)
-                curveTo(10.2972f, 9.5051f, 10.7942f, 9.2301f, 11.3362f, 9.1071f)
-                curveTo(11.9982f, 8.9541f, 12.6642f, 9.0531f, 13.2542f, 9.3321f)
-                lineTo(12.5122f, 10.0741f)
-                curveTo(12.3482f, 10.0301f, 12.1782f, 9.9991f, 12.0002f, 9.9991f)
-                curveTo(10.8962f, 9.9991f, 10.0002f, 10.8951f, 10.0002f, 11.9991f)
-                curveTo(10.0002f, 13.1041f, 10.8962f, 13.9991f, 12.0002f, 13.9991f)
-                curveTo(13.1042f, 13.9991f, 14.0002f, 13.1041f, 14.0002f, 11.9991f)
-                curveTo(14.0002f, 11.8211f, 13.9692f, 11.6521f, 13.9262f, 11.4881f)
-                lineTo(18.3122f, 7.1031f)
-                curveTo(19.3662f, 8.4581f, 20.0002f, 10.1541f, 20.0002f, 12.0001f)
-                curveTo(20.0002f, 16.4111f, 16.4112f, 20.0001f, 12.0002f, 20.0001f)
-                close()
-                moveTo(12.0002f, 2.0001f)
-                curveTo(6.4862f, 2.0001f, 2.0002f, 6.4861f, 2.0002f, 12.0001f)
-                curveTo(2.0002f, 17.5141f, 6.4862f, 22.0001f, 12.0002f, 22.0001f)
-                curveTo(17.5142f, 22.0001f, 22.0002f, 17.5141f, 22.0002f, 12.0001f)
-                curveTo(22.0002f, 6.4861f, 17.5142f, 2.0001f, 12.0002f, 2.0001f)
-                close()
+val BezierIcons.Realtime: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _realtime ?: ImageVector.Builder(
+                    name = "Realtime",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.0002f, 20.0001f)
+                    curveTo(7.5892f, 20.0001f, 4.0002f, 16.4111f, 4.0002f, 12.0001f)
+                    curveTo(4.0002f, 7.58911f, 7.5892f, 4.00011f, 12.0002f, 4.00011f)
+                    curveTo(13.8462f, 4.00011f, 15.5422f, 4.63411f, 16.8972f, 5.68811f)
+                    lineTo(16.2072f, 6.37911f)
+                    curveTo(13.4562f, 4.31911f, 9.5302f, 4.53111f, 7.0302f, 7.03011f)
+                    lineTo(8.0912f, 8.09111f)
+                    curveTo(10.0042f, 6.17911f, 12.9782f, 5.97211f, 15.1312f, 7.45511f)
+                    lineTo(14.3682f, 8.21811f)
+                    curveTo(13.3772f, 7.59411f, 12.1772f, 7.37611f, 11.0022f, 7.64411f)
+                    curveTo(10.1852f, 7.83111f, 9.4372f, 8.24511f, 8.8412f, 8.84111f)
+                    lineTo(9.9012f, 9.90111f)
+                    curveTo(10.2972f, 9.50511f, 10.7942f, 9.23011f, 11.3362f, 9.10711f)
+                    curveTo(11.9982f, 8.95411f, 12.6642f, 9.05311f, 13.2542f, 9.33211f)
+                    lineTo(12.5122f, 10.0741f)
+                    curveTo(12.3482f, 10.0301f, 12.1782f, 9.99911f, 12.0002f, 9.99911f)
+                    curveTo(10.8962f, 9.99911f, 10.0002f, 10.8951f, 10.0002f, 11.9991f)
+                    curveTo(10.0002f, 13.1041f, 10.8962f, 13.9991f, 12.0002f, 13.9991f)
+                    curveTo(13.1042f, 13.9991f, 14.0002f, 13.1041f, 14.0002f, 11.9991f)
+                    curveTo(14.0002f, 11.8211f, 13.9692f, 11.6521f, 13.9262f, 11.4881f)
+                    lineTo(18.3122f, 7.10311f)
+                    curveTo(19.3662f, 8.45811f, 20.0002f, 10.1541f, 20.0002f, 12.0001f)
+                    curveTo(20.0002f, 16.4111f, 16.4112f, 20.0001f, 12.0002f, 20.0001f)
+                    close()
+                    moveTo(12.0002f, 2.00011f)
+                    curveTo(6.4862f, 2.00011f, 2.0002f, 6.48611f, 2.0002f, 12.0001f)
+                    curveTo(2.0002f, 17.5141f, 6.4862f, 22.0001f, 12.0002f, 22.0001f)
+                    curveTo(17.5142f, 22.0001f, 22.0002f, 17.5141f, 22.0002f, 12.0001f)
+                    curveTo(22.0002f, 6.48611f, 17.5142f, 2.00011f, 12.0002f, 2.00011f)
+                    close()
+                }
+            }.build().also {
+                _realtime = it
             }
-        }.build().also {
-            io.channel.bezier.icon._realtime = it
-        }
     }
+
 
 private var _realtime: ImageVector? = null
 
@@ -74,7 +76,7 @@ private var _realtime: ImageVector? = null
 private fun RealtimeIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Realtime,
+            imageVector = BezierIcons.Realtime.imageVector,
             contentDescription = null,
     )
 }

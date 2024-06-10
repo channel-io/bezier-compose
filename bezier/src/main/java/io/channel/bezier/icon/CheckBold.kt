@@ -9,44 +9,46 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CheckBold: ImageVector
-    get() {
-        return io.channel.bezier.icon._checkBold ?: ImageVector.Builder(
-                name = "CheckBold",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(10.0f, 14.0634f)
-                lineTo(17.0711f, 6.9924f)
-                curveTo(17.6569f, 6.4066f, 18.6066f, 6.4066f, 19.1924f, 6.9924f)
-                curveTo(19.7782f, 7.5782f, 19.7782f, 8.5279f, 19.1924f, 9.1137f)
-                lineTo(10.4632f, 17.8429f)
-                curveTo(10.2074f, 18.0987f, 9.7926f, 18.0987f, 9.5368f, 17.8429f)
-                lineTo(4.8076f, 13.1137f)
-                curveTo(4.2218f, 12.5279f, 4.2218f, 11.5782f, 4.8076f, 10.9924f)
-                curveTo(5.3934f, 10.4066f, 6.3432f, 10.4066f, 6.9289f, 10.9924f)
-                lineTo(10.0f, 14.0634f)
-                close()
+val BezierIcons.CheckBold: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _checkBold ?: ImageVector.Builder(
+                    name = "CheckBold",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(10.0f, 14.0634f)
+                    lineTo(17.0711f, 6.99238f)
+                    curveTo(17.6569f, 6.40659f, 18.6066f, 6.40659f, 19.1924f, 6.99238f)
+                    curveTo(19.7782f, 7.57816f, 19.7782f, 8.52791f, 19.1924f, 9.1137f)
+                    lineTo(10.4632f, 17.8429f)
+                    curveTo(10.2074f, 18.0987f, 9.79262f, 18.0987f, 9.53681f, 17.8429f)
+                    lineTo(4.80761f, 13.1137f)
+                    curveTo(4.22183f, 12.5279f, 4.22183f, 11.5782f, 4.80761f, 10.9924f)
+                    curveTo(5.3934f, 10.4066f, 6.34315f, 10.4066f, 6.92893f, 10.9924f)
+                    lineTo(10.0f, 14.0634f)
+                    close()
+                }
+            }.build().also {
+                _checkBold = it
             }
-        }.build().also {
-            io.channel.bezier.icon._checkBold = it
-        }
     }
+
 
 private var _checkBold: ImageVector? = null
 
@@ -55,7 +57,7 @@ private var _checkBold: ImageVector? = null
 private fun CheckBoldIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CheckBold,
+            imageVector = BezierIcons.CheckBold.imageVector,
             contentDescription = null,
     )
 }

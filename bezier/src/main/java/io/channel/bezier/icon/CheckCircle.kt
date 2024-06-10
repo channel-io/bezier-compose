@@ -9,53 +9,58 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CheckCircle: ImageVector
-    get() {
-        return _checkCircle ?: ImageVector.Builder(
-                name = "CheckCircle",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(22.0f, 12.0f)
-                curveTo(22.0f, 17.523f, 17.5226f, 22.0f, 12.0f, 22.0f)
-                curveTo(6.4767f, 22.0f, 2.0f, 17.5233f, 2.0f, 12.0f)
-                curveTo(2.0f, 6.4767f, 6.4767f, 2.0f, 12.0f, 2.0f)
-                curveTo(17.5226f, 2.0f, 22.0f, 6.477f, 22.0f, 12.0f)
-                close()
-                moveTo(20.0f, 12.0f)
-                curveTo(20.0f, 7.5816f, 16.4181f, 4.0f, 12.0f, 4.0f)
-                curveTo(7.5813f, 4.0f, 4.0f, 7.5813f, 4.0f, 12.0f)
-                curveTo(4.0f, 16.4187f, 7.5813f, 20.0f, 12.0f, 20.0f)
-                curveTo(16.4181f, 20.0f, 20.0f, 16.4184f, 20.0f, 12.0f)
-                close()
-                moveTo(7.9711f, 11.2241f)
-                lineTo(10.7544f, 13.8959f)
-                lineTo(16.405f, 8.5865f)
-                lineTo(17.7745f, 10.044f)
-                lineTo(10.7396f, 16.6541f)
-                lineTo(6.5861f, 12.6669f)
-                lineTo(7.9711f, 11.2241f)
-                close()
+val BezierIcons.CheckCircle: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _checkCircle ?: ImageVector.Builder(
+                    name = "CheckCircle",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(22.0f, 12.0f)
+                    curveTo(22.0f, 17.523f, 17.5226f, 22.0f, 12.0f, 22.0f)
+                    curveTo(6.47672f, 22.0f, 2.0f, 17.5233f, 2.0f, 12.0f)
+                    curveTo(2.0f, 6.47672f, 6.47672f, 2.0f, 12.0f, 2.0f)
+                    curveTo(17.5226f, 2.0f, 22.0f, 6.47704f, 22.0f, 12.0f)
+                    close()
+                    moveTo(20.0f, 12.0f)
+                    curveTo(20.0f, 7.58165f, 16.4181f, 4.0f, 12.0f, 4.0f)
+                    curveTo(7.58128f, 4.0f, 4.0f, 7.58128f, 4.0f, 12.0f)
+                    curveTo(4.0f, 16.4187f, 7.58128f, 20.0f, 12.0f, 20.0f)
+                    curveTo(16.4181f, 20.0f, 20.0f, 16.4184f, 20.0f, 12.0f)
+                    close()
+                    moveTo(8.08406f, 11.6708f)
+                    lineTo(10.4035f, 13.898f)
+                    lineTo(15.852f, 8.77854f)
+                    curveTo(16.2544f, 8.40048f, 16.887f, 8.42018f, 17.2651f, 8.82254f)
+                    curveTo(17.6431f, 9.22487f, 17.6234f, 9.85746f, 17.2212f, 10.2355f)
+                    lineTo(11.1002f, 15.9881f)
+                    curveTo(10.7014f, 16.3629f, 10.0788f, 16.3596f, 9.68408f, 15.9805f)
+                    lineTo(6.69867f, 13.1135f)
+                    curveTo(6.30037f, 12.731f, 6.28747f, 12.0981f, 6.66987f, 11.6997f)
+                    curveTo(7.05239f, 11.3011f, 7.6856f, 11.2882f, 8.08406f, 11.6708f)
+                    close()
+                }
+            }.build().also {
+                _checkCircle = it
             }
-        }.build().also {
-            _checkCircle = it
-        }
     }
+
 
 private var _checkCircle: ImageVector? = null
 
@@ -64,7 +69,7 @@ private var _checkCircle: ImageVector? = null
 private fun CheckCircleIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CheckCircle,
+            imageVector = BezierIcons.CheckCircle.imageVector,
             contentDescription = null,
     )
 }

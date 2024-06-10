@@ -9,95 +9,97 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Videocam: ImageVector
-    get() {
-        return _videocam ?: ImageVector.Builder(
-                name = "Videocam",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.8385f, 5.0f)
-                lineTo(6.1615f, 5.0f)
-                curveTo(5.6343f, 5.0f, 5.1795f, 5.0f, 4.805f, 5.0306f)
-                curveTo(4.4096f, 5.0629f, 4.0164f, 5.1342f, 3.638f, 5.327f)
-                curveTo(3.0735f, 5.6146f, 2.6146f, 6.0735f, 2.327f, 6.638f)
-                curveTo(2.1342f, 7.0164f, 2.0629f, 7.4096f, 2.0306f, 7.805f)
-                curveTo(2.0f, 8.1795f, 2.0f, 8.6343f, 2.0f, 9.1614f)
-                lineTo(2.0f, 14.8385f)
-                curveTo(2.0f, 15.3657f, 2.0f, 15.8205f, 2.0306f, 16.195f)
-                curveTo(2.0629f, 16.5904f, 2.1342f, 16.9836f, 2.327f, 17.362f)
-                curveTo(2.6146f, 17.9265f, 3.0735f, 18.3854f, 3.638f, 18.673f)
-                curveTo(4.0164f, 18.8658f, 4.4096f, 18.9371f, 4.805f, 18.9694f)
-                curveTo(5.1795f, 19.0f, 5.6343f, 19.0f, 6.1614f, 19.0f)
-                lineTo(12.8385f, 19.0f)
-                curveTo(13.3657f, 19.0f, 13.8205f, 19.0f, 14.195f, 18.9694f)
-                curveTo(14.5904f, 18.9371f, 14.9836f, 18.8658f, 15.362f, 18.673f)
-                curveTo(15.9265f, 18.3854f, 16.3854f, 17.9265f, 16.673f, 17.362f)
-                curveTo(16.8658f, 16.9836f, 16.9371f, 16.5904f, 16.9694f, 16.195f)
-                curveTo(16.9883f, 15.9641f, 16.9955f, 15.7026f, 16.9983f, 15.4125f)
-                lineTo(19.8661f, 18.2804f)
-                curveTo(20.6536f, 19.0678f, 22.0f, 18.5101f, 22.0f, 17.3965f)
-                lineTo(22.0f, 6.6036f)
-                curveTo(22.0f, 5.49f, 20.6536f, 4.9322f, 19.8661f, 5.7197f)
-                lineTo(16.9983f, 8.5875f)
-                curveTo(16.9955f, 8.2974f, 16.9883f, 8.0359f, 16.9694f, 7.805f)
-                curveTo(16.9371f, 7.4096f, 16.8658f, 7.0164f, 16.673f, 6.638f)
-                curveTo(16.3854f, 6.0735f, 15.9265f, 5.6146f, 15.362f, 5.327f)
-                curveTo(14.9836f, 5.1342f, 14.5904f, 5.0629f, 14.195f, 5.0306f)
-                curveTo(13.8205f, 5.0f, 13.3657f, 5.0f, 12.8385f, 5.0f)
-                close()
-                moveTo(17.0f, 11.4142f)
-                lineTo(17.0f, 12.5858f)
-                lineTo(20.0f, 15.5858f)
-                lineTo(20.0f, 8.4142f)
-                lineTo(17.0f, 11.4142f)
-                close()
-                moveTo(4.546f, 7.109f)
-                curveTo(4.5955f, 7.0838f, 4.6962f, 7.0461f, 4.9678f, 7.0239f)
-                curveTo(5.2512f, 7.0008f, 5.6234f, 7.0f, 6.2f, 7.0f)
-                lineTo(12.8f, 7.0f)
-                curveTo(13.3766f, 7.0f, 13.7488f, 7.0008f, 14.0322f, 7.0239f)
-                curveTo(14.3038f, 7.0461f, 14.4045f, 7.0838f, 14.454f, 7.109f)
-                curveTo(14.6422f, 7.2049f, 14.7951f, 7.3579f, 14.891f, 7.546f)
-                curveTo(14.9162f, 7.5955f, 14.9539f, 7.6962f, 14.9761f, 7.9678f)
-                curveTo(14.9992f, 8.2512f, 15.0f, 8.6235f, 15.0f, 9.2f)
-                lineTo(15.0f, 14.8f)
-                curveTo(15.0f, 15.3766f, 14.9992f, 15.7488f, 14.9761f, 16.0322f)
-                curveTo(14.9539f, 16.3038f, 14.9162f, 16.4045f, 14.891f, 16.454f)
-                curveTo(14.7951f, 16.6422f, 14.6422f, 16.7951f, 14.454f, 16.891f)
-                curveTo(14.4045f, 16.9162f, 14.3038f, 16.9539f, 14.0322f, 16.9761f)
-                curveTo(13.7488f, 16.9992f, 13.3766f, 17.0f, 12.8f, 17.0f)
-                lineTo(6.2f, 17.0f)
-                curveTo(5.6234f, 17.0f, 5.2512f, 16.9992f, 4.9678f, 16.9761f)
-                curveTo(4.6962f, 16.9539f, 4.5955f, 16.9162f, 4.546f, 16.891f)
-                curveTo(4.3579f, 16.7951f, 4.2049f, 16.6422f, 4.109f, 16.454f)
-                curveTo(4.0838f, 16.4045f, 4.0461f, 16.3038f, 4.0239f, 16.0322f)
-                curveTo(4.0008f, 15.7488f, 4.0f, 15.3766f, 4.0f, 14.8f)
-                lineTo(4.0f, 9.2f)
-                curveTo(4.0f, 8.6235f, 4.0008f, 8.2512f, 4.0239f, 7.9678f)
-                curveTo(4.0461f, 7.6962f, 4.0838f, 7.5955f, 4.109f, 7.546f)
-                curveTo(4.2049f, 7.3579f, 4.3579f, 7.2049f, 4.546f, 7.109f)
-                close()
+val BezierIcons.Videocam: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _videocam ?: ImageVector.Builder(
+                    name = "Videocam",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.8385f, 5.0f)
+                    lineTo(6.16146f, 5.0f)
+                    curveTo(5.63433f, 4.99998f, 5.17954f, 4.99997f, 4.80497f, 5.03057f)
+                    curveTo(4.40963f, 5.06287f, 4.01641f, 5.13419f, 3.63803f, 5.32698f)
+                    curveTo(3.07354f, 5.6146f, 2.6146f, 6.07354f, 2.32698f, 6.63803f)
+                    curveTo(2.13419f, 7.01641f, 2.06287f, 7.40963f, 2.03057f, 7.80497f)
+                    curveTo(1.99997f, 8.17954f, 1.99998f, 8.63429f, 2.0f, 9.16142f)
+                    lineTo(2.0f, 14.8385f)
+                    curveTo(1.99998f, 15.3657f, 1.99997f, 15.8205f, 2.03057f, 16.195f)
+                    curveTo(2.06287f, 16.5904f, 2.13419f, 16.9836f, 2.32698f, 17.362f)
+                    curveTo(2.6146f, 17.9265f, 3.07354f, 18.3854f, 3.63803f, 18.673f)
+                    curveTo(4.01641f, 18.8658f, 4.40963f, 18.9371f, 4.80497f, 18.9694f)
+                    curveTo(5.17954f, 19.0f, 5.6343f, 19.0f, 6.16145f, 19.0f)
+                    lineTo(12.8385f, 19.0f)
+                    curveTo(13.3657f, 19.0f, 13.8205f, 19.0f, 14.195f, 18.9694f)
+                    curveTo(14.5904f, 18.9371f, 14.9836f, 18.8658f, 15.362f, 18.673f)
+                    curveTo(15.9265f, 18.3854f, 16.3854f, 17.9265f, 16.673f, 17.362f)
+                    curveTo(16.8658f, 16.9836f, 16.9371f, 16.5904f, 16.9694f, 16.195f)
+                    curveTo(16.9883f, 15.9641f, 16.9955f, 15.7026f, 16.9983f, 15.4125f)
+                    lineTo(19.8661f, 18.2804f)
+                    curveTo(20.6536f, 19.0678f, 22.0f, 18.5101f, 22.0f, 17.3965f)
+                    lineTo(22.0f, 6.60358f)
+                    curveTo(22.0f, 5.48996f, 20.6536f, 4.93224f, 19.8661f, 5.7197f)
+                    lineTo(16.9983f, 8.58752f)
+                    curveTo(16.9955f, 8.2974f, 16.9883f, 8.03594f, 16.9694f, 7.80497f)
+                    curveTo(16.9371f, 7.40963f, 16.8658f, 7.01641f, 16.673f, 6.63803f)
+                    curveTo(16.3854f, 6.07354f, 15.9265f, 5.6146f, 15.362f, 5.32698f)
+                    curveTo(14.9836f, 5.13419f, 14.5904f, 5.06287f, 14.195f, 5.03057f)
+                    curveTo(13.8205f, 4.99997f, 13.3657f, 4.99998f, 12.8385f, 5.0f)
+                    close()
+                    moveTo(17.0f, 11.4142f)
+                    lineTo(17.0f, 12.5858f)
+                    lineTo(20.0f, 15.5858f)
+                    lineTo(20.0f, 8.41424f)
+                    lineTo(17.0f, 11.4142f)
+                    close()
+                    moveTo(4.54601f, 7.109f)
+                    curveTo(4.59546f, 7.0838f, 4.69618f, 7.04613f, 4.96784f, 7.02393f)
+                    curveTo(5.25118f, 7.00078f, 5.62345f, 7.0f, 6.2f, 7.0f)
+                    lineTo(12.8f, 7.0f)
+                    curveTo(13.3766f, 7.0f, 13.7488f, 7.00078f, 14.0322f, 7.02393f)
+                    curveTo(14.3038f, 7.04613f, 14.4045f, 7.0838f, 14.454f, 7.109f)
+                    curveTo(14.6422f, 7.20487f, 14.7951f, 7.35785f, 14.891f, 7.54601f)
+                    curveTo(14.9162f, 7.59546f, 14.9539f, 7.69618f, 14.9761f, 7.96784f)
+                    curveTo(14.9992f, 8.25118f, 15.0f, 8.62345f, 15.0f, 9.2f)
+                    lineTo(15.0f, 14.8f)
+                    curveTo(15.0f, 15.3766f, 14.9992f, 15.7488f, 14.9761f, 16.0322f)
+                    curveTo(14.9539f, 16.3038f, 14.9162f, 16.4045f, 14.891f, 16.454f)
+                    curveTo(14.7951f, 16.6422f, 14.6422f, 16.7951f, 14.454f, 16.891f)
+                    curveTo(14.4045f, 16.9162f, 14.3038f, 16.9539f, 14.0322f, 16.9761f)
+                    curveTo(13.7488f, 16.9992f, 13.3766f, 17.0f, 12.8f, 17.0f)
+                    lineTo(6.2f, 17.0f)
+                    curveTo(5.62345f, 17.0f, 5.25118f, 16.9992f, 4.96784f, 16.9761f)
+                    curveTo(4.69618f, 16.9539f, 4.59546f, 16.9162f, 4.54601f, 16.891f)
+                    curveTo(4.35785f, 16.7951f, 4.20487f, 16.6422f, 4.109f, 16.454f)
+                    curveTo(4.0838f, 16.4045f, 4.04613f, 16.3038f, 4.02393f, 16.0322f)
+                    curveTo(4.00078f, 15.7488f, 4.0f, 15.3766f, 4.0f, 14.8f)
+                    lineTo(4.0f, 9.2f)
+                    curveTo(4.0f, 8.62345f, 4.00078f, 8.25118f, 4.02393f, 7.96784f)
+                    curveTo(4.04613f, 7.69618f, 4.0838f, 7.59546f, 4.109f, 7.54601f)
+                    curveTo(4.20487f, 7.35785f, 4.35785f, 7.20487f, 4.54601f, 7.109f)
+                    close()
+                }
+            }.build().also {
+                _videocam = it
             }
-        }.build().also {
-            _videocam = it
-        }
     }
+
 
 private var _videocam: ImageVector? = null
 
@@ -106,7 +108,7 @@ private var _videocam: ImageVector? = null
 private fun VideocamIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Videocam,
+            imageVector = BezierIcons.Videocam.imageVector,
             contentDescription = null,
     )
 }

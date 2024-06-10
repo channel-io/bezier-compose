@@ -15,30 +15,24 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.WindowsMinimize: ImageVector
-    get() {
-        return _windowsMinimize ?: ImageVector.Builder(
-                name = "WindowsMinimize",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(7.0f, 12.0f)
-                lineTo(17.0f, 12.0f)
-                lineTo(17.0f, 13.0f)
-                lineTo(7.0f, 13.0f)
-                close()
+val BezierIcons.WindowsMinimize: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _windowsMinimize ?: ImageVector.Builder(
+                    name = "WindowsMinimize",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+
+            }.build().also {
+                _windowsMinimize = it
             }
-        }.build().also {
-            _windowsMinimize = it
-        }
     }
+
 
 private var _windowsMinimize: ImageVector? = null
 
@@ -47,7 +41,7 @@ private var _windowsMinimize: ImageVector? = null
 private fun WindowsMinimizeIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.WindowsMinimize,
+            imageVector = BezierIcons.WindowsMinimize.imageVector,
             contentDescription = null,
     )
 }

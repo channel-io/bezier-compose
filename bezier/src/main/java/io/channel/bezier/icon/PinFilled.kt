@@ -9,60 +9,62 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.PinFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._pinFilled ?: ImageVector.Builder(
-                name = "PinFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(19.5612f, 10.901f)
-                curveTo(20.9932f, 10.4499f, 21.4361f, 8.6407f, 20.3745f, 7.5792f)
-                lineTo(16.3821f, 3.5867f)
-                curveTo(15.3243f, 2.5289f, 13.5222f, 2.9643f, 13.064f, 4.3884f)
-                lineTo(12.5016f, 6.1363f)
-                curveTo(12.4044f, 6.4386f, 12.2365f, 6.7134f, 12.012f, 6.938f)
-                lineTo(10.4394f, 8.5105f)
-                curveTo(10.0644f, 8.8856f, 9.5557f, 9.0963f, 9.0252f, 9.0963f)
-                lineTo(5.251f, 9.0963f)
-                curveTo(4.6802f, 9.0963f, 4.1366f, 9.3402f, 3.7571f, 9.7666f)
-                lineTo(3.6582f, 9.8776f)
-                curveTo(3.306f, 10.2733f, 3.3234f, 10.875f, 3.698f, 11.2496f)
-                lineTo(7.5058f, 15.0574f)
-                lineTo(2.2929f, 20.2704f)
-                curveTo(1.9024f, 20.6609f, 1.9024f, 21.294f, 2.2929f, 21.6845f)
-                curveTo(2.6833f, 22.0749f, 3.3164f, 22.0749f, 3.7069f, 21.6845f)
-                lineTo(8.9198f, 16.4724f)
-                lineTo(12.7641f, 20.3167f)
-                curveTo(13.1637f, 20.7163f, 13.8149f, 20.7057f, 14.2012f, 20.2931f)
-                lineTo(14.3135f, 20.1731f)
-                curveTo(14.6606f, 19.8025f, 14.8537f, 19.3138f, 14.8537f, 18.8061f)
-                lineTo(14.8537f, 14.9248f)
-                curveTo(14.8537f, 14.3943f, 15.0644f, 13.8856f, 15.4394f, 13.5105f)
-                lineTo(17.0074f, 11.9426f)
-                curveTo(17.2349f, 11.7151f, 17.5139f, 11.5459f, 17.8207f, 11.4492f)
-                lineTo(19.5612f, 10.901f)
-                close()
+val BezierIcons.PinFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _pinFilled ?: ImageVector.Builder(
+                    name = "PinFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(19.5612f, 10.901f)
+                    curveTo(20.9932f, 10.4499f, 21.4361f, 8.64073f, 20.3745f, 7.57915f)
+                    lineTo(16.3821f, 3.58672f)
+                    curveTo(15.3243f, 2.52893f, 13.5222f, 2.96434f, 13.064f, 4.38839f)
+                    lineTo(12.5016f, 6.13633f)
+                    curveTo(12.4044f, 6.43864f, 12.2365f, 6.71345f, 12.012f, 6.93801f)
+                    lineTo(10.4394f, 8.51054f)
+                    curveTo(10.0644f, 8.88561f, 9.55566f, 9.09632f, 9.02523f, 9.09632f)
+                    lineTo(5.25096f, 9.09632f)
+                    curveTo(4.68016f, 9.09632f, 4.13656f, 9.34021f, 3.75706f, 9.76657f)
+                    lineTo(3.65818f, 9.87764f)
+                    curveTo(3.30597f, 10.2733f, 3.32344f, 10.875f, 3.69803f, 11.2496f)
+                    lineTo(7.50583f, 15.0574f)
+                    lineTo(2.29286f, 20.2704f)
+                    curveTo(1.90238f, 20.6609f, 1.90238f, 21.294f, 2.29286f, 21.6845f)
+                    curveTo(2.68332f, 22.0749f, 3.31637f, 22.0749f, 3.70686f, 21.6845f)
+                    lineTo(8.91983f, 16.4724f)
+                    lineTo(12.7641f, 20.3167f)
+                    curveTo(13.1637f, 20.7163f, 13.8149f, 20.7057f, 14.2012f, 20.2931f)
+                    lineTo(14.3135f, 20.1731f)
+                    curveTo(14.6606f, 19.8025f, 14.8537f, 19.3138f, 14.8537f, 18.8061f)
+                    lineTo(14.8537f, 14.9248f)
+                    curveTo(14.8537f, 14.3943f, 15.0644f, 13.8856f, 15.4394f, 13.5105f)
+                    lineTo(17.0074f, 11.9426f)
+                    curveTo(17.2349f, 11.7151f, 17.5139f, 11.5459f, 17.8207f, 11.4492f)
+                    lineTo(19.5612f, 10.901f)
+                    close()
+                }
+            }.build().also {
+                _pinFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._pinFilled = it
-        }
     }
+
 
 private var _pinFilled: ImageVector? = null
 
@@ -71,7 +73,7 @@ private var _pinFilled: ImageVector? = null
 private fun PinFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.PinFilled,
+            imageVector = BezierIcons.PinFilled.imageVector,
             contentDescription = null,
     )
 }

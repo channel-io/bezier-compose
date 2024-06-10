@@ -9,61 +9,63 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ChatBubble: ImageVector
-    get() {
-        return io.channel.bezier.icon._chatBubble ?: ImageVector.Builder(
-                name = "ChatBubble",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(11.9986f, 4.0006f)
-                curveTo(9.8776f, 4.0006f, 7.8726f, 4.8186f, 6.3496f, 6.3376f)
-                curveTo(4.5086f, 8.1756f, 3.6906f, 10.7236f, 4.1066f, 13.3276f)
-                curveTo(4.6486f, 16.7136f, 7.4096f, 19.4226f, 10.8226f, 19.9156f)
-                curveTo(12.5336f, 20.1626f, 14.2386f, 19.8676f, 15.7486f, 19.0606f)
-                curveTo(16.3906f, 18.7186f, 17.1066f, 18.6486f, 17.7636f, 18.8676f)
-                lineTo(19.4196f, 19.4186f)
-                lineTo(18.8676f, 17.7636f)
-                curveTo(18.6496f, 17.1076f, 18.7176f, 16.3926f, 19.0606f, 15.7486f)
-                curveTo(19.9446f, 14.0936f, 20.2116f, 12.2286f, 19.8346f, 10.3546f)
-                curveTo(19.1876f, 7.1426f, 16.5806f, 4.6326f, 13.3456f, 4.1096f)
-                curveTo(12.8936f, 4.0366f, 12.4436f, 4.0006f, 11.9986f, 4.0006f)
-                close()
-                moveTo(12.0006f, 22.0006f)
-                curveTo(11.5146f, 22.0006f, 11.0256f, 21.9656f, 10.5366f, 21.8946f)
-                curveTo(6.2666f, 21.2776f, 2.8106f, 17.8846f, 2.1326f, 13.6436f)
-                curveTo(1.6136f, 10.3976f, 2.6356f, 7.2186f, 4.9366f, 4.9226f)
-                curveTo(7.2376f, 2.6256f, 10.4206f, 1.6106f, 13.6646f, 2.1356f)
-                curveTo(17.7176f, 2.7916f, 20.9856f, 5.9356f, 21.7956f, 9.9596f)
-                curveTo(22.2656f, 12.2946f, 21.9296f, 14.6216f, 20.8256f, 16.6896f)
-                curveTo(20.7776f, 16.7786f, 20.7066f, 16.9556f, 20.7656f, 17.1316f)
-                lineTo(21.6336f, 19.7356f)
-                curveTo(21.8136f, 20.2776f, 21.6756f, 20.8656f, 21.2706f, 21.2706f)
-                curveTo(20.8656f, 21.6746f, 20.2766f, 21.8126f, 19.7356f, 21.6326f)
-                lineTo(17.1306f, 20.7646f)
-                curveTo(16.9556f, 20.7066f, 16.7806f, 20.7776f, 16.6916f, 20.8246f)
-                curveTo(15.2346f, 21.6026f, 13.6356f, 22.0006f, 12.0006f, 22.0006f)
-                close()
+val BezierIcons.ChatBubble: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _chatBubble ?: ImageVector.Builder(
+                    name = "ChatBubble",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(11.9986f, 4.0006f)
+                    curveTo(9.87759f, 4.0006f, 7.87259f, 4.81859f, 6.34959f, 6.33759f)
+                    curveTo(4.50859f, 8.1756f, 3.69059f, 10.7236f, 4.10659f, 13.3276f)
+                    curveTo(4.64859f, 16.7136f, 7.40959f, 19.4226f, 10.8226f, 19.9156f)
+                    curveTo(12.5336f, 20.1626f, 14.2386f, 19.8676f, 15.7486f, 19.0606f)
+                    curveTo(16.3906f, 18.7186f, 17.1066f, 18.6486f, 17.7636f, 18.8676f)
+                    lineTo(19.4196f, 19.4186f)
+                    lineTo(18.8676f, 17.7636f)
+                    curveTo(18.6496f, 17.1076f, 18.7176f, 16.3926f, 19.0606f, 15.7486f)
+                    curveTo(19.9446f, 14.0936f, 20.2116f, 12.2286f, 19.8346f, 10.3546f)
+                    curveTo(19.1876f, 7.1426f, 16.5806f, 4.6326f, 13.3456f, 4.1096f)
+                    curveTo(12.8936f, 4.0366f, 12.4436f, 4.0006f, 11.9986f, 4.0006f)
+                    close()
+                    moveTo(12.0006f, 22.0006f)
+                    curveTo(11.5146f, 22.0006f, 11.0256f, 21.9656f, 10.5366f, 21.8946f)
+                    curveTo(6.26659f, 21.2776f, 2.81059f, 17.8846f, 2.13259f, 13.6436f)
+                    curveTo(1.61359f, 10.3976f, 2.63559f, 7.2186f, 4.93659f, 4.9226f)
+                    curveTo(7.23759f, 2.6256f, 10.4206f, 1.6106f, 13.6646f, 2.1356f)
+                    curveTo(17.7176f, 2.7916f, 20.9856f, 5.9356f, 21.7956f, 9.9596f)
+                    curveTo(22.2656f, 12.2946f, 21.9296f, 14.6216f, 20.8256f, 16.6896f)
+                    curveTo(20.7776f, 16.7786f, 20.7066f, 16.9556f, 20.7656f, 17.1316f)
+                    lineTo(21.6336f, 19.7356f)
+                    curveTo(21.8136f, 20.2776f, 21.6756f, 20.8656f, 21.2706f, 21.2706f)
+                    curveTo(20.8656f, 21.6746f, 20.2766f, 21.8126f, 19.7356f, 21.6326f)
+                    lineTo(17.1306f, 20.7646f)
+                    curveTo(16.9556f, 20.7066f, 16.7806f, 20.7776f, 16.6916f, 20.8246f)
+                    curveTo(15.2346f, 21.6026f, 13.6356f, 22.0006f, 12.0006f, 22.0006f)
+                    close()
+                }
+            }.build().also {
+                _chatBubble = it
             }
-        }.build().also {
-            io.channel.bezier.icon._chatBubble = it
-        }
     }
+
 
 private var _chatBubble: ImageVector? = null
 
@@ -72,7 +74,7 @@ private var _chatBubble: ImageVector? = null
 private fun ChatBubbleIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ChatBubble,
+            imageVector = BezierIcons.ChatBubble.imageVector,
             contentDescription = null,
     )
 }

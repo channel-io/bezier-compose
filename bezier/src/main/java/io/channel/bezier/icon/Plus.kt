@@ -15,43 +15,47 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Plus: ImageVector
-    get() {
-        return io.channel.bezier.icon._plus ?: ImageVector.Builder(
-                name = "Plus",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(12.0f, 3.0f)
-                curveTo(11.4477f, 3.0f, 11.0f, 3.4477f, 11.0f, 4.0f)
-                lineTo(11.0f, 11.0f)
-                lineTo(4.0f, 11.0f)
-                curveTo(3.4477f, 11.0f, 3.0f, 11.4477f, 3.0f, 12.0f)
-                curveTo(3.0f, 12.5523f, 3.4477f, 13.0f, 4.0f, 13.0f)
-                lineTo(11.0f, 13.0f)
-                lineTo(11.0f, 20.0f)
-                curveTo(11.0f, 20.5523f, 11.4477f, 21.0f, 12.0f, 21.0f)
-                curveTo(12.5523f, 21.0f, 13.0f, 20.5523f, 13.0f, 20.0f)
-                lineTo(13.0f, 13.0f)
-                lineTo(20.0f, 13.0f)
-                curveTo(20.5523f, 13.0f, 21.0f, 12.5523f, 21.0f, 12.0f)
-                curveTo(21.0f, 11.4477f, 20.5523f, 11.0f, 20.0f, 11.0f)
-                lineTo(13.0f, 11.0f)
-                lineTo(13.0f, 4.0f)
-                curveTo(13.0f, 3.4477f, 12.5523f, 3.0f, 12.0f, 3.0f)
-                close()
+val BezierIcons.Plus: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _plus ?: ImageVector.Builder(
+                    name = "Plus",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.0f, 3.0f)
+                    curveTo(11.4477f, 3.0f, 11.0f, 3.44772f, 11.0f, 4.0f)
+                    lineTo(11.0f, 11.0f)
+                    lineTo(4.0f, 11.0f)
+                    curveTo(3.44772f, 11.0f, 3.0f, 11.4477f, 3.0f, 12.0f)
+                    curveTo(3.0f, 12.5523f, 3.44772f, 13.0f, 4.0f, 13.0f)
+                    lineTo(11.0f, 13.0f)
+                    lineTo(11.0f, 20.0f)
+                    curveTo(11.0f, 20.5523f, 11.4477f, 21.0f, 12.0f, 21.0f)
+                    curveTo(12.5523f, 21.0f, 13.0f, 20.5523f, 13.0f, 20.0f)
+                    lineTo(13.0f, 13.0f)
+                    lineTo(20.0f, 13.0f)
+                    curveTo(20.5523f, 13.0f, 21.0f, 12.5523f, 21.0f, 12.0f)
+                    curveTo(21.0f, 11.4477f, 20.5523f, 11.0f, 20.0f, 11.0f)
+                    lineTo(13.0f, 11.0f)
+                    lineTo(13.0f, 4.0f)
+                    curveTo(13.0f, 3.44772f, 12.5523f, 3.0f, 12.0f, 3.0f)
+                    close()
+                }
+            }.build().also {
+                _plus = it
             }
-        }.build().also {
-            io.channel.bezier.icon._plus = it
-        }
     }
+
 
 private var _plus: ImageVector? = null
 
@@ -60,7 +64,7 @@ private var _plus: ImageVector? = null
 private fun PlusIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Plus,
+            imageVector = BezierIcons.Plus.imageVector,
             contentDescription = null,
     )
 }

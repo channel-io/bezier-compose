@@ -9,47 +9,49 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.TrendingLeft: ImageVector
-    get() {
-        return _trendingLeft ?: ImageVector.Builder(
-                name = "TrendingLeft",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(6.1511f, 11.6345f)
-                lineTo(11.3171f, 6.4685f)
-                curveTo(11.5691f, 6.2165f, 12.0001f, 6.3945f, 12.0001f, 6.7515f)
-                lineTo(12.0001f, 9.9994f)
-                lineTo(17.4996f, 9.9994f)
-                curveTo(17.7756f, 9.9994f, 17.9996f, 10.2234f, 17.9996f, 10.4994f)
-                lineTo(17.9996f, 13.4994f)
-                curveTo(17.9996f, 13.7754f, 17.7756f, 13.9994f, 17.4996f, 13.9994f)
-                lineTo(12.0001f, 13.9994f)
-                lineTo(12.0001f, 17.2485f)
-                curveTo(12.0001f, 17.6055f, 11.5691f, 17.7835f, 11.3171f, 17.5315f)
-                lineTo(6.1511f, 12.3665f)
-                curveTo(5.9491f, 12.1635f, 5.9491f, 11.8365f, 6.1511f, 11.6345f)
-                close()
+val BezierIcons.TrendingLeft: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _trendingLeft ?: ImageVector.Builder(
+                    name = "TrendingLeft",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(6.15107f, 11.6345f)
+                    lineTo(11.3171f, 6.46853f)
+                    curveTo(11.5691f, 6.21653f, 12.0001f, 6.39453f, 12.0001f, 6.75153f)
+                    lineTo(12.0001f, 9.99936f)
+                    lineTo(17.4996f, 9.99936f)
+                    curveTo(17.7756f, 9.99936f, 17.9996f, 10.2234f, 17.9996f, 10.4994f)
+                    lineTo(17.9996f, 13.4994f)
+                    curveTo(17.9996f, 13.7754f, 17.7756f, 13.9994f, 17.4996f, 13.9994f)
+                    lineTo(12.0001f, 13.9994f)
+                    lineTo(12.0001f, 17.2485f)
+                    curveTo(12.0001f, 17.6055f, 11.5691f, 17.7835f, 11.3171f, 17.5315f)
+                    lineTo(6.15107f, 12.3665f)
+                    curveTo(5.94907f, 12.1635f, 5.94907f, 11.8365f, 6.15107f, 11.6345f)
+                    close()
+                }
+            }.build().also {
+                _trendingLeft = it
             }
-        }.build().also {
-            _trendingLeft = it
-        }
     }
+
 
 private var _trendingLeft: ImageVector? = null
 
@@ -58,7 +60,7 @@ private var _trendingLeft: ImageVector? = null
 private fun TrendingLeftIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.TrendingLeft,
+            imageVector = BezierIcons.TrendingLeft.imageVector,
             contentDescription = null,
     )
 }

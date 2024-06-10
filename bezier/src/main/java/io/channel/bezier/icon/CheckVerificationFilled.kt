@@ -9,83 +9,88 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CheckVerificationFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._checkVerificationFilled ?: ImageVector.Builder(
-                name = "CheckVerificationFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(13.3592f, 1.2593f)
-                curveTo(12.5923f, 0.5488f, 11.4077f, 0.5488f, 10.6408f, 1.2593f)
-                lineTo(9.5861f, 2.2363f)
-                curveTo(9.269f, 2.5301f, 8.8405f, 2.6728f, 8.4105f, 2.6278f)
-                lineTo(6.998f, 2.4799f)
-                curveTo(5.9777f, 2.3731f, 5.042f, 3.0556f, 4.832f, 4.0598f)
-                lineTo(4.5075f, 5.6126f)
-                curveTo(4.4223f, 6.0201f, 4.1716f, 6.3738f, 3.8154f, 6.5892f)
-                lineTo(2.4833f, 7.3948f)
-                curveTo(1.6321f, 7.9096f, 1.2885f, 8.9717f, 1.6772f, 9.8875f)
-                lineTo(2.325f, 11.414f)
-                curveTo(2.4839f, 11.7885f, 2.4839f, 12.2115f, 2.325f, 12.586f)
-                lineTo(1.6772f, 14.1125f)
-                curveTo(1.2885f, 15.0283f, 1.632f, 16.0904f, 2.4833f, 16.6052f)
-                lineTo(3.8154f, 17.4108f)
-                curveTo(4.1716f, 17.6262f, 4.4223f, 17.98f, 4.5075f, 18.3874f)
-                lineTo(4.832f, 19.9402f)
-                curveTo(5.042f, 20.9444f, 5.9777f, 21.6269f, 6.998f, 21.5201f)
-                lineTo(8.4105f, 21.3722f)
-                curveTo(8.8405f, 21.3272f, 9.269f, 21.4699f, 9.5861f, 21.7637f)
-                lineTo(10.6408f, 22.7407f)
-                curveTo(11.4077f, 23.4512f, 12.5923f, 23.4512f, 13.3592f, 22.7407f)
-                lineTo(14.4139f, 21.7637f)
-                curveTo(14.731f, 21.4699f, 15.1595f, 21.3272f, 15.5895f, 21.3722f)
-                lineTo(17.002f, 21.5201f)
-                curveTo(18.0223f, 21.6269f, 18.958f, 20.9444f, 19.1679f, 19.9402f)
-                lineTo(19.4925f, 18.3874f)
-                curveTo(19.5777f, 17.98f, 19.8284f, 17.6262f, 20.1846f, 17.4108f)
-                lineTo(21.5167f, 16.6052f)
-                curveTo(22.368f, 16.0904f, 22.7115f, 15.0283f, 22.3228f, 14.1125f)
-                lineTo(21.675f, 12.586f)
-                curveTo(21.5161f, 12.2115f, 21.5161f, 11.7885f, 21.675f, 11.414f)
-                lineTo(22.3228f, 9.8875f)
-                curveTo(22.7115f, 8.9717f, 22.368f, 7.9096f, 21.5167f, 7.3948f)
-                lineTo(20.1846f, 6.5892f)
-                curveTo(19.8284f, 6.3738f, 19.5777f, 6.0201f, 19.4925f, 5.6126f)
-                lineTo(19.1679f, 4.0598f)
-                curveTo(18.958f, 3.0556f, 18.0223f, 2.3731f, 17.002f, 2.4799f)
-                lineTo(15.5895f, 2.6278f)
-                curveTo(15.1595f, 2.6728f, 14.731f, 2.5301f, 14.4139f, 2.2363f)
-                lineTo(13.3592f, 1.2593f)
-                close()
-                moveTo(6.6552f, 12.4164f)
-                lineTo(10.8092f, 16.4044f)
-                lineTo(17.8442f, 9.7944f)
-                lineTo(16.4752f, 8.3374f)
-                lineTo(10.8242f, 13.6464f)
-                lineTo(8.0402f, 10.9734f)
-                lineTo(6.6552f, 12.4164f)
-                close()
+val BezierIcons.CheckVerificationFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _checkVerificationFilled ?: ImageVector.Builder(
+                    name = "CheckVerificationFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(13.3592f, 1.25926f)
+                    curveTo(12.5923f, 0.548777f, 11.4077f, 0.548777f, 10.6408f, 1.25926f)
+                    lineTo(9.58614f, 2.23632f)
+                    curveTo(9.26899f, 2.53015f, 8.84048f, 2.67284f, 8.4105f, 2.62782f)
+                    lineTo(6.99803f, 2.47991f)
+                    curveTo(5.97768f, 2.37306f, 5.04197f, 3.05559f, 4.83205f, 4.05981f)
+                    lineTo(4.50746f, 5.61258f)
+                    curveTo(4.42229f, 6.02005f, 4.17162f, 6.3738f, 3.81541f, 6.58921f)
+                    lineTo(2.48329f, 7.39479f)
+                    curveTo(1.63205f, 7.90957f, 1.28854f, 8.97174f, 1.67716f, 9.88748f)
+                    lineTo(2.32497f, 11.414f)
+                    curveTo(2.48389f, 11.7885f, 2.48389f, 12.2115f, 2.32497f, 12.586f)
+                    lineTo(1.67716f, 14.1125f)
+                    curveTo(1.28854f, 15.0283f, 1.63204f, 16.0904f, 2.48329f, 16.6052f)
+                    lineTo(3.81541f, 17.4108f)
+                    curveTo(4.17162f, 17.6262f, 4.42229f, 17.9799f, 4.50746f, 18.3874f)
+                    lineTo(4.83205f, 19.9402f)
+                    curveTo(5.04197f, 20.9444f, 5.97768f, 21.6269f, 6.99803f, 21.5201f)
+                    lineTo(8.4105f, 21.3722f)
+                    curveTo(8.84048f, 21.3272f, 9.26899f, 21.4699f, 9.58614f, 21.7637f)
+                    lineTo(10.6408f, 22.7407f)
+                    curveTo(11.4077f, 23.4512f, 12.5923f, 23.4512f, 13.3592f, 22.7407f)
+                    lineTo(14.4139f, 21.7637f)
+                    curveTo(14.731f, 21.4699f, 15.1595f, 21.3272f, 15.5895f, 21.3722f)
+                    lineTo(17.002f, 21.5201f)
+                    curveTo(18.0223f, 21.6269f, 18.958f, 20.9444f, 19.1679f, 19.9402f)
+                    lineTo(19.4925f, 18.3874f)
+                    curveTo(19.5777f, 17.98f, 19.8284f, 17.6262f, 20.1846f, 17.4108f)
+                    lineTo(21.5167f, 16.6052f)
+                    curveTo(22.368f, 16.0904f, 22.7115f, 15.0283f, 22.3228f, 14.1125f)
+                    lineTo(21.675f, 12.586f)
+                    curveTo(21.5161f, 12.2115f, 21.5161f, 11.7885f, 21.675f, 11.414f)
+                    lineTo(22.3228f, 9.88749f)
+                    curveTo(22.7115f, 8.97174f, 22.368f, 7.90957f, 21.5167f, 7.39479f)
+                    lineTo(20.1846f, 6.58921f)
+                    curveTo(19.8284f, 6.3738f, 19.5777f, 6.02005f, 19.4925f, 5.61258f)
+                    lineTo(19.1679f, 4.05981f)
+                    curveTo(18.958f, 3.05559f, 18.0223f, 2.37306f, 17.002f, 2.47991f)
+                    lineTo(15.5895f, 2.62782f)
+                    curveTo(15.1595f, 2.67284f, 14.731f, 2.53015f, 14.4139f, 2.23632f)
+                    lineTo(13.3592f, 1.25926f)
+                    close()
+                    moveTo(8.08406f, 11.6708f)
+                    lineTo(10.4035f, 13.898f)
+                    lineTo(15.852f, 8.77854f)
+                    curveTo(16.2544f, 8.40048f, 16.887f, 8.42018f, 17.2651f, 8.82254f)
+                    curveTo(17.6431f, 9.22487f, 17.6234f, 9.85746f, 17.2212f, 10.2355f)
+                    lineTo(11.1002f, 15.9881f)
+                    curveTo(10.7014f, 16.3629f, 10.0788f, 16.3596f, 9.68408f, 15.9805f)
+                    lineTo(6.69867f, 13.1135f)
+                    curveTo(6.30037f, 12.731f, 6.28747f, 12.0981f, 6.66987f, 11.6997f)
+                    curveTo(7.05239f, 11.3011f, 7.6856f, 11.2882f, 8.08406f, 11.6708f)
+                    close()
+                }
+            }.build().also {
+                _checkVerificationFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._checkVerificationFilled = it
-        }
     }
+
 
 private var _checkVerificationFilled: ImageVector? = null
 
@@ -94,7 +99,7 @@ private var _checkVerificationFilled: ImageVector? = null
 private fun CheckVerificationFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CheckVerificationFilled,
+            imageVector = BezierIcons.CheckVerificationFilled.imageVector,
             contentDescription = null,
     )
 }

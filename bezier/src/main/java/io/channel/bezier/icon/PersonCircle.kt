@@ -9,67 +9,69 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.PersonCircle: ImageVector
-    get() {
-        return _personCircle ?: ImageVector.Builder(
-                name = "PersonCircle",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0005f, 12.296f)
-                curveTo(14.9175f, 12.296f, 17.4735f, 14.08f, 18.4665f, 16.691f)
-                curveTo(19.4265f, 15.371f, 20.0005f, 13.753f, 20.0005f, 12.0f)
-                curveTo(20.0005f, 7.589f, 16.4115f, 4.0f, 12.0005f, 4.0f)
-                curveTo(7.5895f, 4.0f, 4.0005f, 7.589f, 4.0005f, 12.0f)
-                curveTo(4.0005f, 13.753f, 4.5735f, 15.371f, 5.5335f, 16.691f)
-                curveTo(6.5275f, 14.079f, 9.0835f, 12.296f, 12.0005f, 12.296f)
-                close()
-                moveTo(7.2385f, 17.833f)
-                lineTo(7.1085f, 18.316f)
-                curveTo(8.4625f, 19.367f, 10.1575f, 20.0f, 12.0005f, 20.0f)
-                curveTo(13.8425f, 20.0f, 15.5375f, 19.368f, 16.8915f, 18.316f)
-                lineTo(16.7615f, 17.833f)
-                curveTo(16.2025f, 15.751f, 14.2445f, 14.296f, 12.0005f, 14.296f)
-                curveTo(9.7555f, 14.296f, 7.7975f, 15.751f, 7.2385f, 17.833f)
-                close()
-                moveTo(2.0005f, 12.0f)
-                curveTo(2.0005f, 6.486f, 6.4865f, 2.0f, 12.0005f, 2.0f)
-                curveTo(17.5145f, 2.0f, 22.0005f, 6.486f, 22.0005f, 12.0f)
-                curveTo(22.0005f, 17.514f, 17.5145f, 22.0f, 12.0005f, 22.0f)
-                curveTo(6.4865f, 22.0f, 2.0005f, 17.514f, 2.0005f, 12.0f)
-                close()
-                moveTo(11.0002f, 9.0001f)
-                curveTo(11.0002f, 9.5511f, 11.4492f, 10.0001f, 12.0002f, 10.0001f)
-                curveTo(12.5512f, 10.0001f, 13.0002f, 9.5511f, 13.0002f, 9.0001f)
-                curveTo(13.0002f, 8.4491f, 12.5512f, 8.0001f, 12.0002f, 8.0001f)
-                curveTo(11.4492f, 8.0001f, 11.0002f, 8.4491f, 11.0002f, 9.0001f)
-                close()
-                moveTo(9.0002f, 9.0001f)
-                curveTo(9.0002f, 7.3461f, 10.3462f, 6.0001f, 12.0002f, 6.0001f)
-                curveTo(13.6542f, 6.0001f, 15.0002f, 7.3461f, 15.0002f, 9.0001f)
-                curveTo(15.0002f, 10.6541f, 13.6542f, 12.0001f, 12.0002f, 12.0001f)
-                curveTo(10.3462f, 12.0001f, 9.0002f, 10.6541f, 9.0002f, 9.0001f)
-                close()
+val BezierIcons.PersonCircle: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _personCircle ?: ImageVector.Builder(
+                    name = "PersonCircle",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.0005f, 12.296f)
+                    curveTo(14.9175f, 12.296f, 17.4735f, 14.08f, 18.4665f, 16.691f)
+                    curveTo(19.4265f, 15.371f, 20.0005f, 13.753f, 20.0005f, 12.0f)
+                    curveTo(20.0005f, 7.589f, 16.4115f, 4.0f, 12.0005f, 4.0f)
+                    curveTo(7.58949f, 4.0f, 4.00049f, 7.589f, 4.00049f, 12.0f)
+                    curveTo(4.00049f, 13.753f, 4.57349f, 15.371f, 5.53349f, 16.691f)
+                    curveTo(6.52749f, 14.079f, 9.08349f, 12.296f, 12.0005f, 12.296f)
+                    close()
+                    moveTo(7.23849f, 17.833f)
+                    lineTo(7.10849f, 18.316f)
+                    curveTo(8.46249f, 19.367f, 10.1575f, 20.0f, 12.0005f, 20.0f)
+                    curveTo(13.8425f, 20.0f, 15.5375f, 19.368f, 16.8915f, 18.316f)
+                    lineTo(16.7615f, 17.833f)
+                    curveTo(16.2025f, 15.751f, 14.2445f, 14.296f, 12.0005f, 14.296f)
+                    curveTo(9.75549f, 14.296f, 7.79749f, 15.751f, 7.23849f, 17.833f)
+                    close()
+                    moveTo(2.00049f, 12.0f)
+                    curveTo(2.00049f, 6.486f, 6.48649f, 2.0f, 12.0005f, 2.0f)
+                    curveTo(17.5145f, 2.0f, 22.0005f, 6.486f, 22.0005f, 12.0f)
+                    curveTo(22.0005f, 17.514f, 17.5145f, 22.0f, 12.0005f, 22.0f)
+                    curveTo(6.48649f, 22.0f, 2.00049f, 17.514f, 2.00049f, 12.0f)
+                    close()
+                    moveTo(11.0002f, 9.00009f)
+                    curveTo(11.0002f, 9.55109f, 11.4492f, 10.0001f, 12.0002f, 10.0001f)
+                    curveTo(12.5512f, 10.0001f, 13.0002f, 9.55109f, 13.0002f, 9.00009f)
+                    curveTo(13.0002f, 8.44909f, 12.5512f, 8.00009f, 12.0002f, 8.00009f)
+                    curveTo(11.4492f, 8.00009f, 11.0002f, 8.44909f, 11.0002f, 9.00009f)
+                    close()
+                    moveTo(9.00018f, 9.00009f)
+                    curveTo(9.00018f, 7.34609f, 10.3462f, 6.00009f, 12.0002f, 6.00009f)
+                    curveTo(13.6542f, 6.00009f, 15.0002f, 7.34609f, 15.0002f, 9.00009f)
+                    curveTo(15.0002f, 10.6541f, 13.6542f, 12.0001f, 12.0002f, 12.0001f)
+                    curveTo(10.3462f, 12.0001f, 9.00018f, 10.6541f, 9.00018f, 9.00009f)
+                    close()
+                }
+            }.build().also {
+                _personCircle = it
             }
-        }.build().also {
-            _personCircle = it
-        }
     }
+
 
 private var _personCircle: ImageVector? = null
 
@@ -78,7 +80,7 @@ private var _personCircle: ImageVector? = null
 private fun PersonCircleIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.PersonCircle,
+            imageVector = BezierIcons.PersonCircle.imageVector,
             contentDescription = null,
     )
 }

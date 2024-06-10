@@ -9,53 +9,55 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.TriangleLeftCircle: ImageVector
-    get() {
-        return io.channel.bezier.icon._triangleLeftCircle ?: ImageVector.Builder(
-                name = "TriangleLeftCircle",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(4.0002f, 12.0001f)
-                curveTo(4.0002f, 16.4111f, 7.5892f, 20.0001f, 12.0002f, 20.0001f)
-                curveTo(16.4112f, 20.0001f, 20.0002f, 16.4111f, 20.0002f, 12.0001f)
-                curveTo(20.0002f, 7.5891f, 16.4112f, 4.0001f, 12.0002f, 4.0001f)
-                curveTo(7.5892f, 4.0001f, 4.0002f, 7.5891f, 4.0002f, 12.0001f)
-                close()
-                moveTo(12.0002f, 22.0001f)
-                curveTo(6.4772f, 22.0001f, 2.0002f, 17.5231f, 2.0002f, 12.0001f)
-                curveTo(2.0002f, 6.4771f, 6.4772f, 2.0001f, 12.0002f, 2.0001f)
-                curveTo(17.5232f, 2.0001f, 22.0002f, 6.4771f, 22.0002f, 12.0001f)
-                curveTo(22.0002f, 17.5231f, 17.5232f, 22.0001f, 12.0002f, 22.0001f)
-                close()
-                moveTo(8.3995f, 11.78f)
-                lineTo(13.6305f, 7.421f)
-                curveTo(13.8255f, 7.258f, 14.1225f, 7.397f, 14.1225f, 7.651f)
-                lineTo(14.1225f, 16.371f)
-                curveTo(14.1225f, 16.625f, 13.8255f, 16.764f, 13.6305f, 16.601f)
-                lineTo(8.3995f, 12.241f)
-                curveTo(8.2555f, 12.122f, 8.2555f, 11.9f, 8.3995f, 11.78f)
-                close()
+val BezierIcons.TriangleLeftCircle: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _triangleLeftCircle ?: ImageVector.Builder(
+                    name = "TriangleLeftCircle",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(4.00018f, 12.0001f)
+                    curveTo(4.00018f, 16.4111f, 7.58918f, 20.0001f, 12.0002f, 20.0001f)
+                    curveTo(16.4112f, 20.0001f, 20.0002f, 16.4111f, 20.0002f, 12.0001f)
+                    curveTo(20.0002f, 7.58912f, 16.4112f, 4.00012f, 12.0002f, 4.00012f)
+                    curveTo(7.58918f, 4.00012f, 4.00018f, 7.58912f, 4.00018f, 12.0001f)
+                    close()
+                    moveTo(12.0002f, 22.0001f)
+                    curveTo(6.47718f, 22.0001f, 2.00018f, 17.5231f, 2.00018f, 12.0001f)
+                    curveTo(2.00018f, 6.47712f, 6.47718f, 2.00012f, 12.0002f, 2.00012f)
+                    curveTo(17.5232f, 2.00012f, 22.0002f, 6.47712f, 22.0002f, 12.0001f)
+                    curveTo(22.0002f, 17.5231f, 17.5232f, 22.0001f, 12.0002f, 22.0001f)
+                    close()
+                    moveTo(8.3995f, 11.78f)
+                    lineTo(13.6305f, 7.42104f)
+                    curveTo(13.8255f, 7.25804f, 14.1225f, 7.39704f, 14.1225f, 7.65104f)
+                    lineTo(14.1225f, 16.371f)
+                    curveTo(14.1225f, 16.625f, 13.8255f, 16.764f, 13.6305f, 16.601f)
+                    lineTo(8.3995f, 12.241f)
+                    curveTo(8.2555f, 12.122f, 8.2555f, 11.9f, 8.3995f, 11.78f)
+                    close()
+                }
+            }.build().also {
+                _triangleLeftCircle = it
             }
-        }.build().also {
-            io.channel.bezier.icon._triangleLeftCircle = it
-        }
     }
+
 
 private var _triangleLeftCircle: ImageVector? = null
 
@@ -64,7 +66,7 @@ private var _triangleLeftCircle: ImageVector? = null
 private fun TriangleLeftCircleIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.TriangleLeftCircle,
+            imageVector = BezierIcons.TriangleLeftCircle.imageVector,
             contentDescription = null,
     )
 }

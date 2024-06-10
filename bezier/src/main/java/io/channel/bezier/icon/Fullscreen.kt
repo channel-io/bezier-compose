@@ -9,69 +9,71 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Fullscreen: ImageVector
-    get() {
-        return _fullscreen ?: ImageVector.Builder(
-                name = "Fullscreen",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(19.0002f, 10.0001f)
-                lineTo(21.0002f, 10.0001f)
-                lineTo(21.0002f, 4.5001f)
-                curveTo(21.0002f, 3.6731f, 20.3272f, 3.0001f, 19.5002f, 3.0001f)
-                lineTo(14.0002f, 3.0001f)
-                lineTo(14.0002f, 5.0001f)
-                lineTo(19.0002f, 5.0001f)
-                lineTo(19.0002f, 10.0001f)
-                close()
-                moveTo(14.0002f, 21.0001f)
-                lineTo(19.5002f, 21.0001f)
-                curveTo(20.3272f, 21.0001f, 21.0002f, 20.3271f, 21.0002f, 19.5001f)
-                lineTo(21.0002f, 14.0001f)
-                lineTo(19.0002f, 14.0001f)
-                lineTo(19.0002f, 19.0001f)
-                lineTo(14.0002f, 19.0001f)
-                lineTo(14.0002f, 21.0001f)
-                close()
-                moveTo(10.0002f, 21.0001f)
-                lineTo(4.5002f, 21.0001f)
-                curveTo(3.6732f, 21.0001f, 3.0002f, 20.3271f, 3.0002f, 19.5001f)
-                lineTo(3.0002f, 14.0001f)
-                lineTo(5.0002f, 14.0001f)
-                lineTo(5.0002f, 19.0001f)
-                lineTo(10.0002f, 19.0001f)
-                lineTo(10.0002f, 21.0001f)
-                close()
-                moveTo(3.0002f, 10.0001f)
-                lineTo(5.0002f, 10.0001f)
-                lineTo(5.0002f, 5.0001f)
-                lineTo(10.0002f, 5.0001f)
-                lineTo(10.0002f, 3.0001f)
-                lineTo(4.5002f, 3.0001f)
-                curveTo(3.6732f, 3.0001f, 3.0002f, 3.6731f, 3.0002f, 4.5001f)
-                lineTo(3.0002f, 10.0001f)
-                close()
+val BezierIcons.Fullscreen: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _fullscreen ?: ImageVector.Builder(
+                    name = "Fullscreen",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(19.0002f, 10.0001f)
+                    lineTo(21.0002f, 10.0001f)
+                    lineTo(21.0002f, 4.50009f)
+                    curveTo(21.0002f, 3.67309f, 20.3272f, 3.00009f, 19.5002f, 3.00009f)
+                    lineTo(14.0002f, 3.00009f)
+                    lineTo(14.0002f, 5.00009f)
+                    lineTo(19.0002f, 5.00009f)
+                    lineTo(19.0002f, 10.0001f)
+                    close()
+                    moveTo(14.0002f, 21.0001f)
+                    lineTo(19.5002f, 21.0001f)
+                    curveTo(20.3272f, 21.0001f, 21.0002f, 20.3271f, 21.0002f, 19.5001f)
+                    lineTo(21.0002f, 14.0001f)
+                    lineTo(19.0002f, 14.0001f)
+                    lineTo(19.0002f, 19.0001f)
+                    lineTo(14.0002f, 19.0001f)
+                    lineTo(14.0002f, 21.0001f)
+                    close()
+                    moveTo(10.0002f, 21.0001f)
+                    lineTo(4.50018f, 21.0001f)
+                    curveTo(3.67318f, 21.0001f, 3.00018f, 20.3271f, 3.00018f, 19.5001f)
+                    lineTo(3.00018f, 14.0001f)
+                    lineTo(5.00018f, 14.0001f)
+                    lineTo(5.00018f, 19.0001f)
+                    lineTo(10.0002f, 19.0001f)
+                    lineTo(10.0002f, 21.0001f)
+                    close()
+                    moveTo(3.00018f, 10.0001f)
+                    lineTo(5.00018f, 10.0001f)
+                    lineTo(5.00018f, 5.00009f)
+                    lineTo(10.0002f, 5.00009f)
+                    lineTo(10.0002f, 3.00009f)
+                    lineTo(4.50018f, 3.00009f)
+                    curveTo(3.67318f, 3.00009f, 3.00018f, 3.67309f, 3.00018f, 4.50009f)
+                    lineTo(3.00018f, 10.0001f)
+                    close()
+                }
+            }.build().also {
+                _fullscreen = it
             }
-        }.build().also {
-            _fullscreen = it
-        }
     }
+
 
 private var _fullscreen: ImageVector? = null
 
@@ -80,7 +82,7 @@ private var _fullscreen: ImageVector? = null
 private fun FullscreenIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Fullscreen,
+            imageVector = BezierIcons.Fullscreen.imageVector,
             contentDescription = null,
     )
 }

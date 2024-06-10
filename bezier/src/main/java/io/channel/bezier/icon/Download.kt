@@ -15,48 +15,52 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Download: ImageVector
-    get() {
-        return io.channel.bezier.icon._download ?: ImageVector.Builder(
-                name = "Download",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(11.0f, 4.0f)
-                curveTo(11.0f, 3.4477f, 11.4477f, 3.0f, 12.0f, 3.0f)
-                curveTo(12.5523f, 3.0f, 13.0f, 3.4477f, 13.0f, 4.0f)
-                lineTo(13.0f, 13.5858f)
-                lineTo(16.7929f, 9.7929f)
-                curveTo(17.1834f, 9.4024f, 17.8166f, 9.4024f, 18.2071f, 9.7929f)
-                curveTo(18.5976f, 10.1834f, 18.5976f, 10.8166f, 18.2071f, 11.2071f)
-                lineTo(12.7071f, 16.7071f)
-                curveTo(12.3166f, 17.0976f, 11.6834f, 17.0976f, 11.2929f, 16.7071f)
-                lineTo(5.7929f, 11.2071f)
-                curveTo(5.4024f, 10.8166f, 5.4024f, 10.1834f, 5.7929f, 9.7929f)
-                curveTo(6.1834f, 9.4024f, 6.8166f, 9.4024f, 7.2071f, 9.7929f)
-                lineTo(11.0f, 13.5858f)
-                lineTo(11.0f, 4.0f)
-                close()
-                moveTo(5.0f, 20.0f)
-                curveTo(4.4477f, 20.0f, 4.0f, 20.4477f, 4.0f, 21.0f)
-                curveTo(4.0f, 21.5523f, 4.4477f, 22.0f, 5.0f, 22.0f)
-                lineTo(19.0f, 22.0f)
-                curveTo(19.5523f, 22.0f, 20.0f, 21.5523f, 20.0f, 21.0f)
-                curveTo(20.0f, 20.4477f, 19.5523f, 20.0f, 19.0f, 20.0f)
-                lineTo(5.0f, 20.0f)
-                close()
+val BezierIcons.Download: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _download ?: ImageVector.Builder(
+                    name = "Download",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(11.0f, 4.0f)
+                    curveTo(11.0f, 3.44772f, 11.4477f, 3.0f, 12.0f, 3.0f)
+                    curveTo(12.5523f, 3.0f, 13.0f, 3.44772f, 13.0f, 4.0f)
+                    lineTo(13.0f, 13.5858f)
+                    lineTo(16.7929f, 9.79289f)
+                    curveTo(17.1834f, 9.40237f, 17.8166f, 9.40237f, 18.2071f, 9.79289f)
+                    curveTo(18.5976f, 10.1834f, 18.5976f, 10.8166f, 18.2071f, 11.2071f)
+                    lineTo(12.7071f, 16.7071f)
+                    curveTo(12.3166f, 17.0976f, 11.6834f, 17.0976f, 11.2929f, 16.7071f)
+                    lineTo(5.79289f, 11.2071f)
+                    curveTo(5.40237f, 10.8166f, 5.40237f, 10.1834f, 5.79289f, 9.79289f)
+                    curveTo(6.18342f, 9.40237f, 6.81658f, 9.40237f, 7.20711f, 9.79289f)
+                    lineTo(11.0f, 13.5858f)
+                    lineTo(11.0f, 4.0f)
+                    close()
+                    moveTo(5.0f, 20.0f)
+                    curveTo(4.44772f, 20.0f, 4.0f, 20.4477f, 4.0f, 21.0f)
+                    curveTo(4.0f, 21.5523f, 4.44772f, 22.0f, 5.0f, 22.0f)
+                    lineTo(19.0f, 22.0f)
+                    curveTo(19.5523f, 22.0f, 20.0f, 21.5523f, 20.0f, 21.0f)
+                    curveTo(20.0f, 20.4477f, 19.5523f, 20.0f, 19.0f, 20.0f)
+                    lineTo(5.0f, 20.0f)
+                    close()
+                }
+            }.build().also {
+                _download = it
             }
-        }.build().also {
-            io.channel.bezier.icon._download = it
-        }
     }
+
 
 private var _download: ImageVector? = null
 
@@ -65,7 +69,7 @@ private var _download: ImageVector? = null
 private fun DownloadIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Download,
+            imageVector = BezierIcons.Download.imageVector,
             contentDescription = null,
     )
 }

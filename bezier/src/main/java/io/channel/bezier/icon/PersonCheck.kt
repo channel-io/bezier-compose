@@ -15,53 +15,57 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.PersonCheck: ImageVector
-    get() {
-        return _personCheck ?: ImageVector.Builder(
-                name = "PersonCheck",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(9.484f, 11.0001f)
-                curveTo(11.417f, 11.0001f, 12.984f, 9.4331f, 12.984f, 7.5001f)
-                curveTo(12.984f, 5.5671f, 11.417f, 4.0001f, 9.484f, 4.0001f)
-                curveTo(7.551f, 4.0001f, 5.984f, 5.5671f, 5.984f, 7.5001f)
-                curveTo(5.984f, 9.4331f, 7.551f, 11.0001f, 9.484f, 11.0001f)
-                close()
-                moveTo(9.6516f, 12.0071f)
-                curveTo(12.6998f, 12.1344f, 15.3073f, 13.9676f, 16.5444f, 16.5769f)
-                lineTo(15.5f, 17.6213f)
-                lineTo(13.2574f, 15.3787f)
-                lineTo(10.4289f, 18.2071f)
-                lineTo(12.2218f, 20.0f)
-                lineTo(2.0071f, 20.0001f)
-                curveTo(1.7221f, 20.0001f, 1.4821f, 19.7601f, 1.5011f, 19.4761f)
-                curveTo(1.7597f, 15.4778f, 4.9555f, 12.2797f, 8.9526f, 12.0175f)
-                curveTo(9.0667f, 12.0061f, 9.1861f, 12.0f, 9.3118f, 12.0f)
-                curveTo(9.3425f, 12.0f, 9.3731f, 12.0002f, 9.4037f, 12.0005f)
-                curveTo(9.4305f, 12.0003f, 9.4572f, 12.0001f, 9.4841f, 12.0001f)
-                curveTo(9.5407f, 12.0001f, 9.5965f, 12.0025f, 9.6516f, 12.0071f)
-                close()
-                moveTo(19.7426f, 14.7929f)
-                lineTo(15.5f, 19.0355f)
-                lineTo(13.2574f, 16.7929f)
-                lineTo(11.8431f, 18.2071f)
-                lineTo(15.5f, 21.8639f)
-                lineTo(21.1569f, 16.2071f)
-                lineTo(19.7426f, 14.7929f)
-                close()
+val BezierIcons.PersonCheck: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _personCheck ?: ImageVector.Builder(
+                    name = "PersonCheck",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(9.48396f, 11.0001f)
+                    curveTo(11.417f, 11.0001f, 12.984f, 9.43312f, 12.984f, 7.50012f)
+                    curveTo(12.984f, 5.56712f, 11.417f, 4.00012f, 9.48396f, 4.00012f)
+                    curveTo(7.55096f, 4.00012f, 5.98396f, 5.56712f, 5.98396f, 7.50012f)
+                    curveTo(5.98396f, 9.43312f, 7.55096f, 11.0001f, 9.48396f, 11.0001f)
+                    close()
+                    moveTo(9.65158f, 12.0071f)
+                    curveTo(12.6998f, 12.1344f, 15.3073f, 13.9676f, 16.5444f, 16.5769f)
+                    lineTo(15.5f, 17.6213f)
+                    lineTo(13.2574f, 15.3787f)
+                    lineTo(10.4289f, 18.2071f)
+                    lineTo(12.2218f, 20.0f)
+                    lineTo(2.00706f, 20.0001f)
+                    curveTo(1.72206f, 20.0001f, 1.48206f, 19.7601f, 1.50106f, 19.4761f)
+                    curveTo(1.75969f, 15.4778f, 4.95548f, 12.2797f, 8.95258f, 12.0175f)
+                    curveTo(9.06673f, 12.0061f, 9.1861f, 12.0f, 9.31184f, 12.0f)
+                    curveTo(9.34251f, 12.0f, 9.37315f, 12.0002f, 9.40374f, 12.0005f)
+                    curveTo(9.43048f, 12.0003f, 9.45725f, 12.0001f, 9.48406f, 12.0001f)
+                    curveTo(9.5407f, 12.0001f, 9.59653f, 12.0025f, 9.65158f, 12.0071f)
+                    close()
+                    moveTo(19.7426f, 14.7929f)
+                    lineTo(15.5f, 19.0355f)
+                    lineTo(13.2574f, 16.7929f)
+                    lineTo(11.8431f, 18.2071f)
+                    lineTo(15.5f, 21.8639f)
+                    lineTo(21.1569f, 16.2071f)
+                    lineTo(19.7426f, 14.7929f)
+                    close()
+                }
+            }.build().also {
+                _personCheck = it
             }
-        }.build().also {
-            _personCheck = it
-        }
     }
+
 
 private var _personCheck: ImageVector? = null
 
@@ -70,7 +74,7 @@ private var _personCheck: ImageVector? = null
 private fun PersonCheckIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.PersonCheck,
+            imageVector = BezierIcons.PersonCheck.imageVector,
             contentDescription = null,
     )
 }

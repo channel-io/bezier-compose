@@ -9,85 +9,87 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Calendar: ImageVector
-    get() {
-        return io.channel.bezier.icon._calendar ?: ImageVector.Builder(
-                name = "Calendar",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(4.5f, 21.0f)
-                lineTo(19.5f, 21.0f)
-                curveTo(20.3283f, 21.0f, 21.0f, 20.3283f, 21.0f, 19.5f)
-                lineTo(21.0f, 4.5f)
-                curveTo(21.0f, 3.6717f, 20.3283f, 3.0f, 19.5f, 3.0f)
-                lineTo(4.5f, 3.0f)
-                curveTo(3.6717f, 3.0f, 3.0f, 3.6717f, 3.0f, 4.5f)
-                lineTo(3.0f, 19.5f)
-                curveTo(3.0f, 20.3283f, 3.6717f, 21.0f, 4.5f, 21.0f)
-                close()
-                moveTo(5.0f, 8.0f)
-                lineTo(5.0f, 19.0f)
-                lineTo(19.0f, 19.0f)
-                lineTo(19.0f, 8.0f)
-                lineTo(5.0f, 8.0f)
-                close()
-                moveTo(6.6279f, 11.8103f)
-                curveTo(6.6279f, 11.1273f, 7.1809f, 10.5733f, 7.8649f, 10.5733f)
-                curveTo(8.5479f, 10.5733f, 9.1019f, 11.1273f, 9.1019f, 11.8103f)
-                curveTo(9.1019f, 12.4943f, 8.5479f, 13.0483f, 7.8649f, 13.0483f)
-                curveTo(7.1809f, 13.0483f, 6.6279f, 12.4943f, 6.6279f, 11.8103f)
-                close()
-                moveTo(10.7568f, 11.8103f)
-                curveTo(10.7568f, 11.1273f, 11.3108f, 10.5733f, 11.9938f, 10.5733f)
-                curveTo(12.6778f, 10.5733f, 13.2308f, 11.1273f, 13.2308f, 11.8103f)
-                curveTo(13.2308f, 12.4943f, 12.6778f, 13.0483f, 11.9938f, 13.0483f)
-                curveTo(11.3108f, 13.0483f, 10.7568f, 12.4943f, 10.7568f, 11.8103f)
-                close()
-                moveTo(16.1232f, 10.5733f)
-                curveTo(15.4392f, 10.5733f, 14.8852f, 11.1273f, 14.8852f, 11.8103f)
-                curveTo(14.8852f, 12.4943f, 15.4392f, 13.0483f, 16.1232f, 13.0483f)
-                curveTo(16.8062f, 13.0483f, 17.3602f, 12.4943f, 17.3602f, 11.8103f)
-                curveTo(17.3602f, 11.1273f, 16.8062f, 10.5733f, 16.1232f, 10.5733f)
-                close()
-                moveTo(6.6279f, 15.7625f)
-                curveTo(6.6279f, 15.0795f, 7.1809f, 14.5255f, 7.8649f, 14.5255f)
-                curveTo(8.5479f, 14.5255f, 9.1019f, 15.0795f, 9.1019f, 15.7625f)
-                curveTo(9.1019f, 16.4465f, 8.5479f, 17.0005f, 7.8649f, 17.0005f)
-                curveTo(7.1809f, 17.0005f, 6.6279f, 16.4465f, 6.6279f, 15.7625f)
-                close()
-                moveTo(11.9938f, 14.5255f)
-                curveTo(11.3108f, 14.5255f, 10.7568f, 15.0795f, 10.7568f, 15.7625f)
-                curveTo(10.7568f, 16.4465f, 11.3108f, 17.0005f, 11.9938f, 17.0005f)
-                curveTo(12.6778f, 17.0005f, 13.2308f, 16.4465f, 13.2308f, 15.7625f)
-                curveTo(13.2308f, 15.0795f, 12.6778f, 14.5255f, 11.9938f, 14.5255f)
-                close()
-                moveTo(14.8852f, 15.7625f)
-                curveTo(14.8852f, 15.0795f, 15.4392f, 14.5255f, 16.1232f, 14.5255f)
-                curveTo(16.8062f, 14.5255f, 17.3602f, 15.0795f, 17.3602f, 15.7625f)
-                curveTo(17.3602f, 16.4465f, 16.8062f, 17.0005f, 16.1232f, 17.0005f)
-                curveTo(15.4392f, 17.0005f, 14.8852f, 16.4465f, 14.8852f, 15.7625f)
-                close()
+val BezierIcons.Calendar: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _calendar ?: ImageVector.Builder(
+                    name = "Calendar",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(4.5f, 21.0f)
+                    lineTo(19.5f, 21.0f)
+                    curveTo(20.3283f, 21.0f, 21.0f, 20.3283f, 21.0f, 19.5f)
+                    lineTo(21.0f, 4.5f)
+                    curveTo(21.0f, 3.67172f, 20.3283f, 3.0f, 19.5f, 3.0f)
+                    lineTo(4.5f, 3.0f)
+                    curveTo(3.67172f, 3.0f, 3.0f, 3.67172f, 3.0f, 4.5f)
+                    lineTo(3.0f, 19.5f)
+                    curveTo(3.0f, 20.3283f, 3.67172f, 21.0f, 4.5f, 21.0f)
+                    close()
+                    moveTo(5.0f, 8.0f)
+                    lineTo(5.0f, 19.0f)
+                    lineTo(19.0f, 19.0f)
+                    lineTo(19.0f, 8.0f)
+                    lineTo(5.0f, 8.0f)
+                    close()
+                    moveTo(6.6279f, 11.8103f)
+                    curveTo(6.6279f, 11.1273f, 7.1809f, 10.5733f, 7.8649f, 10.5733f)
+                    curveTo(8.5479f, 10.5733f, 9.1019f, 11.1273f, 9.1019f, 11.8103f)
+                    curveTo(9.1019f, 12.4943f, 8.5479f, 13.0483f, 7.8649f, 13.0483f)
+                    curveTo(7.1809f, 13.0483f, 6.6279f, 12.4943f, 6.6279f, 11.8103f)
+                    close()
+                    moveTo(10.7568f, 11.8103f)
+                    curveTo(10.7568f, 11.1273f, 11.3108f, 10.5733f, 11.9938f, 10.5733f)
+                    curveTo(12.6778f, 10.5733f, 13.2308f, 11.1273f, 13.2308f, 11.8103f)
+                    curveTo(13.2308f, 12.4943f, 12.6778f, 13.0483f, 11.9938f, 13.0483f)
+                    curveTo(11.3108f, 13.0483f, 10.7568f, 12.4943f, 10.7568f, 11.8103f)
+                    close()
+                    moveTo(16.1232f, 10.5733f)
+                    curveTo(15.4392f, 10.5733f, 14.8852f, 11.1273f, 14.8852f, 11.8103f)
+                    curveTo(14.8852f, 12.4943f, 15.4392f, 13.0483f, 16.1232f, 13.0483f)
+                    curveTo(16.8062f, 13.0483f, 17.3602f, 12.4943f, 17.3602f, 11.8103f)
+                    curveTo(17.3602f, 11.1273f, 16.8062f, 10.5733f, 16.1232f, 10.5733f)
+                    close()
+                    moveTo(6.6279f, 15.7625f)
+                    curveTo(6.6279f, 15.0795f, 7.1809f, 14.5255f, 7.8649f, 14.5255f)
+                    curveTo(8.5479f, 14.5255f, 9.1019f, 15.0795f, 9.1019f, 15.7625f)
+                    curveTo(9.1019f, 16.4465f, 8.5479f, 17.0005f, 7.8649f, 17.0005f)
+                    curveTo(7.1809f, 17.0005f, 6.6279f, 16.4465f, 6.6279f, 15.7625f)
+                    close()
+                    moveTo(11.9938f, 14.5255f)
+                    curveTo(11.3108f, 14.5255f, 10.7568f, 15.0795f, 10.7568f, 15.7625f)
+                    curveTo(10.7568f, 16.4465f, 11.3108f, 17.0005f, 11.9938f, 17.0005f)
+                    curveTo(12.6778f, 17.0005f, 13.2308f, 16.4465f, 13.2308f, 15.7625f)
+                    curveTo(13.2308f, 15.0795f, 12.6778f, 14.5255f, 11.9938f, 14.5255f)
+                    close()
+                    moveTo(14.8852f, 15.7625f)
+                    curveTo(14.8852f, 15.0795f, 15.4392f, 14.5255f, 16.1232f, 14.5255f)
+                    curveTo(16.8062f, 14.5255f, 17.3602f, 15.0795f, 17.3602f, 15.7625f)
+                    curveTo(17.3602f, 16.4465f, 16.8062f, 17.0005f, 16.1232f, 17.0005f)
+                    curveTo(15.4392f, 17.0005f, 14.8852f, 16.4465f, 14.8852f, 15.7625f)
+                    close()
+                }
+            }.build().also {
+                _calendar = it
             }
-        }.build().also {
-            io.channel.bezier.icon._calendar = it
-        }
     }
+
 
 private var _calendar: ImageVector? = null
 
@@ -96,7 +98,7 @@ private var _calendar: ImageVector? = null
 private fun CalendarIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Calendar,
+            imageVector = BezierIcons.Calendar.imageVector,
             contentDescription = null,
     )
 }

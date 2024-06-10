@@ -9,51 +9,53 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.SpaceHorizontal: ImageVector
-    get() {
-        return io.channel.bezier.icon._spaceHorizontal ?: ImageVector.Builder(
-                name = "SpaceHorizontal",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(2.7071f, 12.7071f)
-                curveTo(2.3166f, 12.3166f, 2.3166f, 11.6834f, 2.7071f, 11.2929f)
-                lineTo(5.6343f, 8.3657f)
-                curveTo(6.1383f, 7.8617f, 7.0f, 8.2186f, 7.0f, 8.9314f)
-                lineTo(7.0f, 11.0f)
-                lineTo(17.0f, 11.0f)
-                lineTo(17.0f, 8.9314f)
-                curveTo(17.0f, 8.2186f, 17.8617f, 7.8617f, 18.3657f, 8.3657f)
-                lineTo(21.2929f, 11.2929f)
-                curveTo(21.6834f, 11.6834f, 21.6834f, 12.3166f, 21.2929f, 12.7071f)
-                lineTo(18.3657f, 15.6343f)
-                curveTo(17.8617f, 16.1383f, 17.0f, 15.7814f, 17.0f, 15.0686f)
-                lineTo(17.0f, 13.0f)
-                lineTo(7.0f, 13.0f)
-                lineTo(7.0f, 15.0686f)
-                curveTo(7.0f, 15.7814f, 6.1383f, 16.1383f, 5.6343f, 15.6343f)
-                lineTo(2.7071f, 12.7071f)
-                close()
+val BezierIcons.SpaceHorizontal: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _spaceHorizontal ?: ImageVector.Builder(
+                    name = "SpaceHorizontal",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(2.70712f, 12.7071f)
+                    curveTo(2.3166f, 12.3166f, 2.3166f, 11.6834f, 2.70712f, 11.2929f)
+                    lineTo(5.63433f, 8.36569f)
+                    curveTo(6.1383f, 7.86172f, 7.00001f, 8.21865f, 7.00001f, 8.93137f)
+                    lineTo(7.00001f, 11.0f)
+                    lineTo(17.0f, 11.0f)
+                    lineTo(17.0f, 8.93137f)
+                    curveTo(17.0f, 8.21865f, 17.8617f, 7.86172f, 18.3657f, 8.36569f)
+                    lineTo(21.2929f, 11.2929f)
+                    curveTo(21.6834f, 11.6834f, 21.6834f, 12.3166f, 21.2929f, 12.7071f)
+                    lineTo(18.3657f, 15.6343f)
+                    curveTo(17.8617f, 16.1383f, 17.0f, 15.7814f, 17.0f, 15.0686f)
+                    lineTo(17.0f, 13.0f)
+                    lineTo(7.00001f, 13.0f)
+                    lineTo(7.00001f, 15.0686f)
+                    curveTo(7.00001f, 15.7814f, 6.1383f, 16.1383f, 5.63433f, 15.6343f)
+                    lineTo(2.70712f, 12.7071f)
+                    close()
+                }
+            }.build().also {
+                _spaceHorizontal = it
             }
-        }.build().also {
-            io.channel.bezier.icon._spaceHorizontal = it
-        }
     }
+
 
 private var _spaceHorizontal: ImageVector? = null
 
@@ -62,7 +64,7 @@ private var _spaceHorizontal: ImageVector? = null
 private fun SpaceHorizontalIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.SpaceHorizontal,
+            imageVector = BezierIcons.SpaceHorizontal.imageVector,
             contentDescription = null,
     )
 }

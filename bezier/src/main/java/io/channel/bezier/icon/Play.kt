@@ -9,41 +9,43 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Play: ImageVector
-    get() {
-        return _play ?: ImageVector.Builder(
-                name = "Play",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(20.1456f, 11.3897f)
-                curveTo(20.5643f, 11.6888f, 20.5643f, 12.3112f, 20.1456f, 12.6103f)
-                lineTo(8.1859f, 21.1529f)
-                curveTo(7.6895f, 21.5075f, 7.0f, 21.1526f, 7.0f, 20.5426f)
-                lineTo(7.0f, 3.4574f)
-                curveTo(7.0f, 2.8474f, 7.6895f, 2.4925f, 8.1859f, 2.8471f)
-                lineTo(20.1456f, 11.3897f)
-                close()
+val BezierIcons.Play: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _play ?: ImageVector.Builder(
+                    name = "Play",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(19.1279f, 10.752f)
+                    curveTo(20.0185f, 11.3457f, 20.0185f, 12.6544f, 19.1279f, 13.2481f)
+                    lineTo(8.33205f, 20.4453f)
+                    curveTo(7.33522f, 21.1099f, 6.0f, 20.3953f, 6.0f, 19.1973f)
+                    lineTo(6.0f, 4.80282f)
+                    curveTo(6.0f, 3.60477f, 7.33522f, 2.89018f, 8.33205f, 3.55474f)
+                    lineTo(19.1279f, 10.752f)
+                    close()
+                }
+            }.build().also {
+                _play = it
             }
-        }.build().also {
-            _play = it
-        }
     }
+
 
 private var _play: ImageVector? = null
 
@@ -52,7 +54,7 @@ private var _play: ImageVector? = null
 private fun PlayIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Play,
+            imageVector = BezierIcons.Play.imageVector,
             contentDescription = null,
     )
 }

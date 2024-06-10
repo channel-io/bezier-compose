@@ -15,71 +15,75 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Twitter: ImageVector
-    get() {
-        return io.channel.bezier.icon._twitter ?: ImageVector.Builder(
-                name = "Twitter",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(2.0492f, 3.011f)
-                curveTo(2.041f, 3.0228f, 2.7056f, 3.891f, 3.522f, 4.936f)
-                curveTo(4.3384f, 5.981f, 6.0738f, 8.2046f, 7.3783f, 9.8742f)
-                lineTo(9.7496f, 12.911f)
-                lineTo(9.5978f, 13.076f)
-                curveTo(9.5116f, 13.1664f, 7.7681f, 14.9696f, 5.725f, 17.0832f)
-                curveTo(3.682f, 19.2007f, 2.0041f, 20.945f, 2.0f, 20.9646f)
-                curveTo(1.9918f, 20.9843f, 2.3487f, 21.0f, 2.8615f, 20.9961f)
-                lineTo(3.7353f, 20.9921f)
-                lineTo(4.0225f, 20.6896f)
-                curveTo(4.1825f, 20.5246f, 5.6676f, 18.9885f, 7.325f, 17.2718f)
-                curveTo(8.9824f, 15.555f, 10.3855f, 14.1014f, 10.4429f, 14.0385f)
-                lineTo(10.5455f, 13.9246f)
-                lineTo(11.366f, 14.9775f)
-                curveTo(11.8172f, 15.555f, 13.0603f, 17.15f, 14.1269f, 18.5171f)
-                lineTo(16.0715f, 21.0f)
-                lineTo(19.0458f, 21.0f)
-                curveTo(21.5196f, 21.0f, 22.016f, 20.9921f, 21.9996f, 20.9489f)
-                curveTo(21.9873f, 20.9175f, 21.2324f, 19.9432f, 20.3217f, 18.7764f)
-                curveTo(19.4109f, 17.6135f, 18.3689f, 16.2778f, 18.0079f, 15.8142f)
-                curveTo(17.6428f, 15.3507f, 16.572f, 13.9717f, 15.6202f, 12.7578f)
-                curveTo(14.6685f, 11.5399f, 13.889f, 10.5264f, 13.889f, 10.5107f)
-                curveTo(13.889f, 10.4832f, 18.9186f, 5.2542f, 20.6294f, 3.506f)
-                lineTo(21.1176f, 3.0071f)
-                lineTo(20.2191f, 3.0071f)
-                lineTo(19.3248f, 3.011f)
-                lineTo(18.2786f, 4.0953f)
-                curveTo(17.7043f, 4.6924f, 16.2971f, 6.1539f, 15.1485f, 7.3364f)
-                lineTo(13.0685f, 9.4892f)
-                lineTo(10.5455f, 6.2599f)
-                lineTo(8.0183f, 3.0267f)
-                lineTo(5.044f, 3.0071f)
-                curveTo(3.4072f, 2.9953f, 2.0574f, 2.9992f, 2.0492f, 3.011f)
-                close()
-                moveTo(9.0973f, 6.4917f)
-                curveTo(10.0696f, 7.741f, 11.5711f, 9.6621f, 12.4326f, 10.766f)
-                curveTo(13.2941f, 11.866f, 15.2059f, 14.3175f, 16.6828f, 16.2071f)
-                curveTo(18.1597f, 18.1007f, 19.3822f, 19.6682f, 19.4027f, 19.6957f)
-                curveTo(19.4273f, 19.731f, 19.1361f, 19.7428f, 18.0735f, 19.7428f)
-                lineTo(16.7156f, 19.7428f)
-                lineTo(14.0244f, 16.2935f)
-                curveTo(7.8132f, 8.346f, 4.6789f, 4.331f, 4.642f, 4.2721f)
-                curveTo(4.6174f, 4.2367f, 4.8963f, 4.2249f, 5.9671f, 4.2249f)
-                lineTo(7.325f, 4.2249f)
-                lineTo(9.0973f, 6.4917f)
-                close()
+val BezierIcons.Twitter: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _twitter ?: ImageVector.Builder(
+                    name = "Twitter",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(2.04923f, 3.01098f)
+                    curveTo(2.04103f, 3.02277f, 2.70563f, 3.89099f, 3.52202f, 4.93599f)
+                    curveTo(4.33841f, 5.981f, 6.07376f, 8.20458f, 7.37835f, 9.87423f)
+                    lineTo(9.74959f, 12.911f)
+                    lineTo(9.59779f, 13.076f)
+                    curveTo(9.51164f, 13.1664f, 7.76809f, 14.9696f, 5.72505f, 17.0832f)
+                    curveTo(3.68202f, 19.2007f, 2.0041f, 20.945f, 2.0f, 20.9646f)
+                    curveTo(1.9918f, 20.9843f, 2.34871f, 21.0f, 2.86152f, 20.9961f)
+                    lineTo(3.73535f, 20.9921f)
+                    lineTo(4.02252f, 20.6896f)
+                    curveTo(4.18252f, 20.5246f, 5.66762f, 18.9885f, 7.32502f, 17.2718f)
+                    curveTo(8.98242f, 15.555f, 10.3855f, 14.1014f, 10.4429f, 14.0385f)
+                    lineTo(10.5455f, 13.9246f)
+                    lineTo(11.366f, 14.9775f)
+                    curveTo(11.8172f, 15.555f, 13.0603f, 17.15f, 14.1269f, 18.5171f)
+                    lineTo(16.0715f, 21.0f)
+                    lineTo(19.0458f, 21.0f)
+                    curveTo(21.5196f, 21.0f, 22.016f, 20.9921f, 21.9996f, 20.9489f)
+                    curveTo(21.9873f, 20.9175f, 21.2324f, 19.9432f, 20.3217f, 18.7764f)
+                    curveTo(19.4109f, 17.6135f, 18.3689f, 16.2778f, 18.0079f, 15.8142f)
+                    curveTo(17.6428f, 15.3507f, 16.572f, 13.9717f, 15.6202f, 12.7578f)
+                    curveTo(14.6685f, 11.5399f, 13.889f, 10.5264f, 13.889f, 10.5107f)
+                    curveTo(13.889f, 10.4832f, 18.9186f, 5.25421f, 20.6294f, 3.50599f)
+                    lineTo(21.1176f, 3.00706f)
+                    lineTo(20.2191f, 3.00706f)
+                    lineTo(19.3248f, 3.01098f)
+                    lineTo(18.2786f, 4.09527f)
+                    curveTo(17.7043f, 4.69242f, 16.2971f, 6.15385f, 15.1485f, 7.33636f)
+                    lineTo(13.0685f, 9.48922f)
+                    lineTo(10.5455f, 6.25993f)
+                    lineTo(8.01834f, 3.0267f)
+                    lineTo(5.04404f, 3.00706f)
+                    curveTo(3.40715f, 2.99527f, 2.05744f, 2.9992f, 2.04923f, 3.01098f)
+                    close()
+                    moveTo(9.09729f, 6.49171f)
+                    curveTo(10.0696f, 7.741f, 11.5711f, 9.66208f, 12.4326f, 10.766f)
+                    curveTo(13.2941f, 11.866f, 15.2059f, 14.3175f, 16.6828f, 16.2071f)
+                    curveTo(18.1597f, 18.1007f, 19.3822f, 19.6682f, 19.4027f, 19.6957f)
+                    curveTo(19.4273f, 19.731f, 19.1361f, 19.7428f, 18.0735f, 19.7428f)
+                    lineTo(16.7156f, 19.7428f)
+                    lineTo(14.0244f, 16.2935f)
+                    curveTo(7.81322f, 8.346f, 4.67892f, 4.33099f, 4.642f, 4.27206f)
+                    curveTo(4.61738f, 4.2367f, 4.89635f, 4.22492f, 5.9671f, 4.22492f)
+                    lineTo(7.32502f, 4.22492f)
+                    lineTo(9.09729f, 6.49171f)
+                    close()
+                }
+            }.build().also {
+                _twitter = it
             }
-        }.build().also {
-            io.channel.bezier.icon._twitter = it
-        }
     }
+
 
 private var _twitter: ImageVector? = null
 
@@ -88,7 +92,7 @@ private var _twitter: ImageVector? = null
 private fun TwitterIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Twitter,
+            imageVector = BezierIcons.Twitter.imageVector,
             contentDescription = null,
     )
 }

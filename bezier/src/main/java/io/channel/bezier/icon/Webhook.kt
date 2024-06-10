@@ -9,77 +9,79 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Webhook: ImageVector
-    get() {
-        return io.channel.bezier.icon._webhook ?: ImageVector.Builder(
-                name = "Webhook",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(8.75f, 16.01f)
-                curveTo(8.75f, 15.6458f, 8.6525f, 15.3043f, 8.4822f, 15.01f)
-                lineTo(10.8212f, 10.9581f)
-                lineTo(9.9549f, 10.4582f)
-                curveTo(8.1617f, 9.4235f, 7.5471f, 7.1294f, 8.5822f, 5.3363f)
-                curveTo(9.618f, 3.5424f, 11.9116f, 2.9277f, 13.705f, 3.9634f)
-                lineTo(14.7052f, 2.2314f)
-                curveTo(11.955f, 0.6433f, 8.4384f, 1.5859f, 6.8501f, 4.3363f)
-                curveTo(5.4333f, 6.7906f, 6.0319f, 9.8566f, 8.1324f, 11.6155f)
-                lineTo(6.7502f, 14.01f)
-                lineTo(6.75f, 14.01f)
-                curveTo(5.646f, 14.01f, 4.75f, 14.906f, 4.75f, 16.01f)
-                curveTo(4.75f, 17.114f, 5.646f, 18.01f, 6.75f, 18.01f)
-                curveTo(7.854f, 18.01f, 8.75f, 17.114f, 8.75f, 16.01f)
-                close()
-                moveTo(11.8301f, 5.2112f)
-                curveTo(12.9341f, 5.2112f, 13.8301f, 6.1062f, 13.8301f, 7.2112f)
-                curveTo(13.8301f, 7.5753f, 13.7326f, 7.9167f, 13.5624f, 8.2109f)
-                lineTo(14.9446f, 10.6048f)
-                curveTo(17.5183f, 9.6657f, 20.4729f, 10.6802f, 21.8892f, 13.1346f)
-                curveTo(23.4771f, 15.8845f, 22.5349f, 19.4012f, 19.7854f, 20.9896f)
-                lineTo(18.785f, 19.2578f)
-                curveTo(20.5782f, 18.2218f, 21.1928f, 15.9281f, 20.157f, 14.1345f)
-                curveTo(19.1224f, 12.3414f, 16.8282f, 11.7267f, 15.0351f, 12.7618f)
-                lineTo(14.1692f, 13.2617f)
-                lineTo(11.8305f, 9.2112f)
-                curveTo(11.8304f, 9.2112f, 11.8302f, 9.2112f, 11.8301f, 9.2112f)
-                curveTo(10.7261f, 9.2112f, 9.8301f, 8.3152f, 9.8301f, 7.2112f)
-                curveTo(9.8301f, 6.1062f, 10.7261f, 5.2112f, 11.8301f, 5.2112f)
-                close()
-                moveTo(16.9102f, 14.01f)
-                curveTo(16.1697f, 14.01f, 15.5235f, 14.4124f, 15.1778f, 15.01f)
-                lineTo(10.5f, 15.01f)
-                lineTo(10.5f, 16.01f)
-                curveTo(10.5f, 18.0807f, 8.8207f, 19.76f, 6.75f, 19.76f)
-                curveTo(4.6787f, 19.76f, 3.0f, 18.0811f, 3.0f, 16.01f)
-                lineTo(1.0f, 16.01f)
-                curveTo(1.0f, 19.1856f, 3.574f, 21.76f, 6.75f, 21.76f)
-                curveTo(9.5842f, 21.76f, 11.9399f, 19.7087f, 12.4133f, 17.01f)
-                lineTo(15.1778f, 17.01f)
-                curveTo(15.5235f, 17.6077f, 16.1697f, 18.01f, 16.9102f, 18.01f)
-                curveTo(18.0142f, 18.01f, 18.9102f, 17.114f, 18.9102f, 16.01f)
-                curveTo(18.9102f, 14.906f, 18.0142f, 14.01f, 16.9102f, 14.01f)
-                close()
+val BezierIcons.Webhook: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _webhook ?: ImageVector.Builder(
+                    name = "Webhook",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(8.75f, 16.01f)
+                    curveTo(8.75f, 15.6458f, 8.6525f, 15.3043f, 8.48219f, 15.01f)
+                    lineTo(10.8212f, 10.9581f)
+                    lineTo(9.95489f, 10.4582f)
+                    curveTo(8.16174f, 9.42353f, 7.54706f, 7.12938f, 8.58215f, 5.33632f)
+                    curveTo(9.61805f, 3.54245f, 11.9116f, 2.92769f, 13.705f, 3.96335f)
+                    lineTo(14.7052f, 2.23138f)
+                    curveTo(11.955f, 0.643276f, 8.43838f, 1.58589f, 6.85012f, 4.33629f)
+                    curveTo(5.43327f, 6.79065f, 6.03188f, 9.85664f, 8.13238f, 11.6155f)
+                    lineTo(6.75016f, 14.01f)
+                    lineTo(6.75f, 14.01f)
+                    curveTo(5.646f, 14.01f, 4.75f, 14.906f, 4.75f, 16.01f)
+                    curveTo(4.75f, 17.114f, 5.646f, 18.01f, 6.75f, 18.01f)
+                    curveTo(7.854f, 18.01f, 8.75f, 17.114f, 8.75f, 16.01f)
+                    close()
+                    moveTo(11.8301f, 5.21118f)
+                    curveTo(12.9341f, 5.21118f, 13.8301f, 6.10618f, 13.8301f, 7.21118f)
+                    curveTo(13.8301f, 7.57528f, 13.7326f, 7.91675f, 13.5624f, 8.21092f)
+                    lineTo(14.9446f, 10.6048f)
+                    curveTo(17.5183f, 9.66566f, 20.4729f, 10.6802f, 21.8892f, 13.1346f)
+                    curveTo(23.4771f, 15.8845f, 22.5349f, 19.4012f, 19.7854f, 20.9896f)
+                    lineTo(18.785f, 19.2578f)
+                    curveTo(20.5782f, 18.2218f, 21.1928f, 15.9281f, 20.157f, 14.1345f)
+                    curveTo(19.1224f, 12.3414f, 16.8282f, 11.7267f, 15.0351f, 12.7618f)
+                    lineTo(14.1692f, 13.2617f)
+                    lineTo(11.8305f, 9.21118f)
+                    curveTo(11.8304f, 9.21118f, 11.8302f, 9.21118f, 11.8301f, 9.21118f)
+                    curveTo(10.7261f, 9.21118f, 9.83008f, 8.31518f, 9.83008f, 7.21118f)
+                    curveTo(9.83008f, 6.10618f, 10.7261f, 5.21118f, 11.8301f, 5.21118f)
+                    close()
+                    moveTo(16.9102f, 14.01f)
+                    curveTo(16.1697f, 14.01f, 15.5235f, 14.4124f, 15.1778f, 15.01f)
+                    lineTo(10.5f, 15.01f)
+                    lineTo(10.5f, 16.01f)
+                    curveTo(10.5f, 18.0807f, 8.82071f, 19.76f, 6.75f, 19.76f)
+                    curveTo(4.67866f, 19.76f, 3.0f, 18.0811f, 3.0f, 16.01f)
+                    lineTo(1.0f, 16.01f)
+                    curveTo(1.0f, 19.1856f, 3.57403f, 21.76f, 6.75f, 21.76f)
+                    curveTo(9.58421f, 21.76f, 11.9399f, 19.7087f, 12.4133f, 17.01f)
+                    lineTo(15.1778f, 17.01f)
+                    curveTo(15.5235f, 17.6077f, 16.1697f, 18.01f, 16.9102f, 18.01f)
+                    curveTo(18.0142f, 18.01f, 18.9102f, 17.114f, 18.9102f, 16.01f)
+                    curveTo(18.9102f, 14.906f, 18.0142f, 14.01f, 16.9102f, 14.01f)
+                    close()
+                }
+            }.build().also {
+                _webhook = it
             }
-        }.build().also {
-            io.channel.bezier.icon._webhook = it
-        }
     }
+
 
 private var _webhook: ImageVector? = null
 
@@ -88,7 +90,7 @@ private var _webhook: ImageVector? = null
 private fun WebhookIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Webhook,
+            imageVector = BezierIcons.Webhook.imageVector,
             contentDescription = null,
     )
 }
