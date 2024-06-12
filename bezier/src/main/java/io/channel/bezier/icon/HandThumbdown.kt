@@ -9,92 +9,95 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.HandThumbdown: ImageVector
-    get() {
-        return _handThumbdown ?: ImageVector.Builder(
-                name = "HandThumbdown",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(18.2502f, 18.0f)
-                curveTo(19.5612f, 18.0f, 20.7902f, 17.357f, 21.5382f, 16.278f)
-                curveTo(22.2852f, 15.2f, 22.4552f, 13.823f, 21.9952f, 12.595f)
-                lineTo(19.7452f, 6.595f)
-                curveTo(19.1632f, 5.043f, 17.6582f, 4.0f, 16.0002f, 4.0f)
-                lineTo(13.3232f, 4.0f)
-                curveTo(12.3182f, 4.0f, 11.3352f, 4.19f, 10.4002f, 4.563f)
-                curveTo(7.7272f, 5.632f, 6.0002f, 8.184f, 6.0002f, 11.063f)
-                lineTo(6.0002f, 11.839f)
-                curveTo(6.0002f, 13.708f, 6.7282f, 15.467f, 8.0502f, 16.789f)
-                lineTo(13.5192f, 22.258f)
-                curveTo(14.4642f, 23.203f, 16.1112f, 23.203f, 17.0552f, 22.258f)
-                curveTo(18.0292f, 21.283f, 18.0292f, 19.698f, 17.0552f, 18.723f)
-                lineTo(16.3322f, 18.0f)
-                lineTo(18.2502f, 18.0f)
-                close()
-                moveTo(17.8722f, 7.297f)
-                lineTo(20.1222f, 13.298f)
-                curveTo(20.3562f, 13.921f, 20.2732f, 14.592f, 19.8932f, 15.14f)
-                curveTo(19.5152f, 15.687f, 18.9152f, 16.0f, 18.2502f, 16.0f)
-                lineTo(14.1592f, 16.0f)
-                curveTo(13.7142f, 16.0f, 13.3152f, 16.266f, 13.1442f, 16.677f)
-                curveTo(12.9732f, 17.088f, 13.0652f, 17.559f, 13.3792f, 17.875f)
-                lineTo(15.6412f, 20.137f)
-                curveTo(15.8352f, 20.332f, 15.8352f, 20.649f, 15.6412f, 20.844f)
-                curveTo(15.5132f, 20.972f, 15.3652f, 20.99f, 15.2872f, 20.99f)
-                curveTo(15.2102f, 20.99f, 15.0612f, 20.971f, 14.9342f, 20.844f)
-                lineTo(9.4642f, 15.375f)
-                curveTo(8.5202f, 14.431f, 8.0002f, 13.175f, 8.0002f, 11.839f)
-                lineTo(8.0002f, 11.063f)
-                curveTo(8.0002f, 9.006f, 9.2342f, 7.184f, 11.1432f, 6.42f)
-                curveTo(11.8402f, 6.142f, 12.5732f, 6.0f, 13.3232f, 6.0f)
-                lineTo(16.0002f, 6.0f)
-                curveTo(16.8292f, 6.0f, 17.5812f, 6.522f, 17.8722f, 7.297f)
-                close()
-            }
+val BezierIcons.HandThumbdown: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _handThumbdown ?: ImageVector.Builder(
+                    name = "HandThumbdown",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(18.2502f, 18.0f)
+                    curveTo(19.5612f, 18.0f, 20.7902f, 17.357f, 21.5382f, 16.278f)
+                    curveTo(22.2852f, 15.2f, 22.4552f, 13.823f, 21.9952f, 12.595f)
+                    lineTo(19.7452f, 6.595f)
+                    curveTo(19.1632f, 5.043f, 17.6582f, 4.0f, 16.0002f, 4.0f)
+                    lineTo(13.3232f, 4.0f)
+                    curveTo(12.3182f, 4.0f, 11.3352f, 4.19f, 10.4002f, 4.563f)
+                    curveTo(7.7272f, 5.632f, 6.0002f, 8.184f, 6.0002f, 11.063f)
+                    lineTo(6.0002f, 11.839f)
+                    curveTo(6.0002f, 13.708f, 6.7282f, 15.467f, 8.0502f, 16.789f)
+                    lineTo(13.5192f, 22.258f)
+                    curveTo(14.4642f, 23.203f, 16.1112f, 23.203f, 17.0552f, 22.258f)
+                    curveTo(18.0292f, 21.283f, 18.0292f, 19.698f, 17.0552f, 18.723f)
+                    lineTo(16.3322f, 18.0f)
+                    lineTo(18.2502f, 18.0f)
+                    close()
+                    moveTo(17.8722f, 7.297f)
+                    lineTo(20.1222f, 13.298f)
+                    curveTo(20.3562f, 13.921f, 20.2732f, 14.592f, 19.8932f, 15.14f)
+                    curveTo(19.5152f, 15.687f, 18.9152f, 16.0f, 18.2502f, 16.0f)
+                    lineTo(14.1592f, 16.0f)
+                    curveTo(13.7142f, 16.0f, 13.3152f, 16.266f, 13.1442f, 16.677f)
+                    curveTo(12.9732f, 17.088f, 13.0652f, 17.559f, 13.3792f, 17.875f)
+                    lineTo(15.6412f, 20.137f)
+                    curveTo(15.8352f, 20.332f, 15.8352f, 20.649f, 15.6412f, 20.844f)
+                    curveTo(15.5132f, 20.972f, 15.3652f, 20.99f, 15.2872f, 20.99f)
+                    curveTo(15.2102f, 20.99f, 15.0612f, 20.971f, 14.9342f, 20.844f)
+                    lineTo(9.4642f, 15.375f)
+                    curveTo(8.5202f, 14.431f, 8.0002f, 13.175f, 8.0002f, 11.839f)
+                    lineTo(8.0002f, 11.063f)
+                    curveTo(8.0002f, 9.006f, 9.2342f, 7.184f, 11.1432f, 6.42f)
+                    curveTo(11.8402f, 6.142f, 12.5732f, 6.0f, 13.3232f, 6.0f)
+                    lineTo(16.0002f, 6.0f)
+                    curveTo(16.8292f, 6.0f, 17.5812f, 6.522f, 17.8722f, 7.297f)
+                    close()
+                }
 
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(2.0543f, 14.727f)
-                curveTo(1.9998f, 14.6201f, 1.9998f, 14.48f, 1.9998f, 14.2f)
-                lineTo(1.9998f, 5.8f)
-                curveTo(1.9998f, 5.52f, 1.9998f, 5.38f, 2.0543f, 5.273f)
-                curveTo(2.1022f, 5.1789f, 2.1787f, 5.1024f, 2.2728f, 5.0545f)
-                curveTo(2.3798f, 5.0f, 2.5198f, 5.0f, 2.7998f, 5.0f)
-                lineTo(4.1998f, 5.0f)
-                curveTo(4.4798f, 5.0f, 4.6198f, 5.0f, 4.7268f, 5.0545f)
-                curveTo(4.8209f, 5.1024f, 4.8974f, 5.1789f, 4.9453f, 5.273f)
-                curveTo(4.9998f, 5.38f, 4.9998f, 5.52f, 4.9998f, 5.8f)
-                lineTo(4.9998f, 14.2f)
-                curveTo(4.9998f, 14.48f, 4.9998f, 14.6201f, 4.9453f, 14.727f)
-                curveTo(4.8974f, 14.8211f, 4.8209f, 14.8976f, 4.7268f, 14.9455f)
-                curveTo(4.6198f, 15.0f, 4.4798f, 15.0f, 4.1998f, 15.0f)
-                lineTo(2.7998f, 15.0f)
-                curveTo(2.5198f, 15.0f, 2.3798f, 15.0f, 2.2728f, 14.9455f)
-                curveTo(2.1787f, 14.8976f, 2.1022f, 14.8211f, 2.0543f, 14.727f)
-                close()
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(2.0543f, 14.727f)
+                    curveTo(1.9998f, 14.6201f, 1.9998f, 14.48f, 1.9998f, 14.2f)
+                    lineTo(1.9998f, 5.80001f)
+                    curveTo(1.9998f, 5.51999f, 1.9998f, 5.37997f, 2.0543f, 5.27302f)
+                    curveTo(2.10224f, 5.17894f, 2.17873f, 5.10245f, 2.27281f, 5.05451f)
+                    curveTo(2.37976f, 5.00001f, 2.51978f, 5.00001f, 2.7998f, 5.00001f)
+                    lineTo(4.1998f, 5.00001f)
+                    curveTo(4.47983f, 5.00001f, 4.61984f, 5.00001f, 4.7268f, 5.05451f)
+                    curveTo(4.82088f, 5.10245f, 4.89737f, 5.17894f, 4.9453f, 5.27302f)
+                    curveTo(4.9998f, 5.37997f, 4.9998f, 5.51999f, 4.9998f, 5.80001f)
+                    lineTo(4.9998f, 14.2f)
+                    curveTo(4.9998f, 14.48f, 4.9998f, 14.6201f, 4.9453f, 14.727f)
+                    curveTo(4.89737f, 14.8211f, 4.82088f, 14.8976f, 4.7268f, 14.9455f)
+                    curveTo(4.61984f, 15.0f, 4.47983f, 15.0f, 4.1998f, 15.0f)
+                    lineTo(2.7998f, 15.0f)
+                    curveTo(2.51978f, 15.0f, 2.37976f, 15.0f, 2.27281f, 14.9455f)
+                    curveTo(2.17873f, 14.8976f, 2.10224f, 14.8211f, 2.0543f, 14.727f)
+                    close()
+                }
+            }.build().also {
+                _handThumbdown = it
             }
-        }.build().also {
-            _handThumbdown = it
-        }
     }
+
 
 private var _handThumbdown: ImageVector? = null
 
@@ -103,7 +106,7 @@ private var _handThumbdown: ImageVector? = null
 private fun HandThumbdownIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.HandThumbdown,
+            imageVector = BezierIcons.HandThumbdown.imageVector,
             contentDescription = null,
     )
 }

@@ -9,41 +9,43 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.TriangleUp: ImageVector
-    get() {
-        return io.channel.bezier.icon._triangleUp ?: ImageVector.Builder(
-                name = "TriangleUp",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(11.703f, 8.639f)
-                lineTo(6.0904f, 15.3744f)
-                curveTo(5.8805f, 15.6267f, 6.0595f, 16.0092f, 6.3865f, 16.0092f)
-                lineTo(17.613f, 16.0092f)
-                curveTo(17.94f, 16.0092f, 18.119f, 15.6267f, 17.9104f, 15.3744f)
-                lineTo(12.2966f, 8.639f)
-                curveTo(12.1421f, 8.4536f, 11.8575f, 8.4536f, 11.703f, 8.639f)
-                close()
+val BezierIcons.TriangleUp: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _triangleUp ?: ImageVector.Builder(
+                    name = "TriangleUp",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(11.703f, 8.63902f)
+                    lineTo(6.09041f, 15.3744f)
+                    curveTo(5.88053f, 15.6267f, 6.05951f, 16.0092f, 6.38655f, 16.0092f)
+                    lineTo(17.613f, 16.0092f)
+                    curveTo(17.94f, 16.0092f, 18.119f, 15.6267f, 17.9104f, 15.3744f)
+                    lineTo(12.2966f, 8.63902f)
+                    curveTo(12.1421f, 8.45361f, 11.8575f, 8.45361f, 11.703f, 8.63902f)
+                    close()
+                }
+            }.build().also {
+                _triangleUp = it
             }
-        }.build().also {
-            io.channel.bezier.icon._triangleUp = it
-        }
     }
+
 
 private var _triangleUp: ImageVector? = null
 
@@ -52,7 +54,7 @@ private var _triangleUp: ImageVector? = null
 private fun TriangleUpIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.TriangleUp,
+            imageVector = BezierIcons.TriangleUp.imageVector,
             contentDescription = null,
     )
 }

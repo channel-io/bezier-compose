@@ -9,72 +9,74 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Folder: ImageVector
-    get() {
-        return io.channel.bezier.icon._folder ?: ImageVector.Builder(
-                name = "Folder",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(5.0f, 3.0f)
-                curveTo(3.3431f, 3.0f, 2.0f, 4.3432f, 2.0f, 6.0f)
-                lineTo(2.0f, 16.0f)
-                curveTo(2.0f, 17.6569f, 3.3431f, 19.0f, 5.0f, 19.0f)
-                lineTo(19.0f, 19.0f)
-                curveTo(20.6569f, 19.0f, 22.0f, 17.6569f, 22.0f, 16.0f)
-                lineTo(22.0f, 8.0f)
-                curveTo(22.0f, 6.3432f, 20.6569f, 5.0f, 19.0f, 5.0f)
-                lineTo(12.8284f, 5.0f)
-                curveTo(12.5632f, 5.0f, 12.3089f, 4.8946f, 12.1213f, 4.7071f)
-                lineTo(11.2929f, 3.8787f)
-                curveTo(10.7303f, 3.3161f, 9.9672f, 3.0f, 9.1716f, 3.0f)
-                lineTo(5.0f, 3.0f)
-                close()
-                moveTo(10.5858f, 6.0f)
-                lineTo(9.8787f, 5.2929f)
-                curveTo(9.6911f, 5.1054f, 9.4368f, 5.0f, 9.1716f, 5.0f)
-                lineTo(5.0f, 5.0f)
-                curveTo(4.4477f, 5.0f, 4.0f, 5.4477f, 4.0f, 6.0f)
-                lineTo(4.0f, 7.1707f)
-                curveTo(4.3128f, 7.0602f, 4.6494f, 7.0f, 5.0f, 7.0f)
-                lineTo(9.1716f, 7.0f)
-                curveTo(9.4368f, 7.0f, 9.6911f, 6.8946f, 9.8787f, 6.7071f)
-                lineTo(10.5858f, 6.0f)
-                close()
-                moveTo(4.0f, 10.0f)
-                lineTo(4.0f, 16.0f)
-                curveTo(4.0f, 16.5523f, 4.4477f, 17.0f, 5.0f, 17.0f)
-                lineTo(19.0f, 17.0f)
-                curveTo(19.5523f, 17.0f, 20.0f, 16.5523f, 20.0f, 16.0f)
-                lineTo(20.0f, 8.0f)
-                curveTo(20.0f, 7.4477f, 19.5523f, 7.0f, 19.0f, 7.0f)
-                lineTo(12.8284f, 7.0f)
-                curveTo(12.5632f, 7.0f, 12.3089f, 7.1054f, 12.1213f, 7.2929f)
-                lineTo(11.2929f, 8.1213f)
-                curveTo(10.7303f, 8.6839f, 9.9672f, 9.0f, 9.1716f, 9.0f)
-                lineTo(5.0f, 9.0f)
-                curveTo(4.4477f, 9.0f, 4.0f, 9.4477f, 4.0f, 10.0f)
-                close()
+val BezierIcons.Folder: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _folder ?: ImageVector.Builder(
+                    name = "Folder",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(5.0f, 3.0f)
+                    curveTo(3.34315f, 3.0f, 2.0f, 4.34315f, 2.0f, 6.0f)
+                    lineTo(2.0f, 16.0f)
+                    curveTo(2.0f, 17.6569f, 3.34315f, 19.0f, 5.0f, 19.0f)
+                    lineTo(19.0f, 19.0f)
+                    curveTo(20.6569f, 19.0f, 22.0f, 17.6569f, 22.0f, 16.0f)
+                    lineTo(22.0f, 8.0f)
+                    curveTo(22.0f, 6.34315f, 20.6569f, 5.0f, 19.0f, 5.0f)
+                    lineTo(12.8284f, 5.0f)
+                    curveTo(12.5632f, 5.0f, 12.3089f, 4.89464f, 12.1213f, 4.70711f)
+                    lineTo(11.2929f, 3.87868f)
+                    curveTo(10.7303f, 3.31607f, 9.96722f, 3.0f, 9.17157f, 3.0f)
+                    lineTo(5.0f, 3.0f)
+                    close()
+                    moveTo(10.5858f, 6.0f)
+                    lineTo(9.87868f, 5.29289f)
+                    curveTo(9.69114f, 5.10536f, 9.43679f, 5.0f, 9.17157f, 5.0f)
+                    lineTo(5.0f, 5.0f)
+                    curveTo(4.44772f, 5.0f, 4.0f, 5.44772f, 4.0f, 6.0f)
+                    lineTo(4.0f, 7.17071f)
+                    curveTo(4.31278f, 7.06015f, 4.64936f, 7.0f, 5.0f, 7.0f)
+                    lineTo(9.17157f, 7.0f)
+                    curveTo(9.43679f, 7.0f, 9.69114f, 6.89464f, 9.87868f, 6.70711f)
+                    lineTo(10.5858f, 6.0f)
+                    close()
+                    moveTo(4.0f, 10.0f)
+                    lineTo(4.0f, 16.0f)
+                    curveTo(4.0f, 16.5523f, 4.44772f, 17.0f, 5.0f, 17.0f)
+                    lineTo(19.0f, 17.0f)
+                    curveTo(19.5523f, 17.0f, 20.0f, 16.5523f, 20.0f, 16.0f)
+                    lineTo(20.0f, 8.0f)
+                    curveTo(20.0f, 7.44772f, 19.5523f, 7.0f, 19.0f, 7.0f)
+                    lineTo(12.8284f, 7.0f)
+                    curveTo(12.5632f, 7.0f, 12.3089f, 7.10536f, 12.1213f, 7.29289f)
+                    lineTo(11.2929f, 8.12132f)
+                    curveTo(10.7303f, 8.68393f, 9.96722f, 9.0f, 9.17157f, 9.0f)
+                    lineTo(5.0f, 9.0f)
+                    curveTo(4.44772f, 9.0f, 4.0f, 9.44772f, 4.0f, 10.0f)
+                    close()
+                }
+            }.build().also {
+                _folder = it
             }
-        }.build().also {
-            io.channel.bezier.icon._folder = it
-        }
     }
+
 
 private var _folder: ImageVector? = null
 
@@ -83,7 +85,7 @@ private var _folder: ImageVector? = null
 private fun FolderIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Folder,
+            imageVector = BezierIcons.Folder.imageVector,
             contentDescription = null,
     )
 }

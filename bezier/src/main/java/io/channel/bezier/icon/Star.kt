@@ -9,72 +9,74 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Star: ImageVector
-    get() {
-        return io.channel.bezier.icon._star ?: ImageVector.Builder(
-                name = "Star",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.002f, 18.4377f)
-                lineTo(15.7432f, 21.1556f)
-                curveTo(17.5288f, 22.453f, 19.9308f, 20.7079f, 19.2479f, 18.6092f)
-                lineTo(17.8195f, 14.2107f)
-                lineTo(21.5607f, 11.4926f)
-                curveTo(23.3453f, 10.1948f, 22.4285f, 7.3726f, 20.222f, 7.3726f)
-                lineTo(15.5974f, 7.3717f)
-                lineTo(14.168f, 2.9745f)
-                curveTo(13.4872f, 0.8751f, 10.5167f, 0.8751f, 9.8357f, 2.9752f)
-                lineTo(8.4065f, 7.3717f)
-                lineTo(3.7818f, 7.3726f)
-                curveTo(1.5754f, 7.3726f, 0.6586f, 10.1948f, 2.4428f, 11.4923f)
-                lineTo(6.1845f, 14.2107f)
-                lineTo(4.7559f, 18.6097f)
-                curveTo(4.0731f, 20.7079f, 6.4751f, 22.453f, 8.2608f, 21.1556f)
-                lineTo(12.002f, 18.4377f)
-                close()
-                moveTo(12.5897f, 16.3926f)
-                lineTo(12.002f, 15.9656f)
-                lineTo(7.0852f, 19.5376f)
-                curveTo(6.8671f, 19.6961f, 6.5747f, 19.4837f, 6.6579f, 19.2281f)
-                lineTo(8.3111f, 14.1375f)
-                lineTo(8.5354f, 13.4466f)
-                lineTo(3.6187f, 9.8746f)
-                curveTo(3.4011f, 9.7163f, 3.5128f, 9.3726f, 3.782f, 9.3726f)
-                lineTo(9.1332f, 9.3716f)
-                lineTo(9.8594f, 9.3715f)
-                lineTo(11.738f, 3.5928f)
-                curveTo(11.8212f, 3.3361f, 12.1827f, 3.3361f, 12.2657f, 3.5921f)
-                lineTo(13.92f, 8.6808f)
-                lineTo(14.1445f, 9.3715f)
-                lineTo(20.2218f, 9.3726f)
-                curveTo(20.4912f, 9.3726f, 20.6028f, 9.7163f, 20.3848f, 9.8749f)
-                lineTo(16.0562f, 13.0196f)
-                lineTo(15.4685f, 13.4466f)
-                lineTo(17.3459f, 19.2275f)
-                curveTo(17.4292f, 19.4837f, 17.1369f, 19.6961f, 16.9188f, 19.5376f)
-                lineTo(12.5897f, 16.3926f)
-                close()
+val BezierIcons.Star: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _star ?: ImageVector.Builder(
+                    name = "Star",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.002f, 18.4377f)
+                    lineTo(15.7432f, 21.1556f)
+                    curveTo(17.5288f, 22.453f, 19.9308f, 20.7079f, 19.2479f, 18.6092f)
+                    lineTo(17.8195f, 14.2107f)
+                    lineTo(21.5607f, 11.4926f)
+                    curveTo(23.3453f, 10.1948f, 22.4285f, 7.37261f, 20.222f, 7.37261f)
+                    lineTo(15.5974f, 7.37175f)
+                    lineTo(14.168f, 2.97446f)
+                    curveTo(13.4872f, 0.875099f, 10.5167f, 0.875099f, 9.83573f, 2.97515f)
+                    lineTo(8.40649f, 7.37175f)
+                    lineTo(3.78178f, 7.37261f)
+                    curveTo(1.57541f, 7.37261f, 0.658615f, 10.1948f, 2.4428f, 11.4923f)
+                    lineTo(6.18448f, 14.2107f)
+                    lineTo(4.75587f, 18.6097f)
+                    curveTo(4.07313f, 20.7079f, 6.47511f, 22.453f, 8.26076f, 21.1556f)
+                    lineTo(12.002f, 18.4377f)
+                    close()
+                    moveTo(12.5897f, 16.3926f)
+                    lineTo(12.002f, 15.9656f)
+                    lineTo(7.08521f, 19.5376f)
+                    curveTo(6.86707f, 19.6961f, 6.57471f, 19.4837f, 6.65789f, 19.2281f)
+                    lineTo(8.31107f, 14.1375f)
+                    lineTo(8.53545f, 13.4466f)
+                    lineTo(3.61873f, 9.87459f)
+                    curveTo(3.40112f, 9.71633f, 3.51277f, 9.37262f, 3.78197f, 9.37262f)
+                    lineTo(9.13315f, 9.37162f)
+                    lineTo(9.85944f, 9.37149f)
+                    lineTo(11.738f, 3.59278f)
+                    curveTo(11.8212f, 3.33613f, 12.1827f, 3.33613f, 12.2657f, 3.59209f)
+                    lineTo(13.92f, 8.68078f)
+                    lineTo(14.1445f, 9.37149f)
+                    lineTo(20.2218f, 9.37262f)
+                    curveTo(20.4912f, 9.37262f, 20.6028f, 9.71633f, 20.3848f, 9.87489f)
+                    lineTo(16.0562f, 13.0196f)
+                    lineTo(15.4685f, 13.4466f)
+                    lineTo(17.3459f, 19.2275f)
+                    curveTo(17.4292f, 19.4837f, 17.1369f, 19.6961f, 16.9188f, 19.5376f)
+                    lineTo(12.5897f, 16.3926f)
+                    close()
+                }
+            }.build().also {
+                _star = it
             }
-        }.build().also {
-            io.channel.bezier.icon._star = it
-        }
     }
+
 
 private var _star: ImageVector? = null
 
@@ -83,7 +85,7 @@ private var _star: ImageVector? = null
 private fun StarIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Star,
+            imageVector = BezierIcons.Star.imageVector,
             contentDescription = null,
     )
 }

@@ -9,109 +9,112 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.VideocamOff: ImageVector
-    get() {
-        return io.channel.bezier.icon._videocamOff ?: ImageVector.Builder(
-                name = "VideocamOff",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(6.2071f, 1.7929f)
-                curveTo(5.8166f, 1.4024f, 5.1834f, 1.4024f, 4.7929f, 1.7929f)
-                curveTo(4.4024f, 2.1834f, 4.4024f, 2.8166f, 4.7929f, 3.2071f)
-                lineTo(19.8661f, 18.2803f)
-                curveTo(20.6536f, 19.0678f, 22.0f, 18.5101f, 22.0f, 17.3964f)
-                lineTo(22.0f, 6.6035f)
-                curveTo(22.0f, 5.4899f, 20.6536f, 4.9322f, 19.8661f, 5.7197f)
-                lineTo(16.9983f, 8.5875f)
-                curveTo(16.9955f, 8.2974f, 16.9883f, 8.0359f, 16.9694f, 7.805f)
-                curveTo(16.9371f, 7.4096f, 16.8658f, 7.0164f, 16.673f, 6.638f)
-                curveTo(16.3854f, 6.0735f, 15.9265f, 5.6146f, 15.362f, 5.327f)
-                curveTo(14.9836f, 5.1342f, 14.5904f, 5.0629f, 14.195f, 5.0306f)
-                curveTo(13.8205f, 5.0f, 13.3657f, 5.0f, 12.8386f, 5.0f)
-                lineTo(9.4142f, 5.0f)
-                lineTo(6.2071f, 1.7929f)
-                close()
-                moveTo(11.4142f, 7.0f)
-                lineTo(15.0f, 10.5858f)
-                lineTo(15.0f, 9.2f)
-                curveTo(15.0f, 8.6235f, 14.9992f, 8.2512f, 14.9761f, 7.9678f)
-                curveTo(14.9539f, 7.6962f, 14.9162f, 7.5955f, 14.891f, 7.546f)
-                curveTo(14.7951f, 7.3579f, 14.6422f, 7.2049f, 14.454f, 7.109f)
-                curveTo(14.4046f, 7.0838f, 14.3038f, 7.0461f, 14.0322f, 7.0239f)
-                curveTo(13.7488f, 7.0008f, 13.3766f, 7.0f, 12.8f, 7.0f)
-                lineTo(11.4142f, 7.0f)
-                close()
-                moveTo(17.0f, 12.5858f)
-                lineTo(20.0f, 15.5858f)
-                lineTo(20.0f, 8.4142f)
-                lineTo(17.0f, 11.4142f)
-                lineTo(17.0f, 12.5858f)
-                close()
-            }
+val BezierIcons.VideocamOff: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _videocamOff ?: ImageVector.Builder(
+                    name = "VideocamOff",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(6.20711f, 1.79289f)
+                    curveTo(5.81658f, 1.40237f, 5.18342f, 1.40237f, 4.79289f, 1.79289f)
+                    curveTo(4.40237f, 2.18342f, 4.40237f, 2.81658f, 4.79289f, 3.20711f)
+                    lineTo(19.8661f, 18.2803f)
+                    curveTo(20.6536f, 19.0678f, 22.0f, 18.5101f, 22.0f, 17.3964f)
+                    lineTo(22.0f, 6.60355f)
+                    curveTo(22.0f, 5.48993f, 20.6536f, 4.93221f, 19.8661f, 5.71967f)
+                    lineTo(16.9983f, 8.58749f)
+                    curveTo(16.9955f, 8.29738f, 16.9883f, 8.03593f, 16.9694f, 7.80497f)
+                    curveTo(16.9371f, 7.40963f, 16.8658f, 7.01641f, 16.673f, 6.63803f)
+                    curveTo(16.3854f, 6.07354f, 15.9265f, 5.6146f, 15.362f, 5.32698f)
+                    curveTo(14.9836f, 5.13419f, 14.5904f, 5.06287f, 14.195f, 5.03057f)
+                    curveTo(13.8205f, 4.99997f, 13.3657f, 4.99998f, 12.8386f, 5.0f)
+                    lineTo(9.41422f, 5.0f)
+                    lineTo(6.20711f, 1.79289f)
+                    close()
+                    moveTo(11.4142f, 7.0f)
+                    lineTo(15.0f, 10.5858f)
+                    lineTo(15.0f, 9.2f)
+                    curveTo(15.0f, 8.62345f, 14.9992f, 8.25117f, 14.9761f, 7.96784f)
+                    curveTo(14.9539f, 7.69617f, 14.9162f, 7.59546f, 14.891f, 7.54601f)
+                    curveTo(14.7951f, 7.35785f, 14.6422f, 7.20487f, 14.454f, 7.109f)
+                    curveTo(14.4046f, 7.0838f, 14.3038f, 7.04612f, 14.0322f, 7.02393f)
+                    curveTo(13.7488f, 7.00078f, 13.3766f, 7.0f, 12.8f, 7.0f)
+                    lineTo(11.4142f, 7.0f)
+                    close()
+                    moveTo(17.0f, 12.5858f)
+                    lineTo(20.0f, 15.5858f)
+                    lineTo(20.0f, 8.41421f)
+                    lineTo(17.0f, 11.4142f)
+                    lineTo(17.0f, 12.5858f)
+                    close()
+                }
 
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(4.805f, 5.0306f)
-                curveTo(4.9246f, 5.0208f, 5.0525f, 5.0141f, 5.1882f, 5.0096f)
-                lineTo(7.1786f, 7.0f)
-                lineTo(6.2f, 7.0f)
-                curveTo(5.6234f, 7.0f, 5.2512f, 7.0008f, 4.9678f, 7.0239f)
-                curveTo(4.6962f, 7.0461f, 4.5955f, 7.0838f, 4.546f, 7.109f)
-                curveTo(4.3579f, 7.2049f, 4.2049f, 7.3579f, 4.109f, 7.546f)
-                curveTo(4.0838f, 7.5955f, 4.0461f, 7.6962f, 4.0239f, 7.9678f)
-                curveTo(4.0008f, 8.2512f, 4.0f, 8.6235f, 4.0f, 9.2f)
-                lineTo(4.0f, 14.8f)
-                curveTo(4.0f, 15.3766f, 4.0008f, 15.7488f, 4.0239f, 16.0322f)
-                curveTo(4.0461f, 16.3038f, 4.0838f, 16.4045f, 4.109f, 16.454f)
-                curveTo(4.2049f, 16.6422f, 4.3579f, 16.7951f, 4.546f, 16.891f)
-                curveTo(4.5955f, 16.9162f, 4.6962f, 16.9539f, 4.9678f, 16.9761f)
-                curveTo(5.2512f, 16.9992f, 5.6234f, 17.0f, 6.2f, 17.0f)
-                lineTo(12.8f, 17.0f)
-                curveTo(13.3766f, 17.0f, 13.7488f, 16.9992f, 14.0322f, 16.9761f)
-                curveTo(14.3038f, 16.9539f, 14.4046f, 16.9162f, 14.454f, 16.891f)
-                curveTo(14.6422f, 16.7951f, 14.7951f, 16.6422f, 14.891f, 16.454f)
-                curveTo(14.9162f, 16.4045f, 14.9539f, 16.3038f, 14.9761f, 16.0322f)
-                curveTo(14.9989f, 15.7524f, 15.0f, 15.3858f, 15.0f, 14.8214f)
-                lineTo(16.8964f, 16.7178f)
-                curveTo(16.8502f, 16.9357f, 16.7805f, 17.1511f, 16.673f, 17.362f)
-                curveTo(16.3854f, 17.9265f, 15.9265f, 18.3854f, 15.362f, 18.673f)
-                curveTo(14.9836f, 18.8658f, 14.5904f, 18.9371f, 14.195f, 18.9694f)
-                curveTo(13.8205f, 19.0f, 13.3657f, 19.0f, 12.8386f, 19.0f)
-                lineTo(6.1615f, 19.0f)
-                curveTo(5.6343f, 19.0f, 5.1795f, 19.0f, 4.805f, 18.9694f)
-                curveTo(4.4096f, 18.9371f, 4.0164f, 18.8658f, 3.638f, 18.673f)
-                curveTo(3.0735f, 18.3854f, 2.6146f, 17.9265f, 2.327f, 17.362f)
-                curveTo(2.1342f, 16.9836f, 2.0629f, 16.5904f, 2.0306f, 16.195f)
-                curveTo(2.0f, 15.8205f, 2.0f, 15.3657f, 2.0f, 14.8386f)
-                lineTo(2.0f, 9.1615f)
-                curveTo(2.0f, 8.6343f, 2.0f, 8.1795f, 2.0306f, 7.805f)
-                curveTo(2.0629f, 7.4096f, 2.1342f, 7.0164f, 2.327f, 6.638f)
-                curveTo(2.6146f, 6.0735f, 3.0735f, 5.6146f, 3.638f, 5.327f)
-                curveTo(4.0164f, 5.1342f, 4.4096f, 5.0629f, 4.805f, 5.0306f)
-                close()
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(4.80498f, 5.03057f)
+                    curveTo(4.92462f, 5.0208f, 5.05245f, 5.01414f, 5.18821f, 5.00962f)
+                    lineTo(7.17859f, 7.0f)
+                    lineTo(6.2f, 7.0f)
+                    curveTo(5.62345f, 7.0f, 5.25118f, 7.00078f, 4.96784f, 7.02393f)
+                    curveTo(4.69618f, 7.04612f, 4.59546f, 7.0838f, 4.54601f, 7.109f)
+                    curveTo(4.35785f, 7.20487f, 4.20487f, 7.35785f, 4.109f, 7.54601f)
+                    curveTo(4.0838f, 7.59546f, 4.04613f, 7.69617f, 4.02393f, 7.96784f)
+                    curveTo(4.00078f, 8.25117f, 4.0f, 8.62345f, 4.0f, 9.2f)
+                    lineTo(4.0f, 14.8f)
+                    curveTo(4.0f, 15.3766f, 4.00078f, 15.7488f, 4.02393f, 16.0322f)
+                    curveTo(4.04613f, 16.3038f, 4.0838f, 16.4045f, 4.109f, 16.454f)
+                    curveTo(4.20487f, 16.6422f, 4.35785f, 16.7951f, 4.54601f, 16.891f)
+                    curveTo(4.59546f, 16.9162f, 4.69618f, 16.9539f, 4.96784f, 16.9761f)
+                    curveTo(5.25118f, 16.9992f, 5.62345f, 17.0f, 6.2f, 17.0f)
+                    lineTo(12.8f, 17.0f)
+                    curveTo(13.3766f, 17.0f, 13.7488f, 16.9992f, 14.0322f, 16.9761f)
+                    curveTo(14.3038f, 16.9539f, 14.4046f, 16.9162f, 14.454f, 16.891f)
+                    curveTo(14.6422f, 16.7951f, 14.7951f, 16.6422f, 14.891f, 16.454f)
+                    curveTo(14.9162f, 16.4045f, 14.9539f, 16.3038f, 14.9761f, 16.0322f)
+                    curveTo(14.9989f, 15.7524f, 15.0f, 15.3858f, 15.0f, 14.8214f)
+                    lineTo(16.8964f, 16.7178f)
+                    curveTo(16.8502f, 16.9357f, 16.7805f, 17.1511f, 16.673f, 17.362f)
+                    curveTo(16.3854f, 17.9265f, 15.9265f, 18.3854f, 15.362f, 18.673f)
+                    curveTo(14.9836f, 18.8658f, 14.5904f, 18.9371f, 14.195f, 18.9694f)
+                    curveTo(13.8205f, 19.0f, 13.3657f, 19.0f, 12.8386f, 19.0f)
+                    lineTo(6.16148f, 19.0f)
+                    curveTo(5.63435f, 19.0f, 5.17954f, 19.0f, 4.80498f, 18.9694f)
+                    curveTo(4.40963f, 18.9371f, 4.01641f, 18.8658f, 3.63803f, 18.673f)
+                    curveTo(3.07355f, 18.3854f, 2.6146f, 17.9265f, 2.32698f, 17.362f)
+                    curveTo(2.13419f, 16.9836f, 2.06287f, 16.5904f, 2.03057f, 16.195f)
+                    curveTo(1.99997f, 15.8205f, 1.99998f, 15.3657f, 2.0f, 14.8386f)
+                    lineTo(2.0f, 9.16146f)
+                    curveTo(1.99998f, 8.63434f, 1.99997f, 8.17953f, 2.03057f, 7.80497f)
+                    curveTo(2.06287f, 7.40963f, 2.13419f, 7.01641f, 2.32698f, 6.63803f)
+                    curveTo(2.6146f, 6.07354f, 3.07355f, 5.6146f, 3.63803f, 5.32698f)
+                    curveTo(4.01641f, 5.13419f, 4.40963f, 5.06287f, 4.80498f, 5.03057f)
+                    close()
+                }
+            }.build().also {
+                _videocamOff = it
             }
-        }.build().also {
-            io.channel.bezier.icon._videocamOff = it
-        }
     }
+
 
 private var _videocamOff: ImageVector? = null
 
@@ -120,7 +123,7 @@ private var _videocamOff: ImageVector? = null
 private fun VideocamOffIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.VideocamOff,
+            imageVector = BezierIcons.VideocamOff.imageVector,
             contentDescription = null,
     )
 }

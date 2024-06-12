@@ -9,57 +9,61 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ChannelFilled: ImageVector
-    get() {
-        return _channelFilled ?: ImageVector.Builder(
-                name = "ChannelFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(15.2134f, 14.0649f)
-                curveTo(14.3684f, 14.0649f, 14.0154f, 13.4549f, 14.0154f, 11.9599f)
-                curveTo(14.0154f, 10.4649f, 14.3684f, 9.8549f, 15.2134f, 9.8549f)
-                curveTo(16.0584f, 9.8549f, 16.4114f, 10.4649f, 16.4114f, 11.9599f)
-                curveTo(16.4114f, 13.4549f, 16.0584f, 14.0649f, 15.2134f, 14.0649f)
-                close()
-                moveTo(8.7864f, 14.0649f)
-                curveTo(7.9414f, 14.0649f, 7.5884f, 13.4549f, 7.5884f, 11.9599f)
-                curveTo(7.5884f, 10.4649f, 7.9414f, 9.8549f, 8.7864f, 9.8549f)
-                curveTo(9.6314f, 9.8549f, 9.9844f, 10.4649f, 9.9844f, 11.9599f)
-                curveTo(9.9844f, 13.4549f, 9.6314f, 14.0649f, 8.7864f, 14.0649f)
-                close()
-                moveTo(20.7944f, 18.3819f)
-                curveTo(20.5844f, 17.7519f, 20.6374f, 17.0659f, 20.9364f, 16.4729f)
-                curveTo(21.7894f, 14.7799f, 22.1794f, 12.8149f, 21.9214f, 10.7369f)
-                curveTo(21.3634f, 6.2509f, 17.7454f, 2.6239f, 13.2574f, 2.0769f)
-                curveTo(6.7494f, 1.2829f, 1.2834f, 6.7489f, 2.0764f, 13.2569f)
-                curveTo(2.6244f, 17.7449f, 6.2514f, 21.3639f, 10.7374f, 21.9209f)
-                curveTo(12.8154f, 22.1799f, 14.7794f, 21.7889f, 16.4724f, 20.9369f)
-                curveTo(17.0664f, 20.6379f, 17.7524f, 20.5839f, 18.3824f, 20.7939f)
-                lineTo(20.4194f, 21.4729f)
-                curveTo(21.0704f, 21.6899f, 21.6904f, 21.0699f, 21.4734f, 20.4189f)
-                lineTo(20.7944f, 18.3819f)
-                close()
+val BezierIcons.ChannelFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _channelFilled ?: ImageVector.Builder(
+                    name = "ChannelFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(21.9969f, 12.006f)
+                    curveTo(21.9969f, 13.3767f, 21.7209f, 14.68f, 21.2211f, 15.8698f)
+                    lineTo(21.2211f, 15.8729f)
+                    curveTo(20.9114f, 16.6119f, 20.8562f, 17.4338f, 21.0494f, 18.2127f)
+                    lineTo(21.5922f, 20.3869f)
+                    curveTo(21.7761f, 21.1167f, 21.1138f, 21.7821f, 20.3809f, 21.5981f)
+                    lineTo(18.2067f, 21.0554f)
+                    curveTo(17.4278f, 20.8622f, 16.606f, 20.9174f, 15.8669f, 21.2271f)
+                    curveTo(14.6771f, 21.7269f, 13.3738f, 22.0029f, 12.0031f, 22.0029f)
+                    curveTo(6.49862f, 22.0029f, 2.0f, 17.5104f, 2.0f, 12.006f)
+                    curveTo(1.99694f, 6.48008f, 6.47716f, 2.00293f, 12.0031f, 2.00293f)
+                    curveTo(17.5075f, 2.00293f, 21.9969f, 6.50155f, 21.9969f, 12.006f)
+                    close()
+                    moveTo(17.863f, 14.0546f)
+                    curveTo(16.7376f, 16.1429f, 14.5297f, 17.5596f, 11.9937f, 17.5596f)
+                    lineTo(11.9875f, 17.5596f)
+                    curveTo(9.4515f, 17.5596f, 7.24359f, 16.1398f, 6.11817f, 14.0546f)
+                    curveTo(5.99244f, 13.8215f, 6.0783f, 13.5302f, 6.30523f, 13.3922f)
+                    lineTo(8.09609f, 12.3189f)
+                    curveTo(8.35061f, 12.1687f, 8.66953f, 12.2699f, 8.80446f, 12.5305f)
+                    curveTo(9.39937f, 13.6866f, 10.6015f, 14.4778f, 11.9906f, 14.4778f)
+                    curveTo(13.3797f, 14.4778f, 14.5818f, 13.6866f, 15.1767f, 12.5305f)
+                    curveTo(15.3117f, 12.2699f, 15.6337f, 12.1687f, 15.8851f, 12.3189f)
+                    lineTo(17.676f, 13.3922f)
+                    curveTo(17.906f, 13.5302f, 17.9888f, 13.8215f, 17.863f, 14.0546f)
+                    close()
+                }
+            }.build().also {
+                _channelFilled = it
             }
-        }.build().also {
-            _channelFilled = it
-        }
     }
+
 
 private var _channelFilled: ImageVector? = null
 
@@ -68,7 +72,7 @@ private var _channelFilled: ImageVector? = null
 private fun ChannelFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ChannelFilled,
+            imageVector = BezierIcons.ChannelFilled.imageVector,
             contentDescription = null,
     )
 }

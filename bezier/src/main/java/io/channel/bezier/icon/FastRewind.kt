@@ -9,47 +9,49 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.FastRewind: ImageVector
-    get() {
-        return _fastRewind ?: ImageVector.Builder(
-                name = "FastRewind",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(11.9987f, 13.0336f)
-                lineTo(20.8329f, 18.9187f)
-                curveTo(21.3314f, 19.2508f, 21.9987f, 18.8934f, 21.9987f, 18.2945f)
-                lineTo(21.9987f, 5.7056f)
-                curveTo(21.9987f, 5.1067f, 21.3314f, 4.7494f, 20.8329f, 5.0814f)
-                lineTo(11.9987f, 10.9666f)
-                lineTo(11.9987f, 5.7056f)
-                curveTo(11.9987f, 5.1067f, 11.3314f, 4.7494f, 10.8329f, 5.0814f)
-                lineTo(1.3843f, 11.3759f)
-                curveTo(0.9387f, 11.6727f, 0.9387f, 12.3274f, 1.3843f, 12.6243f)
-                lineTo(10.8329f, 18.9187f)
-                curveTo(11.3314f, 19.2508f, 11.9987f, 18.8934f, 11.9987f, 18.2945f)
-                lineTo(11.9987f, 13.0336f)
-                close()
+val BezierIcons.FastRewind: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _fastRewind ?: ImageVector.Builder(
+                    name = "FastRewind",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(11.9987f, 13.0336f)
+                    lineTo(20.8329f, 18.9187f)
+                    curveTo(21.3314f, 19.2508f, 21.9987f, 18.8934f, 21.9987f, 18.2945f)
+                    lineTo(21.9987f, 5.70563f)
+                    curveTo(21.9987f, 5.10672f, 21.3314f, 4.7494f, 20.8329f, 5.08145f)
+                    lineTo(11.9987f, 10.9666f)
+                    lineTo(11.9987f, 5.70563f)
+                    curveTo(11.9987f, 5.10672f, 11.3314f, 4.7494f, 10.8329f, 5.08145f)
+                    lineTo(1.38428f, 11.3759f)
+                    curveTo(0.938704f, 11.6727f, 0.938702f, 12.3274f, 1.38428f, 12.6243f)
+                    lineTo(10.8329f, 18.9187f)
+                    curveTo(11.3314f, 19.2508f, 11.9987f, 18.8934f, 11.9987f, 18.2945f)
+                    lineTo(11.9987f, 13.0336f)
+                    close()
+                }
+            }.build().also {
+                _fastRewind = it
             }
-        }.build().also {
-            _fastRewind = it
-        }
     }
+
 
 private var _fastRewind: ImageVector? = null
 
@@ -58,7 +60,7 @@ private var _fastRewind: ImageVector? = null
 private fun FastRewindIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.FastRewind,
+            imageVector = BezierIcons.FastRewind.imageVector,
             contentDescription = null,
     )
 }

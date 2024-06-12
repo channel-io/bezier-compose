@@ -15,43 +15,47 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CancelBold: ImageVector
-    get() {
-        return _cancelBold ?: ImageVector.Builder(
-                name = "CancelBold",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(4.9289f, 4.9289f)
-                curveTo(4.3432f, 5.5147f, 4.3432f, 6.4645f, 4.9289f, 7.0503f)
-                lineTo(9.8787f, 12.0f)
-                lineTo(4.9289f, 16.9497f)
-                curveTo(4.3432f, 17.5355f, 4.3432f, 18.4853f, 4.9289f, 19.0711f)
-                curveTo(5.5147f, 19.6569f, 6.4645f, 19.6569f, 7.0503f, 19.0711f)
-                lineTo(12.0f, 14.1213f)
-                lineTo(16.9497f, 19.0711f)
-                curveTo(17.5355f, 19.6569f, 18.4853f, 19.6569f, 19.0711f, 19.0711f)
-                curveTo(19.6569f, 18.4853f, 19.6569f, 17.5355f, 19.0711f, 16.9497f)
-                lineTo(14.1213f, 12.0f)
-                lineTo(19.0711f, 7.0503f)
-                curveTo(19.6569f, 6.4645f, 19.6569f, 5.5147f, 19.0711f, 4.9289f)
-                curveTo(18.4853f, 4.3432f, 17.5355f, 4.3432f, 16.9497f, 4.9289f)
-                lineTo(12.0f, 9.8787f)
-                lineTo(7.0503f, 4.9289f)
-                curveTo(6.4645f, 4.3432f, 5.5147f, 4.3432f, 4.9289f, 4.9289f)
-                close()
+val BezierIcons.CancelBold: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _cancelBold ?: ImageVector.Builder(
+                    name = "CancelBold",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(4.92893f, 4.92893f)
+                    curveTo(4.34315f, 5.51472f, 4.34315f, 6.46447f, 4.92893f, 7.05025f)
+                    lineTo(9.87868f, 12.0f)
+                    lineTo(4.92893f, 16.9497f)
+                    curveTo(4.34315f, 17.5355f, 4.34315f, 18.4853f, 4.92893f, 19.0711f)
+                    curveTo(5.51472f, 19.6569f, 6.46447f, 19.6569f, 7.05025f, 19.0711f)
+                    lineTo(12.0f, 14.1213f)
+                    lineTo(16.9497f, 19.0711f)
+                    curveTo(17.5355f, 19.6569f, 18.4853f, 19.6569f, 19.0711f, 19.0711f)
+                    curveTo(19.6569f, 18.4853f, 19.6569f, 17.5355f, 19.0711f, 16.9497f)
+                    lineTo(14.1213f, 12.0f)
+                    lineTo(19.0711f, 7.05025f)
+                    curveTo(19.6569f, 6.46447f, 19.6569f, 5.51472f, 19.0711f, 4.92893f)
+                    curveTo(18.4853f, 4.34315f, 17.5355f, 4.34315f, 16.9497f, 4.92893f)
+                    lineTo(12.0f, 9.87868f)
+                    lineTo(7.05025f, 4.92893f)
+                    curveTo(6.46447f, 4.34315f, 5.51472f, 4.34315f, 4.92893f, 4.92893f)
+                    close()
+                }
+            }.build().also {
+                _cancelBold = it
             }
-        }.build().also {
-            _cancelBold = it
-        }
     }
+
 
 private var _cancelBold: ImageVector? = null
 
@@ -60,7 +64,7 @@ private var _cancelBold: ImageVector? = null
 private fun CancelBoldIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CancelBold,
+            imageVector = BezierIcons.CancelBold.imageVector,
             contentDescription = null,
     )
 }

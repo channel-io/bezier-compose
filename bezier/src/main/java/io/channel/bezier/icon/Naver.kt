@@ -9,71 +9,73 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Naver: ImageVector
-    get() {
-        return io.channel.bezier.icon._naver ?: ImageVector.Builder(
-                name = "Naver",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0f, 2.0f)
-                curveTo(17.522f, 2.0f, 22.0f, 6.478f, 22.0f, 12.0f)
-                curveTo(22.0f, 17.522f, 17.522f, 22.0f, 12.0f, 22.0f)
-                curveTo(6.477f, 22.0f, 2.0f, 17.522f, 2.0f, 12.0f)
-                curveTo(2.0f, 6.478f, 6.477f, 2.0f, 12.0f, 2.0f)
-                close()
-                moveTo(6.9998f, 7.5077f)
-                lineTo(6.9998f, 16.5235f)
-                lineTo(10.3738f, 16.5235f)
-                lineTo(10.3938f, 12.0489f)
-                lineTo(13.4231f, 16.5235f)
-                lineTo(16.82f, 16.5235f)
-                lineTo(16.82f, 7.5077f)
-                lineTo(13.4703f, 7.4999f)
-                lineTo(13.4608f, 11.9898f)
-                lineTo(10.3726f, 7.5077f)
-                lineTo(6.9998f, 7.5077f)
-                close()
-                moveTo(2.932f, 12.0144f)
-                curveTo(2.932f, 11.9695f, 2.9323f, 11.9246f, 2.933f, 11.8799f)
-                lineTo(2.933f, 12.1482f)
-                curveTo(2.9323f, 12.1037f, 2.932f, 12.0591f, 2.932f, 12.0144f)
-                close()
-                moveTo(12.2244f, 3.0191f)
-                lineTo(11.6406f, 3.019f)
-                curveTo(11.7374f, 3.0159f, 11.8345f, 3.0144f, 11.932f, 3.0144f)
-                curveTo(12.0298f, 3.0144f, 12.1273f, 3.016f, 12.2244f, 3.0191f)
-                close()
-                moveTo(20.9278f, 12.2925f)
-                lineTo(20.9277f, 11.7327f)
-                curveTo(20.9306f, 11.8263f, 20.932f, 11.9202f, 20.932f, 12.0144f)
-                curveTo(20.932f, 12.1074f, 20.9306f, 12.2001f, 20.9278f, 12.2925f)
-                close()
-                moveTo(11.6514f, 21.0101f)
-                lineTo(12.2143f, 21.0101f)
-                curveTo(12.1205f, 21.0129f, 12.0264f, 21.0144f, 11.932f, 21.0144f)
-                curveTo(11.8381f, 21.0144f, 11.7446f, 21.013f, 11.6514f, 21.0101f)
-                close()
+val BezierIcons.Naver: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _naver ?: ImageVector.Builder(
+                    name = "Naver",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.0f, 2.0f)
+                    curveTo(17.522f, 2.0f, 22.0f, 6.478f, 22.0f, 12.0f)
+                    curveTo(22.0f, 17.522f, 17.522f, 22.0f, 12.0f, 22.0f)
+                    curveTo(6.477f, 22.0f, 2.0f, 17.522f, 2.0f, 12.0f)
+                    curveTo(2.0f, 6.478f, 6.477f, 2.0f, 12.0f, 2.0f)
+                    close()
+                    moveTo(6.99982f, 7.5077f)
+                    lineTo(6.99982f, 16.5235f)
+                    lineTo(10.3738f, 16.5235f)
+                    lineTo(10.3938f, 12.0489f)
+                    lineTo(13.4231f, 16.5235f)
+                    lineTo(16.82f, 16.5235f)
+                    lineTo(16.82f, 7.5077f)
+                    lineTo(13.4703f, 7.49988f)
+                    lineTo(13.4608f, 11.9898f)
+                    lineTo(10.3726f, 7.5077f)
+                    lineTo(6.99982f, 7.5077f)
+                    close()
+                    moveTo(2.93201f, 12.0144f)
+                    curveTo(2.93201f, 11.9695f, 2.93234f, 11.9246f, 2.93299f, 11.8799f)
+                    lineTo(2.93298f, 12.1482f)
+                    curveTo(2.93233f, 12.1037f, 2.93201f, 12.0591f, 2.93201f, 12.0144f)
+                    close()
+                    moveTo(12.2244f, 3.01906f)
+                    lineTo(11.6406f, 3.01903f)
+                    curveTo(11.7374f, 3.01595f, 11.8345f, 3.0144f, 11.932f, 3.0144f)
+                    curveTo(12.0298f, 3.0144f, 12.1273f, 3.01597f, 12.2244f, 3.01906f)
+                    close()
+                    moveTo(20.9278f, 12.2925f)
+                    lineTo(20.9277f, 11.7327f)
+                    curveTo(20.9306f, 11.8263f, 20.932f, 11.9202f, 20.932f, 12.0144f)
+                    curveTo(20.932f, 12.1074f, 20.9306f, 12.2001f, 20.9278f, 12.2925f)
+                    close()
+                    moveTo(11.6514f, 21.0101f)
+                    lineTo(12.2143f, 21.0101f)
+                    curveTo(12.1205f, 21.0129f, 12.0264f, 21.0144f, 11.932f, 21.0144f)
+                    curveTo(11.8381f, 21.0144f, 11.7446f, 21.013f, 11.6514f, 21.0101f)
+                    close()
+                }
+            }.build().also {
+                _naver = it
             }
-        }.build().also {
-            io.channel.bezier.icon._naver = it
-        }
     }
+
 
 private var _naver: ImageVector? = null
 
@@ -82,7 +84,7 @@ private var _naver: ImageVector? = null
 private fun NaverIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Naver,
+            imageVector = BezierIcons.Naver.imageVector,
             contentDescription = null,
     )
 }

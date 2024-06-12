@@ -9,59 +9,61 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Heart: ImageVector
-    get() {
-        return io.channel.bezier.icon._heart ?: ImageVector.Builder(
-                name = "Heart",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(7.8949f, 5.0029f)
-                curveTo(7.3269f, 5.0029f, 6.7679f, 5.1189f, 6.2789f, 5.3398f)
-                curveTo(5.8179f, 5.5479f, 5.4589f, 5.7799f, 5.2089f, 6.0289f)
-                curveTo(3.6699f, 7.5679f, 3.6079f, 9.9538f, 5.0609f, 11.6999f)
-                curveTo(6.9159f, 13.9289f, 10.0779f, 16.8819f, 12.0039f, 18.6239f)
-                curveTo(13.9299f, 16.8809f, 17.0939f, 13.9269f, 18.9459f, 11.6999f)
-                curveTo(20.3989f, 9.9538f, 20.3369f, 7.5689f, 18.7979f, 6.0299f)
-                curveTo(18.5479f, 5.7799f, 18.1879f, 5.5479f, 17.7289f, 5.3398f)
-                curveTo(16.1569f, 4.6288f, 13.8599f, 5.0009f, 12.8879f, 6.8389f)
-                curveTo(12.8879f, 6.8389f, 12.3829f, 7.7899f, 12.2189f, 8.0958f)
-                curveTo(12.1199f, 8.2818f, 11.8839f, 8.2818f, 11.7839f, 8.0958f)
-                curveTo(11.5749f, 7.7069f, 11.1199f, 6.8389f, 11.1199f, 6.8389f)
-                curveTo(10.4499f, 5.5729f, 9.1509f, 5.0029f, 7.8949f, 5.0029f)
-                close()
-                moveTo(12.0029f, 20.7989f)
-                curveTo(11.6449f, 20.7989f, 11.2879f, 20.6709f, 11.0029f, 20.4149f)
-                curveTo(9.0889f, 18.6939f, 5.5709f, 15.4409f, 3.5239f, 12.9799f)
-                curveTo(1.3939f, 10.4199f, 1.5079f, 6.9019f, 3.7949f, 4.6149f)
-                curveTo(4.2159f, 4.1939f, 4.7739f, 3.8249f, 5.4549f, 3.5179f)
-                curveTo(7.7179f, 2.4939f, 10.3799f, 3.0419f, 12.0039f, 4.6969f)
-                curveTo(13.6279f, 3.0429f, 16.2899f, 2.4959f, 18.5529f, 3.5179f)
-                curveTo(19.2329f, 3.8249f, 19.7909f, 4.1939f, 20.2119f, 4.6149f)
-                curveTo(22.4989f, 6.9019f, 22.6129f, 10.4199f, 20.4829f, 12.9799f)
-                curveTo(18.4379f, 15.4379f, 14.9199f, 18.6929f, 13.0039f, 20.4149f)
-                curveTo(12.7189f, 20.6709f, 12.3609f, 20.7989f, 12.0029f, 20.7989f)
-                close()
+val BezierIcons.Heart: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _heart ?: ImageVector.Builder(
+                    name = "Heart",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(7.8949f, 5.00285f)
+                    curveTo(7.3269f, 5.00285f, 6.7679f, 5.11885f, 6.2789f, 5.33985f)
+                    curveTo(5.8179f, 5.54785f, 5.4589f, 5.77985f, 5.2089f, 6.02885f)
+                    curveTo(3.6699f, 7.56785f, 3.6079f, 9.95385f, 5.0609f, 11.6999f)
+                    curveTo(6.9159f, 13.9289f, 10.0779f, 16.8819f, 12.0039f, 18.6239f)
+                    curveTo(13.9299f, 16.8809f, 17.0939f, 13.9269f, 18.9459f, 11.6999f)
+                    curveTo(20.3989f, 9.95385f, 20.3369f, 7.56885f, 18.7979f, 6.02985f)
+                    curveTo(18.5479f, 5.77985f, 18.1879f, 5.54785f, 17.7289f, 5.33985f)
+                    curveTo(16.1569f, 4.62885f, 13.8599f, 5.00085f, 12.8879f, 6.83885f)
+                    curveTo(12.8879f, 6.83885f, 12.3829f, 7.78985f, 12.2189f, 8.09585f)
+                    curveTo(12.1199f, 8.28185f, 11.8839f, 8.28185f, 11.7839f, 8.09585f)
+                    curveTo(11.5749f, 7.70685f, 11.1199f, 6.83885f, 11.1199f, 6.83885f)
+                    curveTo(10.4499f, 5.57285f, 9.1509f, 5.00285f, 7.8949f, 5.00285f)
+                    close()
+                    moveTo(12.0029f, 20.7989f)
+                    curveTo(11.6449f, 20.7989f, 11.2879f, 20.6709f, 11.0029f, 20.4149f)
+                    curveTo(9.0889f, 18.6939f, 5.5709f, 15.4409f, 3.5239f, 12.9799f)
+                    curveTo(1.3939f, 10.4199f, 1.5079f, 6.90187f, 3.7949f, 4.61487f)
+                    curveTo(4.2159f, 4.19387f, 4.7739f, 3.82487f, 5.4549f, 3.51787f)
+                    curveTo(7.7179f, 2.49387f, 10.3799f, 3.04187f, 12.0039f, 4.69687f)
+                    curveTo(13.6279f, 3.04287f, 16.2899f, 2.49587f, 18.5529f, 3.51787f)
+                    curveTo(19.2329f, 3.82487f, 19.7909f, 4.19387f, 20.2119f, 4.61487f)
+                    curveTo(22.4989f, 6.90187f, 22.6129f, 10.4199f, 20.4829f, 12.9799f)
+                    curveTo(18.4379f, 15.4379f, 14.9199f, 18.6929f, 13.0039f, 20.4149f)
+                    curveTo(12.7189f, 20.6709f, 12.3609f, 20.7989f, 12.0029f, 20.7989f)
+                    close()
+                }
+            }.build().also {
+                _heart = it
             }
-        }.build().also {
-            io.channel.bezier.icon._heart = it
-        }
     }
+
 
 private var _heart: ImageVector? = null
 
@@ -70,7 +72,7 @@ private var _heart: ImageVector? = null
 private fun HeartIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Heart,
+            imageVector = BezierIcons.Heart.imageVector,
             contentDescription = null,
     )
 }

@@ -9,61 +9,63 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CommentFilled: ImageVector
-    get() {
-        return _commentFilled ?: ImageVector.Builder(
-                name = "CommentFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(7.0f, 3.0f)
-                curveTo(4.7909f, 3.0f, 3.0f, 4.7909f, 3.0f, 7.0f)
-                lineTo(3.0f, 20.9597f)
-                curveTo(3.0f, 22.2174f, 4.4549f, 22.9167f, 5.437f, 22.131f)
-                lineTo(8.8029f, 19.4383f)
-                curveTo(9.1576f, 19.1546f, 9.5982f, 19.0f, 10.0523f, 19.0f)
-                lineTo(17.0f, 19.0f)
-                curveTo(19.2091f, 19.0f, 21.0f, 17.2091f, 21.0f, 15.0f)
-                lineTo(21.0f, 7.0f)
-                curveTo(21.0f, 4.7909f, 19.2091f, 3.0f, 17.0f, 3.0f)
-                lineTo(7.0f, 3.0f)
-                close()
-                moveTo(7.0f, 9.0f)
-                curveTo(7.0f, 8.4477f, 7.4477f, 8.0f, 8.0f, 8.0f)
-                lineTo(16.0f, 8.0f)
-                curveTo(16.5523f, 8.0f, 17.0f, 8.4477f, 17.0f, 9.0f)
-                curveTo(17.0f, 9.5523f, 16.5523f, 10.0f, 16.0f, 10.0f)
-                lineTo(8.0f, 10.0f)
-                curveTo(7.4477f, 10.0f, 7.0f, 9.5523f, 7.0f, 9.0f)
-                close()
-                moveTo(7.0f, 13.0f)
-                curveTo(7.0f, 12.4477f, 7.4477f, 12.0f, 8.0f, 12.0f)
-                lineTo(16.0f, 12.0f)
-                curveTo(16.5523f, 12.0f, 17.0f, 12.4477f, 17.0f, 13.0f)
-                curveTo(17.0f, 13.5523f, 16.5523f, 14.0f, 16.0f, 14.0f)
-                lineTo(8.0f, 14.0f)
-                curveTo(7.4477f, 14.0f, 7.0f, 13.5523f, 7.0f, 13.0f)
-                close()
+val BezierIcons.CommentFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _commentFilled ?: ImageVector.Builder(
+                    name = "CommentFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(7.0f, 3.0f)
+                    curveTo(4.79086f, 3.0f, 3.0f, 4.79086f, 3.0f, 7.0f)
+                    lineTo(3.0f, 20.9597f)
+                    curveTo(3.0f, 22.2174f, 4.4549f, 22.9167f, 5.43704f, 22.131f)
+                    lineTo(8.80295f, 19.4383f)
+                    curveTo(9.15758f, 19.1546f, 9.5982f, 19.0f, 10.0523f, 19.0f)
+                    lineTo(17.0f, 19.0f)
+                    curveTo(19.2091f, 19.0f, 21.0f, 17.2091f, 21.0f, 15.0f)
+                    lineTo(21.0f, 7.0f)
+                    curveTo(21.0f, 4.79086f, 19.2091f, 3.0f, 17.0f, 3.0f)
+                    lineTo(7.0f, 3.0f)
+                    close()
+                    moveTo(7.0f, 9.0f)
+                    curveTo(7.0f, 8.44772f, 7.44772f, 8.0f, 8.0f, 8.0f)
+                    lineTo(16.0f, 8.0f)
+                    curveTo(16.5523f, 8.0f, 17.0f, 8.44772f, 17.0f, 9.0f)
+                    curveTo(17.0f, 9.55228f, 16.5523f, 10.0f, 16.0f, 10.0f)
+                    lineTo(8.0f, 10.0f)
+                    curveTo(7.44772f, 10.0f, 7.0f, 9.55228f, 7.0f, 9.0f)
+                    close()
+                    moveTo(7.0f, 13.0f)
+                    curveTo(7.0f, 12.4477f, 7.44772f, 12.0f, 8.0f, 12.0f)
+                    lineTo(16.0f, 12.0f)
+                    curveTo(16.5523f, 12.0f, 17.0f, 12.4477f, 17.0f, 13.0f)
+                    curveTo(17.0f, 13.5523f, 16.5523f, 14.0f, 16.0f, 14.0f)
+                    lineTo(8.0f, 14.0f)
+                    curveTo(7.44772f, 14.0f, 7.0f, 13.5523f, 7.0f, 13.0f)
+                    close()
+                }
+            }.build().also {
+                _commentFilled = it
             }
-        }.build().also {
-            _commentFilled = it
-        }
     }
+
 
 private var _commentFilled: ImageVector? = null
 
@@ -72,7 +74,7 @@ private var _commentFilled: ImageVector? = null
 private fun CommentFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CommentFilled,
+            imageVector = BezierIcons.CommentFilled.imageVector,
             contentDescription = null,
     )
 }

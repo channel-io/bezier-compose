@@ -9,72 +9,74 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Comment: ImageVector
-    get() {
-        return io.channel.bezier.icon._comment ?: ImageVector.Builder(
-                name = "Comment",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(3.0f, 7.0f)
-                curveTo(3.0f, 4.7909f, 4.7909f, 3.0f, 7.0f, 3.0f)
-                lineTo(17.0f, 3.0f)
-                curveTo(19.2091f, 3.0f, 21.0f, 4.7909f, 21.0f, 7.0f)
-                lineTo(21.0f, 15.0f)
-                curveTo(21.0f, 17.2091f, 19.2091f, 19.0f, 17.0f, 19.0f)
-                lineTo(10.0523f, 19.0f)
-                curveTo(9.5982f, 19.0f, 9.1576f, 19.1546f, 8.8029f, 19.4383f)
-                lineTo(5.437f, 22.131f)
-                curveTo(4.4549f, 22.9167f, 3.0f, 22.2174f, 3.0f, 20.9597f)
-                lineTo(3.0f, 7.0f)
-                close()
-                moveTo(7.0f, 5.0f)
-                curveTo(5.8954f, 5.0f, 5.0f, 5.8954f, 5.0f, 7.0f)
-                lineTo(5.0f, 19.9194f)
-                lineTo(7.5536f, 17.8765f)
-                curveTo(8.2628f, 17.3091f, 9.1441f, 17.0f, 10.0523f, 17.0f)
-                lineTo(17.0f, 17.0f)
-                curveTo(18.1046f, 17.0f, 19.0f, 16.1046f, 19.0f, 15.0f)
-                lineTo(19.0f, 7.0f)
-                curveTo(19.0f, 5.8954f, 18.1046f, 5.0f, 17.0f, 5.0f)
-                lineTo(7.0f, 5.0f)
-                close()
-                moveTo(8.0f, 9.0f)
-                curveTo(8.0f, 8.4477f, 8.4477f, 8.0f, 9.0f, 8.0f)
-                lineTo(15.0f, 8.0f)
-                curveTo(15.5523f, 8.0f, 16.0f, 8.4477f, 16.0f, 9.0f)
-                curveTo(16.0f, 9.5523f, 15.5523f, 10.0f, 15.0f, 10.0f)
-                lineTo(9.0f, 10.0f)
-                curveTo(8.4477f, 10.0f, 8.0f, 9.5523f, 8.0f, 9.0f)
-                close()
-                moveTo(9.0f, 12.0f)
-                curveTo(8.4477f, 12.0f, 8.0f, 12.4477f, 8.0f, 13.0f)
-                curveTo(8.0f, 13.5523f, 8.4477f, 14.0f, 9.0f, 14.0f)
-                lineTo(15.0f, 14.0f)
-                curveTo(15.5523f, 14.0f, 16.0f, 13.5523f, 16.0f, 13.0f)
-                curveTo(16.0f, 12.4477f, 15.5523f, 12.0f, 15.0f, 12.0f)
-                lineTo(9.0f, 12.0f)
-                close()
+val BezierIcons.Comment: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _comment ?: ImageVector.Builder(
+                    name = "Comment",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(3.0f, 7.0f)
+                    curveTo(3.0f, 4.79086f, 4.79086f, 3.0f, 7.0f, 3.0f)
+                    lineTo(17.0f, 3.0f)
+                    curveTo(19.2091f, 3.0f, 21.0f, 4.79086f, 21.0f, 7.0f)
+                    lineTo(21.0f, 15.0f)
+                    curveTo(21.0f, 17.2091f, 19.2091f, 19.0f, 17.0f, 19.0f)
+                    lineTo(10.0523f, 19.0f)
+                    curveTo(9.5982f, 19.0f, 9.15758f, 19.1546f, 8.80295f, 19.4383f)
+                    lineTo(5.43704f, 22.131f)
+                    curveTo(4.4549f, 22.9167f, 3.0f, 22.2174f, 3.0f, 20.9597f)
+                    lineTo(3.0f, 7.0f)
+                    close()
+                    moveTo(7.0f, 5.0f)
+                    curveTo(5.89543f, 5.0f, 5.0f, 5.89543f, 5.0f, 7.0f)
+                    lineTo(5.0f, 19.9194f)
+                    lineTo(7.55356f, 17.8765f)
+                    curveTo(8.26282f, 17.3091f, 9.14406f, 17.0f, 10.0523f, 17.0f)
+                    lineTo(17.0f, 17.0f)
+                    curveTo(18.1046f, 17.0f, 19.0f, 16.1046f, 19.0f, 15.0f)
+                    lineTo(19.0f, 7.0f)
+                    curveTo(19.0f, 5.89543f, 18.1046f, 5.0f, 17.0f, 5.0f)
+                    lineTo(7.0f, 5.0f)
+                    close()
+                    moveTo(8.0f, 9.0f)
+                    curveTo(8.0f, 8.44772f, 8.44772f, 8.0f, 9.0f, 8.0f)
+                    lineTo(15.0f, 8.0f)
+                    curveTo(15.5523f, 8.0f, 16.0f, 8.44772f, 16.0f, 9.0f)
+                    curveTo(16.0f, 9.55228f, 15.5523f, 10.0f, 15.0f, 10.0f)
+                    lineTo(9.0f, 10.0f)
+                    curveTo(8.44772f, 10.0f, 8.0f, 9.55228f, 8.0f, 9.0f)
+                    close()
+                    moveTo(9.0f, 12.0f)
+                    curveTo(8.44772f, 12.0f, 8.0f, 12.4477f, 8.0f, 13.0f)
+                    curveTo(8.0f, 13.5523f, 8.44772f, 14.0f, 9.0f, 14.0f)
+                    lineTo(15.0f, 14.0f)
+                    curveTo(15.5523f, 14.0f, 16.0f, 13.5523f, 16.0f, 13.0f)
+                    curveTo(16.0f, 12.4477f, 15.5523f, 12.0f, 15.0f, 12.0f)
+                    lineTo(9.0f, 12.0f)
+                    close()
+                }
+            }.build().also {
+                _comment = it
             }
-        }.build().also {
-            io.channel.bezier.icon._comment = it
-        }
     }
+
 
 private var _comment: ImageVector? = null
 
@@ -83,7 +85,7 @@ private var _comment: ImageVector? = null
 private fun CommentIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Comment,
+            imageVector = BezierIcons.Comment.imageVector,
             contentDescription = null,
     )
 }

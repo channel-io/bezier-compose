@@ -15,47 +15,51 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Heading: ImageVector
-    get() {
-        return _heading ?: ImageVector.Builder(
-                name = "Heading",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(5.0f, 4.0f)
-                curveTo(5.0f, 3.4477f, 5.4477f, 3.0f, 6.0f, 3.0f)
-                lineTo(7.0f, 3.0f)
-                curveTo(7.5523f, 3.0f, 8.0f, 3.4477f, 8.0f, 4.0f)
-                lineTo(8.0f, 10.5f)
-                lineTo(16.0f, 10.5f)
-                lineTo(16.0f, 4.0f)
-                curveTo(16.0f, 3.4477f, 16.4477f, 3.0f, 17.0f, 3.0f)
-                lineTo(18.0f, 3.0f)
-                curveTo(18.5523f, 3.0f, 19.0f, 3.4477f, 19.0f, 4.0f)
-                lineTo(19.0f, 20.0f)
-                curveTo(19.0f, 20.5523f, 18.5523f, 21.0f, 18.0f, 21.0f)
-                lineTo(17.0f, 21.0f)
-                curveTo(16.4477f, 21.0f, 16.0f, 20.5523f, 16.0f, 20.0f)
-                lineTo(16.0f, 13.5f)
-                lineTo(8.0f, 13.5f)
-                lineTo(8.0f, 20.0f)
-                curveTo(8.0f, 20.5523f, 7.5523f, 21.0f, 7.0f, 21.0f)
-                lineTo(6.0f, 21.0f)
-                curveTo(5.4477f, 21.0f, 5.0f, 20.5523f, 5.0f, 20.0f)
-                lineTo(5.0f, 4.0f)
-                close()
+val BezierIcons.Heading: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _heading ?: ImageVector.Builder(
+                    name = "Heading",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(5.0f, 4.0f)
+                    curveTo(5.0f, 3.44772f, 5.44772f, 3.0f, 6.0f, 3.0f)
+                    lineTo(7.0f, 3.0f)
+                    curveTo(7.55228f, 3.0f, 8.0f, 3.44772f, 8.0f, 4.0f)
+                    lineTo(8.0f, 10.5f)
+                    lineTo(16.0f, 10.5f)
+                    lineTo(16.0f, 4.0f)
+                    curveTo(16.0f, 3.44772f, 16.4477f, 3.0f, 17.0f, 3.0f)
+                    lineTo(18.0f, 3.0f)
+                    curveTo(18.5523f, 3.0f, 19.0f, 3.44772f, 19.0f, 4.0f)
+                    lineTo(19.0f, 20.0f)
+                    curveTo(19.0f, 20.5523f, 18.5523f, 21.0f, 18.0f, 21.0f)
+                    lineTo(17.0f, 21.0f)
+                    curveTo(16.4477f, 21.0f, 16.0f, 20.5523f, 16.0f, 20.0f)
+                    lineTo(16.0f, 13.5f)
+                    lineTo(8.0f, 13.5f)
+                    lineTo(8.0f, 20.0f)
+                    curveTo(8.0f, 20.5523f, 7.55228f, 21.0f, 7.0f, 21.0f)
+                    lineTo(6.0f, 21.0f)
+                    curveTo(5.44772f, 21.0f, 5.0f, 20.5523f, 5.0f, 20.0f)
+                    lineTo(5.0f, 4.0f)
+                    close()
+                }
+            }.build().also {
+                _heading = it
             }
-        }.build().also {
-            _heading = it
-        }
     }
+
 
 private var _heading: ImageVector? = null
 
@@ -64,7 +68,7 @@ private var _heading: ImageVector? = null
 private fun HeadingIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Heading,
+            imageVector = BezierIcons.Heading.imageVector,
             contentDescription = null,
     )
 }

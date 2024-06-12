@@ -9,71 +9,73 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.WeatherThunder: ImageVector
-    get() {
-        return _weatherThunder ?: ImageVector.Builder(
-                name = "WeatherThunder",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(22.9999f, 10.927f)
-                curveTo(22.9999f, 14.279f, 20.2729f, 17.007f, 16.9209f, 17.007f)
-                lineTo(16.9209f, 15.007f)
-                curveTo(19.1699f, 15.007f, 20.9999f, 13.177f, 20.9999f, 10.927f)
-                curveTo(20.9999f, 8.677f, 19.1699f, 6.847f, 16.9209f, 6.847f)
-                lineTo(15.7219f, 6.847f)
-                lineTo(15.4329f, 6.353f)
-                curveTo(14.7129f, 5.123f, 13.4479f, 4.39f, 12.0489f, 4.39f)
-                curveTo(10.1169f, 4.39f, 8.4499f, 5.841f, 8.1719f, 7.765f)
-                lineTo(8.0489f, 8.622f)
-                lineTo(6.0199f, 8.622f)
-                curveTo(4.3549f, 8.622f, 2.9999f, 9.977f, 2.9999f, 11.642f)
-                lineTo(2.9999f, 11.986f)
-                curveTo(2.9999f, 13.652f, 4.3549f, 15.007f, 6.0199f, 15.007f)
-                lineTo(8.0039f, 15.007f)
-                lineTo(8.0039f, 17.007f)
-                lineTo(6.0199f, 17.007f)
-                curveTo(3.2519f, 17.007f, 0.9999f, 14.755f, 0.9999f, 11.986f)
-                lineTo(0.9999f, 11.642f)
-                curveTo(0.9999f, 8.874f, 3.2519f, 6.622f, 6.0199f, 6.622f)
-                lineTo(6.3829f, 6.622f)
-                curveTo(7.1259f, 4.157f, 9.4249f, 2.39f, 12.0489f, 2.39f)
-                curveTo(13.9379f, 2.39f, 15.7229f, 3.319f, 16.8349f, 4.847f)
-                lineTo(16.9209f, 4.847f)
-                curveTo(20.2729f, 4.847f, 22.9999f, 7.574f, 22.9999f, 10.927f)
-                close()
-                moveTo(13.5454f, 15.9923f)
-                lineTo(16.0874f, 16.5803f)
-                curveTo(16.3124f, 16.6333f, 16.3924f, 16.9113f, 16.2294f, 17.0753f)
-                lineTo(10.1534f, 23.1683f)
-                curveTo(9.9384f, 23.3843f, 9.5774f, 23.1703f, 9.6634f, 22.8773f)
-                lineTo(10.8884f, 18.7093f)
-                lineTo(8.3464f, 18.1213f)
-                curveTo(8.1214f, 18.0683f, 8.0414f, 17.7903f, 8.2044f, 17.6263f)
-                lineTo(14.2804f, 11.5333f)
-                curveTo(14.4954f, 11.3173f, 14.8574f, 11.5313f, 14.7714f, 11.8243f)
-                lineTo(13.5454f, 15.9923f)
-                close()
+val BezierIcons.WeatherThunder: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _weatherThunder ?: ImageVector.Builder(
+                    name = "WeatherThunder",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(22.9999f, 10.927f)
+                    curveTo(22.9999f, 14.279f, 20.2729f, 17.007f, 16.9209f, 17.007f)
+                    lineTo(16.9209f, 15.007f)
+                    curveTo(19.1699f, 15.007f, 20.9999f, 13.177f, 20.9999f, 10.927f)
+                    curveTo(20.9999f, 8.67701f, 19.1699f, 6.84701f, 16.9209f, 6.84701f)
+                    lineTo(15.7219f, 6.84701f)
+                    lineTo(15.4329f, 6.35301f)
+                    curveTo(14.7129f, 5.12301f, 13.4479f, 4.39001f, 12.0489f, 4.39001f)
+                    curveTo(10.1169f, 4.39001f, 8.44991f, 5.84101f, 8.17191f, 7.76501f)
+                    lineTo(8.04891f, 8.62201f)
+                    lineTo(6.01991f, 8.62201f)
+                    curveTo(4.35491f, 8.62201f, 2.99991f, 9.97701f, 2.99991f, 11.642f)
+                    lineTo(2.99991f, 11.986f)
+                    curveTo(2.99991f, 13.652f, 4.35491f, 15.007f, 6.01991f, 15.007f)
+                    lineTo(8.00391f, 15.007f)
+                    lineTo(8.00391f, 17.007f)
+                    lineTo(6.01991f, 17.007f)
+                    curveTo(3.25191f, 17.007f, 0.999908f, 14.755f, 0.999908f, 11.986f)
+                    lineTo(0.999908f, 11.642f)
+                    curveTo(0.999908f, 8.87401f, 3.25191f, 6.62201f, 6.01991f, 6.62201f)
+                    lineTo(6.38291f, 6.62201f)
+                    curveTo(7.12591f, 4.15701f, 9.42491f, 2.39001f, 12.0489f, 2.39001f)
+                    curveTo(13.9379f, 2.39001f, 15.7229f, 3.31901f, 16.8349f, 4.84701f)
+                    lineTo(16.9209f, 4.84701f)
+                    curveTo(20.2729f, 4.84701f, 22.9999f, 7.57401f, 22.9999f, 10.927f)
+                    close()
+                    moveTo(13.5454f, 15.9923f)
+                    lineTo(16.0874f, 16.5803f)
+                    curveTo(16.3124f, 16.6333f, 16.3924f, 16.9113f, 16.2294f, 17.0753f)
+                    lineTo(10.1534f, 23.1683f)
+                    curveTo(9.93842f, 23.3843f, 9.57742f, 23.1703f, 9.66342f, 22.8773f)
+                    lineTo(10.8884f, 18.7093f)
+                    lineTo(8.34642f, 18.1213f)
+                    curveTo(8.12142f, 18.0683f, 8.04142f, 17.7903f, 8.20442f, 17.6263f)
+                    lineTo(14.2804f, 11.5333f)
+                    curveTo(14.4954f, 11.3173f, 14.8574f, 11.5313f, 14.7714f, 11.8243f)
+                    lineTo(13.5454f, 15.9923f)
+                    close()
+                }
+            }.build().also {
+                _weatherThunder = it
             }
-        }.build().also {
-            _weatherThunder = it
-        }
     }
+
 
 private var _weatherThunder: ImageVector? = null
 
@@ -82,7 +84,7 @@ private var _weatherThunder: ImageVector? = null
 private fun WeatherThunderIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.WeatherThunder,
+            imageVector = BezierIcons.WeatherThunder.imageVector,
             contentDescription = null,
     )
 }

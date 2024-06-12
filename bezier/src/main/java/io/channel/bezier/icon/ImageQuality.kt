@@ -9,75 +9,77 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ImageQuality: ImageVector
-    get() {
-        return io.channel.bezier.icon._imageQuality ?: ImageVector.Builder(
-                name = "ImageQuality",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(18.0127f, 10.3435f)
-                curveTo(18.1021f, 10.5522f, 18.3979f, 10.5522f, 18.4873f, 10.3435f)
-                lineTo(19.6442f, 7.6442f)
-                lineTo(22.3435f, 6.4873f)
-                curveTo(22.5522f, 6.3979f, 22.5522f, 6.1021f, 22.3435f, 6.0127f)
-                lineTo(19.6442f, 4.8558f)
-                lineTo(18.4873f, 2.1565f)
-                curveTo(18.3979f, 1.9478f, 18.1021f, 1.9478f, 18.0127f, 2.1565f)
-                lineTo(16.8558f, 4.8558f)
-                lineTo(14.1565f, 6.0127f)
-                curveTo(13.9478f, 6.1021f, 13.9478f, 6.3979f, 14.1565f, 6.4873f)
-                lineTo(16.8558f, 7.6442f)
-                lineTo(18.0127f, 10.3435f)
-                close()
-                moveTo(4.5f, 3.0f)
-                lineTo(13.0f, 3.0f)
-                lineTo(13.0f, 5.0f)
-                lineTo(5.0f, 5.0f)
-                lineTo(5.0f, 19.0f)
-                lineTo(19.0f, 19.0f)
-                lineTo(19.0f, 12.0f)
-                lineTo(21.0f, 12.0f)
-                lineTo(21.0f, 19.5f)
-                curveTo(21.0f, 20.327f, 20.327f, 21.0f, 19.5f, 21.0f)
-                lineTo(4.5f, 21.0f)
-                curveTo(3.673f, 21.0f, 3.0f, 20.327f, 3.0f, 19.5f)
-                lineTo(3.0f, 4.5f)
-                curveTo(3.0f, 3.673f, 3.673f, 3.0f, 4.5f, 3.0f)
-                close()
-                moveTo(18.0002f, 18.0001f)
-                lineTo(18.0002f, 12.0001f)
-                lineTo(14.0052f, 10.0001f)
-                lineTo(6.0002f, 14.0001f)
-                lineTo(6.0002f, 18.0001f)
-                lineTo(18.0002f, 18.0001f)
-                close()
-                moveTo(10.0002f, 8.0001f)
-                curveTo(10.0002f, 9.1041f, 9.1042f, 10.0001f, 8.0002f, 10.0001f)
-                curveTo(6.8962f, 10.0001f, 6.0002f, 9.1041f, 6.0002f, 8.0001f)
-                curveTo(6.0002f, 6.8961f, 6.8962f, 6.0001f, 8.0002f, 6.0001f)
-                curveTo(9.1042f, 6.0001f, 10.0002f, 6.8961f, 10.0002f, 8.0001f)
-                close()
+val BezierIcons.ImageQuality: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _imageQuality ?: ImageVector.Builder(
+                    name = "ImageQuality",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(18.0127f, 10.3435f)
+                    curveTo(18.1021f, 10.5522f, 18.3979f, 10.5522f, 18.4873f, 10.3435f)
+                    lineTo(19.6442f, 7.64417f)
+                    lineTo(22.3435f, 6.4873f)
+                    curveTo(22.5522f, 6.39789f, 22.5522f, 6.10211f, 22.3435f, 6.0127f)
+                    lineTo(19.6442f, 4.85583f)
+                    lineTo(18.4873f, 2.15648f)
+                    curveTo(18.3979f, 1.94784f, 18.1021f, 1.94784f, 18.0127f, 2.15648f)
+                    lineTo(16.8558f, 4.85583f)
+                    lineTo(14.1565f, 6.0127f)
+                    curveTo(13.9478f, 6.10211f, 13.9478f, 6.39789f, 14.1565f, 6.4873f)
+                    lineTo(16.8558f, 7.64417f)
+                    lineTo(18.0127f, 10.3435f)
+                    close()
+                    moveTo(4.5f, 3.0f)
+                    lineTo(13.0f, 3.0f)
+                    lineTo(13.0f, 5.0f)
+                    lineTo(5.0f, 5.0f)
+                    lineTo(5.0f, 19.0f)
+                    lineTo(19.0f, 19.0f)
+                    lineTo(19.0f, 12.0f)
+                    lineTo(21.0f, 12.0f)
+                    lineTo(21.0f, 19.5f)
+                    curveTo(21.0f, 20.327f, 20.327f, 21.0f, 19.5f, 21.0f)
+                    lineTo(4.5f, 21.0f)
+                    curveTo(3.673f, 21.0f, 3.0f, 20.327f, 3.0f, 19.5f)
+                    lineTo(3.0f, 4.5f)
+                    curveTo(3.0f, 3.673f, 3.673f, 3.0f, 4.5f, 3.0f)
+                    close()
+                    moveTo(18.0002f, 18.0001f)
+                    lineTo(18.0002f, 12.0001f)
+                    lineTo(14.0052f, 10.0001f)
+                    lineTo(6.0002f, 14.0001f)
+                    lineTo(6.0002f, 18.0001f)
+                    lineTo(18.0002f, 18.0001f)
+                    close()
+                    moveTo(10.0002f, 8.00012f)
+                    curveTo(10.0002f, 9.10412f, 9.1042f, 10.0001f, 8.0002f, 10.0001f)
+                    curveTo(6.8962f, 10.0001f, 6.0002f, 9.10412f, 6.0002f, 8.00012f)
+                    curveTo(6.0002f, 6.89612f, 6.8962f, 6.00012f, 8.0002f, 6.00012f)
+                    curveTo(9.1042f, 6.00012f, 10.0002f, 6.89612f, 10.0002f, 8.00012f)
+                    close()
+                }
+            }.build().also {
+                _imageQuality = it
             }
-        }.build().also {
-            io.channel.bezier.icon._imageQuality = it
-        }
     }
+
 
 private var _imageQuality: ImageVector? = null
 
@@ -86,7 +88,7 @@ private var _imageQuality: ImageVector? = null
 private fun ImageQualityIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ImageQuality,
+            imageVector = BezierIcons.ImageQuality.imageVector,
             contentDescription = null,
     )
 }

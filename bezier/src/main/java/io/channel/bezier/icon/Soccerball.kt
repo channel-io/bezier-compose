@@ -9,80 +9,83 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Soccerball: ImageVector
-    get() {
-        return _soccerball ?: ImageVector.Builder(
-                name = "Soccerball",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(15.8042f, 13.2355f)
-                lineTo(12.0f, 15.9994f)
-                lineTo(8.1958f, 13.2355f)
-                lineTo(9.6489f, 8.7633f)
-                lineTo(14.3511f, 8.7633f)
-                lineTo(15.8042f, 13.2355f)
-                close()
-            }
+val BezierIcons.Soccerball: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _soccerball ?: ImageVector.Builder(
+                    name = "Soccerball",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(15.8042f, 13.2355f)
+                    lineTo(12.0f, 15.9994f)
+                    lineTo(8.19577f, 13.2355f)
+                    lineTo(9.64886f, 8.76333f)
+                    lineTo(14.3511f, 8.76333f)
+                    lineTo(15.8042f, 13.2355f)
+                    close()
+                }
 
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0005f, 21.9997f)
-                curveTo(9.4476f, 21.9997f, 7.1181f, 21.0431f, 5.351f, 19.4687f)
-                curveTo(4.7058f, 18.894f, 4.1356f, 18.237f, 3.6567f, 17.5141f)
-                curveTo(2.7132f, 16.0892f, 2.1249f, 14.4083f, 2.0181f, 12.5982f)
-                curveTo(2.0064f, 12.4002f, 2.0f, 12.2003f, 2.0f, 11.9994f)
-                curveTo(2.0f, 11.3095f, 2.0699f, 10.6358f, 2.2029f, 9.9852f)
-                curveTo(2.3374f, 9.3274f, 2.537f, 8.6936f, 2.7938f, 8.0898f)
-                curveTo(3.1316f, 7.2952f, 3.5686f, 6.5534f, 4.0904f, 5.88f)
-                curveTo(5.2273f, 4.4128f, 6.7642f, 3.2704f, 8.5366f, 2.6159f)
-                curveTo(9.3316f, 2.3224f, 10.1744f, 2.1265f, 11.0498f, 2.044f)
-                curveTo(11.3628f, 2.0144f, 11.6798f, 1.9997f, 12.0005f, 1.9997f)
-                curveTo(12.3209f, 1.9997f, 12.6377f, 2.0148f, 12.9504f, 2.0442f)
-                curveTo(13.8255f, 2.1267f, 14.6678f, 2.3217f, 15.4626f, 2.6151f)
-                curveTo(19.2791f, 4.0236f, 22.0005f, 7.6939f, 22.0005f, 11.9997f)
-                curveTo(22.0005f, 17.5225f, 17.5233f, 21.9997f, 12.0005f, 21.9997f)
-                close()
-                moveTo(6.2937f, 13.9727f)
-                lineTo(4.0046f, 11.7414f)
-                curveTo(4.0512f, 10.2717f, 4.4942f, 8.902f, 5.2303f, 7.7357f)
-                lineTo(8.4733f, 7.2645f)
-                lineTo(9.9542f, 4.2638f)
-                curveTo(10.6074f, 4.0915f, 11.2932f, 3.9997f, 12.0005f, 3.9997f)
-                curveTo(12.7074f, 3.9997f, 13.3928f, 4.0914f, 14.0456f, 4.2635f)
-                lineTo(15.5267f, 7.2645f)
-                lineTo(18.7708f, 7.7359f)
-                curveTo(19.5066f, 8.9019f, 19.9496f, 10.2712f, 19.9964f, 11.7405f)
-                lineTo(17.7063f, 13.9727f)
-                lineTo(18.2291f, 17.0206f)
-                curveTo(17.3133f, 18.1552f, 16.0937f, 19.0345f, 14.694f, 19.5349f)
-                lineTo(12.0f, 18.1186f)
-                lineTo(9.3064f, 19.5347f)
-                curveTo(7.9065f, 19.0341f, 6.6869f, 18.1545f, 5.7711f, 17.0195f)
-                lineTo(6.2937f, 13.9727f)
-                close()
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.0005f, 21.9997f)
+                    curveTo(9.4476f, 21.9997f, 7.11814f, 21.0431f, 5.35102f, 19.4687f)
+                    curveTo(4.70582f, 18.894f, 4.13555f, 18.237f, 3.65675f, 17.5141f)
+                    curveTo(2.71321f, 16.0892f, 2.12495f, 14.4083f, 2.01811f, 12.5982f)
+                    curveTo(2.00643f, 12.4002f, 2.0f, 12.2003f, 2.0f, 11.9994f)
+                    curveTo(2.0f, 11.3095f, 2.06987f, 10.6358f, 2.20292f, 9.98522f)
+                    curveTo(2.33743f, 9.32743f, 2.53699f, 8.69362f, 2.79376f, 8.08978f)
+                    curveTo(3.13158f, 7.29521f, 3.56859f, 6.55342f, 4.09037f, 5.87998f)
+                    curveTo(5.22728f, 4.41278f, 6.76422f, 3.27036f, 8.53664f, 2.61588f)
+                    curveTo(9.33162f, 2.3224f, 10.1744f, 2.12646f, 11.0498f, 2.04395f)
+                    curveTo(11.3628f, 2.01443f, 11.6798f, 1.99969f, 12.0005f, 1.99969f)
+                    curveTo(12.3209f, 1.99969f, 12.6377f, 2.01476f, 12.9504f, 2.04422f)
+                    curveTo(13.8255f, 2.12671f, 14.6678f, 2.32174f, 15.4626f, 2.61513f)
+                    curveTo(19.2791f, 4.02364f, 22.0005f, 7.69394f, 22.0005f, 11.9997f)
+                    curveTo(22.0005f, 17.5225f, 17.5233f, 21.9997f, 12.0005f, 21.9997f)
+                    close()
+                    moveTo(6.29366f, 13.9727f)
+                    lineTo(4.00459f, 11.7414f)
+                    curveTo(4.05121f, 10.2717f, 4.49425f, 8.90199f, 5.23033f, 7.73573f)
+                    lineTo(8.47329f, 7.2645f)
+                    lineTo(9.95423f, 4.26379f)
+                    curveTo(10.6074f, 4.09148f, 11.2932f, 3.99969f, 12.0005f, 3.99969f)
+                    curveTo(12.7074f, 3.99969f, 13.3928f, 4.09137f, 14.0456f, 4.26348f)
+                    lineTo(15.5267f, 7.2645f)
+                    lineTo(18.7708f, 7.73589f)
+                    curveTo(19.5066f, 8.90186f, 19.9496f, 10.2712f, 19.9964f, 11.7405f)
+                    lineTo(17.7063f, 13.9727f)
+                    lineTo(18.2291f, 17.0206f)
+                    curveTo(17.3133f, 18.1552f, 16.0937f, 19.0345f, 14.694f, 19.5349f)
+                    lineTo(12.0f, 18.1186f)
+                    lineTo(9.30638f, 19.5347f)
+                    curveTo(7.9065f, 19.0341f, 6.68686f, 18.1545f, 5.77109f, 17.0195f)
+                    lineTo(6.29366f, 13.9727f)
+                    close()
+                }
+            }.build().also {
+                _soccerball = it
             }
-        }.build().also {
-            _soccerball = it
-        }
     }
+
 
 private var _soccerball: ImageVector? = null
 
@@ -91,7 +94,7 @@ private var _soccerball: ImageVector? = null
 private fun SoccerballIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Soccerball,
+            imageVector = BezierIcons.Soccerball.imageVector,
             contentDescription = null,
     )
 }

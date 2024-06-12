@@ -9,58 +9,60 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Lightning: ImageVector
-    get() {
-        return _lightning ?: ImageVector.Builder(
-                name = "Lightning",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(6.526f, 12.5372f)
-                lineTo(11.001f, 13.5732f)
-                lineTo(9.174f, 19.7852f)
-                lineTo(17.474f, 11.4622f)
-                lineTo(12.999f, 10.4262f)
-                lineTo(14.825f, 4.2142f)
-                lineTo(6.526f, 12.5372f)
-                close()
-                moveTo(8.146f, 23.0362f)
-                curveTo(7.883f, 23.0362f, 7.618f, 22.9652f, 7.376f, 22.8212f)
-                curveTo(6.776f, 22.4662f, 6.505f, 21.7772f, 6.701f, 21.1082f)
-                lineTo(8.484f, 15.0432f)
-                lineTo(5.198f, 14.2832f)
-                curveTo(4.668f, 14.1602f, 4.245f, 13.7592f, 4.095f, 13.2362f)
-                curveTo(3.944f, 12.7122f, 4.089f, 12.1482f, 4.474f, 11.7622f)
-                lineTo(14.798f, 1.4102f)
-                curveTo(15.289f, 0.9162f, 16.024f, 0.8232f, 16.624f, 1.1782f)
-                curveTo(17.224f, 1.5342f, 17.496f, 2.2222f, 17.299f, 2.8912f)
-                lineTo(15.515f, 8.9562f)
-                lineTo(18.802f, 9.7172f)
-                curveTo(19.332f, 9.8402f, 19.755f, 10.2412f, 19.905f, 10.7652f)
-                curveTo(20.055f, 11.2882f, 19.91f, 11.8522f, 19.525f, 12.2382f)
-                lineTo(9.202f, 22.5902f)
-                curveTo(8.909f, 22.8842f, 8.53f, 23.0362f, 8.146f, 23.0362f)
-                close()
+val BezierIcons.Lightning: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _lightning ?: ImageVector.Builder(
+                    name = "Lightning",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(6.526f, 12.5372f)
+                    lineTo(11.001f, 13.5732f)
+                    lineTo(9.174f, 19.7852f)
+                    lineTo(17.474f, 11.4622f)
+                    lineTo(12.999f, 10.4262f)
+                    lineTo(14.825f, 4.21423f)
+                    lineTo(6.526f, 12.5372f)
+                    close()
+                    moveTo(8.14599f, 23.0362f)
+                    curveTo(7.88299f, 23.0362f, 7.61799f, 22.9652f, 7.37599f, 22.8212f)
+                    curveTo(6.77599f, 22.4662f, 6.50499f, 21.7772f, 6.70099f, 21.1082f)
+                    lineTo(8.48399f, 15.0432f)
+                    lineTo(5.19799f, 14.2832f)
+                    curveTo(4.66799f, 14.1602f, 4.24499f, 13.7592f, 4.09499f, 13.2362f)
+                    curveTo(3.94399f, 12.7122f, 4.08899f, 12.1482f, 4.47399f, 11.7622f)
+                    lineTo(14.798f, 1.41023f)
+                    curveTo(15.289f, 0.916231f, 16.024f, 0.823231f, 16.624f, 1.17823f)
+                    curveTo(17.224f, 1.53423f, 17.496f, 2.22223f, 17.299f, 2.89123f)
+                    lineTo(15.515f, 8.95623f)
+                    lineTo(18.802f, 9.71723f)
+                    curveTo(19.332f, 9.84023f, 19.755f, 10.2412f, 19.905f, 10.7652f)
+                    curveTo(20.055f, 11.2882f, 19.91f, 11.8522f, 19.525f, 12.2382f)
+                    lineTo(9.20199f, 22.5902f)
+                    curveTo(8.90899f, 22.8842f, 8.52999f, 23.0362f, 8.14599f, 23.0362f)
+                    close()
+                }
+            }.build().also {
+                _lightning = it
             }
-        }.build().also {
-            _lightning = it
-        }
     }
+
 
 private var _lightning: ImageVector? = null
 
@@ -69,7 +71,7 @@ private var _lightning: ImageVector? = null
 private fun LightningIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Lightning,
+            imageVector = BezierIcons.Lightning.imageVector,
             contentDescription = null,
     )
 }

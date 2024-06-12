@@ -9,51 +9,53 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ErrorFilled: ImageVector
-    get() {
-        return _errorFilled ?: ImageVector.Builder(
-                name = "ErrorFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(11.9997f, 2.0001f)
-                curveTo(6.4857f, 2.0001f, 1.9997f, 6.4861f, 1.9997f, 12.0001f)
-                curveTo(1.9997f, 17.5141f, 6.4857f, 22.0001f, 11.9997f, 22.0001f)
-                curveTo(17.5147f, 22.0001f, 21.9997f, 17.5141f, 21.9997f, 12.0001f)
-                curveTo(21.9997f, 6.4861f, 17.5147f, 2.0001f, 11.9997f, 2.0001f)
-                close()
-                moveTo(11.9333f, 15.5953f)
-                curveTo(11.2033f, 15.5953f, 10.6113f, 16.1873f, 10.6113f, 16.9183f)
-                curveTo(10.6113f, 17.6483f, 11.2033f, 18.2403f, 11.9333f, 18.2403f)
-                curveTo(12.6633f, 18.2403f, 13.2563f, 17.6483f, 13.2563f, 16.9183f)
-                curveTo(13.2563f, 16.1873f, 12.6633f, 15.5953f, 11.9333f, 15.5953f)
-                close()
-                moveTo(13.1473f, 5.9799f)
-                lineTo(13.0143f, 13.9869f)
-                lineTo(10.8523f, 13.9869f)
-                lineTo(10.7203f, 5.9799f)
-                lineTo(13.1473f, 5.9799f)
-                close()
+val BezierIcons.ErrorFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _errorFilled ?: ImageVector.Builder(
+                    name = "ErrorFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(11.9997f, 2.00011f)
+                    curveTo(6.48569f, 2.00011f, 1.99969f, 6.48611f, 1.99969f, 12.0001f)
+                    curveTo(1.99969f, 17.5141f, 6.48569f, 22.0001f, 11.9997f, 22.0001f)
+                    curveTo(17.5147f, 22.0001f, 21.9997f, 17.5141f, 21.9997f, 12.0001f)
+                    curveTo(21.9997f, 6.48611f, 17.5147f, 2.00011f, 11.9997f, 2.00011f)
+                    close()
+                    moveTo(11.9333f, 15.5953f)
+                    curveTo(11.2033f, 15.5953f, 10.6113f, 16.1873f, 10.6113f, 16.9183f)
+                    curveTo(10.6113f, 17.6483f, 11.2033f, 18.2403f, 11.9333f, 18.2403f)
+                    curveTo(12.6633f, 18.2403f, 13.2563f, 17.6483f, 13.2563f, 16.9183f)
+                    curveTo(13.2563f, 16.1873f, 12.6633f, 15.5953f, 11.9333f, 15.5953f)
+                    close()
+                    moveTo(13.1473f, 5.9799f)
+                    lineTo(13.0143f, 13.9869f)
+                    lineTo(10.8523f, 13.9869f)
+                    lineTo(10.7203f, 5.9799f)
+                    lineTo(13.1473f, 5.9799f)
+                    close()
+                }
+            }.build().also {
+                _errorFilled = it
             }
-        }.build().also {
-            _errorFilled = it
-        }
     }
+
 
 private var _errorFilled: ImageVector? = null
 
@@ -62,7 +64,7 @@ private var _errorFilled: ImageVector? = null
 private fun ErrorFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ErrorFilled,
+            imageVector = BezierIcons.ErrorFilled.imageVector,
             contentDescription = null,
     )
 }

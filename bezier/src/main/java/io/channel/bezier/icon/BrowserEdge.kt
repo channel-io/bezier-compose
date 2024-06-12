@@ -9,72 +9,74 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.BrowserEdge: ImageVector
-    get() {
-        return _browserEdge ?: ImageVector.Builder(
-                name = "BrowserEdge",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(21.9745f, 9.8115f)
-                curveTo(21.5494f, 5.3186f, 17.1367f, 2.0f, 12.0076f, 2.0f)
-                curveTo(7.4374f, 2.0f, 3.5836f, 5.0637f, 2.3857f, 9.2491f)
-                curveTo(2.7821f, 8.7252f, 3.2083f, 8.3128f, 3.6058f, 7.9944f)
-                curveTo(5.2627f, 6.6669f, 7.5504f, 6.0664f, 9.5765f, 6.4272f)
-                curveTo(12.015f, 6.8615f, 14.1266f, 8.572f, 14.7116f, 10.5872f)
-                curveTo(15.065f, 11.8045f, 14.8235f, 12.978f, 14.0341f, 13.9527f)
-                curveTo(13.8417f, 14.1907f, 13.8925f, 14.5441f, 14.1428f, 14.7203f)
-                curveTo(15.9956f, 16.0248f, 20.0775f, 15.4338f, 21.453f, 12.7086f)
-                curveTo(21.9042f, 11.8158f, 22.0687f, 10.8075f, 21.9745f, 9.8115f)
-                close()
-                moveTo(7.1334f, 14.329f)
-                curveTo(7.3011f, 13.0591f, 7.9391f, 11.8457f, 8.9304f, 10.9122f)
-                curveTo(9.6517f, 10.2333f, 10.4986f, 9.7719f, 11.2909f, 9.6106f)
-                curveTo(11.5479f, 9.5339f, 11.8222f, 9.4965f, 12.1068f, 9.5075f)
-                curveTo(12.6992f, 9.5304f, 13.2425f, 9.7638f, 13.6619f, 10.1348f)
-                curveTo(13.3654f, 9.5629f, 12.9152f, 9.0175f, 12.3472f, 8.5532f)
-                curveTo(11.5158f, 7.8732f, 10.5089f, 7.4128f, 9.4349f, 7.2218f)
-                curveTo(8.0213f, 6.9698f, 5.8801f, 7.2063f, 4.1103f, 8.6242f)
-                curveTo(3.1373f, 9.4037f, 2.4372f, 10.4307f, 2.0351f, 11.6536f)
-                curveTo(2.0139f, 11.7179f, 2.0022f, 11.7853f, 2.0012f, 11.8531f)
-                lineTo(2.0012f, 11.8542f)
-                curveTo(1.9182f, 17.3758f, 6.4478f, 21.9951f, 11.9701f, 22.0152f)
-                curveTo(12.0686f, 22.0152f, 12.1664f, 22.0141f, 12.2642f, 22.0117f)
-                curveTo(10.8319f, 21.6551f, 9.8247f, 20.9712f, 9.1461f, 20.316f)
-                curveTo(7.5895f, 18.8127f, 6.8372f, 16.5744f, 7.1334f, 14.329f)
-                close()
-                moveTo(9.5057f, 12.0077f)
-                curveTo(9.5057f, 15.9865f, 15.1152f, 19.4983f, 20.042f, 16.8787f)
-                curveTo(20.3396f, 16.7209f, 20.6542f, 17.0594f, 20.4745f, 17.344f)
-                curveTo(19.7977f, 18.4158f, 18.9228f, 19.35f, 17.9018f, 20.0953f)
-                curveTo(16.1486f, 21.3758f, 13.8842f, 21.7645f, 11.8375f, 21.0393f)
-                curveTo(10.8928f, 20.7046f, 10.2001f, 20.2121f, 9.7069f, 19.7359f)
-                curveTo(8.3332f, 18.4091f, 7.6705f, 16.4278f, 7.9336f, 14.4345f)
-                curveTo(8.0765f, 13.3486f, 8.6273f, 12.3064f, 9.4838f, 11.5f)
-                curveTo(9.5097f, 11.4756f, 9.5361f, 11.452f, 9.5623f, 11.4284f)
-                curveTo(9.5672f, 11.424f, 9.5721f, 11.4197f, 9.577f, 11.4153f)
-                curveTo(9.5311f, 11.6052f, 9.5057f, 11.8036f, 9.5057f, 12.0077f)
-                close()
+val BezierIcons.BrowserEdge: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _browserEdge ?: ImageVector.Builder(
+                    name = "BrowserEdge",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(21.9745f, 9.81151f)
+                    curveTo(21.5494f, 5.31864f, 17.1367f, 2.0f, 12.0076f, 2.0f)
+                    curveTo(7.43741f, 2.0f, 3.58356f, 5.06374f, 2.38567f, 9.24911f)
+                    curveTo(2.78214f, 8.72518f, 3.20827f, 8.31283f, 3.6058f, 7.99438f)
+                    curveTo(5.26265f, 6.66692f, 7.55039f, 6.06639f, 9.57652f, 6.4272f)
+                    curveTo(12.015f, 6.86145f, 14.1266f, 8.57196f, 14.7116f, 10.5872f)
+                    curveTo(15.065f, 11.8045f, 14.8235f, 12.978f, 14.0341f, 13.9527f)
+                    curveTo(13.8417f, 14.1907f, 13.8925f, 14.5441f, 14.1428f, 14.7203f)
+                    curveTo(15.9956f, 16.0248f, 20.0775f, 15.4338f, 21.453f, 12.7086f)
+                    curveTo(21.9042f, 11.8158f, 22.0687f, 10.8075f, 21.9745f, 9.81151f)
+                    close()
+                    moveTo(7.13341f, 14.329f)
+                    curveTo(7.3011f, 13.0591f, 7.93906f, 11.8457f, 8.93041f, 10.9122f)
+                    curveTo(9.65169f, 10.2333f, 10.4986f, 9.77191f, 11.2909f, 9.61056f)
+                    curveTo(11.5479f, 9.53395f, 11.8222f, 9.49653f, 12.1068f, 9.50747f)
+                    curveTo(12.6992f, 9.53042f, 13.2425f, 9.76379f, 13.6619f, 10.1348f)
+                    curveTo(13.3654f, 9.5629f, 12.9152f, 9.01745f, 12.3472f, 8.55319f)
+                    curveTo(11.5158f, 7.87322f, 10.5089f, 7.41285f, 9.43492f, 7.22185f)
+                    curveTo(8.02132f, 6.96978f, 5.88009f, 7.20632f, 4.11027f, 8.62415f)
+                    curveTo(3.13727f, 9.40368f, 2.43718f, 10.4307f, 2.03506f, 11.6536f)
+                    curveTo(2.01388f, 11.7179f, 2.00223f, 11.7853f, 2.00117f, 11.8531f)
+                    lineTo(2.00117f, 11.8542f)
+                    curveTo(1.9182f, 17.3758f, 6.44779f, 21.9951f, 11.9701f, 22.0152f)
+                    curveTo(12.0686f, 22.0152f, 12.1664f, 22.0141f, 12.2642f, 22.0117f)
+                    curveTo(10.8319f, 21.6551f, 9.82468f, 20.9712f, 9.14612f, 20.316f)
+                    curveTo(7.58954f, 18.8127f, 6.8372f, 16.5744f, 7.13341f, 14.329f)
+                    close()
+                    moveTo(9.50567f, 12.0077f)
+                    curveTo(9.50567f, 15.9865f, 15.1152f, 19.4983f, 20.042f, 16.8787f)
+                    curveTo(20.3396f, 16.7209f, 20.6542f, 17.0594f, 20.4745f, 17.344f)
+                    curveTo(19.7977f, 18.4158f, 18.9228f, 19.35f, 17.9018f, 20.0953f)
+                    curveTo(16.1486f, 21.3758f, 13.8842f, 21.7645f, 11.8375f, 21.0393f)
+                    curveTo(10.8928f, 20.7046f, 10.2001f, 20.2121f, 9.70691f, 19.7359f)
+                    curveTo(8.33321f, 18.4091f, 7.67054f, 16.4278f, 7.93356f, 14.4345f)
+                    curveTo(8.07654f, 13.3486f, 8.62729f, 12.3064f, 9.48379f, 11.5f)
+                    curveTo(9.50968f, 11.4756f, 9.53607f, 11.452f, 9.56234f, 11.4284f)
+                    curveTo(9.56723f, 11.424f, 9.57211f, 11.4197f, 9.57699f, 11.4153f)
+                    curveTo(9.53109f, 11.6052f, 9.50567f, 11.8036f, 9.50567f, 12.0077f)
+                    close()
+                }
+            }.build().also {
+                _browserEdge = it
             }
-        }.build().also {
-            _browserEdge = it
-        }
     }
+
 
 private var _browserEdge: ImageVector? = null
 
@@ -83,7 +85,7 @@ private var _browserEdge: ImageVector? = null
 private fun BrowserEdgeIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.BrowserEdge,
+            imageVector = BezierIcons.BrowserEdge.imageVector,
             contentDescription = null,
     )
 }

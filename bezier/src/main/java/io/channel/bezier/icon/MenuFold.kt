@@ -15,49 +15,53 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.MenuFold: ImageVector
-    get() {
-        return _menuFold ?: ImageVector.Builder(
-                name = "MenuFold",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(3.016f, 5.0001f)
-                curveTo(3.016f, 5.5524f, 3.4637f, 6.0001f, 4.016f, 6.0001f)
-                lineTo(20.016f, 6.0001f)
-                curveTo(20.5683f, 6.0001f, 21.016f, 5.5524f, 21.016f, 5.0001f)
-                curveTo(21.016f, 4.4478f, 20.5683f, 4.0001f, 20.016f, 4.0001f)
-                lineTo(4.016f, 4.0001f)
-                curveTo(3.4637f, 4.0001f, 3.016f, 4.4478f, 3.016f, 5.0001f)
-                close()
-                moveTo(3.0f, 12.0001f)
-                curveTo(3.0f, 12.5524f, 3.4477f, 13.0001f, 4.0f, 13.0001f)
-                lineTo(11.0f, 13.0001f)
-                curveTo(11.5523f, 13.0001f, 12.0f, 12.5524f, 12.0f, 12.0001f)
-                curveTo(12.0f, 11.4478f, 11.5523f, 11.0001f, 11.0f, 11.0001f)
-                lineTo(4.0f, 11.0001f)
-                curveTo(3.4477f, 11.0001f, 3.0f, 11.4478f, 3.0f, 12.0001f)
-                close()
-                moveTo(12.016f, 19.0001f)
-                curveTo(12.016f, 19.5524f, 11.5683f, 20.0001f, 11.016f, 20.0001f)
-                lineTo(4.016f, 20.0001f)
-                curveTo(3.4637f, 20.0001f, 3.016f, 19.5524f, 3.016f, 19.0001f)
-                curveTo(3.016f, 18.4478f, 3.4637f, 18.0001f, 4.016f, 18.0001f)
-                lineTo(11.016f, 18.0001f)
-                curveTo(11.5683f, 18.0001f, 12.016f, 18.4478f, 12.016f, 19.0001f)
-                close()
+val BezierIcons.MenuFold: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _menuFold ?: ImageVector.Builder(
+                    name = "MenuFold",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(3.016f, 5.00009f)
+                    curveTo(3.016f, 5.55238f, 3.46372f, 6.00009f, 4.016f, 6.00009f)
+                    lineTo(20.016f, 6.00009f)
+                    curveTo(20.5683f, 6.00009f, 21.016f, 5.55238f, 21.016f, 5.00009f)
+                    curveTo(21.016f, 4.44781f, 20.5683f, 4.00009f, 20.016f, 4.00009f)
+                    lineTo(4.016f, 4.00009f)
+                    curveTo(3.46372f, 4.00009f, 3.016f, 4.44781f, 3.016f, 5.00009f)
+                    close()
+                    moveTo(3.0f, 12.0001f)
+                    curveTo(3.0f, 12.5524f, 3.44772f, 13.0001f, 4.0f, 13.0001f)
+                    lineTo(11.0f, 13.0001f)
+                    curveTo(11.5523f, 13.0001f, 12.0f, 12.5524f, 12.0f, 12.0001f)
+                    curveTo(12.0f, 11.4478f, 11.5523f, 11.0001f, 11.0f, 11.0001f)
+                    lineTo(4.0f, 11.0001f)
+                    curveTo(3.44772f, 11.0001f, 3.0f, 11.4478f, 3.0f, 12.0001f)
+                    close()
+                    moveTo(12.016f, 19.0001f)
+                    curveTo(12.016f, 19.5524f, 11.5683f, 20.0001f, 11.016f, 20.0001f)
+                    lineTo(4.01599f, 20.0001f)
+                    curveTo(3.46371f, 20.0001f, 3.01599f, 19.5524f, 3.01599f, 19.0001f)
+                    curveTo(3.01599f, 18.4478f, 3.46371f, 18.0001f, 4.01599f, 18.0001f)
+                    lineTo(11.016f, 18.0001f)
+                    curveTo(11.5683f, 18.0001f, 12.016f, 18.4478f, 12.016f, 19.0001f)
+                    close()
+                }
+            }.build().also {
+                _menuFold = it
             }
-        }.build().also {
-            _menuFold = it
-        }
     }
+
 
 private var _menuFold: ImageVector? = null
 
@@ -66,7 +70,7 @@ private var _menuFold: ImageVector? = null
 private fun MenuFoldIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.MenuFold,
+            imageVector = BezierIcons.MenuFold.imageVector,
             contentDescription = null,
     )
 }

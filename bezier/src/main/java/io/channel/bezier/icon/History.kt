@@ -9,62 +9,64 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.History: ImageVector
-    get() {
-        return io.channel.bezier.icon._history ?: ImageVector.Builder(
-                name = "History",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(6.3853f, 6.3009f)
-                curveTo(7.8731f, 4.8358f, 9.8696f, 3.9998f, 11.9999f, 3.9998f)
-                curveTo(16.4176f, 3.9998f, 19.9999f, 7.5821f, 19.9999f, 11.9998f)
-                curveTo(19.9999f, 16.4182f, 16.418f, 19.9998f, 11.9999f, 19.9998f)
-                curveTo(7.5818f, 19.9998f, 3.9999f, 16.4182f, 3.9999f, 11.9998f)
-                lineTo(1.9999f, 11.9998f)
-                curveTo(1.9999f, 17.5228f, 6.4773f, 21.9998f, 11.9999f, 21.9998f)
-                curveTo(17.5225f, 21.9998f, 21.9999f, 17.5228f, 21.9999f, 11.9998f)
-                curveTo(21.9999f, 6.4775f, 17.5222f, 1.9998f, 11.9999f, 1.9998f)
-                curveTo(9.3336f, 1.9998f, 6.8303f, 3.0503f, 4.9712f, 4.8865f)
-                lineTo(2.8542f, 2.7691f)
-                curveTo(2.5392f, 2.4551f, 2.0002f, 2.6771f, 2.0002f, 3.1231f)
-                lineTo(2.0002f, 8.7501f)
-                curveTo(2.0002f, 9.0261f, 2.2242f, 9.2501f, 2.5002f, 9.2501f)
-                lineTo(8.1272f, 9.2501f)
-                curveTo(8.5722f, 9.2501f, 8.7952f, 8.7111f, 8.4802f, 8.3961f)
-                lineTo(6.3853f, 6.3009f)
-                close()
-                moveTo(13.0002f, 7.0001f)
-                curveTo(13.0002f, 6.4478f, 12.5525f, 6.0001f, 12.0002f, 6.0001f)
-                curveTo(11.4479f, 6.0001f, 11.0002f, 6.4478f, 11.0002f, 7.0001f)
-                lineTo(11.0002f, 11.9271f)
-                curveTo(11.0002f, 12.3024f, 11.2103f, 12.6462f, 11.5444f, 12.8172f)
-                lineTo(14.7283f, 14.4475f)
-                curveTo(15.2199f, 14.6992f, 15.8225f, 14.5047f, 16.0742f, 14.0131f)
-                curveTo(16.3259f, 13.5215f, 16.1314f, 12.919f, 15.6398f, 12.6672f)
-                lineTo(13.0002f, 11.3157f)
-                lineTo(13.0002f, 7.0001f)
-                close()
+val BezierIcons.History: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _history ?: ImageVector.Builder(
+                    name = "History",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(6.38534f, 6.30089f)
+                    curveTo(7.8731f, 4.83583f, 9.86958f, 3.9998f, 11.9999f, 3.9998f)
+                    curveTo(16.4176f, 3.9998f, 19.9999f, 7.58209f, 19.9999f, 11.9998f)
+                    curveTo(19.9999f, 16.4182f, 16.418f, 19.9998f, 11.9999f, 19.9998f)
+                    curveTo(7.5818f, 19.9998f, 3.99988f, 16.4182f, 3.99988f, 11.9998f)
+                    lineTo(1.99988f, 11.9998f)
+                    curveTo(1.99988f, 17.5228f, 6.47726f, 21.9998f, 11.9999f, 21.9998f)
+                    curveTo(17.5225f, 21.9998f, 21.9999f, 17.5228f, 21.9999f, 11.9998f)
+                    curveTo(21.9999f, 6.47752f, 17.5222f, 1.9998f, 11.9999f, 1.9998f)
+                    curveTo(9.3336f, 1.9998f, 6.83033f, 3.05027f, 4.97122f, 4.88652f)
+                    lineTo(2.85418f, 2.7691f)
+                    curveTo(2.53918f, 2.4551f, 2.00018f, 2.6771f, 2.00018f, 3.1231f)
+                    lineTo(2.00018f, 8.7501f)
+                    curveTo(2.00018f, 9.0261f, 2.22418f, 9.2501f, 2.50018f, 9.2501f)
+                    lineTo(8.12718f, 9.2501f)
+                    curveTo(8.57218f, 9.2501f, 8.79518f, 8.7111f, 8.48018f, 8.3961f)
+                    lineTo(6.38534f, 6.30089f)
+                    close()
+                    moveTo(13.0002f, 7.00011f)
+                    curveTo(13.0002f, 6.44782f, 12.5525f, 6.00011f, 12.0002f, 6.00011f)
+                    curveTo(11.4479f, 6.00011f, 11.0002f, 6.44782f, 11.0002f, 7.00011f)
+                    lineTo(11.0002f, 11.9271f)
+                    curveTo(11.0002f, 12.3024f, 11.2103f, 12.6462f, 11.5444f, 12.8172f)
+                    lineTo(14.7283f, 14.4475f)
+                    curveTo(15.2199f, 14.6992f, 15.8225f, 14.5047f, 16.0742f, 14.0131f)
+                    curveTo(16.3259f, 13.5215f, 16.1314f, 12.919f, 15.6398f, 12.6672f)
+                    lineTo(13.0002f, 11.3157f)
+                    lineTo(13.0002f, 7.00011f)
+                    close()
+                }
+            }.build().also {
+                _history = it
             }
-        }.build().also {
-            io.channel.bezier.icon._history = it
-        }
     }
+
 
 private var _history: ImageVector? = null
 
@@ -73,7 +75,7 @@ private var _history: ImageVector? = null
 private fun HistoryIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.History,
+            imageVector = BezierIcons.History.imageVector,
             contentDescription = null,
     )
 }

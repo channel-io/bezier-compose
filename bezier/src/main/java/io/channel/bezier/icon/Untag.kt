@@ -9,73 +9,78 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Untag: ImageVector
-    get() {
-        return _untag ?: ImageVector.Builder(
-                name = "Untag",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(10.0482f, 19.6064f)
-                lineTo(13.6202f, 16.0344f)
-                lineTo(15.0342f, 17.4484f)
-                lineTo(11.1082f, 21.3744f)
-                curveTo(10.8252f, 21.6574f, 10.4482f, 21.8134f, 10.0482f, 21.8134f)
-                lineTo(10.0472f, 21.8134f)
-                curveTo(9.6462f, 21.8134f, 9.2702f, 21.6574f, 8.9872f, 21.3744f)
-                lineTo(2.6262f, 15.0124f)
-                curveTo(2.0412f, 14.4274f, 2.0412f, 13.4764f, 2.6262f, 12.8914f)
-                lineTo(6.5519f, 8.9661f)
-                lineTo(7.9662f, 10.3804f)
-                lineTo(4.3942f, 13.9524f)
-                lineTo(10.0482f, 19.6064f)
-                close()
-                moveTo(10.3804f, 7.9662f)
-                lineTo(14.3462f, 4.0004f)
-                lineTo(20.0002f, 4.0004f)
-                lineTo(20.0002f, 9.6544f)
-                lineTo(16.0344f, 13.6202f)
-                lineTo(10.3804f, 7.9662f)
-                close()
-                moveTo(17.4484f, 15.0342f)
-                lineTo(22.0002f, 10.4824f)
-                lineTo(22.0002f, 2.0004f)
-                lineTo(13.5182f, 2.0004f)
-                lineTo(8.9662f, 6.552f)
-                lineTo(4.9142f, 2.5f)
-                curveTo(4.5237f, 2.1095f, 3.8905f, 2.1095f, 3.5f, 2.5f)
-                curveTo(3.1095f, 2.8905f, 3.1095f, 3.5237f, 3.5f, 3.9142f)
-                lineTo(20.0858f, 20.5f)
-                curveTo(20.4763f, 20.8905f, 21.1095f, 20.8905f, 21.5f, 20.5f)
-                curveTo(21.8905f, 20.1095f, 21.8905f, 19.4763f, 21.5f, 19.0858f)
-                lineTo(17.4484f, 15.0342f)
-                close()
-                moveTo(18.6149f, 7.0294f)
-                curveTo(18.6149f, 7.8584f, 17.9439f, 8.5294f, 17.1149f, 8.5294f)
-                curveTo(16.2869f, 8.5294f, 15.6149f, 7.8584f, 15.6149f, 7.0294f)
-                curveTo(15.6149f, 6.2004f, 16.2869f, 5.5294f, 17.1149f, 5.5294f)
-                curveTo(17.9439f, 5.5294f, 18.6149f, 6.2004f, 18.6149f, 7.0294f)
-                close()
+val BezierIcons.Untag: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _untag ?: ImageVector.Builder(
+                    name = "Untag",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(18.1421f, 15.7279f)
+                    lineTo(21.3848f, 12.4853f)
+                    curveTo(21.7598f, 12.1102f, 21.9706f, 11.6015f, 21.9706f, 11.0711f)
+                    lineTo(21.9706f, 4.0f)
+                    curveTo(21.9706f, 2.89543f, 21.0751f, 2.0f, 19.9706f, 2.0f)
+                    lineTo(12.8995f, 2.0f)
+                    curveTo(12.3691f, 2.0f, 11.8604f, 2.21071f, 11.4853f, 2.58579f)
+                    lineTo(8.24264f, 5.82843f)
+                    lineTo(4.91421f, 2.5f)
+                    curveTo(4.52369f, 2.10948f, 3.89053f, 2.10948f, 3.5f, 2.5f)
+                    curveTo(3.10948f, 2.89053f, 3.10948f, 3.52369f, 3.5f, 3.91421f)
+                    lineTo(20.0858f, 20.5f)
+                    curveTo(20.4763f, 20.8905f, 21.1095f, 20.8905f, 21.5f, 20.5f)
+                    curveTo(21.8905f, 20.1095f, 21.8905f, 19.4763f, 21.5f, 19.0858f)
+                    lineTo(18.1421f, 15.7279f)
+                    close()
+                    moveTo(16.7279f, 14.3137f)
+                    lineTo(19.9706f, 11.0711f)
+                    lineTo(19.9706f, 4.0f)
+                    lineTo(12.8995f, 4.0f)
+                    lineTo(9.65685f, 7.24264f)
+                    lineTo(16.7279f, 14.3137f)
+                    close()
+                    moveTo(5.0f, 11.8995f)
+                    lineTo(7.24264f, 9.65685f)
+                    lineTo(5.82843f, 8.24264f)
+                    lineTo(3.58578f, 10.4853f)
+                    curveTo(2.02369f, 12.0474f, 2.02369f, 14.58f, 3.58578f, 16.1421f)
+                    lineTo(7.82842f, 20.3848f)
+                    curveTo(9.39052f, 21.9469f, 11.9232f, 21.9469f, 13.4853f, 20.3848f)
+                    lineTo(15.7279f, 18.1421f)
+                    lineTo(14.3137f, 16.7279f)
+                    lineTo(12.0711f, 18.9706f)
+                    curveTo(11.29f, 19.7516f, 10.0237f, 19.7516f, 9.24264f, 18.9706f)
+                    lineTo(5.0f, 14.7279f)
+                    curveTo(4.21895f, 13.9469f, 4.21895f, 12.6805f, 5.0f, 11.8995f)
+                    close()
+                    moveTo(18.4853f, 7.48523f)
+                    curveTo(18.4853f, 8.59056f, 17.5906f, 9.48523f, 16.4853f, 9.48523f)
+                    curveTo(15.3813f, 9.48523f, 14.4853f, 8.59056f, 14.4853f, 7.48523f)
+                    curveTo(14.4853f, 6.3799f, 15.3813f, 5.48523f, 16.4853f, 5.48523f)
+                    curveTo(17.5906f, 5.48523f, 18.4853f, 6.3799f, 18.4853f, 7.48523f)
+                    close()
+                }
+            }.build().also {
+                _untag = it
             }
-        }.build().also {
-            _untag = it
-        }
     }
+
 
 private var _untag: ImageVector? = null
 
@@ -84,7 +89,7 @@ private var _untag: ImageVector? = null
 private fun UntagIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Untag,
+            imageVector = BezierIcons.Untag.imageVector,
             contentDescription = null,
     )
 }

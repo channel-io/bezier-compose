@@ -15,88 +15,92 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.LinkOff: ImageVector
-    get() {
-        return _linkOff ?: ImageVector.Builder(
-                name = "LinkOff",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(13.9626f, 14.111f)
-                curveTo(14.3531f, 14.5014f, 14.9861f, 14.5014f, 15.3766f, 14.111f)
-                lineTo(18.6176f, 10.87f)
-                curveTo(20.6716f, 8.816f, 20.6716f, 5.474f, 18.6176f, 3.42f)
-                curveTo(16.5636f, 1.365f, 13.2206f, 1.364f, 11.1666f, 3.42f)
-                lineTo(9.5459f, 5.04f)
-                curveTo(9.1553f, 5.4304f, 9.1552f, 6.0636f, 9.5457f, 6.4541f)
-                curveTo(9.9362f, 6.8445f, 10.5691f, 6.8446f, 10.9596f, 6.4543f)
-                lineTo(12.5806f, 4.834f)
-                curveTo(13.8156f, 3.599f, 15.9666f, 3.599f, 17.2036f, 4.834f)
-                curveTo(17.8206f, 5.451f, 18.1606f, 6.272f, 18.1606f, 7.145f)
-                curveTo(18.1606f, 8.018f, 17.8206f, 8.839f, 17.2036f, 9.456f)
-                lineTo(13.9626f, 12.697f)
-                curveTo(13.5721f, 13.0874f, 13.5721f, 13.7205f, 13.9626f, 14.111f)
-                close()
-                moveTo(5.303f, 20.5802f)
-                curveTo(6.33f, 21.6082f, 7.679f, 22.1212f, 9.029f, 22.1212f)
-                curveTo(10.378f, 22.1212f, 11.727f, 21.6082f, 12.754f, 20.5802f)
-                lineTo(14.3747f, 18.9602f)
-                curveTo(14.7653f, 18.5697f, 14.7654f, 17.9366f, 14.3749f, 17.546f)
-                curveTo(13.9845f, 17.1556f, 13.3515f, 17.1556f, 12.961f, 17.5459f)
-                lineTo(11.34f, 19.1662f)
-                curveTo(10.104f, 20.4002f, 7.952f, 20.4002f, 6.717f, 19.1662f)
-                curveTo(6.1f, 18.5492f, 5.76f, 17.7282f, 5.76f, 16.8552f)
-                curveTo(5.76f, 15.9822f, 6.1f, 15.1622f, 6.717f, 14.5442f)
-                lineTo(9.958f, 11.3032f)
-                curveTo(10.3485f, 10.9127f, 10.3485f, 10.2796f, 9.958f, 9.8892f)
-                curveTo(9.5675f, 9.4987f, 8.9345f, 9.4987f, 8.544f, 9.8892f)
-                lineTo(5.303f, 13.1302f)
-                curveTo(3.249f, 15.1842f, 3.249f, 18.5262f, 5.303f, 20.5802f)
-                close()
-                moveTo(18.0f, 15.0f)
-                curveTo(18.0f, 15.5523f, 18.4477f, 16.0f, 19.0f, 16.0f)
-                lineTo(21.0f, 16.0f)
-                curveTo(21.5523f, 16.0f, 22.0f, 15.5523f, 22.0f, 15.0f)
-                curveTo(22.0f, 14.4477f, 21.5523f, 14.0f, 21.0f, 14.0f)
-                lineTo(19.0f, 14.0f)
-                curveTo(18.4477f, 14.0f, 18.0f, 14.4477f, 18.0f, 15.0f)
-                close()
-                moveTo(18.7072f, 21.1212f)
-                curveTo(19.0977f, 21.5116f, 19.7307f, 21.5116f, 20.1212f, 21.1212f)
-                curveTo(20.5117f, 20.7307f, 20.5117f, 20.0976f, 20.1212f, 19.7072f)
-                lineTo(18.7072f, 18.2932f)
-                curveTo(18.3167f, 17.9027f, 17.6837f, 17.9027f, 17.2932f, 18.2932f)
-                curveTo(16.9027f, 18.6836f, 16.9027f, 19.3167f, 17.2932f, 19.7072f)
-                lineTo(18.7072f, 21.1212f)
-                close()
-                moveTo(6.7071f, 5.7073f)
-                curveTo(6.3167f, 6.0977f, 5.6837f, 6.0978f, 5.2932f, 5.7074f)
-                lineTo(3.8784f, 4.2932f)
-                curveTo(3.4879f, 3.9027f, 3.4878f, 3.2696f, 3.8783f, 2.8791f)
-                curveTo(4.2688f, 2.4886f, 4.9017f, 2.4886f, 5.2922f, 2.8789f)
-                lineTo(6.707f, 4.2932f)
-                curveTo(7.0975f, 4.6836f, 7.0976f, 5.3168f, 6.7071f, 5.7073f)
-                close()
-                moveTo(3.0f, 10.0f)
-                curveTo(2.4477f, 10.0f, 2.0f, 9.5523f, 2.0f, 9.0f)
-                curveTo(2.0f, 8.4477f, 2.4477f, 8.0f, 3.0f, 8.0f)
-                lineTo(5.0f, 8.0f)
-                curveTo(5.5523f, 8.0f, 6.0f, 8.4477f, 6.0f, 9.0f)
-                curveTo(6.0f, 9.5523f, 5.5523f, 10.0f, 5.0f, 10.0f)
-                lineTo(3.0f, 10.0f)
-                close()
+val BezierIcons.LinkOff: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _linkOff ?: ImageVector.Builder(
+                    name = "LinkOff",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(13.9626f, 14.111f)
+                    curveTo(14.3531f, 14.5015f, 14.9861f, 14.5015f, 15.3766f, 14.111f)
+                    lineTo(18.6176f, 10.87f)
+                    curveTo(20.6716f, 8.816f, 20.6716f, 5.474f, 18.6176f, 3.42f)
+                    curveTo(16.5636f, 1.365f, 13.2206f, 1.364f, 11.1666f, 3.42f)
+                    lineTo(9.5459f, 5.04f)
+                    curveTo(9.1553f, 5.43044f, 9.15523f, 6.06362f, 9.54575f, 6.45415f)
+                    curveTo(9.93616f, 6.84456f, 10.5691f, 6.84462f, 10.9596f, 6.4543f)
+                    lineTo(12.5806f, 4.834f)
+                    curveTo(13.8156f, 3.599f, 15.9666f, 3.599f, 17.2036f, 4.834f)
+                    curveTo(17.8206f, 5.451f, 18.1606f, 6.272f, 18.1606f, 7.145f)
+                    curveTo(18.1606f, 8.018f, 17.8206f, 8.839f, 17.2036f, 9.456f)
+                    lineTo(13.9626f, 12.697f)
+                    curveTo(13.5721f, 13.0875f, 13.5721f, 13.7205f, 13.9626f, 14.111f)
+                    close()
+                    moveTo(5.30301f, 20.5802f)
+                    curveTo(6.33001f, 21.6082f, 7.67901f, 22.1212f, 9.02901f, 22.1212f)
+                    curveTo(10.378f, 22.1212f, 11.727f, 21.6082f, 12.754f, 20.5802f)
+                    lineTo(14.3747f, 18.9602f)
+                    curveTo(14.7653f, 18.5698f, 14.7654f, 17.9366f, 14.3749f, 17.546f)
+                    curveTo(13.9845f, 17.1556f, 13.3515f, 17.1556f, 12.961f, 17.5459f)
+                    lineTo(11.34f, 19.1662f)
+                    curveTo(10.104f, 20.4002f, 7.95201f, 20.4002f, 6.71701f, 19.1662f)
+                    curveTo(6.10001f, 18.5492f, 5.76001f, 17.7282f, 5.76001f, 16.8552f)
+                    curveTo(5.76001f, 15.9822f, 6.10001f, 15.1622f, 6.71701f, 14.5442f)
+                    lineTo(9.95801f, 11.3032f)
+                    curveTo(10.3485f, 10.9127f, 10.3485f, 10.2797f, 9.95801f, 9.8892f)
+                    curveTo(9.56755f, 9.49873f, 8.93448f, 9.49873f, 8.54401f, 9.8892f)
+                    lineTo(5.30301f, 13.1302f)
+                    curveTo(3.24901f, 15.1842f, 3.24901f, 18.5262f, 5.30301f, 20.5802f)
+                    close()
+                    moveTo(18.0f, 15.0f)
+                    curveTo(18.0f, 15.5523f, 18.4477f, 16.0f, 19.0f, 16.0f)
+                    lineTo(21.0f, 16.0f)
+                    curveTo(21.5523f, 16.0f, 22.0f, 15.5523f, 22.0f, 15.0f)
+                    curveTo(22.0f, 14.4477f, 21.5523f, 14.0f, 21.0f, 14.0f)
+                    lineTo(19.0f, 14.0f)
+                    curveTo(18.4477f, 14.0f, 18.0f, 14.4477f, 18.0f, 15.0f)
+                    close()
+                    moveTo(18.7072f, 21.1212f)
+                    curveTo(19.0977f, 21.5117f, 19.7307f, 21.5117f, 20.1212f, 21.1212f)
+                    curveTo(20.5117f, 20.7307f, 20.5117f, 20.0977f, 20.1212f, 19.7072f)
+                    lineTo(18.7072f, 18.2932f)
+                    curveTo(18.3167f, 17.9027f, 17.6837f, 17.9027f, 17.2932f, 18.2932f)
+                    curveTo(16.9027f, 18.6837f, 16.9027f, 19.3167f, 17.2932f, 19.7072f)
+                    lineTo(18.7072f, 21.1212f)
+                    close()
+                    moveTo(6.70708f, 5.70732f)
+                    curveTo(6.31666f, 6.09774f, 5.68369f, 6.09779f, 5.2932f, 5.70745f)
+                    lineTo(3.87845f, 4.2932f)
+                    curveTo(3.48787f, 3.90275f, 3.48781f, 3.26958f, 3.87833f, 2.87907f)
+                    curveTo(4.26875f, 2.48865f, 4.90172f, 2.4886f, 5.2922f, 2.87895f)
+                    lineTo(6.70695f, 4.2932f)
+                    curveTo(7.09754f, 4.68364f, 7.09759f, 5.31681f, 6.70708f, 5.70732f)
+                    close()
+                    moveTo(3.0f, 10.0f)
+                    curveTo(2.44772f, 10.0f, 2.0f, 9.55228f, 2.0f, 9.0f)
+                    curveTo(2.0f, 8.44772f, 2.44772f, 8.0f, 3.0f, 8.0f)
+                    lineTo(5.0f, 8.0f)
+                    curveTo(5.55228f, 8.0f, 6.0f, 8.44772f, 6.0f, 9.0f)
+                    curveTo(6.0f, 9.55228f, 5.55228f, 10.0f, 5.0f, 10.0f)
+                    lineTo(3.0f, 10.0f)
+                    close()
+                }
+            }.build().also {
+                _linkOff = it
             }
-        }.build().also {
-            _linkOff = it
-        }
     }
+
 
 private var _linkOff: ImageVector? = null
 
@@ -105,7 +109,7 @@ private var _linkOff: ImageVector? = null
 private fun LinkOffIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.LinkOff,
+            imageVector = BezierIcons.LinkOff.imageVector,
             contentDescription = null,
     )
 }

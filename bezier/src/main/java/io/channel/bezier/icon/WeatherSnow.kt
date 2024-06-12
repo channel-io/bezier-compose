@@ -9,101 +9,103 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.WeatherSnow: ImageVector
-    get() {
-        return io.channel.bezier.icon._weatherSnow ?: ImageVector.Builder(
-                name = "WeatherSnow",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(20.3591f, 14.1036f)
-                lineTo(19.3591f, 12.3716f)
-                lineTo(17.0021f, 13.7326f)
-                lineTo(14.0001f, 11.9996f)
-                lineTo(17.0021f, 10.2676f)
-                lineTo(19.3591f, 11.6286f)
-                lineTo(20.3591f, 9.8966f)
-                lineTo(19.0021f, 9.1126f)
-                lineTo(21.1601f, 7.8666f)
-                lineTo(20.1601f, 6.1336f)
-                lineTo(18.0011f, 7.3796f)
-                lineTo(18.0011f, 5.8126f)
-                lineTo(16.0011f, 5.8126f)
-                lineTo(16.0011f, 8.5356f)
-                lineTo(13.0001f, 10.2676f)
-                lineTo(13.0001f, 6.8016f)
-                lineTo(15.3581f, 5.4416f)
-                lineTo(14.3581f, 3.7086f)
-                lineTo(13.0001f, 4.4936f)
-                lineTo(13.0001f, 1.9996f)
-                lineTo(11.0001f, 1.9996f)
-                lineTo(11.0001f, 4.4936f)
-                lineTo(9.6421f, 3.7086f)
-                lineTo(8.6421f, 5.4416f)
-                lineTo(11.0001f, 6.8016f)
-                lineTo(11.0001f, 10.2676f)
-                lineTo(7.9991f, 8.5356f)
-                lineTo(7.9991f, 5.8126f)
-                lineTo(5.9991f, 5.8126f)
-                lineTo(5.9991f, 7.3796f)
-                lineTo(3.8391f, 6.1336f)
-                lineTo(2.8391f, 7.8666f)
-                lineTo(4.9991f, 9.1126f)
-                lineTo(3.6411f, 9.8966f)
-                lineTo(4.6411f, 11.6286f)
-                lineTo(6.9981f, 10.2676f)
-                lineTo(10.0001f, 11.9996f)
-                lineTo(6.9981f, 13.7326f)
-                lineTo(4.6411f, 12.3716f)
-                lineTo(3.6411f, 14.1036f)
-                lineTo(4.9991f, 14.8876f)
-                lineTo(2.8391f, 16.1336f)
-                lineTo(3.8391f, 17.8666f)
-                lineTo(5.9991f, 16.6196f)
-                lineTo(5.9991f, 18.1876f)
-                lineTo(7.9991f, 18.1876f)
-                lineTo(7.9991f, 15.4646f)
-                lineTo(11.0001f, 13.7326f)
-                lineTo(11.0001f, 17.1986f)
-                lineTo(8.6421f, 18.5586f)
-                lineTo(9.6421f, 20.2906f)
-                lineTo(11.0001f, 19.5066f)
-                lineTo(11.0001f, 21.9996f)
-                lineTo(13.0001f, 21.9996f)
-                lineTo(13.0001f, 19.5066f)
-                lineTo(14.3581f, 20.2906f)
-                lineTo(15.3581f, 18.5586f)
-                lineTo(13.0001f, 17.1986f)
-                lineTo(13.0001f, 13.7326f)
-                lineTo(16.0011f, 15.4646f)
-                lineTo(16.0011f, 18.1876f)
-                lineTo(18.0011f, 18.1876f)
-                lineTo(18.0011f, 16.6196f)
-                lineTo(20.1601f, 17.8666f)
-                lineTo(21.1601f, 16.1336f)
-                lineTo(19.0021f, 14.8876f)
-                lineTo(20.3591f, 14.1036f)
-                close()
+val BezierIcons.WeatherSnow: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _weatherSnow ?: ImageVector.Builder(
+                    name = "WeatherSnow",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(20.3591f, 14.1036f)
+                    lineTo(19.3591f, 12.3716f)
+                    lineTo(17.0021f, 13.7326f)
+                    lineTo(14.0001f, 11.9996f)
+                    lineTo(17.0021f, 10.2676f)
+                    lineTo(19.3591f, 11.6286f)
+                    lineTo(20.3591f, 9.89663f)
+                    lineTo(19.0021f, 9.11263f)
+                    lineTo(21.1601f, 7.86663f)
+                    lineTo(20.1601f, 6.13363f)
+                    lineTo(18.0011f, 7.37963f)
+                    lineTo(18.0011f, 5.81263f)
+                    lineTo(16.0011f, 5.81263f)
+                    lineTo(16.0011f, 8.53563f)
+                    lineTo(13.0001f, 10.2676f)
+                    lineTo(13.0001f, 6.80163f)
+                    lineTo(15.3581f, 5.44163f)
+                    lineTo(14.3581f, 3.70863f)
+                    lineTo(13.0001f, 4.49363f)
+                    lineTo(13.0001f, 1.99963f)
+                    lineTo(11.0001f, 1.99963f)
+                    lineTo(11.0001f, 4.49363f)
+                    lineTo(9.64211f, 3.70863f)
+                    lineTo(8.64211f, 5.44163f)
+                    lineTo(11.0001f, 6.80163f)
+                    lineTo(11.0001f, 10.2676f)
+                    lineTo(7.99911f, 8.53563f)
+                    lineTo(7.99911f, 5.81263f)
+                    lineTo(5.99911f, 5.81263f)
+                    lineTo(5.99911f, 7.37963f)
+                    lineTo(3.83911f, 6.13363f)
+                    lineTo(2.83911f, 7.86663f)
+                    lineTo(4.99911f, 9.11263f)
+                    lineTo(3.64111f, 9.89663f)
+                    lineTo(4.64111f, 11.6286f)
+                    lineTo(6.99811f, 10.2676f)
+                    lineTo(10.0001f, 11.9996f)
+                    lineTo(6.99811f, 13.7326f)
+                    lineTo(4.64111f, 12.3716f)
+                    lineTo(3.64111f, 14.1036f)
+                    lineTo(4.99911f, 14.8876f)
+                    lineTo(2.83911f, 16.1336f)
+                    lineTo(3.83911f, 17.8666f)
+                    lineTo(5.99911f, 16.6196f)
+                    lineTo(5.99911f, 18.1876f)
+                    lineTo(7.99911f, 18.1876f)
+                    lineTo(7.99911f, 15.4646f)
+                    lineTo(11.0001f, 13.7326f)
+                    lineTo(11.0001f, 17.1986f)
+                    lineTo(8.64211f, 18.5586f)
+                    lineTo(9.64211f, 20.2906f)
+                    lineTo(11.0001f, 19.5066f)
+                    lineTo(11.0001f, 21.9996f)
+                    lineTo(13.0001f, 21.9996f)
+                    lineTo(13.0001f, 19.5066f)
+                    lineTo(14.3581f, 20.2906f)
+                    lineTo(15.3581f, 18.5586f)
+                    lineTo(13.0001f, 17.1986f)
+                    lineTo(13.0001f, 13.7326f)
+                    lineTo(16.0011f, 15.4646f)
+                    lineTo(16.0011f, 18.1876f)
+                    lineTo(18.0011f, 18.1876f)
+                    lineTo(18.0011f, 16.6196f)
+                    lineTo(20.1601f, 17.8666f)
+                    lineTo(21.1601f, 16.1336f)
+                    lineTo(19.0021f, 14.8876f)
+                    lineTo(20.3591f, 14.1036f)
+                    close()
+                }
+            }.build().also {
+                _weatherSnow = it
             }
-        }.build().also {
-            io.channel.bezier.icon._weatherSnow = it
-        }
     }
+
 
 private var _weatherSnow: ImageVector? = null
 
@@ -112,7 +114,7 @@ private var _weatherSnow: ImageVector? = null
 private fun WeatherSnowIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.WeatherSnow,
+            imageVector = BezierIcons.WeatherSnow.imageVector,
             contentDescription = null,
     )
 }

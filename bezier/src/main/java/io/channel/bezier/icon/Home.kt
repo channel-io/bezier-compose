@@ -9,64 +9,66 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Home: ImageVector
-    get() {
-        return _home ?: ImageVector.Builder(
-                name = "Home",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.6139f, 2.4775f)
-                curveTo(12.2528f, 2.1966f, 11.7472f, 2.1966f, 11.3861f, 2.4775f)
-                lineTo(3.7721f, 8.3995f)
-                curveTo(3.2849f, 8.7784f, 3.0f, 9.361f, 3.0f, 9.9782f)
-                lineTo(3.0f, 20.0f)
-                curveTo(3.0f, 20.5523f, 3.4477f, 21.0f, 4.0f, 21.0f)
-                lineTo(10.0f, 21.0f)
-                curveTo(10.5523f, 21.0f, 11.0f, 20.5523f, 11.0f, 20.0f)
-                lineTo(11.0f, 15.0f)
-                curveTo(11.0f, 14.4477f, 11.4477f, 14.0f, 12.0f, 14.0f)
-                curveTo(12.5523f, 14.0f, 13.0f, 14.4477f, 13.0f, 15.0f)
-                lineTo(13.0f, 20.0f)
-                curveTo(13.0f, 20.5523f, 13.4477f, 21.0f, 14.0f, 21.0f)
-                lineTo(20.0f, 21.0f)
-                curveTo(20.5523f, 21.0f, 21.0f, 20.5523f, 21.0f, 20.0f)
-                lineTo(21.0f, 9.9782f)
-                curveTo(21.0f, 9.361f, 20.7151f, 8.7784f, 20.2279f, 8.3995f)
-                lineTo(12.6139f, 2.4775f)
-                close()
-                moveTo(9.0f, 19.0f)
-                lineTo(9.0f, 15.0f)
-                curveTo(9.0f, 13.3431f, 10.3431f, 12.0f, 12.0f, 12.0f)
-                curveTo(13.6569f, 12.0f, 15.0f, 13.3431f, 15.0f, 15.0f)
-                lineTo(15.0f, 19.0f)
-                lineTo(19.0f, 19.0f)
-                lineTo(19.0f, 9.9782f)
-                lineTo(12.0f, 4.5337f)
-                lineTo(5.0f, 10.0f)
-                lineTo(5.0f, 19.0f)
-                lineTo(9.0f, 19.0f)
-                close()
+val BezierIcons.Home: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _home ?: ImageVector.Builder(
+                    name = "Home",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.6139f, 2.47749f)
+                    curveTo(12.2528f, 2.19663f, 11.7472f, 2.19663f, 11.3861f, 2.47749f)
+                    lineTo(3.77212f, 8.39945f)
+                    curveTo(3.28494f, 8.77836f, 3.0f, 9.36097f, 3.0f, 9.97815f)
+                    lineTo(3.0f, 20.0f)
+                    curveTo(3.0f, 20.5523f, 3.44772f, 21.0f, 4.0f, 21.0f)
+                    lineTo(10.0f, 21.0f)
+                    curveTo(10.5523f, 21.0f, 11.0f, 20.5523f, 11.0f, 20.0f)
+                    lineTo(11.0f, 15.0f)
+                    curveTo(11.0f, 14.4477f, 11.4477f, 14.0f, 12.0f, 14.0f)
+                    curveTo(12.5523f, 14.0f, 13.0f, 14.4477f, 13.0f, 15.0f)
+                    lineTo(13.0f, 20.0f)
+                    curveTo(13.0f, 20.5523f, 13.4477f, 21.0f, 14.0f, 21.0f)
+                    lineTo(20.0f, 21.0f)
+                    curveTo(20.5523f, 21.0f, 21.0f, 20.5523f, 21.0f, 20.0f)
+                    lineTo(21.0f, 9.97815f)
+                    curveTo(21.0f, 9.36097f, 20.7151f, 8.77836f, 20.2279f, 8.39945f)
+                    lineTo(12.6139f, 2.47749f)
+                    close()
+                    moveTo(9.0f, 19.0f)
+                    lineTo(9.0f, 15.0f)
+                    curveTo(9.0f, 13.3431f, 10.3431f, 12.0f, 12.0f, 12.0f)
+                    curveTo(13.6569f, 12.0f, 15.0f, 13.3431f, 15.0f, 15.0f)
+                    lineTo(15.0f, 19.0f)
+                    lineTo(19.0f, 19.0f)
+                    lineTo(19.0f, 9.97815f)
+                    lineTo(12.0f, 4.53371f)
+                    lineTo(5.0f, 10.0f)
+                    lineTo(5.0f, 19.0f)
+                    lineTo(9.0f, 19.0f)
+                    close()
+                }
+            }.build().also {
+                _home = it
             }
-        }.build().also {
-            _home = it
-        }
     }
+
 
 private var _home: ImageVector? = null
 
@@ -75,7 +77,7 @@ private var _home: ImageVector? = null
 private fun HomeIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Home,
+            imageVector = BezierIcons.Home.imageVector,
             contentDescription = null,
     )
 }

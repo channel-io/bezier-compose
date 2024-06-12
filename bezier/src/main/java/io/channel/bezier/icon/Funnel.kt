@@ -9,69 +9,71 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Funnel: ImageVector
-    get() {
-        return io.channel.bezier.icon._funnel ?: ImageVector.Builder(
-                name = "Funnel",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(20.0f, 2.0f)
-                curveTo(20.5523f, 2.0f, 21.0f, 2.4477f, 21.0f, 3.0f)
-                lineTo(21.0f, 5.1716f)
-                curveTo(21.0f, 5.702f, 20.7893f, 6.2107f, 20.4142f, 6.5858f)
-                lineTo(15.5858f, 11.4142f)
-                curveTo(15.2107f, 11.7893f, 15.0f, 12.298f, 15.0f, 12.8284f)
-                lineTo(15.0f, 19.382f)
-                curveTo(15.0f, 19.7607f, 14.786f, 20.107f, 14.4472f, 20.2764f)
-                lineTo(10.4472f, 22.2764f)
-                curveTo(9.9532f, 22.5234f, 9.3526f, 22.3232f, 9.1056f, 21.8292f)
-                curveTo(9.0361f, 21.6903f, 9.0f, 21.5372f, 9.0f, 21.382f)
-                lineTo(9.0f, 12.8284f)
-                curveTo(9.0f, 12.298f, 8.7893f, 11.7893f, 8.4142f, 11.4142f)
-                lineTo(3.5858f, 6.5858f)
-                curveTo(3.2107f, 6.2107f, 3.0f, 5.702f, 3.0f, 5.1716f)
-                lineTo(3.0f, 3.0f)
-                curveTo(3.0f, 2.4477f, 3.4477f, 2.0f, 4.0f, 2.0f)
-                lineTo(20.0f, 2.0f)
-                close()
-                moveTo(19.0f, 4.0f)
-                lineTo(5.0f, 4.0f)
-                lineTo(5.0f, 5.1716f)
-                lineTo(9.8284f, 10.0f)
-                curveTo(10.1247f, 10.2962f, 10.3697f, 10.6342f, 10.5577f, 11.0f)
-                lineTo(13.4423f, 11.0f)
-                curveTo(13.5963f, 10.7003f, 13.7886f, 10.4194f, 14.0159f, 10.1648f)
-                lineTo(14.1716f, 10.0f)
-                lineTo(19.0f, 5.1716f)
-                lineTo(19.0f, 4.0f)
-                close()
-                moveTo(13.0f, 13.0f)
-                lineTo(11.0f, 13.0f)
-                lineTo(11.0f, 19.763f)
-                lineTo(13.0f, 18.763f)
-                lineTo(13.0f, 13.0f)
-                close()
+val BezierIcons.Funnel: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _funnel ?: ImageVector.Builder(
+                    name = "Funnel",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(20.0f, 2.0f)
+                    curveTo(20.5523f, 2.0f, 21.0f, 2.44772f, 21.0f, 3.0f)
+                    lineTo(21.0f, 5.17157f)
+                    curveTo(21.0f, 5.70201f, 20.7893f, 6.21071f, 20.4142f, 6.58579f)
+                    lineTo(15.5858f, 11.4142f)
+                    curveTo(15.2107f, 11.7893f, 15.0f, 12.298f, 15.0f, 12.8284f)
+                    lineTo(15.0f, 19.382f)
+                    curveTo(15.0f, 19.7607f, 14.786f, 20.107f, 14.4472f, 20.2764f)
+                    lineTo(10.4472f, 22.2764f)
+                    curveTo(9.95324f, 22.5234f, 9.35256f, 22.3232f, 9.10557f, 21.8292f)
+                    curveTo(9.03615f, 21.6903f, 9.0f, 21.5372f, 9.0f, 21.382f)
+                    lineTo(9.0f, 12.8284f)
+                    curveTo(9.0f, 12.298f, 8.78929f, 11.7893f, 8.41421f, 11.4142f)
+                    lineTo(3.58579f, 6.58579f)
+                    curveTo(3.21071f, 6.21071f, 3.0f, 5.70201f, 3.0f, 5.17157f)
+                    lineTo(3.0f, 3.0f)
+                    curveTo(3.0f, 2.44772f, 3.44772f, 2.0f, 4.0f, 2.0f)
+                    lineTo(20.0f, 2.0f)
+                    close()
+                    moveTo(19.0f, 4.0f)
+                    lineTo(5.0f, 4.0f)
+                    lineTo(5.0f, 5.17157f)
+                    lineTo(9.82843f, 10.0f)
+                    curveTo(10.1247f, 10.2962f, 10.3697f, 10.6342f, 10.5577f, 11.0f)
+                    lineTo(13.4423f, 11.0f)
+                    curveTo(13.5963f, 10.7003f, 13.7886f, 10.4194f, 14.0159f, 10.1648f)
+                    lineTo(14.1716f, 10.0f)
+                    lineTo(19.0f, 5.17157f)
+                    lineTo(19.0f, 4.0f)
+                    close()
+                    moveTo(13.0f, 13.0f)
+                    lineTo(11.0f, 13.0f)
+                    lineTo(11.0f, 19.763f)
+                    lineTo(13.0f, 18.763f)
+                    lineTo(13.0f, 13.0f)
+                    close()
+                }
+            }.build().also {
+                _funnel = it
             }
-        }.build().also {
-            io.channel.bezier.icon._funnel = it
-        }
     }
+
 
 private var _funnel: ImageVector? = null
 
@@ -80,7 +82,7 @@ private var _funnel: ImageVector? = null
 private fun FunnelIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Funnel,
+            imageVector = BezierIcons.Funnel.imageVector,
             contentDescription = null,
     )
 }

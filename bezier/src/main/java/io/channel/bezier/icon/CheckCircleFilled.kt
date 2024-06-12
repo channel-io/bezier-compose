@@ -9,47 +9,52 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CheckCircleFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._checkCircleFilled ?: ImageVector.Builder(
-                name = "CheckCircleFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(10.8092f, 16.4044f)
-                lineTo(6.6552f, 12.4164f)
-                lineTo(8.0402f, 10.9734f)
-                lineTo(10.8242f, 13.6464f)
-                lineTo(16.4752f, 8.3374f)
-                lineTo(17.8442f, 9.7944f)
-                lineTo(10.8092f, 16.4044f)
-                close()
-                moveTo(12.0002f, 2.0004f)
-                curveTo(6.4862f, 2.0004f, 2.0002f, 6.4864f, 2.0002f, 12.0004f)
-                curveTo(2.0002f, 17.5134f, 6.4862f, 22.0004f, 12.0002f, 22.0004f)
-                curveTo(17.5142f, 22.0004f, 22.0002f, 17.5134f, 22.0002f, 12.0004f)
-                curveTo(22.0002f, 6.4864f, 17.5142f, 2.0004f, 12.0002f, 2.0004f)
-                close()
+val BezierIcons.CheckCircleFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _checkCircleFilled ?: ImageVector.Builder(
+                    name = "CheckCircleFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(10.4035f, 13.898f)
+                    lineTo(8.08406f, 11.6708f)
+                    curveTo(7.6856f, 11.2882f, 7.05239f, 11.3011f, 6.66987f, 11.6997f)
+                    curveTo(6.28747f, 12.0981f, 6.30037f, 12.731f, 6.69867f, 13.1135f)
+                    lineTo(9.68408f, 15.9805f)
+                    curveTo(10.0788f, 16.3596f, 10.7014f, 16.3629f, 11.1002f, 15.9881f)
+                    lineTo(17.2212f, 10.2355f)
+                    curveTo(17.6234f, 9.85746f, 17.6431f, 9.22487f, 17.2651f, 8.82254f)
+                    curveTo(16.887f, 8.42018f, 16.2544f, 8.40048f, 15.852f, 8.77854f)
+                    lineTo(10.4035f, 13.898f)
+                    close()
+                    moveTo(12.0002f, 2.0004f)
+                    curveTo(6.48624f, 2.0004f, 2.00024f, 6.4864f, 2.00024f, 12.0004f)
+                    curveTo(2.00024f, 17.5134f, 6.48624f, 22.0004f, 12.0002f, 22.0004f)
+                    curveTo(17.5142f, 22.0004f, 22.0002f, 17.5134f, 22.0002f, 12.0004f)
+                    curveTo(22.0002f, 6.4864f, 17.5142f, 2.0004f, 12.0002f, 2.0004f)
+                    close()
+                }
+            }.build().also {
+                _checkCircleFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._checkCircleFilled = it
-        }
     }
+
 
 private var _checkCircleFilled: ImageVector? = null
 
@@ -58,7 +63,7 @@ private var _checkCircleFilled: ImageVector? = null
 private fun CheckCircleFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CheckCircleFilled,
+            imageVector = BezierIcons.CheckCircleFilled.imageVector,
             contentDescription = null,
     )
 }

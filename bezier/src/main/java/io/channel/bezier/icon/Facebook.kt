@@ -9,54 +9,56 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Facebook: ImageVector
-    get() {
-        return io.channel.bezier.icon._facebook ?: ImageVector.Builder(
-                name = "Facebook",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0002f, 2.0001f)
-                curveTo(6.4772f, 2.0001f, 2.0002f, 6.4771f, 2.0002f, 12.0001f)
-                curveTo(2.0002f, 16.9861f, 5.6542f, 21.1091f, 10.4292f, 21.8641f)
-                lineTo(10.4292f, 14.8661f)
-                lineTo(7.8822f, 14.8661f)
-                lineTo(7.8822f, 12.0001f)
-                lineTo(10.4292f, 12.0001f)
-                lineTo(10.4292f, 10.3461f)
-                curveTo(10.4292f, 10.0491f, 9.9272f, 4.7321f, 16.4342f, 6.0951f)
-                lineTo(16.4342f, 8.5851f)
-                lineTo(14.9612f, 8.5851f)
-                curveTo(14.1922f, 8.5851f, 13.5692f, 9.2081f, 13.5692f, 9.9771f)
-                lineTo(13.5692f, 10.3461f)
-                lineTo(13.5692f, 12.0001f)
-                lineTo(16.3282f, 12.0001f)
-                lineTo(15.9252f, 14.8661f)
-                lineTo(13.5692f, 14.8661f)
-                lineTo(13.5692f, 21.8651f)
-                curveTo(18.3452f, 21.1101f, 22.0002f, 16.9871f, 22.0002f, 12.0001f)
-                curveTo(22.0002f, 6.4771f, 17.5222f, 2.0001f, 12.0002f, 2.0001f)
-                close()
+val BezierIcons.Facebook: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _facebook ?: ImageVector.Builder(
+                    name = "Facebook",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.0002f, 2.00012f)
+                    curveTo(6.47718f, 2.00012f, 2.00018f, 6.47712f, 2.00018f, 12.0001f)
+                    curveTo(2.00018f, 16.9861f, 5.65418f, 21.1091f, 10.4292f, 21.8641f)
+                    lineTo(10.4292f, 14.8661f)
+                    lineTo(7.88218f, 14.8661f)
+                    lineTo(7.88218f, 12.0001f)
+                    lineTo(10.4292f, 12.0001f)
+                    lineTo(10.4292f, 10.3461f)
+                    curveTo(10.4292f, 10.0491f, 9.92718f, 4.73212f, 16.4342f, 6.09512f)
+                    lineTo(16.4342f, 8.58512f)
+                    lineTo(14.9612f, 8.58512f)
+                    curveTo(14.1922f, 8.58512f, 13.5692f, 9.20812f, 13.5692f, 9.97712f)
+                    lineTo(13.5692f, 10.3461f)
+                    lineTo(13.5692f, 12.0001f)
+                    lineTo(16.3282f, 12.0001f)
+                    lineTo(15.9252f, 14.8661f)
+                    lineTo(13.5692f, 14.8661f)
+                    lineTo(13.5692f, 21.8651f)
+                    curveTo(18.3452f, 21.1101f, 22.0002f, 16.9871f, 22.0002f, 12.0001f)
+                    curveTo(22.0002f, 6.47712f, 17.5222f, 2.00012f, 12.0002f, 2.00012f)
+                    close()
+                }
+            }.build().also {
+                _facebook = it
             }
-        }.build().also {
-            io.channel.bezier.icon._facebook = it
-        }
     }
+
 
 private var _facebook: ImageVector? = null
 
@@ -65,7 +67,7 @@ private var _facebook: ImageVector? = null
 private fun FacebookIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Facebook,
+            imageVector = BezierIcons.Facebook.imageVector,
             contentDescription = null,
     )
 }

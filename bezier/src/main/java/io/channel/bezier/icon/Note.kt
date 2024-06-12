@@ -9,59 +9,61 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Note: ImageVector
-    get() {
-        return io.channel.bezier.icon._note ?: ImageVector.Builder(
-                name = "Note",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(4.5002f, 20.9998f)
-                lineTo(11.7922f, 20.9998f)
-                curveTo(12.1898f, 20.9998f, 12.5723f, 20.8418f, 12.8533f, 20.5609f)
-                lineTo(20.5613f, 12.8529f)
-                curveTo(20.842f, 12.5721f, 21.0002f, 12.1907f, 21.0002f, 11.7928f)
-                lineTo(21.0002f, 4.4998f)
-                curveTo(21.0002f, 3.6724f, 20.3284f, 2.9998f, 19.5002f, 2.9998f)
-                lineTo(4.5002f, 2.9998f)
-                curveTo(3.6719f, 2.9998f, 3.0002f, 3.6724f, 3.0002f, 4.4998f)
-                lineTo(3.0002f, 19.4998f)
-                curveTo(3.0002f, 20.328f, 3.6719f, 20.9998f, 4.5002f, 20.9998f)
-                close()
-                moveTo(5.0002f, 18.9998f)
-                lineTo(5.0002f, 4.9998f)
-                lineTo(19.0002f, 4.9998f)
-                lineTo(19.0002f, 10.9998f)
-                lineTo(12.5002f, 10.9998f)
-                curveTo(11.6719f, 10.9998f, 11.0002f, 11.6724f, 11.0002f, 12.4998f)
-                lineTo(11.0002f, 18.9998f)
-                lineTo(5.0002f, 18.9998f)
-                close()
-                moveTo(13.0002f, 17.5855f)
-                lineTo(17.586f, 12.9998f)
-                lineTo(13.0002f, 12.9998f)
-                lineTo(13.0002f, 17.5855f)
-                close()
+val BezierIcons.Note: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _note ?: ImageVector.Builder(
+                    name = "Note",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(4.50018f, 20.9998f)
+                    lineTo(11.7922f, 20.9998f)
+                    curveTo(12.1898f, 20.9998f, 12.5723f, 20.8418f, 12.8533f, 20.5609f)
+                    lineTo(20.5613f, 12.8529f)
+                    curveTo(20.842f, 12.5721f, 21.0002f, 12.1907f, 21.0002f, 11.7928f)
+                    lineTo(21.0002f, 4.49976f)
+                    curveTo(21.0002f, 3.67243f, 20.3284f, 2.99976f, 19.5002f, 2.99976f)
+                    lineTo(4.50018f, 2.99976f)
+                    curveTo(3.67193f, 2.99976f, 3.00018f, 3.67243f, 3.00018f, 4.49976f)
+                    lineTo(3.00018f, 19.4998f)
+                    curveTo(3.00018f, 20.328f, 3.6719f, 20.9998f, 4.50018f, 20.9998f)
+                    close()
+                    moveTo(5.00018f, 18.9998f)
+                    lineTo(5.00018f, 4.99976f)
+                    lineTo(19.0002f, 4.99976f)
+                    lineTo(19.0002f, 10.9998f)
+                    lineTo(12.5002f, 10.9998f)
+                    curveTo(11.6719f, 10.9998f, 11.0002f, 11.6724f, 11.0002f, 12.4998f)
+                    lineTo(11.0002f, 18.9998f)
+                    lineTo(5.00018f, 18.9998f)
+                    close()
+                    moveTo(13.0002f, 17.5855f)
+                    lineTo(17.586f, 12.9998f)
+                    lineTo(13.0002f, 12.9998f)
+                    lineTo(13.0002f, 17.5855f)
+                    close()
+                }
+            }.build().also {
+                _note = it
             }
-        }.build().also {
-            io.channel.bezier.icon._note = it
-        }
     }
+
 
 private var _note: ImageVector? = null
 
@@ -70,7 +72,7 @@ private var _note: ImageVector? = null
 private fun NoteIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Note,
+            imageVector = BezierIcons.Note.imageVector,
             contentDescription = null,
     )
 }

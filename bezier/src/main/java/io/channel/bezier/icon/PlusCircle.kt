@@ -9,59 +9,65 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.PlusCircle: ImageVector
-    get() {
-        return io.channel.bezier.icon._plusCircle ?: ImageVector.Builder(
-                name = "PlusCircle",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(4.0002f, 12.0001f)
-                curveTo(4.0002f, 16.4111f, 7.5892f, 20.0001f, 12.0002f, 20.0001f)
-                curveTo(16.4112f, 20.0001f, 20.0002f, 16.4111f, 20.0002f, 12.0001f)
-                curveTo(20.0002f, 7.5891f, 16.4112f, 4.0001f, 12.0002f, 4.0001f)
-                curveTo(7.5892f, 4.0001f, 4.0002f, 7.5891f, 4.0002f, 12.0001f)
-                close()
-                moveTo(2.0002f, 12.0001f)
-                curveTo(2.0002f, 6.4771f, 6.4772f, 2.0001f, 12.0002f, 2.0001f)
-                curveTo(17.5232f, 2.0001f, 22.0002f, 6.4771f, 22.0002f, 12.0001f)
-                curveTo(22.0002f, 17.5231f, 17.5232f, 22.0001f, 12.0002f, 22.0001f)
-                curveTo(6.4772f, 22.0001f, 2.0002f, 17.5231f, 2.0002f, 12.0001f)
-                close()
-                moveTo(13.0f, 13.0001f)
-                lineTo(17.86f, 13.0001f)
-                lineTo(17.86f, 11.0001f)
-                lineTo(13.0f, 11.0001f)
-                lineTo(13.0f, 6.1401f)
-                lineTo(11.0f, 6.1401f)
-                lineTo(11.0f, 11.0001f)
-                lineTo(6.14f, 11.0001f)
-                lineTo(6.14f, 13.0001f)
-                lineTo(11.0f, 13.0001f)
-                lineTo(11.0f, 17.8591f)
-                lineTo(13.0f, 17.8591f)
-                lineTo(13.0f, 13.0001f)
-                close()
+val BezierIcons.PlusCircle: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _plusCircle ?: ImageVector.Builder(
+                    name = "PlusCircle",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(4.00018f, 12.0001f)
+                    curveTo(4.00018f, 16.4111f, 7.58918f, 20.0001f, 12.0002f, 20.0001f)
+                    curveTo(16.4112f, 20.0001f, 20.0002f, 16.4111f, 20.0002f, 12.0001f)
+                    curveTo(20.0002f, 7.58912f, 16.4112f, 4.00012f, 12.0002f, 4.00012f)
+                    curveTo(7.58918f, 4.00012f, 4.00018f, 7.58912f, 4.00018f, 12.0001f)
+                    close()
+                    moveTo(2.00018f, 12.0001f)
+                    curveTo(2.00018f, 6.47712f, 6.47718f, 2.00012f, 12.0002f, 2.00012f)
+                    curveTo(17.5232f, 2.00012f, 22.0002f, 6.47712f, 22.0002f, 12.0001f)
+                    curveTo(22.0002f, 17.5231f, 17.5232f, 22.0001f, 12.0002f, 22.0001f)
+                    curveTo(6.47718f, 22.0001f, 2.00018f, 17.5231f, 2.00018f, 12.0001f)
+                    close()
+                    moveTo(11.0f, 8.0f)
+                    curveTo(11.0f, 7.44772f, 11.4477f, 7.0f, 12.0f, 7.0f)
+                    curveTo(12.5523f, 7.0f, 13.0f, 7.44772f, 13.0f, 8.0f)
+                    lineTo(13.0f, 11.0f)
+                    lineTo(16.0f, 11.0f)
+                    curveTo(16.5523f, 11.0f, 17.0f, 11.4477f, 17.0f, 12.0f)
+                    curveTo(17.0f, 12.5523f, 16.5523f, 13.0f, 16.0f, 13.0f)
+                    lineTo(13.0f, 13.0f)
+                    lineTo(13.0f, 16.0f)
+                    curveTo(13.0f, 16.5523f, 12.5523f, 17.0f, 12.0f, 17.0f)
+                    curveTo(11.4477f, 17.0f, 11.0f, 16.5523f, 11.0f, 16.0f)
+                    lineTo(11.0f, 13.0f)
+                    lineTo(8.0f, 13.0f)
+                    curveTo(7.44772f, 13.0f, 7.0f, 12.5523f, 7.0f, 12.0f)
+                    curveTo(7.0f, 11.4477f, 7.44772f, 11.0f, 8.0f, 11.0f)
+                    lineTo(11.0f, 11.0f)
+                    lineTo(11.0f, 8.0f)
+                    close()
+                }
+            }.build().also {
+                _plusCircle = it
             }
-        }.build().also {
-            io.channel.bezier.icon._plusCircle = it
-        }
     }
+
 
 private var _plusCircle: ImageVector? = null
 
@@ -70,7 +76,7 @@ private var _plusCircle: ImageVector? = null
 private fun PlusCircleIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.PlusCircle,
+            imageVector = BezierIcons.PlusCircle.imageVector,
             contentDescription = null,
     )
 }
