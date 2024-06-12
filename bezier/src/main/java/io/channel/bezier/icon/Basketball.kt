@@ -16,82 +16,75 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Basketball: ImageVector
-    get() {
-        return io.channel.bezier.icon._basketball ?: ImageVector.Builder(
-                name = "Basketball",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0005f, 1.9998f)
-                curveTo(9.3786f, 1.9998f, 6.9923f, 3.0088f, 5.2089f, 4.6598f)
-                curveTo(4.7618f, 5.0736f, 4.3527f, 5.5278f, 3.9871f, 6.0166f)
-                curveTo(3.9493f, 6.0672f, 3.9119f, 6.1182f, 3.875f, 6.1695f)
-                curveTo(2.6952f, 7.8108f, 2.0005f, 9.8242f, 2.0005f, 11.9998f)
-                curveTo(2.0005f, 14.1755f, 2.6954f, 16.189f, 3.8753f, 17.8304f)
-                curveTo(4.2397f, 18.3373f, 4.6503f, 18.8087f, 5.1011f, 19.2384f)
-                curveTo(5.1369f, 19.2726f, 5.173f, 19.3065f, 5.2093f, 19.3401f)
-                curveTo(6.9927f, 20.9908f, 9.3787f, 21.9998f, 12.0005f, 21.9998f)
-                curveTo(17.5233f, 21.9998f, 22.0005f, 17.5226f, 22.0005f, 11.9998f)
-                curveTo(22.0005f, 6.4769f, 17.5233f, 1.9998f, 12.0005f, 1.9998f)
-                close()
-                moveTo(4.0623f, 11.0001f)
-                curveTo(4.2219f, 9.7199f, 4.684f, 8.5337f, 5.3747f, 7.5151f)
-                curveTo(6.1875f, 8.4881f, 6.741f, 9.6851f, 6.9291f, 11.0001f)
-                lineTo(4.0623f, 11.0001f)
-                close()
-                moveTo(6.7084f, 6.0002f)
-                curveTo(7.9245f, 7.3589f, 8.7338f, 9.0893f, 8.9451f, 11.0001f)
-                lineTo(11.0f, 11.0001f)
-                lineTo(11.0f, 4.0617f)
-                curveTo(9.365f, 4.2657f, 7.8832f, 4.9631f, 6.7084f, 6.0002f)
-                close()
-                moveTo(4.0624f, 13.0001f)
-                lineTo(6.9291f, 13.0001f)
-                curveTo(6.741f, 14.3149f, 6.1876f, 15.5118f, 5.3749f, 16.4847f)
-                curveTo(4.6842f, 15.4663f, 4.2221f, 14.2801f, 4.0624f, 13.0001f)
-                close()
-                moveTo(8.9451f, 13.0001f)
-                curveTo(8.7339f, 14.9106f, 7.9246f, 16.6409f, 6.7087f, 17.9996f)
-                curveTo(7.8835f, 19.0365f, 9.3651f, 19.7338f, 11.0f, 19.9378f)
-                lineTo(11.0f, 13.0001f)
-                lineTo(8.9451f, 13.0001f)
-                close()
-                moveTo(13.0f, 4.0616f)
-                lineTo(13.0f, 11.0001f)
-                lineTo(15.0549f, 11.0001f)
-                curveTo(15.2662f, 9.0891f, 16.0757f, 7.3585f, 17.292f, 5.9997f)
-                curveTo(16.1171f, 4.9626f, 14.6351f, 4.2654f, 13.0f, 4.0616f)
-                close()
-                moveTo(18.6258f, 7.5145f)
-                curveTo(17.8127f, 8.4876f, 17.259f, 9.6848f, 17.0709f, 11.0001f)
-                lineTo(19.9386f, 11.0001f)
-                curveTo(19.779f, 9.7196f, 19.3168f, 8.5331f, 18.6258f, 7.5145f)
-                close()
-                moveTo(15.0549f, 13.0001f)
-                lineTo(13.0f, 13.0001f)
-                lineTo(13.0f, 19.9379f)
-                curveTo(14.635f, 19.7341f, 16.1168f, 19.037f, 17.2917f, 18.0001f)
-                curveTo(16.0756f, 16.6413f, 15.2661f, 14.9108f, 15.0549f, 13.0001f)
-                close()
-                moveTo(18.6256f, 16.4854f)
-                curveTo(17.8126f, 15.5123f, 17.259f, 14.3152f, 17.0709f, 13.0001f)
-                lineTo(19.9386f, 13.0001f)
-                curveTo(19.7789f, 14.2804f, 19.3166f, 15.4668f, 18.6256f, 16.4854f)
-                close()
+val BezierIcons.Basketball: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _basketball ?: ImageVector.Builder(
+                    name = "Basketball",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(12.0f, 2.0f)
+                    arcTo(9.97f, 9.97f, 270.0589612180421f, isMoreThanHalf = false, isPositiveArc = false, 5.21f, 4.66f)
+                    arcTo(10.0f, 10.0f, 227.24073949642582f, isMoreThanHalf = false, isPositiveArc = false, 3.876f, 6.17f)
+                    arcTo(9.96f, 9.96f, 215.74294890383695f, isMoreThanHalf = false, isPositiveArc = false, 2.0f, 12.0f)
+                    curveTo(2.0f, 14.175f, 2.695f, 16.189f, 3.875f, 17.83f)
+                    arcTo(10.0f, 10.0f, 144.32316824530645f, isMoreThanHalf = false, isPositiveArc = false, 5.209f, 19.34f)
+                    arcTo(9.97f, 9.97f, 132.84476098538602f, isMoreThanHalf = false, isPositiveArc = false, 12.001f, 22.0f)
+                    curveTo(17.523f, 22.0f, 22.000999999999998f, 17.523f, 22.000999999999998f, 12.0f)
+                    curveTo(22.000999999999998f, 6.477f, 17.523f, 2.0f, 12.0f, 2.0f)
+                    moveTo(4.062f, 11.0f)
+                    arcTo(7.95f, 7.95f, 187.09848610053058f, isMoreThanHalf = false, isPositiveArc = true, 5.375f, 7.515000000000001f)
+                    arcTo(6.97f, 6.97f, 320.08112436343674f, isMoreThanHalf = false, isPositiveArc = true, 6.929f, 11.0f)
+                    close()
+                    moveTo(6.708f, 6.0f)
+                    arcTo(8.97f, 8.97f, 318.1182864779407f, isMoreThanHalf = false, isPositiveArc = true, 8.945f, 11.0f)
+                    lineTo(11.0f, 11.0f)
+                    lineTo(11.0f, 4.062f)
+                    arcTo(7.97f, 7.97f, 262.88274082011316f, isMoreThanHalf = false, isPositiveArc = false, 6.708f, 6.0f)
+                    moveTo(4.062f, 13.0f)
+                    lineTo(6.93f, 13.0f)
+                    arcTo(6.97f, 6.97f, 8.146364920898026f, isMoreThanHalf = false, isPositiveArc = true, 5.3759999999999994f, 16.485f)
+                    arcTo(7.95f, 7.95f, 145.7942263665258f, isMoreThanHalf = false, isPositiveArc = true, 4.062f, 13.0f)
+                    moveTo(8.945f, 13.0f)
+                    arcTo(8.97f, 8.97f, 6.317591423359996f, isMoreThanHalf = false, isPositiveArc = true, 6.709f, 18.0f)
+                    arcTo(7.97f, 7.97f, 131.48626455764602f, isMoreThanHalf = false, isPositiveArc = false, 11.0f, 19.938f)
+                    lineTo(11.0f, 13.0f)
+                    close()
+                    moveTo(13.0f, 4.062f)
+                    lineTo(13.0f, 11.0f)
+                    lineTo(15.055f, 11.0f)
+                    arcTo(8.97f, 8.97f, 186.32577066409485f, isMoreThanHalf = false, isPositiveArc = true, 17.292f, 6.0f)
+                    arcTo(7.97f, 7.97f, 311.4846856063642f, isMoreThanHalf = false, isPositiveArc = false, 13.0f, 4.062f)
+                    moveTo(18.626f, 7.514f)
+                    arcTo(6.97f, 6.97f, 219.94756348561108f, isMoreThanHalf = false, isPositiveArc = false, 17.07f, 11.0f)
+                    lineTo(19.938f, 11.0f)
+                    arcTo(7.95f, 7.95f, 352.9104054328375f, isMoreThanHalf = false, isPositiveArc = false, 18.625f, 7.513999999999999f)
+                    moveTo(15.055f, 13.0f)
+                    lineTo(13.0f, 13.0f)
+                    lineTo(13.0f, 19.938f)
+                    arcTo(7.97f, 7.97f, 82.8827408201132f, isMoreThanHalf = false, isPositiveArc = false, 17.292f, 18.0f)
+                    arcTo(8.97f, 8.97f, 138.11828647794073f, isMoreThanHalf = false, isPositiveArc = true, 15.055000000000001f, 13.0f)
+                    moveTo(18.625f, 16.485f)
+                    arcTo(6.97f, 6.97f, 140.09657958045116f, isMoreThanHalf = false, isPositiveArc = true, 17.072f, 13.0f)
+                    lineTo(19.939999999999998f, 13.0f)
+                    arcTo(7.95f, 7.95f, 7.0984861005305815f, isMoreThanHalf = false, isPositiveArc = true, 18.627f, 16.485f)
+                }
+            }.build().also {
+                _basketball = it
             }
-        }.build().also {
-            io.channel.bezier.icon._basketball = it
-        }
     }
+
 
 private var _basketball: ImageVector? = null
 
@@ -100,7 +93,7 @@ private var _basketball: ImageVector? = null
 private fun BasketballIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Basketball,
+            imageVector = BezierIcons.Basketball.imageVector,
             contentDescription = null,
     )
 }

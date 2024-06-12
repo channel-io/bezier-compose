@@ -16,56 +16,54 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.BrowserSafari: ImageVector
-    get() {
-        return io.channel.bezier.icon._browserSafari ?: ImageVector.Builder(
-                name = "BrowserSafari",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(22.0f, 12.0f)
-                curveTo(22.0f, 17.523f, 17.5226f, 22.0f, 12.0f, 22.0f)
-                curveTo(6.4767f, 22.0f, 2.0f, 17.5233f, 2.0f, 12.0f)
-                curveTo(2.0f, 6.4767f, 6.4767f, 2.0f, 12.0f, 2.0f)
-                curveTo(17.5226f, 2.0f, 22.0f, 6.477f, 22.0f, 12.0f)
-                close()
-                moveTo(20.0f, 12.0f)
-                curveTo(20.0f, 7.5816f, 16.4181f, 4.0f, 12.0f, 4.0f)
-                curveTo(7.5813f, 4.0f, 4.0f, 7.5813f, 4.0f, 12.0f)
-                curveTo(4.0f, 16.4187f, 7.5813f, 20.0f, 12.0f, 20.0f)
-                curveTo(16.4181f, 20.0f, 20.0f, 16.4184f, 20.0f, 12.0f)
-                close()
-                moveTo(9.2857f, 14.7161f)
-                lineTo(12.9167f, 12.9151f)
-                lineTo(12.9227f, 12.9021f)
-                lineTo(11.4847f, 11.4441f)
-                lineTo(11.0987f, 11.0781f)
-                lineTo(11.0857f, 11.0851f)
-                lineTo(9.2857f, 14.7161f)
-                close()
-                moveTo(10.4797f, 10.1301f)
-                lineTo(16.6037f, 7.0941f)
-                curveTo(16.7967f, 6.9981f, 17.0027f, 7.2031f, 16.9067f, 7.3961f)
-                lineTo(13.8717f, 13.5201f)
-                curveTo(13.7957f, 13.6721f, 13.6727f, 13.7951f, 13.5217f, 13.8701f)
-                lineTo(7.3987f, 16.9061f)
-                curveTo(7.2047f, 17.0021f, 6.9997f, 16.7971f, 7.0957f, 16.6031f)
-                lineTo(10.1307f, 10.4791f)
-                curveTo(10.2067f, 10.3281f, 10.3287f, 10.2051f, 10.4797f, 10.1301f)
-                close()
+val BezierIcons.BrowserSafari: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _browserSafari ?: ImageVector.Builder(
+                    name = "BrowserSafari",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(22.0f, 12.0f)
+                    curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
+                    curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
+                    curveTo(2.0f, 6.477f, 6.477f, 2.0f, 12.0f, 2.0f)
+                    curveTo(17.523f, 2.0f, 22.0f, 6.477f, 22.0f, 12.0f)
+                    moveTo(20.0f, 12.0f)
+                    arcTo(8.0f, 8.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = false, 4.0f, 12.0f)
+                    arcTo(8.0f, 8.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 20.0f, 12.0f)
+                    moveTo(9.286f, 14.716f)
+                    lineTo(12.916f, 12.915999999999999f)
+                    lineTo(12.923f, 12.902f)
+                    lineTo(11.485f, 11.443999999999999f)
+                    lineTo(11.099f, 11.078f)
+                    lineTo(11.086f, 11.084999999999999f)
+                    close()
+                    moveTo(10.48f, 10.129999999999999f)
+                    lineTo(16.604f, 7.093999999999999f)
+                    curveTo(16.797f, 6.997999999999999f, 17.003f, 7.204f, 16.907f, 7.395999999999999f)
+                    lineTo(13.872f, 13.52f)
+                    arcTo(0.78f, 0.78f, 26.50079461675215f, isMoreThanHalf = false, isPositiveArc = true, 13.522f, 13.87f)
+                    lineTo(7.399f, 16.906f)
+                    arcTo(0.226f, 0.226f, 63.55408789139505f, isMoreThanHalf = false, isPositiveArc = true, 7.096f, 16.602999999999998f)
+                    lineTo(10.131f, 10.479f)
+                    arcTo(0.78f, 0.78f, 206.55555734336875f, isMoreThanHalf = false, isPositiveArc = true, 10.48f, 10.129999999999999f)
+                }
+            }.build().also {
+                _browserSafari = it
             }
-        }.build().also {
-            io.channel.bezier.icon._browserSafari = it
-        }
     }
+
 
 private var _browserSafari: ImageVector? = null
 
@@ -74,7 +72,7 @@ private var _browserSafari: ImageVector? = null
 private fun BrowserSafariIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.BrowserSafari,
+            imageVector = BezierIcons.BrowserSafari.imageVector,
             contentDescription = null,
     )
 }

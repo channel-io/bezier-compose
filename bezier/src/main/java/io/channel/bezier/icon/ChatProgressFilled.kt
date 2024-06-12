@@ -16,57 +16,57 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ChatProgressFilled: ImageVector
-    get() {
-        return _chatProgressFilled ?: ImageVector.Builder(
-                name = "ChatProgressFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(20.8223f, 16.683f)
-                curveTo(20.5763f, 17.144f, 20.5573f, 17.694f, 20.7233f, 18.19f)
-                lineTo(21.3613f, 20.105f)
-                curveTo(21.6223f, 20.886f, 20.8793f, 21.63f, 20.0973f, 21.37f)
-                curveTo(19.6395f, 21.2172f, 19.1583f, 21.0569f, 18.7279f, 20.9135f)
-                lineTo(18.1743f, 20.729f)
-                curveTo(17.6813f, 20.565f, 17.1373f, 20.584f, 16.6783f, 20.829f)
-                curveTo(14.7293f, 21.868f, 12.4033f, 22.29f, 9.9473f, 21.796f)
-                curveTo(5.9463f, 20.991f, 2.7823f, 17.703f, 2.1293f, 13.675f)
-                curveTo(1.0233f, 6.848f, 6.8373f, 1.033f, 13.6643f, 2.137f)
-                curveTo(17.6933f, 2.789f, 20.9823f, 5.954f, 21.7873f, 9.954f)
-                curveTo(22.2813f, 12.409f, 21.8613f, 14.734f, 20.8223f, 16.683f)
-                close()
-                moveTo(6.2063f, 11.9928f)
-                curveTo(6.2063f, 12.7374f, 6.8147f, 13.3459f, 7.5593f, 13.3459f)
-                curveTo(8.3039f, 13.3459f, 8.9124f, 12.7374f, 8.9124f, 11.9928f)
-                curveTo(8.9124f, 11.2493f, 8.3039f, 10.6408f, 7.5593f, 10.6408f)
-                curveTo(6.8147f, 10.6408f, 6.2063f, 11.2493f, 6.2063f, 11.9928f)
-                close()
-                moveTo(12.0399f, 13.3459f)
-                curveTo(11.2963f, 13.3459f, 10.6869f, 12.7374f, 10.6869f, 11.9928f)
-                curveTo(10.6869f, 11.2493f, 11.2963f, 10.6408f, 12.0399f, 10.6408f)
-                curveTo(12.7845f, 10.6408f, 13.393f, 11.2493f, 13.393f, 11.9928f)
-                curveTo(13.393f, 12.7374f, 12.7845f, 13.3459f, 12.0399f, 13.3459f)
-                close()
-                moveTo(15.1678f, 11.9928f)
-                curveTo(15.1678f, 12.7374f, 15.7763f, 13.3459f, 16.5209f, 13.3459f)
-                curveTo(17.2645f, 13.3459f, 17.874f, 12.7374f, 17.874f, 11.9928f)
-                curveTo(17.874f, 11.2493f, 17.2645f, 10.6408f, 16.5209f, 10.6408f)
-                curveTo(15.7763f, 10.6408f, 15.1678f, 11.2493f, 15.1678f, 11.9928f)
-                close()
+val BezierIcons.ChatProgressFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _chatProgressFilled ?: ImageVector.Builder(
+                    name = "ChatProgressFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(21.997f, 12.006f)
+                    curveTo(21.997f, 13.376000000000001f, 21.721f, 14.68f, 21.221f, 15.870000000000001f)
+                    lineTo(21.221f, 15.873000000000001f)
+                    arcTo(3.73f, 3.73f, 202.53571213903382f, isMoreThanHalf = false, isPositiveArc = false, 21.049f, 18.213f)
+                    lineTo(21.592f, 20.387f)
+                    arcTo(0.998f, 0.998f, 345.9047468611427f, isMoreThanHalf = false, isPositiveArc = true, 20.381f, 21.598f)
+                    lineTo(18.207f, 21.055f)
+                    arcTo(3.73f, 3.73f, 284.1278632827351f, isMoreThanHalf = false, isPositiveArc = false, 15.867f, 21.227f)
+                    curveTo(14.677000000000001f, 21.727f, 13.374f, 22.003f, 12.003f, 22.003f)
+                    curveTo(6.5f, 22.003f, 2.0f, 17.51f, 2.0f, 12.006f)
+                    curveTo(1.997f, 6.48f, 6.477f, 2.003f, 12.003f, 2.003f)
+                    curveTo(17.508f, 2.003f, 21.997f, 6.502f, 21.997f, 12.006f)
+                    moveTo(6.207000000000001f, 11.993f)
+                    curveTo(6.207000000000001f, 12.737f, 6.815f, 13.346f, 7.559000000000001f, 13.346f)
+                    curveTo(8.303f, 13.346f, 8.912f, 12.737f, 8.912f, 11.993f)
+                    curveTo(8.912f, 11.249f, 8.304f, 10.641f, 7.559000000000001f, 10.641f)
+                    curveTo(6.815000000000001f, 10.641f, 6.206000000000001f, 11.249f, 6.206000000000001f, 11.993f)
+                    moveTo(12.039000000000001f, 13.346f)
+                    arcTo(1.357f, 1.357f, 90.16864160697573f, isMoreThanHalf = false, isPositiveArc = true, 10.686000000000002f, 11.993f)
+                    curveTo(10.686000000000002f, 11.249f, 11.296000000000001f, 10.641f, 12.039000000000001f, 10.641f)
+                    curveTo(12.784f, 10.641f, 13.392000000000001f, 11.249f, 13.392000000000001f, 11.993f)
+                    curveTo(13.392000000000001f, 12.737f, 12.783000000000001f, 13.346f, 12.039000000000001f, 13.346f)
+                    moveTo(15.167000000000002f, 11.993f)
+                    curveTo(15.167000000000002f, 12.737f, 15.775000000000002f, 13.346f, 16.520000000000003f, 13.346f)
+                    curveTo(17.264000000000003f, 13.346f, 17.873000000000005f, 12.737f, 17.873000000000005f, 11.993f)
+                    curveTo(17.873000000000005f, 11.249f, 17.263000000000005f, 10.641f, 16.520000000000003f, 10.641f)
+                    curveTo(15.775000000000004f, 10.641f, 15.167000000000003f, 11.249f, 15.167000000000003f, 11.993f)
+                }
+            }.build().also {
+                _chatProgressFilled = it
             }
-        }.build().also {
-            _chatProgressFilled = it
-        }
     }
+
 
 private var _chatProgressFilled: ImageVector? = null
 
@@ -75,7 +75,7 @@ private var _chatProgressFilled: ImageVector? = null
 private fun ChatProgressFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ChatProgressFilled,
+            imageVector = BezierIcons.ChatProgressFilled.imageVector,
             contentDescription = null,
     )
 }

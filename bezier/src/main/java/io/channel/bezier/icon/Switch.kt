@@ -16,40 +16,38 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Switch: ImageVector
-    get() {
-        return _switch ?: ImageVector.Builder(
-                name = "Switch",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(9.0f, 4.0f)
-                curveTo(4.5817f, 4.0f, 1.0f, 7.5817f, 1.0f, 12.0f)
-                curveTo(1.0f, 16.4183f, 4.5817f, 20.0f, 9.0f, 20.0f)
-                lineTo(15.0f, 20.0f)
-                curveTo(19.4183f, 20.0f, 23.0f, 16.4183f, 23.0f, 12.0f)
-                curveTo(23.0f, 7.5817f, 19.4183f, 4.0f, 15.0f, 4.0f)
-                lineTo(9.0f, 4.0f)
-                close()
-                moveTo(15.0f, 6.0f)
-                curveTo(11.6863f, 6.0f, 9.0f, 8.6863f, 9.0f, 12.0f)
-                curveTo(9.0f, 15.3137f, 11.6863f, 18.0f, 15.0f, 18.0f)
-                curveTo(18.3137f, 18.0f, 21.0f, 15.3137f, 21.0f, 12.0f)
-                curveTo(21.0f, 8.6863f, 18.3137f, 6.0f, 15.0f, 6.0f)
-                close()
+val BezierIcons.Switch: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _switch ?: ImageVector.Builder(
+                    name = "Switch",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(9.0f, 4.0f)
+                    arcTo(8.0f, 8.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 9.0f, 20.0f)
+                    lineTo(15.0f, 20.0f)
+                    arcTo(8.0f, 8.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 15.0f, 4.0f)
+                    close()
+                    moveTo(15.0f, 6.0f)
+                    arcTo(6.0f, 6.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 15.0f, 18.0f)
+                    arcTo(6.0f, 6.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 15.0f, 6.0f)
+                }
+            }.build().also {
+                _switch = it
             }
-        }.build().also {
-            _switch = it
-        }
     }
+
 
 private var _switch: ImageVector? = null
 
@@ -58,7 +56,7 @@ private var _switch: ImageVector? = null
 private fun SwitchIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Switch,
+            imageVector = BezierIcons.Switch.imageVector,
             contentDescription = null,
     )
 }

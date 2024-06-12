@@ -9,78 +9,80 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Hear: ImageVector
-    get() {
-        return io.channel.bezier.icon._hear ?: ImageVector.Builder(
-                name = "Hear",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(16.7824f, 8.463f)
-                curveTo(16.4484f, 6.147f, 15.0794f, 4.176f, 13.0254f, 3.056f)
-                curveTo(10.5344f, 1.697f, 7.4434f, 1.901f, 5.1544f, 3.581f)
-                lineTo(3.4094f, 4.86f)
-                lineTo(4.5924f, 6.474f)
-                lineTo(6.3364f, 5.194f)
-                curveTo(8.0034f, 3.972f, 10.2534f, 3.822f, 12.0674f, 4.812f)
-                curveTo(13.5624f, 5.627f, 14.5594f, 7.063f, 14.8034f, 8.748f)
-                curveTo(15.0454f, 10.435f, 14.4934f, 12.093f, 13.2894f, 13.298f)
-                curveTo(12.4584f, 14.128f, 12.0014f, 15.233f, 12.0014f, 16.407f)
-                lineTo(12.0014f, 17.0f)
-                curveTo(12.0014f, 17.94f, 11.5524f, 18.836f, 10.8014f, 19.401f)
-                curveTo(9.7414f, 20.195f, 8.2614f, 20.195f, 7.2014f, 19.401f)
-                curveTo(6.4494f, 18.836f, 6.0014f, 17.94f, 6.0014f, 17.0f)
-                lineTo(6.0014f, 16.0f)
-                lineTo(4.0014f, 16.0f)
-                lineTo(4.0014f, 17.0f)
-                curveTo(4.0014f, 18.566f, 4.7484f, 20.061f, 6.0014f, 21.0f)
-                curveTo(6.8844f, 21.662f, 7.9424f, 21.993f, 9.0014f, 21.993f)
-                curveTo(10.0594f, 21.993f, 11.1184f, 21.662f, 12.0024f, 21.0f)
-                curveTo(13.2534f, 20.061f, 14.0014f, 18.565f, 14.0014f, 17.0f)
-                lineTo(14.0014f, 16.407f)
-                curveTo(14.0014f, 15.767f, 14.2504f, 15.165f, 14.7034f, 14.712f)
-                curveTo(16.3584f, 13.057f, 17.1154f, 10.779f, 16.7824f, 8.463f)
-                close()
-                moveTo(20.7414f, 7.8927f)
-                curveTo(20.4834f, 6.1037f, 19.8374f, 4.4577f, 18.8204f, 3.0027f)
-                lineTo(17.1804f, 4.1497f)
-                curveTo(18.0164f, 5.3457f, 18.5494f, 6.7017f, 18.7624f, 8.1777f)
-                curveTo(19.1734f, 11.0387f, 18.2684f, 13.8757f, 16.2774f, 15.9617f)
-                lineTo(17.7244f, 17.3427f)
-                curveTo(20.1414f, 14.8097f, 21.2414f, 11.3657f, 20.7414f, 7.8927f)
-                close()
-                moveTo(10.4181f, 8.3128f)
-                curveTo(10.0411f, 8.0218f, 9.5681f, 7.9288f, 9.0851f, 8.0538f)
-                curveTo(8.5961f, 8.1808f, 8.1821f, 8.5948f, 8.0551f, 9.0838f)
-                curveTo(7.9301f, 9.5678f, 8.0231f, 10.0408f, 8.3141f, 10.4168f)
-                curveTo(8.6011f, 10.7868f, 9.0341f, 10.9998f, 9.5011f, 10.9998f)
-                lineTo(9.5011f, 12.9998f)
-                curveTo(8.4101f, 12.9998f, 7.4011f, 12.5048f, 6.7331f, 11.6418f)
-                curveTo(6.0641f, 10.7788f, 5.8401f, 9.6638f, 6.1191f, 8.5838f)
-                curveTo(6.4271f, 7.3938f, 7.3951f, 6.4258f, 8.5851f, 6.1178f)
-                curveTo(9.6641f, 5.8358f, 10.7791f, 6.0618f, 11.6431f, 6.7318f)
-                curveTo(12.5061f, 7.4008f, 13.0011f, 8.4088f, 13.0011f, 9.4998f)
-                lineTo(11.0011f, 9.4998f)
-                curveTo(11.0011f, 9.0328f, 10.7891f, 8.5998f, 10.4181f, 8.3128f)
-                close()
+val BezierIcons.Hear: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _hear ?: ImageVector.Builder(
+                    name = "Hear",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(16.782f, 8.463f)
+                    arcTo(7.29f, 7.29f, 352.05236987015024f, isMoreThanHalf = false, isPositiveArc = false, 13.025f, 3.055999999999999f)
+                    arcTo(7.38f, 7.38f, 298.48558038597616f, isMoreThanHalf = false, isPositiveArc = false, 5.155f, 3.580999999999999f)
+                    lineTo(3.408f, 4.86f)
+                    lineTo(4.591f, 6.474f)
+                    lineTo(6.335f, 5.194f)
+                    arcTo(5.38f, 5.38f, 233.923839173216f, isMoreThanHalf = false, isPositiveArc = true, 12.065999999999999f, 4.812f)
+                    arcTo(5.31f, 5.31f, 298.3645767261561f, isMoreThanHalf = false, isPositiveArc = true, 14.802f, 8.748000000000001f)
+                    arcTo(5.32f, 5.32f, 351.6171398774574f, isMoreThanHalf = false, isPositiveArc = true, 13.288f, 13.298000000000002f)
+                    arcTo(4.37f, 4.37f, 225.1494430346624f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 16.407000000000004f)
+                    lineTo(12.0f, 17.0f)
+                    curveTo(12.0f, 17.94f, 11.551f, 18.836f, 10.8f, 19.401f)
+                    arcTo(3.02f, 3.02f, 53.414157109315155f, isMoreThanHalf = false, isPositiveArc = true, 7.200000000000001f, 19.401f)
+                    arcTo(3.02f, 3.02f, 127.08336656582627f, isMoreThanHalf = false, isPositiveArc = true, 6.001f, 17.0f)
+                    lineTo(6.001f, 16.0f)
+                    lineTo(4.001f, 16.0f)
+                    lineTo(4.001f, 17.0f)
+                    arcTo(5.02f, 5.02f, 179.8859216893383f, isMoreThanHalf = false, isPositiveArc = false, 6.001f, 21.0f)
+                    arcTo(5.0f, 5.0f, 126.73616604541998f, isMoreThanHalf = false, isPositiveArc = false, 9.001000000000001f, 21.993f)
+                    arcTo(5.0f, 5.0f, 90.11850791923828f, isMoreThanHalf = false, isPositiveArc = false, 12.002f, 21.0f)
+                    arcTo(5.03f, 5.03f, 52.959367128960444f, isMoreThanHalf = false, isPositiveArc = false, 14.002f, 17.0f)
+                    lineTo(14.002f, 16.407f)
+                    curveTo(14.002f, 15.767f, 14.25f, 15.165f, 14.703000000000001f, 14.712f)
+                    arcTo(7.3f, 7.3f, 45.224541920869896f, isMoreThanHalf = false, isPositiveArc = false, 16.783f, 8.463000000000001f)
+                    moveTo(20.741f, 7.893f)
+                    arcTo(11.26f, 11.26f, 352.05329637959363f, isMoreThanHalf = false, isPositiveArc = false, 18.820999999999998f, 3.003f)
+                    lineTo(17.18f, 4.15f)
+                    arcTo(9.3f, 9.3f, 325.1171310325161f, isMoreThanHalf = false, isPositiveArc = true, 18.761f, 8.178f)
+                    arcTo(9.29f, 9.29f, 351.6158086806886f, isMoreThanHalf = false, isPositiveArc = true, 16.276f, 15.962f)
+                    lineTo(17.723f, 17.342f)
+                    arcTo(11.28f, 11.28f, 43.79171685389561f, isMoreThanHalf = false, isPositiveArc = false, 20.74f, 7.8919999999999995f)
+                    moveTo(10.418f, 8.313f)
+                    arcTo(1.51f, 1.51f, 307.76188335601523f, isMoreThanHalf = false, isPositiveArc = false, 9.084999999999999f, 8.053f)
+                    arcTo(1.48f, 1.48f, 254.4792351438436f, isMoreThanHalf = false, isPositiveArc = false, 8.055f, 9.083f)
+                    curveTo(7.93f, 9.568f, 8.023f, 10.041f, 8.315f, 10.417f)
+                    curveTo(8.600999999999999f, 10.786999999999999f, 9.035f, 11.0f, 9.501f, 11.0f)
+                    lineTo(9.501f, 13.0f)
+                    curveTo(8.411f, 13.0f, 7.401f, 12.505f, 6.733f, 11.642f)
+                    arcTo(3.52f, 3.52f, 142.34855466793854f, isMoreThanHalf = false, isPositiveArc = true, 6.119f, 8.584f)
+                    arcTo(3.48f, 3.48f, 194.92915131644082f, isMoreThanHalf = false, isPositiveArc = true, 8.585f, 6.117999999999999f)
+                    arcTo(3.5f, 3.5f, 254.89296762388372f, isMoreThanHalf = false, isPositiveArc = true, 11.643f, 6.731999999999999f)
+                    arcTo(3.48f, 3.48f, 307.5725950081192f, isMoreThanHalf = false, isPositiveArc = true, 13.001f, 9.5f)
+                    lineTo(11.001f, 9.5f)
+                    curveTo(11.001f, 9.033f, 10.789f, 8.6f, 10.418f, 8.313f)
+                }
+            }.build().also {
+                _hear = it
             }
-        }.build().also {
-            io.channel.bezier.icon._hear = it
-        }
     }
+
 
 private var _hear: ImageVector? = null
 
@@ -89,7 +91,7 @@ private var _hear: ImageVector? = null
 private fun HearIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Hear,
+            imageVector = BezierIcons.Hear.imageVector,
             contentDescription = null,
     )
 }

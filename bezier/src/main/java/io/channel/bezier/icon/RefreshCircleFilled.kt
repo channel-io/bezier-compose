@@ -16,50 +16,52 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.RefreshCircleFilled: ImageVector
-    get() {
-        return _refreshCircleFilled ?: ImageVector.Builder(
-                name = "RefreshCircleFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(18.2751f, 10.0973f)
-                curveTo(18.2751f, 10.2703f, 18.1341f, 10.4103f, 17.9621f, 10.4103f)
-                lineTo(14.4301f, 10.4103f)
-                curveTo(14.1511f, 10.4103f, 14.0111f, 10.0733f, 14.2091f, 9.8753f)
-                lineTo(15.5231f, 8.5613f)
-                curveTo(14.5771f, 7.6294f, 13.3291f, 7.1143f, 12.0001f, 7.1143f)
-                curveTo(9.2311f, 7.1143f, 6.9771f, 9.3673f, 6.9771f, 12.1373f)
-                curveTo(6.9771f, 14.9063f, 9.2311f, 17.1593f, 12.0001f, 17.1593f)
-                curveTo(14.7701f, 17.1593f, 17.0231f, 14.9063f, 17.0231f, 12.1373f)
-                lineTo(18.2731f, 12.1373f)
-                curveTo(18.2731f, 15.5953f, 15.4591f, 18.4093f, 12.0001f, 18.4093f)
-                curveTo(8.5411f, 18.4093f, 5.7271f, 15.5953f, 5.7271f, 12.1373f)
-                curveTo(5.7271f, 8.6784f, 8.5411f, 5.8643f, 12.0001f, 5.8643f)
-                curveTo(13.6631f, 5.8643f, 15.2261f, 6.5083f, 16.4081f, 7.6764f)
-                lineTo(17.7391f, 6.3443f)
-                curveTo(17.9371f, 6.1463f, 18.2751f, 6.2863f, 18.2751f, 6.5663f)
-                lineTo(18.2751f, 10.0973f)
-                close()
-                moveTo(12.0001f, 2.0004f)
-                curveTo(6.4771f, 2.0004f, 2.0001f, 6.4774f, 2.0001f, 12.0004f)
-                curveTo(2.0001f, 17.5224f, 6.4771f, 22.0004f, 12.0001f, 22.0004f)
-                curveTo(17.5231f, 22.0004f, 22.0001f, 17.5224f, 22.0001f, 12.0004f)
-                curveTo(22.0001f, 6.4774f, 17.5231f, 2.0004f, 12.0001f, 2.0004f)
-                close()
+val BezierIcons.RefreshCircleFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _refreshCircleFilled ?: ImageVector.Builder(
+                    name = "RefreshCircleFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(18.275f, 10.097f)
+                    arcTo(0.313f, 0.313f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 17.962f, 10.41f)
+                    lineTo(14.43f, 10.41f)
+                    arcTo(0.313f, 0.313f, 90.1182720449555f, isMoreThanHalf = false, isPositiveArc = true, 14.209999999999999f, 9.875f)
+                    lineTo(15.523f, 8.561f)
+                    arcTo(4.99f, 4.99f, 314.76359020523216f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 7.114f)
+                    arcTo(5.03f, 5.03f, 269.92031970209234f, isMoreThanHalf = false, isPositiveArc = false, 6.977f, 12.137f)
+                    arcTo(5.03f, 5.03f, 179.92031970208996f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 17.16f)
+                    arcTo(5.03f, 5.03f, 89.92033667546097f, isMoreThanHalf = false, isPositiveArc = false, 17.023f, 12.138f)
+                    lineTo(18.273f, 12.138f)
+                    arcTo(6.28f, 6.28f, 0.07295273220389978f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 18.41f)
+                    arcTo(6.28f, 6.28f, 90.0638182914954f, isMoreThanHalf = false, isPositiveArc = true, 5.727f, 12.138f)
+                    arcTo(6.28f, 6.28f, 180.05470563462498f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 5.864f)
+                    arcTo(6.23f, 6.23f, 269.8577531243173f, isMoreThanHalf = false, isPositiveArc = true, 16.408f, 7.676f)
+                    lineTo(17.739f, 6.344f)
+                    arcTo(0.314f, 0.314f, 225.00813400038328f, isMoreThanHalf = false, isPositiveArc = true, 18.275000000000002f, 6.566000000000001f)
+                    close()
+                    moveTo(12.0f, 2.0f)
+                    curveTo(6.477f, 2.0f, 2.0f, 6.477f, 2.0f, 12.0f)
+                    curveTo(2.0f, 17.523f, 6.477f, 22.0f, 12.0f, 22.0f)
+                    curveTo(17.523f, 22.0f, 22.0f, 17.522f, 22.0f, 12.0f)
+                    curveTo(22.0f, 6.4780000000000015f, 17.523f, 2.0f, 12.0f, 2.0f)
+                }
+            }.build().also {
+                _refreshCircleFilled = it
             }
-        }.build().also {
-            _refreshCircleFilled = it
-        }
     }
+
 
 private var _refreshCircleFilled: ImageVector? = null
 
@@ -68,7 +70,7 @@ private var _refreshCircleFilled: ImageVector? = null
 private fun RefreshCircleFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.RefreshCircleFilled,
+            imageVector = BezierIcons.RefreshCircleFilled.imageVector,
             contentDescription = null,
     )
 }

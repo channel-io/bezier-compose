@@ -16,45 +16,45 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ArrowTurnRightDown: ImageVector
-    get() {
-        return _arrowTurnRightDown ?: ImageVector.Builder(
-                name = "ArrowTurnRightDown",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(16.2071f, 9.7929f)
-                curveTo(15.8166f, 9.4024f, 15.1834f, 9.4024f, 14.7929f, 9.7929f)
-                curveTo(14.4024f, 10.1834f, 14.4024f, 10.8166f, 14.7929f, 11.2071f)
-                lineTo(17.5858f, 14.0f)
-                lineTo(9.0f, 14.0f)
-                curveTo(6.2386f, 14.0f, 4.0f, 11.7614f, 4.0f, 9.0f)
-                lineTo(4.0f, 5.0f)
-                curveTo(4.0f, 4.4477f, 3.5523f, 4.0f, 3.0f, 4.0f)
-                curveTo(2.4477f, 4.0f, 2.0f, 4.4477f, 2.0f, 5.0f)
-                lineTo(2.0f, 9.0f)
-                curveTo(2.0f, 12.866f, 5.134f, 16.0f, 9.0f, 16.0f)
-                lineTo(17.5858f, 16.0f)
-                lineTo(14.7929f, 18.7929f)
-                curveTo(14.4024f, 19.1834f, 14.4024f, 19.8166f, 14.7929f, 20.2071f)
-                curveTo(15.1834f, 20.5976f, 15.8166f, 20.5976f, 16.2071f, 20.2071f)
-                lineTo(20.7071f, 15.7071f)
-                curveTo(21.0976f, 15.3166f, 21.0976f, 14.6834f, 20.7071f, 14.2929f)
-                lineTo(16.2071f, 9.7929f)
-                close()
+val BezierIcons.ArrowTurnRightDown: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _arrowTurnRightDown ?: ImageVector.Builder(
+                    name = "ArrowTurnRightDown",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(16.207f, 9.793f)
+                    arcTo(1.0f, 1.0f, 315.99574461357975f, isMoreThanHalf = true, isPositiveArc = false, 14.793000000000001f, 11.206999999999999f)
+                    lineTo(17.586f, 14.0f)
+                    lineTo(9.0f, 14.0f)
+                    arcTo(5.0f, 5.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 4.0f, 9.0f)
+                    lineTo(4.0f, 5.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = false, 2.0f, 5.0f)
+                    lineTo(2.0f, 9.0f)
+                    arcTo(7.0f, 7.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 9.0f, 16.0f)
+                    lineTo(17.586f, 16.0f)
+                    lineTo(14.793f, 18.793f)
+                    arcTo(1.0f, 1.0f, 224.00425538642457f, isMoreThanHalf = false, isPositiveArc = false, 16.207f, 20.207f)
+                    lineTo(20.707f, 15.707f)
+                    arcTo(1.0f, 1.0f, 44.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 20.707f, 14.293000000000001f)
+                    close()
+                }
+            }.build().also {
+                _arrowTurnRightDown = it
             }
-        }.build().also {
-            _arrowTurnRightDown = it
-        }
     }
+
 
 private var _arrowTurnRightDown: ImageVector? = null
 
@@ -63,7 +63,7 @@ private var _arrowTurnRightDown: ImageVector? = null
 private fun ArrowTurnRightDownIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ArrowTurnRightDown,
+            imageVector = BezierIcons.ArrowTurnRightDown.imageVector,
             contentDescription = null,
     )
 }

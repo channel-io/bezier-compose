@@ -9,47 +9,50 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.TriangleUpdown: ImageVector
-    get() {
-        return io.channel.bezier.icon._triangleUpdown ?: ImageVector.Builder(
-                name = "TriangleUpdown",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(12.378f, 4.4364f)
-                curveTo(12.1786f, 4.2062f, 11.8214f, 4.2062f, 11.622f, 4.4364f)
-                lineTo(7.1621f, 9.5863f)
-                curveTo(7.0219f, 9.7482f, 7.1369f, 10.0f, 7.3511f, 10.0f)
-                lineTo(16.6489f, 10.0f)
-                curveTo(16.8631f, 10.0f, 16.9781f, 9.7482f, 16.8379f, 9.5863f)
-                lineTo(12.378f, 4.4364f)
-                close()
-                moveTo(12.378f, 19.5635f)
-                curveTo(12.1786f, 19.7938f, 11.8214f, 19.7938f, 11.622f, 19.5635f)
-                lineTo(7.1621f, 14.4136f)
-                curveTo(7.0219f, 14.2517f, 7.1369f, 14.0f, 7.3511f, 14.0f)
-                lineTo(16.6489f, 14.0f)
-                curveTo(16.8631f, 14.0f, 16.9781f, 14.2517f, 16.8379f, 14.4136f)
-                lineTo(12.378f, 19.5635f)
-                close()
+val BezierIcons.TriangleUpdown: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _triangleUpdown ?: ImageVector.Builder(
+                    name = "TriangleUpdown",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.378f, 4.436f)
+                    arcTo(0.5f, 0.5f, 319.1128244382922f, isMoreThanHalf = false, isPositiveArc = false, 11.622f, 4.436f)
+                    lineTo(7.162f, 9.586f)
+                    arcTo(0.25f, 0.25f, 220.9965654305348f, isMoreThanHalf = false, isPositiveArc = false, 7.352f, 10.0f)
+                    lineTo(16.649f, 10.0f)
+                    arcTo(0.25f, 0.25f, 90.0710341038469f, isMoreThanHalf = false, isPositiveArc = false, 16.838f, 9.586f)
+                    close()
+                    moveTo(12.378f, 19.564f)
+                    arcTo(0.5f, 0.5f, 40.887175561707785f, isMoreThanHalf = false, isPositiveArc = true, 11.622f, 19.564f)
+                    lineTo(7.162f, 14.414f)
+                    arcTo(0.25f, 0.25f, 139.0034345694652f, isMoreThanHalf = false, isPositiveArc = true, 7.352f, 14.0f)
+                    lineTo(16.649f, 14.0f)
+                    arcTo(0.25f, 0.25f, 269.9289658961531f, isMoreThanHalf = false, isPositiveArc = true, 16.838f, 14.414f)
+                    close()
+                }
+            }.build().also {
+                _triangleUpdown = it
             }
-        }.build().also {
-            io.channel.bezier.icon._triangleUpdown = it
-        }
     }
+
 
 private var _triangleUpdown: ImageVector? = null
 
@@ -58,7 +61,7 @@ private var _triangleUpdown: ImageVector? = null
 private fun TriangleUpdownIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.TriangleUpdown,
+            imageVector = BezierIcons.TriangleUpdown.imageVector,
             contentDescription = null,
     )
 }

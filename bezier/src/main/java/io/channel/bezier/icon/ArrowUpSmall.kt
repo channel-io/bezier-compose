@@ -9,46 +9,48 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ArrowUpSmall: ImageVector
-    get() {
-        return _arrowUpSmall ?: ImageVector.Builder(
-                name = "ArrowUpSmall",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(12.0f, 19.0f)
-                curveTo(12.5523f, 19.0f, 13.0f, 18.5523f, 13.0f, 18.0f)
-                lineTo(13.0f, 8.4142f)
-                lineTo(16.7929f, 12.2071f)
-                curveTo(17.1834f, 12.5976f, 17.8166f, 12.5976f, 18.2071f, 12.2071f)
-                curveTo(18.5976f, 11.8166f, 18.5976f, 11.1834f, 18.2071f, 10.7929f)
-                lineTo(12.7071f, 5.2929f)
-                curveTo(12.3166f, 4.9024f, 11.6834f, 4.9024f, 11.2929f, 5.2929f)
-                lineTo(5.7929f, 10.7929f)
-                curveTo(5.4024f, 11.1834f, 5.4024f, 11.8166f, 5.7929f, 12.2071f)
-                curveTo(6.1834f, 12.5976f, 6.8166f, 12.5976f, 7.2071f, 12.2071f)
-                lineTo(11.0f, 8.4142f)
-                lineTo(11.0f, 18.0f)
-                curveTo(11.0f, 18.5523f, 11.4477f, 19.0f, 12.0f, 19.0f)
-                close()
+val BezierIcons.ArrowUpSmall: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _arrowUpSmall ?: ImageVector.Builder(
+                    name = "ArrowUpSmall",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.0f, 19.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 13.0f, 18.0f)
+                    lineTo(13.0f, 8.414f)
+                    lineTo(16.793f, 12.207f)
+                    arcTo(1.0f, 1.0f, 134.00425538642241f, isMoreThanHalf = false, isPositiveArc = false, 18.207f, 10.793000000000001f)
+                    lineTo(12.707f, 5.293000000000001f)
+                    arcTo(1.0f, 1.0f, 314.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 11.293000000000001f, 5.293000000000001f)
+                    lineTo(5.793000000000001f, 10.793000000000001f)
+                    arcTo(1.0f, 1.0f, 225.99574461357972f, isMoreThanHalf = true, isPositiveArc = false, 7.207000000000001f, 12.207f)
+                    lineTo(11.0f, 8.414f)
+                    lineTo(11.0f, 18.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 19.0f)
+                }
+            }.build().also {
+                _arrowUpSmall = it
             }
-        }.build().also {
-            _arrowUpSmall = it
-        }
     }
+
 
 private var _arrowUpSmall: ImageVector? = null
 
@@ -57,7 +59,7 @@ private var _arrowUpSmall: ImageVector? = null
 private fun ArrowUpSmallIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ArrowUpSmall,
+            imageVector = BezierIcons.ArrowUpSmall.imageVector,
             contentDescription = null,
     )
 }

@@ -16,58 +16,58 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Column: ImageVector
-    get() {
-        return io.channel.bezier.icon._column ?: ImageVector.Builder(
-                name = "Column",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(14.0f, 6.0f)
-                lineTo(10.0f, 6.0f)
-                lineTo(10.0f, 18.0f)
-                lineTo(14.0f, 18.0f)
-                lineTo(14.0f, 6.0f)
-                close()
-                moveTo(16.0f, 6.0f)
-                lineTo(16.0f, 18.0f)
-                lineTo(19.0f, 18.0f)
-                curveTo(19.5523f, 18.0f, 20.0f, 17.5523f, 20.0f, 17.0f)
-                lineTo(20.0f, 7.0f)
-                curveTo(20.0f, 6.4477f, 19.5523f, 6.0f, 19.0f, 6.0f)
-                lineTo(16.0f, 6.0f)
-                close()
-                moveTo(5.0f, 6.0f)
-                lineTo(8.0f, 6.0f)
-                lineTo(8.0f, 18.0f)
-                lineTo(5.0f, 18.0f)
-                curveTo(4.4477f, 18.0f, 4.0f, 17.5523f, 4.0f, 17.0f)
-                lineTo(4.0f, 7.0f)
-                curveTo(4.0f, 6.4477f, 4.4477f, 6.0f, 5.0f, 6.0f)
-                close()
-                moveTo(5.0f, 4.0f)
-                curveTo(3.3431f, 4.0f, 2.0f, 5.3432f, 2.0f, 7.0f)
-                lineTo(2.0f, 17.0f)
-                curveTo(2.0f, 18.6569f, 3.3431f, 20.0f, 5.0f, 20.0f)
-                lineTo(19.0f, 20.0f)
-                curveTo(20.6569f, 20.0f, 22.0f, 18.6569f, 22.0f, 17.0f)
-                lineTo(22.0f, 7.0f)
-                curveTo(22.0f, 5.3432f, 20.6569f, 4.0f, 19.0f, 4.0f)
-                lineTo(5.0f, 4.0f)
-                close()
+val BezierIcons.Column: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _column ?: ImageVector.Builder(
+                    name = "Column",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(14.0f, 6.0f)
+                    lineTo(10.0f, 6.0f)
+                    lineTo(10.0f, 18.0f)
+                    lineTo(14.0f, 18.0f)
+                    close()
+                    moveTo(16.0f, 6.0f)
+                    lineTo(16.0f, 18.0f)
+                    lineTo(19.0f, 18.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 20.0f, 17.0f)
+                    lineTo(20.0f, 7.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 19.0f, 6.0f)
+                    close()
+                    moveTo(5.0f, 6.0f)
+                    lineTo(8.0f, 6.0f)
+                    lineTo(8.0f, 18.0f)
+                    lineTo(5.0f, 18.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 4.0f, 17.0f)
+                    lineTo(4.0f, 7.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 5.0f, 6.0f)
+                    moveTo(5.0f, 4.0f)
+                    arcTo(3.0f, 3.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 2.0f, 7.0f)
+                    lineTo(2.0f, 17.0f)
+                    arcTo(3.0f, 3.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 5.0f, 20.0f)
+                    lineTo(19.0f, 20.0f)
+                    arcTo(3.0f, 3.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 22.0f, 17.0f)
+                    lineTo(22.0f, 7.0f)
+                    arcTo(3.0f, 3.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 19.0f, 4.0f)
+                    close()
+                }
+            }.build().also {
+                _column = it
             }
-        }.build().also {
-            io.channel.bezier.icon._column = it
-        }
     }
+
 
 private var _column: ImageVector? = null
 
@@ -76,7 +76,7 @@ private var _column: ImageVector? = null
 private fun ColumnIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Column,
+            imageVector = BezierIcons.Column.imageVector,
             contentDescription = null,
     )
 }

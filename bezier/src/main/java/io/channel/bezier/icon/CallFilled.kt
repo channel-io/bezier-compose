@@ -9,43 +9,47 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CallFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._callFilled ?: ImageVector.Builder(
-                name = "CallFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(4.7f, 4.4549f)
-                curveTo(3.0859f, 6.069f, 3.0859f, 10.5883f, 8.2509f, 15.7532f)
-                curveTo(13.4158f, 20.9182f, 17.9352f, 20.9182f, 19.5492f, 19.3042f)
-                curveTo(20.5176f, 18.3357f, 20.7804f, 16.9199f, 20.1948f, 16.0761f)
-                curveTo(19.6783f, 15.3013f, 18.2207f, 14.1392f, 16.9667f, 14.1392f)
-                curveTo(15.6755f, 14.1392f, 14.6931f, 15.7658f, 14.0615f, 15.7532f)
-                curveTo(13.4298f, 15.7407f, 11.7864f, 15.0461f, 10.3722f, 13.6319f)
-                curveTo(8.958f, 12.2177f, 8.2634f, 10.5743f, 8.2509f, 9.9427f)
-                curveTo(8.2384f, 9.311f, 9.8649f, 8.3286f, 9.8649f, 7.0374f)
-                curveTo(9.8649f, 5.7835f, 8.7028f, 4.3258f, 7.9281f, 3.8093f)
-                curveTo(7.0842f, 3.2237f, 5.6684f, 3.4865f, 4.7f, 4.4549f)
-                close()
+val BezierIcons.CallFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _callFilled ?: ImageVector.Builder(
+                    name = "CallFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(4.7f, 4.455f)
+                    curveTo(3.0860000000000003f, 6.069f, 3.0860000000000003f, 10.588000000000001f, 8.25f, 15.753f)
+                    curveTo(13.416f, 20.918f, 17.935000000000002f, 20.918f, 19.55f, 19.304000000000002f)
+                    curveTo(20.518f, 18.336000000000002f, 20.78f, 16.92f, 20.195f, 16.076f)
+                    curveTo(19.678f, 15.301f, 18.221f, 14.139000000000001f, 16.967f, 14.139000000000001f)
+                    curveTo(15.675999999999998f, 14.139000000000001f, 14.692999999999998f, 15.766000000000002f, 14.062f, 15.753000000000002f)
+                    curveTo(13.43f, 15.741000000000001f, 11.786f, 15.046000000000001f, 10.372f, 13.632000000000001f)
+                    curveTo(8.958f, 12.218000000000002f, 8.263f, 10.574000000000002f, 8.251f, 9.942000000000002f)
+                    curveTo(8.238f, 9.311000000000002f, 9.865f, 8.329000000000002f, 9.865f, 7.037000000000003f)
+                    curveTo(9.865f, 5.783000000000003f, 8.703f, 4.326000000000002f, 7.928f, 3.8090000000000024f)
+                    curveTo(7.084f, 3.2240000000000024f, 5.668f, 3.4860000000000024f, 4.699999999999999f, 4.455000000000003f)
+                }
+            }.build().also {
+                _callFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._callFilled = it
-        }
     }
+
 
 private var _callFilled: ImageVector? = null
 
@@ -54,7 +58,7 @@ private var _callFilled: ImageVector? = null
 private fun CallFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CallFilled,
+            imageVector = BezierIcons.CallFilled.imageVector,
             contentDescription = null,
     )
 }

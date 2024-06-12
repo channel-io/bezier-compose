@@ -16,58 +16,53 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.PersonBlocked: ImageVector
-    get() {
-        return io.channel.bezier.icon._personBlocked ?: ImageVector.Builder(
-                name = "PersonBlocked",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(9.4841f, 11.0001f)
-                curveTo(11.4171f, 11.0001f, 12.9841f, 9.4331f, 12.9841f, 7.5001f)
-                curveTo(12.9841f, 5.5671f, 11.4171f, 4.0001f, 9.4841f, 4.0001f)
-                curveTo(7.5511f, 4.0001f, 5.9841f, 5.5671f, 5.9841f, 7.5001f)
-                curveTo(5.9841f, 9.4331f, 7.5511f, 11.0001f, 9.4841f, 11.0001f)
-                close()
-                moveTo(11.0002f, 17.0001f)
-                curveTo(11.0002f, 15.3281f, 11.6892f, 13.8141f, 12.7962f, 12.7261f)
-                curveTo(11.7862f, 12.2641f, 10.6672f, 12.0001f, 9.4842f, 12.0001f)
-                curveTo(5.2422f, 12.0001f, 1.7712f, 15.3021f, 1.5012f, 19.4761f)
-                curveTo(1.4822f, 19.7601f, 1.7222f, 20.0001f, 2.0072f, 20.0001f)
-                lineTo(11.8122f, 20.0001f)
-                curveTo(11.2992f, 19.1161f, 11.0002f, 18.0931f, 11.0002f, 17.0001f)
-                close()
-                moveTo(15.7152f, 19.6991f)
-                curveTo(16.1062f, 19.8861f, 16.5382f, 20.0001f, 17.0002f, 20.0001f)
-                curveTo(18.6542f, 20.0001f, 20.0002f, 18.6541f, 20.0002f, 17.0001f)
-                curveTo(20.0002f, 16.5381f, 19.8862f, 16.1061f, 19.6992f, 15.7151f)
-                lineTo(15.7152f, 19.6991f)
-                close()
-                moveTo(18.2852f, 14.3011f)
-                curveTo(17.8942f, 14.1131f, 17.4612f, 14.0001f, 17.0002f, 14.0001f)
-                curveTo(15.3462f, 14.0001f, 14.0002f, 15.3461f, 14.0002f, 17.0001f)
-                curveTo(14.0002f, 17.4621f, 14.1132f, 17.8941f, 14.3012f, 18.2851f)
-                lineTo(18.2852f, 14.3011f)
-                close()
-                moveTo(12.0002f, 17.0001f)
-                curveTo(12.0002f, 14.2381f, 14.2382f, 12.0001f, 17.0002f, 12.0001f)
-                curveTo(19.7612f, 12.0001f, 22.0002f, 14.2381f, 22.0002f, 17.0001f)
-                curveTo(22.0002f, 19.7611f, 19.7612f, 22.0001f, 17.0002f, 22.0001f)
-                curveTo(14.2382f, 22.0001f, 12.0002f, 19.7611f, 12.0002f, 17.0001f)
-                close()
+val BezierIcons.PersonBlocked: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _personBlocked ?: ImageVector.Builder(
+                    name = "PersonBlocked",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(9.484f, 11.0f)
+                    arcTo(3.5f, 3.5f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 9.484f, 4.0f)
+                    arcTo(3.5f, 3.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 9.484f, 11.0f)
+                    moveTo(11.0f, 17.0f)
+                    curveTo(11.0f, 15.328f, 11.69f, 13.814f, 12.796f, 12.725999999999999f)
+                    arcTo(7.9f, 7.9f, 294.7557511073756f, isMoreThanHalf = false, isPositiveArc = false, 9.484f, 12.0f)
+                    arcTo(8.0f, 8.0f, 270.0012851851782f, isMoreThanHalf = false, isPositiveArc = false, 1.5010000000000003f, 19.476f)
+                    arcTo(0.503f, 0.503f, 182.3941061184876f, isMoreThanHalf = false, isPositiveArc = false, 2.0070000000000006f, 20.0f)
+                    lineTo(11.812000000000001f, 20.0f)
+                    arcTo(5.96f, 5.96f, 149.74121327095736f, isMoreThanHalf = false, isPositiveArc = true, 11.0f, 17.0f)
+                    moveTo(15.715f, 19.7f)
+                    curveTo(16.106f, 19.886f, 16.538f, 20.0f, 17.0f, 20.0f)
+                    curveTo(18.654f, 20.0f, 20.0f, 18.654f, 20.0f, 17.0f)
+                    curveTo(20.0f, 16.538f, 19.886f, 16.106f, 19.7f, 15.715f)
+                    close()
+                    moveTo(18.285f, 14.300999999999998f)
+                    arcTo(2.95f, 2.95f, 296.0647735311907f, isMoreThanHalf = false, isPositiveArc = false, 17.0f, 14.000999999999998f)
+                    curveTo(15.346f, 14.000999999999998f, 14.0f, 15.345999999999998f, 14.0f, 17.000999999999998f)
+                    curveTo(14.0f, 17.461999999999996f, 14.113f, 17.894f, 14.301f, 18.284999999999997f)
+                    close()
+                    moveTo(12.0f, 17.001f)
+                    arcTo(5.0f, 5.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 22.0f, 17.001f)
+                    arcTo(5.0f, 5.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 17.001f)
+                }
+            }.build().also {
+                _personBlocked = it
             }
-        }.build().also {
-            io.channel.bezier.icon._personBlocked = it
-        }
     }
+
 
 private var _personBlocked: ImageVector? = null
 
@@ -76,7 +71,7 @@ private var _personBlocked: ImageVector? = null
 private fun PersonBlockedIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.PersonBlocked,
+            imageVector = BezierIcons.PersonBlocked.imageVector,
             contentDescription = null,
     )
 }

@@ -9,39 +9,42 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.HyphenBold: ImageVector
-    get() {
-        return _hyphenBold ?: ImageVector.Builder(
-                name = "HyphenBold",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(5.0f, 12.0f)
-                curveTo(5.0f, 11.1716f, 5.6716f, 10.5f, 6.5f, 10.5f)
-                lineTo(17.5f, 10.5f)
-                curveTo(18.3284f, 10.5f, 19.0f, 11.1716f, 19.0f, 12.0f)
-                curveTo(19.0f, 12.8284f, 18.3284f, 13.5f, 17.5f, 13.5f)
-                lineTo(6.5f, 13.5f)
-                curveTo(5.6716f, 13.5f, 5.0f, 12.8284f, 5.0f, 12.0f)
-                close()
+val BezierIcons.HyphenBold: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _hyphenBold ?: ImageVector.Builder(
+                    name = "HyphenBold",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(5.0f, 12.0f)
+                    arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 6.5f, 10.5f)
+                    lineTo(17.5f, 10.5f)
+                    arcTo(1.5f, 1.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 17.5f, 13.5f)
+                    lineTo(6.5f, 13.5f)
+                    arcTo(1.5f, 1.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 5.0f, 12.0f)
+                }
+            }.build().also {
+                _hyphenBold = it
             }
-        }.build().also {
-            _hyphenBold = it
-        }
     }
+
 
 private var _hyphenBold: ImageVector? = null
 
@@ -50,7 +53,7 @@ private var _hyphenBold: ImageVector? = null
 private fun HyphenBoldIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.HyphenBold,
+            imageVector = BezierIcons.HyphenBold.imageVector,
             contentDescription = null,
     )
 }

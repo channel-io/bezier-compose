@@ -16,50 +16,46 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Info: ImageVector
-    get() {
-        return io.channel.bezier.icon._info ?: ImageVector.Builder(
-                name = "Info",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0002f, 2.0001f)
-                curveTo(17.5228f, 2.0001f, 22.0002f, 6.4771f, 22.0002f, 12.0001f)
-                curveTo(22.0002f, 17.5231f, 17.5228f, 22.0001f, 12.0002f, 22.0001f)
-                curveTo(6.4769f, 22.0001f, 2.0002f, 17.5234f, 2.0002f, 12.0001f)
-                curveTo(2.0002f, 6.4768f, 6.4769f, 2.0001f, 12.0002f, 2.0001f)
-                close()
-                moveTo(12.0002f, 20.0001f)
-                curveTo(16.4183f, 20.0001f, 20.0002f, 16.4185f, 20.0002f, 12.0001f)
-                curveTo(20.0002f, 7.5817f, 16.4183f, 4.0001f, 12.0002f, 4.0001f)
-                curveTo(7.5815f, 4.0001f, 4.0002f, 7.5814f, 4.0002f, 12.0001f)
-                curveTo(4.0002f, 16.4188f, 7.5815f, 20.0001f, 12.0002f, 20.0001f)
-                close()
-                moveTo(12.0002f, 6.0001f)
-                curveTo(12.8292f, 6.0001f, 13.5002f, 6.6711f, 13.5002f, 7.5001f)
-                curveTo(13.5002f, 8.3281f, 12.8292f, 9.0001f, 12.0002f, 9.0001f)
-                curveTo(11.1712f, 9.0001f, 10.5002f, 8.3281f, 10.5002f, 7.5001f)
-                curveTo(10.5002f, 6.6711f, 11.1712f, 6.0001f, 12.0002f, 6.0001f)
-                close()
-                moveTo(13.0f, 18.0f)
-                lineTo(11.0f, 18.0f)
-                lineTo(11.0f, 10.0f)
-                lineTo(13.0f, 10.0f)
-                lineTo(13.0f, 18.0f)
-                close()
+val BezierIcons.Info: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _info ?: ImageVector.Builder(
+                    name = "Info",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(12.0f, 2.0f)
+                    curveTo(17.523f, 2.0f, 22.0f, 6.477f, 22.0f, 12.0f)
+                    curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
+                    curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
+                    curveTo(2.0f, 6.477f, 6.477f, 2.0f, 12.0f, 2.0f)
+                    moveTo(12.0f, 20.0f)
+                    arcTo(8.0f, 8.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 12.0f, 4.0f)
+                    arcTo(8.0f, 8.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 20.0f)
+                    moveTo(12.0f, 6.0f)
+                    arcTo(1.5f, 1.5f, 269.9618024053784f, isMoreThanHalf = true, isPositiveArc = true, 12.002f, 9.0f)
+                    arcTo(1.5f, 1.5f, 89.96180323325515f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 6.0f)
+                    moveTo(13.0f, 18.0f)
+                    lineTo(11.0f, 18.0f)
+                    lineTo(11.0f, 10.0f)
+                    lineTo(13.0f, 10.0f)
+                    close()
+                }
+            }.build().also {
+                _info = it
             }
-        }.build().also {
-            io.channel.bezier.icon._info = it
-        }
     }
+
 
 private var _info: ImageVector? = null
 
@@ -68,7 +64,7 @@ private var _info: ImageVector? = null
 private fun InfoIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Info,
+            imageVector = BezierIcons.Info.imageVector,
             contentDescription = null,
     )
 }

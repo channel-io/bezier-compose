@@ -16,48 +16,50 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Apple: ImageVector
-    get() {
-        return io.channel.bezier.icon._apple ?: ImageVector.Builder(
-                name = "Apple",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(15.832f, 1.0005f)
-                curveTo(15.832f, 1.0005f, 16.104f, 2.6285f, 14.799f, 4.1975f)
-                curveTo(13.405f, 5.8725f, 11.82f, 5.5975f, 11.82f, 5.5975f)
-                curveTo(11.82f, 5.5975f, 11.523f, 4.2805f, 12.692f, 2.7405f)
-                curveTo(14.006f, 1.0095f, 15.832f, 1.0005f, 15.832f, 1.0005f)
-                close()
-                moveTo(19.4688f, 7.8098f)
-                curveTo(19.4688f, 7.8098f, 17.3058f, 8.9148f, 17.3058f, 11.5988f)
-                curveTo(17.3058f, 14.6258f, 19.9998f, 15.6688f, 19.9998f, 15.6688f)
-                curveTo(19.9998f, 15.6688f, 18.1168f, 20.9708f, 15.5728f, 20.9708f)
-                curveTo(14.9959f, 20.9708f, 14.4822f, 20.7789f, 13.962f, 20.5844f)
-                curveTo(13.4281f, 20.3849f, 12.8873f, 20.1828f, 12.2638f, 20.1828f)
-                curveTo(11.5688f, 20.1828f, 10.8762f, 20.4338f, 10.2587f, 20.6576f)
-                curveTo(9.7622f, 20.8375f, 9.3143f, 20.9998f, 8.9528f, 20.9998f)
-                curveTo(6.6308f, 20.9998f, 3.6958f, 15.9708f, 3.6958f, 11.9288f)
-                curveTo(3.6958f, 7.9518f, 6.1798f, 5.8658f, 8.5098f, 5.8658f)
-                curveTo(9.3902f, 5.8658f, 10.1562f, 6.1606f, 10.7978f, 6.4076f)
-                curveTo(11.2603f, 6.5856f, 11.6582f, 6.7388f, 11.9878f, 6.7388f)
-                curveTo(12.2524f, 6.7388f, 12.6056f, 6.5965f, 13.0354f, 6.4232f)
-                curveTo(13.7037f, 6.1539f, 14.5574f, 5.8098f, 15.5518f, 5.8098f)
-                curveTo(18.3628f, 5.8098f, 19.4688f, 7.8098f, 19.4688f, 7.8098f)
-                close()
+val BezierIcons.Apple: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _apple ?: ImageVector.Builder(
+                    name = "Apple",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(15.832f, 1.0f)
+                    curveTo(15.832f, 1.0f, 16.104f, 2.628f, 14.799000000000001f, 4.197f)
+                    curveTo(13.405000000000001f, 5.872f, 11.82f, 5.5969999999999995f, 11.82f, 5.5969999999999995f)
+                    curveTo(11.82f, 5.5969999999999995f, 11.523f, 4.279999999999999f, 12.692f, 2.7399999999999993f)
+                    curveTo(14.006f, 1.01f, 15.832f, 1.0f, 15.832f, 1.0f)
+                    moveTo(19.469f, 7.81f)
+                    curveTo(19.469f, 7.81f, 17.306f, 8.915f, 17.306f, 11.599f)
+                    curveTo(17.306f, 14.626000000000001f, 20.0f, 15.669f, 20.0f, 15.669f)
+                    curveTo(20.0f, 15.669f, 18.117f, 20.971f, 15.573f, 20.971f)
+                    curveTo(14.996f, 20.971f, 14.483f, 20.779f, 13.962f, 20.584f)
+                    curveTo(13.427999999999999f, 20.384f, 12.887f, 20.183f, 12.264f, 20.183f)
+                    curveTo(11.568999999999999f, 20.183f, 10.876f, 20.433f, 10.259f, 20.658f)
+                    curveTo(9.762f, 20.838f, 9.314f, 21.0f, 8.953f, 21.0f)
+                    curveTo(6.630999999999999f, 21.0f, 3.6959999999999997f, 15.969999999999999f, 3.6959999999999997f, 11.929f)
+                    curveTo(3.6959999999999997f, 7.952f, 6.18f, 5.8660000000000005f, 8.51f, 5.8660000000000005f)
+                    curveTo(9.39f, 5.8660000000000005f, 10.155999999999999f, 6.1610000000000005f, 10.798f, 6.408f)
+                    curveTo(11.26f, 6.586f, 11.658f, 6.738f, 11.988f, 6.738f)
+                    curveTo(12.251999999999999f, 6.738f, 12.606f, 6.596f, 13.035f, 6.423f)
+                    curveTo(13.704f, 6.1530000000000005f, 14.557f, 5.8100000000000005f, 15.552f, 5.8100000000000005f)
+                    curveTo(18.362f, 5.8100000000000005f, 19.469f, 7.8100000000000005f, 19.469f, 7.8100000000000005f)
+                }
+            }.build().also {
+                _apple = it
             }
-        }.build().also {
-            io.channel.bezier.icon._apple = it
-        }
     }
+
 
 private var _apple: ImageVector? = null
 
@@ -66,7 +68,7 @@ private var _apple: ImageVector? = null
 private fun AppleIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Apple,
+            imageVector = BezierIcons.Apple.imageVector,
             contentDescription = null,
     )
 }

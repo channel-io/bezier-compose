@@ -16,68 +16,67 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.MobileMessaging: ImageVector
-    get() {
-        return _mobileMessaging ?: ImageVector.Builder(
-                name = "MobileMessaging",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(16.25f, 13.1871f)
-                curveTo(19.7018f, 13.1871f, 22.5f, 10.7886f, 22.5f, 7.8299f)
-                curveTo(22.5f, 4.8713f, 19.7018f, 2.4728f, 16.25f, 2.4728f)
-                curveTo(12.7982f, 2.4728f, 10.0f, 4.8713f, 10.0f, 7.8299f)
-                curveTo(10.0f, 9.6229f, 11.0276f, 11.2101f, 12.6055f, 12.1825f)
-                curveTo(12.3941f, 12.8727f, 12.053f, 13.4993f, 11.8032f, 13.9048f)
-                curveTo(11.689f, 14.0901f, 11.8347f, 14.3263f, 12.047f, 14.2783f)
-                curveTo(12.6879f, 14.1332f, 13.7753f, 13.7925f, 14.7462f, 13.031f)
-                curveTo(15.2279f, 13.133f, 15.7316f, 13.1871f, 16.25f, 13.1871f)
-                close()
-                moveTo(16.2503f, 8.7228f)
-                curveTo(15.7595f, 8.7228f, 15.3571f, 8.3211f, 15.3571f, 7.8296f)
-                curveTo(15.3571f, 7.3388f, 15.7595f, 6.9371f, 16.2503f, 6.9371f)
-                curveTo(16.7418f, 6.9371f, 17.1435f, 7.3388f, 17.1435f, 7.8296f)
-                curveTo(17.1435f, 8.3211f, 16.7418f, 8.7228f, 16.2503f, 8.7228f)
-                close()
-                moveTo(13.5718f, 8.7228f)
-                curveTo(13.0809f, 8.7228f, 12.6786f, 8.3211f, 12.6786f, 7.8296f)
-                curveTo(12.6786f, 7.3388f, 13.0809f, 6.9371f, 13.5718f, 6.9371f)
-                curveTo(14.0633f, 6.9371f, 14.4649f, 7.3388f, 14.4649f, 7.8296f)
-                curveTo(14.4649f, 8.3211f, 14.0633f, 8.7228f, 13.5718f, 8.7228f)
-                close()
-                moveTo(18.0357f, 7.8296f)
-                curveTo(18.0357f, 8.3211f, 18.438f, 8.7228f, 18.9289f, 8.7228f)
-                curveTo(19.4204f, 8.7228f, 19.8221f, 8.3211f, 19.8221f, 7.8296f)
-                curveTo(19.8221f, 7.3388f, 19.4204f, 6.9371f, 18.9289f, 6.9371f)
-                curveTo(18.438f, 6.9371f, 18.0357f, 7.3388f, 18.0357f, 7.8296f)
-                close()
-                moveTo(5.761f, 18.239f)
-                curveTo(1.4451f, 13.9231f, 1.4451f, 10.1467f, 2.7938f, 8.7979f)
-                curveTo(3.603f, 7.9887f, 4.7861f, 7.7691f, 5.4913f, 8.2584f)
-                curveTo(6.1386f, 8.69f, 7.1097f, 9.9081f, 7.1097f, 10.9559f)
-                curveTo(7.1097f, 11.5878f, 6.6435f, 12.1312f, 6.2593f, 12.5791f)
-                curveTo(5.9875f, 12.8959f, 5.7567f, 13.1649f, 5.761f, 13.3836f)
-                curveTo(5.7715f, 13.9114f, 6.3519f, 15.2846f, 7.5336f, 16.4664f)
-                curveTo(8.7154f, 17.6481f, 10.0886f, 18.2285f, 10.6164f, 18.239f)
-                curveTo(10.8351f, 18.2433f, 11.1041f, 18.0125f, 11.4209f, 17.7407f)
-                curveTo(11.8688f, 17.3565f, 12.4122f, 16.8903f, 13.0441f, 16.8903f)
-                curveTo(14.0919f, 16.8903f, 15.31f, 17.8614f, 15.7416f, 18.5087f)
-                curveTo(16.2309f, 19.2138f, 16.0113f, 20.3969f, 15.2021f, 21.2062f)
-                curveTo(13.8534f, 22.5549f, 10.0769f, 22.5549f, 5.761f, 18.239f)
-                close()
+val BezierIcons.MobileMessaging: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _mobileMessaging ?: ImageVector.Builder(
+                    name = "MobileMessaging",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(16.25f, 13.187f)
+                    curveTo(19.701999999999998f, 13.187f, 22.5f, 10.789f, 22.5f, 7.829999999999999f)
+                    curveTo(22.5f, 4.870999999999999f, 19.701999999999998f, 2.472999999999999f, 16.25f, 2.472999999999999f)
+                    curveTo(12.798000000000002f, 2.472999999999999f, 10.0f, 4.87f, 10.0f, 7.83f)
+                    curveTo(10.0f, 9.623f, 11.028f, 11.21f, 12.605f, 12.182f)
+                    curveTo(12.395f, 12.872f, 12.053f, 13.499f, 11.803f, 13.905000000000001f)
+                    curveTo(11.689f, 14.090000000000002f, 11.835f, 14.326f, 12.047f, 14.278f)
+                    curveTo(12.687000000000001f, 14.133000000000001f, 13.775f, 13.792f, 14.747f, 13.031f)
+                    curveTo(15.227f, 13.133000000000001f, 15.732f, 13.187000000000001f, 16.25f, 13.187000000000001f)
+                    moveTo(16.25f, 8.723f)
+                    arcTo(0.896f, 0.896f, 90.19151881577655f, isMoreThanHalf = false, isPositiveArc = true, 15.357f, 7.830000000000001f)
+                    curveTo(15.357f, 7.339000000000001f, 15.758999999999999f, 6.937000000000001f, 16.25f, 6.937000000000001f)
+                    curveTo(16.742f, 6.937000000000001f, 17.143f, 7.339000000000001f, 17.143f, 7.830000000000001f)
+                    arcTo(0.895f, 0.895f, 0.12789263013641017f, isMoreThanHalf = false, isPositiveArc = true, 16.25f, 8.723f)
+                    moveTo(13.572f, 8.723f)
+                    arcTo(0.896f, 0.896f, 90.19151881577655f, isMoreThanHalf = false, isPositiveArc = true, 12.678999999999998f, 7.830000000000001f)
+                    curveTo(12.678999999999998f, 7.339000000000001f, 13.080999999999998f, 6.937000000000001f, 13.572f, 6.937000000000001f)
+                    curveTo(14.063f, 6.937000000000001f, 14.465f, 7.339000000000001f, 14.465f, 7.830000000000001f)
+                    arcTo(0.895f, 0.895f, 0.12789263013641017f, isMoreThanHalf = false, isPositiveArc = true, 13.572f, 8.723f)
+                    moveTo(18.036f, 7.830000000000001f)
+                    curveTo(18.036f, 8.321000000000002f, 18.438000000000002f, 8.723f, 18.929000000000002f, 8.723f)
+                    arcTo(0.895f, 0.895f, 89.87210736986162f, isMoreThanHalf = false, isPositiveArc = false, 19.822000000000003f, 7.830000000000001f)
+                    arcTo(0.895f, 0.895f, 359.8721073698636f, isMoreThanHalf = false, isPositiveArc = false, 18.929000000000002f, 6.937000000000001f)
+                    arcTo(0.896f, 0.896f, 269.80848118422347f, isMoreThanHalf = false, isPositiveArc = false, 18.036f, 7.830000000000001f)
+                    moveTo(5.76f, 18.239f)
+                    curveTo(1.444f, 13.923000000000002f, 1.444f, 10.147f, 2.7929999999999997f, 8.798f)
+                    curveTo(3.602f, 7.9879999999999995f, 4.785f, 7.769f, 5.49f, 8.258f)
+                    curveTo(6.138f, 8.69f, 7.109f, 9.908f, 7.109f, 10.956f)
+                    curveTo(7.109f, 11.588f, 6.643f, 12.131f, 6.259f, 12.578999999999999f)
+                    curveTo(5.986000000000001f, 12.895999999999999f, 5.756f, 13.165f, 5.760000000000001f, 13.383999999999999f)
+                    curveTo(5.7700000000000005f, 13.910999999999998f, 6.3500000000000005f, 15.283999999999999f, 7.533f, 16.465999999999998f)
+                    curveTo(8.714f, 17.647999999999996f, 10.088000000000001f, 18.227999999999998f, 10.615f, 18.238999999999997f)
+                    curveTo(10.835f, 18.243f, 11.103f, 18.011999999999997f, 11.42f, 17.740999999999996f)
+                    curveTo(11.868f, 17.356999999999996f, 12.411f, 16.890999999999995f, 13.043f, 16.890999999999995f)
+                    curveTo(14.091f, 16.890999999999995f, 15.309f, 17.860999999999994f, 15.741f, 18.508999999999993f)
+                    curveTo(16.23f, 19.21399999999999f, 16.011f, 20.39699999999999f, 15.201f, 21.205999999999992f)
+                    curveTo(13.852f, 22.554999999999993f, 10.076f, 22.554999999999993f, 5.76f, 18.238999999999994f)
+                }
+            }.build().also {
+                _mobileMessaging = it
             }
-        }.build().also {
-            _mobileMessaging = it
-        }
     }
+
 
 private var _mobileMessaging: ImageVector? = null
 
@@ -86,7 +85,7 @@ private var _mobileMessaging: ImageVector? = null
 private fun MobileMessagingIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.MobileMessaging,
+            imageVector = BezierIcons.MobileMessaging.imageVector,
             contentDescription = null,
     )
 }

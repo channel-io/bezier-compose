@@ -16,68 +16,63 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Flashlight: ImageVector
-    get() {
-        return io.channel.bezier.icon._flashlight ?: ImageVector.Builder(
-                name = "Flashlight",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(11.0f, 3.0f)
-                curveTo(11.0f, 3.5523f, 11.4477f, 4.0f, 12.0f, 4.0f)
-                curveTo(12.5523f, 4.0f, 13.0f, 3.5523f, 13.0f, 3.0f)
-                lineTo(13.0f, 1.0f)
-                curveTo(13.0f, 0.4477f, 12.5523f, 0.0f, 12.0f, 0.0f)
-                curveTo(11.4477f, 0.0f, 11.0f, 0.4477f, 11.0f, 1.0f)
-                lineTo(11.0f, 3.0f)
-                close()
-                moveTo(5.1213f, 5.5355f)
-                curveTo(5.5118f, 5.9261f, 6.145f, 5.9261f, 6.5355f, 5.5355f)
-                curveTo(6.9261f, 5.145f, 6.9261f, 4.5118f, 6.5355f, 4.1213f)
-                lineTo(5.1213f, 2.7071f)
-                curveTo(4.7308f, 2.3166f, 4.0976f, 2.3166f, 3.7071f, 2.7071f)
-                curveTo(3.3166f, 3.0976f, 3.3166f, 3.7308f, 3.7071f, 4.1213f)
-                lineTo(5.1213f, 5.5355f)
-                close()
-                moveTo(17.7071f, 5.5355f)
-                curveTo(17.3166f, 5.145f, 17.3166f, 4.5118f, 17.7071f, 4.1213f)
-                lineTo(19.1213f, 2.7071f)
-                curveTo(19.5118f, 2.3166f, 20.145f, 2.3166f, 20.5355f, 2.7071f)
-                curveTo(20.9261f, 3.0976f, 20.9261f, 3.7308f, 20.5355f, 4.1213f)
-                lineTo(19.1213f, 5.5355f)
-                curveTo(18.7308f, 5.9261f, 18.0976f, 5.9261f, 17.7071f, 5.5355f)
-                close()
-                moveTo(7.0002f, 8.0001f)
-                lineTo(17.0002f, 8.0001f)
-                curveTo(17.5522f, 8.0001f, 18.0002f, 8.4481f, 18.0002f, 9.0001f)
-                lineTo(18.0002f, 11.6671f)
-                curveTo(18.0002f, 11.8831f, 17.9302f, 12.0931f, 17.8002f, 12.2671f)
-                lineTo(15.2002f, 15.7331f)
-                curveTo(15.0702f, 15.9061f, 15.0002f, 16.1171f, 15.0002f, 16.3331f)
-                lineTo(15.0002f, 21.0001f)
-                curveTo(15.0002f, 21.5521f, 14.5522f, 22.0001f, 14.0002f, 22.0001f)
-                lineTo(10.0002f, 22.0001f)
-                curveTo(9.4482f, 22.0001f, 9.0002f, 21.5521f, 9.0002f, 21.0001f)
-                lineTo(9.0002f, 16.3331f)
-                curveTo(9.0002f, 16.1171f, 8.9302f, 15.9061f, 8.8002f, 15.7331f)
-                lineTo(6.2002f, 12.2671f)
-                curveTo(6.0702f, 12.0931f, 6.0002f, 11.8831f, 6.0002f, 11.6671f)
-                lineTo(6.0002f, 9.0001f)
-                curveTo(6.0002f, 8.4481f, 6.4482f, 8.0001f, 7.0002f, 8.0001f)
-                close()
+val BezierIcons.Flashlight: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _flashlight ?: ImageVector.Builder(
+                    name = "Flashlight",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(11.0f, 3.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 13.0f, 3.0f)
+                    lineTo(13.0f, 1.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = false, 11.0f, 1.0f)
+                    close()
+                    moveTo(5.121f, 5.536f)
+                    arcTo(1.0f, 1.0f, 134.97976129384313f, isMoreThanHalf = false, isPositiveArc = false, 6.536f, 4.12f)
+                    lineTo(5.12f, 2.707f)
+                    arcTo(1.0f, 1.0f, 315.99574461357975f, isMoreThanHalf = true, isPositiveArc = false, 3.7060000000000004f, 4.1209999999999996f)
+                    close()
+                    moveTo(17.707f, 5.536f)
+                    arcTo(1.0f, 1.0f, 134.96812921607167f, isMoreThanHalf = false, isPositiveArc = true, 17.707f, 4.1209999999999996f)
+                    lineTo(19.121000000000002f, 2.707f)
+                    arcTo(1.0f, 1.0f, 224.97974638235135f, isMoreThanHalf = true, isPositiveArc = true, 20.536f, 4.1209999999999996f)
+                    lineTo(19.12f, 5.536f)
+                    arcTo(1.0f, 1.0f, 45.00865166283792f, isMoreThanHalf = false, isPositiveArc = true, 17.706f, 5.536f)
+                    moveTo(7.0f, 8.0f)
+                    lineTo(17.0f, 8.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 18.0f, 9.0f)
+                    lineTo(18.0f, 11.667f)
+                    curveTo(18.0f, 11.883f, 17.93f, 12.093f, 17.8f, 12.267f)
+                    lineTo(15.200000000000001f, 15.733f)
+                    arcTo(1.0f, 1.0f, 216.86989764584393f, isMoreThanHalf = false, isPositiveArc = false, 15.000000000000002f, 16.333000000000002f)
+                    lineTo(15.000000000000002f, 21.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 14.000000000000002f, 22.0f)
+                    lineTo(10.000000000000002f, 22.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 9.000000000000002f, 21.0f)
+                    lineTo(9.000000000000002f, 16.333f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 8.800000000000002f, 15.732999999999999f)
+                    lineTo(6.200000000000003f, 12.267f)
+                    curveTo(6.070000000000003f, 12.093f, 6.000000000000003f, 11.883f, 6.000000000000003f, 11.667f)
+                    lineTo(6.000000000000003f, 9.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 7.000000000000003f, 8.0f)
+                }
+            }.build().also {
+                _flashlight = it
             }
-        }.build().also {
-            io.channel.bezier.icon._flashlight = it
-        }
     }
+
 
 private var _flashlight: ImageVector? = null
 
@@ -86,7 +81,7 @@ private var _flashlight: ImageVector? = null
 private fun FlashlightIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Flashlight,
+            imageVector = BezierIcons.Flashlight.imageVector,
             contentDescription = null,
     )
 }

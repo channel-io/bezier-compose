@@ -16,44 +16,46 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ArrowLeftCircleFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._arrowLeftCircleFilled ?: ImageVector.Builder(
-                name = "ArrowLeftCircleFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(2.0f, 12.0f)
-                curveTo(2.0f, 6.478f, 6.477f, 2.0f, 12.0f, 2.0f)
-                curveTo(17.523f, 2.0f, 22.0f, 6.478f, 22.0f, 12.0f)
-                curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
-                curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
-                close()
-                moveTo(6.2929f, 11.2929f)
-                lineTo(11.2929f, 6.2929f)
-                lineTo(12.7071f, 7.7071f)
-                lineTo(9.4142f, 11.0f)
-                lineTo(18.0f, 11.0f)
-                lineTo(18.0f, 13.0f)
-                lineTo(9.4142f, 13.0f)
-                lineTo(12.7071f, 16.2929f)
-                lineTo(11.2929f, 17.7071f)
-                lineTo(6.2929f, 12.7071f)
-                curveTo(5.9024f, 12.3166f, 5.9024f, 11.6834f, 6.2929f, 11.2929f)
-                close()
+val BezierIcons.ArrowLeftCircleFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _arrowLeftCircleFilled ?: ImageVector.Builder(
+                    name = "ArrowLeftCircleFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(2.0f, 12.0f)
+                    curveTo(2.0f, 6.478f, 6.477f, 2.0f, 12.0f, 2.0f)
+                    curveTo(17.523f, 2.0f, 22.0f, 6.478f, 22.0f, 12.0f)
+                    curveTo(22.0f, 17.522f, 17.523f, 22.0f, 12.0f, 22.0f)
+                    curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
+                    moveTo(6.293f, 11.293f)
+                    lineTo(11.293f, 6.292999999999999f)
+                    lineTo(12.706999999999999f, 7.706999999999999f)
+                    lineTo(9.414f, 11.0f)
+                    lineTo(18.0f, 11.0f)
+                    lineTo(18.0f, 13.0f)
+                    lineTo(9.414f, 13.0f)
+                    lineTo(12.707f, 16.293f)
+                    lineTo(11.293000000000001f, 17.707f)
+                    lineTo(6.293000000000001f, 12.707f)
+                    arcTo(1.0f, 1.0f, 135.00865166283802f, isMoreThanHalf = false, isPositiveArc = true, 6.293000000000001f, 11.293000000000001f)
+                }
+            }.build().also {
+                _arrowLeftCircleFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._arrowLeftCircleFilled = it
-        }
     }
+
 
 private var _arrowLeftCircleFilled: ImageVector? = null
 
@@ -62,7 +64,7 @@ private var _arrowLeftCircleFilled: ImageVector? = null
 private fun ArrowLeftCircleFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ArrowLeftCircleFilled,
+            imageVector = BezierIcons.ArrowLeftCircleFilled.imageVector,
             contentDescription = null,
     )
 }

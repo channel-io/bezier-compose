@@ -16,37 +16,39 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ChevronSmallLeft: ImageVector
-    get() {
-        return io.channel.bezier.icon._chevronSmallLeft ?: ImageVector.Builder(
-                name = "ChevronSmallLeft",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(14.2071f, 17.2071f)
-                curveTo(13.8166f, 17.5976f, 13.1834f, 17.5976f, 12.7929f, 17.2071f)
-                lineTo(8.2929f, 12.7071f)
-                curveTo(7.9024f, 12.3166f, 7.9024f, 11.6834f, 8.2929f, 11.2929f)
-                lineTo(12.7929f, 6.7929f)
-                curveTo(13.1834f, 6.4024f, 13.8166f, 6.4024f, 14.2071f, 6.7929f)
-                curveTo(14.5976f, 7.1834f, 14.5976f, 7.8166f, 14.2071f, 8.2071f)
-                lineTo(10.4142f, 12.0f)
-                lineTo(14.2071f, 15.7929f)
-                curveTo(14.5976f, 16.1834f, 14.5976f, 16.8166f, 14.2071f, 17.2071f)
-                close()
+val BezierIcons.ChevronSmallLeft: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _chevronSmallLeft ?: ImageVector.Builder(
+                    name = "ChevronSmallLeft",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(14.207f, 17.207f)
+                    arcTo(1.0f, 1.0f, 45.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 12.793000000000001f, 17.207f)
+                    lineTo(8.293000000000001f, 12.707f)
+                    arcTo(1.0f, 1.0f, 135.00865166283802f, isMoreThanHalf = false, isPositiveArc = true, 8.293000000000001f, 11.293000000000001f)
+                    lineTo(12.793000000000001f, 6.793000000000001f)
+                    arcTo(1.0f, 1.0f, 224.00425538642025f, isMoreThanHalf = true, isPositiveArc = true, 14.207f, 8.207f)
+                    lineTo(10.414f, 12.0f)
+                    lineTo(14.207f, 15.793f)
+                    arcTo(1.0f, 1.0f, 315.0086516628379f, isMoreThanHalf = false, isPositiveArc = true, 14.207f, 17.207f)
+                }
+            }.build().also {
+                _chevronSmallLeft = it
             }
-        }.build().also {
-            io.channel.bezier.icon._chevronSmallLeft = it
-        }
     }
+
 
 private var _chevronSmallLeft: ImageVector? = null
 
@@ -55,7 +57,7 @@ private var _chevronSmallLeft: ImageVector? = null
 private fun ChevronSmallLeftIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ChevronSmallLeft,
+            imageVector = BezierIcons.ChevronSmallLeft.imageVector,
             contentDescription = null,
     )
 }
