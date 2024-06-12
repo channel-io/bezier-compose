@@ -13,9 +13,12 @@ import io.channel.bezier.compose.LocalColors
 fun Modifier.bezierShadow(style: ShadowStyle, shape: Shape) = this.then(ShadowElement(style, shape))
 
 enum class ShadowStyle {
-    Ev1,
-    Ev2,
-    Ev3,
+    Shadow1,
+    Shadow2,
+    Shadow3,
+    Shadow4,
+    Shadow5,
+    Shadow6,
 }
 
 private data class ShadowElement(
@@ -72,25 +75,46 @@ private class ShadowModifier(
         val colors = currentValueOf(LocalColors)
 
         return when (this) {
-            ShadowStyle.Ev1 -> ShadowInfo(
+            ShadowStyle.Shadow1 -> ShadowInfo(
                 color = colors.shdwMedium,
                 x = 0.dp,
                 y = 1.dp,
                 blur = 4.dp,
             )
 
-            ShadowStyle.Ev2 -> ShadowInfo(
+            ShadowStyle.Shadow2 -> ShadowInfo(
                 color = colors.shdwMedium,
                 x = 0.dp,
                 y = 2.dp,
                 blur = 6.dp,
             )
 
-            ShadowStyle.Ev3 -> ShadowInfo(
+            ShadowStyle.Shadow3 -> ShadowInfo(
                 color = colors.shdwLarge,
                 x = 0.dp,
                 y = 4.dp,
                 blur = 20.dp,
+            )
+
+            ShadowStyle.Shadow4 -> ShadowInfo(
+                color = colors.shdwXlarge,
+                x = 0.dp,
+                y = 4.dp,
+                blur = 24.dp,
+            )
+
+            ShadowStyle.Shadow5 -> ShadowInfo(
+                color = colors.shdwXlarge,
+                x = 0.dp,
+                y = 6.dp,
+                blur = 40.dp,
+            )
+
+            ShadowStyle.Shadow6 -> ShadowInfo(
+                color = colors.shdwXlarge,
+                x = 0.dp,
+                y = 12.dp,
+                blur = 60.dp,
             )
         }
     }
