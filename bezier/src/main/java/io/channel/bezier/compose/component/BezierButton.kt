@@ -1,5 +1,6 @@
 package io.channel.bezier.compose.component
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -20,15 +21,20 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
 import io.channel.bezier.compose.color_v2.BezierColor
 import io.channel.bezier.extension.thenIf
+import io.channel.bezier.icon.ArrowRight
+import io.channel.bezier.icon.Plus
 
 @Composable
 fun BezierButton(
@@ -38,8 +44,8 @@ fun BezierButton(
         color: BezierButtonColors,
         onClick: () -> Unit,
         modifier: Modifier = Modifier,
-        prefixContent: Painter? = null, // TODO : 스펙이 확장되기 이전까지는 Painter로 합니다.
-        suffixContent: Painter? = null,
+        prefixContent: BezierButtonContent? = null,
+        suffixContent: BezierButtonContent? = null,
         isLoading: Boolean = false,
         enabled: Boolean = true,
 ) {
@@ -71,11 +77,11 @@ fun BezierButton(
                 verticalAlignment = Alignment.CenterVertically,
         ) {
             if (prefixContent != null) {
-                Icon(
-                        modifier = Modifier.size(size.iconSize),
-                        painter = prefixContent,
-                        contentDescription = null,
-                        tint = colorSchemes.contentColor(enabled),
+                BezierButtonContent(
+                        content = prefixContent,
+                        size = size,
+                        colorSchemes = colorSchemes,
+                        enabled = enabled,
                 )
             }
 
@@ -87,14 +93,45 @@ fun BezierButton(
             )
 
             if (suffixContent != null) {
-                Icon(
-                        modifier = Modifier.size(size.iconSize),
-                        painter = suffixContent,
-                        contentDescription = null,
-                        tint = colorSchemes.contentColor(enabled),
+                BezierButtonContent(
+                        content = suffixContent,
+                        size = size,
+                        colorSchemes = colorSchemes,
+                        enabled = enabled,
                 )
             }
         }
+    }
+}
+
+@Composable
+private fun BezierButtonContent(
+        content: BezierButtonContent,
+        size: BezierButtonSize,
+        colorSchemes: BezierButtonColorSchemes,
+        enabled: Boolean,
+) {
+    when (content) {
+        is BezierButtonContent.Icon -> Icon(
+                modifier = Modifier.size(size.iconSize),
+                painter = rememberVectorPainter(content.icon.imageVector),
+                contentDescription = null,
+                tint = colorSchemes.contentColor(enabled),
+        )
+
+        // TODO : Not Implementation
+        is BezierButtonContent.Avatar -> Box(
+                modifier = Modifier
+                        .size(size.iconSize)
+                        .background(colorSchemes.backgroundColor(enabled))
+        )
+
+        // TODO : Not Implementation
+        is BezierButtonContent.Emoji -> Image(
+                modifier = Modifier.size(size.iconSize),
+                painter = content.painter,
+                contentDescription = null,
+        )
     }
 }
 
@@ -292,8 +329,8 @@ private fun BezierButtonStylePreview() {
                                 size = BezierButtonSize.Medium,
                                 variant = variant,
                                 color = color,
-                                prefixContent = painterResource(id = R.drawable.icon_plus),
-                                suffixContent = painterResource(id = R.drawable.icon_arrow_right),
+                                prefixContent = BezierButtonContent.Icon(BezierIcons.Plus),
+                                suffixContent = BezierButtonContent.Icon(BezierIcons.ArrowRight),
                                 onClick = { },
                         )
                     }
@@ -317,8 +354,8 @@ private fun BezierButtonSizePreview() {
                         size = size,
                         variant = BezierButtonVariants.Primary,
                         color = BezierButtonColors.Blue,
-                        prefixContent = painterResource(id = R.drawable.icon_plus),
-                        suffixContent = painterResource(id = R.drawable.icon_arrow_right),
+                        prefixContent = BezierButtonContent.Icon(BezierIcons.Plus),
+                        suffixContent = BezierButtonContent.Icon(BezierIcons.ArrowRight),
                         onClick = { },
                 )
             }
@@ -350,8 +387,8 @@ private fun BezierButtonLoadingPreview() {
                 variant = BezierButtonVariants.Primary,
                 color = BezierButtonColors.Blue,
                 onClick = { },
-                prefixContent = painterResource(id = R.drawable.icon_plus),
-                suffixContent = painterResource(id = R.drawable.icon_arrow_right),
+                prefixContent = BezierButtonContent.Icon(BezierIcons.Plus),
+                suffixContent = BezierButtonContent.Icon(BezierIcons.ArrowRight),
                 isLoading = true,
         )
     }
@@ -371,8 +408,8 @@ private fun BezierButtonEnabledPreview() {
                     variant = BezierButtonVariants.Primary,
                     color = BezierButtonColors.Blue,
                     onClick = { },
-                    prefixContent = painterResource(id = R.drawable.icon_plus),
-                    suffixContent = painterResource(id = R.drawable.icon_arrow_right),
+                    prefixContent = BezierButtonContent.Icon(BezierIcons.Plus),
+                    suffixContent = BezierButtonContent.Icon(BezierIcons.ArrowRight),
                     enabled = true,
             )
 
@@ -382,10 +419,16 @@ private fun BezierButtonEnabledPreview() {
                     variant = BezierButtonVariants.Primary,
                     color = BezierButtonColors.Blue,
                     onClick = { },
-                    prefixContent = painterResource(id = R.drawable.icon_plus),
-                    suffixContent = painterResource(id = R.drawable.icon_arrow_right),
+                    prefixContent = BezierButtonContent.Icon(BezierIcons.Plus),
+                    suffixContent = BezierButtonContent.Icon(BezierIcons.ArrowRight),
                     enabled = false,
             )
         }
     }
+}
+
+sealed interface BezierButtonContent {
+    data class Icon(val icon: BezierIcon) : BezierButtonContent
+    data class Avatar(val painter: Painter) : BezierButtonContent
+    data class Emoji(val painter: Painter) : BezierButtonContent
 }
