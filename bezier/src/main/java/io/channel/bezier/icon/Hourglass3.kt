@@ -16,88 +16,82 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Hourglass3: ImageVector
-    get() {
-        return io.channel.bezier.icon._hourglass3 ?: ImageVector.Builder(
-                name = "Hourglass3",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(17.0002f, 6.5528f)
-                curveTo(17.0002f, 6.9338f, 16.8552f, 7.3068f, 16.5822f, 7.6308f)
-                lineTo(13.6882f, 11.0678f)
-                curveTo(13.2322f, 11.6088f, 13.2322f, 12.3918f, 13.6872f, 12.9318f)
-                lineTo(16.5822f, 16.3688f)
-                curveTo(16.8552f, 16.6938f, 17.0002f, 17.0668f, 17.0002f, 17.4478f)
-                lineTo(17.0002f, 19.9998f)
-                lineTo(7.0002f, 19.9998f)
-                lineTo(7.0002f, 17.4478f)
-                curveTo(7.0002f, 17.0668f, 7.1452f, 16.6938f, 7.4182f, 16.3688f)
-                lineTo(10.3132f, 12.9308f)
-                curveTo(10.7672f, 12.3918f, 10.7672f, 11.6088f, 10.3132f, 11.0688f)
-                lineTo(7.4182f, 7.6318f)
-                curveTo(7.1452f, 7.3068f, 7.0002f, 6.9338f, 7.0002f, 6.5518f)
-                lineTo(7.0002f, 3.9998f)
-                lineTo(17.0002f, 3.9998f)
-                lineTo(17.0002f, 6.5528f)
-                close()
-                moveTo(19.0002f, 6.5528f)
-                lineTo(19.0002f, 3.9998f)
-                curveTo(19.0002f, 2.8978f, 18.1032f, 1.9998f, 17.0002f, 1.9998f)
-                lineTo(7.0002f, 1.9998f)
-                curveTo(5.8972f, 1.9998f, 5.0002f, 2.8978f, 5.0002f, 3.9998f)
-                lineTo(5.0002f, 6.5518f)
-                curveTo(5.0002f, 7.4098f, 5.3072f, 8.2298f, 5.8882f, 8.9198f)
-                lineTo(8.4822f, 11.9998f)
-                lineTo(5.8892f, 15.0798f)
-                curveTo(5.3072f, 15.7708f, 5.0002f, 16.5888f, 5.0002f, 17.4478f)
-                lineTo(5.0002f, 19.9998f)
-                curveTo(5.0002f, 21.1028f, 5.8972f, 21.9998f, 7.0002f, 21.9998f)
-                lineTo(17.0002f, 21.9998f)
-                curveTo(18.1032f, 21.9998f, 19.0002f, 21.1028f, 19.0002f, 19.9998f)
-                lineTo(19.0002f, 17.4478f)
-                curveTo(19.0002f, 16.6008f, 18.6852f, 15.7598f, 18.1122f, 15.0798f)
-                lineTo(15.5182f, 11.9998f)
-                lineTo(18.1122f, 8.9188f)
-                curveTo(18.6932f, 8.2288f, 19.0002f, 7.4098f, 19.0002f, 6.5528f)
-                close()
-                moveTo(12.0002f, 13.0352f)
-                curveTo(11.7032f, 13.0352f, 11.4242f, 13.1652f, 11.2332f, 13.3932f)
-                curveTo(8.1451f, 17.0869f, 8.0067f, 17.2524f, 8.0005f, 17.4228f)
-                curveTo(8.0002f, 17.4308f, 8.0002f, 17.4388f, 8.0002f, 17.4472f)
-                lineTo(8.0002f, 18.5002f)
-                lineTo(8.0002f, 19.0002f)
-                lineTo(8.5002f, 19.0002f)
-                lineTo(15.5002f, 19.0002f)
-                lineTo(16.0002f, 19.0002f)
-                lineTo(16.0002f, 18.5002f)
-                lineTo(16.0002f, 17.4472f)
-                curveTo(16.0002f, 17.4388f, 16.0002f, 17.4308f, 15.9999f, 17.4228f)
-                curveTo(15.9937f, 17.2524f, 15.8552f, 17.0869f, 12.7662f, 13.3932f)
-                curveTo(12.5762f, 13.1662f, 12.2962f, 13.0352f, 12.0002f, 13.0352f)
-                close()
-                moveTo(9.3068f, 8.322f)
-                lineTo(9.0358f, 8.0f)
-                lineTo(14.9638f, 8.0f)
-                lineTo(14.6928f, 8.322f)
-                lineTo(12.7648f, 10.611f)
-                curveTo(12.5748f, 10.838f, 12.2958f, 10.967f, 11.9998f, 10.967f)
-                curveTo(11.7038f, 10.967f, 11.4258f, 10.838f, 11.2348f, 10.611f)
-                lineTo(9.3068f, 8.322f)
-                close()
+val BezierIcons.Hourglass3: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _hourglass3 ?: ImageVector.Builder(
+                    name = "Hourglass3",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(17.0f, 6.553f)
+                    curveTo(17.0f, 6.933f, 16.855f, 7.307f, 16.582f, 7.631f)
+                    lineTo(13.688f, 11.068f)
+                    arcTo(1.44f, 1.44f, 220.33249525735715f, isMoreThanHalf = false, isPositiveArc = false, 13.688f, 12.932f)
+                    lineTo(16.582f, 16.369f)
+                    curveTo(16.855f, 16.694f, 17.0f, 17.067f, 17.0f, 17.448f)
+                    lineTo(17.0f, 20.0f)
+                    lineTo(7.0f, 20.0f)
+                    lineTo(7.0f, 17.448f)
+                    curveTo(7.0f, 17.067f, 7.145f, 16.694f, 7.418f, 16.368000000000002f)
+                    lineTo(10.313f, 12.931000000000003f)
+                    arcTo(1.44f, 1.44f, 40.280319875445535f, isMoreThanHalf = false, isPositiveArc = false, 10.313f, 11.069000000000003f)
+                    lineTo(7.418f, 7.632f)
+                    curveTo(7.145f, 7.307f, 7.0f, 6.934f, 7.0f, 6.552f)
+                    lineTo(7.0f, 4.0f)
+                    lineTo(17.0f, 4.0f)
+                    close()
+                    moveTo(19.0f, 6.553f)
+                    lineTo(19.0f, 4.0f)
+                    curveTo(19.0f, 2.8979999999999997f, 18.103f, 2.0f, 17.0f, 2.0f)
+                    lineTo(7.0f, 2.0f)
+                    curveTo(5.897f, 2.0f, 5.0f, 2.898f, 5.0f, 4.0f)
+                    lineTo(5.0f, 6.552f)
+                    curveTo(5.0f, 7.409999999999999f, 5.307f, 8.23f, 5.888f, 8.92f)
+                    lineTo(8.482f, 12.0f)
+                    lineTo(5.89f, 15.08f)
+                    curveTo(5.307f, 15.77f, 5.0f, 16.589f, 5.0f, 17.448f)
+                    lineTo(5.0f, 20.0f)
+                    curveTo(5.0f, 21.103f, 5.897f, 22.0f, 7.0f, 22.0f)
+                    lineTo(17.0f, 22.0f)
+                    curveTo(18.103f, 22.0f, 19.0f, 21.103f, 19.0f, 20.0f)
+                    lineTo(19.0f, 17.448f)
+                    curveTo(19.0f, 16.601f, 18.685f, 15.76f, 18.112f, 15.08f)
+                    lineTo(15.518f, 12.0f)
+                    lineTo(18.112000000000002f, 8.919f)
+                    curveTo(18.693f, 8.229000000000001f, 19.000000000000004f, 7.409000000000001f, 19.000000000000004f, 6.553000000000001f)
+                    moveTo(12.000000000000004f, 13.035f)
+                    arcTo(1.0f, 1.0f, 270.01692097620617f, isMoreThanHalf = false, isPositiveArc = false, 11.233000000000004f, 13.393f)
+                    curveTo(8.145000000000003f, 17.087f, 8.007000000000005f, 17.253f, 8.000000000000004f, 17.423000000000002f)
+                    lineTo(8.000000000000004f, 19.0f)
+                    lineTo(16.000000000000004f, 19.0f)
+                    lineTo(16.000000000000004f, 17.423000000000002f)
+                    curveTo(15.994000000000003f, 17.253f, 15.855000000000004f, 17.087000000000003f, 12.766000000000004f, 13.393f)
+                    arcTo(1.0f, 1.0f, 320.0589019218899f, isMoreThanHalf = false, isPositiveArc = false, 12.000000000000004f, 13.035f)
+                    moveTo(9.307f, 8.322f)
+                    lineTo(9.036f, 8.0f)
+                    lineTo(14.963999999999999f, 8.0f)
+                    lineTo(14.692999999999998f, 8.322f)
+                    lineTo(12.764999999999997f, 10.610999999999999f)
+                    arcTo(1.0f, 1.0f, 40.090740224788426f, isMoreThanHalf = false, isPositiveArc = true, 11.999999999999996f, 10.966999999999999f)
+                    arcTo(1.0f, 1.0f, 90.0014604719923f, isMoreThanHalf = false, isPositiveArc = true, 11.234999999999996f, 10.610999999999999f)
+                    close()
+                }
+            }.build().also {
+                _hourglass3 = it
             }
-        }.build().also {
-            io.channel.bezier.icon._hourglass3 = it
-        }
     }
+
 
 private var _hourglass3: ImageVector? = null
 
@@ -106,7 +100,7 @@ private var _hourglass3: ImageVector? = null
 private fun Hourglass3IconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Hourglass3,
+            imageVector = BezierIcons.Hourglass3.imageVector,
             contentDescription = null,
     )
 }

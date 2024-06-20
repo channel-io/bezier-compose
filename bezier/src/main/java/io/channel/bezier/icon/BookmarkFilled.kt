@@ -16,37 +16,40 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.BookmarkFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._bookmarkFilled ?: ImageVector.Builder(
-                name = "BookmarkFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(19.0072f, 3.9929f)
-                curveTo(19.0032f, 2.8911f, 18.109f, 2.0001f, 17.0073f, 2.0001f)
-                lineTo(6.9996f, 2.0001f)
-                curveTo(5.895f, 2.0001f, 4.9996f, 2.8956f, 4.9996f, 4.0001f)
-                lineTo(4.9996f, 19.5774f)
-                curveTo(4.9996f, 20.4257f, 5.9894f, 20.8887f, 6.6405f, 20.345f)
-                lineTo(12.0356f, 15.8401f)
-                lineTo(17.4229f, 20.3384f)
-                curveTo(18.0753f, 20.8832f, 19.0669f, 20.4172f, 19.0638f, 19.5672f)
-                lineTo(19.0072f, 3.9929f)
-                close()
+val BezierIcons.BookmarkFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _bookmarkFilled ?: ImageVector.Builder(
+                    name = "BookmarkFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(19.007f, 4.993f)
+                    arcTo(2.0f, 2.0f, 359.7994643633512f, isMoreThanHalf = false, isPositiveArc = false, 17.007f, 3.0f)
+                    lineTo(7.0f, 3.0f)
+                    arcTo(2.0f, 2.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 5.0f, 5.0f)
+                    lineTo(5.0f, 20.576999999999998f)
+                    arcTo(1.0f, 1.0f, 179.97852267806027f, isMoreThanHalf = false, isPositiveArc = false, 6.64f, 21.345f)
+                    lineTo(12.036f, 16.84f)
+                    lineTo(17.423f, 21.338f)
+                    arcTo(1.0f, 1.0f, 129.79191809666034f, isMoreThanHalf = false, isPositiveArc = false, 19.063f, 20.568f)
+                    close()
+                }
+            }.build().also {
+                _bookmarkFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._bookmarkFilled = it
-        }
     }
+
 
 private var _bookmarkFilled: ImageVector? = null
 
@@ -55,7 +58,7 @@ private var _bookmarkFilled: ImageVector? = null
 private fun BookmarkFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.BookmarkFilled,
+            imageVector = BezierIcons.BookmarkFilled.imageVector,
             contentDescription = null,
     )
 }

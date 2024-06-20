@@ -16,46 +16,44 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ChatBubbleAltPushFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._chatBubbleAltPushFilled ?: ImageVector.Builder(
-                name = "ChatBubbleAltPushFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(18.5f, 10.0f)
-                curveTo(20.433f, 10.0f, 22.0f, 8.433f, 22.0f, 6.5f)
-                curveTo(22.0f, 4.567f, 20.433f, 3.0f, 18.5f, 3.0f)
-                curveTo(16.567f, 3.0f, 15.0f, 4.567f, 15.0f, 6.5f)
-                curveTo(15.0f, 8.433f, 16.567f, 10.0f, 18.5f, 10.0f)
-                close()
-                moveTo(12.0f, 4.0f)
-                curveTo(12.5268f, 4.0f, 13.0437f, 4.0361f, 13.5472f, 4.1056f)
-                curveTo(13.1966f, 4.8294f, 13.0f, 5.6417f, 13.0f, 6.5f)
-                curveTo(13.0f, 9.5376f, 15.4624f, 12.0f, 18.5f, 12.0f)
-                curveTo(19.584f, 12.0f, 20.5947f, 11.6864f, 21.4464f, 11.1451f)
-                curveTo(21.4818f, 11.4259f, 21.5f, 11.7112f, 21.5f, 12.0f)
-                curveTo(21.5f, 16.4183f, 17.2467f, 20.0f, 12.0f, 20.0f)
-                curveTo(11.3111f, 20.0f, 10.6393f, 19.9383f, 9.9921f, 19.821f)
-                curveTo(8.5759f, 21.032f, 6.939f, 21.612f, 5.8791f, 21.8801f)
-                curveTo(5.457f, 21.9869f, 5.1612f, 21.5173f, 5.3821f, 21.1421f)
-                curveTo(5.7698f, 20.4835f, 6.2467f, 19.5469f, 6.5246f, 18.5384f)
-                curveTo(4.0899f, 17.0899f, 2.5f, 14.7013f, 2.5f, 12.0f)
-                curveTo(2.5f, 7.5817f, 6.7533f, 4.0f, 12.0f, 4.0f)
-                close()
+val BezierIcons.ChatBubbleAltPushFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _chatBubbleAltPushFilled ?: ImageVector.Builder(
+                    name = "ChatBubbleAltPushFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(18.5f, 10.0f)
+                    arcTo(3.5f, 3.5f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 18.5f, 3.0f)
+                    arcTo(3.5f, 3.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 18.5f, 10.0f)
+                    moveTo(12.0f, 4.0f)
+                    quadTo(12.791f, 4.0f, 13.547f, 4.106f)
+                    arcTo(5.5f, 5.5f, 205.85325746313455f, isMoreThanHalf = false, isPositiveArc = false, 21.447000000000003f, 11.146f)
+                    quadTo(21.500000000000004f, 11.566f, 21.500000000000004f, 12.0f)
+                    curveTo(21.500000000000004f, 16.418f, 17.247000000000003f, 20.0f, 12.000000000000004f, 20.0f)
+                    quadTo(10.965000000000003f, 19.998f, 9.992000000000004f, 19.821f)
+                    curveTo(8.576000000000004f, 21.032f, 6.9390000000000045f, 21.612000000000002f, 5.879000000000004f, 21.881f)
+                    curveTo(5.457000000000004f, 21.987000000000002f, 5.161000000000004f, 21.517f, 5.382000000000004f, 21.142f)
+                    curveTo(5.770000000000004f, 20.483f, 6.247000000000004f, 19.547f, 6.525000000000004f, 18.538f)
+                    curveTo(4.09f, 17.09f, 2.5f, 14.701f, 2.5f, 12.0f)
+                    curveTo(2.5f, 7.582f, 6.753f, 4.0f, 12.0f, 4.0f)
+                }
+            }.build().also {
+                _chatBubbleAltPushFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._chatBubbleAltPushFilled = it
-        }
     }
+
 
 private var _chatBubbleAltPushFilled: ImageVector? = null
 
@@ -64,7 +62,7 @@ private var _chatBubbleAltPushFilled: ImageVector? = null
 private fun ChatBubbleAltPushFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ChatBubbleAltPushFilled,
+            imageVector = BezierIcons.ChatBubbleAltPushFilled.imageVector,
             contentDescription = null,
     )
 }

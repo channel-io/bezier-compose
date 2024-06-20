@@ -16,46 +16,48 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CallApp: ImageVector
-    get() {
-        return _callApp ?: ImageVector.Builder(
-                name = "CallApp",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0f, 0.0f)
-                curveTo(5.3726f, 0.0f, 0.0f, 5.3726f, 0.0f, 12.0f)
-                curveTo(0.0f, 18.6274f, 5.3726f, 24.0f, 12.0f, 24.0f)
-                curveTo(18.6274f, 24.0f, 24.0f, 18.6274f, 24.0f, 12.0f)
-                curveTo(24.0f, 5.3726f, 18.6274f, 0.0f, 12.0f, 0.0f)
-                close()
-                moveTo(9.2237f, 14.7763f)
-                curveTo(5.5244f, 11.0769f, 5.5244f, 7.84f, 6.6804f, 6.6839f)
-                curveTo(7.374f, 5.9903f, 8.3881f, 5.8021f, 8.9925f, 6.2215f)
-                curveTo(9.5474f, 6.5915f, 10.3798f, 7.6355f, 10.3798f, 8.5336f)
-                curveTo(10.3798f, 9.0753f, 9.9802f, 9.541f, 9.6508f, 9.9249f)
-                curveTo(9.4178f, 10.1965f, 9.22f, 10.4271f, 9.2237f, 10.6145f)
-                curveTo(9.2327f, 11.0669f, 9.7302f, 12.244f, 10.7431f, 13.2569f)
-                curveTo(11.756f, 14.2698f, 12.9331f, 14.7673f, 13.3855f, 14.7763f)
-                curveTo(13.5729f, 14.78f, 13.8035f, 14.5822f, 14.0751f, 14.3492f)
-                curveTo(14.459f, 14.0198f, 14.9247f, 13.6202f, 15.4664f, 13.6202f)
-                curveTo(16.3645f, 13.6202f, 17.4085f, 14.4526f, 17.7785f, 15.0075f)
-                curveTo(18.1979f, 15.6119f, 18.0097f, 16.626f, 17.3161f, 17.3196f)
-                curveTo(16.16f, 18.4756f, 12.9231f, 18.4756f, 9.2237f, 14.7763f)
-                close()
+val BezierIcons.CallApp: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _callApp ?: ImageVector.Builder(
+                    name = "CallApp",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(12.0f, 0.0f)
+                    curveTo(5.373f, 0.0f, 0.0f, 5.373f, 0.0f, 12.0f)
+                    curveTo(0.0f, 18.627f, 5.373f, 24.0f, 12.0f, 24.0f)
+                    curveTo(18.627f, 24.0f, 24.0f, 18.627f, 24.0f, 12.0f)
+                    curveTo(24.0f, 5.373000000000001f, 18.627f, 0.0f, 12.0f, 0.0f)
+                    moveTo(9.224f, 14.776f)
+                    curveTo(5.524f, 11.076f, 5.524f, 7.84f, 6.68f, 6.683999999999999f)
+                    curveTo(7.374f, 5.989999999999999f, 8.388f, 5.802f, 8.993f, 6.2219999999999995f)
+                    curveTo(9.547f, 6.592f, 10.38f, 7.635999999999999f, 10.38f, 8.533999999999999f)
+                    curveTo(10.38f, 9.075f, 9.98f, 9.540999999999999f, 9.65f, 9.924f)
+                    curveTo(9.418000000000001f, 10.197f, 9.22f, 10.427f, 9.224f, 10.613999999999999f)
+                    curveTo(9.233f, 11.066999999999998f, 9.73f, 12.244f, 10.744f, 13.256999999999998f)
+                    curveTo(11.756f, 14.269999999999998f, 12.934f, 14.766999999999998f, 13.386f, 14.776999999999997f)
+                    curveTo(13.572999999999999f, 14.779999999999998f, 13.803999999999998f, 14.581999999999997f, 14.075999999999999f, 14.348999999999997f)
+                    curveTo(14.459f, 14.018999999999997f, 14.924999999999999f, 13.619999999999997f, 15.466f, 13.619999999999997f)
+                    curveTo(16.365f, 13.619999999999997f, 17.409f, 14.452999999999998f, 17.779f, 15.007999999999997f)
+                    curveTo(18.198f, 15.611999999999997f, 18.009f, 16.625999999999998f, 17.316f, 17.319999999999997f)
+                    curveTo(16.16f, 18.475999999999996f, 12.922999999999998f, 18.475999999999996f, 9.223999999999998f, 14.775999999999996f)
+                }
+            }.build().also {
+                _callApp = it
             }
-        }.build().also {
-            _callApp = it
-        }
     }
+
 
 private var _callApp: ImageVector? = null
 
@@ -64,7 +66,7 @@ private var _callApp: ImageVector? = null
 private fun CallAppIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CallApp,
+            imageVector = BezierIcons.CallApp.imageVector,
             contentDescription = null,
     )
 }

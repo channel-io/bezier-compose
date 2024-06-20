@@ -16,52 +16,54 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.WeatherCloud: ImageVector
-    get() {
-        return io.channel.bezier.icon._weatherCloud ?: ImageVector.Builder(
-                name = "WeatherCloud",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(6.019f, 10.2324f)
-                curveTo(4.354f, 10.2324f, 3.0f, 11.5864f, 3.0f, 13.2524f)
-                lineTo(3.0f, 13.5964f)
-                curveTo(3.0f, 15.2614f, 4.354f, 16.6174f, 6.019f, 16.6174f)
-                lineTo(16.921f, 16.6174f)
-                curveTo(19.17f, 16.6174f, 21.0f, 14.7874f, 21.0f, 12.5374f)
-                curveTo(21.0f, 10.2874f, 19.17f, 8.4574f, 16.921f, 8.4574f)
-                lineTo(15.722f, 8.4574f)
-                lineTo(15.433f, 7.9624f)
-                curveTo(14.713f, 6.7334f, 13.448f, 6.0004f, 12.049f, 6.0004f)
-                curveTo(10.116f, 6.0004f, 8.45f, 7.4514f, 8.172f, 9.3754f)
-                lineTo(8.049f, 10.2324f)
-                lineTo(6.019f, 10.2324f)
-                close()
-                moveTo(16.921f, 18.6174f)
-                lineTo(6.019f, 18.6174f)
-                curveTo(3.251f, 18.6174f, 1.0f, 16.3654f, 1.0f, 13.5964f)
-                lineTo(1.0f, 13.2524f)
-                curveTo(1.0f, 10.4844f, 3.251f, 8.2324f, 6.019f, 8.2324f)
-                lineTo(6.382f, 8.2324f)
-                curveTo(7.125f, 5.7674f, 9.424f, 4.0004f, 12.049f, 4.0004f)
-                curveTo(13.938f, 4.0004f, 15.723f, 4.9284f, 16.834f, 6.4574f)
-                lineTo(16.921f, 6.4574f)
-                curveTo(20.273f, 6.4574f, 23.0f, 9.1844f, 23.0f, 12.5374f)
-                curveTo(23.0f, 15.8894f, 20.273f, 18.6174f, 16.921f, 18.6174f)
-                close()
+val BezierIcons.WeatherCloud: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _weatherCloud ?: ImageVector.Builder(
+                    name = "WeatherCloud",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(6.019f, 10.232f)
+                    arcTo(3.02f, 3.02f, 269.98102788723185f, isMoreThanHalf = false, isPositiveArc = false, 3.0f, 13.252f)
+                    lineTo(3.0f, 13.596f)
+                    arcTo(3.024f, 3.024f, 179.9432372125339f, isMoreThanHalf = false, isPositiveArc = false, 6.019f, 16.617f)
+                    lineTo(16.921f, 16.617f)
+                    arcTo(4.084f, 4.084f, 89.92988077719168f, isMoreThanHalf = false, isPositiveArc = false, 21.0f, 12.537f)
+                    curveTo(21.0f, 10.287f, 19.17f, 8.457f, 16.921f, 8.457f)
+                    lineTo(15.722f, 8.457f)
+                    lineTo(15.433f, 7.962000000000001f)
+                    curveTo(14.713f, 6.733f, 13.448f, 6.0f, 12.049f, 6.0f)
+                    curveTo(10.116f, 6.0f, 8.45f, 7.451f, 8.172f, 9.375f)
+                    lineTo(8.049000000000001f, 10.232f)
+                    close()
+                    moveTo(16.921f, 18.616999999999997f)
+                    lineTo(6.019f, 18.616999999999997f)
+                    arcTo(5.025f, 5.025f, 90.06838456433628f, isMoreThanHalf = false, isPositiveArc = true, 1.0f, 13.597f)
+                    lineTo(1.0f, 13.251999999999999f)
+                    arcTo(5.025f, 5.025f, 180.05696992555826f, isMoreThanHalf = false, isPositiveArc = true, 6.019f, 8.232f)
+                    lineTo(6.382f, 8.232f)
+                    curveTo(7.125f, 5.767f, 9.424f, 4.0f, 12.049f, 4.0f)
+                    curveTo(13.937999999999999f, 4.0f, 15.722999999999999f, 4.928f, 16.834f, 6.457f)
+                    lineTo(16.921f, 6.457f)
+                    arcTo(6.086f, 6.086f, 270.06587271008203f, isMoreThanHalf = false, isPositiveArc = true, 23.0f, 12.537f)
+                    arcTo(6.087f, 6.087f, 0.06584025583628539f, isMoreThanHalf = false, isPositiveArc = true, 16.921f, 18.617f)
+                }
+            }.build().also {
+                _weatherCloud = it
             }
-        }.build().also {
-            io.channel.bezier.icon._weatherCloud = it
-        }
     }
+
 
 private var _weatherCloud: ImageVector? = null
 
@@ -70,7 +72,7 @@ private var _weatherCloud: ImageVector? = null
 private fun WeatherCloudIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.WeatherCloud,
+            imageVector = BezierIcons.WeatherCloud.imageVector,
             contentDescription = null,
     )
 }

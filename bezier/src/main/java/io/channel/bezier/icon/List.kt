@@ -9,73 +9,61 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.List: ImageVector
-    get() {
-        return _list ?: ImageVector.Builder(
-                name = "List",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(4.5f, 6.5f)
-                curveTo(5.3284f, 6.5f, 6.0f, 5.8284f, 6.0f, 5.0f)
-                curveTo(6.0f, 4.1716f, 5.3284f, 3.5f, 4.5f, 3.5f)
-                curveTo(3.6716f, 3.5f, 3.0f, 4.1716f, 3.0f, 5.0f)
-                curveTo(3.0f, 5.8284f, 3.6716f, 6.5f, 4.5f, 6.5f)
-                close()
-                moveTo(4.5f, 13.5f)
-                curveTo(5.3284f, 13.5f, 6.0f, 12.8284f, 6.0f, 12.0f)
-                curveTo(6.0f, 11.1716f, 5.3284f, 10.5f, 4.5f, 10.5f)
-                curveTo(3.6716f, 10.5f, 3.0f, 11.1716f, 3.0f, 12.0f)
-                curveTo(3.0f, 12.8284f, 3.6716f, 13.5f, 4.5f, 13.5f)
-                close()
-                moveTo(6.0f, 19.0f)
-                curveTo(6.0f, 19.8284f, 5.3284f, 20.5f, 4.5f, 20.5f)
-                curveTo(3.6716f, 20.5f, 3.0f, 19.8284f, 3.0f, 19.0f)
-                curveTo(3.0f, 18.1716f, 3.6716f, 17.5f, 4.5f, 17.5f)
-                curveTo(5.3284f, 17.5f, 6.0f, 18.1716f, 6.0f, 19.0f)
-                close()
-                moveTo(9.0f, 6.0f)
-                curveTo(8.4477f, 6.0f, 8.0f, 5.5523f, 8.0f, 5.0f)
-                curveTo(8.0f, 4.4477f, 8.4477f, 4.0f, 9.0f, 4.0f)
-                lineTo(20.0f, 4.0f)
-                curveTo(20.5523f, 4.0f, 21.0f, 4.4477f, 21.0f, 5.0f)
-                curveTo(21.0f, 5.5523f, 20.5523f, 6.0f, 20.0f, 6.0f)
-                lineTo(9.0f, 6.0f)
-                close()
-                moveTo(8.0f, 12.0f)
-                curveTo(8.0f, 12.5523f, 8.4477f, 13.0f, 9.0f, 13.0f)
-                lineTo(20.0f, 13.0f)
-                curveTo(20.5523f, 13.0f, 21.0f, 12.5523f, 21.0f, 12.0f)
-                curveTo(21.0f, 11.4477f, 20.5523f, 11.0f, 20.0f, 11.0f)
-                lineTo(9.0f, 11.0f)
-                curveTo(8.4477f, 11.0f, 8.0f, 11.4477f, 8.0f, 12.0f)
-                close()
-                moveTo(9.0f, 20.0f)
-                curveTo(8.4477f, 20.0f, 8.0f, 19.5523f, 8.0f, 19.0f)
-                curveTo(8.0f, 18.4477f, 8.4477f, 18.0f, 9.0f, 18.0f)
-                lineTo(20.0f, 18.0f)
-                curveTo(20.5523f, 18.0f, 21.0f, 18.4477f, 21.0f, 19.0f)
-                curveTo(21.0f, 19.5523f, 20.5523f, 20.0f, 20.0f, 20.0f)
-                lineTo(9.0f, 20.0f)
-                close()
+val BezierIcons.List: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _list ?: ImageVector.Builder(
+                    name = "List",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(4.5f, 6.5f)
+                    arcTo(1.5f, 1.5f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 4.5f, 3.5f)
+                    arcTo(1.5f, 1.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 4.5f, 6.5f)
+                    moveTo(4.5f, 13.5f)
+                    arcTo(1.5f, 1.5f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 4.5f, 10.5f)
+                    arcTo(1.5f, 1.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 4.5f, 13.5f)
+                    moveTo(6.0f, 19.0f)
+                    arcTo(1.5f, 1.5f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 3.0f, 19.0f)
+                    arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 6.0f, 19.0f)
+                    moveTo(9.0f, 6.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 9.0f, 4.0f)
+                    lineTo(20.0f, 4.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 20.0f, 6.0f)
+                    close()
+                    moveTo(8.0f, 12.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 9.0f, 13.0f)
+                    lineTo(20.0f, 13.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 20.0f, 11.0f)
+                    lineTo(9.0f, 11.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 8.0f, 12.0f)
+                    moveTo(9.0f, 20.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 9.0f, 18.0f)
+                    lineTo(20.0f, 18.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 20.0f, 20.0f)
+                    close()
+                }
+            }.build().also {
+                _list = it
             }
-        }.build().also {
-            _list = it
-        }
     }
+
 
 private var _list: ImageVector? = null
 
@@ -84,7 +72,7 @@ private var _list: ImageVector? = null
 private fun ListIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.List,
+            imageVector = BezierIcons.List.imageVector,
             contentDescription = null,
     )
 }

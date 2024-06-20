@@ -16,56 +16,54 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CallInProgress: ImageVector
-    get() {
-        return io.channel.bezier.icon._callInProgress ?: ImageVector.Builder(
-                name = "CallInProgress",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(14.0f, 2.0f)
-                curveTo(13.4477f, 2.0f, 13.0f, 2.4477f, 13.0f, 3.0f)
-                curveTo(13.0f, 3.5523f, 13.4477f, 4.0f, 14.0f, 4.0f)
-                curveTo(17.3137f, 4.0f, 20.0f, 6.6863f, 20.0f, 10.0f)
-                curveTo(20.0f, 10.5523f, 20.4477f, 11.0f, 21.0f, 11.0f)
-                curveTo(21.5523f, 11.0f, 22.0f, 10.5523f, 22.0f, 10.0f)
-                curveTo(22.0f, 5.5817f, 18.4183f, 2.0f, 14.0f, 2.0f)
-                close()
-                moveTo(4.2f, 4.9549f)
-                curveTo(2.5859f, 6.569f, 2.5859f, 11.0883f, 7.7509f, 16.2532f)
-                curveTo(12.9158f, 21.4182f, 17.4352f, 21.4182f, 19.0492f, 19.8042f)
-                curveTo(20.0176f, 18.8357f, 20.2804f, 17.4199f, 19.6948f, 16.5761f)
-                curveTo(19.1783f, 15.8013f, 17.7207f, 14.6392f, 16.4667f, 14.6392f)
-                curveTo(15.7105f, 14.6392f, 15.0602f, 15.1971f, 14.5243f, 15.6569f)
-                curveTo(14.1451f, 15.9822f, 13.8232f, 16.2584f, 13.5615f, 16.2532f)
-                curveTo(12.9298f, 16.2407f, 11.2864f, 15.5461f, 9.8722f, 14.1319f)
-                curveTo(8.458f, 12.7177f, 7.7634f, 11.0743f, 7.7509f, 10.4427f)
-                curveTo(7.7457f, 10.181f, 8.0219f, 9.859f, 8.3472f, 9.4799f)
-                curveTo(8.807f, 8.9439f, 9.3649f, 8.2936f, 9.3649f, 7.5374f)
-                curveTo(9.3649f, 6.2835f, 8.2028f, 4.8258f, 7.4281f, 4.3093f)
-                curveTo(6.5842f, 3.7237f, 5.1684f, 3.9865f, 4.2f, 4.9549f)
-                close()
-                moveTo(13.0f, 7.0f)
-                curveTo(13.0f, 6.4477f, 13.4477f, 6.0f, 14.0f, 6.0f)
-                curveTo(16.2091f, 6.0f, 18.0f, 7.7909f, 18.0f, 10.0f)
-                curveTo(18.0f, 10.5523f, 17.5523f, 11.0f, 17.0f, 11.0f)
-                curveTo(16.4477f, 11.0f, 16.0f, 10.5523f, 16.0f, 10.0f)
-                curveTo(16.0f, 8.8954f, 15.1046f, 8.0f, 14.0f, 8.0f)
-                curveTo(13.4477f, 8.0f, 13.0f, 7.5523f, 13.0f, 7.0f)
-                close()
+val BezierIcons.CallInProgress: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _callInProgress ?: ImageVector.Builder(
+                    name = "CallInProgress",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(14.0f, 2.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 14.0f, 4.0f)
+                    arcTo(6.0f, 6.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 20.0f, 10.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 22.0f, 10.0f)
+                    arcTo(8.0f, 8.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 14.0f, 2.0f)
+                    moveTo(4.2f, 4.955f)
+                    curveTo(2.5860000000000003f, 6.569f, 2.5860000000000003f, 11.088000000000001f, 7.75f, 16.253f)
+                    curveTo(12.916f, 21.418f, 17.435000000000002f, 21.418f, 19.05f, 19.804000000000002f)
+                    curveTo(20.018f, 18.836000000000002f, 20.28f, 17.42f, 19.695f, 16.576f)
+                    curveTo(19.178f, 15.801f, 17.721f, 14.639000000000001f, 16.467f, 14.639000000000001f)
+                    curveTo(15.710999999999999f, 14.639000000000001f, 15.059999999999999f, 15.197000000000001f, 14.524f, 15.657000000000002f)
+                    curveTo(14.145f, 15.982000000000001f, 13.824f, 16.258000000000003f, 13.562f, 16.253f)
+                    curveTo(12.93f, 16.241f, 11.286f, 15.546f, 9.872f, 14.132f)
+                    curveTo(8.458f, 12.718f, 7.763f, 11.074f, 7.7509999999999994f, 10.442f)
+                    curveTo(7.7459999999999996f, 10.181000000000001f, 8.020999999999999f, 9.859f, 8.347f, 9.48f)
+                    curveTo(8.807f, 8.944f, 9.365f, 8.294f, 9.365f, 7.537000000000001f)
+                    curveTo(9.365f, 6.283000000000001f, 8.203f, 4.8260000000000005f, 7.428f, 4.309000000000001f)
+                    curveTo(6.584f, 3.724000000000001f, 5.168f, 3.986000000000001f, 4.199999999999999f, 4.955000000000001f)
+                    moveTo(13.0f, 7.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 14.0f, 6.0f)
+                    arcTo(4.0f, 4.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 18.0f, 10.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 16.0f, 10.0f)
+                    arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 14.0f, 8.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 7.0f)
+                }
+            }.build().also {
+                _callInProgress = it
             }
-        }.build().also {
-            io.channel.bezier.icon._callInProgress = it
-        }
     }
+
 
 private var _callInProgress: ImageVector? = null
 
@@ -74,7 +72,7 @@ private var _callInProgress: ImageVector? = null
 private fun CallInProgressIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CallInProgress,
+            imageVector = BezierIcons.CallInProgress.imageVector,
             contentDescription = null,
     )
 }

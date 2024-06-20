@@ -16,54 +16,53 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.InboxAll: ImageVector
-    get() {
-        return io.channel.bezier.icon._inboxAll ?: ImageVector.Builder(
-                name = "InboxAll",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(19.0002f, 7.5001f)
-                lineTo(14.5002f, 7.5001f)
-                curveTo(14.5002f, 8.8801f, 13.3812f, 10.0001f, 12.0002f, 10.0001f)
-                curveTo(10.6192f, 10.0001f, 9.5002f, 8.8801f, 9.5002f, 7.5001f)
-                lineTo(5.0002f, 7.5001f)
-                lineTo(5.0002f, 5.0001f)
-                lineTo(19.0002f, 5.0001f)
-                lineTo(19.0002f, 7.5001f)
-                close()
-                moveTo(19.0002f, 14.5001f)
-                lineTo(14.5002f, 14.5001f)
-                curveTo(14.5002f, 15.8801f, 13.3812f, 17.0001f, 12.0002f, 17.0001f)
-                curveTo(10.6192f, 17.0001f, 9.5002f, 15.8801f, 9.5002f, 14.5001f)
-                lineTo(5.0002f, 14.5001f)
-                lineTo(5.0002f, 12.0001f)
-                lineTo(19.0002f, 12.0001f)
-                lineTo(19.0002f, 14.5001f)
-                close()
-                moveTo(19.5002f, 3.0001f)
-                lineTo(4.5002f, 3.0001f)
-                curveTo(3.6732f, 3.0001f, 3.0002f, 3.6731f, 3.0002f, 4.5001f)
-                lineTo(3.0002f, 19.5001f)
-                curveTo(3.0002f, 20.3271f, 3.6732f, 21.0001f, 4.5002f, 21.0001f)
-                lineTo(19.5002f, 21.0001f)
-                curveTo(20.3272f, 21.0001f, 21.0002f, 20.3271f, 21.0002f, 19.5001f)
-                lineTo(21.0002f, 4.5001f)
-                curveTo(21.0002f, 3.6731f, 20.3272f, 3.0001f, 19.5002f, 3.0001f)
-                close()
+val BezierIcons.InboxAll: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _inboxAll ?: ImageVector.Builder(
+                    name = "InboxAll",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(19.0f, 7.5f)
+                    lineTo(14.5f, 7.5f)
+                    arcTo(2.5f, 2.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 9.5f, 7.5f)
+                    lineTo(5.0f, 7.5f)
+                    lineTo(5.0f, 5.0f)
+                    lineTo(19.0f, 5.0f)
+                    close()
+                    moveTo(19.0f, 14.5f)
+                    lineTo(14.5f, 14.5f)
+                    arcTo(2.5f, 2.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 9.5f, 14.5f)
+                    lineTo(5.0f, 14.5f)
+                    lineTo(5.0f, 12.0f)
+                    lineTo(19.0f, 12.0f)
+                    close()
+                    moveTo(19.5f, 3.0f)
+                    lineTo(4.5f, 3.0f)
+                    curveTo(3.673f, 3.0f, 3.0f, 3.673f, 3.0f, 4.5f)
+                    lineTo(3.0f, 19.5f)
+                    curveTo(3.0f, 20.326999999999998f, 3.673f, 21.0f, 4.5f, 21.0f)
+                    lineTo(19.5f, 21.0f)
+                    curveTo(20.326999999999998f, 21.0f, 21.0f, 20.326999999999998f, 21.0f, 19.5f)
+                    lineTo(21.0f, 4.5f)
+                    curveTo(21.0f, 3.673f, 20.326999999999998f, 3.0f, 19.5f, 3.0f)
+                }
+            }.build().also {
+                _inboxAll = it
             }
-        }.build().also {
-            io.channel.bezier.icon._inboxAll = it
-        }
     }
+
 
 private var _inboxAll: ImageVector? = null
 
@@ -72,7 +71,7 @@ private var _inboxAll: ImageVector? = null
 private fun InboxAllIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.InboxAll,
+            imageVector = BezierIcons.InboxAll.imageVector,
             contentDescription = null,
     )
 }

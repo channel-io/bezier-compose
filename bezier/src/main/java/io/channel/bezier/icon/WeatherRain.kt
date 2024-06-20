@@ -16,65 +16,66 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.WeatherRain: ImageVector
-    get() {
-        return _weatherRain ?: ImageVector.Builder(
-                name = "WeatherRain",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(6.0189f, 15.007f)
-                lineTo(16.9209f, 15.007f)
-                curveTo(19.1699f, 15.007f, 20.9999f, 13.177f, 20.9999f, 10.927f)
-                curveTo(20.9999f, 8.677f, 19.1699f, 6.847f, 16.9209f, 6.847f)
-                lineTo(15.7219f, 6.847f)
-                lineTo(15.4329f, 6.353f)
-                curveTo(14.7129f, 5.123f, 13.4479f, 4.39f, 12.0489f, 4.39f)
-                curveTo(10.1159f, 4.39f, 8.4499f, 5.841f, 8.1719f, 7.765f)
-                lineTo(8.0489f, 8.622f)
-                lineTo(6.0189f, 8.622f)
-                curveTo(4.3549f, 8.622f, 2.9999f, 9.977f, 2.9999f, 11.642f)
-                lineTo(2.9999f, 11.986f)
-                curveTo(2.9999f, 13.652f, 4.3549f, 15.007f, 6.0189f, 15.007f)
-                close()
-                moveTo(16.9209f, 4.847f)
-                curveTo(20.2729f, 4.847f, 22.9999f, 7.574f, 22.9999f, 10.927f)
-                curveTo(22.9999f, 14.153f, 20.4729f, 16.793f, 17.2949f, 16.988f)
-                lineTo(14.7099f, 23.002f)
-                lineTo(12.8719f, 22.213f)
-                lineTo(15.1089f, 17.007f)
-                lineTo(8.5579f, 17.007f)
-                lineTo(5.9819f, 23.002f)
-                lineTo(4.1439f, 22.213f)
-                lineTo(6.3809f, 17.007f)
-                lineTo(6.0189f, 17.007f)
-                curveTo(3.2519f, 17.007f, 0.9999f, 14.755f, 0.9999f, 11.986f)
-                lineTo(0.9999f, 11.642f)
-                curveTo(0.9999f, 8.874f, 3.2519f, 6.622f, 6.0189f, 6.622f)
-                lineTo(6.3819f, 6.622f)
-                curveTo(7.1249f, 4.157f, 9.4239f, 2.39f, 12.0489f, 2.39f)
-                curveTo(13.9379f, 2.39f, 15.7229f, 3.319f, 16.8349f, 4.847f)
-                lineTo(16.9209f, 4.847f)
-                close()
-                moveTo(8.5082f, 22.2132f)
-                lineTo(10.7452f, 17.0072f)
-                lineTo(12.9222f, 17.0072f)
-                lineTo(10.3452f, 23.0022f)
-                lineTo(8.5082f, 22.2132f)
-                close()
+val BezierIcons.WeatherRain: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _weatherRain ?: ImageVector.Builder(
+                    name = "WeatherRain",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(6.019f, 15.007f)
+                    lineTo(16.92f, 15.007f)
+                    arcTo(4.084f, 4.084f, 89.9439101298301f, isMoreThanHalf = false, isPositiveArc = false, 21.0f, 10.927f)
+                    curveTo(21.0f, 8.677f, 19.17f, 6.8469999999999995f, 16.92f, 6.8469999999999995f)
+                    lineTo(15.722000000000001f, 6.8469999999999995f)
+                    lineTo(15.432000000000002f, 6.353f)
+                    curveTo(14.712000000000002f, 5.122999999999999f, 13.448000000000002f, 4.39f, 12.049000000000003f, 4.39f)
+                    curveTo(10.116000000000003f, 4.39f, 8.449000000000003f, 5.840999999999999f, 8.172000000000004f, 7.765f)
+                    lineTo(8.049000000000005f, 8.622f)
+                    lineTo(6.0190000000000055f, 8.622f)
+                    arcTo(3.024f, 3.024f, 269.92426196801694f, isMoreThanHalf = false, isPositiveArc = false, 2.9990000000000054f, 11.642f)
+                    lineTo(2.9990000000000054f, 11.985999999999999f)
+                    arcTo(3.024f, 3.024f, 179.94320902678524f, isMoreThanHalf = false, isPositiveArc = false, 6.0190000000000055f, 15.006999999999998f)
+                    moveTo(16.92f, 4.847f)
+                    arcTo(6.086f, 6.086f, 270.05645833734263f, isMoreThanHalf = false, isPositiveArc = true, 23.0f, 10.927f)
+                    curveTo(23.0f, 14.152999999999999f, 20.473f, 16.793f, 17.295f, 16.988f)
+                    lineTo(14.71f, 23.002f)
+                    lineTo(12.872f, 22.212999999999997f)
+                    lineTo(15.109f, 17.006999999999998f)
+                    lineTo(8.558f, 17.006999999999998f)
+                    lineTo(5.981999999999999f, 23.002f)
+                    lineTo(4.143999999999999f, 22.212999999999997f)
+                    lineTo(6.380999999999999f, 17.006999999999998f)
+                    lineTo(6.018999999999999f, 17.006999999999998f)
+                    arcTo(5.026f, 5.026f, 90.0683709637951f, isMoreThanHalf = false, isPositiveArc = true, 0.9989999999999997f, 11.985999999999997f)
+                    lineTo(0.9989999999999997f, 11.641999999999998f)
+                    arcTo(5.026f, 5.026f, 180.06835849688613f, isMoreThanHalf = false, isPositiveArc = true, 6.018999999999999f, 6.621999999999998f)
+                    lineTo(6.382f, 6.621999999999998f)
+                    curveTo(7.125f, 4.156999999999998f, 9.424f, 2.389999999999998f, 12.049f, 2.389999999999998f)
+                    arcTo(5.95f, 5.95f, 270.2970384028572f, isMoreThanHalf = false, isPositiveArc = true, 16.835f, 4.846999999999998f)
+                    close()
+                    moveTo(8.508f, 22.213f)
+                    lineTo(10.745f, 17.007f)
+                    lineTo(12.921999999999999f, 17.007f)
+                    lineTo(10.344999999999999f, 23.002000000000002f)
+                    close()
+                }
+            }.build().also {
+                _weatherRain = it
             }
-        }.build().also {
-            _weatherRain = it
-        }
     }
+
 
 private var _weatherRain: ImageVector? = null
 
@@ -83,7 +84,7 @@ private var _weatherRain: ImageVector? = null
 private fun WeatherRainIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.WeatherRain,
+            imageVector = BezierIcons.WeatherRain.imageVector,
             contentDescription = null,
     )
 }

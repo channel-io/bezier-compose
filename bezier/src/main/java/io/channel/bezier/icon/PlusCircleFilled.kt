@@ -16,46 +16,48 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.PlusCircleFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._plusCircleFilled ?: ImageVector.Builder(
-                name = "PlusCircleFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(17.86f, 13.0001f)
-                lineTo(13.0f, 13.0001f)
-                lineTo(13.0f, 17.8591f)
-                lineTo(11.0f, 17.8591f)
-                lineTo(11.0f, 13.0001f)
-                lineTo(6.14f, 13.0001f)
-                lineTo(6.14f, 11.0001f)
-                lineTo(11.0f, 11.0001f)
-                lineTo(11.0f, 6.1401f)
-                lineTo(13.0f, 6.1401f)
-                lineTo(13.0f, 11.0001f)
-                lineTo(17.86f, 11.0001f)
-                lineTo(17.86f, 13.0001f)
-                close()
-                moveTo(12.0f, 2.0001f)
-                curveTo(6.5f, 2.0001f, 2.0f, 6.5001f, 2.0f, 12.0001f)
-                curveTo(2.0f, 17.5001f, 6.5f, 22.0001f, 12.0f, 22.0001f)
-                curveTo(17.5f, 22.0001f, 22.0f, 17.5001f, 22.0f, 12.0001f)
-                curveTo(22.0f, 6.5001f, 17.5f, 2.0001f, 12.0f, 2.0001f)
-                close()
+val BezierIcons.PlusCircleFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _plusCircleFilled ?: ImageVector.Builder(
+                    name = "PlusCircleFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(2.0f, 12.0f)
+                    curveTo(2.0f, 6.5f, 6.5f, 2.0f, 12.0f, 2.0f)
+                    curveTo(17.5f, 2.0f, 22.0f, 6.5f, 22.0f, 12.0f)
+                    curveTo(22.0f, 17.5f, 17.5f, 22.0f, 12.0f, 22.0f)
+                    curveTo(6.5f, 22.0f, 2.0f, 17.5f, 2.0f, 12.0f)
+                    moveTo(11.0f, 8.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 13.0f, 8.0f)
+                    lineTo(13.0f, 11.0f)
+                    lineTo(16.0f, 11.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 16.0f, 13.0f)
+                    lineTo(13.0f, 13.0f)
+                    lineTo(13.0f, 16.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 11.0f, 16.0f)
+                    lineTo(11.0f, 13.0f)
+                    lineTo(8.0f, 13.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 8.0f, 11.0f)
+                    lineTo(11.0f, 11.0f)
+                    close()
+                }
+            }.build().also {
+                _plusCircleFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._plusCircleFilled = it
-        }
     }
+
 
 private var _plusCircleFilled: ImageVector? = null
 
@@ -64,7 +66,7 @@ private var _plusCircleFilled: ImageVector? = null
 private fun PlusCircleFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.PlusCircleFilled,
+            imageVector = BezierIcons.PlusCircleFilled.imageVector,
             contentDescription = null,
     )
 }

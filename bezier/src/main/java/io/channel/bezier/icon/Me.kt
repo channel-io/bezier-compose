@@ -16,84 +16,82 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Me: ImageVector
-    get() {
-        return io.channel.bezier.icon._me ?: ImageVector.Builder(
-                name = "Me",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(20.0002f, 8.5001f)
-                curveTo(20.0002f, 8.7761f, 19.7762f, 9.0001f, 19.5002f, 9.0001f)
-                lineTo(16.0002f, 9.0001f)
-                lineTo(16.0002f, 11.0001f)
-                lineTo(18.5002f, 11.0001f)
-                curveTo(18.7762f, 11.0001f, 19.0002f, 11.2241f, 19.0002f, 11.5001f)
-                lineTo(19.0002f, 12.5001f)
-                curveTo(19.0002f, 12.7761f, 18.7762f, 13.0001f, 18.5002f, 13.0001f)
-                lineTo(16.0002f, 13.0001f)
-                lineTo(16.0002f, 15.0001f)
-                lineTo(19.5002f, 15.0001f)
-                curveTo(19.7762f, 15.0001f, 20.0002f, 15.2241f, 20.0002f, 15.5001f)
-                lineTo(20.0002f, 16.5001f)
-                curveTo(20.0002f, 16.7761f, 19.7762f, 17.0001f, 19.5002f, 17.0001f)
-                lineTo(14.5002f, 17.0001f)
-                curveTo(14.2242f, 17.0001f, 14.0002f, 16.7761f, 14.0002f, 16.5001f)
-                lineTo(14.0002f, 13.0001f)
-                lineTo(14.0002f, 11.0001f)
-                lineTo(14.0002f, 9.0001f)
-                lineTo(14.0002f, 7.5001f)
-                curveTo(14.0002f, 7.2241f, 14.2242f, 7.0001f, 14.5002f, 7.0001f)
-                lineTo(19.5002f, 7.0001f)
-                curveTo(19.7762f, 7.0001f, 20.0002f, 7.2241f, 20.0002f, 7.5001f)
-                lineTo(20.0002f, 8.5001f)
-                close()
-                moveTo(13.0002f, 16.5001f)
-                curveTo(13.0002f, 16.7761f, 12.7762f, 17.0001f, 12.5002f, 17.0001f)
-                lineTo(11.5002f, 17.0001f)
-                curveTo(11.2242f, 17.0001f, 11.0002f, 16.7761f, 11.0002f, 16.5001f)
-                lineTo(11.0002f, 10.7981f)
-                lineTo(8.9372f, 13.8551f)
-                curveTo(8.7332f, 14.1581f, 8.2822f, 14.1461f, 8.0942f, 13.8321f)
-                lineTo(6.0002f, 10.3351f)
-                lineTo(6.0002f, 16.5001f)
-                curveTo(6.0002f, 16.7761f, 5.7762f, 17.0001f, 5.5002f, 17.0001f)
-                lineTo(4.5002f, 17.0001f)
-                curveTo(4.2242f, 17.0001f, 4.0002f, 16.7761f, 4.0002f, 16.5001f)
-                lineTo(4.0002f, 7.5001f)
-                curveTo(4.0002f, 7.2241f, 4.2242f, 7.0001f, 4.5002f, 7.0001f)
-                lineTo(5.7222f, 7.0021f)
-                curveTo(5.8952f, 7.0021f, 6.0552f, 7.0921f, 6.1462f, 7.2381f)
-                lineTo(8.4982f, 11.0401f)
-                lineTo(10.8542f, 7.2381f)
-                curveTo(10.9442f, 7.0911f, 11.1052f, 7.0011f, 11.2782f, 7.0011f)
-                lineTo(12.5002f, 7.0001f)
-                curveTo(12.7762f, 7.0001f, 13.0002f, 7.2241f, 13.0002f, 7.5001f)
-                lineTo(13.0002f, 16.5001f)
-                close()
-                moveTo(20.0002f, 5.0001f)
-                lineTo(4.0002f, 5.0001f)
-                curveTo(2.8962f, 5.0001f, 2.0002f, 5.8961f, 2.0002f, 7.0001f)
-                lineTo(2.0002f, 17.0001f)
-                curveTo(2.0002f, 18.1041f, 2.8962f, 19.0001f, 4.0002f, 19.0001f)
-                lineTo(20.0002f, 19.0001f)
-                curveTo(21.1042f, 19.0001f, 22.0002f, 18.1041f, 22.0002f, 17.0001f)
-                lineTo(22.0002f, 7.0001f)
-                curveTo(22.0002f, 5.8961f, 21.1042f, 5.0001f, 20.0002f, 5.0001f)
-                close()
+val BezierIcons.Me: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _me ?: ImageVector.Builder(
+                    name = "Me",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(20.0f, 8.5f)
+                    arcTo(0.5f, 0.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 19.5f, 9.0f)
+                    lineTo(16.0f, 9.0f)
+                    lineTo(16.0f, 11.0f)
+                    lineTo(18.5f, 11.0f)
+                    arcTo(0.5f, 0.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 19.0f, 11.5f)
+                    lineTo(19.0f, 12.5f)
+                    arcTo(0.5f, 0.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 18.5f, 13.0f)
+                    lineTo(16.0f, 13.0f)
+                    lineTo(16.0f, 15.0f)
+                    lineTo(19.5f, 15.0f)
+                    arcTo(0.5f, 0.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 20.0f, 15.5f)
+                    lineTo(20.0f, 16.5f)
+                    arcTo(0.5f, 0.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 19.5f, 17.0f)
+                    lineTo(14.5f, 17.0f)
+                    arcTo(0.5f, 0.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 14.0f, 16.5f)
+                    lineTo(14.0f, 7.5f)
+                    arcTo(0.5f, 0.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 14.5f, 7.0f)
+                    lineTo(19.5f, 7.0f)
+                    arcTo(0.5f, 0.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 20.0f, 7.5f)
+                    close()
+                    moveTo(13.0f, 16.5f)
+                    arcTo(0.5f, 0.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 12.5f, 17.0f)
+                    lineTo(11.5f, 17.0f)
+                    arcTo(0.5f, 0.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 11.0f, 16.5f)
+                    lineTo(11.0f, 10.798f)
+                    lineTo(8.937f, 13.855f)
+                    arcTo(0.5f, 0.5f, 34.07113172490512f, isMoreThanHalf = false, isPositiveArc = true, 8.094f, 13.832f)
+                    lineTo(6.0f, 10.335f)
+                    lineTo(6.0f, 16.5f)
+                    arcTo(0.5f, 0.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 5.5f, 17.0f)
+                    lineTo(4.5f, 17.0f)
+                    arcTo(0.5f, 0.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 4.0f, 16.5f)
+                    lineTo(4.0f, 7.5f)
+                    arcTo(0.5f, 0.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 4.5f, 7.0f)
+                    lineTo(5.7219999999999995f, 7.002f)
+                    arcTo(0.5f, 0.5f, 270.0713247696181f, isMoreThanHalf = false, isPositiveArc = true, 6.146f, 7.2379999999999995f)
+                    lineTo(8.498f, 11.04f)
+                    lineTo(10.854f, 7.2379999999999995f)
+                    arcTo(0.5f, 0.5f, 211.73537893045344f, isMoreThanHalf = false, isPositiveArc = true, 11.277999999999999f, 7.0009999999999994f)
+                    lineTo(12.5f, 7.0009999999999994f)
+                    arcTo(0.5f, 0.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 7.5009999999999994f)
+                    close()
+                    moveTo(20.0f, 5.0f)
+                    lineTo(4.0f, 5.0f)
+                    arcTo(2.0f, 2.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 2.0f, 7.0f)
+                    lineTo(2.0f, 17.0f)
+                    arcTo(2.0f, 2.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 4.0f, 19.0f)
+                    lineTo(20.0f, 19.0f)
+                    arcTo(2.0f, 2.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 22.0f, 17.0f)
+                    lineTo(22.0f, 7.0f)
+                    arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 20.0f, 5.0f)
+                }
+            }.build().also {
+                _me = it
             }
-        }.build().also {
-            io.channel.bezier.icon._me = it
-        }
     }
+
 
 private var _me: ImageVector? = null
 
@@ -102,7 +100,7 @@ private var _me: ImageVector? = null
 private fun MeIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Me,
+            imageVector = BezierIcons.Me.imageVector,
             contentDescription = null,
     )
 }

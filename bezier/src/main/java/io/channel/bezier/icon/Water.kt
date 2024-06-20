@@ -16,36 +16,39 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Water: ImageVector
-    get() {
-        return _water ?: ImageVector.Builder(
-                name = "Water",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(18.1106f, 10.0649f)
-                lineTo(12.4446f, 1.6559f)
-                curveTo(12.3386f, 1.4989f, 12.1696f, 1.4199f, 12.0006f, 1.4199f)
-                curveTo(11.8316f, 1.4199f, 11.6626f, 1.4989f, 11.5566f, 1.6559f)
-                lineTo(5.8896f, 10.0649f)
-                curveTo(4.1466f, 12.6509f, 3.9826f, 16.0909f, 5.7436f, 18.6639f)
-                curveTo(7.2636f, 20.8849f, 9.6326f, 21.9959f, 12.0006f, 21.9959f)
-                curveTo(14.3686f, 21.9959f, 16.7366f, 20.8849f, 18.2566f, 18.6639f)
-                curveTo(20.0186f, 16.0909f, 19.8536f, 12.6509f, 18.1106f, 10.0649f)
-                close()
+val BezierIcons.Water: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _water ?: ImageVector.Builder(
+                    name = "Water",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(18.11f, 10.065f)
+                    lineTo(12.445f, 1.6549999999999994f)
+                    arcTo(0.53f, 0.53f, 326.18143171216417f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 1.42f)
+                    arcTo(0.53f, 0.53f, 270.3257837143662f, isMoreThanHalf = false, isPositiveArc = false, 11.556f, 1.656f)
+                    lineTo(5.89f, 10.065f)
+                    curveTo(4.146999999999999f, 12.651f, 3.9829999999999997f, 16.091f, 5.744f, 18.664f)
+                    curveTo(7.263999999999999f, 20.884f, 9.633f, 21.996000000000002f, 12.001f, 21.996000000000002f)
+                    curveTo(14.369f, 21.996000000000002f, 16.737f, 20.885f, 18.256999999999998f, 18.664f)
+                    curveTo(20.019f, 16.091f, 19.854f, 12.651000000000002f, 18.110999999999997f, 10.064000000000002f)
+                }
+            }.build().also {
+                _water = it
             }
-        }.build().also {
-            _water = it
-        }
     }
+
 
 private var _water: ImageVector? = null
 
@@ -54,7 +57,7 @@ private var _water: ImageVector? = null
 private fun WaterIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Water,
+            imageVector = BezierIcons.Water.imageVector,
             contentDescription = null,
     )
 }

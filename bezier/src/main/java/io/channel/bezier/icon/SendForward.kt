@@ -16,47 +16,47 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.SendForward: ImageVector
-    get() {
-        return io.channel.bezier.icon._sendForward ?: ImageVector.Builder(
-                name = "SendForward",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(9.6211f, 11.4434f)
-                lineTo(5.3489f, 7.0001f)
-                lineTo(17.2826f, 7.0001f)
-                lineTo(9.6211f, 11.4434f)
-                close()
-                moveTo(20.9876f, 5.0001f)
-                lineTo(3.0001f, 5.0001f)
-                curveTo(2.1186f, 5.0001f, 1.6683f, 6.0578f, 2.2793f, 6.6932f)
-                lineTo(8.5496f, 13.2145f)
-                lineTo(11.0026f, 21.9203f)
-                curveTo(11.2425f, 22.7719f, 12.3888f, 22.9153f, 12.8311f, 22.1491f)
-                lineTo(21.8608f, 6.5093f)
-                curveTo(21.8667f, 6.4993f, 21.8725f, 6.4891f, 21.8781f, 6.4789f)
-                curveTo(22.2358f, 5.825f, 21.7748f, 5.0226f, 21.0315f, 5.0006f)
-                curveTo(21.0169f, 5.0001f, 21.0022f, 4.9999f, 20.9876f, 5.0001f)
-                close()
-                moveTo(18.2607f, 8.7448f)
-                lineTo(10.6171f, 13.1778f)
-                lineTo(12.2846f, 19.0957f)
-                lineTo(18.2607f, 8.7448f)
-                close()
+val BezierIcons.SendForward: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _sendForward ?: ImageVector.Builder(
+                    name = "SendForward",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(9.621f, 11.443f)
+                    lineTo(5.35f, 7.0f)
+                    lineTo(17.284f, 7.0f)
+                    close()
+                    moveTo(20.988f, 5.0f)
+                    lineTo(3.0f, 5.0f)
+                    curveTo(2.1189999999999998f, 5.0f, 1.668f, 6.058f, 2.2800000000000002f, 6.693f)
+                    lineTo(8.55f, 13.215f)
+                    lineTo(11.003f, 21.92f)
+                    curveTo(11.243f, 22.772000000000002f, 12.389f, 22.915000000000003f, 12.831f, 22.150000000000002f)
+                    lineTo(21.860999999999997f, 6.510000000000002f)
+                    lineTo(21.877999999999997f, 6.479000000000002f)
+                    arcTo(1.0f, 1.0f, 28.624989180142865f, isMoreThanHalf = false, isPositiveArc = false, 20.988f, 5.0f)
+                    moveTo(18.26f, 8.745f)
+                    lineTo(10.616000000000001f, 13.177999999999999f)
+                    lineTo(12.284f, 19.096f)
+                    close()
+                }
+            }.build().also {
+                _sendForward = it
             }
-        }.build().also {
-            io.channel.bezier.icon._sendForward = it
-        }
     }
+
 
 private var _sendForward: ImageVector? = null
 
@@ -65,7 +65,7 @@ private var _sendForward: ImageVector? = null
 private fun SendForwardIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.SendForward,
+            imageVector = BezierIcons.SendForward.imageVector,
             contentDescription = null,
     )
 }

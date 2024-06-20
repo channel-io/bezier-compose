@@ -9,49 +9,49 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Cancel: ImageVector
-    get() {
-        return io.channel.bezier.icon._cancel ?: ImageVector.Builder(
-                name = "Cancel",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(19.071f, 6.3431f)
-                curveTo(19.4616f, 5.9526f, 19.4616f, 5.3194f, 19.071f, 4.9289f)
-                curveTo(18.6805f, 4.5384f, 18.0474f, 4.5384f, 17.6568f, 4.9289f)
-                lineTo(12.0f, 10.5858f)
-                lineTo(6.3431f, 4.9289f)
-                curveTo(5.9526f, 4.5384f, 5.3194f, 4.5384f, 4.9289f, 4.9289f)
-                curveTo(4.5384f, 5.3194f, 4.5384f, 5.9526f, 4.9289f, 6.3431f)
-                lineTo(10.5858f, 12.0f)
-                lineTo(4.9289f, 17.6568f)
-                curveTo(4.5384f, 18.0474f, 4.5384f, 18.6805f, 4.9289f, 19.071f)
-                curveTo(5.3194f, 19.4616f, 5.9526f, 19.4616f, 6.3431f, 19.071f)
-                lineTo(12.0f, 13.4142f)
-                lineTo(17.6568f, 19.071f)
-                curveTo(18.0474f, 19.4616f, 18.6805f, 19.4616f, 19.0711f, 19.071f)
-                curveTo(19.4616f, 18.6805f, 19.4616f, 18.0474f, 19.0711f, 17.6568f)
-                lineTo(13.4142f, 12.0f)
-                lineTo(19.071f, 6.3431f)
-                close()
+val BezierIcons.Cancel: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _cancel ?: ImageVector.Builder(
+                    name = "Cancel",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(19.071f, 6.343f)
+                    arcTo(1.0f, 1.0f, 45.995744613577585f, isMoreThanHalf = true, isPositiveArc = false, 17.657f, 4.929f)
+                    lineTo(12.0f, 10.586f)
+                    lineTo(6.343f, 4.929f)
+                    arcTo(1.0f, 1.0f, 313.1596653490923f, isMoreThanHalf = false, isPositiveArc = false, 4.93f, 6.343f)
+                    lineTo(10.586f, 12.0f)
+                    lineTo(4.929f, 17.657f)
+                    arcTo(1.0f, 1.0f, 225.99574461357759f, isMoreThanHalf = true, isPositiveArc = false, 6.343f, 19.071f)
+                    lineTo(12.0f, 13.414f)
+                    lineTo(17.657f, 19.070999999999998f)
+                    arcTo(1.0f, 1.0f, 135.99574461357543f, isMoreThanHalf = true, isPositiveArc = false, 19.071f, 17.656999999999996f)
+                    lineTo(13.414f, 12.0f)
+                    close()
+                }
+            }.build().also {
+                _cancel = it
             }
-        }.build().also {
-            io.channel.bezier.icon._cancel = it
-        }
     }
+
 
 private var _cancel: ImageVector? = null
 
@@ -60,7 +60,7 @@ private var _cancel: ImageVector? = null
 private fun CancelIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Cancel,
+            imageVector = BezierIcons.Cancel.imageVector,
             contentDescription = null,
     )
 }

@@ -16,46 +16,48 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CancelCircleFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._cancelCircleFilled ?: ImageVector.Builder(
-                name = "CancelCircleFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(15.4406f, 16.8575f)
-                lineTo(11.9996f, 13.4165f)
-                lineTo(8.5596f, 16.8565f)
-                lineTo(7.1436f, 15.4405f)
-                lineTo(10.5836f, 12.0005f)
-                lineTo(7.1426f, 8.5595f)
-                lineTo(8.5586f, 7.1435f)
-                lineTo(11.9996f, 10.5845f)
-                lineTo(15.4406f, 7.1435f)
-                lineTo(16.8566f, 8.5595f)
-                lineTo(13.4156f, 12.0005f)
-                lineTo(16.8566f, 15.4415f)
-                lineTo(15.4406f, 16.8575f)
-                close()
-                moveTo(19.0796f, 4.9195f)
-                curveTo(15.1856f, 1.0265f, 8.8146f, 1.0265f, 4.9206f, 4.9195f)
-                curveTo(1.0266f, 8.8145f, 1.0266f, 15.1855f, 4.9206f, 19.0795f)
-                curveTo(8.8146f, 22.9735f, 15.1856f, 22.9735f, 19.0796f, 19.0795f)
-                curveTo(22.9736f, 15.1855f, 22.9736f, 8.8145f, 19.0796f, 4.9195f)
-                close()
+val BezierIcons.CancelCircleFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _cancelCircleFilled ?: ImageVector.Builder(
+                    name = "CancelCircleFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(4.92f, 4.92f)
+                    curveTo(8.815f, 1.0270000000000001f, 15.186f, 1.0270000000000001f, 19.08f, 4.92f)
+                    curveTo(22.973999999999997f, 8.815f, 22.973999999999997f, 15.186f, 19.08f, 19.08f)
+                    curveTo(15.186f, 22.973999999999997f, 8.814999999999998f, 22.973999999999997f, 4.919999999999998f, 19.08f)
+                    curveTo(1.0269999999999984f, 15.185999999999998f, 1.0269999999999984f, 8.814999999999998f, 4.919999999999998f, 4.919999999999998f)
+                    moveTo(14.827999999999998f, 7.756999999999998f)
+                    arcTo(1.0f, 1.0f, 224.9999991471751f, isMoreThanHalf = true, isPositiveArc = true, 16.243f, 9.171999999999997f)
+                    lineTo(13.414f, 12.0f)
+                    lineTo(16.243f, 14.828f)
+                    arcTo(1.0f, 1.0f, 314.9999991471751f, isMoreThanHalf = true, isPositiveArc = true, 14.828f, 16.243f)
+                    lineTo(12.0f, 13.414f)
+                    lineTo(9.172f, 16.243f)
+                    arcTo(1.0f, 1.0f, 44.99999999999998f, isMoreThanHalf = true, isPositiveArc = true, 7.757000000000001f, 14.828f)
+                    lineTo(10.586f, 12.0f)
+                    lineTo(7.757f, 9.172f)
+                    arcTo(1.0f, 1.0f, 135.00000000000003f, isMoreThanHalf = false, isPositiveArc = true, 9.172f, 7.757000000000001f)
+                    lineTo(12.0f, 10.586f)
+                    close()
+                }
+            }.build().also {
+                _cancelCircleFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._cancelCircleFilled = it
-        }
     }
+
 
 private var _cancelCircleFilled: ImageVector? = null
 
@@ -64,7 +66,7 @@ private var _cancelCircleFilled: ImageVector? = null
 private fun CancelCircleFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CancelCircleFilled,
+            imageVector = BezierIcons.CancelCircleFilled.imageVector,
             contentDescription = null,
     )
 }

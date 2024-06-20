@@ -9,53 +9,52 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ChevronDownDouble: ImageVector
-    get() {
-        return io.channel.bezier.icon._chevronDownDouble ?: ImageVector.Builder(
-                name = "ChevronDownDouble",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(19.6508f, 6.7593f)
-                curveTo(20.0701f, 6.3999f, 20.1187f, 5.7686f, 19.7592f, 5.3493f)
-                curveTo(19.3998f, 4.93f, 18.7685f, 4.8814f, 18.3492f, 5.2408f)
-                lineTo(12.0f, 10.683f)
-                lineTo(5.6508f, 5.2408f)
-                curveTo(5.2315f, 4.8814f, 4.6002f, 4.93f, 4.2407f, 5.3493f)
-                curveTo(3.8813f, 5.7686f, 3.9299f, 6.3999f, 4.3492f, 6.7593f)
-                lineTo(11.3492f, 12.7593f)
-                curveTo(11.7237f, 13.0803f, 12.2763f, 13.0803f, 12.6508f, 12.7593f)
-                lineTo(19.6508f, 6.7593f)
-                close()
-                moveTo(19.6508f, 14.7593f)
-                curveTo(20.0701f, 14.3999f, 20.1187f, 13.7686f, 19.7592f, 13.3493f)
-                curveTo(19.3998f, 12.93f, 18.7685f, 12.8814f, 18.3492f, 13.2408f)
-                lineTo(12.0f, 18.683f)
-                lineTo(5.6508f, 13.2408f)
-                curveTo(5.2315f, 12.8814f, 4.6002f, 12.93f, 4.2407f, 13.3493f)
-                curveTo(3.8813f, 13.7686f, 3.9299f, 14.3999f, 4.3492f, 14.7593f)
-                lineTo(11.3492f, 20.7593f)
-                curveTo(11.7237f, 21.0803f, 12.2763f, 21.0803f, 12.6508f, 20.7593f)
-                lineTo(19.6508f, 14.7593f)
-                close()
+val BezierIcons.ChevronDownDouble: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _chevronDownDouble ?: ImageVector.Builder(
+                    name = "ChevronDownDouble",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(19.65f, 6.76f)
+                    arcTo(1.0f, 1.0f, 49.460848258516535f, isMoreThanHalf = true, isPositiveArc = false, 18.349999999999998f, 5.24f)
+                    lineTo(12.0f, 10.684f)
+                    lineTo(5.65f, 5.241f)
+                    arcTo(1.0f, 1.0f, 312.7352393913827f, isMoreThanHalf = true, isPositiveArc = false, 4.3500000000000005f, 6.7589999999999995f)
+                    lineTo(11.350000000000001f, 12.759f)
+                    arcTo(1.0f, 1.0f, 130.54160187350456f, isMoreThanHalf = false, isPositiveArc = false, 12.650000000000002f, 12.759f)
+                    close()
+                    moveTo(19.65f, 14.76f)
+                    arcTo(1.0f, 1.0f, 49.460848258516535f, isMoreThanHalf = true, isPositiveArc = false, 18.349999999999998f, 13.24f)
+                    lineTo(12.0f, 18.684f)
+                    lineTo(5.65f, 13.242f)
+                    arcTo(1.0f, 1.0f, 308.41759778668666f, isMoreThanHalf = false, isPositiveArc = false, 4.3500000000000005f, 14.760000000000002f)
+                    lineTo(11.350000000000001f, 20.76f)
+                    arcTo(1.0f, 1.0f, 130.54160187350456f, isMoreThanHalf = false, isPositiveArc = false, 12.650000000000002f, 20.76f)
+                    close()
+                }
+            }.build().also {
+                _chevronDownDouble = it
             }
-        }.build().also {
-            io.channel.bezier.icon._chevronDownDouble = it
-        }
     }
+
 
 private var _chevronDownDouble: ImageVector? = null
 
@@ -64,7 +63,7 @@ private var _chevronDownDouble: ImageVector? = null
 private fun ChevronDownDoubleIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ChevronDownDouble,
+            imageVector = BezierIcons.ChevronDownDouble.imageVector,
             contentDescription = null,
     )
 }

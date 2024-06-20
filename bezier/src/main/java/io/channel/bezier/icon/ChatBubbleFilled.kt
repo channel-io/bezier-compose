@@ -16,38 +16,41 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ChatBubbleFilled: ImageVector
-    get() {
-        return _chatBubbleFilled ?: ImageVector.Builder(
-                name = "ChatBubbleFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(20.7233f, 18.19f)
-                curveTo(20.5573f, 17.694f, 20.5763f, 17.144f, 20.8223f, 16.683f)
-                curveTo(21.8613f, 14.734f, 22.2813f, 12.409f, 21.7873f, 9.954f)
-                curveTo(20.9823f, 5.954f, 17.6933f, 2.789f, 13.6643f, 2.137f)
-                curveTo(6.8373f, 1.033f, 1.0233f, 6.848f, 2.1293f, 13.675f)
-                curveTo(2.7823f, 17.703f, 5.9463f, 20.991f, 9.9473f, 21.796f)
-                curveTo(12.4033f, 22.29f, 14.7293f, 21.868f, 16.6783f, 20.829f)
-                curveTo(17.1373f, 20.584f, 17.6813f, 20.565f, 18.1743f, 20.729f)
-                curveTo(18.7113f, 20.908f, 19.4293f, 21.147f, 20.0973f, 21.37f)
-                curveTo(20.8793f, 21.63f, 21.6223f, 20.886f, 21.3613f, 20.105f)
-                lineTo(20.7233f, 18.19f)
-                close()
+val BezierIcons.ChatBubbleFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _chatBubbleFilled ?: ImageVector.Builder(
+                    name = "ChatBubbleFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(20.723f, 18.19f)
+                    curveTo(20.557f, 17.694000000000003f, 20.576f, 17.144000000000002f, 20.823f, 16.683f)
+                    curveTo(21.861f, 14.734f, 22.281f, 12.408999999999999f, 21.787f, 9.954f)
+                    curveTo(20.982f, 5.954000000000001f, 17.692999999999998f, 2.7890000000000006f, 13.664f, 2.1370000000000005f)
+                    arcTo(10.013f, 10.013f, 279.5437585211548f, isMoreThanHalf = false, isPositiveArc = false, 2.13f, 13.675f)
+                    curveTo(2.783f, 17.703f, 5.947f, 20.991f, 9.948f, 21.796f)
+                    curveTo(12.404f, 22.29f, 14.73f, 21.868f, 16.679000000000002f, 20.829f)
+                    curveTo(17.139000000000003f, 20.584f, 17.682000000000002f, 20.565f, 18.175f, 20.729f)
+                    lineTo(20.098f, 21.369999999999997f)
+                    arcTo(1.0f, 1.0f, 108.37508707447735f, isMoreThanHalf = false, isPositiveArc = false, 21.362f, 20.104999999999997f)
+                    close()
+                }
+            }.build().also {
+                _chatBubbleFilled = it
             }
-        }.build().also {
-            _chatBubbleFilled = it
-        }
     }
+
 
 private var _chatBubbleFilled: ImageVector? = null
 
@@ -56,7 +59,7 @@ private var _chatBubbleFilled: ImageVector? = null
 private fun ChatBubbleFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ChatBubbleFilled,
+            imageVector = BezierIcons.ChatBubbleFilled.imageVector,
             contentDescription = null,
     )
 }

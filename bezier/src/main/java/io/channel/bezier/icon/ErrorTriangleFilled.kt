@@ -16,48 +16,46 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ErrorTriangleFilled: ImageVector
-    get() {
-        return _errorTriangleFilled ?: ImageVector.Builder(
-                name = "ErrorTriangleFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(8.9868f, 4.0993f)
-                curveTo(10.3415f, 1.8067f, 13.6585f, 1.8067f, 15.0132f, 4.0993f)
-                lineTo(21.8797f, 15.7195f)
-                curveTo(23.2584f, 18.0526f, 21.5765f, 21.0f, 18.8664f, 21.0f)
-                lineTo(5.1336f, 21.0f)
-                curveTo(2.4235f, 21.0f, 0.7416f, 18.0526f, 2.1203f, 15.7194f)
-                lineTo(8.9868f, 4.0993f)
-                close()
-                moveTo(12.0005f, 18.8f)
-                curveTo(11.2278f, 18.8f, 10.6f, 18.1733f, 10.6f, 17.4005f)
-                curveTo(10.6f, 16.6267f, 11.2278f, 16.0f, 12.0005f, 16.0f)
-                curveTo(12.7733f, 16.0f, 13.4f, 16.6267f, 13.4f, 17.4005f)
-                curveTo(13.4f, 18.1733f, 12.7733f, 18.8f, 12.0005f, 18.8f)
-                close()
-                moveTo(12.0f, 6.0f)
-                curveTo(11.4477f, 6.0f, 11.0f, 6.4477f, 11.0f, 7.0f)
-                lineTo(11.0f, 13.0f)
-                curveTo(11.0f, 13.5523f, 11.4477f, 14.0f, 12.0f, 14.0f)
-                curveTo(12.5523f, 14.0f, 13.0f, 13.5523f, 13.0f, 13.0f)
-                lineTo(13.0f, 7.0f)
-                curveTo(13.0f, 6.4477f, 12.5523f, 6.0f, 12.0f, 6.0f)
-                close()
+val BezierIcons.ErrorTriangleFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _errorTriangleFilled ?: ImageVector.Builder(
+                    name = "ErrorTriangleFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(8.987f, 4.1f)
+                    curveTo(10.341000000000001f, 1.8069999999999995f, 13.658999999999999f, 1.8069999999999995f, 15.013f, 4.1f)
+                    lineTo(21.88f, 15.719999999999999f)
+                    curveTo(23.258f, 18.052999999999997f, 21.576999999999998f, 21.0f, 18.866f, 21.0f)
+                    lineTo(5.134f, 21.0f)
+                    curveTo(2.4240000000000004f, 21.0f, 0.742f, 18.053f, 2.1200000000000006f, 15.719999999999999f)
+                    close()
+                    moveTo(12.0f, 18.8f)
+                    arcTo(1.4f, 1.4f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 12.0f, 15.999f)
+                    arcTo(1.4f, 1.4f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 18.8f)
+                    moveTo(12.0f, 6.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 11.0f, 7.0f)
+                    lineTo(11.0f, 13.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 13.0f, 13.0f)
+                    lineTo(13.0f, 7.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 6.0f)
+                }
+            }.build().also {
+                _errorTriangleFilled = it
             }
-        }.build().also {
-            _errorTriangleFilled = it
-        }
     }
+
 
 private var _errorTriangleFilled: ImageVector? = null
 
@@ -66,7 +64,7 @@ private var _errorTriangleFilled: ImageVector? = null
 private fun ErrorTriangleFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ErrorTriangleFilled,
+            imageVector = BezierIcons.ErrorTriangleFilled.imageVector,
             contentDescription = null,
     )
 }

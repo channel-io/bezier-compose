@@ -16,84 +16,83 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CoinRecurring: ImageVector
-    get() {
-        return io.channel.bezier.icon._coinRecurring ?: ImageVector.Builder(
-                name = "CoinRecurring",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(21.5f, 9.25f)
-                lineTo(15.873f, 9.25f)
-                curveTo(15.428f, 9.25f, 15.205f, 8.711f, 15.52f, 8.396f)
-                lineTo(17.613f, 6.303f)
-                curveTo(16.106f, 4.819f, 14.117f, 4.0f, 12.0f, 4.0f)
-                curveTo(7.9269f, 4.0f, 4.5547f, 7.0602f, 4.0619f, 11.002f)
-                curveTo(3.9934f, 11.55f, 3.5523f, 12.0f, 3.0f, 12.0f)
-                curveTo(2.4477f, 12.0f, 1.9947f, 11.551f, 2.0495f, 11.0014f)
-                curveTo(2.5521f, 5.9545f, 6.823f, 2.0f, 12.0f, 2.0f)
-                curveTo(14.651f, 2.0f, 17.143f, 3.027f, 19.027f, 4.889f)
-                lineTo(21.146f, 2.77f)
-                curveTo(21.461f, 2.455f, 22.0f, 2.677f, 22.0f, 3.123f)
-                lineTo(22.0f, 8.75f)
-                curveTo(22.0f, 9.026f, 21.776f, 9.25f, 21.5f, 9.25f)
-                close()
-                moveTo(2.5f, 14.75f)
-                lineTo(8.127f, 14.75f)
-                curveTo(8.572f, 14.75f, 8.795f, 15.289f, 8.48f, 15.604f)
-                lineTo(6.387f, 17.697f)
-                curveTo(7.893f, 19.181f, 9.883f, 20.0f, 12.0f, 20.0f)
-                curveTo(16.0731f, 20.0f, 19.4453f, 16.9398f, 19.9381f, 12.998f)
-                curveTo(20.0066f, 12.45f, 20.4477f, 12.0f, 21.0f, 12.0f)
-                curveTo(21.5523f, 12.0f, 22.0053f, 12.449f, 21.9505f, 12.9986f)
-                curveTo(21.4479f, 18.0455f, 17.177f, 22.0f, 12.0f, 22.0f)
-                curveTo(9.349f, 22.0f, 6.856f, 20.973f, 4.973f, 19.111f)
-                lineTo(2.854f, 21.23f)
-                curveTo(2.539f, 21.545f, 2.0f, 21.322f, 2.0f, 20.877f)
-                lineTo(2.0f, 15.25f)
-                curveTo(2.0f, 14.974f, 2.224f, 14.75f, 2.5f, 14.75f)
-                close()
-                moveTo(12.4919f, 10.9442f)
-                lineTo(13.6069f, 11.3882f)
-                curveTo(14.7109f, 11.8322f, 15.3699f, 12.5752f, 15.3699f, 13.8352f)
-                curveTo(15.3699f, 15.0622f, 14.5099f, 16.1542f, 12.9999f, 16.5032f)
-                lineTo(12.9999f, 17.0002f)
-                curveTo(12.9999f, 17.5525f, 12.5522f, 18.0002f, 11.9999f, 18.0002f)
-                curveTo(11.4476f, 18.0002f, 10.9999f, 17.5525f, 10.9999f, 17.0002f)
-                lineTo(10.9999f, 16.5262f)
-                curveTo(10.1439f, 16.3552f, 9.3009f, 15.9652f, 8.6299f, 15.3462f)
-                lineTo(9.8409f, 13.8702f)
-                curveTo(10.4769f, 14.4102f, 11.3039f, 14.7822f, 12.0119f, 14.7822f)
-                curveTo(12.8039f, 14.7822f, 13.1749f, 14.4822f, 13.1749f, 14.0032f)
-                curveTo(13.1749f, 13.5221f, 12.748f, 13.3435f, 12.0678f, 13.059f)
-                curveTo(12.0184f, 13.0383f, 11.9678f, 13.0171f, 11.9159f, 12.9952f)
-                lineTo(10.7769f, 12.5152f)
-                curveTo(9.8409f, 12.1442f, 8.9659f, 11.3642f, 8.9659f, 10.0692f)
-                curveTo(8.9659f, 8.9142f, 9.7679f, 7.9432f, 10.9999f, 7.5552f)
-                lineTo(10.9999f, 7.0002f)
-                curveTo(10.9999f, 6.448f, 11.4476f, 6.0002f, 11.9999f, 6.0002f)
-                curveTo(12.5522f, 6.0002f, 12.9999f, 6.448f, 12.9999f, 7.0002f)
-                lineTo(12.9999f, 7.4492f)
-                curveTo(13.7729f, 7.5992f, 14.5259f, 7.9652f, 15.1069f, 8.5462f)
-                lineTo(14.0389f, 9.8892f)
-                curveTo(13.4509f, 9.4452f, 12.8989f, 9.2052f, 12.2039f, 9.2052f)
-                curveTo(11.5439f, 9.2052f, 11.1359f, 9.4692f, 11.1359f, 9.9492f)
-                curveTo(11.1359f, 10.4145f, 11.6402f, 10.6115f, 12.3647f, 10.8945f)
-                curveTo(12.4064f, 10.9108f, 12.4488f, 10.9273f, 12.4919f, 10.9442f)
-                close()
+val BezierIcons.CoinRecurring: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _coinRecurring ?: ImageVector.Builder(
+                    name = "CoinRecurring",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(21.5f, 9.25f)
+                    lineTo(15.873000000000001f, 9.25f)
+                    arcTo(0.5f, 0.5f, 90.01217019736593f, isMoreThanHalf = false, isPositiveArc = true, 15.520000000000001f, 8.396f)
+                    lineTo(17.613f, 6.303000000000001f)
+                    arcTo(7.95f, 7.95f, 314.73968143577366f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 4.0f)
+                    curveTo(7.927f, 4.0f, 4.555f, 7.0600000000000005f, 4.062f, 11.001999999999999f)
+                    curveTo(3.993f, 11.55f, 3.552f, 12.0f, 3.0f, 12.0f)
+                    curveTo(2.448f, 12.0f, 1.995f, 11.551f, 2.05f, 11.001f)
+                    curveTo(2.551f, 5.954f, 6.822f, 2.0f, 12.0f, 2.0f)
+                    arcTo(9.93f, 9.93f, 269.8564321312821f, isMoreThanHalf = false, isPositiveArc = true, 19.027f, 4.888999999999999f)
+                    lineTo(21.146f, 2.769999999999999f)
+                    arcTo(0.5f, 0.5f, 224.92757622731992f, isMoreThanHalf = false, isPositiveArc = true, 22.0f, 3.1229999999999993f)
+                    lineTo(22.0f, 8.75f)
+                    arcTo(0.5f, 0.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 21.5f, 9.25f)
+                    moveTo(2.5f, 14.75f)
+                    lineTo(8.126999999999999f, 14.75f)
+                    arcTo(0.5f, 0.5f, 270.01217019736595f, isMoreThanHalf = false, isPositiveArc = true, 8.479999999999999f, 15.604f)
+                    lineTo(6.386999999999999f, 17.697f)
+                    arcTo(7.95f, 7.95f, 134.73968143577366f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 20.0f)
+                    curveTo(16.073f, 20.0f, 19.445f, 16.94f, 19.938f, 12.998000000000001f)
+                    curveTo(20.006999999999998f, 12.450000000000001f, 20.448f, 12.000000000000002f, 21.0f, 12.000000000000002f)
+                    curveTo(21.552f, 12.000000000000002f, 22.005f, 12.449000000000002f, 21.95f, 12.999000000000002f)
+                    curveTo(21.449f, 18.046f, 17.178f, 22.0f, 12.0f, 22.0f)
+                    arcTo(9.93f, 9.93f, 89.8564321312821f, isMoreThanHalf = false, isPositiveArc = true, 4.973f, 19.111f)
+                    lineTo(2.854f, 21.23f)
+                    arcTo(0.5f, 0.5f, 44.92757622731977f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 20.877f)
+                    lineTo(2.0f, 15.25f)
+                    arcTo(0.5f, 0.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 2.5f, 14.75f)
+                    moveTo(12.492f, 10.943999999999999f)
+                    lineTo(13.607000000000001f, 11.388f)
+                    curveTo(14.711000000000002f, 11.832f, 15.370000000000001f, 12.575f, 15.370000000000001f, 13.835f)
+                    curveTo(15.370000000000001f, 15.062000000000001f, 14.510000000000002f, 16.155f, 13.0f, 16.503f)
+                    lineTo(13.0f, 17.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 11.0f, 17.0f)
+                    lineTo(11.0f, 16.526f)
+                    curveTo(10.144f, 16.355999999999998f, 9.3f, 15.966f, 8.629999999999999f, 15.346f)
+                    lineTo(9.84f, 13.870000000000001f)
+                    curveTo(10.477f, 14.41f, 11.304f, 14.782000000000002f, 12.012f, 14.782000000000002f)
+                    curveTo(12.804f, 14.782000000000002f, 13.175f, 14.482000000000001f, 13.175f, 14.003000000000002f)
+                    curveTo(13.175f, 13.524000000000003f, 12.748000000000001f, 13.343000000000002f, 12.068000000000001f, 13.059000000000001f)
+                    lineTo(11.916000000000002f, 12.995000000000001f)
+                    lineTo(10.776000000000002f, 12.515f)
+                    curveTo(9.841000000000001f, 12.145000000000001f, 8.966000000000001f, 11.365f, 8.966000000000001f, 10.069f)
+                    curveTo(8.966000000000001f, 8.914000000000001f, 9.768f, 7.943000000000001f, 11.0f, 7.5550000000000015f)
+                    lineTo(11.0f, 7.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 13.0f, 7.0f)
+                    lineTo(13.0f, 7.45f)
+                    curveTo(13.773f, 7.6000000000000005f, 14.526f, 7.965f, 15.107f, 8.546f)
+                    lineTo(14.039f, 9.89f)
+                    curveTo(13.451f, 9.446f, 12.899f, 9.206000000000001f, 12.204f, 9.206000000000001f)
+                    curveTo(11.544f, 9.206000000000001f, 11.136000000000001f, 9.47f, 11.136000000000001f, 9.950000000000001f)
+                    curveTo(11.136000000000001f, 10.416f, 11.64f, 10.612000000000002f, 12.365000000000002f, 10.896f)
+                    close()
+                }
+            }.build().also {
+                _coinRecurring = it
             }
-        }.build().also {
-            io.channel.bezier.icon._coinRecurring = it
-        }
     }
+
 
 private var _coinRecurring: ImageVector? = null
 
@@ -102,7 +101,7 @@ private var _coinRecurring: ImageVector? = null
 private fun CoinRecurringIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CoinRecurring,
+            imageVector = BezierIcons.CoinRecurring.imageVector,
             contentDescription = null,
     )
 }
