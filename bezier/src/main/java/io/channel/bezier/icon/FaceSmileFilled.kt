@@ -16,57 +16,55 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.FaceSmileFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._faceSmileFilled ?: ImageVector.Builder(
-                name = "FaceSmileFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(2.0002f, 12.0001f)
-                curveTo(2.0002f, 6.4781f, 6.4772f, 2.0001f, 12.0002f, 2.0001f)
-                curveTo(17.5222f, 2.0001f, 22.0002f, 6.4781f, 22.0002f, 12.0001f)
-                curveTo(22.0002f, 17.5221f, 17.5222f, 22.0001f, 12.0002f, 22.0001f)
-                curveTo(6.4772f, 22.0001f, 2.0002f, 17.5221f, 2.0002f, 12.0001f)
-                close()
-                moveTo(11.9903f, 17.7081f)
-                lineTo(11.9943f, 17.7081f)
-                curveTo(16.3113f, 17.7081f, 17.5003f, 14.2491f, 17.5483f, 14.1021f)
-                curveTo(17.7213f, 13.5771f, 17.4363f, 13.0121f, 16.9113f, 12.8391f)
-                curveTo(16.3863f, 12.6651f, 15.8223f, 12.9521f, 15.6493f, 13.4771f)
-                lineTo(15.649f, 13.4781f)
-                curveTo(15.6288f, 13.5349f, 14.8578f, 15.7081f, 11.9943f, 15.7081f)
-                lineTo(11.9913f, 15.7081f)
-                curveTo(9.1683f, 15.7061f, 8.3833f, 13.5681f, 8.3483f, 13.4691f)
-                curveTo(8.1723f, 12.9501f, 7.6103f, 12.6651f, 7.0893f, 12.8391f)
-                curveTo(6.5643f, 13.0111f, 6.2783f, 13.5761f, 6.4513f, 14.1011f)
-                curveTo(6.4993f, 14.2481f, 7.6833f, 17.7041f, 11.9903f, 17.7081f)
-                close()
-                moveTo(8.7863f, 11.8253f)
-                curveTo(7.9413f, 11.8253f, 7.5873f, 11.2153f, 7.5873f, 9.7203f)
-                curveTo(7.5873f, 8.2253f, 7.9413f, 7.6143f, 8.7863f, 7.6143f)
-                curveTo(9.6313f, 7.6143f, 9.9843f, 8.2253f, 9.9843f, 9.7203f)
-                curveTo(9.9843f, 11.2153f, 9.6313f, 11.8253f, 8.7863f, 11.8253f)
-                close()
-                moveTo(14.015f, 9.7203f)
-                curveTo(14.015f, 11.2153f, 14.368f, 11.8253f, 15.214f, 11.8253f)
-                curveTo(16.059f, 11.8253f, 16.412f, 11.2153f, 16.412f, 9.7203f)
-                curveTo(16.412f, 8.2253f, 16.059f, 7.6143f, 15.214f, 7.6143f)
-                curveTo(14.368f, 7.6143f, 14.015f, 8.2253f, 14.015f, 9.7203f)
-                close()
+val BezierIcons.FaceSmileFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _faceSmileFilled ?: ImageVector.Builder(
+                    name = "FaceSmileFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(2.0f, 12.0f)
+                    curveTo(2.0f, 6.478f, 6.477f, 2.0f, 12.0f, 2.0f)
+                    curveTo(17.523f, 2.0f, 22.0f, 6.478f, 22.0f, 12.0f)
+                    curveTo(22.0f, 17.522f, 17.522f, 22.0f, 12.0f, 22.0f)
+                    curveTo(6.4780000000000015f, 22.0f, 2.0f, 17.522f, 2.0f, 12.0f)
+                    moveTo(11.99f, 17.708f)
+                    lineTo(11.994f, 17.708f)
+                    curveTo(16.311f, 17.708f, 17.5f, 14.248999999999999f, 17.548000000000002f, 14.101999999999999f)
+                    arcTo(1.0f, 1.0f, 19.831625693217855f, isMoreThanHalf = true, isPositiveArc = false, 15.649000000000001f, 13.476999999999999f)
+                    lineTo(15.649000000000001f, 13.477999999999998f)
+                    curveTo(15.629000000000001f, 13.534999999999998f, 14.858f, 15.707999999999998f, 11.994000000000002f, 15.707999999999998f)
+                    lineTo(11.991000000000001f, 15.707999999999998f)
+                    curveTo(9.168000000000001f, 15.705999999999998f, 8.383000000000001f, 13.567999999999998f, 8.348000000000003f, 13.468999999999998f)
+                    arcTo(0.999f, 0.999f, 341.57411266356155f, isMoreThanHalf = false, isPositiveArc = false, 6.451000000000002f, 14.100999999999997f)
+                    curveTo(6.499000000000002f, 14.247999999999998f, 7.6830000000000025f, 17.703999999999997f, 11.991000000000003f, 17.708f)
+                    moveTo(8.787000000000003f, 11.825f)
+                    curveTo(7.942000000000003f, 11.825f, 7.588000000000003f, 11.215f, 7.588000000000003f, 9.719999999999999f)
+                    curveTo(7.588000000000003f, 8.224999999999998f, 7.942000000000003f, 7.613999999999999f, 8.788000000000002f, 7.613999999999999f)
+                    curveTo(9.632000000000001f, 7.613999999999999f, 9.985000000000003f, 8.225f, 9.985000000000003f, 9.719999999999999f)
+                    curveTo(9.985000000000003f, 11.214999999999998f, 9.632000000000003f, 11.825f, 8.787000000000003f, 11.825f)
+                    moveTo(14.016000000000002f, 9.719999999999999f)
+                    curveTo(14.016000000000002f, 11.215f, 14.369000000000002f, 11.825f, 15.215000000000002f, 11.825f)
+                    curveTo(16.060000000000002f, 11.825f, 16.413f, 11.215f, 16.413f, 9.719999999999999f)
+                    curveTo(16.413f, 8.224999999999998f, 16.06f, 7.613999999999999f, 15.215f, 7.613999999999999f)
+                    curveTo(14.369f, 7.613999999999999f, 14.016f, 8.225f, 14.016f, 9.719999999999999f)
+                }
+            }.build().also {
+                _faceSmileFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._faceSmileFilled = it
-        }
     }
+
 
 private var _faceSmileFilled: ImageVector? = null
 
@@ -75,7 +73,7 @@ private var _faceSmileFilled: ImageVector? = null
 private fun FaceSmileFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.FaceSmileFilled,
+            imageVector = BezierIcons.FaceSmileFilled.imageVector,
             contentDescription = null,
     )
 }

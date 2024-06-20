@@ -16,78 +16,76 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.AutoWriting: ImageVector
-    get() {
-        return _autoWriting ?: ImageVector.Builder(
-                name = "AutoWriting",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(7.2792f, 11.8159f)
-                curveTo(7.174f, 12.0614f, 6.826f, 12.0614f, 6.7208f, 11.8159f)
-                lineTo(5.3598f, 8.6402f)
-                lineTo(2.1841f, 7.2792f)
-                curveTo(1.9386f, 7.174f, 1.9386f, 6.826f, 2.1841f, 6.7208f)
-                lineTo(5.3598f, 5.3598f)
-                lineTo(6.7208f, 2.1841f)
-                curveTo(6.826f, 1.9386f, 7.174f, 1.9386f, 7.2792f, 2.1841f)
-                lineTo(8.6402f, 5.3598f)
-                lineTo(11.8159f, 6.7208f)
-                curveTo(12.0614f, 6.826f, 12.0614f, 7.174f, 11.8159f, 7.2792f)
-                lineTo(8.6402f, 8.6402f)
-                lineTo(7.2792f, 11.8159f)
-                close()
-                moveTo(19.6779f, 8.7364f)
-                lineTo(18.4139f, 10.0004f)
-                lineTo(16.9999f, 8.5864f)
-                lineTo(18.2629f, 7.3224f)
-                curveTo(18.5179f, 7.0674f, 18.8159f, 7.0294f, 18.9699f, 7.0294f)
-                curveTo(19.1249f, 7.0294f, 19.4229f, 7.0674f, 19.6779f, 7.3224f)
-                curveTo(20.0679f, 7.7124f, 20.0679f, 8.3464f, 19.6779f, 8.7364f)
-                close()
-                moveTo(6.9999f, 20.0004f)
-                lineTo(6.9999f, 18.5854f)
-                lineTo(15.5f, 10.0f)
-                lineTo(17.0f, 11.5f)
-                lineTo(8.4139f, 20.0004f)
-                lineTo(6.9999f, 20.0004f)
-                close()
-                moveTo(21.0919f, 5.9084f)
-                curveTo(20.5059f, 5.3224f, 19.7389f, 5.0294f, 18.9699f, 5.0294f)
-                curveTo(18.2029f, 5.0294f, 17.4349f, 5.3224f, 16.8489f, 5.9084f)
-                lineTo(4.9999f, 17.7574f)
-                lineTo(4.9999f, 22.0004f)
-                lineTo(9.2429f, 22.0004f)
-                lineTo(21.0919f, 10.1514f)
-                curveTo(22.2629f, 8.9794f, 22.2629f, 7.0794f, 21.0919f, 5.9084f)
-                close()
-                moveTo(19.3259f, 20.7851f)
-                curveTo(19.2031f, 21.0716f, 18.7969f, 21.0716f, 18.6741f, 20.7851f)
-                lineTo(17.9363f, 19.0637f)
-                lineTo(16.2149f, 18.3259f)
-                curveTo(15.9284f, 18.2031f, 15.9284f, 17.7969f, 16.2149f, 17.6741f)
-                lineTo(17.9363f, 16.9363f)
-                lineTo(18.6741f, 15.2149f)
-                curveTo(18.7969f, 14.9284f, 19.2031f, 14.9284f, 19.3259f, 15.2149f)
-                lineTo(20.0637f, 16.9363f)
-                lineTo(21.7851f, 17.6741f)
-                curveTo(22.0716f, 17.7969f, 22.0716f, 18.2031f, 21.7851f, 18.3259f)
-                lineTo(20.0637f, 19.0637f)
-                lineTo(19.3259f, 20.7851f)
-                close()
+val BezierIcons.AutoWriting: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _autoWriting ?: ImageVector.Builder(
+                    name = "AutoWriting",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(7.28f, 11.816f)
+                    arcTo(0.304f, 0.304f, 22.91954215156989f, isMoreThanHalf = false, isPositiveArc = true, 6.720000000000001f, 11.816f)
+                    lineTo(5.36f, 8.64f)
+                    lineTo(2.184f, 7.28f)
+                    arcTo(0.304f, 0.304f, 112.9195421515699f, isMoreThanHalf = false, isPositiveArc = true, 2.184f, 6.720000000000001f)
+                    lineTo(5.36f, 5.36f)
+                    lineTo(6.720000000000001f, 2.184f)
+                    arcTo(0.304f, 0.304f, 202.91954215156966f, isMoreThanHalf = false, isPositiveArc = true, 7.280000000000001f, 2.184f)
+                    lineTo(8.64f, 5.36f)
+                    lineTo(11.816f, 6.720000000000001f)
+                    arcTo(0.304f, 0.304f, 292.91954215156966f, isMoreThanHalf = false, isPositiveArc = true, 11.816f, 7.280000000000001f)
+                    lineTo(8.64f, 8.64f)
+                    close()
+                    moveTo(19.678f, 8.736f)
+                    lineTo(18.414f, 10.0f)
+                    lineTo(17.0f, 8.586f)
+                    lineTo(18.262999999999998f, 7.322f)
+                    arcTo(0.997f, 0.997f, 224.79527145423725f, isMoreThanHalf = false, isPositiveArc = true, 19.677999999999997f, 7.322f)
+                    arcTo(1.0f, 1.0f, 315.00865166283796f, isMoreThanHalf = false, isPositiveArc = true, 19.677999999999997f, 8.736f)
+                    moveTo(7.0f, 20.0f)
+                    lineTo(7.0f, 18.585f)
+                    lineTo(15.5f, 10.0f)
+                    lineTo(17.0f, 11.5f)
+                    lineTo(8.414f, 20.0f)
+                    close()
+                    moveTo(21.092f, 5.908f)
+                    arcTo(3.0f, 3.0f, 315.0086522440172f, isMoreThanHalf = false, isPositiveArc = false, 18.97f, 5.029f)
+                    curveTo(18.203f, 5.029f, 17.435f, 5.322f, 16.849f, 5.909f)
+                    lineTo(4.999f, 17.756f)
+                    lineTo(4.999f, 22.0f)
+                    lineTo(9.242999999999999f, 22.0f)
+                    lineTo(21.092f, 10.151f)
+                    arcTo(3.0f, 3.0f, 45.00485263423808f, isMoreThanHalf = false, isPositiveArc = false, 21.092f, 5.9079999999999995f)
+                    moveTo(19.326f, 20.785f)
+                    arcTo(0.355f, 0.355f, 23.319767671139385f, isMoreThanHalf = false, isPositiveArc = true, 18.674f, 20.785f)
+                    lineTo(17.936f, 19.064f)
+                    lineTo(16.215f, 18.326f)
+                    arcTo(0.355f, 0.355f, 113.31976767113939f, isMoreThanHalf = false, isPositiveArc = true, 16.215f, 17.674f)
+                    lineTo(17.936f, 16.936f)
+                    lineTo(18.674f, 15.215f)
+                    arcTo(0.355f, 0.355f, 203.31976767113937f, isMoreThanHalf = false, isPositiveArc = true, 19.326f, 15.215f)
+                    lineTo(20.064f, 16.936f)
+                    lineTo(21.785f, 17.674f)
+                    arcTo(0.355f, 0.355f, 293.3197676711394f, isMoreThanHalf = false, isPositiveArc = true, 21.785f, 18.326f)
+                    lineTo(20.064f, 19.064f)
+                    close()
+                }
+            }.build().also {
+                _autoWriting = it
             }
-        }.build().also {
-            _autoWriting = it
-        }
     }
+
 
 private var _autoWriting: ImageVector? = null
 
@@ -96,7 +94,7 @@ private var _autoWriting: ImageVector? = null
 private fun AutoWritingIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.AutoWriting,
+            imageVector = BezierIcons.AutoWriting.imageVector,
             contentDescription = null,
     )
 }

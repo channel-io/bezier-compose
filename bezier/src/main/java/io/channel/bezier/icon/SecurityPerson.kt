@@ -16,65 +16,64 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.SecurityPerson: ImageVector
-    get() {
-        return io.channel.bezier.icon._securityPerson ?: ImageVector.Builder(
-                name = "SecurityPerson",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(12.0007f, 11.5f)
-                curveTo(13.1046f, 11.5f, 14.0f, 10.6043f, 14.0f, 9.5f)
-                curveTo(14.0f, 8.3957f, 13.1046f, 7.5f, 12.0007f, 7.5f)
-                curveTo(10.8954f, 7.5f, 10.0f, 8.3957f, 10.0f, 9.5f)
-                curveTo(10.0f, 10.6043f, 10.8954f, 11.5f, 12.0007f, 11.5f)
-                close()
-                moveTo(8.0005f, 15.7388f)
-                curveTo(7.9914f, 15.8802f, 8.1114f, 16.0f, 8.2542f, 16.0f)
-                lineTo(15.7458f, 16.0f)
-                curveTo(15.8887f, 16.0f, 16.0087f, 15.8802f, 15.9995f, 15.7388f)
-                curveTo(15.8646f, 13.6504f, 14.1252f, 12.0f, 12.0006f, 12.0f)
-                curveTo(9.8748f, 12.0f, 8.1354f, 13.6504f, 8.0005f, 15.7388f)
-                close()
-            }
+val BezierIcons.SecurityPerson: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _securityPerson ?: ImageVector.Builder(
+                    name = "SecurityPerson",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(12.0f, 11.5f)
+                    arcTo(2.0f, 2.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 12.0f, 7.5f)
+                    arcTo(2.0f, 2.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 11.5f)
+                    moveTo(8.0f, 15.739f)
+                    curveTo(7.991f, 15.88f, 8.111f, 16.0f, 8.254f, 16.0f)
+                    lineTo(15.745999999999999f, 16.0f)
+                    curveTo(15.889f, 16.0f, 16.009f, 15.88f, 15.998999999999999f, 15.739f)
+                    arcTo(4.004f, 4.004f, 356.2051784699313f, isMoreThanHalf = false, isPositiveArc = false, 12.002f, 12.0f)
+                    arcTo(4.005f, 4.005f, 270.05497961584604f, isMoreThanHalf = false, isPositiveArc = false, 8.002f, 15.739f)
+                }
 
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(21.0f, 5.307f)
-                lineTo(12.0f, 1.932f)
-                lineTo(3.0f, 5.307f)
-                lineTo(3.0f, 10.0f)
-                curveTo(3.0f, 14.6688f, 5.6378f, 18.937f, 9.8138f, 21.0249f)
-                lineTo(12.0f, 22.118f)
-                lineTo(14.1862f, 21.0249f)
-                curveTo(18.3622f, 18.937f, 21.0f, 14.6688f, 21.0f, 10.0f)
-                lineTo(21.0f, 5.307f)
-                close()
-                moveTo(5.0f, 10.0f)
-                lineTo(5.0f, 6.693f)
-                lineTo(12.0f, 4.068f)
-                lineTo(19.0f, 6.693f)
-                lineTo(19.0f, 10.0f)
-                curveTo(19.0f, 13.9113f, 16.7902f, 17.4869f, 13.2918f, 19.2361f)
-                lineTo(12.0f, 19.882f)
-                lineTo(10.7082f, 19.2361f)
-                curveTo(7.2098f, 17.4869f, 5.0f, 13.9113f, 5.0f, 10.0f)
-                close()
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(21.0f, 5.307f)
+                    lineTo(12.0f, 1.9320000000000004f)
+                    lineTo(3.0f, 5.307f)
+                    lineTo(3.0f, 10.0f)
+                    curveTo(3.0f, 14.669f, 5.638f, 18.936999999999998f, 9.814f, 21.025f)
+                    lineTo(12.0f, 22.118f)
+                    lineTo(14.186f, 21.025f)
+                    arcTo(12.33f, 12.33f, 63.42530511617916f, isMoreThanHalf = false, isPositiveArc = false, 21.0f, 10.0f)
+                    close()
+                    moveTo(5.0f, 10.0f)
+                    lineTo(5.0f, 6.693f)
+                    lineTo(12.0f, 4.068f)
+                    lineTo(19.0f, 6.693f)
+                    lineTo(19.0f, 10.0f)
+                    curveTo(19.0f, 13.911f, 16.79f, 17.487000000000002f, 13.292f, 19.236f)
+                    lineTo(12.0f, 19.882f)
+                    lineTo(10.708f, 19.236f)
+                    arcTo(10.33f, 10.33f, 116.57921133122318f, isMoreThanHalf = false, isPositiveArc = true, 5.0f, 10.0f)
+                }
+            }.build().also {
+                _securityPerson = it
             }
-        }.build().also {
-            io.channel.bezier.icon._securityPerson = it
-        }
     }
+
 
 private var _securityPerson: ImageVector? = null
 
@@ -83,7 +82,7 @@ private var _securityPerson: ImageVector? = null
 private fun SecurityPersonIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.SecurityPerson,
+            imageVector = BezierIcons.SecurityPerson.imageVector,
             contentDescription = null,
     )
 }

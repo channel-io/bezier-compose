@@ -16,52 +16,43 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Music: ImageVector
-    get() {
-        return io.channel.bezier.icon._music ?: ImageVector.Builder(
-                name = "Music",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(7.8479f, 3.7041f)
-                curveTo(7.3601f, 3.7791f, 7.0f, 4.1989f, 7.0f, 4.6925f)
-                lineTo(7.0f, 5.8345f)
-                lineTo(7.0f, 7.8345f)
-                lineTo(7.0f, 15.1707f)
-                curveTo(6.6872f, 15.0602f, 6.3506f, 15.0f, 6.0f, 15.0f)
-                curveTo(4.3432f, 15.0f, 3.0f, 16.3431f, 3.0f, 18.0f)
-                curveTo(3.0f, 19.6569f, 4.3432f, 21.0f, 6.0f, 21.0f)
-                curveTo(7.6568f, 21.0f, 9.0f, 19.6569f, 9.0f, 18.0f)
-                curveTo(9.0f, 17.9445f, 8.9985f, 17.8893f, 8.9955f, 17.8345f)
-                lineTo(9.0f, 17.8345f)
-                lineTo(9.0f, 7.5268f)
-                lineTo(18.0f, 6.1422f)
-                lineTo(18.0f, 13.1707f)
-                curveTo(17.6872f, 13.0602f, 17.3506f, 13.0f, 17.0f, 13.0f)
-                curveTo(15.3431f, 13.0f, 14.0f, 14.3431f, 14.0f, 16.0f)
-                curveTo(14.0f, 17.6569f, 15.3431f, 19.0f, 17.0f, 19.0f)
-                curveTo(18.6569f, 19.0f, 20.0f, 17.6569f, 20.0f, 16.0f)
-                curveTo(20.0f, 15.9445f, 19.9985f, 15.8893f, 19.9955f, 15.8345f)
-                lineTo(20.0f, 15.8345f)
-                lineTo(20.0f, 5.8345f)
-                lineTo(20.0f, 3.8345f)
-                lineTo(20.0f, 3.0001f)
-                curveTo(20.0f, 2.3873f, 19.4537f, 1.9186f, 18.8479f, 2.0118f)
-                lineTo(7.8479f, 3.7041f)
-                close()
+val BezierIcons.Music: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _music ?: ImageVector.Builder(
+                    name = "Music",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(7.848f, 3.704f)
+                    arcTo(1.0f, 1.0f, 261.25715688301216f, isMoreThanHalf = false, isPositiveArc = false, 7.0f, 4.692f)
+                    lineTo(7.0f, 15.171f)
+                    arcTo(3.0f, 3.0f, 289.46069698212244f, isMoreThanHalf = true, isPositiveArc = false, 8.996f, 17.835f)
+                    lineTo(9.0f, 17.835f)
+                    lineTo(9.0f, 7.526f)
+                    lineTo(18.0f, 6.141f)
+                    lineTo(18.0f, 13.17f)
+                    arcTo(3.0f, 3.0f, 289.4813549907971f, isMoreThanHalf = true, isPositiveArc = false, 19.995f, 15.834f)
+                    lineTo(20.0f, 15.834f)
+                    lineTo(20.0f, 3.0f)
+                    arcTo(1.0f, 1.0f, 359.97819996359993f, isMoreThanHalf = false, isPositiveArc = false, 18.848f, 2.012f)
+                    close()
+                }
+            }.build().also {
+                _music = it
             }
-        }.build().also {
-            io.channel.bezier.icon._music = it
-        }
     }
+
 
 private var _music: ImageVector? = null
 
@@ -70,7 +61,7 @@ private var _music: ImageVector? = null
 private fun MusicIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Music,
+            imageVector = BezierIcons.Music.imageVector,
             contentDescription = null,
     )
 }

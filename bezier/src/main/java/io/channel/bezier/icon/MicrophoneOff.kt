@@ -16,77 +16,74 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.MicrophoneOff: ImageVector
-    get() {
-        return _microphoneOff ?: ImageVector.Builder(
-                name = "MicrophoneOff",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(15.414f, 15.0855f)
-                lineTo(16.8549f, 16.5264f)
-                curveTo(17.3898f, 15.7913f, 17.7618f, 14.9299f, 17.9178f, 13.9955f)
-                curveTo(18.0088f, 13.4508f, 18.4477f, 13.0f, 19.0f, 13.0f)
-                curveTo(19.5523f, 13.0f, 20.0066f, 13.4495f, 19.9384f, 13.9975f)
-                curveTo(19.754f, 15.4804f, 19.1637f, 16.8374f, 18.2822f, 17.9537f)
-                lineTo(21.0919f, 20.7634f)
-                curveTo(21.4824f, 21.1539f, 21.4824f, 21.7871f, 21.0919f, 22.1776f)
-                curveTo(20.7014f, 22.5682f, 20.0682f, 22.5682f, 19.6777f, 22.1776f)
-                lineTo(2.7071f, 5.2071f)
-                curveTo(2.3166f, 4.8165f, 2.3166f, 4.1834f, 2.7071f, 3.7929f)
-                curveTo(3.0976f, 3.4023f, 3.7308f, 3.4023f, 4.1213f, 3.7929f)
-                lineTo(8.0f, 7.6715f)
-                lineTo(8.0f, 6.0f)
-                curveTo(8.0f, 3.7909f, 9.7909f, 2.0f, 12.0f, 2.0f)
-                curveTo(14.2091f, 2.0f, 16.0f, 3.7909f, 16.0f, 6.0f)
-                lineTo(16.0f, 13.0f)
-                curveTo(16.0f, 13.7642f, 15.7857f, 14.4783f, 15.414f, 15.0855f)
-                close()
-                moveTo(14.0f, 13.0f)
-                lineTo(14.0f, 6.0f)
-                curveTo(14.0f, 4.8954f, 13.1046f, 4.0f, 12.0f, 4.0f)
-                curveTo(10.8954f, 4.0f, 10.0f, 4.8954f, 10.0f, 6.0f)
-                lineTo(10.0f, 9.6715f)
-                lineTo(13.9132f, 13.5847f)
-                curveTo(13.9696f, 13.3998f, 14.0f, 13.2034f, 14.0f, 13.0f)
-                close()
-            }
+val BezierIcons.MicrophoneOff: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _microphoneOff ?: ImageVector.Builder(
+                    name = "MicrophoneOff",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(15.414f, 15.086f)
+                    lineTo(16.854f, 16.526f)
+                    arcTo(6.0f, 6.0f, 36.03102881769772f, isMoreThanHalf = false, isPositiveArc = false, 17.918f, 13.996f)
+                    curveTo(18.008f, 13.451f, 18.448f, 13.0f, 19.0f, 13.0f)
+                    curveTo(19.552f, 13.0f, 20.007f, 13.45f, 19.938f, 13.998f)
+                    arcTo(7.96f, 7.96f, 7.086693364224966f, isMoreThanHalf = false, isPositiveArc = true, 18.282f, 17.954f)
+                    lineTo(21.092f, 20.764f)
+                    arcTo(1.0f, 1.0f, 315.9957446135754f, isMoreThanHalf = false, isPositiveArc = true, 19.677999999999997f, 22.178f)
+                    lineTo(2.708f, 5.208f)
+                    arcTo(1.0f, 1.0f, 133.9265177094592f, isMoreThanHalf = true, isPositiveArc = true, 4.12f, 3.792f)
+                    lineTo(8.0f, 7.672f)
+                    lineTo(8.0f, 6.0f)
+                    arcTo(4.0f, 4.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 16.0f, 6.0f)
+                    lineTo(16.0f, 13.0f)
+                    curveTo(16.0f, 13.764f, 15.786f, 14.478f, 15.414f, 15.085f)
+                    moveTo(14.0f, 13.0f)
+                    lineTo(14.0f, 6.0f)
+                    arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = false, 10.0f, 6.0f)
+                    lineTo(10.0f, 9.672f)
+                    lineTo(13.913f, 13.585f)
+                    quadTo(14.0f, 13.306f, 14.0f, 13.0f)
+                }
 
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(8.0f, 13.0f)
-                lineTo(8.0f, 12.0f)
-                lineTo(12.8987f, 16.8987f)
-                curveTo(12.6098f, 16.965f, 12.309f, 17.0f, 12.0f, 17.0f)
-                curveTo(9.7909f, 17.0f, 8.0f, 15.2091f, 8.0f, 13.0f)
-                close()
-                moveTo(12.0f, 19.0f)
-                curveTo(12.8804f, 19.0f, 13.7165f, 18.8104f, 14.4697f, 18.4697f)
-                lineTo(15.9554f, 19.9554f)
-                curveTo(15.0634f, 20.4637f, 14.0642f, 20.8054f, 13.0f, 20.9381f)
-                lineTo(13.0f, 23.0f)
-                lineTo(11.0f, 23.0f)
-                lineTo(11.0f, 20.9381f)
-                curveTo(7.3806f, 20.4868f, 4.512f, 17.6176f, 4.0616f, 13.9979f)
-                curveTo(3.9934f, 13.4498f, 4.4477f, 13.0f, 5.0f, 13.0f)
-                curveTo(5.5523f, 13.0f, 5.9913f, 13.4511f, 6.0823f, 13.9958f)
-                curveTo(6.5566f, 16.8356f, 9.0255f, 19.0f, 12.0f, 19.0f)
-                close()
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(8.0f, 13.0f)
+                    lineTo(8.0f, 12.0f)
+                    lineTo(12.899000000000001f, 16.899f)
+                    quadTo(12.464f, 16.999000000000002f, 12.0f, 17.0f)
+                    arcTo(4.0f, 4.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 8.0f, 13.0f)
+                    moveTo(12.0f, 19.0f)
+                    curveTo(12.88f, 19.0f, 13.717f, 18.81f, 14.47f, 18.47f)
+                    lineTo(15.955f, 19.955f)
+                    arcTo(7.95f, 7.95f, 60.3048542390693f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 20.938f)
+                    lineTo(13.0f, 23.0f)
+                    lineTo(11.0f, 23.0f)
+                    lineTo(11.0f, 20.938f)
+                    arcTo(8.004f, 8.004f, 97.20004919071103f, isMoreThanHalf = false, isPositiveArc = true, 4.062f, 13.997999999999998f)
+                    curveTo(3.993f, 13.45f, 4.448f, 13.0f, 5.0f, 13.0f)
+                    curveTo(5.552f, 13.0f, 5.991f, 13.451f, 6.082f, 13.996f)
+                    arcTo(6.0f, 6.0f, 170.44466983190628f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 19.0f)
+                }
+            }.build().also {
+                _microphoneOff = it
             }
-        }.build().also {
-            _microphoneOff = it
-        }
     }
+
 
 private var _microphoneOff: ImageVector? = null
 
@@ -95,7 +92,7 @@ private var _microphoneOff: ImageVector? = null
 private fun MicrophoneOffIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.MicrophoneOff,
+            imageVector = BezierIcons.MicrophoneOff.imageVector,
             contentDescription = null,
     )
 }

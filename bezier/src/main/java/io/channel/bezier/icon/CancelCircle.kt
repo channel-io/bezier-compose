@@ -16,52 +16,65 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CancelCircle: ImageVector
-    get() {
-        return io.channel.bezier.icon._cancelCircle ?: ImageVector.Builder(
-                name = "CancelCircle",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(4.0002f, 12.0001f)
-                curveTo(4.0002f, 16.4111f, 7.5892f, 20.0001f, 12.0002f, 20.0001f)
-                curveTo(16.4112f, 20.0001f, 20.0002f, 16.4111f, 20.0002f, 12.0001f)
-                curveTo(20.0002f, 7.5891f, 16.4112f, 4.0001f, 12.0002f, 4.0001f)
-                curveTo(7.5892f, 4.0001f, 4.0002f, 7.5891f, 4.0002f, 12.0001f)
-                close()
-                moveTo(12.0002f, 22.0001f)
-                curveTo(6.4772f, 22.0001f, 2.0002f, 17.5231f, 2.0002f, 12.0001f)
-                curveTo(2.0002f, 6.4771f, 6.4772f, 2.0001f, 12.0002f, 2.0001f)
-                curveTo(17.5232f, 2.0001f, 22.0002f, 6.4771f, 22.0002f, 12.0001f)
-                curveTo(22.0002f, 17.5231f, 17.5232f, 22.0001f, 12.0002f, 22.0001f)
-                close()
-                moveTo(11.9996f, 13.4165f)
-                lineTo(15.4406f, 16.8575f)
-                lineTo(16.8566f, 15.4415f)
-                lineTo(13.4156f, 12.0005f)
-                lineTo(16.8566f, 8.5595f)
-                lineTo(15.4406f, 7.1435f)
-                lineTo(11.9996f, 10.5845f)
-                lineTo(8.5586f, 7.1435f)
-                lineTo(7.1426f, 8.5595f)
-                lineTo(10.5836f, 12.0005f)
-                lineTo(7.1436f, 15.4405f)
-                lineTo(8.5596f, 16.8565f)
-                lineTo(11.9996f, 13.4165f)
-                close()
+val BezierIcons.CancelCircle: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _cancelCircle ?: ImageVector.Builder(
+                    name = "CancelCircle",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(12.0f, 20.0f)
+                    curveTo(7.59f, 20.0f, 4.0f, 16.411f, 4.0f, 12.0f)
+                    curveTo(4.0f, 7.588999999999999f, 7.59f, 4.0f, 12.0f, 4.0f)
+                    curveTo(16.41f, 4.0f, 20.0f, 7.59f, 20.0f, 12.0f)
+                    curveTo(20.0f, 16.41f, 16.411f, 20.0f, 12.0f, 20.0f)
+                    moveTo(2.0f, 12.0f)
+                    curveTo(2.0f, 17.523f, 6.477f, 22.0f, 12.0f, 22.0f)
+                    curveTo(17.523f, 22.0f, 22.0f, 17.523f, 22.0f, 12.0f)
+                    curveTo(22.0f, 6.477f, 17.523f, 2.0f, 12.0f, 2.0f)
+                    curveTo(6.477f, 2.0f, 2.0f, 6.477f, 2.0f, 12.0f)
+                    moveTo(16.243000000000002f, 7.757f)
+                    arcTo(1.0f, 1.0f, 315.0318707839283f, isMoreThanHalf = false, isPositiveArc = false, 14.828000000000003f, 7.757f)
+                    lineTo(14.121000000000002f, 8.464f)
+                    lineTo(12.0f, 10.586f)
+                    lineTo(9.879f, 8.464f)
+                    lineTo(9.171999999999999f, 7.757000000000001f)
+                    arcTo(1.0f, 1.0f, 314.9999991471751f, isMoreThanHalf = false, isPositiveArc = false, 7.756999999999999f, 9.172f)
+                    lineTo(8.463999999999999f, 9.878f)
+                    lineTo(10.586f, 12.0f)
+                    lineTo(8.464f, 14.121f)
+                    lineTo(7.757000000000001f, 14.828000000000001f)
+                    arcTo(1.0f, 1.0f, 225.0f, isMoreThanHalf = true, isPositiveArc = false, 9.172f, 16.243000000000002f)
+                    lineTo(9.877f, 15.537000000000003f)
+                    lineTo(9.879000000000001f, 15.535000000000002f)
+                    lineTo(12.0f, 13.416f)
+                    lineTo(14.121f, 15.536000000000001f)
+                    lineTo(14.122f, 15.538000000000002f)
+                    lineTo(14.828f, 16.244000000000003f)
+                    arcTo(1.0f, 1.0f, 135.0000008528249f, isMoreThanHalf = true, isPositiveArc = false, 16.243f, 14.829000000000004f)
+                    lineTo(15.535999999999998f, 14.122000000000003f)
+                    lineTo(13.414f, 12.0f)
+                    lineTo(15.536f, 9.879f)
+                    lineTo(15.536f, 9.876999999999999f)
+                    lineTo(16.243f, 9.171999999999999f)
+                    arcTo(1.0f, 1.0f, 45.03187078392833f, isMoreThanHalf = false, isPositiveArc = false, 16.243f, 7.756999999999999f)
+                }
+            }.build().also {
+                _cancelCircle = it
             }
-        }.build().also {
-            io.channel.bezier.icon._cancelCircle = it
-        }
     }
+
 
 private var _cancelCircle: ImageVector? = null
 
@@ -70,7 +83,7 @@ private var _cancelCircle: ImageVector? = null
 private fun CancelCircleIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CancelCircle,
+            imageVector = BezierIcons.CancelCircle.imageVector,
             contentDescription = null,
     )
 }

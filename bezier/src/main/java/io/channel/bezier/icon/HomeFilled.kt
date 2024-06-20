@@ -16,45 +16,47 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.HomeFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._homeFilled ?: ImageVector.Builder(
-                name = "HomeFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(3.0f, 20.0f)
-                curveTo(3.0f, 20.5523f, 3.4477f, 21.0f, 4.0f, 21.0f)
-                lineTo(9.0f, 21.0f)
-                curveTo(9.5523f, 21.0f, 10.0f, 20.5523f, 10.0f, 20.0f)
-                lineTo(10.0f, 15.0f)
-                curveTo(10.0f, 13.8954f, 10.8954f, 13.0f, 12.0f, 13.0f)
-                curveTo(13.1046f, 13.0f, 14.0f, 13.8954f, 14.0f, 15.0f)
-                lineTo(14.0f, 20.0f)
-                curveTo(14.0f, 20.5523f, 14.4477f, 21.0f, 15.0f, 21.0f)
-                lineTo(20.0f, 21.0f)
-                curveTo(20.5523f, 21.0f, 21.0f, 20.5523f, 21.0f, 20.0f)
-                lineTo(21.0f, 9.9782f)
-                curveTo(21.0f, 9.361f, 20.7151f, 8.7784f, 20.2279f, 8.3995f)
-                lineTo(12.6139f, 2.4775f)
-                curveTo(12.2528f, 2.1966f, 11.7472f, 2.1966f, 11.3861f, 2.4775f)
-                lineTo(3.7721f, 8.3995f)
-                curveTo(3.2849f, 8.7784f, 3.0f, 9.361f, 3.0f, 9.9782f)
-                lineTo(3.0f, 20.0f)
-                close()
+val BezierIcons.HomeFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _homeFilled ?: ImageVector.Builder(
+                    name = "HomeFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(3.0f, 20.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 4.0f, 21.0f)
+                    lineTo(9.0f, 21.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 10.0f, 20.0f)
+                    lineTo(10.0f, 15.0f)
+                    arcTo(2.0f, 2.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 14.0f, 15.0f)
+                    lineTo(14.0f, 20.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 15.0f, 21.0f)
+                    lineTo(20.0f, 21.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 21.0f, 20.0f)
+                    lineTo(21.0f, 9.978f)
+                    arcTo(2.0f, 2.0f, 0.011113150480514259f, isMoreThanHalf = false, isPositiveArc = false, 20.228f, 8.399f)
+                    lineTo(12.614f, 2.4769999999999994f)
+                    arcTo(1.0f, 1.0f, 307.87929439406173f, isMoreThanHalf = false, isPositiveArc = false, 11.386000000000001f, 2.4769999999999994f)
+                    lineTo(3.772f, 8.4f)
+                    arcTo(2.0f, 2.0f, 232.12072307627952f, isMoreThanHalf = false, isPositiveArc = false, 3.0f, 9.98f)
+                    close()
+                }
+            }.build().also {
+                _homeFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._homeFilled = it
-        }
     }
+
 
 private var _homeFilled: ImageVector? = null
 
@@ -63,7 +65,7 @@ private var _homeFilled: ImageVector? = null
 private fun HomeFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.HomeFilled,
+            imageVector = BezierIcons.HomeFilled.imageVector,
             contentDescription = null,
     )
 }

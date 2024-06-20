@@ -16,46 +16,48 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.MessagingApp: ImageVector
-    get() {
-        return io.channel.bezier.icon._messagingApp ?: ImageVector.Builder(
-                name = "MessagingApp",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(6.0f, 2.0f)
-                curveTo(3.7909f, 2.0f, 2.0f, 3.7909f, 2.0f, 6.0f)
-                lineTo(2.0f, 18.0f)
-                curveTo(2.0f, 20.2091f, 3.7909f, 22.0f, 6.0f, 22.0f)
-                lineTo(18.0f, 22.0f)
-                curveTo(20.2091f, 22.0f, 22.0f, 20.2091f, 22.0f, 18.0f)
-                lineTo(22.0f, 6.0f)
-                curveTo(22.0f, 3.7909f, 20.2091f, 2.0f, 18.0f, 2.0f)
-                lineTo(6.0f, 2.0f)
-                close()
-                moveTo(19.0f, 11.5274f)
-                curveTo(19.0f, 14.8411f, 15.866f, 17.5274f, 12.0f, 17.5274f)
-                curveTo(11.4194f, 17.5274f, 10.8552f, 17.4668f, 10.3158f, 17.3525f)
-                curveTo(9.1943f, 18.2321f, 7.9342f, 18.6104f, 7.2268f, 18.7641f)
-                curveTo(7.0141f, 18.8103f, 6.8681f, 18.5737f, 6.9836f, 18.3891f)
-                curveTo(7.2657f, 17.9381f, 7.671f, 17.2089f, 7.9182f, 16.4022f)
-                curveTo(6.1509f, 15.3132f, 5.0f, 13.5355f, 5.0f, 11.5274f)
-                curveTo(5.0f, 8.2136f, 8.134f, 5.5273f, 12.0f, 5.5273f)
-                curveTo(15.866f, 5.5273f, 19.0f, 8.2136f, 19.0f, 11.5274f)
-                close()
+val BezierIcons.MessagingApp: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _messagingApp ?: ImageVector.Builder(
+                    name = "MessagingApp",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(6.0f, 2.0f)
+                    arcTo(4.0f, 4.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 2.0f, 6.0f)
+                    lineTo(2.0f, 18.0f)
+                    arcTo(4.0f, 4.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 6.0f, 22.0f)
+                    lineTo(18.0f, 22.0f)
+                    arcTo(4.0f, 4.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 22.0f, 18.0f)
+                    lineTo(22.0f, 6.0f)
+                    arcTo(4.0f, 4.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 18.0f, 2.0f)
+                    close()
+                    moveTo(19.0f, 11.527f)
+                    curveTo(19.0f, 14.841f, 15.866f, 17.527f, 12.0f, 17.527f)
+                    curveTo(11.42f, 17.527f, 10.855f, 17.467000000000002f, 10.316f, 17.352f)
+                    curveTo(9.194f, 18.232f, 7.934000000000001f, 18.61f, 7.226000000000001f, 18.764f)
+                    curveTo(7.014000000000001f, 18.81f, 6.868000000000001f, 18.573999999999998f, 6.984000000000001f, 18.389f)
+                    curveTo(7.266000000000001f, 17.939f, 7.671000000000001f, 17.209f, 7.918000000000001f, 16.402f)
+                    curveTo(6.151f, 15.313f, 5.0f, 13.535f, 5.0f, 11.527f)
+                    curveTo(5.0f, 8.213999999999999f, 8.134f, 5.526999999999999f, 12.0f, 5.526999999999999f)
+                    curveTo(15.866f, 5.526999999999999f, 19.0f, 8.213999999999999f, 19.0f, 11.527f)
+                }
+            }.build().also {
+                _messagingApp = it
             }
-        }.build().also {
-            io.channel.bezier.icon._messagingApp = it
-        }
     }
+
 
 private var _messagingApp: ImageVector? = null
 
@@ -64,7 +66,7 @@ private var _messagingApp: ImageVector? = null
 private fun MessagingAppIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.MessagingApp,
+            imageVector = BezierIcons.MessagingApp.imageVector,
             contentDescription = null,
     )
 }

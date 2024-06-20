@@ -16,37 +16,38 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Check: ImageVector
-    get() {
-        return io.channel.bezier.icon._check ?: ImageVector.Builder(
-                name = "Check",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(9.071f, 16.142f)
-                lineTo(4.121f, 11.192f)
-                curveTo(3.7305f, 10.8015f, 3.0974f, 10.8015f, 2.707f, 11.192f)
-                curveTo(2.3165f, 11.5825f, 2.3165f, 12.2155f, 2.707f, 12.606f)
-                lineTo(8.3639f, 18.2629f)
-                curveTo(8.7544f, 18.6534f, 9.3876f, 18.6534f, 9.7781f, 18.2629f)
-                lineTo(20.8464f, 7.1944f)
-                curveTo(21.2369f, 6.8039f, 21.2369f, 6.1709f, 20.8464f, 5.7804f)
-                curveTo(20.456f, 5.3899f, 19.8229f, 5.3899f, 19.4324f, 5.7804f)
-                lineTo(9.071f, 16.142f)
-                close()
+val BezierIcons.Check: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _check ?: ImageVector.Builder(
+                    name = "Check",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(9.071f, 16.142f)
+                    lineTo(4.1209999999999996f, 11.192f)
+                    arcTo(1.0f, 1.0f, 315.99574461357975f, isMoreThanHalf = true, isPositiveArc = false, 2.707f, 12.606f)
+                    lineTo(8.364f, 18.262999999999998f)
+                    arcTo(1.0f, 1.0f, 134.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 9.778f, 18.262999999999998f)
+                    lineTo(20.846f, 7.194f)
+                    arcTo(1.0f, 1.0f, 45.995744613577585f, isMoreThanHalf = true, isPositiveArc = false, 19.432f, 5.78f)
+                    close()
+                }
+            }.build().also {
+                _check = it
             }
-        }.build().also {
-            io.channel.bezier.icon._check = it
-        }
     }
+
 
 private var _check: ImageVector? = null
 
@@ -55,7 +56,7 @@ private var _check: ImageVector? = null
 private fun CheckIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Check,
+            imageVector = BezierIcons.Check.imageVector,
             contentDescription = null,
     )
 }

@@ -16,58 +16,58 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.NoteLogo: ImageVector
-    get() {
-        return _noteLogo ?: ImageVector.Builder(
-                name = "NoteLogo",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(17.7152f, 18.7149f)
-                lineTo(6.2892f, 18.7149f)
-                lineTo(6.2912f, 8.7329f)
-                curveTo(6.2912f, 8.6389f, 6.3272f, 8.5279f, 6.3752f, 8.4759f)
-                curveTo(7.3232f, 7.4269f, 8.2952f, 6.3679f, 9.2632f, 5.3269f)
-                curveTo(9.3122f, 5.2749f, 9.4072f, 5.2279f, 9.4652f, 5.2279f)
-                lineTo(17.7152f, 5.2279f)
-                lineTo(17.7152f, 18.7149f)
-                close()
-                moveTo(20.0002f, 4.0889f)
-                curveTo(20.0002f, 3.4589f, 19.4872f, 2.9459f, 18.8572f, 2.9459f)
-                lineTo(8.9662f, 2.9459f)
-                curveTo(8.5272f, 2.9459f, 8.1852f, 3.0969f, 7.8902f, 3.4219f)
-                lineTo(4.4462f, 7.1729f)
-                curveTo(4.1392f, 7.5039f, 3.9972f, 7.8669f, 4.0002f, 8.3169f)
-                curveTo(4.0032f, 8.7499f, 4.0042f, 19.7349f, 4.0042f, 19.8579f)
-                curveTo(4.0042f, 20.4869f, 4.5172f, 20.9999f, 5.1462f, 20.9999f)
-                lineTo(18.8572f, 20.9999f)
-                curveTo(19.4872f, 20.9999f, 20.0002f, 20.4869f, 20.0002f, 19.8579f)
-                lineTo(20.0002f, 4.0889f)
-                close()
-                moveTo(7.6604f, 9.9826f)
-                curveTo(7.6604f, 10.4866f, 8.0704f, 10.8956f, 8.5744f, 10.8956f)
-                lineTo(11.0434f, 10.8956f)
-                curveTo(11.5474f, 10.8956f, 11.9574f, 10.4866f, 11.9574f, 9.9826f)
-                lineTo(11.9574f, 7.5116f)
-                curveTo(11.9574f, 7.0076f, 11.5474f, 6.5986f, 11.0434f, 6.5986f)
-                curveTo(10.5394f, 6.5986f, 10.1294f, 7.0076f, 10.1294f, 7.5116f)
-                lineTo(10.1294f, 9.0686f)
-                lineTo(8.5744f, 9.0686f)
-                curveTo(8.0704f, 9.0686f, 7.6604f, 9.4786f, 7.6604f, 9.9826f)
-                close()
+val BezierIcons.NoteLogo: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _noteLogo ?: ImageVector.Builder(
+                    name = "NoteLogo",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(17.715f, 18.715f)
+                    lineTo(6.29f, 18.715f)
+                    lineTo(6.292f, 8.733f)
+                    curveTo(6.292f, 8.639000000000001f, 6.327999999999999f, 8.528f, 6.3759999999999994f, 8.476f)
+                    curveTo(7.324f, 7.426000000000001f, 8.296f, 6.368f, 9.264f, 5.3260000000000005f)
+                    arcTo(0.34f, 0.34f, 224.8404840379799f, isMoreThanHalf = false, isPositiveArc = true, 9.466f, 5.228000000000001f)
+                    lineTo(17.716f, 5.228000000000001f)
+                    close()
+                    moveTo(20.0f, 4.089f)
+                    curveTo(20.0f, 3.4590000000000005f, 19.487f, 2.9460000000000006f, 18.857f, 2.9460000000000006f)
+                    lineTo(8.966999999999999f, 2.9460000000000006f)
+                    curveTo(8.527f, 2.9460000000000006f, 8.184999999999999f, 3.0960000000000005f, 7.889999999999999f, 3.4220000000000006f)
+                    lineTo(4.445999999999999f, 7.172000000000001f)
+                    arcTo(1.58f, 1.58f, 224.16688442092473f, isMoreThanHalf = false, isPositiveArc = false, 4.0f, 8.318f)
+                    curveTo(4.003f, 8.751f, 4.004f, 19.735999999999997f, 4.004f, 19.857999999999997f)
+                    curveTo(4.004f, 20.487999999999996f, 4.5169999999999995f, 21.000999999999998f, 5.145999999999999f, 21.000999999999998f)
+                    lineTo(18.857f, 21.000999999999998f)
+                    curveTo(19.487f, 21.000999999999998f, 20.0f, 20.487999999999996f, 20.0f, 19.858999999999998f)
+                    close()
+                    moveTo(7.66f, 9.983f)
+                    curveTo(7.66f, 10.487f, 8.07f, 10.896f, 8.574f, 10.896f)
+                    lineTo(11.044f, 10.896f)
+                    arcTo(0.914f, 0.914f, 89.93734739416043f, isMoreThanHalf = false, isPositiveArc = false, 11.957f, 9.983f)
+                    lineTo(11.957f, 7.512f)
+                    arcTo(0.914f, 0.914f, 359.9999985212207f, isMoreThanHalf = false, isPositiveArc = false, 10.129000000000001f, 7.512f)
+                    lineTo(10.129000000000001f, 9.068999999999999f)
+                    lineTo(8.574f, 9.068999999999999f)
+                    arcTo(0.915f, 0.915f, 269.93741582962525f, isMoreThanHalf = false, isPositiveArc = false, 7.66f, 9.982999999999999f)
+                }
+            }.build().also {
+                _noteLogo = it
             }
-        }.build().also {
-            _noteLogo = it
-        }
     }
+
 
 private var _noteLogo: ImageVector? = null
 
@@ -76,7 +76,7 @@ private var _noteLogo: ImageVector? = null
 private fun NoteLogoIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.NoteLogo,
+            imageVector = BezierIcons.NoteLogo.imageVector,
             contentDescription = null,
     )
 }

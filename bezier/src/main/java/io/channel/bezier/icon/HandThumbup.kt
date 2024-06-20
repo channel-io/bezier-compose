@@ -16,79 +16,77 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.HandThumbup: ImageVector
-    get() {
-        return io.channel.bezier.icon._handThumbup ?: ImageVector.Builder(
-                name = "HandThumbup",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(18.2502f, 5.9668f)
-                curveTo(19.5612f, 5.9668f, 20.7902f, 6.6097f, 21.5382f, 7.6887f)
-                curveTo(22.2852f, 8.7668f, 22.4552f, 10.1438f, 21.9952f, 11.3717f)
-                lineTo(19.7452f, 17.3717f)
-                curveTo(19.1632f, 18.9237f, 17.6582f, 19.9667f, 16.0002f, 19.9667f)
-                lineTo(13.3232f, 19.9667f)
-                curveTo(12.3182f, 19.9667f, 11.3352f, 19.7767f, 10.4002f, 19.4037f)
-                curveTo(7.7272f, 18.3347f, 6.0002f, 15.7828f, 6.0002f, 12.9038f)
-                lineTo(6.0002f, 12.1278f)
-                curveTo(6.0002f, 10.2587f, 6.7282f, 8.4998f, 8.0502f, 7.1778f)
-                lineTo(13.5192f, 1.7088f)
-                curveTo(14.4642f, 0.7638f, 16.1112f, 0.7638f, 17.0552f, 1.7088f)
-                curveTo(18.0292f, 2.6837f, 18.0292f, 4.2688f, 17.0552f, 5.2438f)
-                lineTo(16.3322f, 5.9668f)
-                lineTo(18.2502f, 5.9668f)
-                close()
-                moveTo(20.1222f, 10.6987f)
-                lineTo(17.8722f, 16.6997f)
-                curveTo(17.5812f, 17.4747f, 16.8292f, 17.9967f, 16.0002f, 17.9967f)
-                lineTo(13.3232f, 17.9967f)
-                curveTo(12.5732f, 17.9967f, 11.8402f, 17.8547f, 11.1432f, 17.5767f)
-                curveTo(9.2342f, 16.8127f, 8.0002f, 14.9907f, 8.0002f, 12.9337f)
-                lineTo(8.0002f, 12.1577f)
-                curveTo(8.0002f, 10.8217f, 8.5202f, 9.5657f, 9.4642f, 8.6217f)
-                lineTo(14.9342f, 3.1527f)
-                curveTo(15.0612f, 3.0257f, 15.2102f, 3.0067f, 15.2872f, 3.0067f)
-                curveTo(15.3652f, 3.0067f, 15.5132f, 3.0247f, 15.6412f, 3.1527f)
-                curveTo(15.8352f, 3.3477f, 15.8352f, 3.6647f, 15.6412f, 3.8597f)
-                lineTo(13.3792f, 6.1217f)
-                curveTo(13.0652f, 6.4377f, 12.9732f, 6.9087f, 13.1442f, 7.3197f)
-                curveTo(13.3152f, 7.7307f, 13.7142f, 7.9967f, 14.1592f, 7.9967f)
-                lineTo(18.2502f, 7.9967f)
-                curveTo(18.9152f, 7.9967f, 19.5152f, 8.3097f, 19.8932f, 8.8567f)
-                curveTo(20.2732f, 9.4047f, 20.3562f, 10.0757f, 20.1222f, 10.6987f)
-                close()
-                moveTo(2.0002f, 9.8f)
-                curveTo(2.0002f, 9.52f, 2.0002f, 9.38f, 2.0547f, 9.273f)
-                curveTo(2.1026f, 9.1789f, 2.1791f, 9.1024f, 2.2732f, 9.0545f)
-                curveTo(2.3801f, 9.0f, 2.5202f, 9.0f, 2.8002f, 9.0f)
-                lineTo(4.2002f, 9.0f)
-                curveTo(4.4802f, 9.0f, 4.6202f, 9.0f, 4.7272f, 9.0545f)
-                curveTo(4.8213f, 9.1024f, 4.8977f, 9.1789f, 4.9457f, 9.273f)
-                curveTo(5.0002f, 9.38f, 5.0002f, 9.52f, 5.0002f, 9.8f)
-                lineTo(5.0002f, 18.2f)
-                curveTo(5.0002f, 18.48f, 5.0002f, 18.62f, 4.9457f, 18.727f)
-                curveTo(4.8977f, 18.8211f, 4.8213f, 18.8976f, 4.7272f, 18.9455f)
-                curveTo(4.6202f, 19.0f, 4.4802f, 19.0f, 4.2002f, 19.0f)
-                lineTo(2.8002f, 19.0f)
-                curveTo(2.5202f, 19.0f, 2.3801f, 19.0f, 2.2732f, 18.9455f)
-                curveTo(2.1791f, 18.8976f, 2.1026f, 18.8211f, 2.0547f, 18.727f)
-                curveTo(2.0002f, 18.62f, 2.0002f, 18.48f, 2.0002f, 18.2f)
-                lineTo(2.0002f, 9.8f)
-                close()
+val BezierIcons.HandThumbup: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _handThumbup ?: ImageVector.Builder(
+                    name = "HandThumbup",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(18.25f, 5.967f)
+                    arcTo(4.0f, 4.0f, 270.0018167471665f, isMoreThanHalf = false, isPositiveArc = true, 21.995f, 11.372f)
+                    lineTo(19.745f, 17.372f)
+                    arcTo(4.02f, 4.02f, 20.761061914037768f, isMoreThanHalf = false, isPositiveArc = true, 16.0f, 19.967f)
+                    lineTo(13.323f, 19.967f)
+                    arcTo(7.9f, 7.9f, 90.04280059424806f, isMoreThanHalf = false, isPositiveArc = true, 10.4f, 19.404f)
+                    arcTo(6.97f, 6.97f, 111.63660662862071f, isMoreThanHalf = false, isPositiveArc = true, 6.0f, 12.904f)
+                    lineTo(6.0f, 12.128f)
+                    curveTo(6.0f, 10.258f, 6.728f, 8.5f, 8.05f, 7.178f)
+                    lineTo(13.52f, 1.7080000000000002f)
+                    curveTo(14.463999999999999f, 0.7640000000000002f, 16.111f, 0.7640000000000002f, 17.055f, 1.7080000000000002f)
+                    curveTo(18.029f, 2.684f, 18.029f, 4.268000000000001f, 17.055f, 5.244f)
+                    lineTo(16.332f, 5.967f)
+                    close()
+                    moveTo(20.122f, 10.699f)
+                    lineTo(17.872f, 16.698999999999998f)
+                    arcTo(2.01f, 2.01f, 20.715219639960853f, isMoreThanHalf = false, isPositiveArc = true, 16.0f, 17.998f)
+                    lineTo(13.323f, 17.998f)
+                    curveTo(12.573f, 17.998f, 11.84f, 17.856f, 11.143f, 17.578f)
+                    arcTo(4.98f, 4.98f, 111.64599667245052f, isMoreThanHalf = false, isPositiveArc = true, 8.0f, 12.934f)
+                    lineTo(8.0f, 12.158f)
+                    curveTo(8.0f, 10.822f, 8.52f, 9.565999999999999f, 9.464f, 8.622f)
+                    lineTo(14.934000000000001f, 3.152f)
+                    arcTo(0.5f, 0.5f, 225.0086516628379f, isMoreThanHalf = false, isPositiveArc = true, 15.641000000000002f, 3.152f)
+                    arcTo(0.5f, 0.5f, 314.9275780575565f, isMoreThanHalf = false, isPositiveArc = true, 15.641000000000002f, 3.8600000000000003f)
+                    lineTo(13.38f, 6.122f)
+                    arcTo(1.098f, 1.098f, 225.04464909244638f, isMoreThanHalf = false, isPositiveArc = false, 14.16f, 7.997f)
+                    lineTo(18.251f, 7.997f)
+                    curveTo(18.916f, 7.997f, 19.516000000000002f, 8.31f, 19.894000000000002f, 8.857f)
+                    curveTo(20.274f, 9.405f, 20.357000000000003f, 10.075999999999999f, 20.124000000000002f, 10.699f)
+                    moveTo(2.0f, 9.8f)
+                    curveTo(2.0f, 9.520000000000001f, 2.0f, 9.38f, 2.055f, 9.273000000000001f)
+                    arcTo(0.5f, 0.5f, 207.04327650903056f, isMoreThanHalf = false, isPositiveArc = true, 2.273f, 9.055000000000001f)
+                    curveTo(2.38f, 9.0f, 2.52f, 9.0f, 2.8f, 9.0f)
+                    lineTo(4.199999999999999f, 9.0f)
+                    curveTo(4.4799999999999995f, 9.0f, 4.619999999999999f, 9.0f, 4.726999999999999f, 9.055f)
+                    arcTo(0.5f, 0.5f, 296.86952249217813f, isMoreThanHalf = false, isPositiveArc = true, 4.946f, 9.273f)
+                    curveTo(5.0f, 9.38f, 5.0f, 9.52f, 5.0f, 9.8f)
+                    lineTo(5.0f, 18.200000000000003f)
+                    curveTo(5.0f, 18.480000000000004f, 5.0f, 18.620000000000005f, 4.946f, 18.727000000000004f)
+                    arcTo(0.5f, 0.5f, 27.131745281672604f, isMoreThanHalf = false, isPositiveArc = true, 4.726999999999999f, 18.945000000000004f)
+                    curveTo(4.62f, 19.0f, 4.48f, 19.0f, 4.2f, 19.0f)
+                    lineTo(2.8f, 19.0f)
+                    curveTo(2.5199999999999996f, 19.0f, 2.38f, 19.0f, 2.2729999999999997f, 18.945f)
+                    arcTo(0.5f, 0.5f, 117.04327650903058f, isMoreThanHalf = false, isPositiveArc = true, 2.0549999999999997f, 18.727f)
+                    curveTo(2.0f, 18.62f, 2.0f, 18.48f, 2.0f, 18.2f)
+                    close()
+                }
+            }.build().also {
+                _handThumbup = it
             }
-        }.build().also {
-            io.channel.bezier.icon._handThumbup = it
-        }
     }
+
 
 private var _handThumbup: ImageVector? = null
 
@@ -97,7 +95,7 @@ private var _handThumbup: ImageVector? = null
 private fun HandThumbupIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.HandThumbup,
+            imageVector = BezierIcons.HandThumbup.imageVector,
             contentDescription = null,
     )
 }

@@ -16,54 +16,56 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Crop: ImageVector
-    get() {
-        return io.channel.bezier.icon._crop ?: ImageVector.Builder(
-                name = "Crop",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(5.0f, 7.0f)
-                lineTo(5.0f, 16.0f)
-                curveTo(5.0f, 17.6569f, 6.3431f, 19.0f, 8.0f, 19.0f)
-                lineTo(17.0f, 19.0f)
-                lineTo(17.0f, 23.0f)
-                lineTo(19.0f, 23.0f)
-                lineTo(19.0f, 19.0f)
-                lineTo(23.0f, 19.0f)
-                lineTo(23.0f, 17.0f)
-                lineTo(19.0f, 17.0f)
-                lineTo(19.0f, 8.0f)
-                curveTo(19.0f, 6.3432f, 17.6569f, 5.0f, 16.0f, 5.0f)
-                lineTo(7.0f, 5.0f)
-                lineTo(7.0f, 1.0f)
-                lineTo(5.0f, 1.0f)
-                lineTo(5.0f, 5.0f)
-                lineTo(1.0f, 5.0f)
-                lineTo(1.0f, 7.0f)
-                lineTo(5.0f, 7.0f)
-                close()
-                moveTo(7.0f, 7.0f)
-                lineTo(7.0f, 16.0f)
-                curveTo(7.0f, 16.5523f, 7.4477f, 17.0f, 8.0f, 17.0f)
-                lineTo(17.0f, 17.0f)
-                lineTo(17.0f, 8.0f)
-                curveTo(17.0f, 7.4477f, 16.5523f, 7.0f, 16.0f, 7.0f)
-                lineTo(7.0f, 7.0f)
-                close()
+val BezierIcons.Crop: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _crop ?: ImageVector.Builder(
+                    name = "Crop",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(5.0f, 7.0f)
+                    lineTo(5.0f, 16.0f)
+                    arcTo(3.0f, 3.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 8.0f, 19.0f)
+                    lineTo(17.0f, 19.0f)
+                    lineTo(17.0f, 23.0f)
+                    lineTo(19.0f, 23.0f)
+                    lineTo(19.0f, 19.0f)
+                    lineTo(23.0f, 19.0f)
+                    lineTo(23.0f, 17.0f)
+                    lineTo(19.0f, 17.0f)
+                    lineTo(19.0f, 8.0f)
+                    arcTo(3.0f, 3.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 16.0f, 5.0f)
+                    lineTo(7.0f, 5.0f)
+                    lineTo(7.0f, 1.0f)
+                    lineTo(5.0f, 1.0f)
+                    lineTo(5.0f, 5.0f)
+                    lineTo(1.0f, 5.0f)
+                    lineTo(1.0f, 7.0f)
+                    close()
+                    moveTo(7.0f, 7.0f)
+                    lineTo(7.0f, 16.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 8.0f, 17.0f)
+                    lineTo(17.0f, 17.0f)
+                    lineTo(17.0f, 8.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 16.0f, 7.0f)
+                    close()
+                }
+            }.build().also {
+                _crop = it
             }
-        }.build().also {
-            io.channel.bezier.icon._crop = it
-        }
     }
+
 
 private var _crop: ImageVector? = null
 
@@ -72,7 +74,7 @@ private var _crop: ImageVector? = null
 private fun CropIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Crop,
+            imageVector = BezierIcons.Crop.imageVector,
             contentDescription = null,
     )
 }

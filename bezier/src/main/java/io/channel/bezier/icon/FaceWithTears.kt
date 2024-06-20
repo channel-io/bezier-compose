@@ -16,72 +16,69 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.FaceWithTears: ImageVector
-    get() {
-        return _faceWithTears ?: ImageVector.Builder(
-                name = "FaceWithTears",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(14.015f, 9.7203f)
-                curveTo(14.015f, 11.2153f, 14.368f, 11.8253f, 15.214f, 11.8253f)
-                curveTo(16.059f, 11.8253f, 16.412f, 11.2153f, 16.412f, 9.7203f)
-                curveTo(16.412f, 8.2253f, 16.059f, 7.6143f, 15.214f, 7.6143f)
-                curveTo(14.368f, 7.6143f, 14.015f, 8.2253f, 14.015f, 9.7203f)
-                close()
-            }
+val BezierIcons.FaceWithTears: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _faceWithTears ?: ImageVector.Builder(
+                    name = "FaceWithTears",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(14.015f, 9.72f)
+                    curveTo(14.015f, 11.215f, 14.368f, 11.825000000000001f, 15.214f, 11.825000000000001f)
+                    curveTo(16.059f, 11.825000000000001f, 16.412f, 11.215000000000002f, 16.412f, 9.72f)
+                    curveTo(16.412f, 8.225f, 16.058999999999997f, 7.614000000000001f, 15.213999999999999f, 7.614000000000001f)
+                    curveTo(14.367999999999999f, 7.614000000000001f, 14.014999999999999f, 8.225000000000001f, 14.014999999999999f, 9.72f)
+                }
 
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0002f, 2.0001f)
-                curveTo(6.4772f, 2.0001f, 2.0002f, 6.4781f, 2.0002f, 12.0001f)
-                curveTo(2.0002f, 17.5221f, 6.4772f, 22.0001f, 12.0002f, 22.0001f)
-                curveTo(17.5222f, 22.0001f, 22.0002f, 17.5221f, 22.0002f, 12.0001f)
-                curveTo(22.0002f, 6.4781f, 17.5222f, 2.0001f, 12.0002f, 2.0001f)
-                close()
-                moveTo(12.0002f, 4.0001f)
-                curveTo(16.4112f, 4.0001f, 20.0002f, 7.5891f, 20.0002f, 12.0001f)
-                curveTo(20.0002f, 16.4111f, 16.4112f, 20.0001f, 12.0002f, 20.0001f)
-                curveTo(11.2977f, 20.0001f, 10.6161f, 19.9091f, 9.9666f, 19.7383f)
-                curveTo(10.0385f, 19.6786f, 10.1083f, 19.615f, 10.1757f, 19.5476f)
-                curveTo(10.6704f, 19.053f, 10.9681f, 18.4206f, 11.0516f, 17.7596f)
-                curveTo(12.3995f, 18.0489f, 13.8529f, 17.714f, 14.9562f, 16.7546f)
-                curveTo(15.3729f, 16.3922f, 15.417f, 15.7606f, 15.0546f, 15.3438f)
-                curveTo(14.6922f, 14.9271f, 14.0606f, 14.883f, 13.6438f, 15.2454f)
-                curveTo(12.7106f, 16.0569f, 11.3267f, 16.065f, 10.3845f, 15.2696f)
-                lineTo(8.651f, 11.8197f)
-                curveTo(8.6946f, 11.8235f, 8.7397f, 11.8253f, 8.7863f, 11.8253f)
-                curveTo(9.6313f, 11.8253f, 9.9843f, 11.2153f, 9.9843f, 9.7203f)
-                curveTo(9.9843f, 8.2253f, 9.6313f, 7.6143f, 8.7863f, 7.6143f)
-                curveTo(7.9413f, 7.6143f, 7.5873f, 8.2253f, 7.5873f, 9.7203f)
-                curveTo(7.5873f, 10.2818f, 7.6372f, 10.7184f, 7.7443f, 11.0447f)
-                lineTo(5.2569f, 15.9951f)
-                curveTo(5.2278f, 16.0531f, 5.2007f, 16.1117f, 5.1755f, 16.1708f)
-                curveTo(4.4302f, 14.9556f, 4.0002f, 13.5271f, 4.0002f, 12.0001f)
-                curveTo(4.0002f, 7.5891f, 7.5882f, 4.0001f, 12.0002f, 4.0001f)
-                close()
-                moveTo(6.8852f, 16.8626f)
-                lineTo(8.0021f, 14.638f)
-                lineTo(9.1209f, 16.8631f)
-                curveTo(9.3628f, 17.3451f, 9.2689f, 17.9278f, 8.8878f, 18.3089f)
-                curveTo(8.3998f, 18.7962f, 7.6061f, 18.7962f, 7.1177f, 18.3085f)
-                curveTo(6.737f, 17.9278f, 6.6431f, 17.3451f, 6.8852f, 16.8626f)
-                close()
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(12.0f, 2.0f)
+                    curveTo(6.477f, 2.0f, 2.0f, 6.478f, 2.0f, 12.0f)
+                    curveTo(2.0f, 17.522f, 6.477f, 22.0f, 12.0f, 22.0f)
+                    curveTo(17.523f, 22.0f, 22.0f, 17.522f, 22.0f, 12.0f)
+                    curveTo(22.0f, 6.4780000000000015f, 17.522f, 2.0f, 12.0f, 2.0f)
+                    moveTo(12.0f, 4.0f)
+                    curveTo(16.411f, 4.0f, 20.0f, 7.59f, 20.0f, 12.0f)
+                    curveTo(20.0f, 16.41f, 16.411f, 20.0f, 12.0f, 20.0f)
+                    arcTo(8.0f, 8.0f, 89.98285567563882f, isMoreThanHalf = false, isPositiveArc = true, 9.967f, 19.738f)
+                    arcTo(3.07f, 3.07f, 50.30364802528742f, isMoreThanHalf = false, isPositiveArc = false, 11.052f, 17.759999999999998f)
+                    arcTo(4.5f, 4.5f, 102.1742200923017f, isMoreThanHalf = false, isPositiveArc = false, 14.956f, 16.755f)
+                    arcTo(1.0f, 1.0f, 49.013465745743524f, isMoreThanHalf = false, isPositiveArc = false, 13.644f, 15.245f)
+                    arcTo(2.505f, 2.505f, 48.96488582610101f, isMoreThanHalf = false, isPositiveArc = true, 10.384f, 15.27f)
+                    lineTo(8.651f, 11.82f)
+                    quadTo(8.717f, 11.825000000000001f, 8.786f, 11.825000000000001f)
+                    curveTo(9.631f, 11.825000000000001f, 9.984f, 11.215000000000002f, 9.984f, 9.72f)
+                    curveTo(9.984f, 8.225f, 9.631f, 7.614000000000001f, 8.786f, 7.614000000000001f)
+                    curveTo(7.940999999999999f, 7.614000000000001f, 7.587f, 8.225000000000001f, 7.587f, 9.72f)
+                    curveTo(7.587f, 10.282f, 7.637f, 10.718f, 7.744f, 11.045f)
+                    lineTo(5.257f, 15.995000000000001f)
+                    arcTo(3.0f, 3.0f, 206.56362393650824f, isMoreThanHalf = false, isPositiveArc = false, 5.175999999999999f, 16.171f)
+                    arcTo(7.95f, 7.95f, 148.43804849585695f, isMoreThanHalf = false, isPositiveArc = true, 4.0f, 12.0f)
+                    curveTo(4.0f, 7.588f, 7.588f, 4.0f, 12.0f, 4.0f)
+                    moveTo(6.885f, 16.863f)
+                    lineTo(8.001999999999999f, 14.638f)
+                    lineTo(9.120999999999999f, 16.863f)
+                    arcTo(1.251f, 1.251f, 333.3400252232639f, isMoreThanHalf = true, isPositiveArc = true, 6.884999999999998f, 16.863f)
+                }
+            }.build().also {
+                _faceWithTears = it
             }
-        }.build().also {
-            _faceWithTears = it
-        }
     }
+
 
 private var _faceWithTears: ImageVector? = null
 
@@ -90,7 +87,7 @@ private var _faceWithTears: ImageVector? = null
 private fun FaceWithTearsIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.FaceWithTears,
+            imageVector = BezierIcons.FaceWithTears.imageVector,
             contentDescription = null,
     )
 }

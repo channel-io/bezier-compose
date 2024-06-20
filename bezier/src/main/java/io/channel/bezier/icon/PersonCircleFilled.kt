@@ -16,46 +16,43 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.PersonCircleFilled: ImageVector
-    get() {
-        return _personCircleFilled ?: ImageVector.Builder(
-                name = "PersonCircleFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0002f, 2.0001f)
-                curveTo(6.4769f, 2.0001f, 2.0002f, 6.4768f, 2.0002f, 12.0001f)
-                curveTo(2.0002f, 17.5234f, 6.4769f, 22.0001f, 12.0002f, 22.0001f)
-                curveTo(17.5228f, 22.0001f, 22.0002f, 17.5231f, 22.0002f, 12.0001f)
-                curveTo(22.0002f, 6.4772f, 17.5228f, 2.0001f, 12.0002f, 2.0001f)
-                close()
-                moveTo(12.0002f, 4.0001f)
-                curveTo(16.4183f, 4.0001f, 20.0002f, 7.5818f, 20.0002f, 12.0001f)
-                curveTo(20.0002f, 14.1689f, 19.1372f, 16.136f, 17.7359f, 17.5769f)
-                curveTo(17.0801f, 15.1232f, 14.7515f, 13.296f, 12.0002f, 13.296f)
-                curveTo(9.2487f, 13.296f, 6.9201f, 15.1234f, 6.2644f, 17.5773f)
-                curveTo(4.8631f, 16.1364f, 4.0002f, 14.1691f, 4.0002f, 12.0001f)
-                curveTo(4.0002f, 7.5814f, 7.5815f, 4.0001f, 12.0002f, 4.0001f)
-                close()
-                moveTo(12.0002f, 12.3018f)
-                curveTo(13.4092f, 12.3018f, 14.5512f, 11.1588f, 14.5512f, 9.7508f)
-                curveTo(14.5512f, 8.3418f, 13.4092f, 7.1988f, 12.0002f, 7.1988f)
-                curveTo(10.5912f, 7.1988f, 9.4482f, 8.3418f, 9.4482f, 9.7508f)
-                curveTo(9.4482f, 11.1588f, 10.5912f, 12.3018f, 12.0002f, 12.3018f)
-                close()
+val BezierIcons.PersonCircleFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _personCircleFilled ?: ImageVector.Builder(
+                    name = "PersonCircleFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(12.0f, 2.0f)
+                    curveTo(6.477f, 2.0f, 2.0f, 6.477f, 2.0f, 12.0f)
+                    curveTo(2.0f, 17.523f, 6.477f, 22.0f, 12.0f, 22.0f)
+                    curveTo(17.523f, 22.0f, 22.0f, 17.523f, 22.0f, 12.0f)
+                    curveTo(22.0f, 6.477f, 17.523f, 2.0f, 12.0f, 2.0f)
+                    moveTo(12.0f, 4.0f)
+                    arcTo(8.0f, 8.0f, 269.99711243912594f, isMoreThanHalf = false, isPositiveArc = true, 17.736f, 17.576999999999998f)
+                    curveTo(17.080000000000002f, 15.122999999999998f, 14.751000000000001f, 13.296f, 12.0f, 13.296f)
+                    curveTo(9.248999999999999f, 13.296f, 6.92f, 15.123f, 6.264f, 17.576999999999998f)
+                    arcTo(8.0f, 8.0f, 135.8032048473529f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 4.0f)
+                    moveTo(12.0f, 12.302f)
+                    arcTo(2.551f, 2.551f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 12.0f, 7.199f)
+                    arcTo(2.551f, 2.551f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 12.302f)
+                }
+            }.build().also {
+                _personCircleFilled = it
             }
-        }.build().also {
-            _personCircleFilled = it
-        }
     }
+
 
 private var _personCircleFilled: ImageVector? = null
 
@@ -64,7 +61,7 @@ private var _personCircleFilled: ImageVector? = null
 private fun PersonCircleFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.PersonCircleFilled,
+            imageVector = BezierIcons.PersonCircleFilled.imageVector,
             contentDescription = null,
     )
 }

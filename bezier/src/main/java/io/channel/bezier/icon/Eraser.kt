@@ -16,56 +16,57 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Eraser: ImageVector
-    get() {
-        return _eraser ?: ImageVector.Builder(
-                name = "Eraser",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(14.8995f, 2.1487f)
-                curveTo(13.7279f, 0.9771f, 11.8284f, 0.9771f, 10.6569f, 2.1487f)
-                lineTo(2.8787f, 9.9269f)
-                curveTo(1.7071f, 11.0984f, 1.7071f, 12.9979f, 2.8787f, 14.1695f)
-                lineTo(7.8284f, 19.1193f)
-                curveTo(8.4278f, 19.7186f, 9.2177f, 20.0114f, 10.0032f, 19.9975f)
-                lineTo(10.0f, 20.0f)
-                lineTo(20.0f, 20.0f)
-                lineTo(20.0f, 18.0f)
-                lineTo(13.1903f, 18.0f)
-                lineTo(19.8492f, 11.3411f)
-                curveTo(21.0208f, 10.1695f, 21.0208f, 8.27f, 19.8492f, 7.0985f)
-                lineTo(14.8995f, 2.1487f)
-                close()
-                moveTo(18.435f, 8.5127f)
-                lineTo(13.4853f, 3.5629f)
-                curveTo(13.0948f, 3.1724f, 12.4616f, 3.1724f, 12.0711f, 3.5629f)
-                lineTo(7.1213f, 8.5127f)
-                lineTo(13.4853f, 14.8766f)
-                lineTo(18.435f, 9.9269f)
-                curveTo(18.8256f, 9.5364f, 18.8256f, 8.9032f, 18.435f, 8.5127f)
-                close()
-                moveTo(4.2929f, 11.3411f)
-                lineTo(5.7071f, 9.9269f)
-                lineTo(12.0711f, 16.2908f)
-                lineTo(10.6569f, 17.705f)
-                curveTo(10.2663f, 18.0956f, 9.6332f, 18.0956f, 9.2426f, 17.705f)
-                lineTo(4.2929f, 12.7553f)
-                curveTo(3.9024f, 12.3648f, 3.9024f, 11.7316f, 4.2929f, 11.3411f)
-                close()
+val BezierIcons.Eraser: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _eraser ?: ImageVector.Builder(
+                    name = "Eraser",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(14.9f, 2.149f)
+                    arcTo(3.0f, 3.0f, 315.0048526342381f, isMoreThanHalf = false, isPositiveArc = false, 10.657f, 2.149f)
+                    lineTo(2.879f, 9.927f)
+                    arcTo(3.0f, 3.0f, 225.00485263423806f, isMoreThanHalf = false, isPositiveArc = false, 2.879f, 14.17f)
+                    lineTo(7.829000000000001f, 19.12f)
+                    curveTo(8.428f, 19.719f, 9.218f, 20.011000000000003f, 10.003f, 19.997f)
+                    lineTo(10.0f, 20.0f)
+                    lineTo(20.0f, 20.0f)
+                    lineTo(20.0f, 18.0f)
+                    lineTo(13.190000000000001f, 18.0f)
+                    lineTo(19.85f, 11.341000000000001f)
+                    arcTo(3.0f, 3.0f, 45.00485263423808f, isMoreThanHalf = false, isPositiveArc = false, 19.85f, 7.098000000000001f)
+                    close()
+                    moveTo(18.435000000000002f, 8.513f)
+                    lineTo(13.485000000000003f, 3.5629999999999997f)
+                    arcTo(1.0f, 1.0f, 314.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 12.071000000000003f, 3.5629999999999997f)
+                    lineTo(7.121000000000003f, 8.513f)
+                    lineTo(13.485000000000003f, 14.876999999999999f)
+                    lineTo(18.435000000000002f, 9.927f)
+                    arcTo(1.0f, 1.0f, 44.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 18.435000000000002f, 8.513f)
+                    moveTo(4.293f, 11.34f)
+                    lineTo(5.707f, 9.926f)
+                    lineTo(12.071f, 16.29f)
+                    lineTo(10.657f, 17.704f)
+                    arcTo(1.0f, 1.0f, 45.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 9.243f, 17.704f)
+                    lineTo(4.293f, 12.754000000000001f)
+                    arcTo(1.0f, 1.0f, 135.00865166283802f, isMoreThanHalf = false, isPositiveArc = true, 4.293f, 11.340000000000002f)
+                }
+            }.build().also {
+                _eraser = it
             }
-        }.build().also {
-            _eraser = it
-        }
     }
+
 
 private var _eraser: ImageVector? = null
 
@@ -74,7 +75,7 @@ private var _eraser: ImageVector? = null
 private fun EraserIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Eraser,
+            imageVector = BezierIcons.Eraser.imageVector,
             contentDescription = null,
     )
 }

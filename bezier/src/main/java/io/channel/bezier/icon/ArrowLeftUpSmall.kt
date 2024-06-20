@@ -9,46 +9,48 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ArrowLeftUpSmall: ImageVector
-    get() {
-        return io.channel.bezier.icon._arrowLeftUpSmall ?: ImageVector.Builder(
-                name = "ArrowLeftUpSmall",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(16.9497f, 16.9498f)
-                curveTo(17.3403f, 16.5592f, 17.3403f, 15.9261f, 16.9497f, 15.5356f)
-                lineTo(10.1716f, 8.7574f)
-                lineTo(15.5355f, 8.7574f)
-                curveTo(16.0878f, 8.7574f, 16.5355f, 8.3097f, 16.5355f, 7.7574f)
-                curveTo(16.5355f, 7.2051f, 16.0878f, 6.7574f, 15.5355f, 6.7574f)
-                lineTo(7.7573f, 6.7574f)
-                curveTo(7.2051f, 6.7574f, 6.7573f, 7.2051f, 6.7573f, 7.7574f)
-                lineTo(6.7573f, 15.5356f)
-                curveTo(6.7573f, 16.0878f, 7.2051f, 16.5356f, 7.7573f, 16.5356f)
-                curveTo(8.3096f, 16.5356f, 8.7573f, 16.0878f, 8.7573f, 15.5356f)
-                lineTo(8.7573f, 10.1716f)
-                lineTo(15.5355f, 16.9498f)
-                curveTo(15.9261f, 17.3403f, 16.5592f, 17.3403f, 16.9497f, 16.9498f)
-                close()
+val BezierIcons.ArrowLeftUpSmall: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _arrowLeftUpSmall ?: ImageVector.Builder(
+                    name = "ArrowLeftUpSmall",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(16.95f, 16.95f)
+                    arcTo(1.0f, 1.0f, 44.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 16.95f, 15.536f)
+                    lineTo(10.172f, 8.757f)
+                    lineTo(15.536000000000001f, 8.757f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 15.536000000000001f, 6.757f)
+                    lineTo(7.757f, 6.757f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 6.757f, 7.757f)
+                    lineTo(6.757f, 15.536f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 8.757f, 15.536f)
+                    lineTo(8.757f, 10.172f)
+                    lineTo(15.536f, 16.95f)
+                    arcTo(1.0f, 1.0f, 134.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 16.95f, 16.95f)
+                }
+            }.build().also {
+                _arrowLeftUpSmall = it
             }
-        }.build().also {
-            io.channel.bezier.icon._arrowLeftUpSmall = it
-        }
     }
+
 
 private var _arrowLeftUpSmall: ImageVector? = null
 
@@ -57,7 +59,7 @@ private var _arrowLeftUpSmall: ImageVector? = null
 private fun ArrowLeftUpSmallIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ArrowLeftUpSmall,
+            imageVector = BezierIcons.ArrowLeftUpSmall.imageVector,
             contentDescription = null,
     )
 }

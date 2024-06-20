@@ -16,38 +16,41 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.LightningFilled: ImageVector
-    get() {
-        return _lightningFilled ?: ImageVector.Builder(
-                name = "LightningFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(18.5402f, 10.2255f)
-                lineTo(14.2212f, 9.2255f)
-                lineTo(16.3032f, 2.1435f)
-                curveTo(16.4492f, 1.6465f, 15.8352f, 1.2825f, 15.4702f, 1.6495f)
-                lineTo(5.1462f, 12.0025f)
-                curveTo(4.8692f, 12.2805f, 5.0052f, 12.7545f, 5.3882f, 12.8425f)
-                lineTo(9.7072f, 13.8425f)
-                lineTo(7.6242f, 20.9245f)
-                curveTo(7.4782f, 21.4215f, 8.0922f, 21.7855f, 8.4582f, 21.4175f)
-                lineTo(18.7812f, 11.0655f)
-                curveTo(19.0582f, 10.7875f, 18.9222f, 10.3135f, 18.5402f, 10.2255f)
-                close()
+val BezierIcons.LightningFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _lightningFilled ?: ImageVector.Builder(
+                    name = "LightningFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(18.54f, 10.226f)
+                    lineTo(14.221f, 9.226f)
+                    lineTo(16.303f, 2.1430000000000007f)
+                    curveTo(16.449f, 1.6470000000000007f, 15.835f, 1.2830000000000008f, 15.47f, 1.6500000000000008f)
+                    lineTo(5.146f, 12.003f)
+                    arcTo(0.5f, 0.5f, 224.87483778107978f, isMoreThanHalf = false, isPositiveArc = false, 5.388f, 12.843f)
+                    lineTo(9.708f, 13.843f)
+                    lineTo(7.6240000000000006f, 20.924f)
+                    curveTo(7.478000000000001f, 21.422f, 8.092f, 21.785f, 8.458f, 21.418f)
+                    lineTo(18.781f, 11.065999999999999f)
+                    arcTo(0.5f, 0.5f, 44.93587333147426f, isMoreThanHalf = false, isPositiveArc = false, 18.541f, 10.225999999999999f)
+                }
+            }.build().also {
+                _lightningFilled = it
             }
-        }.build().also {
-            _lightningFilled = it
-        }
     }
+
 
 private var _lightningFilled: ImageVector? = null
 
@@ -56,7 +59,7 @@ private var _lightningFilled: ImageVector? = null
 private fun LightningFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.LightningFilled,
+            imageVector = BezierIcons.LightningFilled.imageVector,
             contentDescription = null,
     )
 }

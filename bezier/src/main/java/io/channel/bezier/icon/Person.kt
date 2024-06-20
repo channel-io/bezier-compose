@@ -16,50 +16,48 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Person: ImageVector
-    get() {
-        return io.channel.bezier.icon._person ?: ImageVector.Builder(
-                name = "Person",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(7.5002f, 6.5001f)
-                curveTo(7.5002f, 4.0151f, 9.5152f, 2.0001f, 12.0002f, 2.0001f)
-                curveTo(14.4852f, 2.0001f, 16.5002f, 4.0151f, 16.5002f, 6.5001f)
-                curveTo(16.5002f, 8.9851f, 14.4852f, 11.0001f, 12.0002f, 11.0001f)
-                curveTo(9.5152f, 11.0001f, 7.5002f, 8.9851f, 7.5002f, 6.5001f)
-                close()
-                moveTo(14.5002f, 6.5001f)
-                curveTo(14.5002f, 5.1221f, 13.3782f, 4.0001f, 12.0002f, 4.0001f)
-                curveTo(10.6212f, 4.0001f, 9.5002f, 5.1221f, 9.5002f, 6.5001f)
-                curveTo(9.5002f, 7.8781f, 10.6212f, 9.0001f, 12.0002f, 9.0001f)
-                curveTo(13.3782f, 9.0001f, 14.5002f, 7.8781f, 14.5002f, 6.5001f)
-                close()
-                moveTo(2.0622f, 20.8761f)
-                curveTo(2.6212f, 15.8821f, 6.8572f, 12.0001f, 12.0002f, 12.0001f)
-                curveTo(17.1432f, 12.0001f, 21.3792f, 15.8821f, 21.9382f, 20.8761f)
-                curveTo(22.0042f, 21.4731f, 21.5442f, 22.0001f, 20.9442f, 22.0001f)
-                lineTo(3.0562f, 22.0001f)
-                curveTo(2.4562f, 22.0001f, 1.9962f, 21.4731f, 2.0622f, 20.8761f)
-                close()
-                moveTo(19.7492f, 20.0001f)
-                curveTo(18.8572f, 16.5121f, 15.7012f, 14.0001f, 12.0002f, 14.0001f)
-                curveTo(8.2982f, 14.0001f, 5.1422f, 16.5121f, 4.2502f, 20.0001f)
-                lineTo(19.7492f, 20.0001f)
-                close()
+val BezierIcons.Person: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _person ?: ImageVector.Builder(
+                    name = "Person",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(7.5f, 6.5f)
+                    arcTo(4.5f, 4.5f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 16.5f, 6.5f)
+                    arcTo(4.5f, 4.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 7.5f, 6.5f)
+                    moveTo(14.5f, 6.5f)
+                    curveTo(14.5f, 5.122f, 13.378f, 4.0f, 12.0f, 4.0f)
+                    arcTo(2.503f, 2.503f, 269.93136856010074f, isMoreThanHalf = false, isPositiveArc = false, 9.5f, 6.5f)
+                    curveTo(9.5f, 7.878f, 10.621f, 9.0f, 12.0f, 9.0f)
+                    curveTo(13.378f, 9.0f, 14.5f, 7.878f, 14.5f, 6.5f)
+                    moveTo(2.062f, 20.876f)
+                    curveTo(2.622f, 15.882f, 6.857f, 12.0f, 12.0f, 12.0f)
+                    curveTo(17.143f, 12.0f, 21.380000000000003f, 15.882f, 21.938000000000002f, 20.875999999999998f)
+                    arcTo(1.007f, 1.007f, 353.3268380257319f, isMoreThanHalf = false, isPositiveArc = true, 20.944f, 22.0f)
+                    lineTo(3.056f, 22.0f)
+                    curveTo(2.456f, 22.0f, 1.996f, 21.473f, 2.0620000000000003f, 20.876f)
+                    moveTo(19.75f, 20.0f)
+                    arcTo(7.99f, 7.99f, 345.57809101260096f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 14.0f)
+                    arcTo(7.99f, 7.99f, 270.08448023805164f, isMoreThanHalf = false, isPositiveArc = false, 4.25f, 20.0f)
+                    close()
+                }
+            }.build().also {
+                _person = it
             }
-        }.build().also {
-            io.channel.bezier.icon._person = it
-        }
     }
+
 
 private var _person: ImageVector? = null
 
@@ -68,7 +66,7 @@ private var _person: ImageVector? = null
 private fun PersonIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Person,
+            imageVector = BezierIcons.Person.imageVector,
             contentDescription = null,
     )
 }

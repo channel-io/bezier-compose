@@ -16,40 +16,43 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.TrendingUp: ImageVector
-    get() {
-        return _trendingUp ?: ImageVector.Builder(
-                name = "TrendingUp",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(11.6341f, 6.1515f)
-                lineTo(6.4681f, 11.3175f)
-                curveTo(6.2161f, 11.5695f, 6.3941f, 12.0005f, 6.7511f, 12.0005f)
-                lineTo(9.9989f, 12.0005f)
-                lineTo(9.9989f, 17.5f)
-                curveTo(9.9989f, 17.776f, 10.2229f, 18.0f, 10.4989f, 18.0f)
-                lineTo(13.4989f, 18.0f)
-                curveTo(13.7749f, 18.0f, 13.9989f, 17.776f, 13.9989f, 17.5f)
-                lineTo(13.9989f, 12.0005f)
-                lineTo(17.2481f, 12.0005f)
-                curveTo(17.6051f, 12.0005f, 17.7831f, 11.5695f, 17.5311f, 11.3175f)
-                lineTo(12.3661f, 6.1515f)
-                curveTo(12.1631f, 5.9495f, 11.8361f, 5.9495f, 11.6341f, 6.1515f)
-                close()
+val BezierIcons.TrendingUp: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _trendingUp ?: ImageVector.Builder(
+                    name = "TrendingUp",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(11.634f, 6.152f)
+                    lineTo(6.468f, 11.318000000000001f)
+                    arcTo(0.4f, 0.4f, 225.03189588902558f, isMoreThanHalf = false, isPositiveArc = false, 6.751f, 12.001000000000001f)
+                    lineTo(10.0f, 12.001000000000001f)
+                    lineTo(10.0f, 17.5f)
+                    arcTo(0.5f, 0.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 10.5f, 18.0f)
+                    lineTo(13.5f, 18.0f)
+                    arcTo(0.5f, 0.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 14.0f, 17.5f)
+                    lineTo(14.0f, 12.0f)
+                    lineTo(17.25f, 12.0f)
+                    arcTo(0.4f, 0.4f, 89.75944054344441f, isMoreThanHalf = false, isPositiveArc = false, 17.532f, 11.318f)
+                    lineTo(12.367f, 6.151999999999999f)
+                    arcTo(0.52f, 0.52f, 314.7364017918737f, isMoreThanHalf = false, isPositiveArc = false, 11.635000000000002f, 6.151999999999999f)
+                }
+            }.build().also {
+                _trendingUp = it
             }
-        }.build().also {
-            _trendingUp = it
-        }
     }
+
 
 private var _trendingUp: ImageVector? = null
 
@@ -58,7 +61,7 @@ private var _trendingUp: ImageVector? = null
 private fun TrendingUpIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.TrendingUp,
+            imageVector = BezierIcons.TrendingUp.imageVector,
             contentDescription = null,
     )
 }

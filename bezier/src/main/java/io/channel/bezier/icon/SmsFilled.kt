@@ -16,54 +16,54 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.SmsFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._smsFilled ?: ImageVector.Builder(
-                name = "SmsFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(21.5f, 12.0f)
-                curveTo(21.5f, 16.4183f, 17.2467f, 20.0f, 12.0f, 20.0f)
-                curveTo(11.3111f, 20.0f, 10.6393f, 19.9383f, 9.9921f, 19.821f)
-                curveTo(8.5759f, 21.032f, 6.939f, 21.612f, 5.8791f, 21.8801f)
-                curveTo(5.457f, 21.9869f, 5.1612f, 21.5173f, 5.3821f, 21.1421f)
-                curveTo(5.7698f, 20.4835f, 6.2467f, 19.5469f, 6.5246f, 18.5384f)
-                curveTo(4.0899f, 17.0899f, 2.5f, 14.7013f, 2.5f, 12.0f)
-                curveTo(2.5f, 7.5817f, 6.7533f, 4.0f, 12.0f, 4.0f)
-                curveTo(17.2467f, 4.0f, 21.5f, 7.5817f, 21.5f, 12.0f)
-                close()
-                moveTo(6.0f, 11.9994f)
-                curveTo(6.0f, 12.8252f, 6.6759f, 13.5f, 7.5006f, 13.5f)
-                curveTo(8.3263f, 13.5f, 9.0011f, 12.8252f, 9.0011f, 11.9994f)
-                curveTo(9.0011f, 11.1748f, 8.3263f, 10.5f, 7.5006f, 10.5f)
-                curveTo(6.6759f, 10.5f, 6.0f, 11.1748f, 6.0f, 11.9994f)
-                close()
-                moveTo(10.5f, 11.9994f)
-                curveTo(10.5f, 12.8252f, 11.1759f, 13.5f, 12.0006f, 13.5f)
-                curveTo(12.8263f, 13.5f, 13.5011f, 12.8252f, 13.5011f, 11.9994f)
-                curveTo(13.5011f, 11.1748f, 12.8263f, 10.5f, 12.0006f, 10.5f)
-                curveTo(11.1759f, 10.5f, 10.5f, 11.1748f, 10.5f, 11.9994f)
-                close()
-                moveTo(16.5006f, 13.5f)
-                curveTo(15.6759f, 13.5f, 15.0f, 12.8252f, 15.0f, 11.9994f)
-                curveTo(15.0f, 11.1748f, 15.6759f, 10.5f, 16.5006f, 10.5f)
-                curveTo(17.3263f, 10.5f, 18.0011f, 11.1748f, 18.0011f, 11.9994f)
-                curveTo(18.0011f, 12.8252f, 17.3263f, 13.5f, 16.5006f, 13.5f)
-                close()
+val BezierIcons.SmsFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _smsFilled ?: ImageVector.Builder(
+                    name = "SmsFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(21.5f, 12.0f)
+                    curveTo(21.5f, 16.418f, 17.247f, 20.0f, 12.0f, 20.0f)
+                    quadTo(10.965f, 19.998f, 9.992f, 19.821f)
+                    curveTo(8.576f, 21.032f, 6.939000000000001f, 21.612000000000002f, 5.8790000000000004f, 21.881f)
+                    curveTo(5.457000000000001f, 21.987000000000002f, 5.1610000000000005f, 21.517f, 5.382000000000001f, 21.142f)
+                    curveTo(5.7700000000000005f, 20.483f, 6.247000000000001f, 19.547f, 6.525f, 18.538f)
+                    curveTo(4.09f, 17.09f, 2.5f, 14.701f, 2.5f, 12.0f)
+                    curveTo(2.5f, 7.582f, 6.753f, 4.0f, 12.0f, 4.0f)
+                    curveTo(17.247f, 4.0f, 21.5f, 7.582f, 21.5f, 12.0f)
+                    moveTo(6.0f, 12.0f)
+                    curveTo(6.0f, 12.825f, 6.676f, 13.5f, 7.5f, 13.5f)
+                    curveTo(8.326f, 13.5f, 9.001f, 12.825f, 9.001f, 12.0f)
+                    curveTo(9.001f, 11.175f, 8.325999999999999f, 10.5f, 7.5009999999999994f, 10.5f)
+                    curveTo(6.676f, 10.5f, 6.0f, 11.175f, 6.0f, 12.0f)
+                    moveTo(10.5f, 12.0f)
+                    curveTo(10.5f, 12.825f, 11.176f, 13.5f, 12.0f, 13.5f)
+                    curveTo(12.826f, 13.5f, 13.501f, 12.825f, 13.501f, 12.0f)
+                    curveTo(13.501f, 11.175f, 12.825999999999999f, 10.5f, 12.001f, 10.5f)
+                    curveTo(11.176f, 10.5f, 10.5f, 11.175f, 10.5f, 12.0f)
+                    moveTo(16.5f, 13.5f)
+                    curveTo(15.676f, 13.5f, 15.0f, 12.825f, 15.0f, 12.0f)
+                    curveTo(15.0f, 11.175f, 15.676f, 10.5f, 16.5f, 10.5f)
+                    curveTo(17.326f, 10.5f, 18.001f, 11.175f, 18.001f, 12.0f)
+                    curveTo(18.001f, 12.825f, 17.326f, 13.5f, 16.501f, 13.5f)
+                }
+            }.build().also {
+                _smsFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._smsFilled = it
-        }
     }
+
 
 private var _smsFilled: ImageVector? = null
 
@@ -72,7 +72,7 @@ private var _smsFilled: ImageVector? = null
 private fun SmsFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.SmsFilled,
+            imageVector = BezierIcons.SmsFilled.imageVector,
             contentDescription = null,
     )
 }

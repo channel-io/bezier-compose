@@ -16,65 +16,64 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.AutoClose: ImageVector
-    get() {
-        return _autoClose ?: ImageVector.Builder(
-                name = "AutoClose",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(11.6741f, 8.7851f)
-                curveTo(11.7969f, 9.0716f, 12.2031f, 9.0716f, 12.3259f, 8.7851f)
-                lineTo(13.0637f, 7.0637f)
-                lineTo(14.7851f, 6.3259f)
-                curveTo(15.0716f, 6.2031f, 15.0716f, 5.7969f, 14.7851f, 5.6741f)
-                lineTo(13.0637f, 4.9363f)
-                lineTo(12.3259f, 3.2149f)
-                curveTo(12.2031f, 2.9284f, 11.7969f, 2.9284f, 11.6741f, 3.2149f)
-                lineTo(10.9363f, 4.9363f)
-                lineTo(9.2149f, 5.6741f)
-                curveTo(8.9284f, 5.7969f, 8.9284f, 6.2031f, 9.2149f, 6.3259f)
-                lineTo(10.9363f, 7.0637f)
-                lineTo(11.6741f, 8.7851f)
-                close()
-                moveTo(17.6741f, 20.7851f)
-                curveTo(17.7969f, 21.0716f, 18.2031f, 21.0716f, 18.3259f, 20.7851f)
-                lineTo(19.0637f, 19.0637f)
-                lineTo(20.7851f, 18.3259f)
-                curveTo(21.0716f, 18.2031f, 21.0716f, 17.7969f, 20.7851f, 17.6741f)
-                lineTo(19.0637f, 16.9363f)
-                lineTo(18.3259f, 15.2149f)
-                curveTo(18.2031f, 14.9284f, 17.7969f, 14.9284f, 17.6741f, 15.2149f)
-                lineTo(16.9363f, 16.9363f)
-                lineTo(15.2149f, 17.6741f)
-                curveTo(14.9284f, 17.7969f, 14.9284f, 18.2031f, 15.2149f, 18.3259f)
-                lineTo(16.9363f, 19.0637f)
-                lineTo(17.6741f, 20.7851f)
-                close()
-                moveTo(4.121f, 11.192f)
-                lineTo(9.071f, 16.142f)
-                lineTo(19.4324f, 5.7804f)
-                curveTo(19.8229f, 5.3899f, 20.456f, 5.3899f, 20.8464f, 5.7804f)
-                curveTo(21.2369f, 6.1709f, 21.2369f, 6.8039f, 20.8464f, 7.1944f)
-                lineTo(9.7781f, 18.2629f)
-                curveTo(9.3876f, 18.6534f, 8.7544f, 18.6534f, 8.3639f, 18.2629f)
-                lineTo(2.707f, 12.606f)
-                curveTo(2.3165f, 12.2155f, 2.3165f, 11.5825f, 2.707f, 11.192f)
-                curveTo(3.0974f, 10.8015f, 3.7305f, 10.8015f, 4.121f, 11.192f)
-                close()
+val BezierIcons.AutoClose: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _autoClose ?: ImageVector.Builder(
+                    name = "AutoClose",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(11.674f, 8.785f)
+                    arcTo(0.355f, 0.355f, 156.68023232886028f, isMoreThanHalf = false, isPositiveArc = false, 12.325999999999999f, 8.785f)
+                    lineTo(13.063999999999998f, 7.064f)
+                    lineTo(14.784999999999998f, 6.3260000000000005f)
+                    arcTo(0.355f, 0.355f, 66.68023232886046f, isMoreThanHalf = false, isPositiveArc = false, 14.784999999999998f, 5.674f)
+                    lineTo(13.063999999999998f, 4.936f)
+                    lineTo(12.325999999999999f, 3.215f)
+                    arcTo(0.355f, 0.355f, 336.68023232886026f, isMoreThanHalf = false, isPositiveArc = false, 11.674f, 3.215f)
+                    lineTo(10.936f, 4.936f)
+                    lineTo(9.215f, 5.6739999999999995f)
+                    arcTo(0.355f, 0.355f, 246.68023232886043f, isMoreThanHalf = false, isPositiveArc = false, 9.215f, 6.326f)
+                    lineTo(10.936f, 7.064f)
+                    close()
+                    moveTo(17.674f, 20.785f)
+                    arcTo(0.355f, 0.355f, 156.68023232886063f, isMoreThanHalf = false, isPositiveArc = false, 18.326f, 20.785f)
+                    lineTo(19.064f, 19.064f)
+                    lineTo(20.785f, 18.326f)
+                    arcTo(0.355f, 0.355f, 66.68023232886061f, isMoreThanHalf = false, isPositiveArc = false, 20.785f, 17.674f)
+                    lineTo(19.064f, 16.936f)
+                    lineTo(18.326f, 15.215f)
+                    arcTo(0.355f, 0.355f, 336.6802323288606f, isMoreThanHalf = false, isPositiveArc = false, 17.674f, 15.215f)
+                    lineTo(16.936f, 16.936f)
+                    lineTo(15.215f, 17.674f)
+                    arcTo(0.355f, 0.355f, 246.6802323288606f, isMoreThanHalf = false, isPositiveArc = false, 15.215f, 18.326f)
+                    lineTo(16.936f, 19.064f)
+                    close()
+                    moveTo(4.121f, 11.192f)
+                    lineTo(9.071000000000002f, 16.142f)
+                    lineTo(19.432f, 5.78f)
+                    arcTo(1.0f, 1.0f, 224.00425538642233f, isMoreThanHalf = true, isPositiveArc = true, 20.846f, 7.194f)
+                    lineTo(9.778f, 18.263f)
+                    arcTo(1.0f, 1.0f, 45.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 8.364f, 18.263f)
+                    lineTo(2.7070000000000007f, 12.606000000000002f)
+                    arcTo(1.0f, 1.0f, 135.99574461357975f, isMoreThanHalf = false, isPositiveArc = true, 4.121f, 11.192000000000002f)
+                }
+            }.build().also {
+                _autoClose = it
             }
-        }.build().also {
-            _autoClose = it
-        }
     }
+
 
 private var _autoClose: ImageVector? = null
 
@@ -83,7 +82,7 @@ private var _autoClose: ImageVector? = null
 private fun AutoCloseIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.AutoClose,
+            imageVector = BezierIcons.AutoClose.imageVector,
             contentDescription = null,
     )
 }

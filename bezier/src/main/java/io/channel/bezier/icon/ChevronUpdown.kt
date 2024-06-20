@@ -9,53 +9,52 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ChevronUpdown: ImageVector
-    get() {
-        return io.channel.bezier.icon._chevronUpdown ?: ImageVector.Builder(
-                name = "ChevronUpdown",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(5.7929f, 7.7929f)
-                curveTo(5.4024f, 8.1834f, 5.4024f, 8.8166f, 5.7929f, 9.2071f)
-                curveTo(6.1834f, 9.5976f, 6.8166f, 9.5976f, 7.2071f, 9.2071f)
-                lineTo(12.0f, 4.4142f)
-                lineTo(16.7929f, 9.2071f)
-                curveTo(17.1834f, 9.5976f, 17.8166f, 9.5976f, 18.2071f, 9.2071f)
-                curveTo(18.5976f, 8.8166f, 18.5976f, 8.1834f, 18.2071f, 7.7929f)
-                lineTo(12.7071f, 2.2929f)
-                curveTo(12.3166f, 1.9024f, 11.6834f, 1.9024f, 11.2929f, 2.2929f)
-                lineTo(5.7929f, 7.7929f)
-                close()
-                moveTo(18.2071f, 16.2071f)
-                curveTo(18.5976f, 15.8166f, 18.5976f, 15.1834f, 18.2071f, 14.7929f)
-                curveTo(17.8166f, 14.4024f, 17.1834f, 14.4024f, 16.7929f, 14.7929f)
-                lineTo(12.0f, 19.5858f)
-                lineTo(7.2071f, 14.7929f)
-                curveTo(6.8166f, 14.4024f, 6.1834f, 14.4024f, 5.7929f, 14.7929f)
-                curveTo(5.4024f, 15.1834f, 5.4024f, 15.8166f, 5.7929f, 16.2071f)
-                lineTo(11.2929f, 21.7071f)
-                curveTo(11.6834f, 22.0976f, 12.3166f, 22.0976f, 12.7071f, 21.7071f)
-                lineTo(18.2071f, 16.2071f)
-                close()
+val BezierIcons.ChevronUpdown: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _chevronUpdown ?: ImageVector.Builder(
+                    name = "ChevronUpdown",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(5.793f, 7.793f)
+                    arcTo(1.0f, 1.0f, 224.0042553864214f, isMoreThanHalf = false, isPositiveArc = false, 7.207f, 9.207f)
+                    lineTo(12.0f, 4.414f)
+                    lineTo(16.793f, 9.207f)
+                    arcTo(1.0f, 1.0f, 135.99574461357767f, isMoreThanHalf = true, isPositiveArc = false, 18.207f, 7.793000000000001f)
+                    lineTo(12.707f, 2.293000000000001f)
+                    arcTo(1.0f, 1.0f, 314.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 11.293000000000001f, 2.293000000000001f)
+                    close()
+                    moveTo(18.207f, 16.207f)
+                    arcTo(1.0f, 1.0f, 44.004255386422344f, isMoreThanHalf = false, isPositiveArc = false, 16.793f, 14.793000000000001f)
+                    lineTo(12.0f, 19.586f)
+                    lineTo(7.207f, 14.793f)
+                    arcTo(1.0f, 1.0f, 314.0042553864224f, isMoreThanHalf = false, isPositiveArc = false, 5.793f, 16.207f)
+                    lineTo(11.293f, 21.707f)
+                    arcTo(1.0f, 1.0f, 134.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 12.706999999999999f, 21.707f)
+                    close()
+                }
+            }.build().also {
+                _chevronUpdown = it
             }
-        }.build().also {
-            io.channel.bezier.icon._chevronUpdown = it
-        }
     }
+
 
 private var _chevronUpdown: ImageVector? = null
 
@@ -64,7 +63,7 @@ private var _chevronUpdown: ImageVector? = null
 private fun ChevronUpdownIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ChevronUpdown,
+            imageVector = BezierIcons.ChevronUpdown.imageVector,
             contentDescription = null,
     )
 }

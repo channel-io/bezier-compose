@@ -16,52 +16,49 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Clip: ImageVector
-    get() {
-        return _clip ?: ImageVector.Builder(
-                name = "Clip",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(20.4862f, 13.487f)
-                curveTo(20.0957f, 13.0965f, 19.4626f, 13.0965f, 19.072f, 13.487f)
-                lineTo(13.5351f, 19.0239f)
-                curveTo(11.5827f, 20.9764f, 8.4168f, 20.9764f, 6.4644f, 19.0239f)
-                curveTo(4.5119f, 17.0714f, 4.5119f, 13.9056f, 6.4644f, 11.9531f)
-                lineTo(13.5404f, 4.8771f)
-                curveTo(14.709f, 3.7077f, 16.6045f, 3.7077f, 17.7729f, 4.8769f)
-                curveTo(18.9416f, 6.0456f, 18.9416f, 7.9405f, 17.7731f, 9.1089f)
-                lineTo(10.6132f, 16.2679f)
-                curveTo(10.2203f, 16.6612f, 9.5832f, 16.6612f, 9.1908f, 16.2684f)
-                curveTo(8.797f, 15.8751f, 8.797f, 15.238f, 9.1899f, 14.8456f)
-                lineTo(14.8102f, 9.2252f)
-                curveTo(15.2008f, 8.8347f, 15.2008f, 8.2015f, 14.8103f, 7.811f)
-                curveTo(14.4197f, 7.4205f, 13.7866f, 7.4205f, 13.396f, 7.811f)
-                lineTo(7.7761f, 13.4309f)
-                curveTo(6.6015f, 14.6041f, 6.6015f, 16.509f, 7.7766f, 17.6826f)
-                curveTo(8.9493f, 18.8568f, 10.8542f, 18.8568f, 12.0278f, 17.6817f)
-                lineTo(19.1873f, 10.5232f)
-                curveTo(21.1369f, 8.5736f, 21.1369f, 5.4124f, 19.1874f, 3.4629f)
-                curveTo(17.238f, 1.5123f, 14.0755f, 1.5123f, 12.1259f, 3.4632f)
-                lineTo(5.0501f, 10.5389f)
-                curveTo(2.3166f, 13.2724f, 2.3166f, 17.7046f, 5.0501f, 20.4381f)
-                curveTo(7.7837f, 23.1717f, 12.2158f, 23.1717f, 14.9494f, 20.4381f)
-                lineTo(20.4862f, 14.9012f)
-                curveTo(20.8768f, 14.5107f, 20.8768f, 13.8776f, 20.4862f, 13.487f)
-                close()
+val BezierIcons.Clip: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _clip ?: ImageVector.Builder(
+                    name = "Clip",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(20.486f, 13.487f)
+                    arcTo(1.0f, 1.0f, 314.9913483371621f, isMoreThanHalf = false, isPositiveArc = false, 19.072f, 13.487f)
+                    lineTo(13.535f, 19.024f)
+                    arcTo(5.0f, 5.0f, 45.99574461357872f, isMoreThanHalf = false, isPositiveArc = true, 6.465f, 11.954f)
+                    lineTo(13.54f, 4.877000000000001f)
+                    arcTo(2.992f, 2.992f, 224.99323068703612f, isMoreThanHalf = true, isPositiveArc = true, 17.773f, 9.109000000000002f)
+                    lineTo(10.613f, 16.268f)
+                    arcTo(1.005f, 1.005f, 44.97986029006903f, isMoreThanHalf = true, isPositiveArc = true, 9.19f, 14.846f)
+                    lineTo(14.809999999999999f, 9.225999999999999f)
+                    arcTo(1.0f, 1.0f, 45.02025361764865f, isMoreThanHalf = true, isPositiveArc = false, 13.395999999999999f, 7.810999999999999f)
+                    lineTo(7.775999999999999f, 13.431f)
+                    arcTo(3.005f, 3.005f, 225.03085905936595f, isMoreThanHalf = false, isPositiveArc = false, 7.775999999999999f, 17.683f)
+                    arcTo(3.005f, 3.005f, 135.01738562717262f, isMoreThanHalf = false, isPositiveArc = false, 12.027999999999999f, 17.682f)
+                    lineTo(19.188f, 10.523f)
+                    arcTo(4.993f, 4.993f, 45.387409504100034f, isMoreThanHalf = true, isPositiveArc = false, 12.125999999999998f, 3.463f)
+                    lineTo(5.05f, 10.54f)
+                    arcTo(7.0f, 7.0f, 224.9999992115624f, isMoreThanHalf = false, isPositiveArc = false, 14.95f, 20.439999999999998f)
+                    lineTo(20.485999999999997f, 14.901999999999997f)
+                    arcTo(1.0f, 1.0f, 44.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 20.485999999999997f, 13.487999999999998f)
+                }
+            }.build().also {
+                _clip = it
             }
-        }.build().also {
-            _clip = it
-        }
     }
+
 
 private var _clip: ImageVector? = null
 
@@ -70,7 +67,7 @@ private var _clip: ImageVector? = null
 private fun ClipIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Clip,
+            imageVector = BezierIcons.Clip.imageVector,
             contentDescription = null,
     )
 }
