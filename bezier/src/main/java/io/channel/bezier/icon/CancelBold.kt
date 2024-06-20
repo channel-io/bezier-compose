@@ -9,49 +9,50 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CancelBold: ImageVector
-    get() {
-        return _cancelBold ?: ImageVector.Builder(
-                name = "CancelBold",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(4.9289f, 4.9289f)
-                curveTo(4.3432f, 5.5147f, 4.3432f, 6.4645f, 4.9289f, 7.0503f)
-                lineTo(9.8787f, 12.0f)
-                lineTo(4.9289f, 16.9497f)
-                curveTo(4.3432f, 17.5355f, 4.3432f, 18.4853f, 4.9289f, 19.0711f)
-                curveTo(5.5147f, 19.6569f, 6.4645f, 19.6569f, 7.0503f, 19.0711f)
-                lineTo(12.0f, 14.1213f)
-                lineTo(16.9497f, 19.0711f)
-                curveTo(17.5355f, 19.6569f, 18.4853f, 19.6569f, 19.0711f, 19.0711f)
-                curveTo(19.6569f, 18.4853f, 19.6569f, 17.5355f, 19.0711f, 16.9497f)
-                lineTo(14.1213f, 12.0f)
-                lineTo(19.0711f, 7.0503f)
-                curveTo(19.6569f, 6.4645f, 19.6569f, 5.5147f, 19.0711f, 4.9289f)
-                curveTo(18.4853f, 4.3432f, 17.5355f, 4.3432f, 16.9497f, 4.9289f)
-                lineTo(12.0f, 9.8787f)
-                lineTo(7.0503f, 4.9289f)
-                curveTo(6.4645f, 4.3432f, 5.5147f, 4.3432f, 4.9289f, 4.9289f)
-                close()
+val BezierIcons.CancelBold: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _cancelBold ?: ImageVector.Builder(
+                    name = "CancelBold",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(4.929f, 4.929f)
+                    arcTo(1.5f, 1.5f, 224.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 4.929f, 7.050000000000001f)
+                    lineTo(9.879f, 12.0f)
+                    lineTo(4.928999999999999f, 16.95f)
+                    arcTo(1.5f, 1.5f, 223.39306813951018f, isMoreThanHalf = false, isPositiveArc = false, 7.05f, 19.07f)
+                    lineTo(12.0f, 14.120000000000001f)
+                    lineTo(16.95f, 19.07f)
+                    arcTo(1.5f, 1.5f, 134.00425538641872f, isMoreThanHalf = false, isPositiveArc = false, 19.070999999999998f, 16.949f)
+                    lineTo(14.121f, 12.0f)
+                    lineTo(19.071f, 7.05f)
+                    arcTo(1.5f, 1.5f, 46.5799119225261f, isMoreThanHalf = true, isPositiveArc = false, 16.95f, 4.93f)
+                    lineTo(12.0f, 9.879f)
+                    lineTo(7.05f, 4.928999999999999f)
+                    arcTo(1.5f, 1.5f, 314.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 4.929f, 4.928999999999999f)
+                }
+            }.build().also {
+                _cancelBold = it
             }
-        }.build().also {
-            _cancelBold = it
-        }
     }
+
 
 private var _cancelBold: ImageVector? = null
 
@@ -60,7 +61,7 @@ private var _cancelBold: ImageVector? = null
 private fun CancelBoldIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CancelBold,
+            imageVector = BezierIcons.CancelBold.imageVector,
             contentDescription = null,
     )
 }

@@ -16,73 +16,71 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ChannelBtn: ImageVector
-    get() {
-        return io.channel.bezier.icon._channelBtn ?: ImageVector.Builder(
-                name = "ChannelBtn",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(11.9977f, 17.5611f)
-                curveTo(12.9156f, 17.5611f, 13.8094f, 17.3363f, 14.6196f, 16.9009f)
-                curveTo(14.9547f, 16.7203f, 15.3567f, 16.7118f, 15.7105f, 16.8617f)
-                lineTo(17.3042f, 17.5452f)
-                curveTo(17.3745f, 17.5753f, 17.4524f, 17.5603f, 17.5065f, 17.5062f)
-                curveTo(17.5612f, 17.4515f, 17.5758f, 17.3758f, 17.5451f, 17.3046f)
-                lineTo(16.8636f, 15.7138f)
-                curveTo(16.7106f, 15.3619f, 16.7188f, 14.9561f, 16.9004f, 14.6204f)
-                curveTo(17.447f, 13.6036f, 17.6606f, 12.4572f, 17.5176f, 11.3012f)
-                curveTo(17.2111f, 8.8157f, 15.1798f, 6.7834f, 12.7017f, 6.4813f)
-                curveTo(10.9709f, 6.2712f, 9.2865f, 6.848f, 8.0676f, 8.0674f)
-                curveTo(6.848f, 9.2865f, 6.2706f, 10.972f, 6.4816f, 12.7016f)
-                curveTo(6.7833f, 15.1794f, 8.8161f, 17.2113f, 11.3021f, 17.5184f)
-                curveTo(11.532f, 17.5469f, 11.7641f, 17.5611f, 11.9977f, 17.5611f)
-                close()
-                moveTo(9.2194f, 12.0004f)
-                curveTo(9.2194f, 12.9514f, 9.4726f, 13.3944f, 10.0817f, 13.3944f)
-                curveTo(10.6903f, 13.3944f, 10.9434f, 12.9513f, 10.9434f, 12.0004f)
-                curveTo(10.9434f, 11.0495f, 10.6903f, 10.6064f, 10.0817f, 10.6064f)
-                curveTo(9.4726f, 10.6064f, 9.2194f, 11.0494f, 9.2194f, 12.0004f)
-                close()
-                moveTo(13.9188f, 13.3944f)
-                curveTo(13.3098f, 13.3944f, 13.0566f, 12.9514f, 13.0566f, 12.0004f)
-                curveTo(13.0566f, 11.0494f, 13.3098f, 10.6064f, 13.9188f, 10.6064f)
-                curveTo(14.5278f, 10.6064f, 14.7806f, 11.0491f, 14.7806f, 12.0004f)
-                curveTo(14.7806f, 12.9517f, 14.5278f, 13.3944f, 13.9188f, 13.3944f)
-                close()
-                moveTo(1.0f, 11.9004f)
-                curveTo(1.0538f, 5.872f, 5.9587f, 1.0f, 12.0f, 1.0f)
-                curveTo(18.0752f, 1.0f, 23.0f, 5.9253f, 23.0f, 12.0f)
-                curveTo(23.0f, 18.0747f, 18.0752f, 23.0f, 12.0f, 23.0f)
-                curveTo(5.9587f, 23.0f, 1.0538f, 18.1285f, 1.0f, 12.0996f)
-                lineTo(1.0f, 11.9004f)
-                close()
-                moveTo(11.9977f, 19.15f)
-                curveTo(11.6991f, 19.15f, 11.4017f, 19.1318f, 11.1069f, 19.0953f)
-                curveTo(7.8979f, 18.6989f, 5.2944f, 16.0965f, 4.9044f, 12.8938f)
-                curveTo(4.6344f, 10.6804f, 5.3782f, 8.5092f, 6.944f, 6.9439f)
-                curveTo(8.5091f, 5.3783f, 10.6789f, 4.6352f, 12.8936f, 4.904f)
-                curveTo(16.097f, 5.2946f, 18.6988f, 7.8977f, 19.0945f, 11.1065f)
-                curveTo(19.2705f, 12.5297f, 19.0236f, 13.9491f, 18.3801f, 15.2189f)
-                lineTo(19.0051f, 16.6777f)
-                curveTo(19.2926f, 17.3457f, 19.1444f, 18.1153f, 18.6301f, 18.6297f)
-                curveTo(18.1166f, 19.1431f, 17.3461f, 19.2916f, 16.6784f, 19.0057f)
-                lineTo(15.2195f, 18.38f)
-                curveTo(14.218f, 18.8877f, 13.1205f, 19.15f, 11.9977f, 19.15f)
-                close()
+val BezierIcons.ChannelBtn: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _channelBtn ?: ImageVector.Builder(
+                    name = "ChannelBtn",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(9.28f, 3.25f)
+                    lineTo(14.719999999999999f, 3.25f)
+                    arcTo(6.03f, 6.03f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 20.75f, 9.280000000000001f)
+                    lineTo(20.75f, 14.720000000000002f)
+                    curveTo(20.75f, 18.050000000000004f, 18.05f, 20.750000000000004f, 14.719999999999999f, 20.750000000000004f)
+                    lineTo(9.28f, 20.750000000000004f)
+                    curveTo(5.949999999999999f, 20.750000000000004f, 3.249999999999999f, 18.050000000000004f, 3.249999999999999f, 14.720000000000002f)
+                    lineTo(3.249999999999999f, 9.28f)
+                    curveTo(3.249999999999999f, 5.949999999999999f, 5.949999999999999f, 3.249999999999999f, 9.28f, 3.249999999999999f)
+                    moveTo(22.0f, 14.72f)
+                    lineTo(22.0f, 9.28f)
+                    arcTo(7.28f, 7.28f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 14.72f, 2.0f)
+                    lineTo(9.28f, 2.0f)
+                    arcTo(7.28f, 7.28f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 2.0f, 9.28f)
+                    lineTo(2.0f, 14.719999999999999f)
+                    curveTo(2.0f, 18.742f, 5.259f, 22.0f, 9.28f, 22.0f)
+                    lineTo(14.719999999999999f, 22.0f)
+                    curveTo(18.741f, 22.0f, 22.0f, 18.741f, 22.0f, 14.719999999999999f)
+                    moveTo(17.239f, 14.197999999999999f)
+                    curveTo(17.063000000000002f, 14.617999999999999f, 17.031000000000002f, 15.084999999999999f, 17.141000000000002f, 15.527999999999999f)
+                    lineTo(17.450000000000003f, 16.762f)
+                    arcTo(0.566f, 0.566f, 345.7370419631595f, isMoreThanHalf = false, isPositiveArc = true, 16.762000000000004f, 17.45f)
+                    lineTo(15.527000000000005f, 17.141f)
+                    arcTo(2.13f, 2.13f, 284.02913460161153f, isMoreThanHalf = false, isPositiveArc = false, 14.197000000000005f, 17.238999999999997f)
+                    arcTo(5.65f, 5.65f, 67.21231199799173f, isMoreThanHalf = false, isPositiveArc = true, 12.003000000000004f, 17.679999999999996f)
+                    curveTo(8.876000000000005f, 17.679999999999996f, 6.320000000000004f, 15.127999999999997f, 6.320000000000004f, 12.001999999999995f)
+                    curveTo(6.318000000000004f, 8.862999999999996f, 8.876000000000005f, 6.319999999999995f, 12.003000000000004f, 6.319999999999995f)
+                    curveTo(15.130000000000003f, 6.319999999999995f, 17.680000000000003f, 8.874999999999995f, 17.680000000000003f, 12.001999999999995f)
+                    curveTo(17.680000000000003f, 12.779999999999996f, 17.523000000000003f, 13.519999999999996f, 17.239000000000004f, 14.195999999999994f)
+                    close()
+                    moveTo(11.997f, 15.155999999999999f)
+                    curveTo(13.437f, 15.155999999999999f, 14.690999999999999f, 14.350999999999999f, 15.331f, 13.165999999999999f)
+                    arcTo(0.283f, 0.283f, 28.076888371430286f, isMoreThanHalf = false, isPositiveArc = false, 15.225f, 12.788999999999998f)
+                    lineTo(14.208f, 12.178999999999998f)
+                    arcTo(0.29f, 0.29f, 299.7957450701547f, isMoreThanHalf = false, isPositiveArc = false, 13.805f, 12.299999999999999f)
+                    arcTo(2.034f, 2.034f, 27.14281139687187f, isMoreThanHalf = false, isPositiveArc = true, 10.184999999999999f, 12.299999999999999f)
+                    arcTo(0.287f, 0.287f, 333.5814413301239f, isMoreThanHalf = false, isPositiveArc = false, 9.783f, 12.18f)
+                    lineTo(8.766f, 12.79f)
+                    arcTo(0.284f, 0.284f, 239.10443548614603f, isMoreThanHalf = false, isPositiveArc = false, 8.66f, 13.165f)
+                    arcTo(3.79f, 3.79f, 151.6793221539208f, isMoreThanHalf = false, isPositiveArc = false, 11.993f, 15.157f)
+                    close()
+                }
+            }.build().also {
+                _channelBtn = it
             }
-        }.build().also {
-            io.channel.bezier.icon._channelBtn = it
-        }
     }
+
 
 private var _channelBtn: ImageVector? = null
 
@@ -91,7 +89,7 @@ private var _channelBtn: ImageVector? = null
 private fun ChannelBtnIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ChannelBtn,
+            imageVector = BezierIcons.ChannelBtn.imageVector,
             contentDescription = null,
     )
 }

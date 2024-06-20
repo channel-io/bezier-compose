@@ -16,50 +16,50 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.FaceNomouth: ImageVector
-    get() {
-        return _faceNomouth ?: ImageVector.Builder(
-                name = "FaceNomouth",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0002f, 20.0001f)
-                curveTo(7.5892f, 20.0001f, 4.0002f, 16.4111f, 4.0002f, 12.0001f)
-                curveTo(4.0002f, 7.5891f, 7.5892f, 4.0001f, 12.0002f, 4.0001f)
-                curveTo(16.4112f, 4.0001f, 20.0002f, 7.5891f, 20.0002f, 12.0001f)
-                curveTo(20.0002f, 16.4111f, 16.4112f, 20.0001f, 12.0002f, 20.0001f)
-                close()
-                moveTo(12.0002f, 2.0001f)
-                curveTo(6.4772f, 2.0001f, 2.0002f, 6.4781f, 2.0002f, 12.0001f)
-                curveTo(2.0002f, 17.5221f, 6.4772f, 22.0001f, 12.0002f, 22.0001f)
-                curveTo(17.5222f, 22.0001f, 22.0002f, 17.5221f, 22.0002f, 12.0001f)
-                curveTo(22.0002f, 6.4781f, 17.5222f, 2.0001f, 12.0002f, 2.0001f)
-                close()
-                moveTo(8.7863f, 8.9825f)
-                curveTo(7.9413f, 8.9825f, 7.5873f, 9.5925f, 7.5873f, 11.0875f)
-                curveTo(7.5873f, 12.5835f, 7.9413f, 13.1935f, 8.7863f, 13.1935f)
-                curveTo(9.6313f, 13.1935f, 9.9843f, 12.5835f, 9.9843f, 11.0875f)
-                curveTo(9.9843f, 9.5925f, 9.6313f, 8.9825f, 8.7863f, 8.9825f)
-                close()
-                moveTo(14.015f, 11.0875f)
-                curveTo(14.015f, 9.5925f, 14.369f, 8.9825f, 15.214f, 8.9825f)
-                curveTo(16.059f, 8.9825f, 16.412f, 9.5925f, 16.412f, 11.0875f)
-                curveTo(16.412f, 12.5835f, 16.059f, 13.1935f, 15.214f, 13.1935f)
-                curveTo(14.369f, 13.1935f, 14.015f, 12.5835f, 14.015f, 11.0875f)
-                close()
+val BezierIcons.FaceNomouth: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _faceNomouth ?: ImageVector.Builder(
+                    name = "FaceNomouth",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(12.0f, 20.0f)
+                    curveTo(7.59f, 20.0f, 4.0f, 16.411f, 4.0f, 12.0f)
+                    curveTo(4.0f, 7.588999999999999f, 7.59f, 4.0f, 12.0f, 4.0f)
+                    curveTo(16.41f, 4.0f, 20.0f, 7.59f, 20.0f, 12.0f)
+                    curveTo(20.0f, 16.41f, 16.411f, 20.0f, 12.0f, 20.0f)
+                    moveTo(12.0f, 2.0f)
+                    curveTo(6.477f, 2.0f, 2.0f, 6.478f, 2.0f, 12.0f)
+                    curveTo(2.0f, 17.522f, 6.477f, 22.0f, 12.0f, 22.0f)
+                    curveTo(17.523f, 22.0f, 22.0f, 17.522f, 22.0f, 12.0f)
+                    curveTo(22.0f, 6.4780000000000015f, 17.522f, 2.0f, 12.0f, 2.0f)
+                    moveTo(8.786f, 8.983f)
+                    curveTo(7.941f, 8.983f, 7.587f, 9.593f, 7.587f, 11.088000000000001f)
+                    curveTo(7.587f, 12.583000000000002f, 7.941f, 13.194f, 8.786999999999999f, 13.194f)
+                    curveTo(9.630999999999998f, 13.194f, 9.983999999999998f, 12.584000000000001f, 9.983999999999998f, 11.087f)
+                    curveTo(9.983999999999998f, 9.593f, 9.630999999999998f, 8.983f, 8.785999999999998f, 8.983f)
+                    moveTo(14.014999999999997f, 11.088000000000001f)
+                    curveTo(14.014999999999997f, 9.593f, 14.368999999999996f, 8.983f, 15.213999999999997f, 8.983f)
+                    curveTo(16.058999999999997f, 8.983f, 16.411999999999995f, 9.593f, 16.411999999999995f, 11.088000000000001f)
+                    curveTo(16.411999999999995f, 12.583000000000002f, 16.058999999999994f, 13.194f, 15.213999999999995f, 13.194f)
+                    curveTo(14.368999999999996f, 13.194f, 14.014999999999995f, 12.584000000000001f, 14.014999999999995f, 11.087f)
+                }
+            }.build().also {
+                _faceNomouth = it
             }
-        }.build().also {
-            _faceNomouth = it
-        }
     }
+
 
 private var _faceNomouth: ImageVector? = null
 
@@ -68,7 +68,7 @@ private var _faceNomouth: ImageVector? = null
 private fun FaceNomouthIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.FaceNomouth,
+            imageVector = BezierIcons.FaceNomouth.imageVector,
             contentDescription = null,
     )
 }

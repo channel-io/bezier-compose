@@ -16,32 +16,33 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Bullet: ImageVector
-    get() {
-        return io.channel.bezier.icon._bullet ?: ImageVector.Builder(
-                name = "Bullet",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(14.0f, 12.0f)
-                curveTo(14.0f, 13.1045f, 13.1045f, 14.0f, 12.0f, 14.0f)
-                curveTo(10.8955f, 14.0f, 10.0f, 13.1045f, 10.0f, 12.0f)
-                curveTo(10.0f, 10.8955f, 10.8955f, 10.0f, 12.0f, 10.0f)
-                curveTo(13.1045f, 10.0f, 14.0f, 10.8955f, 14.0f, 12.0f)
-                close()
+val BezierIcons.Bullet: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _bullet ?: ImageVector.Builder(
+                    name = "Bullet",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(14.0f, 12.0f)
+                    arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 10.0f, 12.0f)
+                    arcTo(2.0f, 2.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 14.0f, 12.0f)
+                }
+            }.build().also {
+                _bullet = it
             }
-        }.build().also {
-            io.channel.bezier.icon._bullet = it
-        }
     }
+
 
 private var _bullet: ImageVector? = null
 
@@ -50,7 +51,7 @@ private var _bullet: ImageVector? = null
 private fun BulletIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Bullet,
+            imageVector = BezierIcons.Bullet.imageVector,
             contentDescription = null,
     )
 }

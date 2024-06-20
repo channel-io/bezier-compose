@@ -16,53 +16,48 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.GroupFilled: ImageVector
-    get() {
-        return _groupFilled ?: ImageVector.Builder(
-                name = "GroupFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(8.9843f, 11.1998f)
-                curveTo(10.9723f, 11.1998f, 12.5843f, 9.5878f, 12.5843f, 7.5998f)
-                curveTo(12.5843f, 5.6118f, 10.9723f, 3.9998f, 8.9843f, 3.9998f)
-                curveTo(6.9963f, 3.9998f, 5.3843f, 5.6118f, 5.3843f, 7.5998f)
-                curveTo(5.3843f, 9.5878f, 6.9963f, 11.1998f, 8.9843f, 11.1998f)
-                close()
-                moveTo(19.4093f, 9.9252f)
-                curveTo(19.4093f, 11.5402f, 18.0993f, 12.8502f, 16.4843f, 12.8502f)
-                curveTo(14.8683f, 12.8502f, 13.5593f, 11.5402f, 13.5593f, 9.9252f)
-                curveTo(13.5593f, 8.3092f, 14.8683f, 7.0002f, 16.4843f, 7.0002f)
-                curveTo(18.0993f, 7.0002f, 19.4093f, 8.3092f, 19.4093f, 9.9252f)
-                close()
-                moveTo(15.3143f, 13.6111f)
-                curveTo(15.6943f, 13.5421f, 16.0843f, 13.5001f, 16.4843f, 13.5001f)
-                curveTo(19.8983f, 13.5001f, 22.6973f, 16.1311f, 22.9633f, 19.4771f)
-                curveTo(22.9853f, 19.7611f, 22.7463f, 20.0001f, 22.4613f, 20.0001f)
-                lineTo(18.4643f, 20.0001f)
-                curveTo(18.1953f, 20.0001f, 17.9853f, 19.7871f, 17.9713f, 19.5191f)
-                curveTo(17.8493f, 17.2141f, 16.8543f, 15.1371f, 15.3143f, 13.6111f)
-                close()
-                moveTo(1.0013f, 19.4761f)
-                curveTo(1.2713f, 15.3021f, 4.7423f, 12.0001f, 8.9843f, 12.0001f)
-                curveTo(13.2263f, 12.0001f, 16.6973f, 15.3021f, 16.9673f, 19.4761f)
-                curveTo(16.9853f, 19.7601f, 16.7463f, 20.0001f, 16.4613f, 20.0001f)
-                lineTo(1.5073f, 20.0001f)
-                curveTo(1.2223f, 20.0001f, 0.9833f, 19.7601f, 1.0013f, 19.4761f)
-                close()
+val BezierIcons.GroupFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _groupFilled ?: ImageVector.Builder(
+                    name = "GroupFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(8.984f, 11.2f)
+                    arcTo(3.6f, 3.6f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 8.984f, 3.999999999999999f)
+                    arcTo(3.6f, 3.6f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 8.984f, 11.2f)
+                    moveTo(19.41f, 9.925f)
+                    arcTo(2.926f, 2.926f, 358.5019964624507f, isMoreThanHalf = true, isPositiveArc = true, 13.56f, 9.925f)
+                    arcTo(2.926f, 2.926f, 181.49800353754932f, isMoreThanHalf = false, isPositiveArc = true, 19.41f, 9.925f)
+                    moveTo(15.315000000000001f, 13.611f)
+                    curveTo(15.695000000000002f, 13.542f, 16.085f, 13.501000000000001f, 16.485f, 13.501000000000001f)
+                    arcTo(6.5f, 6.5f, 269.98981324845784f, isMoreThanHalf = false, isPositiveArc = true, 22.965f, 19.477f)
+                    arcTo(0.497f, 0.497f, 356.9960793068215f, isMoreThanHalf = false, isPositiveArc = true, 22.462f, 20.0f)
+                    lineTo(18.465f, 20.0f)
+                    arcTo(0.497f, 0.497f, 90.427663829574f, isMoreThanHalf = false, isPositiveArc = true, 17.972f, 19.52f)
+                    arcTo(8.97f, 8.97f, 356.959119722501f, isMoreThanHalf = false, isPositiveArc = false, 15.315000000000001f, 13.611f)
+                    moveTo(1.001f, 19.476f)
+                    arcTo(8.0f, 8.0f, 183.7358895991468f, isMoreThanHalf = false, isPositiveArc = true, 16.967f, 19.476f)
+                    arcTo(0.504f, 0.504f, 357.72511219747304f, isMoreThanHalf = false, isPositiveArc = true, 16.461f, 20.0f)
+                    lineTo(1.507f, 20.0f)
+                    arcTo(0.504f, 0.504f, 89.72747930682036f, isMoreThanHalf = false, isPositiveArc = true, 1.001f, 19.476f)
+                }
+            }.build().also {
+                _groupFilled = it
             }
-        }.build().also {
-            _groupFilled = it
-        }
     }
+
 
 private var _groupFilled: ImageVector? = null
 
@@ -71,7 +66,7 @@ private var _groupFilled: ImageVector? = null
 private fun GroupFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.GroupFilled,
+            imageVector = BezierIcons.GroupFilled.imageVector,
             contentDescription = null,
     )
 }

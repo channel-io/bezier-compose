@@ -9,41 +9,43 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.MoonFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._moonFilled ?: ImageVector.Builder(
-                name = "MoonFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(20.6408f, 17.0367f)
-                curveTo(21.0976f, 16.2548f, 20.1855f, 15.4689f, 19.3101f, 15.7007f)
-                curveTo(18.5729f, 15.896f, 17.7986f, 16.0f, 17.0f, 16.0f)
-                curveTo(12.0294f, 16.0f, 8.0f, 11.9705f, 8.0f, 7.0f)
-                curveTo(8.0f, 6.2014f, 8.104f, 5.4271f, 8.2992f, 4.6899f)
-                curveTo(8.531f, 3.8145f, 7.7452f, 2.9024f, 6.9632f, 3.3592f)
-                curveTo(3.9945f, 5.0934f, 2.0f, 8.3138f, 2.0f, 12.0f)
-                curveTo(2.0f, 17.5228f, 6.4771f, 22.0f, 12.0f, 22.0f)
-                curveTo(15.6862f, 22.0f, 18.9066f, 20.0055f, 20.6408f, 17.0367f)
-                close()
+val BezierIcons.MoonFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _moonFilled ?: ImageVector.Builder(
+                    name = "MoonFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(20.64f, 17.037f)
+                    curveTo(21.098f, 16.255f, 20.186f, 15.469f, 19.310000000000002f, 15.700999999999999f)
+                    arcTo(9.0f, 9.0f, 75.11229315400158f, isMoreThanHalf = false, isPositiveArc = true, 8.3f, 4.69f)
+                    curveTo(8.531f, 3.8130000000000006f, 7.745000000000001f, 2.9010000000000007f, 6.963000000000001f, 3.3580000000000005f)
+                    arcTo(10.0f, 10.0f, 239.75490999085474f, isMoreThanHalf = false, isPositiveArc = false, 2.0f, 12.0f)
+                    curveTo(2.0f, 17.523f, 6.477f, 22.0f, 12.0f, 22.0f)
+                    arcTo(10.0f, 10.0f, 90.00695299235853f, isMoreThanHalf = false, isPositiveArc = false, 20.64f, 17.037f)
+                }
+            }.build().also {
+                _moonFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._moonFilled = it
-        }
     }
+
 
 private var _moonFilled: ImageVector? = null
 
@@ -52,7 +54,7 @@ private var _moonFilled: ImageVector? = null
 private fun MoonFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.MoonFilled,
+            imageVector = BezierIcons.MoonFilled.imageVector,
             contentDescription = null,
     )
 }

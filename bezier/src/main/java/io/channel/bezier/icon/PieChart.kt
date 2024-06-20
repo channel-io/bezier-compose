@@ -16,48 +16,50 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.PieChart: ImageVector
-    get() {
-        return io.channel.bezier.icon._pieChart ?: ImageVector.Builder(
-                name = "PieChart",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(13.0003f, 11.9999f)
-                curveTo(12.448f, 11.9999f, 12.0003f, 11.5522f, 12.0003f, 10.9999f)
-                lineTo(12.0003f, 2.9999f)
-                curveTo(12.0003f, 2.4477f, 12.4493f, 1.9947f, 12.9989f, 2.0494f)
-                curveTo(17.7173f, 2.5194f, 21.4809f, 6.2829f, 21.9508f, 11.0014f)
-                curveTo(22.0056f, 11.5509f, 21.5526f, 11.9999f, 21.0003f, 11.9999f)
-                lineTo(13.0003f, 11.9999f)
-                close()
-                moveTo(12.0f, 20.0002f)
-                curveTo(15.625f, 20.0002f, 18.841f, 17.4852f, 19.742f, 13.9932f)
-                lineTo(21.79f, 13.9932f)
-                curveTo(21.7834f, 14.0268f, 21.7783f, 14.0609f, 21.7732f, 14.0948f)
-                curveTo(21.7668f, 14.1376f, 21.7605f, 14.1804f, 21.751f, 14.2222f)
-                curveTo(20.725f, 18.7282f, 16.624f, 22.0002f, 12.0f, 22.0002f)
-                curveTo(6.486f, 22.0002f, 2.0f, 17.5142f, 2.0f, 12.0002f)
-                curveTo(2.0f, 7.3772f, 5.271f, 3.2752f, 9.778f, 2.2492f)
-                curveTo(9.8176f, 2.2396f, 9.8582f, 2.2341f, 9.8989f, 2.2286f)
-                curveTo(9.93f, 2.2244f, 9.9612f, 2.2202f, 9.992f, 2.2142f)
-                lineTo(9.992f, 4.2622f)
-                curveTo(6.508f, 5.1692f, 4.0f, 8.3812f, 4.0f, 12.0002f)
-                curveTo(4.0f, 16.4112f, 7.589f, 20.0002f, 12.0f, 20.0002f)
-                close()
+val BezierIcons.PieChart: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _pieChart ?: ImageVector.Builder(
+                    name = "PieChart",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(13.0f, 12.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 11.0f)
+                    lineTo(12.0f, 3.0f)
+                    curveTo(12.0f, 2.448f, 12.45f, 1.995f, 12.999f, 2.05f)
+                    curveTo(17.717f, 2.5199999999999996f, 21.481f, 6.2829999999999995f, 21.951f, 11.001000000000001f)
+                    curveTo(22.006f, 11.551000000000002f, 21.553f, 12.000000000000002f, 21.001f, 12.000000000000002f)
+                    close()
+                    moveTo(12.0f, 20.0f)
+                    curveTo(15.625f, 20.0f, 18.841f, 17.485f, 19.742f, 13.993f)
+                    lineTo(21.79f, 13.993f)
+                    quadTo(21.779999999999998f, 14.044f, 21.773f, 14.095f)
+                    quadTo(21.765f, 14.159f, 21.751f, 14.222000000000001f)
+                    curveTo(20.725f, 18.728f, 16.624f, 22.0f, 12.0f, 22.0f)
+                    curveTo(6.486f, 22.0f, 2.0f, 17.514f, 2.0f, 12.0f)
+                    curveTo(2.0f, 7.377f, 5.271f, 3.2750000000000004f, 9.777999999999999f, 2.25f)
+                    quadTo(9.838f, 2.236f, 9.897999999999998f, 2.229f)
+                    quadTo(9.945999999999998f, 2.222f, 9.991999999999997f, 2.214f)
+                    lineTo(9.991999999999997f, 4.2620000000000005f)
+                    curveTo(6.508f, 5.17f, 4.0f, 8.382f, 4.0f, 12.0f)
+                    curveTo(4.0f, 16.411f, 7.589f, 20.0f, 12.0f, 20.0f)
+                }
+            }.build().also {
+                _pieChart = it
             }
-        }.build().also {
-            io.channel.bezier.icon._pieChart = it
-        }
     }
+
 
 private var _pieChart: ImageVector? = null
 
@@ -66,7 +68,7 @@ private var _pieChart: ImageVector? = null
 private fun PieChartIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.PieChart,
+            imageVector = BezierIcons.PieChart.imageVector,
             contentDescription = null,
     )
 }

@@ -16,86 +16,83 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.WeatherCloudy: ImageVector
-    get() {
-        return io.channel.bezier.icon._weatherCloudy ?: ImageVector.Builder(
-                name = "WeatherCloudy",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(11.0f, 4.953f)
-                lineTo(9.0f, 4.953f)
-                lineTo(9.0f, 2.453f)
-                lineTo(11.0f, 2.453f)
-                lineTo(11.0f, 4.953f)
-                close()
-                moveTo(6.4645f, 6.003f)
-                lineTo(4.7075f, 4.246f)
-                lineTo(3.2935f, 5.66f)
-                lineTo(5.0505f, 7.417f)
-                lineTo(6.4645f, 6.003f)
-                close()
-                moveTo(1.5f, 11.953f)
-                lineTo(4.0f, 11.953f)
-                lineTo(4.0f, 9.953f)
-                lineTo(1.5f, 9.953f)
-                lineTo(1.5f, 11.953f)
-                close()
-                moveTo(16.7072f, 5.6602f)
-                lineTo(15.2932f, 4.2462f)
-                lineTo(13.5362f, 6.0032f)
-                lineTo(14.9502f, 7.4172f)
-                lineTo(16.7072f, 5.6602f)
-                close()
-                moveTo(8.2157f, 19.0001f)
-                lineTo(16.9367f, 19.0001f)
-                curveTo(18.6257f, 19.0001f, 19.9997f, 17.6251f, 19.9997f, 15.9361f)
-                curveTo(19.9997f, 14.2461f, 18.6257f, 12.8721f, 16.9367f, 12.8721f)
-                lineTo(15.8637f, 12.8721f)
-                lineTo(15.5737f, 12.3771f)
-                curveTo(15.0347f, 11.4561f, 14.0867f, 10.9061f, 13.0397f, 10.9061f)
-                curveTo(11.5917f, 10.9061f, 10.3437f, 11.9931f, 10.1357f, 13.4351f)
-                lineTo(10.0127f, 14.2921f)
-                lineTo(8.2157f, 14.2921f)
-                curveTo(6.9937f, 14.2921f, 5.9997f, 15.2861f, 5.9997f, 16.5081f)
-                lineTo(5.9997f, 16.7841f)
-                curveTo(5.9997f, 18.0061f, 6.9937f, 19.0001f, 8.2157f, 19.0001f)
-                close()
-                moveTo(9.9997f, 8.4531f)
-                curveTo(8.6217f, 8.4531f, 7.4997f, 9.5741f, 7.4997f, 10.9531f)
-                curveTo(7.4997f, 11.4441f, 7.6447f, 11.9151f, 7.9137f, 12.3221f)
-                curveTo(7.9556f, 12.3192f, 7.9966f, 12.3137f, 8.0374f, 12.3081f)
-                curveTo(8.096f, 12.3001f, 8.1545f, 12.2921f, 8.2157f, 12.2921f)
-                lineTo(8.3597f, 12.2921f)
-                curveTo(8.8777f, 10.7461f, 10.1387f, 9.5621f, 11.6827f, 9.1111f)
-                curveTo(11.2257f, 8.6951f, 10.6297f, 8.4531f, 9.9997f, 8.4531f)
-                close()
-                moveTo(14.1507f, 9.0371f)
-                curveTo(15.2637f, 9.3001f, 16.2667f, 9.9461f, 16.9687f, 10.8721f)
-                curveTo(19.7467f, 10.8901f, 21.9997f, 13.1541f, 21.9997f, 15.9361f)
-                curveTo(21.9997f, 18.7291f, 19.7287f, 21.0001f, 16.9367f, 21.0001f)
-                lineTo(8.2157f, 21.0001f)
-                curveTo(5.8917f, 21.0001f, 3.9997f, 19.1081f, 3.9997f, 16.7841f)
-                lineTo(3.9997f, 16.5081f)
-                curveTo(3.9997f, 15.0111f, 4.7907f, 13.7011f, 5.9697f, 12.9531f)
-                curveTo(5.6627f, 12.3351f, 5.4997f, 11.6541f, 5.4997f, 10.9531f)
-                curveTo(5.4997f, 8.4721f, 7.5187f, 6.4531f, 9.9997f, 6.4531f)
-                curveTo(11.4707f, 6.4531f, 12.8507f, 7.1741f, 13.6927f, 8.3811f)
-                lineTo(14.1507f, 9.0371f)
-                close()
+val BezierIcons.WeatherCloudy: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _weatherCloudy ?: ImageVector.Builder(
+                    name = "WeatherCloudy",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(11.0f, 4.953f)
+                    lineTo(9.0f, 4.953f)
+                    lineTo(9.0f, 2.4530000000000003f)
+                    lineTo(11.0f, 2.4530000000000003f)
+                    close()
+                    moveTo(6.465f, 6.003f)
+                    lineTo(4.708f, 4.246f)
+                    lineTo(3.294f, 5.66f)
+                    lineTo(5.05f, 7.417f)
+                    close()
+                    moveTo(1.5f, 11.953f)
+                    lineTo(4.0f, 11.953f)
+                    lineTo(4.0f, 9.953f)
+                    lineTo(1.5f, 9.953f)
+                    close()
+                    moveTo(16.707f, 5.66f)
+                    lineTo(15.293000000000001f, 4.246f)
+                    lineTo(13.536000000000001f, 6.003f)
+                    lineTo(14.950000000000001f, 7.417f)
+                    close()
+                    moveTo(8.216f, 19.0f)
+                    lineTo(16.936f, 19.0f)
+                    arcTo(3.067f, 3.067f, 89.94398324687731f, isMoreThanHalf = false, isPositiveArc = false, 20.0f, 15.936f)
+                    arcTo(3.067f, 3.067f, 359.9440045568178f, isMoreThanHalf = false, isPositiveArc = false, 16.937f, 12.872f)
+                    lineTo(15.864f, 12.872f)
+                    lineTo(15.574000000000002f, 12.377f)
+                    arcTo(2.92f, 2.92f, 330.22631718407337f, isMoreThanHalf = false, isPositiveArc = false, 13.040000000000003f, 10.907f)
+                    curveTo(11.592000000000002f, 10.907f, 10.344000000000003f, 11.993f, 10.136000000000003f, 13.435f)
+                    lineTo(10.013000000000003f, 14.292f)
+                    lineTo(8.216f, 14.292f)
+                    arcTo(2.22f, 2.22f, 269.89685714348406f, isMoreThanHalf = false, isPositiveArc = false, 6.0f, 16.508f)
+                    lineTo(6.0f, 16.784f)
+                    curveTo(6.0f, 18.006f, 6.994f, 19.0f, 8.216f, 19.0f)
+                    moveTo(10.0f, 8.453f)
+                    arcTo(2.503f, 2.503f, 269.93136856010074f, isMoreThanHalf = false, isPositiveArc = false, 7.5f, 10.953f)
+                    curveTo(7.5f, 11.443999999999999f, 7.645f, 11.915f, 7.914f, 12.323f)
+                    quadTo(7.976999999999999f, 12.316f, 8.036999999999999f, 12.308f)
+                    quadTo(8.123999999999999f, 12.294f, 8.216f, 12.292f)
+                    lineTo(8.36f, 12.292f)
+                    arcTo(4.98f, 4.98f, 198.7570581331561f, isMoreThanHalf = false, isPositiveArc = true, 11.683f, 9.112f)
+                    arcTo(2.5f, 2.5f, 312.6088251641569f, isMoreThanHalf = false, isPositiveArc = false, 10.0f, 8.452f)
+                    moveTo(14.15f, 9.036f)
+                    arcTo(4.98f, 4.98f, 283.3240828495892f, isMoreThanHalf = false, isPositiveArc = true, 16.969f, 10.870999999999999f)
+                    arcTo(5.07f, 5.07f, 270.4520043571621f, isMoreThanHalf = false, isPositiveArc = true, 21.999000000000002f, 15.934999999999999f)
+                    arcTo(5.07f, 5.07f, 0.05641449805155052f, isMoreThanHalf = false, isPositiveArc = true, 16.938f, 21.0f)
+                    lineTo(8.216f, 21.0f)
+                    arcTo(4.22f, 4.22f, 90.05428308946433f, isMoreThanHalf = false, isPositiveArc = true, 4.0f, 16.784f)
+                    lineTo(4.0f, 16.508f)
+                    arcTo(4.21f, 4.21f, 180.13098704492586f, isMoreThanHalf = false, isPositiveArc = true, 5.97f, 12.953f)
+                    arcTo(4.5f, 4.5f, 153.57986209598093f, isMoreThanHalf = false, isPositiveArc = true, 5.5f, 10.953f)
+                    curveTo(5.5f, 8.472999999999999f, 7.519f, 6.452999999999999f, 10.0f, 6.452999999999999f)
+                    curveTo(11.47f, 6.452999999999999f, 12.85f, 7.1739999999999995f, 13.693f, 8.381f)
+                    close()
+                }
+            }.build().also {
+                _weatherCloudy = it
             }
-        }.build().also {
-            io.channel.bezier.icon._weatherCloudy = it
-        }
     }
+
 
 private var _weatherCloudy: ImageVector? = null
 
@@ -104,7 +101,7 @@ private var _weatherCloudy: ImageVector? = null
 private fun WeatherCloudyIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.WeatherCloudy,
+            imageVector = BezierIcons.WeatherCloudy.imageVector,
             contentDescription = null,
     )
 }

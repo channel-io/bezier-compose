@@ -16,70 +16,65 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.HashtagLarge: ImageVector
-    get() {
-        return io.channel.bezier.icon._hashtagLarge ?: ImageVector.Builder(
-                name = "HashtagLarge",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(10.1843f, 3.0171f)
-                curveTo(10.7271f, 3.1189f, 11.0847f, 3.6415f, 10.9829f, 4.1843f)
-                lineTo(10.4549f, 7.0f)
-                lineTo(15.4201f, 7.0f)
-                lineTo(16.0171f, 3.8157f)
-                curveTo(16.1189f, 3.2729f, 16.6415f, 2.9153f, 17.1843f, 3.0171f)
-                curveTo(17.7271f, 3.1189f, 18.0847f, 3.6415f, 17.9829f, 4.1843f)
-                lineTo(17.4549f, 7.0f)
-                lineTo(20.0f, 7.0f)
-                curveTo(20.5523f, 7.0f, 21.0f, 7.4477f, 21.0f, 8.0f)
-                curveTo(21.0f, 8.5523f, 20.5523f, 9.0f, 20.0f, 9.0f)
-                lineTo(17.0799f, 9.0f)
-                lineTo(15.9549f, 15.0f)
-                lineTo(19.0f, 15.0f)
-                curveTo(19.5523f, 15.0f, 20.0f, 15.4477f, 20.0f, 16.0f)
-                curveTo(20.0f, 16.5523f, 19.5523f, 17.0f, 19.0f, 17.0f)
-                lineTo(15.5799f, 17.0f)
-                lineTo(14.9829f, 20.1843f)
-                curveTo(14.8811f, 20.7271f, 14.3585f, 21.0846f, 13.8157f, 20.9829f)
-                curveTo(13.2729f, 20.8811f, 12.9153f, 20.3585f, 13.0171f, 19.8157f)
-                lineTo(13.5451f, 17.0f)
-                lineTo(8.5799f, 17.0f)
-                lineTo(7.9829f, 20.1843f)
-                curveTo(7.8811f, 20.7271f, 7.3585f, 21.0846f, 6.8157f, 20.9829f)
-                curveTo(6.2729f, 20.8811f, 5.9153f, 20.3585f, 6.0171f, 19.8157f)
-                lineTo(6.5451f, 17.0f)
-                lineTo(4.0f, 17.0f)
-                curveTo(3.4477f, 17.0f, 3.0f, 16.5523f, 3.0f, 16.0f)
-                curveTo(3.0f, 15.4477f, 3.4477f, 15.0f, 4.0f, 15.0f)
-                lineTo(6.9201f, 15.0f)
-                lineTo(8.0451f, 9.0f)
-                lineTo(5.0f, 9.0f)
-                curveTo(4.4477f, 9.0f, 4.0f, 8.5523f, 4.0f, 8.0f)
-                curveTo(4.0f, 7.4477f, 4.4477f, 7.0f, 5.0f, 7.0f)
-                lineTo(8.4201f, 7.0f)
-                lineTo(9.0171f, 3.8157f)
-                curveTo(9.1189f, 3.2729f, 9.6415f, 2.9153f, 10.1843f, 3.0171f)
-                close()
-                moveTo(13.9201f, 15.0f)
-                lineTo(15.0451f, 9.0f)
-                lineTo(10.0799f, 9.0f)
-                lineTo(8.9549f, 15.0f)
-                lineTo(13.9201f, 15.0f)
-                close()
+val BezierIcons.HashtagLarge: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _hashtagLarge ?: ImageVector.Builder(
+                    name = "HashtagLarge",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(10.184f, 3.017f)
+                    arcTo(1.0f, 1.0f, 280.59790434879926f, isMoreThanHalf = false, isPositiveArc = true, 10.982999999999999f, 4.184f)
+                    lineTo(10.455f, 7.0f)
+                    lineTo(15.42f, 7.0f)
+                    lineTo(16.017f, 3.816f)
+                    arcTo(1.0f, 1.0f, 190.6020591464783f, isMoreThanHalf = false, isPositiveArc = true, 17.983f, 4.184f)
+                    lineTo(17.455f, 7.0f)
+                    lineTo(20.0f, 7.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 20.0f, 9.0f)
+                    lineTo(17.08f, 9.0f)
+                    lineTo(15.954999999999998f, 15.0f)
+                    lineTo(19.0f, 15.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 19.0f, 17.0f)
+                    lineTo(15.58f, 17.0f)
+                    lineTo(14.983f, 20.184f)
+                    arcTo(1.0f, 1.0f, 10.602059338331731f, isMoreThanHalf = false, isPositiveArc = true, 13.017000000000001f, 19.816000000000003f)
+                    lineTo(13.545f, 17.0f)
+                    lineTo(8.58f, 17.0f)
+                    lineTo(7.9830000000000005f, 20.184f)
+                    arcTo(1.0f, 1.0f, 10.602059338331731f, isMoreThanHalf = false, isPositiveArc = true, 6.017f, 19.816000000000003f)
+                    lineTo(6.545f, 17.0f)
+                    lineTo(4.0f, 17.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 4.0f, 15.0f)
+                    lineTo(6.92f, 15.0f)
+                    lineTo(8.045f, 9.0f)
+                    lineTo(5.0f, 9.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 5.0f, 7.0f)
+                    lineTo(8.42f, 7.0f)
+                    lineTo(9.017f, 3.816f)
+                    arcTo(1.0f, 1.0f, 190.59790434879923f, isMoreThanHalf = false, isPositiveArc = true, 10.184f, 3.017f)
+                    moveTo(13.92f, 15.0f)
+                    lineTo(15.045f, 9.0f)
+                    lineTo(10.08f, 9.0f)
+                    lineTo(8.955f, 15.0f)
+                    close()
+                }
+            }.build().also {
+                _hashtagLarge = it
             }
-        }.build().also {
-            io.channel.bezier.icon._hashtagLarge = it
-        }
     }
+
 
 private var _hashtagLarge: ImageVector? = null
 
@@ -88,7 +83,7 @@ private var _hashtagLarge: ImageVector? = null
 private fun HashtagLargeIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.HashtagLarge,
+            imageVector = BezierIcons.HashtagLarge.imageVector,
             contentDescription = null,
     )
 }

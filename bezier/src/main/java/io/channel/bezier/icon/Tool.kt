@@ -9,67 +9,68 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Tool: ImageVector
-    get() {
-        return io.channel.bezier.icon._tool ?: ImageVector.Builder(
-                name = "Tool",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(6.6642f, 6.6641f)
-                curveTo(6.2747f, 7.0536f, 5.6437f, 7.0546f, 5.253f, 6.6671f)
-                lineTo(3.8358f, 5.2499f)
-                curveTo(3.0548f, 6.031f, 3.0548f, 7.2973f, 3.8358f, 8.0783f)
-                lineTo(4.7786f, 9.0211f)
-                curveTo(5.6437f, 9.8862f, 6.9552f, 10.0327f, 7.9714f, 9.4606f)
-                lineTo(10.3563f, 12.1436f)
-                lineTo(8.4215f, 14.0784f)
-                lineTo(9.8357f, 15.4927f)
-                lineTo(11.6873f, 13.641f)
-                lineTo(17.3563f, 20.0185f)
-                curveTo(18.0771f, 20.8295f, 19.332f, 20.8664f, 20.0992f, 20.0991f)
-                curveTo(20.8664f, 19.3319f, 20.8296f, 18.0771f, 20.0186f, 17.3562f)
-                lineTo(13.6411f, 11.6873f)
-                lineTo(17.1996f, 8.1287f)
-                lineTo(17.9067f, 8.8358f)
-                lineTo(20.7352f, 4.5932f)
-                lineTo(19.321f, 3.179f)
-                lineTo(15.0783f, 6.0074f)
-                lineTo(15.7854f, 6.7145f)
-                lineTo(12.1437f, 10.3562f)
-                lineTo(9.4607f, 7.9714f)
-                curveTo(10.0328f, 6.9551f, 9.8863f, 5.6436f, 9.0212f, 4.7785f)
-                lineTo(8.0785f, 3.8357f)
-                curveTo(7.2974f, 3.0546f, 6.0311f, 3.0547f, 5.25f, 3.8357f)
-                lineTo(7.607f, 6.1927f)
-                lineTo(6.6675f, 5.2532f)
-                curveTo(7.0547f, 5.644f, 7.0536f, 6.2747f, 6.6642f, 6.6641f)
-                close()
-                moveTo(10.5428f, 16.1998f)
-                lineTo(6.3001f, 20.4424f)
-                curveTo(5.5191f, 21.2235f, 4.2528f, 21.2235f, 3.4717f, 20.4424f)
-                curveTo(2.6907f, 19.6614f, 2.6907f, 18.395f, 3.4717f, 17.614f)
-                lineTo(7.7144f, 13.3713f)
-                lineTo(10.5428f, 16.1998f)
-                close()
+val BezierIcons.Tool: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _tool ?: ImageVector.Builder(
+                    name = "Tool",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(6.664f, 6.664f)
+                    arcTo(1.0f, 1.0f, 45.008099291896166f, isMoreThanHalf = false, isPositiveArc = true, 5.253f, 6.667f)
+                    lineTo(3.836f, 5.25f)
+                    arcTo(2.0f, 2.0f, 224.99134833716198f, isMoreThanHalf = false, isPositiveArc = false, 3.836f, 8.078f)
+                    lineTo(4.779f, 9.020999999999999f)
+                    arcTo(2.67f, 2.67f, 134.9626135777236f, isMoreThanHalf = false, isPositiveArc = false, 7.971f, 9.460999999999999f)
+                    lineTo(10.356f, 12.143999999999998f)
+                    lineTo(8.421f, 14.077999999999998f)
+                    lineTo(9.835999999999999f, 15.492999999999999f)
+                    lineTo(11.686999999999998f, 13.640999999999998f)
+                    lineTo(17.357f, 20.017999999999997f)
+                    arcTo(1.886f, 1.886f, 138.5806718340205f, isMoreThanHalf = true, isPositiveArc = false, 20.019f, 17.355999999999998f)
+                    lineTo(13.640999999999998f, 11.686999999999998f)
+                    lineTo(17.2f, 8.13f)
+                    lineTo(17.907f, 8.837000000000002f)
+                    lineTo(20.735f, 4.594000000000001f)
+                    lineTo(19.320999999999998f, 3.1800000000000015f)
+                    lineTo(15.077999999999998f, 6.008000000000001f)
+                    lineTo(15.784999999999998f, 6.715000000000001f)
+                    lineTo(12.143999999999998f, 10.357000000000001f)
+                    lineTo(9.46f, 7.971f)
+                    arcTo(2.67f, 2.67f, 29.26570553527607f, isMoreThanHalf = false, isPositiveArc = false, 9.020000000000001f, 4.779f)
+                    lineTo(8.077000000000002f, 3.836f)
+                    arcTo(2.0f, 2.0f, 314.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 5.249000000000002f, 3.836f)
+                    lineTo(7.6060000000000025f, 6.193f)
+                    lineTo(6.666000000000002f, 5.253f)
+                    arcTo(1.0f, 1.0f, 315.2517379588461f, isMoreThanHalf = false, isPositiveArc = true, 6.663000000000002f, 6.664f)
+                    moveTo(10.543f, 16.2f)
+                    lineTo(6.3f, 20.442f)
+                    arcTo(2.0f, 2.0f, 44.00425538642053f, isMoreThanHalf = true, isPositiveArc = true, 3.472f, 17.614f)
+                    lineTo(7.714f, 13.371f)
+                    close()
+                }
+            }.build().also {
+                _tool = it
             }
-        }.build().also {
-            io.channel.bezier.icon._tool = it
-        }
     }
+
 
 private var _tool: ImageVector? = null
 
@@ -78,7 +79,7 @@ private var _tool: ImageVector? = null
 private fun ToolIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Tool,
+            imageVector = BezierIcons.Tool.imageVector,
             contentDescription = null,
     )
 }

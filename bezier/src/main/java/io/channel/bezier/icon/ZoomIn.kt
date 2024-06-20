@@ -16,57 +16,57 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ZoomIn: ImageVector
-    get() {
-        return io.channel.bezier.icon._zoomIn ?: ImageVector.Builder(
-                name = "ZoomIn",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(4.0002f, 10.0001f)
-                curveTo(4.0002f, 13.3091f, 6.6912f, 16.0001f, 10.0002f, 16.0001f)
-                curveTo(13.3092f, 16.0001f, 16.0002f, 13.3091f, 16.0002f, 10.0001f)
-                curveTo(16.0002f, 6.6911f, 13.3092f, 4.0001f, 10.0002f, 4.0001f)
-                curveTo(6.6912f, 4.0001f, 4.0002f, 6.6911f, 4.0002f, 10.0001f)
-                close()
-                moveTo(21.7072f, 20.293f)
-                curveTo(22.0977f, 20.6835f, 22.0977f, 21.3166f, 21.7072f, 21.7071f)
-                curveTo(21.3167f, 22.0976f, 20.6836f, 22.0976f, 20.2931f, 21.7071f)
-                lineTo(14.8972f, 16.3121f)
-                curveTo(13.5422f, 17.3661f, 11.8462f, 18.0001f, 10.0002f, 18.0001f)
-                curveTo(5.5892f, 18.0001f, 2.0002f, 14.4111f, 2.0002f, 10.0001f)
-                curveTo(2.0002f, 5.5891f, 5.5892f, 2.0001f, 10.0002f, 2.0001f)
-                curveTo(14.4112f, 2.0001f, 18.0002f, 5.5891f, 18.0002f, 10.0001f)
-                curveTo(18.0002f, 11.8461f, 17.3662f, 13.5421f, 16.3122f, 14.8971f)
-                lineTo(21.7072f, 20.293f)
-                close()
-                moveTo(9.0002f, 9.0001f)
-                lineTo(9.0002f, 6.0001f)
-                lineTo(11.0002f, 6.0001f)
-                lineTo(11.0002f, 9.0001f)
-                lineTo(14.0002f, 9.0001f)
-                lineTo(14.0002f, 11.0001f)
-                lineTo(11.0002f, 11.0001f)
-                lineTo(11.0002f, 14.0001f)
-                lineTo(9.0002f, 14.0001f)
-                lineTo(9.0002f, 11.0001f)
-                lineTo(6.0002f, 11.0001f)
-                lineTo(6.0002f, 9.0001f)
-                lineTo(9.0002f, 9.0001f)
-                close()
+val BezierIcons.ZoomIn: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _zoomIn ?: ImageVector.Builder(
+                    name = "ZoomIn",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(4.0f, 10.0f)
+                    curveTo(4.0f, 13.31f, 6.691f, 16.0f, 10.0f, 16.0f)
+                    curveTo(13.309000000000001f, 16.0f, 16.0f, 13.31f, 16.0f, 10.0f)
+                    curveTo(16.0f, 6.6899999999999995f, 13.31f, 4.0f, 10.0f, 4.0f)
+                    curveTo(6.6899999999999995f, 4.0f, 4.0f, 6.691f, 4.0f, 10.0f)
+                    moveTo(21.707f, 20.293f)
+                    arcTo(1.0f, 1.0f, 314.0042553864246f, isMoreThanHalf = true, isPositiveArc = true, 20.293f, 21.707f)
+                    lineTo(14.896999999999998f, 16.312f)
+                    arcTo(7.95f, 7.95f, 51.968573651440124f, isMoreThanHalf = false, isPositiveArc = true, 10.0f, 18.0f)
+                    curveTo(5.59f, 18.0f, 2.0f, 14.411f, 2.0f, 10.0f)
+                    curveTo(2.0f, 5.589f, 5.59f, 2.0f, 10.0f, 2.0f)
+                    curveTo(14.41f, 2.0f, 18.0f, 5.59f, 18.0f, 10.0f)
+                    arcTo(7.95f, 7.95f, 0.0068043613930332345f, isMoreThanHalf = false, isPositiveArc = true, 16.312f, 14.897f)
+                    close()
+                    moveTo(9.0f, 9.0f)
+                    lineTo(9.0f, 6.0f)
+                    lineTo(11.0f, 6.0f)
+                    lineTo(11.0f, 9.0f)
+                    lineTo(14.0f, 9.0f)
+                    lineTo(14.0f, 11.0f)
+                    lineTo(11.0f, 11.0f)
+                    lineTo(11.0f, 14.0f)
+                    lineTo(9.0f, 14.0f)
+                    lineTo(9.0f, 11.0f)
+                    lineTo(6.0f, 11.0f)
+                    lineTo(6.0f, 9.0f)
+                    close()
+                }
+            }.build().also {
+                _zoomIn = it
             }
-        }.build().also {
-            io.channel.bezier.icon._zoomIn = it
-        }
     }
+
 
 private var _zoomIn: ImageVector? = null
 
@@ -75,7 +75,7 @@ private var _zoomIn: ImageVector? = null
 private fun ZoomInIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ZoomIn,
+            imageVector = BezierIcons.ZoomIn.imageVector,
             contentDescription = null,
     )
 }

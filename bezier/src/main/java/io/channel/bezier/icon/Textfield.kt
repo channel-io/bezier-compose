@@ -16,60 +16,61 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Textfield: ImageVector
-    get() {
-        return io.channel.bezier.icon._textfield ?: ImageVector.Builder(
-                name = "Textfield",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(6.0f, 8.0f)
-                curveTo(5.4477f, 8.0f, 5.0f, 8.4477f, 5.0f, 9.0f)
-                lineTo(5.0f, 15.0f)
-                curveTo(5.0f, 15.5523f, 5.4477f, 16.0f, 6.0f, 16.0f)
-                curveTo(6.5523f, 16.0f, 7.0f, 15.5523f, 7.0f, 15.0f)
-                lineTo(7.0f, 9.0f)
-                curveTo(7.0f, 8.4477f, 6.5523f, 8.0f, 6.0f, 8.0f)
-                close()
-            }
+val BezierIcons.Textfield: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _textfield ?: ImageVector.Builder(
+                    name = "Textfield",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(6.0f, 8.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 5.0f, 9.0f)
+                    lineTo(5.0f, 15.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 7.0f, 15.0f)
+                    lineTo(7.0f, 9.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 6.0f, 8.0f)
+                }
 
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(4.0f, 5.0f)
-                curveTo(2.3431f, 5.0f, 1.0f, 6.3432f, 1.0f, 8.0f)
-                lineTo(1.0f, 16.0f)
-                curveTo(1.0f, 17.6569f, 2.3431f, 19.0f, 4.0f, 19.0f)
-                lineTo(20.0f, 19.0f)
-                curveTo(21.6569f, 19.0f, 23.0f, 17.6569f, 23.0f, 16.0f)
-                lineTo(23.0f, 8.0f)
-                curveTo(23.0f, 6.3432f, 21.6569f, 5.0f, 20.0f, 5.0f)
-                lineTo(4.0f, 5.0f)
-                close()
-                moveTo(20.0f, 7.0f)
-                lineTo(4.0f, 7.0f)
-                curveTo(3.4477f, 7.0f, 3.0f, 7.4477f, 3.0f, 8.0f)
-                lineTo(3.0f, 16.0f)
-                curveTo(3.0f, 16.5523f, 3.4477f, 17.0f, 4.0f, 17.0f)
-                lineTo(20.0f, 17.0f)
-                curveTo(20.5523f, 17.0f, 21.0f, 16.5523f, 21.0f, 16.0f)
-                lineTo(21.0f, 8.0f)
-                curveTo(21.0f, 7.4477f, 20.5523f, 7.0f, 20.0f, 7.0f)
-                close()
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(4.0f, 5.0f)
+                    arcTo(3.0f, 3.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 1.0f, 8.0f)
+                    lineTo(1.0f, 16.0f)
+                    arcTo(3.0f, 3.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 4.0f, 19.0f)
+                    lineTo(20.0f, 19.0f)
+                    arcTo(3.0f, 3.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 23.0f, 16.0f)
+                    lineTo(23.0f, 8.0f)
+                    arcTo(3.0f, 3.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 20.0f, 5.0f)
+                    close()
+                    moveTo(20.0f, 7.0f)
+                    lineTo(4.0f, 7.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 3.0f, 8.0f)
+                    lineTo(3.0f, 16.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 4.0f, 17.0f)
+                    lineTo(20.0f, 17.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 21.0f, 16.0f)
+                    lineTo(21.0f, 8.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 20.0f, 7.0f)
+                }
+            }.build().also {
+                _textfield = it
             }
-        }.build().also {
-            io.channel.bezier.icon._textfield = it
-        }
     }
+
 
 private var _textfield: ImageVector? = null
 
@@ -78,7 +79,7 @@ private var _textfield: ImageVector? = null
 private fun TextfieldIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Textfield,
+            imageVector = BezierIcons.Textfield.imageVector,
             contentDescription = null,
     )
 }

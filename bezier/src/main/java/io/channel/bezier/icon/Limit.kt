@@ -16,64 +16,55 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Limit: ImageVector
-    get() {
-        return _limit ?: ImageVector.Builder(
-                name = "Limit",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(2.0f, 12.5f)
-                curveTo(2.0f, 6.9771f, 6.4771f, 2.5f, 12.0f, 2.5f)
-                curveTo(17.5228f, 2.5f, 22.0f, 6.9771f, 22.0f, 12.5f)
-                curveTo(22.0f, 15.738f, 20.4599f, 18.6168f, 18.0764f, 20.4427f)
-                curveTo(17.5624f, 20.8364f, 16.9502f, 21.0f, 16.3725f, 21.0f)
-                lineTo(7.6275f, 21.0f)
-                curveTo(7.0498f, 21.0f, 6.4376f, 20.8364f, 5.9236f, 20.4427f)
-                curveTo(3.5401f, 18.6168f, 2.0f, 15.738f, 2.0f, 12.5f)
-                close()
-                moveTo(12.0f, 4.5f)
-                curveTo(7.5817f, 4.5f, 4.0f, 8.0817f, 4.0f, 12.5f)
-                curveTo(4.0f, 15.0894f, 5.2291f, 17.3912f, 7.1398f, 18.855f)
-                curveTo(7.2514f, 18.9405f, 7.4172f, 19.0f, 7.6275f, 19.0f)
-                lineTo(16.3725f, 19.0f)
-                curveTo(16.5828f, 19.0f, 16.7486f, 18.9405f, 16.8602f, 18.855f)
-                curveTo(18.7709f, 17.3912f, 20.0f, 15.0894f, 20.0f, 12.5f)
-                curveTo(20.0f, 8.0817f, 16.4183f, 4.5f, 12.0f, 4.5f)
-                close()
-                moveTo(10.0f, 15.1459f)
-                curveTo(10.0f, 14.4436f, 10.3968f, 13.8016f, 11.0249f, 13.4876f)
-                lineTo(14.6584f, 11.6708f)
-                curveTo(15.0881f, 11.4559f, 15.5441f, 11.9119f, 15.3292f, 12.3417f)
-                lineTo(13.5125f, 15.9751f)
-                curveTo(13.1984f, 16.6032f, 12.5564f, 17.0f, 11.8541f, 17.0f)
-                curveTo(10.8301f, 17.0f, 10.0f, 16.1699f, 10.0f, 15.1459f)
-                close()
-                moveTo(17.6713f, 10.4278f)
-                curveTo(17.3921f, 9.5471f, 16.9032f, 8.719f, 16.2071f, 8.0229f)
-                curveTo(13.8836f, 5.6994f, 10.1164f, 5.6994f, 7.7929f, 8.0229f)
-                curveTo(7.0968f, 8.719f, 6.6079f, 9.5471f, 6.3287f, 10.4278f)
-                curveTo(6.1618f, 10.9543f, 6.4533f, 11.5164f, 6.9797f, 11.6833f)
-                curveTo(7.5062f, 11.8501f, 8.0683f, 11.5587f, 8.2352f, 11.0322f)
-                curveTo(8.4198f, 10.4498f, 8.7429f, 9.9013f, 9.2071f, 9.4371f)
-                curveTo(10.7496f, 7.8946f, 13.2504f, 7.8946f, 14.7929f, 9.4371f)
-                curveTo(15.2571f, 9.9013f, 15.5802f, 10.4498f, 15.7648f, 11.0322f)
-                curveTo(15.9317f, 11.5587f, 16.4938f, 11.8501f, 17.0203f, 11.6833f)
-                curveTo(17.5467f, 11.5164f, 17.8382f, 10.9543f, 17.6713f, 10.4278f)
-                close()
+val BezierIcons.Limit: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _limit ?: ImageVector.Builder(
+                    name = "Limit",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(2.0f, 12.5f)
+                    curveTo(2.0f, 6.977f, 6.477f, 2.5f, 12.0f, 2.5f)
+                    curveTo(17.523f, 2.5f, 22.0f, 6.977f, 22.0f, 12.5f)
+                    arcTo(9.99f, 9.99f, 359.96840381567637f, isMoreThanHalf = false, isPositiveArc = true, 18.076f, 20.442999999999998f)
+                    arcTo(2.8f, 2.8f, 53.22781296999227f, isMoreThanHalf = false, isPositiveArc = true, 16.372f, 20.999999999999996f)
+                    lineTo(7.628f, 20.999999999999996f)
+                    curveTo(7.05f, 20.999999999999996f, 6.438000000000001f, 20.835999999999995f, 5.924f, 20.442999999999998f)
+                    arcTo(9.99f, 9.99f, 127.38782769358598f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 12.5f)
+                    moveTo(12.0f, 4.5f)
+                    arcTo(8.0f, 8.0f, 270.0041451028588f, isMoreThanHalf = false, isPositiveArc = false, 7.14f, 18.855f)
+                    arcTo(0.8f, 0.8f, 125.10115997219165f, isMoreThanHalf = false, isPositiveArc = false, 7.628f, 19.0f)
+                    lineTo(16.372f, 19.0f)
+                    curveTo(16.582f, 19.0f, 16.749f, 18.94f, 16.86f, 18.855f)
+                    arcTo(8.0f, 8.0f, 52.596262869621825f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 4.5f)
+                    moveTo(10.0f, 15.146f)
+                    curveTo(10.0f, 14.444f, 10.397f, 13.802000000000001f, 11.025f, 13.488000000000001f)
+                    lineTo(14.658000000000001f, 11.671000000000001f)
+                    arcTo(0.5f, 0.5f, 243.47409525217537f, isMoreThanHalf = false, isPositiveArc = true, 15.329f, 12.341000000000001f)
+                    lineTo(13.512f, 15.975000000000001f)
+                    arcTo(1.854f, 1.854f, 26.583563647320968f, isMoreThanHalf = false, isPositiveArc = true, 10.0f, 15.145000000000001f)
+                    moveTo(17.671f, 10.427000000000001f)
+                    arcTo(5.95f, 5.95f, 342.4004944817759f, isMoreThanHalf = false, isPositiveArc = false, 6.327999999999999f, 10.427000000000001f)
+                    arcTo(1.0f, 1.0f, 197.5744439031829f, isMoreThanHalf = false, isPositiveArc = false, 8.235f, 11.031f)
+                    arcTo(3.95f, 3.95f, 197.60494704296553f, isMoreThanHalf = false, isPositiveArc = true, 15.765f, 11.031f)
+                    arcTo(1.0f, 1.0f, 161.0286001350215f, isMoreThanHalf = false, isPositiveArc = false, 17.671f, 10.427000000000001f)
+                }
+            }.build().also {
+                _limit = it
             }
-        }.build().also {
-            _limit = it
-        }
     }
+
 
 private var _limit: ImageVector? = null
 
@@ -82,7 +73,7 @@ private var _limit: ImageVector? = null
 private fun LimitIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Limit,
+            imageVector = BezierIcons.Limit.imageVector,
             contentDescription = null,
     )
 }
