@@ -16,69 +16,70 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.PageZip: ImageVector
-    get() {
-        return io.channel.bezier.icon._pageZip ?: ImageVector.Builder(
-                name = "PageZip",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(13.0f, 12.0f)
-                lineTo(13.0f, 14.0f)
-                lineTo(11.0f, 14.0f)
-                lineTo(11.0f, 12.0f)
-                lineTo(13.0f, 12.0f)
-                close()
-                moveTo(13.0f, 18.0f)
-                lineTo(13.0f, 16.0f)
-                lineTo(11.0f, 16.0f)
-                lineTo(11.0f, 18.0f)
-                lineTo(13.0f, 18.0f)
-                close()
-            }
+val BezierIcons.PageZip: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _pageZip ?: ImageVector.Builder(
+                    name = "PageZip",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(13.0f, 12.0f)
+                    lineTo(13.0f, 14.0f)
+                    lineTo(11.0f, 14.0f)
+                    lineTo(11.0f, 12.0f)
+                    close()
+                    moveTo(13.0f, 18.0f)
+                    lineTo(13.0f, 16.0f)
+                    lineTo(11.0f, 16.0f)
+                    lineTo(11.0f, 18.0f)
+                    close()
+                }
 
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(7.0f, 2.0f)
-                curveTo(5.3432f, 2.0f, 4.0f, 3.3431f, 4.0f, 5.0f)
-                lineTo(4.0f, 19.0f)
-                curveTo(4.0f, 20.6569f, 5.3432f, 22.0f, 7.0f, 22.0f)
-                lineTo(17.0f, 22.0f)
-                curveTo(18.6569f, 22.0f, 20.0f, 20.6569f, 20.0f, 19.0f)
-                lineTo(20.0f, 10.0f)
-                curveTo(20.0f, 9.7348f, 19.8946f, 9.4804f, 19.7071f, 9.2929f)
-                lineTo(12.7071f, 2.2929f)
-                curveTo(12.5196f, 2.1054f, 12.2652f, 2.0f, 12.0f, 2.0f)
-                lineTo(7.0f, 2.0f)
-                close()
-                moveTo(6.0f, 5.0f)
-                curveTo(6.0f, 4.4477f, 6.4477f, 4.0f, 7.0f, 4.0f)
-                lineTo(11.0f, 4.0f)
-                lineTo(11.0f, 10.0f)
-                lineTo(13.0f, 10.0f)
-                lineTo(13.0f, 5.4142f)
-                lineTo(18.0f, 10.4142f)
-                lineTo(18.0f, 19.0f)
-                curveTo(18.0f, 19.5523f, 17.5523f, 20.0f, 17.0f, 20.0f)
-                lineTo(7.0f, 20.0f)
-                curveTo(6.4477f, 20.0f, 6.0f, 19.5523f, 6.0f, 19.0f)
-                lineTo(6.0f, 5.0f)
-                close()
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(7.0f, 2.0f)
+                    arcTo(3.0f, 3.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 4.0f, 5.0f)
+                    lineTo(4.0f, 19.0f)
+                    arcTo(3.0f, 3.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 7.0f, 22.0f)
+                    lineTo(17.0f, 22.0f)
+                    arcTo(3.0f, 3.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 20.0f, 19.0f)
+                    lineTo(20.0f, 10.0f)
+                    arcTo(1.0f, 1.0f, 359.98776339475614f, isMoreThanHalf = false, isPositiveArc = false, 19.707f, 9.293f)
+                    lineTo(12.707f, 2.2929999999999993f)
+                    arcTo(1.0f, 1.0f, 315.0086535104836f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 2.0f)
+                    close()
+                    moveTo(6.0f, 5.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 7.0f, 4.0f)
+                    lineTo(11.0f, 4.0f)
+                    lineTo(11.0f, 10.0f)
+                    lineTo(13.0f, 10.0f)
+                    lineTo(13.0f, 5.414f)
+                    lineTo(18.0f, 10.414f)
+                    lineTo(18.0f, 19.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 17.0f, 20.0f)
+                    lineTo(7.0f, 20.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 6.0f, 19.0f)
+                    close()
+                }
+            }.build().also {
+                _pageZip = it
             }
-        }.build().also {
-            io.channel.bezier.icon._pageZip = it
-        }
     }
+
 
 private var _pageZip: ImageVector? = null
 
@@ -87,7 +88,7 @@ private var _pageZip: ImageVector? = null
 private fun PageZipIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.PageZip,
+            imageVector = BezierIcons.PageZip.imageVector,
             contentDescription = null,
     )
 }

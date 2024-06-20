@@ -16,82 +16,80 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Print: ImageVector
-    get() {
-        return _print ?: ImageVector.Builder(
-                name = "Print",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(6.109f, 3.546f)
-                curveTo(6.0f, 3.7599f, 6.0f, 4.0399f, 6.0f, 4.6f)
-                lineTo(6.0f, 7.0f)
-                lineTo(5.4f, 7.0f)
-                curveTo(4.5599f, 7.0f, 4.1399f, 7.0f, 3.819f, 7.1635f)
-                curveTo(3.5368f, 7.3073f, 3.3073f, 7.5368f, 3.1635f, 7.819f)
-                curveTo(3.0f, 8.1399f, 3.0f, 8.5599f, 3.0f, 9.4f)
-                lineTo(3.0f, 14.6f)
-                curveTo(3.0f, 15.4401f, 3.0f, 15.8601f, 3.1635f, 16.181f)
-                curveTo(3.3073f, 16.4632f, 3.5368f, 16.6927f, 3.819f, 16.8365f)
-                curveTo(4.1399f, 17.0f, 4.5599f, 17.0f, 5.4f, 17.0f)
-                lineTo(6.0f, 17.0f)
-                lineTo(6.0f, 19.4f)
-                curveTo(6.0f, 19.9601f, 6.0f, 20.2401f, 6.109f, 20.454f)
-                curveTo(6.2049f, 20.6422f, 6.3579f, 20.7951f, 6.546f, 20.891f)
-                curveTo(6.7599f, 21.0f, 7.0399f, 21.0f, 7.6f, 21.0f)
-                lineTo(16.4f, 21.0f)
-                curveTo(16.9601f, 21.0f, 17.2401f, 21.0f, 17.454f, 20.891f)
-                curveTo(17.6422f, 20.7951f, 17.7951f, 20.6422f, 17.891f, 20.454f)
-                curveTo(18.0f, 20.2401f, 18.0f, 19.9601f, 18.0f, 19.4f)
-                lineTo(18.0f, 17.0f)
-                lineTo(18.6f, 17.0f)
-                curveTo(19.4401f, 17.0f, 19.8601f, 17.0f, 20.181f, 16.8365f)
-                curveTo(20.4632f, 16.6927f, 20.6927f, 16.4632f, 20.8365f, 16.181f)
-                curveTo(21.0f, 15.8601f, 21.0f, 15.4401f, 21.0f, 14.6f)
-                lineTo(21.0f, 9.4f)
-                curveTo(21.0f, 8.5599f, 21.0f, 8.1399f, 20.8365f, 7.819f)
-                curveTo(20.6927f, 7.5368f, 20.4632f, 7.3073f, 20.181f, 7.1635f)
-                curveTo(19.8601f, 7.0f, 19.4401f, 7.0f, 18.6f, 7.0f)
-                lineTo(18.0f, 7.0f)
-                lineTo(18.0f, 4.6f)
-                curveTo(18.0f, 4.0399f, 18.0f, 3.7599f, 17.891f, 3.546f)
-                curveTo(17.7951f, 3.3579f, 17.6422f, 3.2049f, 17.454f, 3.109f)
-                curveTo(17.2401f, 3.0f, 16.9601f, 3.0f, 16.4f, 3.0f)
-                lineTo(7.6f, 3.0f)
-                curveTo(7.0399f, 3.0f, 6.7599f, 3.0f, 6.546f, 3.109f)
-                curveTo(6.3579f, 3.2049f, 6.2049f, 3.3579f, 6.109f, 3.546f)
-                close()
-                moveTo(16.0f, 5.0f)
-                lineTo(8.0f, 5.0f)
-                lineTo(8.0f, 7.0f)
-                lineTo(16.0f, 7.0f)
-                lineTo(16.0f, 5.0f)
-                close()
-                moveTo(16.0f, 14.0f)
-                lineTo(8.0f, 14.0f)
-                lineTo(8.0f, 19.0f)
-                lineTo(16.0f, 19.0f)
-                lineTo(16.0f, 14.0f)
-                close()
-                moveTo(16.0f, 11.0f)
-                curveTo(16.0f, 10.4477f, 16.4477f, 10.0f, 17.0f, 10.0f)
-                curveTo(17.5523f, 10.0f, 18.0f, 10.4477f, 18.0f, 11.0f)
-                curveTo(18.0f, 11.5523f, 17.5523f, 12.0f, 17.0f, 12.0f)
-                curveTo(16.4477f, 12.0f, 16.0f, 11.5523f, 16.0f, 11.0f)
-                close()
+val BezierIcons.Print: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _print ?: ImageVector.Builder(
+                    name = "Print",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(6.109f, 3.546f)
+                    curveTo(6.0f, 3.76f, 6.0f, 4.04f, 6.0f, 4.6f)
+                    lineTo(6.0f, 7.0f)
+                    lineTo(5.4f, 7.0f)
+                    curveTo(4.5600000000000005f, 7.0f, 4.140000000000001f, 7.0f, 3.8190000000000004f, 7.163f)
+                    arcTo(1.5f, 1.5f, 243.0135176186929f, isMoreThanHalf = false, isPositiveArc = false, 3.1630000000000003f, 7.819f)
+                    curveTo(3.0f, 8.139f, 3.0f, 8.559f, 3.0f, 9.4f)
+                    lineTo(3.0f, 14.600000000000001f)
+                    curveTo(3.0f, 15.440000000000001f, 3.0f, 15.860000000000001f, 3.163f, 16.181f)
+                    arcTo(1.5f, 1.5f, 153.01351761869284f, isMoreThanHalf = false, isPositiveArc = false, 3.819f, 16.837f)
+                    curveTo(4.139f, 17.0f, 4.559f, 17.0f, 5.4f, 17.0f)
+                    lineTo(6.0f, 17.0f)
+                    lineTo(6.0f, 19.4f)
+                    curveTo(6.0f, 19.959999999999997f, 6.0f, 20.24f, 6.109f, 20.453999999999997f)
+                    arcTo(1.0f, 1.0f, 152.9993173728321f, isMoreThanHalf = false, isPositiveArc = false, 6.546f, 20.891f)
+                    curveTo(6.76f, 21.0f, 7.04f, 21.0f, 7.6f, 21.0f)
+                    lineTo(16.4f, 21.0f)
+                    curveTo(16.959999999999997f, 21.0f, 17.24f, 21.0f, 17.453999999999997f, 20.891f)
+                    arcTo(1.0f, 1.0f, 62.999317372832074f, isMoreThanHalf = false, isPositiveArc = false, 17.891f, 20.453999999999997f)
+                    curveTo(18.0f, 20.24f, 18.0f, 19.96f, 18.0f, 19.4f)
+                    lineTo(18.0f, 17.0f)
+                    lineTo(18.6f, 17.0f)
+                    curveTo(19.44f, 17.0f, 19.860000000000003f, 17.0f, 20.181f, 16.837f)
+                    arcTo(1.5f, 1.5f, 63.01351761869287f, isMoreThanHalf = false, isPositiveArc = false, 20.837f, 16.181f)
+                    curveTo(21.0f, 15.861f, 21.0f, 15.441f, 21.0f, 14.600000000000001f)
+                    lineTo(21.0f, 9.4f)
+                    curveTo(21.0f, 8.56f, 21.0f, 8.14f, 20.837f, 7.819000000000001f)
+                    arcTo(1.5f, 1.5f, 333.0135176186929f, isMoreThanHalf = false, isPositiveArc = false, 20.181f, 7.163000000000001f)
+                    curveTo(19.861f, 7.0f, 19.441f, 7.0f, 18.6f, 7.0f)
+                    lineTo(18.0f, 7.0f)
+                    lineTo(18.0f, 4.6f)
+                    curveTo(18.0f, 4.039999999999999f, 18.0f, 3.76f, 17.891f, 3.5459999999999994f)
+                    arcTo(1.0f, 1.0f, 332.99931737283197f, isMoreThanHalf = false, isPositiveArc = false, 17.453999999999997f, 3.1089999999999995f)
+                    curveTo(17.24f, 3.0f, 16.96f, 3.0f, 16.4f, 3.0f)
+                    lineTo(7.6f, 3.0f)
+                    curveTo(7.039999999999999f, 3.0f, 6.76f, 3.0f, 6.545999999999999f, 3.109f)
+                    arcTo(1.0f, 1.0f, 242.99931737283205f, isMoreThanHalf = false, isPositiveArc = false, 6.108999999999999f, 3.546f)
+                    moveTo(16.0f, 5.0f)
+                    lineTo(8.0f, 5.0f)
+                    lineTo(8.0f, 7.0f)
+                    lineTo(16.0f, 7.0f)
+                    close()
+                    moveTo(16.0f, 14.0f)
+                    lineTo(8.0f, 14.0f)
+                    lineTo(8.0f, 19.0f)
+                    lineTo(16.0f, 19.0f)
+                    close()
+                    moveTo(16.0f, 11.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 18.0f, 11.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 16.0f, 11.0f)
+                }
+            }.build().also {
+                _print = it
             }
-        }.build().also {
-            _print = it
-        }
     }
+
 
 private var _print: ImageVector? = null
 
@@ -100,7 +98,7 @@ private var _print: ImageVector? = null
 private fun PrintIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Print,
+            imageVector = BezierIcons.Print.imageVector,
             contentDescription = null,
     )
 }

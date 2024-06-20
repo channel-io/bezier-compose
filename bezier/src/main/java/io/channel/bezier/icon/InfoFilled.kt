@@ -16,44 +16,43 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.InfoFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._infoFilled ?: ImageVector.Builder(
-                name = "InfoFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(11.9997f, 9.0001f)
-                curveTo(11.1717f, 9.0001f, 10.4997f, 8.3281f, 10.4997f, 7.5001f)
-                curveTo(10.4997f, 6.6711f, 11.1717f, 6.0001f, 11.9997f, 6.0001f)
-                curveTo(12.8287f, 6.0001f, 13.4997f, 6.6711f, 13.4997f, 7.5001f)
-                curveTo(13.4997f, 8.3281f, 12.8287f, 9.0001f, 11.9997f, 9.0001f)
-                close()
-                moveTo(10.9997f, 18.0001f)
-                lineTo(12.9997f, 18.0001f)
-                lineTo(12.9997f, 10.0001f)
-                lineTo(10.9997f, 10.0001f)
-                lineTo(10.9997f, 18.0001f)
-                close()
-                moveTo(11.9997f, 2.0001f)
-                curveTo(6.4857f, 2.0001f, 1.9997f, 6.4861f, 1.9997f, 12.0001f)
-                curveTo(1.9997f, 17.5141f, 6.4857f, 22.0001f, 11.9997f, 22.0001f)
-                curveTo(17.5147f, 22.0001f, 21.9997f, 17.5141f, 21.9997f, 12.0001f)
-                curveTo(21.9997f, 6.4861f, 17.5147f, 2.0001f, 11.9997f, 2.0001f)
-                close()
+val BezierIcons.InfoFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _infoFilled ?: ImageVector.Builder(
+                    name = "InfoFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(12.0f, 9.0f)
+                    arcTo(1.5f, 1.5f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 12.0f, 6.0f)
+                    arcTo(1.5f, 1.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 9.0f)
+                    moveTo(11.0f, 18.0f)
+                    lineTo(13.0f, 18.0f)
+                    lineTo(13.0f, 10.0f)
+                    lineTo(11.0f, 10.0f)
+                    close()
+                    moveTo(12.0f, 2.0f)
+                    curveTo(6.486f, 2.0f, 2.0f, 6.486f, 2.0f, 12.0f)
+                    curveTo(2.0f, 17.514f, 6.486f, 22.0f, 12.0f, 22.0f)
+                    curveTo(17.514f, 22.0f, 22.0f, 17.514f, 22.0f, 12.0f)
+                    curveTo(22.0f, 6.486000000000001f, 17.515f, 2.0f, 12.0f, 2.0f)
+                }
+            }.build().also {
+                _infoFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._infoFilled = it
-        }
     }
+
 
 private var _infoFilled: ImageVector? = null
 
@@ -62,7 +61,7 @@ private var _infoFilled: ImageVector? = null
 private fun InfoFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.InfoFilled,
+            imageVector = BezierIcons.InfoFilled.imageVector,
             contentDescription = null,
     )
 }

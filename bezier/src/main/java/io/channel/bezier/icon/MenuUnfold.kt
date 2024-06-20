@@ -9,55 +9,54 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.MenuUnfold: ImageVector
-    get() {
-        return _menuUnfold ?: ImageVector.Builder(
-                name = "MenuUnfold",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(3.016f, 5.0001f)
-                curveTo(3.016f, 5.5524f, 3.4637f, 6.0001f, 4.016f, 6.0001f)
-                lineTo(20.016f, 6.0001f)
-                curveTo(20.5683f, 6.0001f, 21.016f, 5.5524f, 21.016f, 5.0001f)
-                curveTo(21.016f, 4.4478f, 20.5683f, 4.0001f, 20.016f, 4.0001f)
-                lineTo(4.016f, 4.0001f)
-                curveTo(3.4637f, 4.0001f, 3.016f, 4.4478f, 3.016f, 5.0001f)
-                close()
-                moveTo(12.0f, 12.0001f)
-                curveTo(12.0f, 12.5524f, 12.4477f, 13.0001f, 13.0f, 13.0001f)
-                lineTo(20.0f, 13.0001f)
-                curveTo(20.5523f, 13.0001f, 21.0f, 12.5524f, 21.0f, 12.0001f)
-                curveTo(21.0f, 11.4478f, 20.5523f, 11.0001f, 20.0f, 11.0001f)
-                lineTo(13.0f, 11.0001f)
-                curveTo(12.4477f, 11.0001f, 12.0f, 11.4478f, 12.0f, 12.0001f)
-                close()
-                moveTo(21.016f, 19.0001f)
-                curveTo(21.016f, 19.5524f, 20.5683f, 20.0001f, 20.016f, 20.0001f)
-                lineTo(13.016f, 20.0001f)
-                curveTo(12.4637f, 20.0001f, 12.016f, 19.5524f, 12.016f, 19.0001f)
-                curveTo(12.016f, 18.4478f, 12.4637f, 18.0001f, 13.016f, 18.0001f)
-                lineTo(20.016f, 18.0001f)
-                curveTo(20.5683f, 18.0001f, 21.016f, 18.4478f, 21.016f, 19.0001f)
-                close()
+val BezierIcons.MenuUnfold: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _menuUnfold ?: ImageVector.Builder(
+                    name = "MenuUnfold",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(3.016f, 5.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 4.016f, 6.0f)
+                    lineTo(20.016f, 6.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 20.016f, 4.0f)
+                    lineTo(4.015999999999998f, 4.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 3.0159999999999982f, 5.0f)
+                    moveTo(12.0f, 12.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 13.0f, 13.0f)
+                    lineTo(20.0f, 13.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 20.0f, 11.0f)
+                    lineTo(13.0f, 11.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 12.0f)
+                    moveTo(21.016f, 19.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 20.016f, 20.0f)
+                    lineTo(13.015999999999998f, 20.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 13.015999999999998f, 18.0f)
+                    lineTo(20.016f, 18.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 21.016f, 19.0f)
+                }
+            }.build().also {
+                _menuUnfold = it
             }
-        }.build().also {
-            _menuUnfold = it
-        }
     }
+
 
 private var _menuUnfold: ImageVector? = null
 
@@ -66,7 +65,7 @@ private var _menuUnfold: ImageVector? = null
 private fun MenuUnfoldIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.MenuUnfold,
+            imageVector = BezierIcons.MenuUnfold.imageVector,
             contentDescription = null,
     )
 }

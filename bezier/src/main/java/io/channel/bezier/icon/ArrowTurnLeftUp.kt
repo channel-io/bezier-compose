@@ -16,45 +16,45 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ArrowTurnLeftUp: ImageVector
-    get() {
-        return _arrowTurnLeftUp ?: ImageVector.Builder(
-                name = "ArrowTurnLeftUp",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(6.7929f, 14.2071f)
-                curveTo(7.1834f, 14.5976f, 7.8166f, 14.5976f, 8.2071f, 14.2071f)
-                curveTo(8.5976f, 13.8166f, 8.5976f, 13.1834f, 8.2071f, 12.7929f)
-                lineTo(5.4142f, 10.0f)
-                lineTo(14.0f, 10.0f)
-                curveTo(16.7614f, 10.0f, 19.0f, 12.2386f, 19.0f, 15.0f)
-                lineTo(19.0f, 19.0f)
-                curveTo(19.0f, 19.5523f, 19.4477f, 20.0f, 20.0f, 20.0f)
-                curveTo(20.5523f, 20.0f, 21.0f, 19.5523f, 21.0f, 19.0f)
-                lineTo(21.0f, 15.0f)
-                curveTo(21.0f, 11.134f, 17.866f, 8.0f, 14.0f, 8.0f)
-                lineTo(5.4142f, 8.0f)
-                lineTo(8.2071f, 5.2071f)
-                curveTo(8.5976f, 4.8166f, 8.5976f, 4.1834f, 8.2071f, 3.7929f)
-                curveTo(7.8166f, 3.4024f, 7.1834f, 3.4024f, 6.7929f, 3.7929f)
-                lineTo(2.2929f, 8.2929f)
-                curveTo(1.9024f, 8.6834f, 1.9024f, 9.3166f, 2.2929f, 9.7071f)
-                lineTo(6.7929f, 14.2071f)
-                close()
+val BezierIcons.ArrowTurnLeftUp: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _arrowTurnLeftUp ?: ImageVector.Builder(
+                    name = "ArrowTurnLeftUp",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(6.793f, 14.207f)
+                    arcTo(1.0f, 1.0f, 134.0042553864214f, isMoreThanHalf = false, isPositiveArc = false, 8.207f, 12.793000000000001f)
+                    lineTo(5.414f, 10.0f)
+                    lineTo(14.0f, 10.0f)
+                    arcTo(5.0f, 5.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 19.0f, 15.0f)
+                    lineTo(19.0f, 19.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 21.0f, 19.0f)
+                    lineTo(21.0f, 15.0f)
+                    arcTo(7.0f, 7.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 14.0f, 8.0f)
+                    lineTo(5.414f, 8.0f)
+                    lineTo(8.207f, 5.207f)
+                    arcTo(1.0f, 1.0f, 44.00425538642027f, isMoreThanHalf = false, isPositiveArc = false, 6.793000000000001f, 3.793f)
+                    lineTo(2.293000000000001f, 8.293f)
+                    arcTo(1.0f, 1.0f, 224.99134833716198f, isMoreThanHalf = false, isPositiveArc = false, 2.293000000000001f, 9.706999999999999f)
+                    close()
+                }
+            }.build().also {
+                _arrowTurnLeftUp = it
             }
-        }.build().also {
-            _arrowTurnLeftUp = it
-        }
     }
+
 
 private var _arrowTurnLeftUp: ImageVector? = null
 
@@ -63,7 +63,7 @@ private var _arrowTurnLeftUp: ImageVector? = null
 private fun ArrowTurnLeftUpIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ArrowTurnLeftUp,
+            imageVector = BezierIcons.ArrowTurnLeftUp.imageVector,
             contentDescription = null,
     )
 }

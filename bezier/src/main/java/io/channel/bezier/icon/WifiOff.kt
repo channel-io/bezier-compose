@@ -9,77 +9,77 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.WifiOff: ImageVector
-    get() {
-        return io.channel.bezier.icon._wifiOff ?: ImageVector.Builder(
-                name = "WifiOff",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(3.8142f, 1.8072f)
-                curveTo(3.4237f, 2.1977f, 3.4237f, 2.8309f, 3.8142f, 3.2214f)
-                lineTo(19.7848f, 19.192f)
-                curveTo(20.1753f, 19.5825f, 20.8085f, 19.5825f, 21.199f, 19.192f)
-                curveTo(21.5895f, 18.8014f, 21.5895f, 18.1683f, 21.199f, 17.7777f)
-                lineTo(17.5563f, 14.135f)
-                lineTo(18.4993f, 13.1397f)
-                curveTo(18.7082f, 12.9192f, 18.6997f, 12.5698f, 18.4682f, 12.3733f)
-                curveTo(17.0945f, 11.2071f, 15.4016f, 10.4054f, 13.539f, 10.1177f)
-                lineTo(11.4344f, 8.0131f)
-                curveTo(11.6218f, 8.0044f, 11.8104f, 8.0f, 12.0f, 8.0f)
-                curveTo(15.0173f, 8.0f, 17.7744f, 9.1136f, 19.883f, 10.9522f)
-                curveTo(20.0911f, 11.1337f, 20.407f, 11.126f, 20.5969f, 10.9255f)
-                lineTo(21.938f, 9.5099f)
-                curveTo(22.1469f, 9.2894f, 22.1382f, 8.9405f, 21.9103f, 8.7398f)
-                curveTo(19.2675f, 6.412f, 15.7986f, 5.0f, 12.0f, 5.0f)
-                curveTo(10.8911f, 5.0f, 9.8103f, 5.1203f, 8.7699f, 5.3486f)
-                lineTo(5.2284f, 1.8072f)
-                curveTo(4.8379f, 1.4167f, 4.2048f, 1.4167f, 3.8142f, 1.8072f)
-                close()
-                moveTo(2.0898f, 8.7398f)
-                curveTo(3.1414f, 7.8135f, 4.3239f, 7.0322f, 5.6059f, 6.4272f)
-                lineTo(7.8981f, 8.7194f)
-                curveTo(6.4976f, 9.2287f, 5.2188f, 9.9915f, 4.1171f, 10.9522f)
-                curveTo(3.9089f, 11.1337f, 3.5931f, 11.126f, 3.4031f, 10.9255f)
-                lineTo(2.062f, 9.5099f)
-                curveTo(1.8531f, 9.2894f, 1.8619f, 8.9405f, 2.0898f, 8.7398f)
-                close()
-                moveTo(5.5318f, 12.3733f)
-                curveTo(6.664f, 11.4121f, 8.013f, 10.6986f, 9.4951f, 10.3163f)
-                lineTo(12.181f, 13.0023f)
-                curveTo(12.1209f, 13.0008f, 12.0605f, 13.0f, 12.0f, 13.0f)
-                curveTo(10.3148f, 13.0f, 8.7688f, 13.5955f, 7.5607f, 14.5875f)
-                curveTo(7.3472f, 14.7628f, 7.0318f, 14.7558f, 6.8419f, 14.5553f)
-                lineTo(5.5007f, 13.1397f)
-                curveTo(5.2919f, 12.9192f, 5.3003f, 12.5698f, 5.5318f, 12.3733f)
-                close()
-                moveTo(8.9395f, 16.7694f)
-                curveTo(8.7306f, 16.5489f, 8.7383f, 16.1981f, 8.9803f, 16.0145f)
-                curveTo(9.8193f, 15.3778f, 10.8655f, 15.0f, 12.0f, 15.0f)
-                curveTo(13.1345f, 15.0f, 14.1807f, 15.3778f, 15.0197f, 16.0145f)
-                curveTo(15.2617f, 16.1981f, 15.2694f, 16.5489f, 15.0605f, 16.7694f)
-                lineTo(12.363f, 19.6169f)
-                curveTo(12.1658f, 19.825f, 11.8342f, 19.825f, 11.637f, 19.6169f)
-                lineTo(8.9395f, 16.7694f)
-                close()
+val BezierIcons.WifiOff: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _wifiOff ?: ImageVector.Builder(
+                    name = "WifiOff",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(3.814f, 1.807f)
+                    arcTo(1.0f, 1.0f, 224.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 3.814f, 3.221f)
+                    lineTo(19.784f, 19.192f)
+                    arcTo(1.0f, 1.0f, 135.02025216075623f, isMoreThanHalf = false, isPositiveArc = false, 21.198999999999998f, 17.778f)
+                    lineTo(17.555999999999997f, 14.134999999999998f)
+                    lineTo(18.499f, 13.139999999999999f)
+                    curveTo(18.709f, 12.919999999999998f, 18.698999999999998f, 12.569999999999999f, 18.468999999999998f, 12.373f)
+                    arcTo(9.96f, 9.96f, 310.3718325678712f, isMoreThanHalf = false, isPositiveArc = false, 13.538999999999998f, 10.117999999999999f)
+                    lineTo(11.433999999999997f, 8.012999999999998f)
+                    quadTo(11.716f, 8.0f, 12.0f, 8.0f)
+                    curveTo(15.017f, 8.0f, 17.774f, 9.114f, 19.883f, 10.952f)
+                    arcTo(0.517f, 0.517f, 131.54495568990436f, isMoreThanHalf = false, isPositiveArc = false, 20.596999999999998f, 10.925f)
+                    lineTo(21.938f, 9.510000000000002f)
+                    curveTo(22.147f, 9.290000000000001f, 22.137999999999998f, 8.940000000000001f, 21.91f, 8.740000000000002f)
+                    arcTo(14.94f, 14.94f, 311.4387017159682f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 5.0f)
+                    curveTo(10.891f, 5.0f, 9.81f, 5.12f, 8.77f, 5.349f)
+                    lineTo(5.228f, 1.807f)
+                    arcTo(1.0f, 1.0f, 314.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 3.814f, 1.807f)
+                    moveTo(2.09f, 8.74f)
+                    arcTo(15.0f, 15.0f, 228.5966740908328f, isMoreThanHalf = false, isPositiveArc = true, 5.606f, 6.427f)
+                    lineTo(7.898f, 8.72f)
+                    curveTo(6.497999999999999f, 9.23f, 5.218f, 9.992f, 4.118f, 10.953000000000001f)
+                    arcTo(0.517f, 0.517f, 48.37536552562175f, isMoreThanHalf = false, isPositiveArc = true, 3.4030000000000005f, 10.926000000000002f)
+                    lineTo(2.062f, 9.51f)
+                    arcTo(0.535f, 0.535f, 136.01967965912553f, isMoreThanHalf = false, isPositiveArc = true, 2.09f, 8.74f)
+                    moveTo(5.532f, 12.373f)
+                    arcTo(10.0f, 10.0f, 229.66825282683544f, isMoreThanHalf = false, isPositiveArc = true, 9.495000000000001f, 10.315999999999999f)
+                    lineTo(12.181000000000001f, 13.001999999999999f)
+                    lineTo(12.0f, 13.0f)
+                    arcTo(6.97f, 6.97f, 270.09132369858435f, isMoreThanHalf = false, isPositiveArc = false, 7.56f, 14.588000000000001f)
+                    arcTo(0.53f, 0.53f, 49.93823380866352f, isMoreThanHalf = false, isPositiveArc = true, 6.842f, 14.555000000000001f)
+                    lineTo(5.5f, 13.14f)
+                    arcTo(0.527f, 0.527f, 135.49913657319783f, isMoreThanHalf = false, isPositiveArc = true, 5.53f, 12.373000000000001f)
+                    moveTo(8.94f, 16.77f)
+                    curveTo(8.729999999999999f, 16.549f, 8.738f, 16.198f, 8.979999999999999f, 16.015f)
+                    arcTo(4.98f, 4.98f, 232.76721187856305f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 15.0f)
+                    curveTo(13.134f, 15.0f, 14.18f, 15.378f, 15.02f, 16.015f)
+                    curveTo(15.262f, 16.198f, 15.27f, 16.549f, 15.059999999999999f, 16.769000000000002f)
+                    lineTo(12.363f, 19.617f)
+                    arcTo(0.5f, 0.5f, 43.447900269695445f, isMoreThanHalf = false, isPositiveArc = true, 11.637f, 19.617f)
+                    close()
+                }
+            }.build().also {
+                _wifiOff = it
             }
-        }.build().also {
-            io.channel.bezier.icon._wifiOff = it
-        }
     }
+
 
 private var _wifiOff: ImageVector? = null
 
@@ -88,7 +88,7 @@ private var _wifiOff: ImageVector? = null
 private fun WifiOffIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.WifiOff,
+            imageVector = BezierIcons.WifiOff.imageVector,
             contentDescription = null,
     )
 }

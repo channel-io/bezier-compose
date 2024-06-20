@@ -16,65 +16,59 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Snooze: ImageVector
-    get() {
-        return _snooze ?: ImageVector.Builder(
-                name = "Snooze",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(6.3431f, 0.7071f)
-                curveTo(6.7337f, 1.0976f, 6.7337f, 1.7308f, 6.3431f, 2.1213f)
-                lineTo(3.5147f, 4.9497f)
-                curveTo(3.1242f, 5.3403f, 2.491f, 5.3403f, 2.1005f, 4.9497f)
-                curveTo(1.71f, 4.5592f, 1.71f, 3.9261f, 2.1005f, 3.5355f)
-                lineTo(4.9289f, 0.7071f)
-                curveTo(5.3194f, 0.3166f, 5.9526f, 0.3166f, 6.3431f, 0.7071f)
-                close()
-                moveTo(17.6569f, 0.7071f)
-                curveTo(18.0474f, 0.3166f, 18.6805f, 0.3166f, 19.0711f, 0.7071f)
-                lineTo(21.8995f, 3.5356f)
-                curveTo(22.29f, 3.9261f, 22.29f, 4.5592f, 21.8995f, 4.9498f)
-                curveTo(21.509f, 5.3403f, 20.8758f, 5.3403f, 20.4853f, 4.9498f)
-                lineTo(17.6569f, 2.1213f)
-                curveTo(17.2663f, 1.7308f, 17.2663f, 1.0976f, 17.6569f, 0.7071f)
-                close()
-                moveTo(4.0f, 12.0208f)
-                curveTo(4.0f, 16.4391f, 7.5817f, 20.0208f, 12.0f, 20.0208f)
-                curveTo(16.4183f, 20.0208f, 20.0f, 16.4391f, 20.0f, 12.0208f)
-                curveTo(20.0f, 7.6026f, 16.4183f, 4.0208f, 12.0f, 4.0208f)
-                curveTo(7.5817f, 4.0208f, 4.0f, 7.6026f, 4.0f, 12.0208f)
-                close()
-                moveTo(12.0f, 2.0208f)
-                curveTo(6.4771f, 2.0208f, 2.0f, 6.498f, 2.0f, 12.0208f)
-                curveTo(2.0f, 17.5437f, 6.4771f, 22.0208f, 12.0f, 22.0208f)
-                curveTo(17.5228f, 22.0208f, 22.0f, 17.5437f, 22.0f, 12.0208f)
-                curveTo(22.0f, 6.498f, 17.5228f, 2.0208f, 12.0f, 2.0208f)
-                close()
-                moveTo(12.0f, 6.0208f)
-                curveTo(12.5523f, 6.0208f, 13.0f, 6.4685f, 13.0f, 7.0208f)
-                lineTo(13.0f, 11.3364f)
-                lineTo(15.6397f, 12.688f)
-                curveTo(16.1312f, 12.9397f, 16.3257f, 13.5422f, 16.074f, 14.0338f)
-                curveTo(15.8223f, 14.5254f, 15.2197f, 14.7199f, 14.7281f, 14.4682f)
-                lineTo(11.5442f, 12.8379f)
-                curveTo(11.2102f, 12.6669f, 11.0f, 12.3232f, 11.0f, 11.9478f)
-                lineTo(11.0f, 7.0208f)
-                curveTo(11.0f, 6.4685f, 11.4477f, 6.0208f, 12.0f, 6.0208f)
-                close()
+val BezierIcons.Snooze: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _snooze ?: ImageVector.Builder(
+                    name = "Snooze",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(6.343f, 0.707f)
+                    arcTo(1.0f, 1.0f, 315.00865166283796f, isMoreThanHalf = false, isPositiveArc = true, 6.343f, 2.121f)
+                    lineTo(3.515f, 4.95f)
+                    arcTo(1.0f, 1.0f, 44.97974698581593f, isMoreThanHalf = false, isPositiveArc = true, 2.1f, 3.536f)
+                    lineTo(4.93f, 0.707f)
+                    arcTo(1.0f, 1.0f, 225.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 6.343999999999999f, 0.707f)
+                    moveTo(17.658f, 0.707f)
+                    arcTo(1.0f, 1.0f, 225.0086516628379f, isMoreThanHalf = false, isPositiveArc = true, 19.072000000000003f, 0.707f)
+                    lineTo(21.9f, 3.536f)
+                    arcTo(1.0f, 1.0f, 315.99574461357713f, isMoreThanHalf = false, isPositiveArc = true, 20.485999999999997f, 4.95f)
+                    lineTo(17.657f, 2.12f)
+                    arcTo(1.0f, 1.0f, 135.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 17.657f, 0.7060000000000002f)
+                    moveTo(4.0f, 12.021f)
+                    arcTo(8.0f, 8.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 20.0f, 12.021f)
+                    arcTo(8.0f, 8.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 4.0f, 12.021f)
+                    moveTo(12.0f, 2.021000000000001f)
+                    curveTo(6.477f, 2.021000000000001f, 2.0f, 6.498000000000001f, 2.0f, 12.021f)
+                    curveTo(2.0f, 17.544f, 6.477f, 22.021f, 12.0f, 22.021f)
+                    curveTo(17.523f, 22.021f, 22.0f, 17.544f, 22.0f, 12.021f)
+                    curveTo(22.0f, 6.498000000000001f, 17.523f, 2.021000000000001f, 12.0f, 2.021000000000001f)
+                    moveTo(12.0f, 6.021000000000001f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 7.021000000000001f)
+                    lineTo(13.0f, 11.336000000000002f)
+                    lineTo(15.64f, 12.688000000000002f)
+                    arcTo(1.0f, 1.0f, 297.1287666630611f, isMoreThanHalf = false, isPositiveArc = true, 14.728f, 14.468000000000002f)
+                    lineTo(11.544f, 12.838000000000001f)
+                    arcTo(1.0f, 1.0f, 117.12929445141671f, isMoreThanHalf = false, isPositiveArc = true, 11.0f, 11.948f)
+                    lineTo(11.0f, 7.02f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 6.02f)
+                }
+            }.build().also {
+                _snooze = it
             }
-        }.build().also {
-            _snooze = it
-        }
     }
+
 
 private var _snooze: ImageVector? = null
 
@@ -83,7 +77,7 @@ private var _snooze: ImageVector? = null
 private fun SnoozeIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Snooze,
+            imageVector = BezierIcons.Snooze.imageVector,
             contentDescription = null,
     )
 }

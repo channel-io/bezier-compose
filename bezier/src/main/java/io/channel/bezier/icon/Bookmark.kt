@@ -16,47 +16,49 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Bookmark: ImageVector
-    get() {
-        return io.channel.bezier.icon._bookmark ?: ImageVector.Builder(
-                name = "Bookmark",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(6.0f, 4.0f)
-                lineTo(6.0f, 19.355f)
-                lineTo(12.0f, 14.113f)
-                lineTo(18.0f, 19.355f)
-                lineTo(18.0f, 4.0f)
-                lineTo(6.0f, 4.0f)
-                close()
-                moveTo(5.469f, 21.953f)
-                curveTo(5.258f, 21.953f, 5.044f, 21.908f, 4.841f, 21.815f)
-                curveTo(4.3f, 21.568f, 3.964f, 21.046f, 3.964f, 20.451f)
-                curveTo(3.964f, 18.9153f, 3.964f, 8.4497f, 3.964f, 3.9977f)
-                curveTo(3.964f, 2.8932f, 4.8594f, 2.0f, 5.964f, 2.0f)
-                lineTo(18.0045f, 2.0f)
-                curveTo(19.1073f, 2.0f, 20.002f, 2.8917f, 20.0045f, 3.9945f)
-                curveTo(20.0141f, 8.3442f, 20.036f, 18.4541f, 20.036f, 20.45f)
-                curveTo(20.036f, 21.045f, 19.699f, 21.568f, 19.158f, 21.815f)
-                curveTo(18.617f, 22.062f, 18.002f, 21.973f, 17.552f, 21.584f)
-                lineTo(12.0f, 16.762f)
-                lineTo(6.448f, 21.583f)
-                curveTo(6.167f, 21.827f, 5.821f, 21.953f, 5.469f, 21.953f)
-                close()
+val BezierIcons.Bookmark: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _bookmark ?: ImageVector.Builder(
+                    name = "Bookmark",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(6.0f, 5.0f)
+                    lineTo(6.0f, 20.355f)
+                    lineTo(12.0f, 15.113f)
+                    lineTo(18.0f, 20.355f)
+                    lineTo(18.0f, 5.0f)
+                    close()
+                    moveTo(5.469f, 22.953f)
+                    curveTo(5.258f, 22.953f, 5.0440000000000005f, 22.907999999999998f, 4.841f, 22.814999999999998f)
+                    arcTo(1.48f, 1.48f, 114.04144793346718f, isMoreThanHalf = false, isPositiveArc = true, 3.9640000000000004f, 21.450999999999997f)
+                    lineTo(3.9640000000000004f, 4.998f)
+                    curveTo(3.9640000000000004f, 3.8930000000000002f, 4.859f, 3.0f, 5.964f, 3.0f)
+                    lineTo(18.003999999999998f, 3.0f)
+                    curveTo(19.107f, 3.0f, 20.002f, 3.892f, 20.003999999999998f, 4.995f)
+                    curveTo(20.014f, 9.344999999999999f, 20.035999999999998f, 19.455000000000002f, 20.035999999999998f, 21.45f)
+                    curveTo(20.035999999999998f, 22.044999999999998f, 19.698999999999998f, 22.567999999999998f, 19.157999999999998f, 22.814999999999998f)
+                    arcTo(1.49f, 1.49f, 65.19641440250575f, isMoreThanHalf = false, isPositiveArc = true, 17.551999999999996f, 22.583999999999996f)
+                    lineTo(12.0f, 17.762f)
+                    lineTo(6.448f, 22.583f)
+                    curveTo(6.167000000000001f, 22.826999999999998f, 5.821000000000001f, 22.953f, 5.469f, 22.953f)
+                }
+            }.build().also {
+                _bookmark = it
             }
-        }.build().also {
-            io.channel.bezier.icon._bookmark = it
-        }
     }
+
 
 private var _bookmark: ImageVector? = null
 
@@ -65,7 +67,7 @@ private var _bookmark: ImageVector? = null
 private fun BookmarkIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Bookmark,
+            imageVector = BezierIcons.Bookmark.imageVector,
             contentDescription = null,
     )
 }

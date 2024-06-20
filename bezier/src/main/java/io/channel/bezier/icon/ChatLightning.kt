@@ -16,66 +16,67 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ChatLightning: ImageVector
-    get() {
-        return io.channel.bezier.icon._chatLightning ?: ImageVector.Builder(
-                name = "ChatLightning",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(18.8683f, 17.7642f)
-                curveTo(18.6493f, 17.1072f, 18.7183f, 16.3912f, 19.0613f, 15.7472f)
-                curveTo(19.9443f, 14.0942f, 20.2123f, 12.2292f, 19.8343f, 10.3542f)
-                curveTo(19.1883f, 7.1432f, 16.5803f, 4.6332f, 13.3453f, 4.1092f)
-                curveTo(12.8943f, 4.0362f, 12.4433f, 4.0002f, 11.9993f, 4.0002f)
-                curveTo(9.8773f, 4.0002f, 7.8723f, 4.8182f, 6.3503f, 6.3382f)
-                curveTo(4.5083f, 8.1752f, 3.6913f, 10.7232f, 4.1073f, 13.3272f)
-                curveTo(4.6483f, 16.7132f, 7.4103f, 19.4222f, 10.8223f, 19.9152f)
-                curveTo(12.5333f, 20.1622f, 14.2393f, 19.8662f, 15.7483f, 19.0602f)
-                curveTo(16.3923f, 18.7172f, 17.1063f, 18.6482f, 17.7643f, 18.8672f)
-                lineTo(19.4193f, 19.4192f)
-                lineTo(18.8683f, 17.7642f)
-                close()
-                moveTo(20.8253f, 16.6892f)
-                curveTo(20.7783f, 16.7792f, 20.7073f, 16.9552f, 20.7653f, 17.1322f)
-                lineTo(21.6333f, 19.7352f)
-                curveTo(21.8143f, 20.2782f, 21.6753f, 20.8662f, 21.2713f, 21.2702f)
-                curveTo(20.8663f, 21.6752f, 20.2763f, 21.8112f, 19.7363f, 21.6332f)
-                lineTo(17.1313f, 20.7652f)
-                curveTo(16.9573f, 20.7072f, 16.7803f, 20.7772f, 16.6913f, 20.8242f)
-                curveTo(15.2353f, 21.6022f, 13.6363f, 22.0002f, 12.0003f, 22.0002f)
-                curveTo(11.5153f, 22.0002f, 11.0263f, 21.9652f, 10.5363f, 21.8942f)
-                curveTo(6.2663f, 21.2782f, 2.8103f, 17.8842f, 2.1323f, 13.6432f)
-                curveTo(1.6133f, 10.3972f, 2.6363f, 7.2182f, 4.9363f, 4.9222f)
-                curveTo(7.2383f, 2.6252f, 10.4213f, 1.6112f, 13.6643f, 2.1352f)
-                curveTo(17.7183f, 2.7912f, 20.9853f, 5.9352f, 21.7953f, 9.9602f)
-                curveTo(22.2653f, 12.2952f, 21.9303f, 14.6222f, 20.8253f, 16.6892f)
-                close()
-                moveTo(13.4271f, 10.547f)
-                lineTo(15.9691f, 11.135f)
-                curveTo(16.1941f, 11.188f, 16.2741f, 11.466f, 16.1111f, 11.63f)
-                lineTo(10.0351f, 17.723f)
-                curveTo(9.8201f, 17.939f, 9.4591f, 17.725f, 9.5451f, 17.432f)
-                lineTo(10.7701f, 13.264f)
-                lineTo(8.2281f, 12.676f)
-                curveTo(8.0031f, 12.623f, 7.9231f, 12.345f, 8.0861f, 12.181f)
-                lineTo(14.1621f, 6.088f)
-                curveTo(14.3771f, 5.872f, 14.7391f, 6.086f, 14.6531f, 6.379f)
-                lineTo(13.4271f, 10.547f)
-                close()
+val BezierIcons.ChatLightning: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _chatLightning ?: ImageVector.Builder(
+                    name = "ChatLightning",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(18.868f, 17.764f)
+                    curveTo(18.648999999999997f, 17.107f, 18.718f, 16.391f, 19.061f, 15.747f)
+                    curveTo(19.944f, 14.094f, 20.212f, 12.229f, 19.834f, 10.354f)
+                    arcTo(7.945f, 7.945f, 348.42745829569816f, isMoreThanHalf = false, isPositiveArc = false, 13.344999999999999f, 4.108999999999999f)
+                    arcTo(8.4f, 8.4f, 279.2402500039708f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 4.0f)
+                    arcTo(7.93f, 7.93f, 270.19711608050943f, isMoreThanHalf = false, isPositiveArc = false, 6.35f, 6.338f)
+                    curveTo(4.507999999999999f, 8.175f, 3.691f, 10.722999999999999f, 4.106999999999999f, 13.328f)
+                    curveTo(4.648f, 16.713f, 7.409999999999999f, 19.422f, 10.822f, 19.915f)
+                    arcTo(7.97f, 7.97f, 98.43293407719125f, isMoreThanHalf = false, isPositiveArc = false, 15.748f, 19.06f)
+                    curveTo(16.392f, 18.717f, 17.105999999999998f, 18.648f, 17.764f, 18.866999999999997f)
+                    lineTo(19.419f, 19.418999999999997f)
+                    close()
+                    moveTo(20.825f, 16.689f)
+                    curveTo(20.778f, 16.779f, 20.707f, 16.955f, 20.765f, 17.132f)
+                    lineTo(21.633f, 19.735000000000003f)
+                    arcTo(1.49f, 1.49f, 341.3161450609965f, isMoreThanHalf = false, isPositiveArc = true, 21.271f, 21.270000000000003f)
+                    arcTo(1.5f, 1.5f, 44.97428822193103f, isMoreThanHalf = false, isPositiveArc = true, 19.736f, 21.633000000000003f)
+                    lineTo(17.131f, 20.765000000000004f)
+                    curveTo(16.957f, 20.707000000000004f, 16.781f, 20.777000000000005f, 16.691f, 20.825000000000003f)
+                    arcTo(9.9f, 9.9f, 61.80108582664976f, isMoreThanHalf = false, isPositiveArc = true, 12.001f, 22.0f)
+                    quadTo(11.270999999999999f, 22.0f, 10.536f, 21.894f)
+                    curveTo(6.266f, 21.278f, 2.8099999999999996f, 17.884f, 2.1319999999999997f, 13.643999999999998f)
+                    curveTo(1.6129999999999995f, 10.396999999999998f, 2.6359999999999997f, 7.217999999999998f, 4.936f, 4.921999999999999f)
+                    curveTo(7.2379999999999995f, 2.6249999999999987f, 10.421f, 1.6119999999999988f, 13.664f, 2.134999999999999f)
+                    curveTo(17.718f, 2.790999999999999f, 20.985f, 5.934999999999999f, 21.795f, 9.959999999999999f)
+                    curveTo(22.265f, 12.294999999999998f, 21.930000000000003f, 14.622f, 20.825000000000003f, 16.689999999999998f)
+                    moveTo(13.427000000000003f, 10.547999999999998f)
+                    lineTo(15.969000000000003f, 11.135999999999997f)
+                    arcTo(0.295f, 0.295f, 283.2052101538468f, isMoreThanHalf = false, isPositiveArc = true, 16.111000000000004f, 11.630999999999997f)
+                    lineTo(10.035000000000004f, 17.723999999999997f)
+                    curveTo(9.820000000000004f, 17.939999999999998f, 9.459000000000003f, 17.725999999999996f, 9.545000000000003f, 17.432999999999996f)
+                    lineTo(10.770000000000003f, 13.264999999999997f)
+                    lineTo(8.228000000000003f, 12.676999999999998f)
+                    arcTo(0.295f, 0.295f, 103.20521015384708f, isMoreThanHalf = false, isPositiveArc = true, 8.086000000000004f, 12.181999999999999f)
+                    lineTo(14.162000000000003f, 6.088999999999999f)
+                    curveTo(14.377000000000002f, 5.872999999999998f, 14.739000000000003f, 6.086999999999999f, 14.653000000000002f, 6.379999999999999f)
+                    close()
+                }
+            }.build().also {
+                _chatLightning = it
             }
-        }.build().also {
-            io.channel.bezier.icon._chatLightning = it
-        }
     }
+
 
 private var _chatLightning: ImageVector? = null
 
@@ -84,7 +85,7 @@ private var _chatLightning: ImageVector? = null
 private fun ChatLightningIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ChatLightning,
+            imageVector = BezierIcons.ChatLightning.imageVector,
             contentDescription = null,
     )
 }

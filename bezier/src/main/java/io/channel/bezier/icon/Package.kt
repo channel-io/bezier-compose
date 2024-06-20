@@ -16,70 +16,68 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Package: ImageVector
-    get() {
-        return io.channel.bezier.icon._package ?: ImageVector.Builder(
-                name = "Package",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(13.0f, 2.5774f)
-                curveTo(12.3812f, 2.2201f, 11.6188f, 2.2201f, 11.0f, 2.5774f)
-                lineTo(4.0f, 6.6189f)
-                curveTo(3.3812f, 6.9761f, 3.0f, 7.6364f, 3.0f, 8.3509f)
-                lineTo(3.0f, 16.4338f)
-                curveTo(3.0f, 17.1483f, 3.3812f, 17.8086f, 4.0f, 18.1659f)
-                lineTo(11.0f, 22.2073f)
-                curveTo(11.6188f, 22.5646f, 12.3812f, 22.5646f, 13.0f, 22.2073f)
-                lineTo(20.0f, 18.1659f)
-                curveTo(20.6188f, 17.8086f, 21.0f, 17.1483f, 21.0f, 16.4338f)
-                lineTo(21.0f, 8.3509f)
-                curveTo(21.0f, 7.6364f, 20.6188f, 6.9761f, 20.0f, 6.6189f)
-                lineTo(13.0f, 2.5774f)
-                close()
-                moveTo(9.9293f, 5.3774f)
-                lineTo(12.0f, 4.1819f)
-                lineTo(18.3042f, 7.8216f)
-                lineTo(16.1982f, 9.0326f)
-                lineTo(9.9293f, 5.3774f)
-                close()
-                moveTo(7.9403f, 6.5258f)
-                lineTo(5.6958f, 7.8216f)
-                lineTo(12.0f, 11.4465f)
-                lineTo(14.2491f, 10.1533f)
-                lineTo(7.9403f, 6.5258f)
-                close()
-                moveTo(4.8895f, 9.665f)
-                lineTo(4.8895f, 16.4976f)
-                lineTo(11.0002f, 20.0256f)
-                lineTo(11.0002f, 13.1787f)
-                lineTo(4.8895f, 9.665f)
-                close()
-                moveTo(13.0002f, 20.0254f)
-                lineTo(19.1105f, 16.4976f)
-                lineTo(19.1105f, 9.665f)
-                lineTo(16.9932f, 10.8825f)
-                curveTo(16.9977f, 10.9211f, 17.0f, 10.9603f, 17.0f, 11.0f)
-                lineTo(17.0f, 13.0f)
-                curveTo(17.0f, 13.5523f, 16.5523f, 14.0f, 16.0f, 14.0f)
-                curveTo(15.4477f, 14.0f, 15.0f, 13.5523f, 15.0f, 13.0f)
-                lineTo(15.0f, 12.0286f)
-                lineTo(13.0002f, 13.1785f)
-                lineTo(13.0002f, 20.0254f)
-                close()
+val BezierIcons.Package: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _package ?: ImageVector.Builder(
+                    name = "Package",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(13.0f, 2.577f)
+                    arcTo(2.0f, 2.0f, 300.0f, isMoreThanHalf = false, isPositiveArc = false, 11.0f, 2.577f)
+                    lineTo(4.0f, 6.62f)
+                    arcTo(2.0f, 2.0f, 240.00003480239235f, isMoreThanHalf = false, isPositiveArc = false, 3.0f, 8.35f)
+                    lineTo(3.0f, 16.433f)
+                    arcTo(2.0f, 2.0f, 179.998544459905f, isMoreThanHalf = false, isPositiveArc = false, 4.0f, 18.165f)
+                    lineTo(11.0f, 22.206f)
+                    arcTo(2.0f, 2.0f, 120.00000000000001f, isMoreThanHalf = false, isPositiveArc = false, 13.0f, 22.206f)
+                    lineTo(20.0f, 18.165f)
+                    arcTo(2.0f, 2.0f, 60.000000021348384f, isMoreThanHalf = false, isPositiveArc = false, 21.0f, 16.433f)
+                    lineTo(21.0f, 8.35f)
+                    arcTo(2.0f, 2.0f, 359.99854445965457f, isMoreThanHalf = false, isPositiveArc = false, 20.0f, 6.617999999999999f)
+                    close()
+                    moveTo(9.93f, 5.377f)
+                    lineTo(12.0f, 4.182f)
+                    lineTo(18.304000000000002f, 7.822000000000001f)
+                    lineTo(16.198f, 9.032f)
+                    close()
+                    moveTo(7.94f, 6.526f)
+                    lineTo(5.696f, 7.822f)
+                    lineTo(12.0f, 11.447f)
+                    lineTo(14.25f, 10.152999999999999f)
+                    close()
+                    moveTo(4.89f, 9.665f)
+                    lineTo(4.89f, 16.497999999999998f)
+                    lineTo(11.0f, 20.026f)
+                    lineTo(11.0f, 13.178999999999998f)
+                    close()
+                    moveTo(13.0f, 20.025f)
+                    lineTo(19.11f, 16.497999999999998f)
+                    lineTo(19.11f, 9.665f)
+                    lineTo(16.993f, 10.883f)
+                    quadTo(17.0f, 10.94f, 17.0f, 11.0f)
+                    lineTo(17.0f, 13.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 15.0f, 13.0f)
+                    lineTo(15.0f, 12.029f)
+                    lineTo(13.0f, 13.179f)
+                    close()
+                }
+            }.build().also {
+                _package = it
             }
-        }.build().also {
-            io.channel.bezier.icon._package = it
-        }
     }
+
 
 private var _package: ImageVector? = null
 
@@ -88,7 +86,7 @@ private var _package: ImageVector? = null
 private fun PackageIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Package,
+            imageVector = BezierIcons.Package.imageVector,
             contentDescription = null,
     )
 }

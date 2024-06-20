@@ -16,50 +16,51 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.WindowsRestore: ImageVector
-    get() {
-        return io.channel.bezier.icon._windowsRestore ?: ImageVector.Builder(
-                name = "WindowsRestore",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(16.0f, 8.0f)
-                lineTo(10.0f, 8.0f)
-                lineTo(10.0f, 9.0f)
-                lineTo(15.0f, 9.0f)
-                lineTo(15.0f, 14.0f)
-                lineTo(16.0f, 14.0f)
-                lineTo(16.0f, 8.0f)
-                close()
-                moveTo(15.0f, 15.0f)
-                lineTo(15.0f, 17.0f)
-                lineTo(7.0f, 17.0f)
-                lineTo(7.0f, 9.0f)
-                lineTo(9.0f, 9.0f)
-                lineTo(9.0f, 7.0f)
-                lineTo(17.0f, 7.0f)
-                lineTo(17.0f, 15.0f)
-                lineTo(15.0f, 15.0f)
-                close()
-                moveTo(8.0f, 10.0f)
-                lineTo(14.0f, 10.0f)
-                lineTo(14.0f, 16.0f)
-                lineTo(8.0f, 16.0f)
-                lineTo(8.0f, 10.0f)
-                close()
+val BezierIcons.WindowsRestore: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _windowsRestore ?: ImageVector.Builder(
+                    name = "WindowsRestore",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(16.0f, 8.0f)
+                    lineTo(10.0f, 8.0f)
+                    lineTo(10.0f, 9.0f)
+                    lineTo(15.0f, 9.0f)
+                    lineTo(15.0f, 14.0f)
+                    lineTo(16.0f, 14.0f)
+                    close()
+                    moveTo(15.0f, 15.0f)
+                    lineTo(15.0f, 17.0f)
+                    lineTo(7.0f, 17.0f)
+                    lineTo(7.0f, 9.0f)
+                    lineTo(9.0f, 9.0f)
+                    lineTo(9.0f, 7.0f)
+                    lineTo(17.0f, 7.0f)
+                    lineTo(17.0f, 15.0f)
+                    close()
+                    moveTo(8.0f, 10.0f)
+                    lineTo(14.0f, 10.0f)
+                    lineTo(14.0f, 16.0f)
+                    lineTo(8.0f, 16.0f)
+                    close()
+                }
+            }.build().also {
+                _windowsRestore = it
             }
-        }.build().also {
-            io.channel.bezier.icon._windowsRestore = it
-        }
     }
+
 
 private var _windowsRestore: ImageVector? = null
 
@@ -68,7 +69,7 @@ private var _windowsRestore: ImageVector? = null
 private fun WindowsRestoreIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.WindowsRestore,
+            imageVector = BezierIcons.WindowsRestore.imageVector,
             contentDescription = null,
     )
 }

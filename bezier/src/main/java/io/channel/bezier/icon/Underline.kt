@@ -16,48 +16,44 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Underline: ImageVector
-    get() {
-        return _underline ?: ImageVector.Builder(
-                name = "Underline",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(7.0f, 4.0f)
-                curveTo(7.0f, 3.4477f, 6.5523f, 3.0f, 6.0f, 3.0f)
-                curveTo(5.4477f, 3.0f, 5.0f, 3.4477f, 5.0f, 4.0f)
-                lineTo(5.0f, 11.0f)
-                curveTo(5.0f, 14.866f, 8.134f, 18.0f, 12.0f, 18.0f)
-                curveTo(15.866f, 18.0f, 19.0f, 14.866f, 19.0f, 11.0f)
-                lineTo(19.0f, 4.0f)
-                curveTo(19.0f, 3.4477f, 18.5523f, 3.0f, 18.0f, 3.0f)
-                curveTo(17.4477f, 3.0f, 17.0f, 3.4477f, 17.0f, 4.0f)
-                lineTo(17.0f, 11.0f)
-                curveTo(17.0f, 13.7614f, 14.7614f, 16.0f, 12.0f, 16.0f)
-                curveTo(9.2386f, 16.0f, 7.0f, 13.7614f, 7.0f, 11.0f)
-                lineTo(7.0f, 4.0f)
-                close()
-                moveTo(4.0f, 19.0f)
-                curveTo(3.4477f, 19.0f, 3.0f, 19.4477f, 3.0f, 20.0f)
-                curveTo(3.0f, 20.5523f, 3.4477f, 21.0f, 4.0f, 21.0f)
-                lineTo(20.0f, 21.0f)
-                curveTo(20.5523f, 21.0f, 21.0f, 20.5523f, 21.0f, 20.0f)
-                curveTo(21.0f, 19.4477f, 20.5523f, 19.0f, 20.0f, 19.0f)
-                lineTo(4.0f, 19.0f)
-                close()
+val BezierIcons.Underline: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _underline ?: ImageVector.Builder(
+                    name = "Underline",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(7.0f, 4.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 5.0f, 4.0f)
+                    lineTo(5.0f, 11.0f)
+                    arcTo(7.0f, 7.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 19.0f, 11.0f)
+                    lineTo(19.0f, 4.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = false, 17.0f, 4.0f)
+                    lineTo(17.0f, 11.0f)
+                    arcTo(5.0f, 5.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 7.0f, 11.0f)
+                    close()
+                    moveTo(4.0f, 19.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 4.0f, 21.0f)
+                    lineTo(20.0f, 21.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 20.0f, 19.0f)
+                    close()
+                }
+            }.build().also {
+                _underline = it
             }
-        }.build().also {
-            _underline = it
-        }
     }
+
 
 private var _underline: ImageVector? = null
 
@@ -66,7 +62,7 @@ private var _underline: ImageVector? = null
 private fun UnderlineIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Underline,
+            imageVector = BezierIcons.Underline.imageVector,
             contentDescription = null,
     )
 }

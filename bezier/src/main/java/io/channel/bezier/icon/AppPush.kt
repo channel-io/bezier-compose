@@ -16,79 +16,74 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.AppPush: ImageVector
-    get() {
-        return io.channel.bezier.icon._appPush ?: ImageVector.Builder(
-                name = "AppPush",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(22.0001f, 6.4992f)
-                curveTo(22.0001f, 8.9832f, 19.9861f, 10.9972f, 17.5011f, 10.9972f)
-                curveTo(15.0171f, 10.9972f, 13.0021f, 8.9832f, 13.0021f, 6.4992f)
-                curveTo(13.0021f, 4.0142f, 15.0171f, 2.0002f, 17.5011f, 2.0002f)
-                curveTo(19.9861f, 2.0002f, 22.0001f, 4.0142f, 22.0001f, 6.4992f)
-                close()
-                moveTo(12.0f, 3.0f)
-                lineTo(10.3572f, 3.0f)
-                curveTo(9.2734f, 3.0f, 8.3993f, 3.0f, 7.6914f, 3.0578f)
-                curveTo(6.9625f, 3.1174f, 6.3223f, 3.2432f, 5.7301f, 3.545f)
-                curveTo(4.7892f, 4.0243f, 4.0243f, 4.7892f, 3.545f, 5.7301f)
-                curveTo(3.2432f, 6.3223f, 3.1174f, 6.9625f, 3.0578f, 7.6914f)
-                curveTo(3.0f, 8.3993f, 3.0f, 9.2734f, 3.0f, 10.3572f)
-                lineTo(3.0f, 10.3572f)
-                lineTo(3.0f, 13.6428f)
-                lineTo(3.0f, 13.6428f)
-                curveTo(3.0f, 14.7266f, 3.0f, 15.6007f, 3.0578f, 16.3086f)
-                curveTo(3.1174f, 17.0375f, 3.2432f, 17.6777f, 3.545f, 18.27f)
-                curveTo(4.0243f, 19.2108f, 4.7892f, 19.9757f, 5.7301f, 20.455f)
-                curveTo(6.3223f, 20.7568f, 6.9625f, 20.8826f, 7.6914f, 20.9422f)
-                curveTo(8.3992f, 21.0f, 9.2733f, 21.0f, 10.3571f, 21.0f)
-                lineTo(10.3572f, 21.0f)
-                lineTo(13.6428f, 21.0f)
-                lineTo(13.6429f, 21.0f)
-                curveTo(14.7267f, 21.0f, 15.6008f, 21.0f, 16.3086f, 20.9422f)
-                curveTo(17.0375f, 20.8826f, 17.6777f, 20.7568f, 18.27f, 20.455f)
-                curveTo(19.2108f, 19.9757f, 19.9757f, 19.2108f, 20.455f, 18.27f)
-                curveTo(20.7568f, 17.6777f, 20.8826f, 17.0375f, 20.9422f, 16.3086f)
-                curveTo(21.0f, 15.6008f, 21.0f, 14.7267f, 21.0f, 13.6429f)
-                lineTo(21.0f, 13.6428f)
-                lineTo(21.0f, 12.0f)
-                lineTo(19.0f, 12.0f)
-                lineTo(19.0f, 13.6f)
-                curveTo(19.0f, 14.7366f, 18.9992f, 15.5289f, 18.9488f, 16.1458f)
-                curveTo(18.8994f, 16.7509f, 18.8072f, 17.0986f, 18.673f, 17.362f)
-                curveTo(18.3854f, 17.9265f, 17.9265f, 18.3854f, 17.362f, 18.673f)
-                curveTo(17.0986f, 18.8072f, 16.7509f, 18.8994f, 16.1458f, 18.9488f)
-                curveTo(15.5289f, 18.9992f, 14.7366f, 19.0f, 13.6f, 19.0f)
-                lineTo(10.4f, 19.0f)
-                curveTo(9.2634f, 19.0f, 8.4711f, 18.9992f, 7.8542f, 18.9488f)
-                curveTo(7.2491f, 18.8994f, 6.9014f, 18.8072f, 6.638f, 18.673f)
-                curveTo(6.0735f, 18.3854f, 5.6146f, 17.9265f, 5.327f, 17.362f)
-                curveTo(5.1928f, 17.0986f, 5.1006f, 16.7509f, 5.0512f, 16.1458f)
-                curveTo(5.0008f, 15.5289f, 5.0f, 14.7366f, 5.0f, 13.6f)
-                lineTo(5.0f, 10.4f)
-                curveTo(5.0f, 9.2634f, 5.0008f, 8.4711f, 5.0512f, 7.8542f)
-                curveTo(5.1006f, 7.2491f, 5.1928f, 6.9014f, 5.327f, 6.638f)
-                curveTo(5.6146f, 6.0735f, 6.0735f, 5.6146f, 6.638f, 5.327f)
-                curveTo(6.9014f, 5.1928f, 7.2491f, 5.1006f, 7.8542f, 5.0512f)
-                curveTo(8.4711f, 5.0008f, 9.2634f, 5.0f, 10.4f, 5.0f)
-                lineTo(12.0f, 5.0f)
-                lineTo(12.0f, 3.0f)
-                close()
+val BezierIcons.AppPush: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _appPush ?: ImageVector.Builder(
+                    name = "AppPush",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(22.0f, 6.0f)
+                    arcTo(4.0f, 4.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 14.0f, 6.0f)
+                    arcTo(4.0f, 4.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 22.0f, 6.0f)
+                    moveTo(12.0f, 3.0f)
+                    lineTo(10.357f, 3.0f)
+                    curveTo(9.273f, 3.0f, 8.4f, 3.0f, 7.691f, 3.058f)
+                    curveTo(6.963f, 3.118f, 6.322f, 3.243f, 5.731f, 3.545f)
+                    arcTo(5.0f, 5.0f, 243.03404965920066f, isMoreThanHalf = false, isPositiveArc = false, 3.544f, 5.73f)
+                    curveTo(3.242f, 6.323f, 3.116f, 6.963000000000001f, 3.057f, 7.692f)
+                    curveTo(3.0f, 8.399f, 3.0f, 9.274f, 3.0f, 10.357f)
+                    lineTo(3.0f, 13.642999999999999f)
+                    curveTo(3.0f, 14.726999999999999f, 3.0f, 15.600999999999999f, 3.058f, 16.308999999999997f)
+                    curveTo(3.118f, 17.037999999999997f, 3.243f, 17.677999999999997f, 3.545f, 18.269999999999996f)
+                    arcTo(5.0f, 5.0f, 152.999317372832f, isMoreThanHalf = false, isPositiveArc = false, 5.73f, 20.454999999999995f)
+                    curveTo(6.322f, 20.756999999999994f, 6.963000000000001f, 20.882999999999996f, 7.691000000000001f, 20.941999999999993f)
+                    curveTo(8.4f, 21.0f, 9.273f, 21.0f, 10.357f, 21.0f)
+                    lineTo(13.642999999999999f, 21.0f)
+                    curveTo(14.726999999999999f, 21.0f, 15.600999999999999f, 21.0f, 16.308999999999997f, 20.942f)
+                    curveTo(17.037999999999997f, 20.882f, 17.677999999999997f, 20.757f, 18.269999999999996f, 20.455000000000002f)
+                    arcTo(5.0f, 5.0f, 62.999317372831996f, isMoreThanHalf = false, isPositiveArc = false, 20.454999999999995f, 18.270000000000003f)
+                    curveTo(20.756999999999994f, 17.678000000000004f, 20.882999999999996f, 17.038000000000004f, 20.941999999999993f, 16.309000000000005f)
+                    curveTo(21.0f, 15.6f, 21.0f, 14.727f, 21.0f, 13.643f)
+                    lineTo(21.0f, 12.0f)
+                    lineTo(19.0f, 12.0f)
+                    lineTo(19.0f, 13.6f)
+                    curveTo(19.0f, 14.737f, 19.0f, 15.53f, 18.949f, 16.146f)
+                    curveTo(18.899f, 16.751f, 18.807000000000002f, 17.099f, 18.673000000000002f, 17.362000000000002f)
+                    arcTo(3.0f, 3.0f, 27.00068262716798f, isMoreThanHalf = false, isPositiveArc = true, 17.362000000000002f, 18.673000000000002f)
+                    curveTo(17.099f, 18.807000000000002f, 16.751f, 18.900000000000002f, 16.146f, 18.949f)
+                    curveTo(15.529f, 18.999000000000002f, 14.736f, 19.0f, 13.600000000000001f, 19.0f)
+                    lineTo(10.400000000000002f, 19.0f)
+                    curveTo(9.263000000000002f, 19.0f, 8.471000000000002f, 19.0f, 7.854000000000003f, 18.949f)
+                    curveTo(7.249000000000002f, 18.899f, 6.9010000000000025f, 18.807000000000002f, 6.638000000000003f, 18.673000000000002f)
+                    arcTo(3.0f, 3.0f, 116.98592069344018f, isMoreThanHalf = false, isPositiveArc = true, 5.327000000000003f, 17.363000000000003f)
+                    curveTo(5.193000000000002f, 17.099000000000004f, 5.101000000000003f, 16.751000000000005f, 5.051000000000003f, 16.146000000000004f)
+                    curveTo(5.001f, 15.529f, 5.0f, 14.736f, 5.0f, 13.6f)
+                    lineTo(5.0f, 10.399999999999999f)
+                    curveTo(5.0f, 9.264f, 5.0f, 8.470999999999998f, 5.051f, 7.853999999999999f)
+                    curveTo(5.101f, 7.248999999999999f, 5.1930000000000005f, 6.901999999999999f, 5.327f, 6.637999999999999f)
+                    arcTo(3.0f, 3.0f, 207.02964124035583f, isMoreThanHalf = false, isPositiveArc = true, 6.638f, 5.327999999999999f)
+                    curveTo(6.901f, 5.193f, 7.249f, 5.100999999999999f, 7.854f, 5.050999999999999f)
+                    curveTo(8.471f, 5.0009999999999994f, 9.264f, 5.0009999999999994f, 10.4f, 5.0009999999999994f)
+                    lineTo(12.0f, 5.0009999999999994f)
+                    close()
+                }
+            }.build().also {
+                _appPush = it
             }
-        }.build().also {
-            io.channel.bezier.icon._appPush = it
-        }
     }
+
 
 private var _appPush: ImageVector? = null
 
@@ -97,7 +92,7 @@ private var _appPush: ImageVector? = null
 private fun AppPushIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.AppPush,
+            imageVector = BezierIcons.AppPush.imageVector,
             contentDescription = null,
     )
 }

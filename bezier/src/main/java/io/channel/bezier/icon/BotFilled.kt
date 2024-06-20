@@ -16,53 +16,53 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.BotFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._botFilled ?: ImageVector.Builder(
-                name = "BotFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0041f, 2.0021f)
-                curveTo(13.6481f, 2.0021f, 14.9801f, 3.3341f, 14.9801f, 4.9781f)
-                lineTo(9.0281f, 4.9781f)
-                curveTo(9.0281f, 3.3341f, 10.3611f, 2.0021f, 12.0041f, 2.0021f)
-                close()
-                moveTo(14.4124f, 12.9743f)
-                curveTo(14.4124f, 14.7613f, 14.8344f, 15.4903f, 15.8444f, 15.4903f)
-                curveTo(16.8544f, 15.4903f, 17.2764f, 14.7613f, 17.2764f, 12.9743f)
-                curveTo(17.2764f, 11.1883f, 16.8544f, 10.4593f, 15.8444f, 10.4593f)
-                curveTo(14.8344f, 10.4593f, 14.4124f, 11.1883f, 14.4124f, 12.9743f)
-                close()
-                moveTo(6.7324f, 12.9743f)
-                curveTo(6.7324f, 14.7613f, 7.1544f, 15.4903f, 8.1644f, 15.4903f)
-                curveTo(9.1744f, 15.4903f, 9.5964f, 14.7613f, 9.5964f, 12.9743f)
-                curveTo(9.5964f, 11.1883f, 9.1744f, 10.4593f, 8.1644f, 10.4593f)
-                curveTo(7.1544f, 10.4593f, 6.7324f, 11.1883f, 6.7324f, 12.9743f)
-                close()
-                moveTo(4.1874f, 5.9743f)
-                lineTo(19.8214f, 5.9743f)
-                curveTo(21.0274f, 5.9743f, 22.0044f, 6.9513f, 22.0044f, 8.1573f)
-                lineTo(22.0044f, 17.7913f)
-                curveTo(22.0044f, 18.9973f, 21.0274f, 19.9743f, 19.8214f, 19.9743f)
-                lineTo(4.1874f, 19.9743f)
-                curveTo(2.9814f, 19.9743f, 2.0044f, 18.9973f, 2.0044f, 17.7913f)
-                lineTo(2.0044f, 8.1573f)
-                curveTo(2.0044f, 6.9513f, 2.9814f, 5.9743f, 4.1874f, 5.9743f)
-                close()
+val BezierIcons.BotFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _botFilled ?: ImageVector.Builder(
+                    name = "BotFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(12.004f, 2.002f)
+                    arcTo(2.975f, 2.975f, 269.9807376761769f, isMoreThanHalf = false, isPositiveArc = true, 14.98f, 4.978f)
+                    lineTo(9.028f, 4.978f)
+                    arcTo(2.976f, 2.976f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 12.004000000000001f, 2.002f)
+                    moveTo(14.412f, 12.974f)
+                    curveTo(14.412f, 14.761f, 14.834000000000001f, 15.49f, 15.844000000000001f, 15.49f)
+                    curveTo(16.854f, 15.49f, 17.276f, 14.761000000000001f, 17.276f, 12.974f)
+                    curveTo(17.276f, 11.187f, 16.854f, 10.459f, 15.844f, 10.459f)
+                    curveTo(14.834f, 10.459f, 14.411999999999999f, 11.189f, 14.411999999999999f, 12.974f)
+                    moveTo(6.731999999999999f, 12.974f)
+                    curveTo(6.731999999999999f, 14.761f, 7.153999999999999f, 15.49f, 8.164f, 15.49f)
+                    curveTo(9.174f, 15.49f, 9.596f, 14.761000000000001f, 9.596f, 12.974f)
+                    curveTo(9.596f, 11.187f, 9.174f, 10.459f, 8.164f, 10.459f)
+                    curveTo(7.154f, 10.459f, 6.731999999999999f, 11.189f, 6.731999999999999f, 12.974f)
+                    moveTo(4.186999999999999f, 5.974f)
+                    lineTo(19.820999999999998f, 5.974f)
+                    curveTo(21.026999999999997f, 5.974f, 22.003999999999998f, 6.9510000000000005f, 22.003999999999998f, 8.157f)
+                    lineTo(22.003999999999998f, 17.791f)
+                    arcTo(2.183f, 2.183f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 19.820999999999998f, 19.974f)
+                    lineTo(4.187f, 19.974f)
+                    arcTo(2.183f, 2.183f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 2.0040000000000004f, 17.791f)
+                    lineTo(2.0040000000000004f, 8.157f)
+                    curveTo(2.0040000000000004f, 6.9510000000000005f, 2.9810000000000003f, 5.974f, 4.187f, 5.974f)
+                }
+            }.build().also {
+                _botFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._botFilled = it
-        }
     }
+
 
 private var _botFilled: ImageVector? = null
 
@@ -71,7 +71,7 @@ private var _botFilled: ImageVector? = null
 private fun BotFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.BotFilled,
+            imageVector = BezierIcons.BotFilled.imageVector,
             contentDescription = null,
     )
 }

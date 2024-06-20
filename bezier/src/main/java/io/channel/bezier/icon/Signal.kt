@@ -16,64 +16,54 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Signal: ImageVector
-    get() {
-        return io.channel.bezier.icon._signal ?: ImageVector.Builder(
-                name = "Signal",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(6.3432f, 17.6568f)
-                curveTo(3.219f, 14.5326f, 3.219f, 9.4673f, 6.3432f, 6.3431f)
-                curveTo(6.7337f, 5.9526f, 6.7337f, 5.3194f, 6.3432f, 4.9289f)
-                curveTo(5.9526f, 4.5384f, 5.3195f, 4.5384f, 4.9289f, 4.9289f)
-                curveTo(1.0237f, 8.8341f, 1.0237f, 15.1658f, 4.9289f, 19.071f)
-                curveTo(5.3195f, 19.4615f, 5.9526f, 19.4615f, 6.3432f, 19.071f)
-                curveTo(6.7337f, 18.6805f, 6.7337f, 18.0473f, 6.3432f, 17.6568f)
-                close()
-                moveTo(19.0711f, 4.9289f)
-                curveTo(18.6805f, 4.5384f, 18.0474f, 4.5384f, 17.6569f, 4.9289f)
-                curveTo(17.2663f, 5.3194f, 17.2663f, 5.9526f, 17.6569f, 6.3431f)
-                curveTo(20.781f, 9.4673f, 20.781f, 14.5326f, 17.6569f, 17.6568f)
-                curveTo(17.2663f, 18.0473f, 17.2663f, 18.6805f, 17.6569f, 19.071f)
-                curveTo(18.0474f, 19.4615f, 18.6805f, 19.4615f, 19.0711f, 19.071f)
-                curveTo(22.9763f, 15.1658f, 22.9763f, 8.8341f, 19.0711f, 4.9289f)
-                close()
-                moveTo(9.1716f, 9.1715f)
-                curveTo(7.6095f, 10.7336f, 7.6095f, 13.2663f, 9.1716f, 14.8284f)
-                curveTo(9.5621f, 15.2189f, 9.5621f, 15.8521f, 9.1716f, 16.2426f)
-                curveTo(8.781f, 16.6331f, 8.1479f, 16.6331f, 7.7573f, 16.2426f)
-                curveTo(5.4142f, 13.8994f, 5.4142f, 10.1005f, 7.7573f, 7.7573f)
-                curveTo(8.1479f, 7.3668f, 8.781f, 7.3668f, 9.1716f, 7.7573f)
-                curveTo(9.5621f, 8.1478f, 9.5621f, 8.781f, 9.1716f, 9.1715f)
-                close()
-                moveTo(14.8284f, 7.7573f)
-                curveTo(15.2189f, 7.3668f, 15.8521f, 7.3668f, 16.2426f, 7.7573f)
-                curveTo(18.5858f, 10.1005f, 18.5858f, 13.8994f, 16.2426f, 16.2426f)
-                curveTo(15.8521f, 16.6331f, 15.2189f, 16.6331f, 14.8284f, 16.2426f)
-                curveTo(14.4379f, 15.8521f, 14.4379f, 15.2189f, 14.8284f, 14.8284f)
-                curveTo(16.3905f, 13.2663f, 16.3905f, 10.7336f, 14.8284f, 9.1715f)
-                curveTo(14.4379f, 8.781f, 14.4379f, 8.1478f, 14.8284f, 7.7573f)
-                close()
-                moveTo(14.0f, 11.9999f)
-                curveTo(14.0f, 13.1045f, 13.1046f, 13.9999f, 12.0f, 13.9999f)
-                curveTo(10.8954f, 13.9999f, 10.0f, 13.1045f, 10.0f, 11.9999f)
-                curveTo(10.0f, 10.8954f, 10.8954f, 10.0f, 12.0f, 10.0f)
-                curveTo(13.1046f, 10.0f, 14.0f, 10.8954f, 14.0f, 11.9999f)
-                close()
+val BezierIcons.Signal: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _signal ?: ImageVector.Builder(
+                    name = "Signal",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(6.343f, 17.657f)
+                    arcTo(8.0f, 8.0f, 134.99852373843032f, isMoreThanHalf = false, isPositiveArc = true, 6.343f, 6.343f)
+                    arcTo(1.0f, 1.0f, 42.626210285057745f, isMoreThanHalf = false, isPositiveArc = false, 4.93f, 4.93f)
+                    curveTo(1.025f, 8.834999999999999f, 1.025f, 15.167f, 4.93f, 19.072f)
+                    arcTo(1.0f, 1.0f, 134.00425538642241f, isMoreThanHalf = false, isPositiveArc = false, 6.343999999999999f, 17.657999999999998f)
+                    moveTo(19.071f, 4.929f)
+                    arcTo(1.0f, 1.0f, 315.99574461357764f, isMoreThanHalf = true, isPositiveArc = false, 17.657f, 6.343f)
+                    arcTo(8.0f, 8.0f, 314.9985237384303f, isMoreThanHalf = false, isPositiveArc = true, 17.657f, 17.657f)
+                    arcTo(1.0f, 1.0f, 225.99574461357543f, isMoreThanHalf = true, isPositiveArc = false, 19.071f, 19.071f)
+                    curveTo(22.976000000000003f, 15.166000000000002f, 22.976000000000003f, 8.834000000000001f, 19.071f, 4.929000000000002f)
+                    moveTo(9.171000000000001f, 9.172000000000002f)
+                    arcTo(4.0f, 4.0f, 224.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 9.171000000000001f, 14.828000000000003f)
+                    arcTo(1.0f, 1.0f, 314.9797463823514f, isMoreThanHalf = true, isPositiveArc = true, 7.7570000000000014f, 16.243000000000002f)
+                    arcTo(6.0f, 6.0f, 134.99514736576194f, isMoreThanHalf = false, isPositiveArc = true, 7.7570000000000014f, 7.7570000000000014f)
+                    arcTo(1.0f, 1.0f, 224.9999991471751f, isMoreThanHalf = true, isPositiveArc = true, 9.172f, 9.172f)
+                    moveTo(14.829f, 7.757000000000001f)
+                    arcTo(1.0f, 1.0f, 224.9681292160717f, isMoreThanHalf = false, isPositiveArc = true, 16.244f, 7.757000000000001f)
+                    arcTo(6.0f, 6.0f, 314.9951473657619f, isMoreThanHalf = false, isPositiveArc = true, 16.244f, 16.243000000000002f)
+                    arcTo(1.0f, 1.0f, 45.00000085282488f, isMoreThanHalf = false, isPositiveArc = true, 14.829f, 14.828000000000003f)
+                    arcTo(4.0f, 4.0f, 44.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 14.829f, 9.172000000000004f)
+                    arcTo(1.0f, 1.0f, 134.96812921607167f, isMoreThanHalf = false, isPositiveArc = true, 14.829f, 7.757000000000004f)
+                    moveTo(14.0f, 12.0f)
+                    arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 10.0f, 12.0f)
+                    arcTo(2.0f, 2.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 14.0f, 12.0f)
+                }
+            }.build().also {
+                _signal = it
             }
-        }.build().also {
-            io.channel.bezier.icon._signal = it
-        }
     }
+
 
 private var _signal: ImageVector? = null
 
@@ -82,7 +72,7 @@ private var _signal: ImageVector? = null
 private fun SignalIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Signal,
+            imageVector = BezierIcons.Signal.imageVector,
             contentDescription = null,
     )
 }

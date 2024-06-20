@@ -16,76 +16,79 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CheckVerificationFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._checkVerificationFilled ?: ImageVector.Builder(
-                name = "CheckVerificationFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(13.3592f, 1.2593f)
-                curveTo(12.5923f, 0.5488f, 11.4077f, 0.5488f, 10.6408f, 1.2593f)
-                lineTo(9.5861f, 2.2363f)
-                curveTo(9.269f, 2.5301f, 8.8405f, 2.6728f, 8.4105f, 2.6278f)
-                lineTo(6.998f, 2.4799f)
-                curveTo(5.9777f, 2.3731f, 5.042f, 3.0556f, 4.832f, 4.0598f)
-                lineTo(4.5075f, 5.6126f)
-                curveTo(4.4223f, 6.0201f, 4.1716f, 6.3738f, 3.8154f, 6.5892f)
-                lineTo(2.4833f, 7.3948f)
-                curveTo(1.6321f, 7.9096f, 1.2885f, 8.9717f, 1.6772f, 9.8875f)
-                lineTo(2.325f, 11.414f)
-                curveTo(2.4839f, 11.7885f, 2.4839f, 12.2115f, 2.325f, 12.586f)
-                lineTo(1.6772f, 14.1125f)
-                curveTo(1.2885f, 15.0283f, 1.632f, 16.0904f, 2.4833f, 16.6052f)
-                lineTo(3.8154f, 17.4108f)
-                curveTo(4.1716f, 17.6262f, 4.4223f, 17.98f, 4.5075f, 18.3874f)
-                lineTo(4.832f, 19.9402f)
-                curveTo(5.042f, 20.9444f, 5.9777f, 21.6269f, 6.998f, 21.5201f)
-                lineTo(8.4105f, 21.3722f)
-                curveTo(8.8405f, 21.3272f, 9.269f, 21.4699f, 9.5861f, 21.7637f)
-                lineTo(10.6408f, 22.7407f)
-                curveTo(11.4077f, 23.4512f, 12.5923f, 23.4512f, 13.3592f, 22.7407f)
-                lineTo(14.4139f, 21.7637f)
-                curveTo(14.731f, 21.4699f, 15.1595f, 21.3272f, 15.5895f, 21.3722f)
-                lineTo(17.002f, 21.5201f)
-                curveTo(18.0223f, 21.6269f, 18.958f, 20.9444f, 19.1679f, 19.9402f)
-                lineTo(19.4925f, 18.3874f)
-                curveTo(19.5777f, 17.98f, 19.8284f, 17.6262f, 20.1846f, 17.4108f)
-                lineTo(21.5167f, 16.6052f)
-                curveTo(22.368f, 16.0904f, 22.7115f, 15.0283f, 22.3228f, 14.1125f)
-                lineTo(21.675f, 12.586f)
-                curveTo(21.5161f, 12.2115f, 21.5161f, 11.7885f, 21.675f, 11.414f)
-                lineTo(22.3228f, 9.8875f)
-                curveTo(22.7115f, 8.9717f, 22.368f, 7.9096f, 21.5167f, 7.3948f)
-                lineTo(20.1846f, 6.5892f)
-                curveTo(19.8284f, 6.3738f, 19.5777f, 6.0201f, 19.4925f, 5.6126f)
-                lineTo(19.1679f, 4.0598f)
-                curveTo(18.958f, 3.0556f, 18.0223f, 2.3731f, 17.002f, 2.4799f)
-                lineTo(15.5895f, 2.6278f)
-                curveTo(15.1595f, 2.6728f, 14.731f, 2.5301f, 14.4139f, 2.2363f)
-                lineTo(13.3592f, 1.2593f)
-                close()
-                moveTo(6.6552f, 12.4164f)
-                lineTo(10.8092f, 16.4044f)
-                lineTo(17.8442f, 9.7944f)
-                lineTo(16.4752f, 8.3374f)
-                lineTo(10.8242f, 13.6464f)
-                lineTo(8.0402f, 10.9734f)
-                lineTo(6.6552f, 12.4164f)
-                close()
+val BezierIcons.CheckVerificationFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _checkVerificationFilled ?: ImageVector.Builder(
+                    name = "CheckVerificationFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(13.36f, 1.26f)
+                    arcTo(2.0f, 2.0f, 312.84364304359633f, isMoreThanHalf = false, isPositiveArc = false, 10.639999999999999f, 1.26f)
+                    lineTo(9.585999999999999f, 2.2359999999999998f)
+                    arcTo(1.5f, 1.5f, 47.16403549823743f, isMoreThanHalf = false, isPositiveArc = true, 8.410999999999998f, 2.6279999999999997f)
+                    lineTo(6.998f, 2.48f)
+                    arcTo(2.0f, 2.0f, 275.97798847190677f, isMoreThanHalf = false, isPositiveArc = false, 4.832000000000001f, 4.0600000000000005f)
+                    lineTo(4.507000000000001f, 5.613f)
+                    arcTo(1.5f, 1.5f, 11.833500266456642f, isMoreThanHalf = false, isPositiveArc = true, 3.8150000000000004f, 6.589f)
+                    lineTo(2.4830000000000005f, 7.3950000000000005f)
+                    arcTo(2.0f, 2.0f, 238.8256687946012f, isMoreThanHalf = false, isPositiveArc = false, 1.6770000000000005f, 9.887f)
+                    lineTo(2.3250000000000006f, 11.414f)
+                    arcTo(1.5f, 1.5f, 337.0040122933323f, isMoreThanHalf = false, isPositiveArc = true, 2.3250000000000006f, 12.586f)
+                    lineTo(1.6770000000000005f, 14.113f)
+                    arcTo(2.0f, 2.0f, 202.9796240487774f, isMoreThanHalf = false, isPositiveArc = false, 2.4830000000000005f, 16.605f)
+                    lineTo(3.8150000000000004f, 17.411f)
+                    arcTo(1.5f, 1.5f, 301.15896855548453f, isMoreThanHalf = false, isPositiveArc = true, 4.507000000000001f, 18.387f)
+                    lineTo(4.832000000000001f, 19.94f)
+                    arcTo(2.0f, 2.0f, 168.19614107303727f, isMoreThanHalf = false, isPositiveArc = false, 6.998000000000001f, 21.520000000000003f)
+                    lineTo(8.411000000000001f, 21.372000000000003f)
+                    arcTo(1.5f, 1.5f, 264.06318807299044f, isMoreThanHalf = false, isPositiveArc = true, 9.586000000000002f, 21.764000000000003f)
+                    lineTo(10.641000000000002f, 22.741000000000003f)
+                    arcTo(2.0f, 2.0f, 132.80458362515685f, isMoreThanHalf = false, isPositiveArc = false, 13.359000000000002f, 22.741000000000003f)
+                    lineTo(14.414000000000001f, 21.764000000000003f)
+                    arcTo(1.5f, 1.5f, 227.16403549823744f, isMoreThanHalf = false, isPositiveArc = true, 15.589000000000002f, 21.372000000000003f)
+                    lineTo(17.002000000000002f, 21.520000000000003f)
+                    arcTo(2.0f, 2.0f, 95.9779884719068f, isMoreThanHalf = false, isPositiveArc = false, 19.168000000000003f, 19.940000000000005f)
+                    lineTo(19.493000000000002f, 18.387000000000004f)
+                    arcTo(1.5f, 1.5f, 191.8335002664567f, isMoreThanHalf = false, isPositiveArc = true, 20.185000000000002f, 17.411000000000005f)
+                    lineTo(21.517000000000003f, 16.605000000000004f)
+                    arcTo(2.0f, 2.0f, 58.82566879460122f, isMoreThanHalf = false, isPositiveArc = false, 22.323000000000004f, 14.113000000000003f)
+                    lineTo(21.675000000000004f, 12.586000000000004f)
+                    arcTo(1.5f, 1.5f, 157.00401229333235f, isMoreThanHalf = false, isPositiveArc = true, 21.675000000000004f, 11.414000000000003f)
+                    lineTo(22.323000000000004f, 9.887000000000004f)
+                    arcTo(2.0f, 2.0f, 22.979624048777367f, isMoreThanHalf = false, isPositiveArc = false, 21.517000000000003f, 7.395000000000004f)
+                    lineTo(20.185000000000002f, 6.589000000000004f)
+                    arcTo(1.5f, 1.5f, 121.15896855548452f, isMoreThanHalf = false, isPositiveArc = true, 19.493000000000002f, 5.613000000000004f)
+                    lineTo(19.168000000000003f, 4.060000000000004f)
+                    arcTo(2.0f, 2.0f, 348.1961410730372f, isMoreThanHalf = false, isPositiveArc = false, 17.002000000000002f, 2.480000000000004f)
+                    lineTo(15.590000000000003f, 2.628000000000004f)
+                    arcTo(1.5f, 1.5f, 84.02866652163107f, isMoreThanHalf = false, isPositiveArc = true, 14.414000000000003f, 2.236000000000004f)
+                    close()
+                    moveTo(8.083f, 11.67f)
+                    lineTo(10.403f, 13.898f)
+                    lineTo(15.851f, 8.777999999999999f)
+                    arcTo(1.0f, 1.0f, 227.21657521144485f, isMoreThanHalf = false, isPositiveArc = true, 17.221f, 10.235f)
+                    lineTo(11.1f, 15.989f)
+                    arcTo(1.03f, 1.03f, 46.8998740059744f, isMoreThanHalf = false, isPositiveArc = true, 9.684f, 15.981000000000002f)
+                    lineTo(6.7f, 13.113f)
+                    arcTo(1.0f, 1.0f, 135.25172610641144f, isMoreThanHalf = false, isPositiveArc = true, 8.085f, 11.671f)
+                }
+            }.build().also {
+                _checkVerificationFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._checkVerificationFilled = it
-        }
     }
+
 
 private var _checkVerificationFilled: ImageVector? = null
 
@@ -94,7 +97,7 @@ private var _checkVerificationFilled: ImageVector? = null
 private fun CheckVerificationFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CheckVerificationFilled,
+            imageVector = BezierIcons.CheckVerificationFilled.imageVector,
             contentDescription = null,
     )
 }

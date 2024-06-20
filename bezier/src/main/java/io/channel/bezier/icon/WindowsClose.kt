@@ -16,40 +16,43 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.WindowsClose: ImageVector
-    get() {
-        return io.channel.bezier.icon._windowsClose ?: ImageVector.Builder(
-                name = "WindowsClose",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(7.4038f, 6.6967f)
-                lineTo(6.6967f, 7.4038f)
-                lineTo(11.2929f, 12.0f)
-                lineTo(6.6967f, 16.5962f)
-                lineTo(7.4038f, 17.3033f)
-                lineTo(12.0f, 12.7071f)
-                lineTo(16.5962f, 17.3033f)
-                lineTo(17.3033f, 16.5962f)
-                lineTo(12.7071f, 12.0f)
-                lineTo(17.3033f, 7.4038f)
-                lineTo(16.5962f, 6.6967f)
-                lineTo(12.0f, 11.2929f)
-                lineTo(7.4038f, 6.6967f)
-                close()
+val BezierIcons.WindowsClose: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _windowsClose ?: ImageVector.Builder(
+                    name = "WindowsClose",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(7.404f, 6.697f)
+                    lineTo(6.697f, 7.404f)
+                    lineTo(11.293f, 12.0f)
+                    lineTo(6.696999999999999f, 16.596f)
+                    lineTo(7.403999999999999f, 17.303f)
+                    lineTo(12.0f, 12.707f)
+                    lineTo(16.596f, 17.303f)
+                    lineTo(17.303f, 16.596f)
+                    lineTo(12.707f, 12.0f)
+                    lineTo(17.303f, 7.404f)
+                    lineTo(16.596f, 6.697f)
+                    lineTo(12.0f, 11.293f)
+                    close()
+                }
+            }.build().also {
+                _windowsClose = it
             }
-        }.build().also {
-            io.channel.bezier.icon._windowsClose = it
-        }
     }
+
 
 private var _windowsClose: ImageVector? = null
 
@@ -58,7 +61,7 @@ private var _windowsClose: ImageVector? = null
 private fun WindowsCloseIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.WindowsClose,
+            imageVector = BezierIcons.WindowsClose.imageVector,
             contentDescription = null,
     )
 }

@@ -16,63 +16,57 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CloudDownload: ImageVector
-    get() {
-        return _cloudDownload ?: ImageVector.Builder(
-                name = "CloudDownload",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0f, 6.0f)
-                curveTo(9.9265f, 6.0f, 8.2204f, 7.5785f, 8.0198f, 9.5988f)
-                lineTo(7.9303f, 10.5f)
-                lineTo(6.25f, 10.5f)
-                curveTo(4.4551f, 10.5f, 3.0f, 11.9551f, 3.0f, 13.75f)
-                curveTo(3.0f, 15.5449f, 4.4551f, 17.0f, 6.25f, 17.0f)
-                lineTo(7.0f, 17.0f)
-                curveTo(7.5523f, 17.0f, 8.0f, 17.4477f, 8.0f, 18.0f)
-                curveTo(8.0f, 18.5523f, 7.5523f, 19.0f, 7.0f, 19.0f)
-                lineTo(6.25f, 19.0f)
-                curveTo(3.3505f, 19.0f, 1.0f, 16.6495f, 1.0f, 13.75f)
-                curveTo(1.0f, 10.8708f, 3.3177f, 8.533f, 6.1891f, 8.5003f)
-                curveTo(6.8554f, 5.912f, 9.2039f, 4.0f, 12.0f, 4.0f)
-                curveTo(14.2235f, 4.0f, 16.1628f, 5.2094f, 17.1989f, 7.0032f)
-                curveTo(20.4206f, 7.1082f, 23.0f, 9.7529f, 23.0f, 13.0f)
-                curveTo(23.0f, 16.3137f, 20.3137f, 19.0f, 17.0f, 19.0f)
-                curveTo(16.4477f, 19.0f, 16.0f, 18.5523f, 16.0f, 18.0f)
-                curveTo(16.0f, 17.4477f, 16.4477f, 17.0f, 17.0f, 17.0f)
-                curveTo(19.2091f, 17.0f, 21.0f, 15.2091f, 21.0f, 13.0f)
-                curveTo(21.0f, 10.7909f, 19.2091f, 9.0f, 17.0f, 9.0f)
-                lineTo(15.9296f, 9.0f)
-                lineTo(15.6676f, 8.4004f)
-                curveTo(15.0494f, 6.9856f, 13.6387f, 6.0f, 12.0f, 6.0f)
-                close()
-                moveTo(12.7071f, 18.7071f)
-                curveTo(12.3166f, 19.0976f, 11.6834f, 19.0976f, 11.2929f, 18.7071f)
-                lineTo(8.3657f, 15.7799f)
-                curveTo(7.8617f, 15.2759f, 8.2186f, 14.4142f, 8.9314f, 14.4142f)
-                lineTo(11.0f, 14.4142f)
-                lineTo(11.0f, 11.0f)
-                curveTo(11.0f, 10.4477f, 11.4477f, 10.0f, 12.0f, 10.0f)
-                curveTo(12.5523f, 10.0f, 13.0f, 10.4477f, 13.0f, 11.0f)
-                lineTo(13.0f, 14.4142f)
-                lineTo(15.0686f, 14.4142f)
-                curveTo(15.7813f, 14.4142f, 16.1383f, 15.2759f, 15.6343f, 15.7799f)
-                lineTo(12.7071f, 18.7071f)
-                close()
+val BezierIcons.CloudDownload: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _cloudDownload ?: ImageVector.Builder(
+                    name = "CloudDownload",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(12.0f, 6.0f)
+                    arcTo(4.0f, 4.0f, 270.0021612250254f, isMoreThanHalf = false, isPositiveArc = false, 8.02f, 9.599f)
+                    lineTo(7.93f, 10.5f)
+                    lineTo(6.25f, 10.5f)
+                    arcTo(3.25f, 3.25f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 6.25f, 17.0f)
+                    lineTo(7.0f, 17.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 7.0f, 19.0f)
+                    lineTo(6.25f, 19.0f)
+                    arcTo(5.25f, 5.25f, 89.67260021563486f, isMoreThanHalf = false, isPositiveArc = true, 6.19f, 8.5f)
+                    arcTo(6.002f, 6.002f, 194.50484111102298f, isMoreThanHalf = false, isPositiveArc = true, 17.199f, 7.003f)
+                    arcTo(6.0f, 6.0f, 271.8096417282573f, isMoreThanHalf = false, isPositiveArc = true, 17.0f, 19.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 17.0f, 17.0f)
+                    arcTo(4.0f, 4.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 17.0f, 9.0f)
+                    lineTo(15.93f, 9.0f)
+                    lineTo(15.668f, 8.4f)
+                    arcTo(4.0f, 4.0f, 336.4218288685546f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 6.0f)
+                    moveTo(12.707f, 18.707f)
+                    arcTo(1.0f, 1.0f, 45.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 11.293000000000001f, 18.707f)
+                    lineTo(8.366f, 15.78f)
+                    arcTo(0.8f, 0.8f, 134.96812051737223f, isMoreThanHalf = false, isPositiveArc = true, 8.931f, 14.414f)
+                    lineTo(11.0f, 14.414f)
+                    lineTo(11.0f, 11.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 13.0f, 11.0f)
+                    lineTo(13.0f, 14.414f)
+                    lineTo(15.068999999999999f, 14.414f)
+                    arcTo(0.8f, 0.8f, 270.02654147845976f, isMoreThanHalf = false, isPositiveArc = true, 15.633999999999999f, 15.78f)
+                    close()
+                }
+            }.build().also {
+                _cloudDownload = it
             }
-        }.build().also {
-            _cloudDownload = it
-        }
     }
+
 
 private var _cloudDownload: ImageVector? = null
 
@@ -81,7 +75,7 @@ private var _cloudDownload: ImageVector? = null
 private fun CloudDownloadIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CloudDownload,
+            imageVector = BezierIcons.CloudDownload.imageVector,
             contentDescription = null,
     )
 }

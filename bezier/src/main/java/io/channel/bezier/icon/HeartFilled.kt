@@ -16,37 +16,40 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.HeartFilled: ImageVector
-    get() {
-        return _heartFilled ?: ImageVector.Builder(
-                name = "HeartFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(20.3351f, 4.9667f)
-                curveTo(19.9291f, 4.5606f, 19.3961f, 4.2357f, 18.8191f, 3.9746f)
-                curveTo(16.4261f, 2.8926f, 13.2961f, 3.6806f, 12.0001f, 6.1326f)
-                curveTo(10.7031f, 3.6806f, 7.5731f, 2.8926f, 5.1811f, 3.9746f)
-                curveTo(4.6041f, 4.2357f, 4.0711f, 4.5606f, 3.6651f, 4.9667f)
-                curveTo(1.5121f, 7.1196f, 1.4601f, 10.3947f, 3.4321f, 12.7647f)
-                curveTo(5.5551f, 15.3157f, 9.1511f, 18.6707f, 11.3351f, 20.6427f)
-                curveTo(11.7151f, 20.9867f, 12.2841f, 20.9867f, 12.6651f, 20.6427f)
-                curveTo(14.8491f, 18.6707f, 18.4451f, 15.3157f, 20.5681f, 12.7647f)
-                curveTo(22.5391f, 10.3947f, 22.4881f, 7.1196f, 20.3351f, 4.9667f)
-                close()
+val BezierIcons.HeartFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _heartFilled ?: ImageVector.Builder(
+                    name = "HeartFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(20.335f, 4.967f)
+                    curveTo(19.929000000000002f, 4.561f, 19.396f, 4.236f, 18.819000000000003f, 3.9749999999999996f)
+                    curveTo(16.426f, 2.893f, 13.296f, 3.68f, 12.0f, 6.133f)
+                    curveTo(10.703f, 3.681f, 7.573f, 2.893f, 5.181f, 3.975f)
+                    curveTo(4.604f, 4.235f, 4.071f, 4.561f, 3.665f, 4.9670000000000005f)
+                    curveTo(1.512f, 7.120000000000001f, 1.46f, 10.395f, 3.432f, 12.765f)
+                    curveTo(5.555f, 15.315000000000001f, 9.152f, 18.671f, 11.334999999999999f, 20.643f)
+                    arcTo(0.986f, 0.986f, 132.41084807551394f, isMoreThanHalf = false, isPositiveArc = false, 12.665f, 20.643f)
+                    curveTo(14.849f, 18.671f, 18.445f, 15.316f, 20.567999999999998f, 12.765f)
+                    curveTo(22.538999999999998f, 10.395f, 22.488f, 7.120000000000001f, 20.334999999999997f, 4.9670000000000005f)
+                }
+            }.build().also {
+                _heartFilled = it
             }
-        }.build().also {
-            _heartFilled = it
-        }
     }
+
 
 private var _heartFilled: ImageVector? = null
 
@@ -55,7 +58,7 @@ private var _heartFilled: ImageVector? = null
 private fun HeartFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.HeartFilled,
+            imageVector = BezierIcons.HeartFilled.imageVector,
             contentDescription = null,
     )
 }

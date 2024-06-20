@@ -16,56 +16,56 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.EmailFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._emailFilled ?: ImageVector.Builder(
-                name = "EmailFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(2.436f, 6.184f)
-                curveTo(2.0f, 7.0397f, 2.0f, 8.1598f, 2.0f, 10.4f)
-                lineTo(2.0f, 13.6f)
-                curveTo(2.0f, 15.8402f, 2.0f, 16.9603f, 2.436f, 17.816f)
-                curveTo(2.8195f, 18.5686f, 3.4314f, 19.1805f, 4.184f, 19.564f)
-                curveTo(5.0397f, 20.0f, 6.1598f, 20.0f, 8.4f, 20.0f)
-                lineTo(15.6f, 20.0f)
-                curveTo(17.8402f, 20.0f, 18.9603f, 20.0f, 19.816f, 19.564f)
-                curveTo(20.5686f, 19.1805f, 21.1805f, 18.5686f, 21.564f, 17.816f)
-                curveTo(22.0f, 16.9603f, 22.0f, 15.8402f, 22.0f, 13.6f)
-                lineTo(22.0f, 10.4f)
-                curveTo(22.0f, 8.1598f, 22.0f, 7.0397f, 21.564f, 6.184f)
-                curveTo(21.1805f, 5.4314f, 20.5686f, 4.8195f, 19.816f, 4.436f)
-                curveTo(18.9603f, 4.0f, 17.8402f, 4.0f, 15.6f, 4.0f)
-                lineTo(8.4f, 4.0f)
-                curveTo(6.1598f, 4.0f, 5.0397f, 4.0f, 4.184f, 4.436f)
-                curveTo(3.4314f, 4.8195f, 2.8195f, 5.4314f, 2.436f, 6.184f)
-                close()
-                moveTo(5.4472f, 9.6056f)
-                curveTo(4.9532f, 9.3586f, 4.3526f, 9.5588f, 4.1056f, 10.0528f)
-                curveTo(3.8586f, 10.5468f, 4.0588f, 11.1474f, 4.5528f, 11.3944f)
-                lineTo(10.6584f, 14.4472f)
-                curveTo(11.5029f, 14.8695f, 12.4971f, 14.8695f, 13.3416f, 14.4472f)
-                lineTo(19.4472f, 11.3944f)
-                curveTo(19.9412f, 11.1474f, 20.1414f, 10.5468f, 19.8944f, 10.0528f)
-                curveTo(19.6474f, 9.5588f, 19.0468f, 9.3586f, 18.5528f, 9.6056f)
-                lineTo(12.4472f, 12.6584f)
-                curveTo(12.1657f, 12.7991f, 11.8343f, 12.7991f, 11.5528f, 12.6584f)
-                lineTo(5.4472f, 9.6056f)
-                close()
+val BezierIcons.EmailFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _emailFilled ?: ImageVector.Builder(
+                    name = "EmailFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(2.436f, 6.184f)
+                    curveTo(2.0f, 7.04f, 2.0f, 8.16f, 2.0f, 10.4f)
+                    lineTo(2.0f, 13.600000000000001f)
+                    curveTo(2.0f, 15.840000000000002f, 2.0f, 16.96f, 2.436f, 17.816000000000003f)
+                    arcTo(4.0f, 4.0f, 152.99931737283205f, isMoreThanHalf = false, isPositiveArc = false, 4.184f, 19.564000000000004f)
+                    curveTo(5.04f, 20.0f, 6.16f, 20.0f, 8.4f, 20.0f)
+                    lineTo(15.600000000000001f, 20.0f)
+                    curveTo(17.840000000000003f, 20.0f, 18.96f, 20.0f, 19.816000000000003f, 19.564f)
+                    arcTo(4.0f, 4.0f, 62.99931737283203f, isMoreThanHalf = false, isPositiveArc = false, 21.564000000000004f, 17.816f)
+                    curveTo(22.0f, 16.96f, 22.0f, 15.84f, 22.0f, 13.6f)
+                    lineTo(22.0f, 10.399999999999999f)
+                    curveTo(22.0f, 8.159999999999998f, 22.0f, 7.039999999999999f, 21.564f, 6.183999999999998f)
+                    arcTo(4.0f, 4.0f, 332.999317372832f, isMoreThanHalf = false, isPositiveArc = false, 19.816f, 4.435999999999998f)
+                    curveTo(18.96f, 4.0f, 17.84f, 4.0f, 15.6f, 4.0f)
+                    lineTo(8.4f, 4.0f)
+                    curveTo(6.16f, 4.0f, 5.040000000000001f, 4.0f, 4.184f, 4.436f)
+                    arcTo(4.0f, 4.0f, 242.99931737283202f, isMoreThanHalf = false, isPositiveArc = false, 2.436f, 6.184f)
+                    moveTo(5.447f, 9.606f)
+                    arcTo(1.0f, 1.0f, 294.7941535026274f, isMoreThanHalf = false, isPositiveArc = false, 4.553f, 11.394f)
+                    lineTo(10.658000000000001f, 14.447f)
+                    arcTo(3.0f, 3.0f, 116.57272167525814f, isMoreThanHalf = false, isPositiveArc = false, 13.342000000000002f, 14.447f)
+                    lineTo(19.447000000000003f, 11.393999999999998f)
+                    arcTo(1.0f, 1.0f, 65.20584649737336f, isMoreThanHalf = true, isPositiveArc = false, 18.553000000000004f, 9.605999999999998f)
+                    lineTo(12.447000000000005f, 12.657999999999998f)
+                    arcTo(1.0f, 1.0f, 63.44863064114032f, isMoreThanHalf = false, isPositiveArc = true, 11.553000000000004f, 12.657999999999998f)
+                    close()
+                }
+            }.build().also {
+                _emailFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._emailFilled = it
-        }
     }
+
 
 private var _emailFilled: ImageVector? = null
 
@@ -74,7 +74,7 @@ private var _emailFilled: ImageVector? = null
 private fun EmailFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.EmailFilled,
+            imageVector = BezierIcons.EmailFilled.imageVector,
             contentDescription = null,
     )
 }

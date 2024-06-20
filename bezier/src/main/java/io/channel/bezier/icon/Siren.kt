@@ -16,69 +16,63 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Siren: ImageVector
-    get() {
-        return _siren ?: ImageVector.Builder(
-                name = "Siren",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0f, 4.0f)
-                curveTo(11.4477f, 4.0f, 11.0f, 3.5523f, 11.0f, 3.0f)
-                lineTo(11.0f, 1.0f)
-                curveTo(11.0f, 0.4477f, 11.4477f, 0.0f, 12.0f, 0.0f)
-                curveTo(12.5523f, 0.0f, 13.0f, 0.4477f, 13.0f, 1.0f)
-                lineTo(13.0f, 3.0f)
-                curveTo(13.0f, 3.5523f, 12.5523f, 4.0f, 12.0f, 4.0f)
-                close()
-                moveTo(6.5355f, 5.5355f)
-                curveTo(6.145f, 5.9261f, 5.5118f, 5.9261f, 5.1213f, 5.5355f)
-                lineTo(3.7071f, 4.1213f)
-                curveTo(3.3166f, 3.7308f, 3.3166f, 3.0976f, 3.7071f, 2.7071f)
-                curveTo(4.0976f, 2.3166f, 4.7308f, 2.3166f, 5.1213f, 2.7071f)
-                lineTo(6.5355f, 4.1213f)
-                curveTo(6.9261f, 4.5118f, 6.9261f, 5.145f, 6.5355f, 5.5355f)
-                close()
-                moveTo(17.7071f, 4.1213f)
-                curveTo(17.3166f, 4.5118f, 17.3166f, 5.145f, 17.7071f, 5.5355f)
-                curveTo(18.0976f, 5.9261f, 18.7308f, 5.9261f, 19.1213f, 5.5355f)
-                lineTo(20.5355f, 4.1213f)
-                curveTo(20.9261f, 3.7308f, 20.9261f, 3.0976f, 20.5355f, 2.7071f)
-                curveTo(20.145f, 2.3166f, 19.5118f, 2.3166f, 19.1213f, 2.7071f)
-                lineTo(17.7071f, 4.1213f)
-                close()
-                moveTo(12.0071f, 5.0001f)
-                curveTo(8.1411f, 5.0001f, 5.0071f, 8.1341f, 5.0071f, 12.0001f)
-                lineTo(5.0071f, 20.0001f)
-                lineTo(4.0071f, 20.0001f)
-                lineTo(4.0071f, 22.0001f)
-                lineTo(20.0071f, 22.0001f)
-                lineTo(20.0071f, 20.0001f)
-                lineTo(19.0071f, 20.0001f)
-                lineTo(19.0071f, 12.0001f)
-                curveTo(19.0071f, 8.1341f, 15.8731f, 5.0001f, 12.0071f, 5.0001f)
-                close()
-                moveTo(9.0f, 10.0f)
-                curveTo(8.4477f, 10.0f, 8.0f, 10.4477f, 8.0f, 11.0f)
-                lineTo(8.0f, 17.0f)
-                curveTo(8.0f, 17.5523f, 8.4477f, 18.0f, 9.0f, 18.0f)
-                curveTo(9.5523f, 18.0f, 10.0f, 17.5523f, 10.0f, 17.0f)
-                lineTo(10.0f, 11.0f)
-                curveTo(10.0f, 10.4477f, 9.5523f, 10.0f, 9.0f, 10.0f)
-                close()
+val BezierIcons.Siren: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _siren ?: ImageVector.Builder(
+                    name = "Siren",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(12.0f, 4.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 11.0f, 3.0f)
+                    lineTo(11.0f, 1.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 13.0f, 1.0f)
+                    lineTo(13.0f, 3.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 4.0f)
+                    moveTo(6.536f, 5.536f)
+                    arcTo(1.0f, 1.0f, 44.96812921607166f, isMoreThanHalf = false, isPositiveArc = true, 5.1209999999999996f, 5.536f)
+                    lineTo(3.707f, 4.12f)
+                    arcTo(1.0f, 1.0f, 134.00425538642028f, isMoreThanHalf = true, isPositiveArc = true, 5.1209999999999996f, 2.7060000000000004f)
+                    lineTo(6.536f, 4.12f)
+                    arcTo(1.0f, 1.0f, 314.96812921607165f, isMoreThanHalf = false, isPositiveArc = true, 6.536f, 5.535f)
+                    moveTo(17.707f, 4.12f)
+                    arcTo(1.0f, 1.0f, 225.02025301418402f, isMoreThanHalf = false, isPositiveArc = false, 19.121000000000002f, 5.535f)
+                    lineTo(20.536f, 4.12f)
+                    arcTo(1.0f, 1.0f, 44.97974758928053f, isMoreThanHalf = true, isPositiveArc = false, 19.121000000000002f, 2.7060000000000004f)
+                    close()
+                    moveTo(12.007000000000001f, 5.0f)
+                    arcTo(7.0f, 7.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 5.0070000000000014f, 12.0f)
+                    lineTo(5.0070000000000014f, 20.0f)
+                    lineTo(4.0070000000000014f, 20.0f)
+                    lineTo(4.0070000000000014f, 22.0f)
+                    lineTo(20.007f, 22.0f)
+                    lineTo(20.007f, 20.0f)
+                    lineTo(19.007f, 20.0f)
+                    lineTo(19.007f, 12.0f)
+                    arcTo(7.0f, 7.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 12.007000000000001f, 5.0f)
+                    moveTo(9.0f, 10.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 8.0f, 11.0f)
+                    lineTo(8.0f, 17.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 10.0f, 17.0f)
+                    lineTo(10.0f, 11.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 9.0f, 10.0f)
+                }
+            }.build().also {
+                _siren = it
             }
-        }.build().also {
-            _siren = it
-        }
     }
+
 
 private var _siren: ImageVector? = null
 
@@ -87,7 +81,7 @@ private var _siren: ImageVector? = null
 private fun SirenIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Siren,
+            imageVector = BezierIcons.Siren.imageVector,
             contentDescription = null,
     )
 }

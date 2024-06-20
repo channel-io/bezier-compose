@@ -16,56 +16,53 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Strikethrough: ImageVector
-    get() {
-        return _strikethrough ?: ImageVector.Builder(
-                name = "Strikethrough",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(17.2074f, 5.2899f)
-                curveTo(14.9169f, 2.6722f, 10.9505f, 2.359f, 8.2484f, 4.5207f)
-                curveTo(7.5339f, 5.0923f, 6.9911f, 5.8645f, 6.7003f, 6.7368f)
-                curveTo(6.1902f, 8.267f, 6.4991f, 9.8222f, 7.3373f, 11.0f)
-                lineTo(4.0f, 11.0f)
-                curveTo(3.4477f, 11.0f, 3.0f, 11.4477f, 3.0f, 12.0f)
-                curveTo(3.0f, 12.5523f, 3.4477f, 13.0f, 4.0f, 13.0f)
-                lineTo(12.7854f, 13.0f)
-                curveTo(14.6682f, 13.0f, 15.9977f, 14.8446f, 15.4023f, 16.6308f)
-                curveTo(15.2349f, 17.1331f, 14.9192f, 17.584f, 14.5022f, 17.9176f)
-                curveTo(12.6218f, 19.4219f, 9.8717f, 19.1919f, 8.2977f, 17.3931f)
-                lineTo(8.2526f, 17.3415f)
-                curveTo(7.8889f, 16.9259f, 7.2571f, 16.8837f, 6.8415f, 17.2474f)
-                curveTo(6.4259f, 17.6111f, 6.3837f, 18.2429f, 6.7474f, 18.6585f)
-                lineTo(6.7926f, 18.7101f)
-                curveTo(9.083f, 21.3278f, 13.0495f, 21.641f, 15.7516f, 19.4793f)
-                curveTo(16.4661f, 18.9077f, 17.0089f, 18.1355f, 17.2997f, 17.2633f)
-                curveTo(17.8098f, 15.733f, 17.5008f, 14.1778f, 16.6627f, 13.0f)
-                lineTo(20.0f, 13.0f)
-                curveTo(20.5523f, 13.0f, 21.0f, 12.5523f, 21.0f, 12.0f)
-                curveTo(21.0f, 11.4477f, 20.5523f, 11.0f, 20.0f, 11.0f)
-                lineTo(11.2146f, 11.0f)
-                curveTo(9.3318f, 11.0f, 8.0023f, 9.1554f, 8.5977f, 7.3692f)
-                curveTo(8.7651f, 6.8669f, 9.0808f, 6.416f, 9.4978f, 6.0824f)
-                curveTo(11.3782f, 4.5781f, 14.1283f, 4.8081f, 15.7023f, 6.6069f)
-                lineTo(15.7474f, 6.6585f)
-                curveTo(16.1111f, 7.0741f, 16.7429f, 7.1163f, 17.1585f, 6.7526f)
-                curveTo(17.5741f, 6.3889f, 17.6163f, 5.7571f, 17.2526f, 5.3415f)
-                lineTo(17.2074f, 5.2899f)
-                close()
+val BezierIcons.Strikethrough: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _strikethrough ?: ImageVector.Builder(
+                    name = "Strikethrough",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(17.207f, 5.29f)
+                    curveTo(14.917000000000002f, 2.672f, 10.950000000000001f, 2.359f, 8.248000000000001f, 4.52f)
+                    arcTo(4.8f, 4.8f, 231.2767378080651f, isMoreThanHalf = false, isPositiveArc = false, 6.7f, 6.738f)
+                    arcTo(4.73f, 4.73f, 198.59869641040606f, isMoreThanHalf = false, isPositiveArc = false, 7.337f, 11.0f)
+                    lineTo(4.0f, 11.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 4.0f, 13.0f)
+                    lineTo(12.785f, 13.0f)
+                    arcTo(2.758f, 2.758f, 269.9568499147442f, isMoreThanHalf = false, isPositiveArc = true, 14.502f, 17.918f)
+                    curveTo(12.622f, 19.422f, 9.872f, 19.192f, 8.298000000000002f, 17.393f)
+                    lineTo(8.253000000000002f, 17.341f)
+                    arcTo(1.0f, 1.0f, 318.83023893063563f, isMoreThanHalf = false, isPositiveArc = false, 6.747000000000002f, 18.658f)
+                    lineTo(6.793000000000002f, 18.71f)
+                    curveTo(9.083000000000002f, 21.328f, 13.05f, 21.641000000000002f, 15.752000000000002f, 19.48f)
+                    arcTo(4.8f, 4.8f, 51.28376464949258f, isMoreThanHalf = false, isPositiveArc = false, 17.300000000000004f, 17.263f)
+                    arcTo(4.73f, 4.73f, 18.607390326641507f, isMoreThanHalf = false, isPositiveArc = false, 16.663f, 13.0f)
+                    lineTo(20.0f, 13.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 20.0f, 11.0f)
+                    lineTo(11.215f, 11.0f)
+                    arcTo(2.758f, 2.758f, 89.95684991474423f, isMoreThanHalf = false, isPositiveArc = true, 9.498f, 6.082f)
+                    curveTo(11.378f, 4.577999999999999f, 14.128f, 4.808f, 15.701999999999998f, 6.607f)
+                    lineTo(15.746999999999998f, 6.658f)
+                    arcTo(1.0f, 1.0f, 138.8302395339639f, isMoreThanHalf = false, isPositiveArc = false, 17.252999999999997f, 5.341f)
+                    close()
+                }
+            }.build().also {
+                _strikethrough = it
             }
-        }.build().also {
-            _strikethrough = it
-        }
     }
+
 
 private var _strikethrough: ImageVector? = null
 
@@ -74,7 +71,7 @@ private var _strikethrough: ImageVector? = null
 private fun StrikethroughIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Strikethrough,
+            imageVector = BezierIcons.Strikethrough.imageVector,
             contentDescription = null,
     )
 }

@@ -16,47 +16,47 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.CheckboxFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._checkboxFilled ?: ImageVector.Builder(
-                name = "CheckboxFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(8.0f, 3.0f)
-                curveTo(5.2386f, 3.0f, 3.0f, 5.2386f, 3.0f, 8.0f)
-                lineTo(3.0f, 16.0f)
-                curveTo(3.0f, 18.7614f, 5.2386f, 21.0f, 8.0f, 21.0f)
-                lineTo(16.0f, 21.0f)
-                curveTo(18.7614f, 21.0f, 21.0f, 18.7614f, 21.0f, 16.0f)
-                lineTo(21.0f, 8.0f)
-                curveTo(21.0f, 5.2386f, 18.7614f, 3.0f, 16.0f, 3.0f)
-                lineTo(8.0f, 3.0f)
-                close()
-                moveTo(15.3806f, 8.6615f)
-                lineTo(10.6666f, 13.3756f)
-                lineTo(8.6192f, 11.3282f)
-                curveTo(8.2287f, 10.9377f, 7.5955f, 10.9377f, 7.205f, 11.3282f)
-                curveTo(6.8145f, 11.7187f, 6.8145f, 12.3519f, 7.205f, 12.7424f)
-                lineTo(10.3578f, 15.8952f)
-                curveTo(10.5283f, 16.0658f, 10.8048f, 16.0658f, 10.9754f, 15.8952f)
-                lineTo(16.7949f, 10.0758f)
-                curveTo(17.1854f, 9.6852f, 17.1854f, 9.0521f, 16.7949f, 8.6615f)
-                curveTo(16.4043f, 8.271f, 15.7712f, 8.271f, 15.3806f, 8.6615f)
-                close()
+val BezierIcons.CheckboxFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _checkboxFilled ?: ImageVector.Builder(
+                    name = "CheckboxFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(8.0f, 3.0f)
+                    arcTo(5.0f, 5.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 3.0f, 8.0f)
+                    lineTo(3.0f, 16.0f)
+                    arcTo(5.0f, 5.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 8.0f, 21.0f)
+                    lineTo(16.0f, 21.0f)
+                    arcTo(5.0f, 5.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 21.0f, 16.0f)
+                    lineTo(21.0f, 8.0f)
+                    arcTo(5.0f, 5.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 16.0f, 3.0f)
+                    close()
+                    moveTo(15.379999999999999f, 8.661999999999999f)
+                    lineTo(10.666999999999998f, 13.376f)
+                    lineTo(8.618999999999998f, 11.328f)
+                    arcTo(1.0f, 1.0f, 314.00425538642025f, isMoreThanHalf = false, isPositiveArc = false, 7.204999999999998f, 12.741999999999999f)
+                    lineTo(10.357999999999999f, 15.895f)
+                    curveTo(10.527999999999999f, 16.065f, 10.804999999999998f, 16.065f, 10.974999999999998f, 15.895f)
+                    lineTo(16.794999999999998f, 10.075f)
+                    arcTo(1.0f, 1.0f, 43.15966534909231f, isMoreThanHalf = false, isPositiveArc = false, 15.380999999999998f, 8.661999999999999f)
+                }
+            }.build().also {
+                _checkboxFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._checkboxFilled = it
-        }
     }
+
 
 private var _checkboxFilled: ImageVector? = null
 
@@ -65,7 +65,7 @@ private var _checkboxFilled: ImageVector? = null
 private fun CheckboxFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.CheckboxFilled,
+            imageVector = BezierIcons.CheckboxFilled.imageVector,
             contentDescription = null,
     )
 }

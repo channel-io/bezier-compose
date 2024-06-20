@@ -9,54 +9,52 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Upload: ImageVector
-    get() {
-        return _upload ?: ImageVector.Builder(
-                name = "Upload",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(13.0f, 16.0f)
-                curveTo(13.0f, 16.5523f, 12.5523f, 17.0f, 12.0f, 17.0f)
-                curveTo(11.4477f, 17.0f, 11.0f, 16.5523f, 11.0f, 16.0f)
-                lineTo(11.0f, 6.4142f)
-                lineTo(7.2071f, 10.2071f)
-                curveTo(6.8166f, 10.5976f, 6.1834f, 10.5976f, 5.7929f, 10.2071f)
-                curveTo(5.4024f, 9.8166f, 5.4024f, 9.1834f, 5.7929f, 8.7929f)
-                lineTo(11.2929f, 3.2929f)
-                curveTo(11.6834f, 2.9024f, 12.3166f, 2.9024f, 12.7071f, 3.2929f)
-                lineTo(18.2071f, 8.7929f)
-                curveTo(18.5976f, 9.1834f, 18.5976f, 9.8166f, 18.2071f, 10.2071f)
-                curveTo(17.8166f, 10.5976f, 17.1834f, 10.5976f, 16.7929f, 10.2071f)
-                lineTo(13.0f, 6.4142f)
-                lineTo(13.0f, 16.0f)
-                close()
-                moveTo(5.0f, 20.0f)
-                curveTo(4.4477f, 20.0f, 4.0f, 20.4477f, 4.0f, 21.0f)
-                curveTo(4.0f, 21.5523f, 4.4477f, 22.0f, 5.0f, 22.0f)
-                lineTo(19.0f, 22.0f)
-                curveTo(19.5523f, 22.0f, 20.0f, 21.5523f, 20.0f, 21.0f)
-                curveTo(20.0f, 20.4477f, 19.5523f, 20.0f, 19.0f, 20.0f)
-                lineTo(5.0f, 20.0f)
-                close()
+val BezierIcons.Upload: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _upload ?: ImageVector.Builder(
+                    name = "Upload",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(13.0f, 15.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 11.0f, 15.0f)
+                    lineTo(11.0f, 5.414f)
+                    lineTo(7.207f, 9.207f)
+                    arcTo(1.0f, 1.0f, 45.99574461357973f, isMoreThanHalf = false, isPositiveArc = true, 5.793f, 7.793000000000001f)
+                    lineTo(11.293f, 2.293000000000001f)
+                    arcTo(1.0f, 1.0f, 225.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 12.706999999999999f, 2.293000000000001f)
+                    lineTo(18.207f, 7.793000000000001f)
+                    arcTo(1.0f, 1.0f, 315.99574461357764f, isMoreThanHalf = false, isPositiveArc = true, 16.793f, 9.207f)
+                    lineTo(13.0f, 5.414f)
+                    close()
+                    moveTo(5.0f, 19.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 5.0f, 21.0f)
+                    lineTo(19.0f, 21.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 19.0f, 19.0f)
+                    close()
+                }
+            }.build().also {
+                _upload = it
             }
-        }.build().also {
-            _upload = it
-        }
     }
+
 
 private var _upload: ImageVector? = null
 
@@ -65,7 +63,7 @@ private var _upload: ImageVector? = null
 private fun UploadIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Upload,
+            imageVector = BezierIcons.Upload.imageVector,
             contentDescription = null,
     )
 }

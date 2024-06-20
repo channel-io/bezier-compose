@@ -16,44 +16,47 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.SpaceVertical: ImageVector
-    get() {
-        return io.channel.bezier.icon._spaceVertical ?: ImageVector.Builder(
-                name = "SpaceVertical",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.7071f, 21.2929f)
-                curveTo(12.3166f, 21.6834f, 11.6834f, 21.6834f, 11.2929f, 21.2929f)
-                lineTo(8.3657f, 18.3657f)
-                curveTo(7.8617f, 17.8617f, 8.2186f, 17.0f, 8.9314f, 17.0f)
-                lineTo(11.0f, 17.0f)
-                lineTo(11.0f, 6.9999f)
-                lineTo(8.9314f, 6.9999f)
-                curveTo(8.2186f, 6.9999f, 7.8617f, 6.1382f, 8.3657f, 5.6343f)
-                lineTo(11.2929f, 2.7071f)
-                curveTo(11.6834f, 2.3165f, 12.3166f, 2.3165f, 12.7071f, 2.7071f)
-                lineTo(15.6343f, 5.6343f)
-                curveTo(16.1383f, 6.1382f, 15.7813f, 6.9999f, 15.0686f, 6.9999f)
-                lineTo(13.0f, 6.9999f)
-                lineTo(13.0f, 17.0f)
-                lineTo(15.0686f, 17.0f)
-                curveTo(15.7813f, 17.0f, 16.1383f, 17.8617f, 15.6343f, 18.3657f)
-                lineTo(12.7071f, 21.2929f)
-                close()
+val BezierIcons.SpaceVertical: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _spaceVertical ?: ImageVector.Builder(
+                    name = "SpaceVertical",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(12.707f, 21.293f)
+                    arcTo(1.0f, 1.0f, 45.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 11.293000000000001f, 21.293f)
+                    lineTo(8.366000000000001f, 18.366f)
+                    arcTo(0.8f, 0.8f, 134.96801042191746f, isMoreThanHalf = false, isPositiveArc = true, 8.93f, 17.0f)
+                    lineTo(11.0f, 17.0f)
+                    lineTo(11.0f, 7.0f)
+                    lineTo(8.931f, 7.0f)
+                    arcTo(0.8f, 0.8f, 90.02654147845973f, isMoreThanHalf = false, isPositiveArc = true, 8.366f, 5.634f)
+                    lineTo(11.293f, 2.7070000000000003f)
+                    arcTo(1.0f, 1.0f, 225.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 12.706999999999999f, 2.7070000000000003f)
+                    lineTo(15.633999999999999f, 5.634f)
+                    arcTo(0.8f, 0.8f, 314.9680104219174f, isMoreThanHalf = false, isPositiveArc = true, 15.07f, 7.0f)
+                    lineTo(13.0f, 7.0f)
+                    lineTo(13.0f, 17.0f)
+                    lineTo(15.068999999999999f, 17.0f)
+                    arcTo(0.8f, 0.8f, 270.02654147845976f, isMoreThanHalf = false, isPositiveArc = true, 15.633999999999999f, 18.366f)
+                    close()
+                }
+            }.build().also {
+                _spaceVertical = it
             }
-        }.build().also {
-            io.channel.bezier.icon._spaceVertical = it
-        }
     }
+
 
 private var _spaceVertical: ImageVector? = null
 
@@ -62,7 +65,7 @@ private var _spaceVertical: ImageVector? = null
 private fun SpaceVerticalIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.SpaceVertical,
+            imageVector = BezierIcons.SpaceVertical.imageVector,
             contentDescription = null,
     )
 }

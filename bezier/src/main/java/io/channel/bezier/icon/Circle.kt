@@ -9,35 +9,31 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Circle: ImageVector
-    get() {
-        return _circle ?: ImageVector.Builder(
-                name = "Circle",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(12.0f, 12.0f)
-                moveTo(2.0f, 12.0f)
-                arcTo(10.0f, 10.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 22.0f, 12.0f)
-                arcTo(10.0f, 10.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 2.0f, 12.0f)
+val BezierIcons.Circle: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _circle ?: ImageVector.Builder(
+                    name = "Circle",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+
+            }.build().also {
+                _circle = it
             }
-        }.build().also {
-            _circle = it
-        }
     }
+
 
 private var _circle: ImageVector? = null
 
@@ -46,7 +42,7 @@ private var _circle: ImageVector? = null
 private fun CircleIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Circle,
+            imageVector = BezierIcons.Circle.imageVector,
             contentDescription = null,
     )
 }
