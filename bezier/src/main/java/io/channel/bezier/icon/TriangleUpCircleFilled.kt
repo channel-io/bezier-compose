@@ -16,41 +16,43 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.TriangleUpCircleFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._triangleUpCircleFilled ?: ImageVector.Builder(
-                name = "TriangleUpCircleFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(11.9518f, 8.1685f)
-                curveTo(12.0368f, 8.1685f, 12.1218f, 8.2045f, 12.1818f, 8.2765f)
-                lineTo(16.5418f, 13.5075f)
-                curveTo(16.7038f, 13.7035f, 16.5658f, 14.0005f, 16.3108f, 14.0005f)
-                lineTo(7.5918f, 14.0005f)
-                curveTo(7.3378f, 14.0005f, 7.1988f, 13.7035f, 7.3618f, 13.5075f)
-                lineTo(11.7218f, 8.2765f)
-                curveTo(11.7808f, 8.2045f, 11.8668f, 8.1685f, 11.9518f, 8.1685f)
-                close()
-                moveTo(11.9998f, 2.0005f)
-                curveTo(6.4768f, 2.0005f, 1.9998f, 6.4775f, 1.9998f, 12.0005f)
-                curveTo(1.9998f, 17.5225f, 6.4768f, 22.0005f, 11.9998f, 22.0005f)
-                curveTo(17.5228f, 22.0005f, 21.9998f, 17.5225f, 21.9998f, 12.0005f)
-                curveTo(21.9998f, 6.4775f, 17.5228f, 2.0005f, 11.9998f, 2.0005f)
-                close()
+val BezierIcons.TriangleUpCircleFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _triangleUpCircleFilled ?: ImageVector.Builder(
+                    name = "TriangleUpCircleFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(11.952f, 8.168f)
+                    curveTo(12.037f, 8.168f, 12.122f, 8.203999999999999f, 12.182f, 8.276f)
+                    lineTo(16.542f, 13.508f)
+                    arcTo(0.3f, 0.3f, 319.95843903673824f, isMoreThanHalf = false, isPositiveArc = true, 16.311f, 14.001f)
+                    lineTo(7.59f, 14.001f)
+                    arcTo(0.3f, 0.3f, 89.93806540169308f, isMoreThanHalf = false, isPositiveArc = true, 7.359999999999999f, 13.508f)
+                    lineTo(11.719999999999999f, 8.276f)
+                    arcTo(0.3f, 0.3f, 219.79171054717517f, isMoreThanHalf = false, isPositiveArc = true, 11.95f, 8.168f)
+                    moveTo(12.0f, 2.0f)
+                    curveTo(6.477f, 2.0f, 2.0f, 6.477f, 2.0f, 12.0f)
+                    curveTo(2.0f, 17.523f, 6.477f, 22.0f, 12.0f, 22.0f)
+                    curveTo(17.523f, 22.0f, 22.0f, 17.523f, 22.0f, 12.0f)
+                    curveTo(22.0f, 6.477f, 17.523f, 2.0f, 12.0f, 2.0f)
+                }
+            }.build().also {
+                _triangleUpCircleFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._triangleUpCircleFilled = it
-        }
     }
+
 
 private var _triangleUpCircleFilled: ImageVector? = null
 
@@ -59,7 +61,7 @@ private var _triangleUpCircleFilled: ImageVector? = null
 private fun TriangleUpCircleFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.TriangleUpCircleFilled,
+            imageVector = BezierIcons.TriangleUpCircleFilled.imageVector,
             contentDescription = null,
     )
 }

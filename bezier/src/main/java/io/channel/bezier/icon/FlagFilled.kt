@@ -16,45 +16,43 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.FlagFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._flagFilled ?: ImageVector.Builder(
-                name = "FlagFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(5.0f, 3.0f)
-                curveTo(4.4477f, 3.0f, 4.0f, 3.4477f, 4.0f, 4.0f)
-                lineTo(4.0f, 21.0f)
-                curveTo(4.0f, 21.5523f, 4.4477f, 22.0f, 5.0f, 22.0f)
-                curveTo(5.5523f, 22.0f, 6.0f, 21.5523f, 6.0f, 21.0f)
-                lineTo(6.0f, 4.0f)
-                curveTo(6.0f, 3.4477f, 5.5523f, 3.0f, 5.0f, 3.0f)
-                close()
-                moveTo(8.0f, 3.0f)
-                curveTo(7.4477f, 3.0f, 7.0f, 3.4477f, 7.0f, 4.0f)
-                lineTo(7.0f, 14.0f)
-                curveTo(7.0f, 14.5523f, 7.4477f, 15.0f, 8.0f, 15.0f)
-                lineTo(20.382f, 15.0f)
-                curveTo(21.1253f, 15.0f, 21.6088f, 14.2177f, 21.2764f, 13.5528f)
-                lineTo(19.0f, 9.0f)
-                lineTo(21.2764f, 4.4472f)
-                curveTo(21.6088f, 3.7823f, 21.1253f, 3.0f, 20.382f, 3.0f)
-                lineTo(8.0f, 3.0f)
-                close()
+val BezierIcons.FlagFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _flagFilled ?: ImageVector.Builder(
+                    name = "FlagFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(5.0f, 4.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 4.0f, 5.0f)
+                    lineTo(4.0f, 21.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 5.0f, 22.0f)
+                    lineTo(6.0f, 22.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 7.0f, 21.0f)
+                    lineTo(7.0f, 15.0f)
+                    lineTo(20.036f, 15.0f)
+                    arcTo(1.0f, 1.0f, 90.00796867143366f, isMoreThanHalf = false, isPositiveArc = false, 20.845000000000002f, 13.411999999999999f)
+                    lineTo(18.0f, 9.5f)
+                    lineTo(20.845f, 5.588f)
+                    arcTo(1.0f, 1.0f, 36.01521090220225f, isMoreThanHalf = false, isPositiveArc = false, 20.036f, 4.0f)
+                    lineTo(5.0f, 4.0f)
+                }
+            }.build().also {
+                _flagFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._flagFilled = it
-        }
     }
+
 
 private var _flagFilled: ImageVector? = null
 
@@ -63,7 +61,7 @@ private var _flagFilled: ImageVector? = null
 private fun FlagFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.FlagFilled,
+            imageVector = BezierIcons.FlagFilled.imageVector,
             contentDescription = null,
     )
 }

@@ -16,37 +16,39 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ChevronDown: ImageVector
-    get() {
-        return _chevronDown ?: ImageVector.Builder(
-                name = "ChevronDown",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(19.7071f, 8.7929f)
-                curveTo(20.0976f, 9.1834f, 20.0976f, 9.8166f, 19.7071f, 10.2071f)
-                lineTo(12.7071f, 17.2071f)
-                curveTo(12.3166f, 17.5976f, 11.6834f, 17.5976f, 11.2929f, 17.2071f)
-                lineTo(4.2929f, 10.2071f)
-                curveTo(3.9024f, 9.8166f, 3.9024f, 9.1834f, 4.2929f, 8.7929f)
-                curveTo(4.6834f, 8.4024f, 5.3166f, 8.4024f, 5.7071f, 8.7929f)
-                lineTo(12.0f, 15.0858f)
-                lineTo(18.2929f, 8.7929f)
-                curveTo(18.6834f, 8.4024f, 19.3166f, 8.4024f, 19.7071f, 8.7929f)
-                close()
+val BezierIcons.ChevronDown: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _chevronDown ?: ImageVector.Builder(
+                    name = "ChevronDown",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(19.707f, 8.793f)
+                    arcTo(1.0f, 1.0f, 315.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 19.707f, 10.206999999999999f)
+                    lineTo(12.707f, 17.207f)
+                    arcTo(1.0f, 1.0f, 45.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 11.293000000000001f, 17.207f)
+                    lineTo(4.293000000000001f, 10.207f)
+                    arcTo(1.0f, 1.0f, 135.99574461357975f, isMoreThanHalf = false, isPositiveArc = true, 5.707000000000001f, 8.793000000000001f)
+                    lineTo(12.0f, 15.086f)
+                    lineTo(18.293f, 8.793f)
+                    arcTo(1.0f, 1.0f, 225.0086516628379f, isMoreThanHalf = false, isPositiveArc = true, 19.707f, 8.793f)
+                }
+            }.build().also {
+                _chevronDown = it
             }
-        }.build().also {
-            _chevronDown = it
-        }
     }
+
 
 private var _chevronDown: ImageVector? = null
 
@@ -55,7 +57,7 @@ private var _chevronDown: ImageVector? = null
 private fun ChevronDownIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ChevronDown,
+            imageVector = BezierIcons.ChevronDown.imageVector,
             contentDescription = null,
     )
 }

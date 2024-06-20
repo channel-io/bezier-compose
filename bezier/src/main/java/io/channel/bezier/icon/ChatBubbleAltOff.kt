@@ -16,66 +16,66 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ChatBubbleAltOff: ImageVector
-    get() {
-        return io.channel.bezier.icon._chatBubbleAltOff ?: ImageVector.Builder(
-                name = "ChatBubbleAltOff",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(3.7071f, 2.7071f)
-                curveTo(3.3166f, 3.0976f, 3.3166f, 3.7308f, 3.7071f, 4.1213f)
-                lineTo(20.6777f, 21.0919f)
-                curveTo(21.0682f, 21.4824f, 21.7014f, 21.4824f, 22.0919f, 21.0919f)
-                curveTo(22.4824f, 20.7014f, 22.4824f, 20.0682f, 22.0919f, 19.6777f)
-                lineTo(20.1245f, 17.7103f)
-                curveTo(21.5992f, 16.1773f, 22.5f, 14.2042f, 22.5f, 12.0f)
-                curveTo(22.5f, 6.8753f, 17.6311f, 3.0f, 12.0f, 3.0f)
-                curveTo(10.0781f, 3.0f, 8.2451f, 3.4514f, 6.664f, 4.2498f)
-                lineTo(5.1213f, 2.7071f)
-                curveTo(4.7308f, 2.3166f, 4.0976f, 2.3166f, 3.7071f, 2.7071f)
-                close()
-                moveTo(8.1632f, 5.749f)
-                lineTo(18.706f, 16.2918f)
-                curveTo(19.8398f, 15.0857f, 20.5f, 13.5813f, 20.5f, 12.0f)
-                curveTo(20.5f, 8.2881f, 16.8623f, 5.0f, 12.0f, 5.0f)
-                curveTo(10.6004f, 5.0f, 9.3023f, 5.2724f, 8.1632f, 5.749f)
-                close()
-                moveTo(1.5f, 12.0f)
-                curveTo(1.5f, 9.6705f, 2.5061f, 7.5991f, 4.1325f, 6.0325f)
-                lineTo(5.5494f, 7.4494f)
-                curveTo(4.2599f, 8.6954f, 3.5f, 10.3034f, 3.5f, 12.0f)
-                curveTo(3.5f, 14.2833f, 4.8434f, 16.3746f, 7.0359f, 17.679f)
-                lineTo(7.6912f, 18.0688f)
-                lineTo(7.4887f, 18.804f)
-                curveTo(7.3186f, 19.4215f, 7.0843f, 20.0074f, 6.8396f, 20.5258f)
-                curveTo(7.6379f, 20.2159f, 8.5352f, 19.751f, 9.3422f, 19.0609f)
-                lineTo(9.7031f, 18.7523f)
-                lineTo(10.1704f, 18.837f)
-                curveTo(10.7588f, 18.9436f, 11.3709f, 19.0f, 12.0f, 19.0f)
-                curveTo(13.5477f, 19.0f, 14.9713f, 18.6669f, 16.193f, 18.093f)
-                lineTo(17.6728f, 19.5728f)
-                curveTo(16.0179f, 20.4814f, 14.0599f, 21.0f, 12.0f, 21.0f)
-                curveTo(11.4131f, 21.0f, 10.8368f, 20.9588f, 10.2749f, 20.8793f)
-                curveTo(8.7919f, 22.0248f, 7.1768f, 22.5834f, 6.1243f, 22.8496f)
-                curveTo(5.4626f, 23.017f, 4.8646f, 22.7145f, 4.5536f, 22.2407f)
-                curveTo(4.254f, 21.7844f, 4.2088f, 21.1639f, 4.5203f, 20.6348f)
-                curveTo(4.7899f, 20.1768f, 5.0952f, 19.592f, 5.3352f, 18.9584f)
-                curveTo(3.0311f, 17.3352f, 1.5f, 14.8483f, 1.5f, 12.0f)
-                close()
+val BezierIcons.ChatBubbleAltOff: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _chatBubbleAltOff ?: ImageVector.Builder(
+                    name = "ChatBubbleAltOff",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(3.707f, 2.707f)
+                    arcTo(1.0f, 1.0f, 224.99134833716198f, isMoreThanHalf = false, isPositiveArc = false, 3.707f, 4.1209999999999996f)
+                    lineTo(20.677f, 21.090999999999998f)
+                    arcTo(1.0f, 1.0f, 134.04560044921752f, isMoreThanHalf = false, isPositiveArc = false, 22.092f, 19.677999999999997f)
+                    lineTo(20.125f, 17.709999999999997f)
+                    curveTo(21.599f, 16.177f, 22.5f, 14.204f, 22.5f, 12.0f)
+                    curveTo(22.5f, 6.875f, 17.631f, 3.0f, 12.0f, 3.0f)
+                    curveTo(10.078f, 3.0f, 8.245000000000001f, 3.451f, 6.664f, 4.25f)
+                    lineTo(5.121f, 2.707f)
+                    arcTo(1.0f, 1.0f, 314.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 3.7070000000000007f, 2.707f)
+                    moveTo(8.163f, 5.75f)
+                    lineTo(18.706f, 16.293f)
+                    curveTo(19.84f, 15.086f, 20.5f, 13.582f, 20.5f, 12.0f)
+                    curveTo(20.5f, 8.288f, 16.862000000000002f, 5.0f, 12.0f, 5.0f)
+                    curveTo(10.6f, 5.0f, 9.302f, 5.272f, 8.163f, 5.749f)
+                    moveTo(1.5f, 12.0f)
+                    curveTo(1.5f, 9.67f, 2.5060000000000002f, 7.6f, 4.133f, 6.033f)
+                    lineTo(5.5489999999999995f, 7.449f)
+                    curveTo(4.26f, 8.695f, 3.5f, 10.303f, 3.5f, 12.0f)
+                    curveTo(3.5f, 14.283f, 4.843f, 16.375f, 7.036f, 17.679000000000002f)
+                    lineTo(7.691f, 18.069000000000003f)
+                    lineTo(7.489f, 18.804000000000002f)
+                    arcTo(11.0f, 11.0f, 15.880754073958554f, isMoreThanHalf = false, isPositiveArc = true, 6.8389999999999995f, 20.526000000000003f)
+                    curveTo(7.638f, 20.216000000000005f, 8.535f, 19.751000000000005f, 9.341999999999999f, 19.061000000000003f)
+                    lineTo(9.703f, 18.752000000000002f)
+                    lineTo(10.17f, 18.837000000000003f)
+                    quadTo(11.054f, 18.999000000000002f, 12.0f, 19.000000000000004f)
+                    curveTo(13.548f, 19.000000000000004f, 14.971f, 18.667000000000005f, 16.192999999999998f, 18.093000000000004f)
+                    lineTo(17.673f, 19.573000000000004f)
+                    curveTo(16.018f, 20.48f, 14.06f, 21.0f, 12.0f, 21.0f)
+                    quadTo(11.119f, 21.0f, 10.275f, 20.88f)
+                    curveTo(8.792f, 22.025f, 7.1770000000000005f, 22.583f, 6.125f, 22.849999999999998f)
+                    arcTo(1.44f, 1.44f, 75.40601595157139f, isMoreThanHalf = false, isPositiveArc = true, 4.554f, 22.24f)
+                    arcTo(1.52f, 1.52f, 146.91068856921098f, isMoreThanHalf = false, isPositiveArc = true, 4.5200000000000005f, 20.634999999999998f)
+                    curveTo(4.790000000000001f, 20.177f, 5.095000000000001f, 19.592f, 5.335000000000001f, 18.958f)
+                    curveTo(3.031f, 17.335f, 1.5f, 14.848f, 1.5f, 12.0f)
+                }
+            }.build().also {
+                _chatBubbleAltOff = it
             }
-        }.build().also {
-            io.channel.bezier.icon._chatBubbleAltOff = it
-        }
     }
+
 
 private var _chatBubbleAltOff: ImageVector? = null
 
@@ -84,7 +84,7 @@ private var _chatBubbleAltOff: ImageVector? = null
 private fun ChatBubbleAltOffIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ChatBubbleAltOff,
+            imageVector = BezierIcons.ChatBubbleAltOff.imageVector,
             contentDescription = null,
     )
 }

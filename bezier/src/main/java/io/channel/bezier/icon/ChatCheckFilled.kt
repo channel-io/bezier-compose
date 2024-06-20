@@ -16,47 +16,50 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ChatCheckFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._chatCheckFilled ?: ImageVector.Builder(
-                name = "ChatCheckFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(20.8223f, 16.683f)
-                curveTo(20.5763f, 17.144f, 20.5573f, 17.694f, 20.7233f, 18.19f)
-                lineTo(21.3613f, 20.105f)
-                curveTo(21.6223f, 20.886f, 20.8793f, 21.63f, 20.0973f, 21.37f)
-                curveTo(19.6395f, 21.2172f, 19.1583f, 21.0569f, 18.7279f, 20.9135f)
-                curveTo(18.5302f, 20.8476f, 18.3433f, 20.7853f, 18.1743f, 20.729f)
-                curveTo(17.6813f, 20.565f, 17.1373f, 20.584f, 16.6783f, 20.829f)
-                curveTo(14.7293f, 21.868f, 12.4033f, 22.29f, 9.9473f, 21.796f)
-                curveTo(5.9463f, 20.991f, 2.7823f, 17.703f, 2.1293f, 13.675f)
-                curveTo(1.0233f, 6.848f, 6.8373f, 1.033f, 13.6643f, 2.137f)
-                curveTo(17.6933f, 2.789f, 20.9823f, 5.954f, 21.7873f, 9.954f)
-                curveTo(22.2813f, 12.409f, 21.8613f, 14.734f, 20.8223f, 16.683f)
-                close()
-                moveTo(7.3625f, 10.978f)
-                lineTo(10.4035f, 13.898f)
-                lineTo(16.5805f, 8.094f)
-                lineTo(17.9495f, 9.551f)
-                lineTo(10.3885f, 16.657f)
-                lineTo(5.9775f, 12.421f)
-                lineTo(7.3625f, 10.978f)
-                close()
+val BezierIcons.ChatCheckFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _chatCheckFilled ?: ImageVector.Builder(
+                    name = "ChatCheckFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(20.822f, 16.683f)
+                    curveTo(20.576f, 17.144f, 20.557f, 17.694f, 20.723f, 18.19f)
+                    lineTo(21.361f, 20.105f)
+                    arcTo(1.0f, 1.0f, 341.5796019120572f, isMoreThanHalf = false, isPositiveArc = true, 20.097f, 21.37f)
+                    lineTo(18.727f, 20.913f)
+                    lineTo(18.174f, 20.729f)
+                    curveTo(17.681f, 20.564999999999998f, 17.137f, 20.584f, 16.678f, 20.829f)
+                    curveTo(14.729000000000001f, 21.868000000000002f, 12.403f, 22.29f, 9.948f, 21.796f)
+                    curveTo(5.946000000000001f, 20.991f, 2.782f, 17.703f, 2.1290000000000004f, 13.674999999999999f)
+                    arcTo(10.013f, 10.013f, 170.4353703196768f, isMoreThanHalf = false, isPositiveArc = true, 13.664f, 2.137f)
+                    curveTo(17.694f, 2.789f, 20.982f, 5.954000000000001f, 21.787f, 9.954f)
+                    curveTo(22.281f, 12.409f, 21.861f, 14.734000000000002f, 20.822f, 16.683f)
+                    moveTo(8.084f, 11.671f)
+                    lineTo(10.404f, 13.898f)
+                    lineTo(15.852f, 8.777999999999999f)
+                    arcTo(1.0f, 1.0f, 227.21657521144041f, isMoreThanHalf = false, isPositiveArc = true, 17.222f, 10.235f)
+                    lineTo(11.1f, 15.989f)
+                    arcTo(1.03f, 1.03f, 46.8998740059744f, isMoreThanHalf = false, isPositiveArc = true, 9.684f, 15.981000000000002f)
+                    lineTo(6.7f, 13.113f)
+                    arcTo(1.0f, 1.0f, 135.25172610641144f, isMoreThanHalf = false, isPositiveArc = true, 8.085f, 11.671f)
+                }
+            }.build().also {
+                _chatCheckFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._chatCheckFilled = it
-        }
     }
+
 
 private var _chatCheckFilled: ImageVector? = null
 
@@ -65,7 +68,7 @@ private var _chatCheckFilled: ImageVector? = null
 private fun ChatCheckFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ChatCheckFilled,
+            imageVector = BezierIcons.ChatCheckFilled.imageVector,
             contentDescription = null,
     )
 }

@@ -16,84 +16,70 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.SignalLocked: ImageVector
-    get() {
-        return io.channel.bezier.icon._signalLocked ?: ImageVector.Builder(
-                name = "SignalLocked",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(6.3432f, 17.6568f)
-                curveTo(3.219f, 14.5326f, 3.219f, 9.4673f, 6.3432f, 6.3431f)
-                curveTo(6.7337f, 5.9526f, 6.7337f, 5.3194f, 6.3432f, 4.9289f)
-                curveTo(5.9526f, 4.5384f, 5.3195f, 4.5384f, 4.9289f, 4.9289f)
-                curveTo(1.0237f, 8.8341f, 1.0237f, 15.1658f, 4.9289f, 19.071f)
-                curveTo(5.3195f, 19.4615f, 5.9526f, 19.4615f, 6.3432f, 19.071f)
-                curveTo(6.7337f, 18.6805f, 6.7337f, 18.0473f, 6.3432f, 17.6568f)
-                close()
-                moveTo(9.1716f, 9.1715f)
-                curveTo(7.6095f, 10.7336f, 7.6095f, 13.2663f, 9.1716f, 14.8284f)
-                curveTo(9.5621f, 15.2189f, 9.5621f, 15.8521f, 9.1716f, 16.2426f)
-                curveTo(8.781f, 16.6331f, 8.1479f, 16.6331f, 7.7573f, 16.2426f)
-                curveTo(5.4142f, 13.8994f, 5.4142f, 10.1005f, 7.7573f, 7.7573f)
-                curveTo(8.1479f, 7.3668f, 8.781f, 7.3668f, 9.1716f, 7.7573f)
-                curveTo(9.5621f, 8.1478f, 9.5621f, 8.781f, 9.1716f, 9.1715f)
-                close()
-                moveTo(14.0f, 11.9999f)
-                curveTo(14.0f, 13.1045f, 13.1046f, 13.9999f, 12.0f, 13.9999f)
-                curveTo(10.8954f, 13.9999f, 10.0f, 13.1045f, 10.0f, 11.9999f)
-                curveTo(10.0f, 10.8954f, 10.8954f, 10.0f, 12.0f, 10.0f)
-                curveTo(13.1046f, 10.0f, 14.0f, 10.8954f, 14.0f, 11.9999f)
-                close()
-                moveTo(19.5f, 15.0f)
-                lineTo(19.5f, 14.5f)
-                curveTo(19.5f, 13.9477f, 19.0523f, 13.5f, 18.5f, 13.5f)
-                curveTo(17.9477f, 13.5f, 17.5f, 13.9477f, 17.5f, 14.5f)
-                lineTo(17.5f, 15.0f)
-                lineTo(19.5f, 15.0f)
-                close()
-                moveTo(21.0f, 15.0854f)
-                lineTo(21.0f, 14.5f)
-                curveTo(21.0f, 13.1193f, 19.8807f, 12.0f, 18.5f, 12.0f)
-                curveTo(17.1193f, 12.0f, 16.0f, 13.1193f, 16.0f, 14.5f)
-                lineTo(16.0f, 15.0854f)
-                curveTo(15.4174f, 15.2913f, 15.0f, 15.8469f, 15.0f, 16.5f)
-                lineTo(15.0f, 19.5f)
-                curveTo(15.0f, 20.3284f, 15.6716f, 21.0f, 16.5f, 21.0f)
-                lineTo(20.5f, 21.0f)
-                curveTo(21.3284f, 21.0f, 22.0f, 20.3284f, 22.0f, 19.5f)
-                lineTo(22.0f, 16.5f)
-                curveTo(22.0f, 15.8469f, 21.5826f, 15.2913f, 21.0f, 15.0854f)
-                close()
-                moveTo(14.8284f, 7.7529f)
-                curveTo(15.2189f, 7.3624f, 15.8521f, 7.3624f, 16.2426f, 7.7529f)
-                curveTo(16.79f, 8.3002f, 17.2107f, 8.929f, 17.503f, 9.6013f)
-                curveTo(17.7233f, 10.1078f, 17.4912f, 10.6969f, 16.9847f, 10.9171f)
-                curveTo(16.4782f, 11.1373f, 15.8891f, 10.9053f, 15.6689f, 10.3988f)
-                curveTo(15.475f, 9.9528f, 15.1955f, 9.5342f, 14.8284f, 9.1671f)
-                curveTo(14.4379f, 8.7766f, 14.4379f, 8.1434f, 14.8284f, 7.7529f)
-                close()
-                moveTo(19.0711f, 4.9329f)
-                curveTo(18.6805f, 4.5424f, 18.0474f, 4.5424f, 17.6568f, 4.9329f)
-                curveTo(17.2663f, 5.3235f, 17.2663f, 5.9566f, 17.6568f, 6.3471f)
-                curveTo(18.7639f, 7.4542f, 19.4774f, 8.8023f, 19.8001f, 10.2217f)
-                curveTo(19.9226f, 10.7603f, 20.4584f, 11.0976f, 20.997f, 10.9751f)
-                curveTo(21.5355f, 10.8527f, 21.8728f, 10.3169f, 21.7504f, 9.7783f)
-                curveTo(21.3465f, 8.0021f, 20.4525f, 6.3143f, 19.0711f, 4.9329f)
-                close()
+val BezierIcons.SignalLocked: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _signalLocked ?: ImageVector.Builder(
+                    name = "SignalLocked",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(6.343f, 17.657f)
+                    arcTo(8.0f, 8.0f, 134.99852373843032f, isMoreThanHalf = false, isPositiveArc = true, 6.343f, 6.343f)
+                    arcTo(1.0f, 1.0f, 42.626210285057745f, isMoreThanHalf = false, isPositiveArc = false, 4.93f, 4.93f)
+                    curveTo(1.025f, 8.834999999999999f, 1.025f, 15.167f, 4.93f, 19.072f)
+                    arcTo(1.0f, 1.0f, 134.00425538642241f, isMoreThanHalf = false, isPositiveArc = false, 6.343999999999999f, 17.657999999999998f)
+                    moveTo(9.173f, 9.172999999999998f)
+                    arcTo(4.0f, 4.0f, 224.99134833716198f, isMoreThanHalf = false, isPositiveArc = false, 9.173f, 14.828999999999997f)
+                    arcTo(1.0f, 1.0f, 315.0f, isMoreThanHalf = true, isPositiveArc = true, 7.758f, 16.243999999999996f)
+                    arcTo(6.0f, 6.0f, 134.99514736576194f, isMoreThanHalf = false, isPositiveArc = true, 7.758f, 7.757999999999996f)
+                    arcTo(1.0f, 1.0f, 224.99999999999997f, isMoreThanHalf = true, isPositiveArc = true, 9.173f, 9.172999999999995f)
+                    moveTo(14.0f, 12.0f)
+                    arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 10.0f, 12.0f)
+                    arcTo(2.0f, 2.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 14.0f, 12.0f)
+                    moveTo(19.5f, 15.0f)
+                    lineTo(19.5f, 14.5f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = false, 17.5f, 14.5f)
+                    lineTo(17.5f, 15.0f)
+                    close()
+                    moveTo(21.0f, 15.085f)
+                    lineTo(21.0f, 14.5f)
+                    arcTo(2.5f, 2.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 16.0f, 14.5f)
+                    lineTo(16.0f, 15.085f)
+                    arcTo(1.5f, 1.5f, 250.52878771643222f, isMoreThanHalf = false, isPositiveArc = false, 15.0f, 16.5f)
+                    lineTo(15.0f, 19.5f)
+                    arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 16.5f, 21.0f)
+                    lineTo(20.5f, 21.0f)
+                    arcTo(1.5f, 1.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 22.0f, 19.5f)
+                    lineTo(22.0f, 16.5f)
+                    arcTo(1.5f, 1.5f, 0.030036922313578466f, isMoreThanHalf = false, isPositiveArc = false, 21.0f, 15.085f)
+                    moveTo(14.828f, 7.753000000000001f)
+                    arcTo(1.0f, 1.0f, 224.9681292160717f, isMoreThanHalf = false, isPositiveArc = true, 16.243f, 7.753000000000001f)
+                    arcTo(6.0f, 6.0f, 314.9709761121437f, isMoreThanHalf = false, isPositiveArc = true, 17.503f, 9.601f)
+                    arcTo(1.0f, 1.0f, 336.4854422715026f, isMoreThanHalf = true, isPositiveArc = true, 15.669f, 10.399000000000001f)
+                    arcTo(4.0f, 4.0f, 336.45526993343833f, isMoreThanHalf = false, isPositiveArc = false, 14.829f, 9.167000000000002f)
+                    arcTo(1.0f, 1.0f, 135.00865166283802f, isMoreThanHalf = false, isPositiveArc = true, 14.829f, 7.753000000000002f)
+                    moveTo(19.072000000000003f, 4.933000000000002f)
+                    arcTo(1.0f, 1.0f, 314.0042553864224f, isMoreThanHalf = false, isPositiveArc = false, 17.658f, 6.347000000000001f)
+                    arcTo(7.96f, 7.96f, 314.90634689962764f, isMoreThanHalf = false, isPositiveArc = true, 19.801000000000002f, 10.222000000000001f)
+                    arcTo(1.0f, 1.0f, 166.62630138560579f, isMoreThanHalf = false, isPositiveArc = false, 21.751f, 9.778f)
+                    arcTo(9.96f, 9.96f, 347.1966115279938f, isMoreThanHalf = false, isPositiveArc = false, 19.072000000000003f, 4.933000000000001f)
+                }
+            }.build().also {
+                _signalLocked = it
             }
-        }.build().also {
-            io.channel.bezier.icon._signalLocked = it
-        }
     }
+
 
 private var _signalLocked: ImageVector? = null
 
@@ -102,7 +88,7 @@ private var _signalLocked: ImageVector? = null
 private fun SignalLockedIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.SignalLocked,
+            imageVector = BezierIcons.SignalLocked.imageVector,
             contentDescription = null,
     )
 }

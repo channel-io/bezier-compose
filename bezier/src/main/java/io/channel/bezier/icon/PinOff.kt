@@ -9,68 +9,69 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.PinOff: ImageVector
-    get() {
-        return io.channel.bezier.icon._pinOff ?: ImageVector.Builder(
-                name = "PinOff",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(3.0f, 2.5f)
-                curveTo(2.6095f, 2.8905f, 2.6095f, 3.5237f, 3.0f, 3.9142f)
-                lineTo(20.0858f, 21.0f)
-                curveTo(20.4763f, 21.3905f, 21.1095f, 21.3905f, 21.5f, 21.0f)
-                curveTo(21.8905f, 20.6095f, 21.8905f, 19.9763f, 21.5f, 19.5858f)
-                lineTo(15.463f, 13.5487f)
-                curveTo(15.5017f, 13.5022f, 15.5426f, 13.4573f, 15.5858f, 13.4142f)
-                lineTo(17.1537f, 11.8462f)
-                curveTo(17.3812f, 11.6188f, 17.6602f, 11.4495f, 17.9671f, 11.3529f)
-                lineTo(19.7075f, 10.8046f)
-                curveTo(21.1395f, 10.3536f, 21.5825f, 8.5444f, 20.5209f, 7.4828f)
-                lineTo(16.5284f, 3.4904f)
-                curveTo(15.4707f, 2.4326f, 13.6685f, 2.868f, 13.2103f, 4.292f)
-                lineTo(12.648f, 6.04f)
-                curveTo(12.5507f, 6.3423f, 12.3829f, 6.6171f, 12.1583f, 6.8417f)
-                lineTo(10.5858f, 8.4142f)
-                curveTo(10.5426f, 8.4573f, 10.4977f, 8.4983f, 10.4512f, 8.537f)
-                lineTo(4.4142f, 2.5f)
-                curveTo(4.0237f, 2.1095f, 3.3905f, 2.1095f, 3.0f, 2.5f)
-                close()
-                moveTo(5.3973f, 9.0f)
-                lineTo(6.0858f, 9.0f)
-                lineTo(15.0f, 17.9142f)
-                lineTo(15.0f, 18.7098f)
-                curveTo(15.0f, 19.2175f, 14.8069f, 19.7062f, 14.4599f, 20.0768f)
-                lineTo(14.3475f, 20.1968f)
-                curveTo(13.9612f, 20.6093f, 13.3101f, 20.62f, 12.9105f, 20.2204f)
-                lineTo(9.0662f, 16.3761f)
-                lineTo(3.8532f, 21.5882f)
-                curveTo(3.4627f, 21.9786f, 2.8296f, 21.9786f, 2.4392f, 21.5881f)
-                curveTo(2.0487f, 21.1976f, 2.0487f, 20.5645f, 2.4392f, 20.1741f)
-                lineTo(7.6522f, 14.9611f)
-                lineTo(3.8444f, 11.1533f)
-                curveTo(3.4698f, 10.7787f, 3.4523f, 10.177f, 3.8045f, 9.7813f)
-                lineTo(3.9034f, 9.6702f)
-                curveTo(4.2829f, 9.2439f, 4.8265f, 9.0f, 5.3973f, 9.0f)
-                close()
+val BezierIcons.PinOff: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _pinOff ?: ImageVector.Builder(
+                    name = "PinOff",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(3.0f, 2.5f)
+                    arcTo(1.0f, 1.0f, 224.99134833716198f, isMoreThanHalf = false, isPositiveArc = false, 3.0f, 3.9139999999999997f)
+                    lineTo(20.086f, 21.0f)
+                    arcTo(1.0f, 1.0f, 134.00425538642457f, isMoreThanHalf = false, isPositiveArc = false, 21.5f, 19.586f)
+                    lineTo(15.463000000000001f, 13.549f)
+                    arcTo(2.0f, 2.0f, 219.7200963310611f, isMoreThanHalf = false, isPositiveArc = true, 15.586f, 13.414f)
+                    lineTo(17.154f, 11.846f)
+                    arcTo(2.0f, 2.0f, 225.0167306003742f, isMoreThanHalf = false, isPositiveArc = true, 17.967f, 11.353f)
+                    lineTo(19.706999999999997f, 10.805f)
+                    curveTo(21.139999999999997f, 10.354f, 21.581999999999997f, 8.545f, 20.520999999999997f, 7.483f)
+                    lineTo(16.528f, 3.49f)
+                    curveTo(15.470999999999998f, 2.4330000000000003f, 13.668f, 2.8680000000000003f, 13.209999999999999f, 4.292f)
+                    lineTo(12.648f, 6.04f)
+                    arcTo(2.0f, 2.0f, 17.834483397919865f, isMoreThanHalf = false, isPositiveArc = true, 12.158f, 6.8420000000000005f)
+                    lineTo(10.585999999999999f, 8.414000000000001f)
+                    arcTo(2.0f, 2.0f, 45.0460978631956f, isMoreThanHalf = false, isPositiveArc = true, 10.450999999999999f, 8.537f)
+                    lineTo(4.414f, 2.5f)
+                    arcTo(1.0f, 1.0f, 314.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 3.0f, 2.5f)
+                    moveTo(5.397f, 9.0f)
+                    lineTo(6.086f, 9.0f)
+                    lineTo(15.0f, 17.914f)
+                    lineTo(15.0f, 18.71f)
+                    arcTo(2.0f, 2.0f, 359.99697171674836f, isMoreThanHalf = false, isPositiveArc = true, 14.46f, 20.077f)
+                    lineTo(14.347000000000001f, 20.197000000000003f)
+                    arcTo(1.0f, 1.0f, 43.18520469988963f, isMoreThanHalf = false, isPositiveArc = true, 12.911000000000001f, 20.220000000000002f)
+                    lineTo(9.066f, 16.376f)
+                    lineTo(3.8530000000000006f, 21.588f)
+                    arcTo(1.0f, 1.0f, 45.99574461357758f, isMoreThanHalf = false, isPositiveArc = true, 2.439000000000001f, 20.174f)
+                    lineTo(7.652000000000001f, 14.960999999999999f)
+                    lineTo(3.844000000000001f, 11.152999999999999f)
+                    arcTo(1.0f, 1.0f, 134.9927823298888f, isMoreThanHalf = false, isPositiveArc = true, 3.804000000000001f, 9.780999999999999f)
+                    lineTo(3.9040000000000012f, 9.671f)
+                    arcTo(2.0f, 2.0f, 221.6439144884379f, isMoreThanHalf = false, isPositiveArc = true, 5.396f, 9.0f)
+                }
+            }.build().also {
+                _pinOff = it
             }
-        }.build().also {
-            io.channel.bezier.icon._pinOff = it
-        }
     }
+
 
 private var _pinOff: ImageVector? = null
 
@@ -79,7 +80,7 @@ private var _pinOff: ImageVector? = null
 private fun PinOffIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.PinOff,
+            imageVector = BezierIcons.PinOff.imageVector,
             contentDescription = null,
     )
 }

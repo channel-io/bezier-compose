@@ -16,69 +16,67 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.ContactFilled: ImageVector
-    get() {
-        return _contactFilled ?: ImageVector.Builder(
-                name = "ContactFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(3.0055f, 7.0064f)
-                curveTo(3.0236f, 5.6525f, 3.1015f, 4.8404f, 3.436f, 4.184f)
-                curveTo(3.8195f, 3.4314f, 4.4314f, 2.8195f, 5.184f, 2.436f)
-                curveTo(6.0397f, 2.0f, 7.1598f, 2.0f, 9.4f, 2.0f)
-                lineTo(14.6f, 2.0f)
-                curveTo(16.8402f, 2.0f, 17.9603f, 2.0f, 18.816f, 2.436f)
-                curveTo(19.5686f, 2.8195f, 20.1805f, 3.4314f, 20.564f, 4.184f)
-                curveTo(21.0f, 5.0397f, 21.0f, 6.1598f, 21.0f, 8.4f)
-                lineTo(21.0f, 15.6f)
-                curveTo(21.0f, 17.8402f, 21.0f, 18.9603f, 20.564f, 19.816f)
-                curveTo(20.1805f, 20.5686f, 19.5686f, 21.1805f, 18.816f, 21.564f)
-                curveTo(17.9603f, 22.0f, 16.8402f, 22.0f, 14.6f, 22.0f)
-                lineTo(9.4f, 22.0f)
-                curveTo(7.1598f, 22.0f, 6.0397f, 22.0f, 5.184f, 21.564f)
-                curveTo(4.4314f, 21.1805f, 3.8195f, 20.5686f, 3.436f, 19.816f)
-                curveTo(3.1015f, 19.1596f, 3.0236f, 18.3475f, 3.0055f, 16.9936f)
-                curveTo(2.839f, 16.9853f, 2.7204f, 16.9666f, 2.6173f, 16.9239f)
-                curveTo(2.3723f, 16.8224f, 2.1776f, 16.6277f, 2.0761f, 16.3827f)
-                curveTo(2.0f, 16.1989f, 2.0f, 15.9659f, 2.0f, 15.5f)
-                curveTo(2.0f, 15.0341f, 2.0f, 14.8011f, 2.0761f, 14.6173f)
-                curveTo(2.1776f, 14.3723f, 2.3723f, 14.1776f, 2.6173f, 14.0761f)
-                curveTo(2.7193f, 14.0339f, 2.8364f, 14.0151f, 3.0f, 14.0067f)
-                lineTo(3.0f, 9.9933f)
-                curveTo(2.8364f, 9.9849f, 2.7193f, 9.9661f, 2.6173f, 9.9239f)
-                curveTo(2.3723f, 9.8224f, 2.1776f, 9.6277f, 2.0761f, 9.3827f)
-                curveTo(2.0f, 9.1989f, 2.0f, 8.9659f, 2.0f, 8.5f)
-                curveTo(2.0f, 8.0341f, 2.0f, 7.8011f, 2.0761f, 7.6173f)
-                curveTo(2.1776f, 7.3723f, 2.3723f, 7.1776f, 2.6173f, 7.0761f)
-                curveTo(2.7204f, 7.0334f, 2.839f, 7.0147f, 3.0055f, 7.0064f)
-                close()
-                moveTo(12.0f, 11.5f)
-                curveTo(13.1046f, 11.5f, 14.0f, 10.6046f, 14.0f, 9.5f)
-                curveTo(14.0f, 8.3954f, 13.1046f, 7.5f, 12.0f, 7.5f)
-                curveTo(10.8954f, 7.5f, 10.0f, 8.3954f, 10.0f, 9.5f)
-                curveTo(10.0f, 10.6046f, 10.8954f, 11.5f, 12.0f, 11.5f)
-                close()
-                moveTo(16.2144f, 17.0f)
-                lineTo(7.786f, 17.0f)
-                curveTo(7.6253f, 17.0f, 7.4903f, 16.865f, 7.5005f, 16.7056f)
-                curveTo(7.6523f, 14.3513f, 9.6093f, 12.4907f, 12.0008f, 12.4907f)
-                curveTo(14.3911f, 12.4907f, 16.3481f, 14.3513f, 16.4999f, 16.7056f)
-                curveTo(16.5101f, 16.865f, 16.3751f, 17.0f, 16.2144f, 17.0f)
-                close()
+val BezierIcons.ContactFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _contactFilled ?: ImageVector.Builder(
+                    name = "ContactFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(3.006f, 7.006f)
+                    curveTo(3.0239999999999996f, 5.652f, 3.102f, 4.84f, 3.436f, 4.184f)
+                    arcTo(4.0f, 4.0f, 207.00068262716798f, isMoreThanHalf = false, isPositiveArc = true, 5.184f, 2.436f)
+                    curveTo(6.04f, 2.0f, 7.16f, 2.0f, 9.4f, 2.0f)
+                    lineTo(14.600000000000001f, 2.0f)
+                    curveTo(16.840000000000003f, 2.0f, 17.96f, 2.0f, 18.816000000000003f, 2.436f)
+                    arcTo(4.0f, 4.0f, 297.000682627168f, isMoreThanHalf = false, isPositiveArc = true, 20.564000000000004f, 4.184f)
+                    curveTo(21.0f, 5.04f, 21.0f, 6.16f, 21.0f, 8.4f)
+                    lineTo(21.0f, 15.600000000000001f)
+                    curveTo(21.0f, 17.840000000000003f, 21.0f, 18.96f, 20.564f, 19.816000000000003f)
+                    arcTo(4.0f, 4.0f, 27.000682627167965f, isMoreThanHalf = false, isPositiveArc = true, 18.816f, 21.564000000000004f)
+                    curveTo(17.96f, 22.0f, 16.84f, 22.0f, 14.6f, 22.0f)
+                    lineTo(9.4f, 22.0f)
+                    curveTo(7.16f, 22.0f, 6.040000000000001f, 22.0f, 5.184f, 21.564f)
+                    arcTo(4.0f, 4.0f, 117.000682627168f, isMoreThanHalf = false, isPositiveArc = true, 3.436f, 19.816f)
+                    curveTo(3.102f, 19.16f, 3.024f, 18.348f, 3.006f, 16.994f)
+                    arcTo(1.2f, 1.2f, 90.72208699239216f, isMoreThanHalf = false, isPositiveArc = true, 2.617f, 16.924f)
+                    arcTo(1.0f, 1.0f, 112.58351463699576f, isMoreThanHalf = false, isPositiveArc = true, 2.077f, 16.383f)
+                    curveTo(2.0f, 16.199f, 2.0f, 15.966f, 2.0f, 15.5f)
+                    curveTo(2.0f, 15.034f, 2.0f, 14.801f, 2.076f, 14.617f)
+                    arcTo(1.0f, 1.0f, 202.5835146369958f, isMoreThanHalf = false, isPositiveArc = true, 2.617f, 14.077000000000002f)
+                    curveTo(2.719f, 14.034000000000002f, 2.837f, 14.015000000000002f, 3.0f, 14.007000000000001f)
+                    lineTo(3.0f, 9.993f)
+                    arcTo(1.1f, 1.1f, 90.16390245685083f, isMoreThanHalf = false, isPositiveArc = true, 2.617f, 9.923f)
+                    arcTo(1.0f, 1.0f, 112.55244179822644f, isMoreThanHalf = false, isPositiveArc = true, 2.077f, 9.383f)
+                    curveTo(2.0f, 9.199f, 2.0f, 8.966f, 2.0f, 8.5f)
+                    curveTo(2.0f, 8.034f, 2.0f, 7.801f, 2.076f, 7.617f)
+                    arcTo(1.0f, 1.0f, 202.58351463699574f, isMoreThanHalf = false, isPositiveArc = true, 2.617f, 7.077f)
+                    curveTo(2.72f, 7.033f, 2.839f, 7.015f, 3.0060000000000002f, 7.007f)
+                    moveTo(12.0f, 11.5f)
+                    arcTo(2.0f, 2.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 12.0f, 7.5f)
+                    arcTo(2.0f, 2.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 11.5f)
+                    moveTo(16.214f, 17.0f)
+                    lineTo(7.786f, 17.0f)
+                    arcTo(0.284f, 0.284f, 89.76270667844182f, isMoreThanHalf = false, isPositiveArc = true, 7.5009999999999994f, 16.706f)
+                    arcTo(4.51f, 4.51f, 183.91046410475488f, isMoreThanHalf = false, isPositiveArc = true, 16.5f, 16.706f)
+                    arcTo(0.284f, 0.284f, 357.9804423639535f, isMoreThanHalf = false, isPositiveArc = true, 16.214f, 17.0f)
+                }
+            }.build().also {
+                _contactFilled = it
             }
-        }.build().also {
-            _contactFilled = it
-        }
     }
+
 
 private var _contactFilled: ImageVector? = null
 
@@ -87,7 +85,7 @@ private var _contactFilled: ImageVector? = null
 private fun ContactFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.ContactFilled,
+            imageVector = BezierIcons.ContactFilled.imageVector,
             contentDescription = null,
     )
 }

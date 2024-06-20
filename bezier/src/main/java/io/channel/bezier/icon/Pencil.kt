@@ -16,49 +16,48 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Pencil: ImageVector
-    get() {
-        return io.channel.bezier.icon._pencil ?: ImageVector.Builder(
-                name = "Pencil",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(16.7767f, 10.395f)
-                lineTo(6.6753f, 20.4964f)
-                lineTo(3.2773f, 20.4815f)
-                lineTo(3.2773f, 17.3363f)
-                lineTo(13.5662f, 7.1845f)
-                lineTo(16.7767f, 10.395f)
-                close()
-                moveTo(18.1909f, 8.9807f)
-                lineTo(19.5758f, 7.5959f)
-                curveTo(20.4571f, 6.7145f, 20.4571f, 5.2855f, 19.5758f, 4.4042f)
-                curveTo(18.6986f, 3.527f, 17.2779f, 3.5222f, 16.3948f, 4.3935f)
-                lineTo(14.9899f, 5.7797f)
-                lineTo(18.1909f, 8.9807f)
-                close()
-                moveTo(20.99f, 9.0101f)
-                lineTo(7.5f, 22.5f)
-                lineTo(2.2729f, 22.4771f)
-                curveTo(1.7224f, 22.4747f, 1.2773f, 22.0277f, 1.2773f, 21.4771f)
-                lineTo(1.2773f, 16.5001f)
-                lineTo(14.9901f, 2.9699f)
-                curveTo(16.6557f, 1.3265f, 19.3354f, 1.3354f, 20.99f, 2.99f)
-                curveTo(22.6524f, 4.6524f, 22.6524f, 7.3477f, 20.99f, 9.0101f)
-                close()
+val BezierIcons.Pencil: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _pencil ?: ImageVector.Builder(
+                    name = "Pencil",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(16.777f, 10.395f)
+                    lineTo(6.675f, 20.496f)
+                    lineTo(3.2769999999999997f, 20.482f)
+                    lineTo(3.2769999999999997f, 17.336f)
+                    lineTo(13.566999999999998f, 7.183999999999999f)
+                    close()
+                    moveTo(18.191000000000003f, 8.981f)
+                    lineTo(19.576000000000004f, 7.596f)
+                    arcTo(2.257f, 2.257f, 44.32469838403331f, isMoreThanHalf = false, isPositiveArc = false, 16.395000000000003f, 4.394f)
+                    lineTo(14.99f, 5.78f)
+                    close()
+                    moveTo(20.990000000000002f, 9.011f)
+                    lineTo(7.5f, 22.5f)
+                    lineTo(2.2729999999999997f, 22.477f)
+                    arcTo(1.0f, 1.0f, 90.22918372737823f, isMoreThanHalf = false, isPositiveArc = true, 1.2769999999999997f, 21.477f)
+                    lineTo(1.2769999999999997f, 16.5f)
+                    lineTo(14.99f, 2.97f)
+                    arcTo(4.257f, 4.257f, 225.7369082750439f, isMoreThanHalf = false, isPositiveArc = true, 20.990000000000002f, 9.01f)
+                }
+            }.build().also {
+                _pencil = it
             }
-        }.build().also {
-            io.channel.bezier.icon._pencil = it
-        }
     }
+
 
 private var _pencil: ImageVector? = null
 
@@ -67,7 +66,7 @@ private var _pencil: ImageVector? = null
 private fun PencilIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Pencil,
+            imageVector = BezierIcons.Pencil.imageVector,
             contentDescription = null,
     )
 }

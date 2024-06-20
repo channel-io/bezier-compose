@@ -9,79 +9,79 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Shuffle: ImageVector
-    get() {
-        return io.channel.bezier.icon._shuffle ?: ImageVector.Builder(
-                name = "Shuffle",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(17.0f, 10.0686f)
-                lineTo(17.0f, 8.0f)
-                lineTo(16.0826f, 8.0f)
-                curveTo(15.1037f, 8.0f, 14.1863f, 8.4776f, 13.6249f, 9.2796f)
-                lineTo(9.0135f, 15.8673f)
-                curveTo(8.0779f, 17.2039f, 6.549f, 18.0f, 4.9174f, 18.0f)
-                lineTo(3.0f, 18.0f)
-                curveTo(2.4477f, 18.0f, 2.0f, 17.5523f, 2.0f, 17.0f)
-                curveTo(2.0f, 16.4477f, 2.4477f, 16.0f, 3.0f, 16.0f)
-                lineTo(4.9174f, 16.0f)
-                curveTo(5.8963f, 16.0f, 6.8137f, 15.5224f, 7.3751f, 14.7204f)
-                lineTo(11.9865f, 8.1327f)
-                curveTo(12.9221f, 6.7961f, 14.4511f, 6.0f, 16.0826f, 6.0f)
-                lineTo(17.0f, 6.0f)
-                lineTo(17.0f, 3.9314f)
-                curveTo(17.0f, 3.2186f, 17.8617f, 2.8617f, 18.3657f, 3.3657f)
-                lineTo(21.2929f, 6.2929f)
-                curveTo(21.6834f, 6.6834f, 21.6834f, 7.3166f, 21.2929f, 7.7071f)
-                lineTo(18.3657f, 10.6343f)
-                curveTo(17.8617f, 11.1383f, 17.0f, 10.7813f, 17.0f, 10.0686f)
-                close()
-                moveTo(9.0135f, 8.1327f)
-                lineTo(9.8897f, 9.3843f)
-                lineTo(8.669f, 11.1281f)
-                lineTo(7.3751f, 9.2796f)
-                curveTo(6.8137f, 8.4776f, 5.8963f, 8.0f, 4.9174f, 8.0f)
-                lineTo(3.0f, 8.0f)
-                curveTo(2.4477f, 8.0f, 2.0f, 7.5523f, 2.0f, 7.0f)
-                curveTo(2.0f, 6.4477f, 2.4477f, 6.0f, 3.0f, 6.0f)
-                lineTo(4.9174f, 6.0f)
-                curveTo(6.549f, 6.0f, 8.0779f, 6.7961f, 9.0135f, 8.1327f)
-                close()
-                moveTo(11.9865f, 15.8673f)
-                lineTo(11.1103f, 14.6157f)
-                lineTo(12.331f, 12.8719f)
-                lineTo(13.6249f, 14.7204f)
-                curveTo(14.1863f, 15.5224f, 15.1037f, 16.0f, 16.0826f, 16.0f)
-                lineTo(17.0f, 16.0f)
-                lineTo(17.0f, 13.9316f)
-                curveTo(17.0f, 13.2189f, 17.8617f, 12.862f, 18.3657f, 13.3659f)
-                lineTo(21.2929f, 16.2931f)
-                curveTo(21.6834f, 16.6837f, 21.6834f, 17.3168f, 21.2929f, 17.7073f)
-                lineTo(18.3657f, 20.6346f)
-                curveTo(17.8617f, 21.1385f, 17.0f, 20.7816f, 17.0f, 20.0689f)
-                lineTo(17.0f, 18.0f)
-                lineTo(16.0826f, 18.0f)
-                curveTo(14.4511f, 18.0f, 12.9221f, 17.2039f, 11.9865f, 15.8673f)
-                close()
+val BezierIcons.Shuffle: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _shuffle ?: ImageVector.Builder(
+                    name = "Shuffle",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(17.0f, 10.069f)
+                    lineTo(17.0f, 8.0f)
+                    lineTo(16.083f, 8.0f)
+                    arcTo(3.0f, 3.0f, 270.0006371396154f, isMoreThanHalf = false, isPositiveArc = false, 13.624999999999998f, 9.28f)
+                    lineTo(9.014f, 15.866999999999999f)
+                    arcTo(5.0f, 5.0f, 34.98765950747208f, isMoreThanHalf = false, isPositiveArc = true, 4.917f, 18.0f)
+                    lineTo(3.0f, 18.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 3.0f, 16.0f)
+                    lineTo(4.917f, 16.0f)
+                    arcTo(3.0f, 3.0f, 90.00063713961536f, isMoreThanHalf = false, isPositiveArc = false, 7.375f, 14.72f)
+                    lineTo(11.986f, 8.133000000000001f)
+                    arcTo(5.0f, 5.0f, 214.98765636900484f, isMoreThanHalf = false, isPositiveArc = true, 16.084f, 6.0f)
+                    lineTo(17.0f, 6.0f)
+                    lineTo(17.0f, 3.931f)
+                    arcTo(0.8f, 0.8f, 180.02654147844697f, isMoreThanHalf = false, isPositiveArc = true, 18.366f, 3.366f)
+                    lineTo(21.293f, 6.293f)
+                    arcTo(1.0f, 1.0f, 315.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 21.293f, 7.707f)
+                    lineTo(18.366f, 10.634f)
+                    arcTo(0.8f, 0.8f, 44.96801042191744f, isMoreThanHalf = false, isPositiveArc = true, 17.0f, 10.07f)
+                    moveTo(9.014f, 8.133f)
+                    lineTo(9.889999999999999f, 9.383999999999999f)
+                    lineTo(8.668999999999999f, 11.127999999999998f)
+                    lineTo(7.375f, 9.28f)
+                    arcTo(3.0f, 3.0f, 325.01700213510094f, isMoreThanHalf = false, isPositiveArc = false, 4.917f, 8.0f)
+                    lineTo(3.0f, 8.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 3.0f, 6.0f)
+                    lineTo(4.917f, 6.0f)
+                    arcTo(5.0f, 5.0f, 269.9928703112855f, isMoreThanHalf = false, isPositiveArc = true, 9.014f, 8.133f)
+                    moveTo(11.987f, 15.867f)
+                    lineTo(11.11f, 14.616000000000001f)
+                    lineTo(12.331f, 12.872000000000002f)
+                    lineTo(13.625f, 14.720000000000002f)
+                    arcTo(3.0f, 3.0f, 145.01700213510088f, isMoreThanHalf = false, isPositiveArc = false, 16.083f, 16.0f)
+                    lineTo(17.0f, 16.0f)
+                    lineTo(17.0f, 13.932f)
+                    arcTo(0.8f, 0.8f, 179.9549101409432f, isMoreThanHalf = false, isPositiveArc = true, 18.366f, 13.366f)
+                    lineTo(21.293f, 16.293f)
+                    arcTo(1.0f, 1.0f, 315.0086516628379f, isMoreThanHalf = false, isPositiveArc = true, 21.293f, 17.707f)
+                    lineTo(18.366f, 20.635f)
+                    arcTo(0.8f, 0.8f, 44.9681041109744f, isMoreThanHalf = false, isPositiveArc = true, 17.0f, 20.069f)
+                    lineTo(17.0f, 18.0f)
+                    lineTo(16.083f, 18.0f)
+                    arcTo(5.0f, 5.0f, 90.0043292712165f, isMoreThanHalf = false, isPositiveArc = true, 11.986999999999998f, 15.867f)
+                }
+            }.build().also {
+                _shuffle = it
             }
-        }.build().also {
-            io.channel.bezier.icon._shuffle = it
-        }
     }
+
 
 private var _shuffle: ImageVector? = null
 
@@ -90,7 +90,7 @@ private var _shuffle: ImageVector? = null
 private fun ShuffleIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Shuffle,
+            imageVector = BezierIcons.Shuffle.imageVector,
             contentDescription = null,
     )
 }

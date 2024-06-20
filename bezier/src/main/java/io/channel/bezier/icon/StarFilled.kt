@@ -16,43 +16,46 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.StarFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._starFilled ?: ImageVector.Builder(
-                name = "StarFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0002f, 17.7598f)
-                lineTo(16.7852f, 21.2358f)
-                curveTo(17.8922f, 22.0398f, 19.3802f, 20.9578f, 18.9582f, 19.6568f)
-                lineTo(17.1302f, 14.0318f)
-                lineTo(21.9152f, 10.5558f)
-                curveTo(23.0212f, 9.7518f, 22.4532f, 8.0008f, 21.0852f, 8.0008f)
-                lineTo(15.1712f, 8.0008f)
-                lineTo(13.3432f, 2.3758f)
-                curveTo(12.9202f, 1.0748f, 11.0802f, 1.0748f, 10.6572f, 2.3758f)
-                lineTo(8.8292f, 8.0008f)
-                lineTo(2.9152f, 8.0008f)
-                curveTo(1.5472f, 8.0008f, 0.9782f, 9.7518f, 2.0842f, 10.5558f)
-                lineTo(6.8692f, 14.0318f)
-                lineTo(5.0422f, 19.6568f)
-                curveTo(4.6192f, 20.9578f, 6.1082f, 22.0398f, 7.2152f, 21.2358f)
-                lineTo(12.0002f, 17.7598f)
-                close()
+val BezierIcons.StarFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _starFilled ?: ImageVector.Builder(
+                    name = "StarFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(12.0f, 17.76f)
+                    lineTo(16.785f, 21.236f)
+                    curveTo(17.892f, 22.04f, 19.38f, 20.958000000000002f, 18.958f, 19.656f)
+                    lineTo(17.13f, 14.032f)
+                    lineTo(21.915f, 10.556000000000001f)
+                    curveTo(23.021f, 9.752f, 22.453f, 8.001000000000001f, 21.085f, 8.001000000000001f)
+                    lineTo(15.171000000000001f, 8.001000000000001f)
+                    lineTo(13.343000000000002f, 2.3760000000000012f)
+                    curveTo(12.920000000000002f, 1.0750000000000013f, 11.080000000000002f, 1.0750000000000013f, 10.657000000000002f, 2.3760000000000012f)
+                    lineTo(8.83f, 8.0f)
+                    lineTo(2.915f, 8.0f)
+                    curveTo(1.547f, 8.0f, 0.978f, 9.75f, 2.085f, 10.555f)
+                    lineTo(6.869f, 14.030999999999999f)
+                    lineTo(5.042f, 19.656f)
+                    curveTo(4.619f, 20.956f, 6.108f, 22.038999999999998f, 7.215f, 21.235f)
+                    close()
+                }
+            }.build().also {
+                _starFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._starFilled = it
-        }
     }
+
 
 private var _starFilled: ImageVector? = null
 
@@ -61,7 +64,7 @@ private var _starFilled: ImageVector? = null
 private fun StarFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.StarFilled,
+            imageVector = BezierIcons.StarFilled.imageVector,
             contentDescription = null,
     )
 }

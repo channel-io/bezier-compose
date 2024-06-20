@@ -16,46 +16,48 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.VideocamFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._videocamFilled ?: ImageVector.Builder(
-                name = "VideocamFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(13.9981f, 6.0001f)
-                lineTo(4.0021f, 6.0001f)
-                curveTo(2.8971f, 6.0001f, 2.0021f, 6.8961f, 2.0021f, 8.0001f)
-                lineTo(2.0021f, 16.0001f)
-                curveTo(2.0021f, 17.1041f, 2.8971f, 18.0001f, 4.0021f, 18.0001f)
-                lineTo(13.9981f, 18.0001f)
-                curveTo(15.1031f, 18.0001f, 15.9981f, 17.1041f, 15.9981f, 16.0001f)
-                lineTo(15.9981f, 8.0001f)
-                curveTo(15.9981f, 6.8961f, 15.1031f, 6.0001f, 13.9981f, 6.0001f)
-                close()
-                moveTo(21.1877f, 17.3495f)
-                lineTo(17.1877f, 14.1505f)
-                curveTo(17.0687f, 14.0545f, 17.0007f, 13.9115f, 17.0007f, 13.7595f)
-                lineTo(17.0007f, 10.2405f)
-                curveTo(17.0007f, 10.0885f, 17.0687f, 9.9445f, 17.1877f, 9.8495f)
-                lineTo(21.1877f, 6.6495f)
-                curveTo(21.5147f, 6.3875f, 21.9997f, 6.6215f, 21.9997f, 7.0405f)
-                lineTo(21.9997f, 16.9605f)
-                curveTo(21.9997f, 17.3795f, 21.5147f, 17.6125f, 21.1877f, 17.3495f)
-                close()
+val BezierIcons.VideocamFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _videocamFilled ?: ImageVector.Builder(
+                    name = "VideocamFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(13.998f, 6.0f)
+                    lineTo(4.002f, 6.0f)
+                    arcTo(2.0f, 2.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 2.002f, 8.0f)
+                    lineTo(2.002f, 16.0f)
+                    arcTo(2.0f, 2.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 4.002f, 18.0f)
+                    lineTo(13.998000000000001f, 18.0f)
+                    arcTo(2.0f, 2.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 15.998000000000001f, 16.0f)
+                    lineTo(15.998000000000001f, 8.0f)
+                    arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 13.998000000000001f, 6.0f)
+                    moveTo(21.188000000000002f, 17.35f)
+                    lineTo(17.188000000000002f, 14.150000000000002f)
+                    arcTo(0.5f, 0.5f, 128.75562134106767f, isMoreThanHalf = false, isPositiveArc = true, 17.001f, 13.760000000000002f)
+                    lineTo(17.001f, 10.240000000000002f)
+                    arcTo(0.5f, 0.5f, 179.98986262433894f, isMoreThanHalf = false, isPositiveArc = true, 17.188000000000002f, 9.850000000000001f)
+                    lineTo(21.188000000000002f, 6.650000000000001f)
+                    arcTo(0.5f, 0.5f, 231.39109801289013f, isMoreThanHalf = false, isPositiveArc = true, 22.000000000000004f, 7.040000000000001f)
+                    lineTo(22.000000000000004f, 16.96f)
+                    arcTo(0.5f, 0.5f, 0.08156237144868975f, isMoreThanHalf = false, isPositiveArc = true, 21.188000000000002f, 17.35f)
+                }
+            }.build().also {
+                _videocamFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._videocamFilled = it
-        }
     }
+
 
 private var _videocamFilled: ImageVector? = null
 
@@ -64,7 +66,7 @@ private var _videocamFilled: ImageVector? = null
 private fun VideocamFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.VideocamFilled,
+            imageVector = BezierIcons.VideocamFilled.imageVector,
             contentDescription = null,
     )
 }

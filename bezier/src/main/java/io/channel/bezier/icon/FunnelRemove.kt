@@ -16,70 +16,67 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.FunnelRemove: ImageVector
-    get() {
-        return io.channel.bezier.icon._funnelRemove ?: ImageVector.Builder(
-                name = "FunnelRemove",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(15.0f, 12.8284f)
-                lineTo(15.0f, 11.0f)
-                lineTo(14.0f, 11.0f)
-                lineTo(13.4423f, 11.0f)
-                lineTo(10.5577f, 11.0f)
-                curveTo(10.3697f, 10.6342f, 10.1247f, 10.2962f, 9.8284f, 10.0f)
-                lineTo(5.0f, 5.1716f)
-                lineTo(5.0f, 4.0f)
-                lineTo(13.0f, 4.0f)
-                lineTo(13.0f, 2.0f)
-                lineTo(4.0f, 2.0f)
-                curveTo(3.4477f, 2.0f, 3.0f, 2.4477f, 3.0f, 3.0f)
-                lineTo(3.0f, 5.1716f)
-                curveTo(3.0f, 5.702f, 3.2107f, 6.2107f, 3.5858f, 6.5858f)
-                lineTo(8.4142f, 11.4142f)
-                curveTo(8.7893f, 11.7893f, 9.0f, 12.298f, 9.0f, 12.8284f)
-                lineTo(9.0f, 21.382f)
-                curveTo(9.0f, 21.5372f, 9.0361f, 21.6903f, 9.1056f, 21.8292f)
-                curveTo(9.3526f, 22.3232f, 9.9532f, 22.5234f, 10.4472f, 22.2764f)
-                lineTo(14.4472f, 20.2764f)
-                curveTo(14.786f, 20.107f, 15.0f, 19.7607f, 15.0f, 19.382f)
-                lineTo(15.0f, 13.0f)
-                lineTo(15.0f, 12.8284f)
-                close()
-                moveTo(13.0f, 13.0f)
-                lineTo(13.0f, 18.763f)
-                lineTo(11.0f, 19.763f)
-                lineTo(11.0f, 13.0f)
-                lineTo(13.0f, 13.0f)
-                close()
-                moveTo(14.4628f, 3.8788f)
-                lineTo(16.5841f, 6.0001f)
-                lineTo(14.4628f, 8.1214f)
-                lineTo(15.877f, 9.5357f)
-                lineTo(17.9983f, 7.4143f)
-                lineTo(20.1197f, 9.5357f)
-                lineTo(21.5339f, 8.1214f)
-                lineTo(19.4126f, 6.0001f)
-                lineTo(21.5339f, 3.8788f)
-                lineTo(20.1197f, 2.4646f)
-                lineTo(17.9983f, 4.5859f)
-                lineTo(15.877f, 2.4646f)
-                lineTo(14.4628f, 3.8788f)
-                close()
+val BezierIcons.FunnelRemove: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _funnelRemove ?: ImageVector.Builder(
+                    name = "FunnelRemove",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(15.0f, 12.828f)
+                    lineTo(15.0f, 11.0f)
+                    lineTo(10.558f, 11.0f)
+                    arcTo(4.0f, 4.0f, 332.7736027155424f, isMoreThanHalf = false, isPositiveArc = false, 9.828f, 10.0f)
+                    lineTo(5.0f, 5.172f)
+                    lineTo(5.0f, 4.0f)
+                    lineTo(13.0f, 4.0f)
+                    lineTo(13.0f, 2.0f)
+                    lineTo(4.0f, 2.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 3.0f, 3.0f)
+                    lineTo(3.0f, 5.172000000000001f)
+                    arcTo(2.0f, 2.0f, 179.98776339475614f, isMoreThanHalf = false, isPositiveArc = false, 3.586f, 6.586f)
+                    lineTo(8.414f, 11.414000000000001f)
+                    arcTo(2.0f, 2.0f, 314.99134648951633f, isMoreThanHalf = false, isPositiveArc = true, 9.0f, 12.828f)
+                    lineTo(9.0f, 21.381999999999998f)
+                    arcTo(1.0f, 1.0f, 179.96941060363028f, isMoreThanHalf = false, isPositiveArc = false, 10.447f, 22.275999999999996f)
+                    lineTo(14.447f, 20.275999999999996f)
+                    arcTo(1.0f, 1.0f, 63.44863977436385f, isMoreThanHalf = false, isPositiveArc = false, 15.0f, 19.381999999999998f)
+                    lineTo(15.0f, 12.827999999999998f)
+                    moveTo(13.0f, 13.0f)
+                    lineTo(13.0f, 18.762999999999998f)
+                    lineTo(11.0f, 19.762999999999998f)
+                    lineTo(11.0f, 13.0f)
+                    close()
+                    moveTo(14.463000000000001f, 3.8789999999999996f)
+                    lineTo(16.584f, 6.0f)
+                    lineTo(14.463f, 8.121f)
+                    lineTo(15.876999999999999f, 9.536000000000001f)
+                    lineTo(17.997999999999998f, 7.4140000000000015f)
+                    lineTo(20.119999999999997f, 9.536000000000001f)
+                    lineTo(21.534f, 8.121000000000002f)
+                    lineTo(19.413f, 6.001000000000002f)
+                    lineTo(21.533f, 3.8790000000000022f)
+                    lineTo(20.12f, 2.4650000000000025f)
+                    lineTo(17.998f, 4.585000000000003f)
+                    lineTo(15.877f, 2.4650000000000025f)
+                    close()
+                }
+            }.build().also {
+                _funnelRemove = it
             }
-        }.build().also {
-            io.channel.bezier.icon._funnelRemove = it
-        }
     }
+
 
 private var _funnelRemove: ImageVector? = null
 
@@ -88,7 +85,7 @@ private var _funnelRemove: ImageVector? = null
 private fun FunnelRemoveIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.FunnelRemove,
+            imageVector = BezierIcons.FunnelRemove.imageVector,
             contentDescription = null,
     )
 }

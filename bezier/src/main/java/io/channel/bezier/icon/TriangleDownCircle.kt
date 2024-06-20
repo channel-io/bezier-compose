@@ -16,46 +16,47 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.TriangleDownCircle: ImageVector
-    get() {
-        return io.channel.bezier.icon._triangleDownCircle ?: ImageVector.Builder(
-                name = "TriangleDownCircle",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(4.0002f, 12.0001f)
-                curveTo(4.0002f, 16.4111f, 7.5892f, 20.0001f, 12.0002f, 20.0001f)
-                curveTo(16.4112f, 20.0001f, 20.0002f, 16.4111f, 20.0002f, 12.0001f)
-                curveTo(20.0002f, 7.5891f, 16.4112f, 4.0001f, 12.0002f, 4.0001f)
-                curveTo(7.5892f, 4.0001f, 4.0002f, 7.5891f, 4.0002f, 12.0001f)
-                close()
-                moveTo(2.0002f, 12.0001f)
-                curveTo(2.0002f, 6.4771f, 6.4772f, 2.0001f, 12.0002f, 2.0001f)
-                curveTo(17.5232f, 2.0001f, 22.0002f, 6.4771f, 22.0002f, 12.0001f)
-                curveTo(22.0002f, 17.5231f, 17.5232f, 22.0001f, 12.0002f, 22.0001f)
-                curveTo(6.4772f, 22.0001f, 2.0002f, 17.5231f, 2.0002f, 12.0001f)
-                close()
-                moveTo(7.8525f, 10.0001f)
-                lineTo(16.5715f, 10.0001f)
-                curveTo(16.8255f, 10.0001f, 16.9645f, 10.2961f, 16.8015f, 10.4921f)
-                lineTo(12.4425f, 15.7231f)
-                curveTo(12.3225f, 15.8671f, 12.1015f, 15.8671f, 11.9815f, 15.7231f)
-                lineTo(7.6215f, 10.4921f)
-                curveTo(7.4595f, 10.2961f, 7.5975f, 10.0001f, 7.8525f, 10.0001f)
-                close()
+val BezierIcons.TriangleDownCircle: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _triangleDownCircle ?: ImageVector.Builder(
+                    name = "TriangleDownCircle",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(4.0f, 12.0f)
+                    curveTo(4.0f, 16.411f, 7.59f, 20.0f, 12.0f, 20.0f)
+                    curveTo(16.41f, 20.0f, 20.0f, 16.411f, 20.0f, 12.0f)
+                    curveTo(20.0f, 7.588999999999999f, 16.411f, 4.0f, 12.0f, 4.0f)
+                    curveTo(7.588999999999999f, 4.0f, 4.0f, 7.59f, 4.0f, 12.0f)
+                    moveTo(2.0f, 12.0f)
+                    curveTo(2.0f, 6.477f, 6.477f, 2.0f, 12.0f, 2.0f)
+                    curveTo(17.523f, 2.0f, 22.0f, 6.477f, 22.0f, 12.0f)
+                    curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
+                    curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
+                    moveTo(7.852f, 10.0f)
+                    lineTo(16.572000000000003f, 10.0f)
+                    arcTo(0.3f, 0.3f, 270.0978055629088f, isMoreThanHalf = false, isPositiveArc = true, 16.802000000000003f, 10.492f)
+                    lineTo(12.442000000000004f, 15.723f)
+                    arcTo(0.3f, 0.3f, 39.94450518981475f, isMoreThanHalf = false, isPositiveArc = true, 11.982000000000003f, 15.723f)
+                    lineTo(7.6220000000000026f, 10.493f)
+                    arcTo(0.3f, 0.3f, 139.95912703212358f, isMoreThanHalf = false, isPositiveArc = true, 7.852000000000003f, 10.0f)
+                }
+            }.build().also {
+                _triangleDownCircle = it
             }
-        }.build().also {
-            io.channel.bezier.icon._triangleDownCircle = it
-        }
     }
+
 
 private var _triangleDownCircle: ImageVector? = null
 
@@ -64,7 +65,7 @@ private var _triangleDownCircle: ImageVector? = null
 private fun TriangleDownCircleIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.TriangleDownCircle,
+            imageVector = BezierIcons.TriangleDownCircle.imageVector,
             contentDescription = null,
     )
 }

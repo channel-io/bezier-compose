@@ -16,54 +16,54 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Baseball: ImageVector
-    get() {
-        return io.channel.bezier.icon._baseball ?: ImageVector.Builder(
-                name = "Baseball",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(12.0005f, 1.9997f)
-                curveTo(6.4776f, 1.9997f, 2.0005f, 6.4769f, 2.0005f, 11.9997f)
-                curveTo(2.0005f, 17.5225f, 6.4776f, 21.9997f, 12.0005f, 21.9997f)
-                curveTo(17.5233f, 21.9997f, 22.0005f, 17.5225f, 22.0005f, 11.9997f)
-                curveTo(22.0005f, 6.4769f, 17.5233f, 1.9997f, 12.0005f, 1.9997f)
-                close()
-                moveTo(12.0005f, 3.9997f)
-                curveTo(10.2317f, 3.9997f, 8.5969f, 4.5738f, 7.2724f, 5.5457f)
-                curveTo(8.9548f, 7.181f, 10.0f, 9.4685f, 10.0f, 12.0f)
-                curveTo(10.0f, 14.5314f, 8.9549f, 16.8186f, 7.2727f, 18.4539f)
-                curveTo(8.5972f, 19.4257f, 10.2318f, 19.9997f, 12.0005f, 19.9997f)
-                curveTo(13.7689f, 19.9997f, 15.4033f, 19.4259f, 16.7277f, 18.4543f)
-                curveTo(15.0452f, 16.819f, 14.0f, 14.5316f, 14.0f, 12.0f)
-                curveTo(14.0f, 9.4682f, 15.0454f, 7.1807f, 16.728f, 5.5453f)
-                curveTo(15.4036f, 4.5736f, 13.7691f, 3.9997f, 12.0005f, 3.9997f)
-                close()
-                moveTo(18.1824f, 6.9215f)
-                curveTo(16.8382f, 8.1971f, 16.0f, 10.0006f, 16.0f, 12.0f)
-                curveTo(16.0f, 13.9992f, 16.8381f, 15.8027f, 18.1821f, 17.0782f)
-                curveTo(19.3183f, 15.6968f, 20.0005f, 13.9279f, 20.0005f, 11.9997f)
-                curveTo(20.0005f, 10.0716f, 19.3184f, 8.3028f, 18.1824f, 6.9215f)
-                close()
-                moveTo(4.0005f, 11.9997f)
-                curveTo(4.0005f, 10.0719f, 4.6824f, 8.3033f, 5.8182f, 6.9221f)
-                curveTo(7.162f, 8.1976f, 8.0f, 10.0009f, 8.0f, 12.0f)
-                curveTo(8.0f, 13.9989f, 7.1621f, 15.8022f, 5.8184f, 17.0777f)
-                curveTo(4.6825f, 15.6964f, 4.0005f, 13.9277f, 4.0005f, 11.9997f)
-                close()
+val BezierIcons.Baseball: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _baseball ?: ImageVector.Builder(
+                    name = "Baseball",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(12.0f, 2.0f)
+                    curveTo(6.479f, 2.0f, 2.0f, 6.477f, 2.0f, 12.0f)
+                    curveTo(2.0f, 17.523f, 6.478f, 22.0f, 12.0f, 22.0f)
+                    curveTo(17.522f, 22.0f, 22.0f, 17.523f, 22.0f, 12.0f)
+                    curveTo(22.0f, 6.477f, 17.524f, 2.0f, 12.0f, 2.0f)
+                    moveTo(12.0f, 4.0f)
+                    arcTo(7.96f, 7.96f, 270.10034048421716f, isMoreThanHalf = false, isPositiveArc = false, 7.272f, 5.546f)
+                    arcTo(8.97f, 8.97f, 314.09692333978904f, isMoreThanHalf = false, isPositiveArc = true, 10.0f, 12.0f)
+                    arcTo(8.97f, 8.97f, 359.91670890443055f, isMoreThanHalf = false, isPositiveArc = true, 7.273f, 18.454f)
+                    arcTo(7.96f, 7.96f, 126.31458333836001f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 20.0f)
+                    arcTo(7.96f, 7.96f, 90.09315901133525f, isMoreThanHalf = false, isPositiveArc = false, 16.727f, 18.454f)
+                    arcTo(8.97f, 8.97f, 134.10580615549586f, isMoreThanHalf = false, isPositiveArc = true, 14.0f, 12.0f)
+                    arcTo(8.97f, 8.97f, 179.91651189423587f, isMoreThanHalf = false, isPositiveArc = true, 16.728f, 5.545f)
+                    arcTo(7.96f, 7.96f, 306.3024781388996f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 4.0f)
+                    moveTo(18.182000000000002f, 6.922000000000001f)
+                    arcTo(6.98f, 6.98f, 226.57599936200938f, isMoreThanHalf = false, isPositiveArc = false, 16.0f, 12.0f)
+                    curveTo(16.0f, 14.0f, 16.838f, 15.803f, 18.182f, 17.078f)
+                    arcTo(7.97f, 7.97f, 39.4870463208678f, isMoreThanHalf = false, isPositiveArc = false, 20.001f, 12.0f)
+                    arcTo(7.97f, 7.97f, 0.070790127659241f, isMoreThanHalf = false, isPositiveArc = false, 18.182000000000002f, 6.922f)
+                    moveTo(4.0f, 12.0f)
+                    curveTo(4.0f, 10.072f, 4.682f, 8.303f, 5.818f, 6.922f)
+                    arcTo(6.98f, 6.98f, 313.4240006379906f, isMoreThanHalf = false, isPositiveArc = true, 8.0f, 12.0f)
+                    arcTo(6.98f, 6.98f, 359.9300779159158f, isMoreThanHalf = false, isPositiveArc = true, 5.818f, 17.078f)
+                    arcTo(7.97f, 7.97f, 140.52424212004703f, isMoreThanHalf = false, isPositiveArc = true, 4.0f, 12.0f)
+                }
+            }.build().also {
+                _baseball = it
             }
-        }.build().also {
-            io.channel.bezier.icon._baseball = it
-        }
     }
+
 
 private var _baseball: ImageVector? = null
 
@@ -72,7 +72,7 @@ private var _baseball: ImageVector? = null
 private fun BaseballIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Baseball,
+            imageVector = BezierIcons.Baseball.imageVector,
             contentDescription = null,
     )
 }

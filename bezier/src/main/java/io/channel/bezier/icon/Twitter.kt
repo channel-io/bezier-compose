@@ -9,77 +9,79 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.Twitter: ImageVector
-    get() {
-        return io.channel.bezier.icon._twitter ?: ImageVector.Builder(
-                name = "Twitter",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-            ) {
-                moveTo(2.0492f, 3.011f)
-                curveTo(2.041f, 3.0228f, 2.7056f, 3.891f, 3.522f, 4.936f)
-                curveTo(4.3384f, 5.981f, 6.0738f, 8.2046f, 7.3783f, 9.8742f)
-                lineTo(9.7496f, 12.911f)
-                lineTo(9.5978f, 13.076f)
-                curveTo(9.5116f, 13.1664f, 7.7681f, 14.9696f, 5.725f, 17.0832f)
-                curveTo(3.682f, 19.2007f, 2.0041f, 20.945f, 2.0f, 20.9646f)
-                curveTo(1.9918f, 20.9843f, 2.3487f, 21.0f, 2.8615f, 20.9961f)
-                lineTo(3.7353f, 20.9921f)
-                lineTo(4.0225f, 20.6896f)
-                curveTo(4.1825f, 20.5246f, 5.6676f, 18.9885f, 7.325f, 17.2718f)
-                curveTo(8.9824f, 15.555f, 10.3855f, 14.1014f, 10.4429f, 14.0385f)
-                lineTo(10.5455f, 13.9246f)
-                lineTo(11.366f, 14.9775f)
-                curveTo(11.8172f, 15.555f, 13.0603f, 17.15f, 14.1269f, 18.5171f)
-                lineTo(16.0715f, 21.0f)
-                lineTo(19.0458f, 21.0f)
-                curveTo(21.5196f, 21.0f, 22.016f, 20.9921f, 21.9996f, 20.9489f)
-                curveTo(21.9873f, 20.9175f, 21.2324f, 19.9432f, 20.3217f, 18.7764f)
-                curveTo(19.4109f, 17.6135f, 18.3689f, 16.2778f, 18.0079f, 15.8142f)
-                curveTo(17.6428f, 15.3507f, 16.572f, 13.9717f, 15.6202f, 12.7578f)
-                curveTo(14.6685f, 11.5399f, 13.889f, 10.5264f, 13.889f, 10.5107f)
-                curveTo(13.889f, 10.4832f, 18.9186f, 5.2542f, 20.6294f, 3.506f)
-                lineTo(21.1176f, 3.0071f)
-                lineTo(20.2191f, 3.0071f)
-                lineTo(19.3248f, 3.011f)
-                lineTo(18.2786f, 4.0953f)
-                curveTo(17.7043f, 4.6924f, 16.2971f, 6.1539f, 15.1485f, 7.3364f)
-                lineTo(13.0685f, 9.4892f)
-                lineTo(10.5455f, 6.2599f)
-                lineTo(8.0183f, 3.0267f)
-                lineTo(5.044f, 3.0071f)
-                curveTo(3.4072f, 2.9953f, 2.0574f, 2.9992f, 2.0492f, 3.011f)
-                close()
-                moveTo(9.0973f, 6.4917f)
-                curveTo(10.0696f, 7.741f, 11.5711f, 9.6621f, 12.4326f, 10.766f)
-                curveTo(13.2941f, 11.866f, 15.2059f, 14.3175f, 16.6828f, 16.2071f)
-                curveTo(18.1597f, 18.1007f, 19.3822f, 19.6682f, 19.4027f, 19.6957f)
-                curveTo(19.4273f, 19.731f, 19.1361f, 19.7428f, 18.0735f, 19.7428f)
-                lineTo(16.7156f, 19.7428f)
-                lineTo(14.0244f, 16.2935f)
-                curveTo(7.8132f, 8.346f, 4.6789f, 4.331f, 4.642f, 4.2721f)
-                curveTo(4.6174f, 4.2367f, 4.8963f, 4.2249f, 5.9671f, 4.2249f)
-                lineTo(7.325f, 4.2249f)
-                lineTo(9.0973f, 6.4917f)
-                close()
+val BezierIcons.Twitter: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _twitter ?: ImageVector.Builder(
+                    name = "Twitter",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                ) {
+                    moveTo(2.05f, 3.011f)
+                    curveTo(2.041f, 3.023f, 2.706f, 3.891f, 3.522f, 4.936f)
+                    lineTo(7.378f, 9.873999999999999f)
+                    lineTo(9.75f, 12.910999999999998f)
+                    lineTo(9.598f, 13.075999999999997f)
+                    lineTo(5.7250000000000005f, 17.083f)
+                    curveTo(3.682f, 19.201f, 2.005f, 20.945f, 2.0f, 20.965f)
+                    curveTo(1.992f, 20.985f, 2.349f, 21.0f, 2.862f, 20.996f)
+                    lineTo(3.7350000000000003f, 20.991999999999997f)
+                    lineTo(4.023000000000001f, 20.689999999999998f)
+                    arcTo(4740.0f, 4740.0f, 44.043403323605f, isMoreThanHalf = false, isPositiveArc = false, 10.443000000000001f, 14.038999999999998f)
+                    lineTo(10.546000000000001f, 13.924999999999997f)
+                    lineTo(11.366000000000001f, 14.976999999999997f)
+                    lineTo(14.126000000000001f, 18.516999999999996f)
+                    lineTo(16.073f, 21.0f)
+                    lineTo(19.047f, 21.0f)
+                    curveTo(21.521f, 21.0f, 22.017f, 20.992f, 22.001f, 20.949f)
+                    curveTo(21.988f, 20.917f, 21.233f, 19.943f, 20.323f, 18.776000000000003f)
+                    curveTo(19.412f, 17.613000000000003f, 18.37f, 16.278000000000002f, 18.009f, 15.814000000000004f)
+                    curveTo(17.644000000000002f, 15.351000000000004f, 16.573f, 13.972000000000003f, 15.621f, 12.758000000000003f)
+                    curveTo(14.67f, 11.540000000000003f, 13.89f, 10.526000000000003f, 13.89f, 10.511000000000003f)
+                    curveTo(13.89f, 10.483000000000002f, 18.92f, 5.254000000000003f, 20.630000000000003f, 3.506000000000003f)
+                    lineTo(21.119000000000003f, 3.007000000000003f)
+                    lineTo(20.220000000000002f, 3.007000000000003f)
+                    lineTo(19.326000000000004f, 3.011000000000003f)
+                    lineTo(18.280000000000005f, 4.095000000000002f)
+                    curveTo(17.705000000000005f, 4.692000000000002f, 16.298000000000005f, 6.154000000000003f, 15.150000000000006f, 7.336000000000002f)
+                    lineTo(13.070000000000006f, 9.489000000000003f)
+                    lineTo(10.546000000000006f, 6.259000000000002f)
+                    lineTo(8.019000000000005f, 3.027000000000002f)
+                    lineTo(5.045000000000005f, 3.007000000000002f)
+                    curveTo(3.407f, 2.995f, 2.057f, 3.0f, 2.049f, 3.011f)
+                    moveTo(9.096f, 6.491f)
+                    curveTo(10.069f, 7.741f, 11.57f, 9.661999999999999f, 12.432f, 10.766f)
+                    curveTo(13.293000000000001f, 11.866f, 15.205f, 14.318f, 16.682000000000002f, 16.207f)
+                    curveTo(18.159000000000002f, 18.101f, 19.382f, 19.668f, 19.402f, 19.696f)
+                    curveTo(19.426000000000002f, 19.731f, 19.135f, 19.743000000000002f, 18.072000000000003f, 19.743000000000002f)
+                    lineTo(16.715000000000003f, 19.743000000000002f)
+                    lineTo(14.023000000000003f, 16.293000000000003f)
+                    curveTo(7.814f, 8.347f, 4.68f, 4.332f, 4.642f, 4.274f)
+                    curveTo(4.617f, 4.238f, 4.896000000000001f, 4.226f, 5.9670000000000005f, 4.226f)
+                    lineTo(7.325000000000001f, 4.226f)
+                    close()
+                }
+            }.build().also {
+                _twitter = it
             }
-        }.build().also {
-            io.channel.bezier.icon._twitter = it
-        }
     }
+
 
 private var _twitter: ImageVector? = null
 
@@ -88,7 +90,7 @@ private var _twitter: ImageVector? = null
 private fun TwitterIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.Twitter,
+            imageVector = BezierIcons.Twitter.imageVector,
             contentDescription = null,
     )
 }

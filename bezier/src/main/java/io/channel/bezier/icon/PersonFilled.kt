@@ -16,39 +16,39 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
 
-val BezierIcon.PersonFilled: ImageVector
-    get() {
-        return io.channel.bezier.icon._personFilled ?: ImageVector.Builder(
-                name = "PersonFilled",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {
-            path(
-                    fill = SolidColor(Color(0xFF313234)),
-                    strokeLineWidth = 1f,
-                    pathFillType = PathFillType.EvenOdd,
-            ) {
-                moveTo(16.4874f, 6.5001f)
-                curveTo(16.4874f, 8.9851f, 14.4724f, 11.0001f, 11.9874f, 11.0001f)
-                curveTo(9.5024f, 11.0001f, 7.4874f, 8.9851f, 7.4874f, 6.5001f)
-                curveTo(7.4874f, 4.0151f, 9.5024f, 2.0001f, 11.9874f, 2.0001f)
-                curveTo(14.4724f, 2.0001f, 16.4874f, 4.0151f, 16.4874f, 6.5001f)
-                close()
-                moveTo(2.0009f, 21.4781f)
-                curveTo(1.9859f, 21.7611f, 2.2239f, 22.0001f, 2.5079f, 22.0001f)
-                lineTo(21.4669f, 22.0001f)
-                curveTo(21.7509f, 22.0001f, 21.9879f, 21.7611f, 21.9739f, 21.4781f)
-                curveTo(21.7019f, 16.1981f, 17.3349f, 12.0001f, 11.9869f, 12.0001f)
-                curveTo(6.6399f, 12.0001f, 2.2719f, 16.1981f, 2.0009f, 21.4781f)
-                close()
+val BezierIcons.PersonFilled: BezierIcon
+    get() = object : BezierIcon {
+        override val imageVector: ImageVector
+            get() = _personFilled ?: ImageVector.Builder(
+                    name = "PersonFilled",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
+                    moveTo(16.487f, 6.5f)
+                    arcTo(4.5f, 4.5f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 7.486999999999998f, 6.5f)
+                    arcTo(4.5f, 4.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 16.487f, 6.5f)
+                    moveTo(2.001f, 21.478f)
+                    arcTo(0.506f, 0.506f, 181.81220207903192f, isMoreThanHalf = false, isPositiveArc = false, 2.508f, 22.0f)
+                    lineTo(21.467f, 22.0f)
+                    arcTo(0.507f, 0.507f, 90.02508170938532f, isMoreThanHalf = false, isPositiveArc = false, 21.974f, 21.478f)
+                    curveTo(21.702f, 16.198f, 17.334f, 12.000000000000002f, 11.987f, 12.000000000000002f)
+                    curveTo(6.640000000000001f, 12.000000000000002f, 2.272f, 16.198f, 2.0f, 21.478f)
+                }
+            }.build().also {
+                _personFilled = it
             }
-        }.build().also {
-            io.channel.bezier.icon._personFilled = it
-        }
     }
+
 
 private var _personFilled: ImageVector? = null
 
@@ -57,7 +57,7 @@ private var _personFilled: ImageVector? = null
 private fun PersonFilledIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.PersonFilled,
+            imageVector = BezierIcons.PersonFilled.imageVector,
             contentDescription = null,
     )
 }
