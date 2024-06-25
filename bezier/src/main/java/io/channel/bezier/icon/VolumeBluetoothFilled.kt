@@ -31,7 +31,6 @@ val BezierIcons.VolumeBluetoothFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.829f, 2.008f)
@@ -43,8 +42,8 @@ val BezierIcons.VolumeBluetoothFilled: BezierIcon
                     lineTo(12.96f, 22.0f)
                     arcTo(1.0f, 1.0f, 90.01223660525449f, isMoreThanHalf = false, isPositiveArc = true, 12.253f, 21.707f)
                     lineTo(7.545f, 16.999000000000002f)
-                    lineTo(2.96f, 16.999000000000002f)
-                    arcTo(1.0f, 1.0f, 90.00755821444268f, isMoreThanHalf = false, isPositiveArc = true, 1.967f, 16.116000000000003f)
+                    lineTo(2.96f, 16.999f)
+                    arcTo(1.0f, 1.0f, 90.00755821444268f, isMoreThanHalf = false, isPositiveArc = true, 1.967f, 16.116f)
                     lineTo(1.96f, 16.0f)
                     lineTo(1.96f, 8.0f)
                     arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 2.96f, 7.0f)
@@ -72,7 +71,7 @@ val BezierIcons.VolumeBluetoothFilled: BezierIcon
                     lineTo(20.417f, 13.441f)
                     lineTo(20.417f, 15.468f)
                     close()
-                    moveTo(20.417f, 8.533999999999999f)
+                    moveTo(20.417f, 8.534f)
                     lineTo(20.417f, 10.561f)
                     lineTo(21.757f, 9.576f)
                     close()

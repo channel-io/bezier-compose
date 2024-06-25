@@ -31,7 +31,6 @@ val BezierIcons.CancelBold: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(4.929f, 4.929f)
                     arcTo(1.5f, 1.5f, 224.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 4.929f, 7.050000000000001f)

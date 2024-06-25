@@ -31,14 +31,13 @@ val BezierIcons.Untag: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(18.142f, 15.728f)
                     lineTo(21.384999999999998f, 12.485f)
                     arcTo(2.0f, 2.0f, 45.00865351048362f, isMoreThanHalf = false, isPositiveArc = false, 21.970999999999997f, 11.071f)
-                    lineTo(21.970999999999997f, 4.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 19.970999999999997f, 2.0f)
+                    lineTo(21.971f, 4.0f)
+                    arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 19.971f, 2.0f)
                     lineTo(12.9f, 2.0f)
                     arcTo(2.0f, 2.0f, 270.0164102417634f, isMoreThanHalf = false, isPositiveArc = false, 11.485f, 2.586f)
                     lineTo(8.243f, 5.828f)
@@ -47,9 +46,9 @@ val BezierIcons.Untag: BezierIcon
                     lineTo(20.086f, 20.5f)
                     arcTo(1.0f, 1.0f, 134.00425538642457f, isMoreThanHalf = false, isPositiveArc = false, 21.5f, 19.086f)
                     close()
-                    moveTo(16.727999999999998f, 14.314f)
-                    lineTo(19.970999999999997f, 11.071f)
-                    lineTo(19.970999999999997f, 4.0f)
+                    moveTo(16.728f, 14.314f)
+                    lineTo(19.971f, 11.071f)
+                    lineTo(19.971f, 4.0f)
                     lineTo(12.9f, 4.0f)
                     lineTo(9.657f, 7.243f)
                     close()

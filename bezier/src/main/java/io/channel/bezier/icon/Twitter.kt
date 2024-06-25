@@ -31,7 +31,6 @@ val BezierIcons.Twitter: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(2.05f, 3.011f)
                     curveTo(2.041f, 3.023f, 2.706f, 3.891f, 3.522f, 4.936f)

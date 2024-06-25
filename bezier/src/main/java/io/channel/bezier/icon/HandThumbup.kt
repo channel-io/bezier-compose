@@ -31,7 +31,6 @@ val BezierIcons.HandThumbup: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(18.25f, 5.967f)
@@ -49,8 +48,8 @@ val BezierIcons.HandThumbup: BezierIcon
                     lineTo(16.332f, 5.967f)
                     close()
                     moveTo(20.122f, 10.699f)
-                    lineTo(17.872f, 16.698999999999998f)
-                    arcTo(2.01f, 2.01f, 20.715219639960853f, isMoreThanHalf = false, isPositiveArc = true, 16.0f, 17.998f)
+                    lineTo(17.872f, 16.699f)
+                    arcTo(2.01f, 2.01f, 20.715219639960946f, isMoreThanHalf = false, isPositiveArc = true, 16.0f, 17.998f)
                     lineTo(13.323f, 17.998f)
                     curveTo(12.573f, 17.998f, 11.84f, 17.856f, 11.143f, 17.578f)
                     arcTo(4.98f, 4.98f, 111.64599667245052f, isMoreThanHalf = false, isPositiveArc = true, 8.0f, 12.934f)

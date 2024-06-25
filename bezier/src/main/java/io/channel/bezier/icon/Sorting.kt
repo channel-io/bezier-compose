@@ -31,7 +31,6 @@ val BezierIcons.Sorting: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(3.016f, 5.0f)
@@ -52,16 +51,16 @@ val BezierIcons.Sorting: BezierIcon
                     arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 9.016f, 20.0f)
                     close()
                     moveTo(19.015f, 17.792f)
-                    lineTo(21.55f, 15.257000000000001f)
-                    lineTo(22.964000000000002f, 16.671000000000003f)
-                    lineTo(19.074f, 20.561000000000003f)
-                    arcTo(1.5f, 1.5f, 45.07241357642326f, isMoreThanHalf = false, isPositiveArc = true, 18.014000000000003f, 20.999000000000002f)
-                    curveTo(17.630000000000003f, 20.999000000000002f, 17.246000000000002f, 20.853f, 16.954000000000004f, 20.560000000000002f)
-                    lineTo(13.064000000000004f, 16.671000000000003f)
-                    lineTo(14.479000000000003f, 15.257000000000003f)
-                    lineTo(17.015000000000004f, 17.794000000000004f)
-                    lineTo(17.019000000000005f, 9.999000000000004f)
-                    lineTo(19.019000000000005f, 10.000000000000004f)
+                    lineTo(21.55f, 15.257f)
+                    lineTo(22.964f, 16.671f)
+                    lineTo(19.074f, 20.561f)
+                    arcTo(1.5f, 1.5f, 45.07241357642326f, isMoreThanHalf = false, isPositiveArc = true, 18.014000000000003f, 20.999f)
+                    curveTo(17.630000000000003f, 20.999f, 17.246000000000002f, 20.852999999999998f, 16.954000000000004f, 20.56f)
+                    lineTo(13.064000000000004f, 16.671f)
+                    lineTo(14.479000000000003f, 15.257f)
+                    lineTo(17.015000000000004f, 17.794f)
+                    lineTo(17.019000000000005f, 9.999f)
+                    lineTo(19.019000000000005f, 10.0f)
                     close()
                 }
             }.build().also {

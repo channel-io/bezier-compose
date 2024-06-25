@@ -31,7 +31,6 @@ val BezierIcons.MultiNode: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(12.0f, 2.0f)
                     arcTo(3.0f, 3.0f, 270.085359468339f, isMoreThanHalf = false, isPositiveArc = false, 11.0f, 7.83f)

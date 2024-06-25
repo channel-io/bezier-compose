@@ -31,7 +31,6 @@ val BezierIcons.HandThumbupFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(16.777f, 2.564f)
                     curveTo(16.407f, 2.194f, 15.967f, 2.05f, 15.537f, 2.05f)

@@ -31,7 +31,6 @@ val BezierIcons.CheckboxFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(8.0f, 3.0f)
@@ -43,14 +42,14 @@ val BezierIcons.CheckboxFilled: BezierIcon
                     lineTo(21.0f, 8.0f)
                     arcTo(5.0f, 5.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 16.0f, 3.0f)
                     close()
-                    moveTo(15.379999999999999f, 8.661999999999999f)
-                    lineTo(10.666999999999998f, 13.376f)
-                    lineTo(8.618999999999998f, 11.328f)
-                    arcTo(1.0f, 1.0f, 314.00425538642025f, isMoreThanHalf = false, isPositiveArc = false, 7.204999999999998f, 12.741999999999999f)
-                    lineTo(10.357999999999999f, 15.895f)
-                    curveTo(10.527999999999999f, 16.065f, 10.804999999999998f, 16.065f, 10.974999999999998f, 15.895f)
-                    lineTo(16.794999999999998f, 10.075f)
-                    arcTo(1.0f, 1.0f, 43.15966534909231f, isMoreThanHalf = false, isPositiveArc = false, 15.380999999999998f, 8.661999999999999f)
+                    moveTo(15.38f, 8.662f)
+                    lineTo(10.667f, 13.376f)
+                    lineTo(8.619f, 11.328f)
+                    arcTo(1.0f, 1.0f, 314.00425538642025f, isMoreThanHalf = false, isPositiveArc = false, 7.205f, 12.741999999999999f)
+                    lineTo(10.358f, 15.895f)
+                    curveTo(10.528f, 16.065f, 10.805f, 16.065f, 10.975000000000001f, 15.895f)
+                    lineTo(16.795f, 10.075f)
+                    arcTo(1.0f, 1.0f, 43.15966534909231f, isMoreThanHalf = false, isPositiveArc = false, 15.381000000000002f, 8.661999999999999f)
                 }
             }.build().also {
                 _checkboxFilled = it

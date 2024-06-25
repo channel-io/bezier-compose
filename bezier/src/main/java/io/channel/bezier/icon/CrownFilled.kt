@@ -31,7 +31,6 @@ val BezierIcons.CrownFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(2.27f, 7.89f)
                     lineTo(3.632f, 17.424f)

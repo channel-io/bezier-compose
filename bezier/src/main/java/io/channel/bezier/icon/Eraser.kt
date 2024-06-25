@@ -31,7 +31,6 @@ val BezierIcons.Eraser: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(14.9f, 2.149f)
@@ -47,13 +46,13 @@ val BezierIcons.Eraser: BezierIcon
                     lineTo(19.85f, 11.341000000000001f)
                     arcTo(3.0f, 3.0f, 45.00485263423808f, isMoreThanHalf = false, isPositiveArc = false, 19.85f, 7.098000000000001f)
                     close()
-                    moveTo(18.435000000000002f, 8.513f)
-                    lineTo(13.485000000000003f, 3.5629999999999997f)
-                    arcTo(1.0f, 1.0f, 314.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 12.071000000000003f, 3.5629999999999997f)
-                    lineTo(7.121000000000003f, 8.513f)
-                    lineTo(13.485000000000003f, 14.876999999999999f)
-                    lineTo(18.435000000000002f, 9.927f)
-                    arcTo(1.0f, 1.0f, 44.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 18.435000000000002f, 8.513f)
+                    moveTo(18.435f, 8.513f)
+                    lineTo(13.485f, 3.563f)
+                    arcTo(1.0f, 1.0f, 314.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 12.071f, 3.563f)
+                    lineTo(7.1209999999999996f, 8.513f)
+                    lineTo(13.485f, 14.876999999999999f)
+                    lineTo(18.435f, 9.927f)
+                    arcTo(1.0f, 1.0f, 44.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 18.435f, 8.513f)
                     moveTo(4.293f, 11.34f)
                     lineTo(5.707f, 9.926f)
                     lineTo(12.071f, 16.29f)

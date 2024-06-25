@@ -31,7 +31,6 @@ val BezierIcons.VerticalBarBold: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(10.5f, 5.5f)
                     arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 13.5f, 5.5f)

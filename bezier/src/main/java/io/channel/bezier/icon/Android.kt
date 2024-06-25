@@ -31,7 +31,6 @@ val BezierIcons.Android: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(13.8f, 5.5f)
@@ -87,7 +86,7 @@ val BezierIcons.Android: BezierIcon
                     lineTo(16.5f, 18.1f)
                     curveTo(16.995f, 18.1f, 17.4f, 17.695f, 17.4f, 17.200000000000003f)
                     lineTo(17.4f, 8.200000000000003f)
-                    lineTo(6.6f, 8.200000000000003f)
+                    lineTo(6.6f, 8.2f)
                     close()
                 }
             }.build().also {

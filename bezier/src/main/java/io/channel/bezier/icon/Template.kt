@@ -31,17 +31,16 @@ val BezierIcons.Template: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(17.0f, 8.001f)
                     lineTo(7.0f, 8.001f)
                     lineTo(7.0f, 7.0009999999999994f)
-                    lineTo(4.0f, 7.0009999999999994f)
-                    lineTo(4.0f, 17.000999999999998f)
-                    lineTo(8.0f, 17.000999999999998f)
-                    lineTo(8.0f, 19.000999999999998f)
-                    lineTo(3.5f, 19.000999999999998f)
+                    lineTo(4.0f, 7.001f)
+                    lineTo(4.0f, 17.001f)
+                    lineTo(8.0f, 17.001f)
+                    lineTo(8.0f, 19.001f)
+                    lineTo(3.5f, 19.001f)
                     arcTo(1.5f, 1.5f, 89.99998726760315f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 17.5f)
                     lineTo(2.0f, 6.5f)
                     arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 3.5f, 5.0f)
@@ -56,16 +55,16 @@ val BezierIcons.Template: BezierIcon
                     lineTo(20.0f, 7.0f)
                     lineTo(17.0f, 7.0f)
                     close()
-                    moveTo(11.414f, 22.000999999999998f)
-                    lineTo(10.0f, 22.000999999999998f)
-                    lineTo(10.0f, 20.586f)
-                    lineTo(18.485f, 12.100999999999999f)
-                    lineTo(19.899f, 13.514999999999999f)
+                    moveTo(11.414f, 22.001f)
+                    lineTo(10.0f, 22.001f)
+                    lineTo(10.0f, 20.586000000000002f)
+                    lineTo(18.485f, 12.101000000000003f)
+                    lineTo(19.899f, 13.515000000000002f)
                     close()
-                    moveTo(19.192f, 11.393999999999998f)
-                    lineTo(20.607f, 12.807999999999998f)
-                    lineTo(22.021f, 11.393999999999998f)
-                    arcTo(1.0f, 1.0f, 45.02025386761182f, isMoreThanHalf = true, isPositiveArc = false, 20.607f, 9.979f)
+                    moveTo(19.192f, 11.394f)
+                    lineTo(20.607f, 12.808f)
+                    lineTo(22.021f, 11.394f)
+                    arcTo(1.0f, 1.0f, 45.02025386761185f, isMoreThanHalf = true, isPositiveArc = false, 20.607f, 9.979f)
                     close()
                 }
             }.build().also {

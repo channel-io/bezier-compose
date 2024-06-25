@@ -31,7 +31,6 @@ val BezierIcons.OpenInNew: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(10.357f, 3.0f)
@@ -80,7 +79,6 @@ val BezierIcons.OpenInNew: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(20.808f, 8.588f)
                     curveTo(21.0f, 8.364f, 21.0f, 7.88f, 21.0f, 6.91f)

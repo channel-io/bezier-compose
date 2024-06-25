@@ -31,7 +31,6 @@ val BezierIcons.VideocamOff: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(6.207f, 1.793f)
@@ -67,7 +66,6 @@ val BezierIcons.VideocamOff: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(4.805f, 5.03f)
                     quadTo(4.984999999999999f, 5.016f, 5.188f, 5.010000000000001f)

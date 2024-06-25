@@ -31,7 +31,6 @@ val BezierIcons.WifiOff: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(3.814f, 1.807f)
                     arcTo(1.0f, 1.0f, 224.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 3.814f, 3.221f)

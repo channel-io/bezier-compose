@@ -31,7 +31,6 @@ val BezierIcons.PersonBlocked: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(9.484f, 11.0f)
@@ -49,9 +48,9 @@ val BezierIcons.PersonBlocked: BezierIcon
                     curveTo(18.654f, 20.0f, 20.0f, 18.654f, 20.0f, 17.0f)
                     curveTo(20.0f, 16.538f, 19.886f, 16.106f, 19.7f, 15.715f)
                     close()
-                    moveTo(18.285f, 14.300999999999998f)
-                    arcTo(2.95f, 2.95f, 296.0647735311907f, isMoreThanHalf = false, isPositiveArc = false, 17.0f, 14.000999999999998f)
-                    curveTo(15.346f, 14.000999999999998f, 14.0f, 15.345999999999998f, 14.0f, 17.000999999999998f)
+                    moveTo(18.285f, 14.301f)
+                    arcTo(2.95f, 2.95f, 296.0647735311907f, isMoreThanHalf = false, isPositiveArc = false, 17.0f, 14.001f)
+                    curveTo(15.346f, 14.001f, 14.0f, 15.346f, 14.0f, 17.000999999999998f)
                     curveTo(14.0f, 17.461999999999996f, 14.113f, 17.894f, 14.301f, 18.284999999999997f)
                     close()
                     moveTo(12.0f, 17.001f)

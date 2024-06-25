@@ -31,7 +31,6 @@ val BezierIcons.FunnelRemove: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(15.0f, 12.828f)
@@ -58,7 +57,7 @@ val BezierIcons.FunnelRemove: BezierIcon
                     lineTo(11.0f, 19.762999999999998f)
                     lineTo(11.0f, 13.0f)
                     close()
-                    moveTo(14.463000000000001f, 3.8789999999999996f)
+                    moveTo(14.463f, 3.879f)
                     lineTo(16.584f, 6.0f)
                     lineTo(14.463f, 8.121f)
                     lineTo(15.876999999999999f, 9.536000000000001f)

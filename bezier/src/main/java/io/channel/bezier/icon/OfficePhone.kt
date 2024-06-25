@@ -31,7 +31,6 @@ val BezierIcons.OfficePhone: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(10.0f, 13.667f)
                     curveTo(10.0f, 13.299f, 10.299f, 13.0f, 10.667f, 13.0f)
@@ -92,7 +91,6 @@ val BezierIcons.OfficePhone: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(10.0f, 7.0f)

@@ -31,7 +31,6 @@ val BezierIcons.Book: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(16.071f, 3.0f)
@@ -45,7 +44,7 @@ val BezierIcons.Book: BezierIcon
                     arcTo(1.0f, 1.0f, 44.9681292160717f, isMoreThanHalf = false, isPositiveArc = true, 11.292000000000002f, 21.707f)
                     lineTo(10.756000000000002f, 21.171f)
                     arcTo(4.0f, 4.0f, 314.9681325461011f, isMoreThanHalf = false, isPositiveArc = false, 7.928000000000003f, 20.000999999999998f)
-                    lineTo(3.5f, 20.000999999999998f)
+                    lineTo(3.5f, 20.001f)
                     arcTo(1.5f, 1.5f, 89.99998726760315f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 18.5f)
                     lineTo(2.0f, 4.5f)
                     arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 3.5f, 3.0f)
@@ -64,10 +63,10 @@ val BezierIcons.Book: BezierIcon
                     lineTo(11.0f, 6.414f)
                     lineTo(10.756f, 6.170999999999999f)
                     arcTo(4.0f, 4.0f, 314.96813254610106f, isMoreThanHalf = false, isPositiveArc = false, 7.928000000000001f, 5.0009999999999994f)
-                    lineTo(4.0f, 5.0009999999999994f)
-                    lineTo(4.0f, 18.000999999999998f)
-                    lineTo(7.93f, 18.000999999999998f)
-                    arcTo(6.0f, 6.0f, 270.00167189781865f, isMoreThanHalf = false, isPositiveArc = true, 11.0f, 18.845999999999997f)
+                    lineTo(4.0f, 5.001f)
+                    lineTo(4.0f, 18.001f)
+                    lineTo(7.93f, 18.001f)
+                    arcTo(6.0f, 6.0f, 270.00167189781865f, isMoreThanHalf = false, isPositiveArc = true, 11.0f, 18.846f)
                 }
             }.build().also {
                 _book = it

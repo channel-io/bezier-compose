@@ -31,7 +31,6 @@ val BezierIcons.HandPush: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(6.439f, 2.742f)
                     arcTo(5.963f, 5.963f, 225.0676003080196f, isMoreThanHalf = false, isPositiveArc = true, 14.862f, 2.742f)
@@ -48,7 +47,6 @@ val BezierIcons.HandPush: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(8.406f, 7.115f)

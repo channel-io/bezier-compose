@@ -31,7 +31,6 @@ val BezierIcons.Sync: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(15.873f, 9.25f)
                     lineTo(21.5f, 9.25f)

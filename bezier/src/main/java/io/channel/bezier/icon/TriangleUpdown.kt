@@ -31,7 +31,6 @@ val BezierIcons.TriangleUpdown: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(12.378f, 4.436f)
                     arcTo(0.5f, 0.5f, 319.1128244382922f, isMoreThanHalf = false, isPositiveArc = false, 11.622f, 4.436f)

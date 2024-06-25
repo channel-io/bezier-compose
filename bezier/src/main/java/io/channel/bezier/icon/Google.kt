@@ -31,7 +31,6 @@ val BezierIcons.Google: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(12.0f, 10.198f)
                     lineTo(12.0f, 14.048f)

@@ -31,7 +31,6 @@ val BezierIcons.ButtonRoute: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(4.0f, 9.0f)
                     lineTo(4.0f, 16.0f)

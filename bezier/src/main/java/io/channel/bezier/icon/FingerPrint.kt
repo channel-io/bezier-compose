@@ -31,7 +31,6 @@ val BezierIcons.FingerPrint: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(20.46f, 18.3f)
                     lineTo(20.46f, 18.310000000000002f)

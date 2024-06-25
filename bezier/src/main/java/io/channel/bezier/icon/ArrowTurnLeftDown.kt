@@ -31,7 +31,6 @@ val BezierIcons.ArrowTurnLeftDown: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(7.793f, 9.793f)
                     arcTo(1.0f, 1.0f, 225.9957446135786f, isMoreThanHalf = false, isPositiveArc = true, 9.207f, 11.206999999999999f)

@@ -31,7 +31,6 @@ val BezierIcons.Naver: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.0f, 2.0f)
@@ -50,9 +49,9 @@ val BezierIcons.Naver: BezierIcon
                     lineTo(13.46f, 11.99f)
                     lineTo(10.373000000000001f, 7.508f)
                     close()
-                    moveTo(2.9320000000000004f, 12.014f)
-                    lineTo(2.9330000000000003f, 11.879999999999999f)
-                    lineTo(2.9330000000000003f, 12.148f)
+                    moveTo(2.932f, 12.014f)
+                    lineTo(2.933f, 11.88f)
+                    lineTo(2.933f, 12.148000000000001f)
                     close()
                     moveTo(12.224f, 3.019f)
                     lineTo(11.641f, 3.019f)

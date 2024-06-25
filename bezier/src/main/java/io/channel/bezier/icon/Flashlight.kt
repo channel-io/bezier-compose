@@ -31,7 +31,6 @@ val BezierIcons.Flashlight: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(11.0f, 3.0f)
@@ -57,16 +56,16 @@ val BezierIcons.Flashlight: BezierIcon
                     curveTo(18.0f, 11.883f, 17.93f, 12.093f, 17.8f, 12.267f)
                     lineTo(15.200000000000001f, 15.733f)
                     arcTo(1.0f, 1.0f, 216.86989764584393f, isMoreThanHalf = false, isPositiveArc = false, 15.000000000000002f, 16.333000000000002f)
-                    lineTo(15.000000000000002f, 21.0f)
-                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 14.000000000000002f, 22.0f)
-                    lineTo(10.000000000000002f, 22.0f)
-                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 9.000000000000002f, 21.0f)
-                    lineTo(9.000000000000002f, 16.333f)
-                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 8.800000000000002f, 15.732999999999999f)
-                    lineTo(6.200000000000003f, 12.267f)
-                    curveTo(6.070000000000003f, 12.093f, 6.000000000000003f, 11.883f, 6.000000000000003f, 11.667f)
-                    lineTo(6.000000000000003f, 9.0f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 7.000000000000003f, 8.0f)
+                    lineTo(15.0f, 21.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 14.0f, 22.0f)
+                    lineTo(10.0f, 22.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 9.0f, 21.0f)
+                    lineTo(9.0f, 16.333f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 8.8f, 15.732999999999999f)
+                    lineTo(6.200000000000001f, 12.267f)
+                    curveTo(6.070000000000001f, 12.093f, 6.000000000000001f, 11.883f, 6.000000000000001f, 11.667f)
+                    lineTo(6.0f, 9.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 7.0f, 8.0f)
                 }
             }.build().also {
                 _flashlight = it

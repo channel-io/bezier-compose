@@ -31,7 +31,6 @@ val BezierIcons.Spotify: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(17.916f, 10.865f)
                     curveTo(14.692f, 8.951f, 9.376000000000001f, 8.775f, 6.298f, 9.709f)

@@ -31,7 +31,6 @@ val BezierIcons.GoalOff: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(12.0f, 20.0f)
                     lineTo(12.0f, 22.0f)
@@ -62,7 +61,6 @@ val BezierIcons.GoalOff: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(19.647f, 18.438f)

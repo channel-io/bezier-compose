@@ -31,7 +31,6 @@ val BezierIcons.HandThumbdownFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(16.777f, 20.976f)
                     curveTo(16.407f, 21.346f, 15.967f, 21.49f, 15.537f, 21.49f)

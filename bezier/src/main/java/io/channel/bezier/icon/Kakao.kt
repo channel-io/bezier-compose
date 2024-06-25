@@ -31,7 +31,6 @@ val BezierIcons.Kakao: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(6.05f, 13.295f)
                     curveTo(6.16f, 13.398f, 6.306f, 13.455f, 6.457f, 13.451f)
@@ -82,7 +81,6 @@ val BezierIcons.Kakao: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(11.263f, 13.397f)

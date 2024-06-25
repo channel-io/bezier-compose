@@ -31,7 +31,6 @@ val BezierIcons.ChatQuestion: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(20.767f, 17.13f)
@@ -76,9 +75,9 @@ val BezierIcons.ChatQuestion: BezierIcon
                     lineTo(18.234f, 19.024f)
                     lineTo(19.419f, 19.419f)
                     close()
-                    moveTo(13.184000000000005f, 16.929000000000002f)
-                    arcTo(1.243f, 1.243f, 359.9769526241261f, isMoreThanHalf = true, isPositiveArc = true, 10.698000000000004f, 16.930000000000003f)
-                    arcTo(1.243f, 1.243f, 179.97695262412614f, isMoreThanHalf = false, isPositiveArc = true, 13.184000000000005f, 16.929000000000002f)
+                    moveTo(13.184f, 16.929f)
+                    arcTo(1.243f, 1.243f, 359.9769526241261f, isMoreThanHalf = true, isPositiveArc = true, 10.697999999999999f, 16.93f)
+                    arcTo(1.243f, 1.243f, 179.97695262412614f, isMoreThanHalf = false, isPositiveArc = true, 13.184f, 16.929f)
                     moveTo(10.93f, 14.54f)
                     lineTo(12.83f, 14.54f)
                     lineTo(12.83f, 13.831999999999999f)

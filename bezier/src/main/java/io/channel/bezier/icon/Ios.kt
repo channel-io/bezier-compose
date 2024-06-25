@@ -31,7 +31,6 @@ val BezierIcons.Ios: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(5.0f, 2.0f)
@@ -63,11 +62,11 @@ val BezierIcons.Ios: BezierIcon
                     lineTo(15.0f, 4.0f)
                     arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 13.0f, 2.0f)
                     close()
-                    moveTo(17.957f, 8.940000000000001f)
-                    curveTo(18.972f, 7.7200000000000015f, 18.761f, 6.456000000000001f, 18.761f, 6.456000000000001f)
-                    curveTo(18.761f, 6.456000000000001f, 17.341f, 6.4620000000000015f, 16.319f, 7.808000000000002f)
-                    curveTo(15.411f, 9.005000000000003f, 15.642999999999999f, 10.030000000000001f, 15.642999999999999f, 10.030000000000001f)
-                    curveTo(15.642999999999999f, 10.030000000000001f, 16.874f, 10.243f, 17.957f, 8.940000000000001f)
+                    moveTo(17.957f, 8.94f)
+                    curveTo(18.972f, 7.72f, 18.761f, 6.4559999999999995f, 18.761f, 6.4559999999999995f)
+                    curveTo(18.761f, 6.4559999999999995f, 17.341f, 6.462f, 16.319f, 7.808f)
+                    curveTo(15.411f, 9.004999999999999f, 15.642999999999999f, 10.03f, 15.642999999999999f, 10.03f)
+                    curveTo(15.642999999999999f, 10.03f, 16.874f, 10.242999999999999f, 17.957f, 8.94f)
                 }
             }.build().also {
                 _ios = it

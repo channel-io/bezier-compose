@@ -31,7 +31,6 @@ val BezierIcons.FastRewind: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(10.279f, 4.25f)
@@ -53,7 +52,7 @@ val BezierIcons.FastRewind: BezierIcon
                     close()
                     moveTo(12.25f, 12.0f)
                     lineTo(20.997999999999998f, 17.828f)
-                    lineTo(20.997999999999998f, 6.173f)
+                    lineTo(20.998f, 6.173f)
                     close()
                 }
             }.build().also {

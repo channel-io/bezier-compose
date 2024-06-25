@@ -31,7 +31,6 @@ val BezierIcons.Line: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.0f, 3.136f)
@@ -72,12 +71,12 @@ val BezierIcons.Line: BezierIcon
                     curveTo(18.489f, 11.001999999999999f, 18.572f, 11.084f, 18.572f, 11.184999999999999f)
                     lineTo(18.572f, 11.864999999999998f)
                     arcTo(0.183f, 0.183f, 0.31309324314372955f, isMoreThanHalf = false, isPositiveArc = true, 18.389f, 12.046999999999999f)
-                    lineTo(16.56f, 12.046999999999999f)
-                    lineTo(16.56f, 12.752999999999998f)
-                    lineTo(18.389f, 12.752999999999998f)
-                    curveTo(18.489f, 12.752999999999998f, 18.572f, 12.834999999999999f, 18.572f, 12.935999999999998f)
-                    lineTo(18.572f, 13.615999999999998f)
-                    arcTo(0.183f, 0.183f, 0.31309324314372955f, isMoreThanHalf = false, isPositiveArc = true, 18.389f, 13.797999999999998f)
+                    lineTo(16.56f, 12.047f)
+                    lineTo(16.56f, 12.753f)
+                    lineTo(18.389f, 12.753f)
+                    curveTo(18.489f, 12.753f, 18.572f, 12.835f, 18.572f, 12.936f)
+                    lineTo(18.572f, 13.616f)
+                    arcTo(0.183f, 0.183f, 0.31309324314372955f, isMoreThanHalf = false, isPositiveArc = true, 18.389f, 13.798f)
                     close()
                     moveTo(9.379f, 9.25f)
                     lineTo(10.057f, 9.25f)
@@ -137,8 +136,8 @@ val BezierIcons.Line: BezierIcon
                     arcTo(0.2f, 0.2f, 105.26250974789596f, isMoreThanHalf = false, isPositiveArc = false, 14.005000000000006f, 13.796999999999999f)
                     lineTo(14.680000000000007f, 13.796999999999999f)
                     curveTo(14.780000000000006f, 13.796999999999999f, 14.863000000000007f, 13.714999999999998f, 14.863000000000007f, 13.613f)
-                    lineTo(14.863000000000007f, 9.434f)
-                    curveTo(14.863000000000007f, 9.334f, 14.781000000000006f, 9.251f, 14.680000000000007f, 9.251f)
+                    lineTo(14.863f, 9.434f)
+                    curveTo(14.863f, 9.334f, 14.780999999999999f, 9.251f, 14.68f, 9.251f)
                     close()
                 }
             }.build().also {

@@ -31,7 +31,6 @@ val BezierIcons.CallOff: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(22.5f, 13.478f)
                     curveTo(22.5f, 11.196f, 19.304f, 8.0f, 12.0f, 8.0f)

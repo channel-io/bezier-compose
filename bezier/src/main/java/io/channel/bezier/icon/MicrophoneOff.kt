@@ -31,7 +31,6 @@ val BezierIcons.MicrophoneOff: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(15.414f, 15.086f)
@@ -60,7 +59,6 @@ val BezierIcons.MicrophoneOff: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(8.0f, 13.0f)
                     lineTo(8.0f, 12.0f)

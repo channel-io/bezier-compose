@@ -31,7 +31,6 @@ val BezierIcons.Share: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(13.0f, 5.207f)
                     lineTo(15.414f, 7.621f)

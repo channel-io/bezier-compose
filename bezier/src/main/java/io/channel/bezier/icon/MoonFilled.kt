@@ -31,7 +31,6 @@ val BezierIcons.MoonFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(20.64f, 17.037f)
                     curveTo(21.098f, 16.255f, 20.186f, 15.469f, 19.310000000000002f, 15.700999999999999f)

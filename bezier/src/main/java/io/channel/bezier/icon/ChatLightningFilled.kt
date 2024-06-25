@@ -31,7 +31,6 @@ val BezierIcons.ChatLightningFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(20.723f, 18.19f)
@@ -45,17 +44,17 @@ val BezierIcons.ChatLightningFilled: BezierIcon
                     lineTo(20.098f, 21.369999999999997f)
                     arcTo(1.0f, 1.0f, 108.37508707447735f, isMoreThanHalf = false, isPositiveArc = false, 21.362f, 20.104999999999997f)
                     close()
-                    moveTo(15.969f, 11.135000000000002f)
-                    lineTo(13.427f, 10.547000000000002f)
-                    lineTo(14.652999999999999f, 6.379000000000002f)
-                    curveTo(14.738999999999999f, 6.086000000000002f, 14.376999999999999f, 5.8720000000000026f, 14.162999999999998f, 6.088000000000002f)
-                    lineTo(8.085999999999999f, 12.181000000000001f)
-                    arcTo(0.295f, 0.295f, 224.78173449078037f, isMoreThanHalf = false, isPositiveArc = false, 8.227999999999998f, 12.676f)
-                    lineTo(10.769999999999998f, 13.264f)
-                    lineTo(9.544999999999998f, 17.432f)
-                    curveTo(9.458999999999998f, 17.724999999999998f, 9.819999999999999f, 17.939f, 10.034999999999998f, 17.723f)
-                    lineTo(16.110999999999997f, 11.629999999999999f)
-                    arcTo(0.295f, 0.295f, 44.78173449078037f, isMoreThanHalf = false, isPositiveArc = false, 15.968999999999998f, 11.135f)
+                    moveTo(15.969f, 11.135f)
+                    lineTo(13.427f, 10.547f)
+                    lineTo(14.653f, 6.379f)
+                    curveTo(14.739f, 6.085999999999999f, 14.377f, 5.872f, 14.163f, 6.087999999999999f)
+                    lineTo(8.086f, 12.181f)
+                    arcTo(0.295f, 0.295f, 224.78173449078037f, isMoreThanHalf = false, isPositiveArc = false, 8.228f, 12.675999999999998f)
+                    lineTo(10.77f, 13.263999999999998f)
+                    lineTo(9.545f, 17.432f)
+                    curveTo(9.459f, 17.724999999999998f, 9.82f, 17.939f, 10.035f, 17.723f)
+                    lineTo(16.111f, 11.629999999999999f)
+                    arcTo(0.295f, 0.295f, 44.78173449078037f, isMoreThanHalf = false, isPositiveArc = false, 15.969000000000001f, 11.135f)
                 }
             }.build().also {
                 _chatLightningFilled = it

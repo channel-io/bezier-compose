@@ -31,7 +31,6 @@ val BezierIcons.Security: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(7.086f, 11.639f)
                     lineTo(8.5f, 10.225f)
@@ -45,7 +44,6 @@ val BezierIcons.Security: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(21.0f, 5.307f)
