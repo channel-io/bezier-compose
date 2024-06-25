@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,17 +31,18 @@ val BezierIcons.WindowsMaximize: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(16.0f, 8.0f)
                     lineTo(8.0f, 8.0f)
                     lineTo(8.0f, 16.0f)
                     lineTo(16.0f, 16.0f)
+                    lineTo(16.0f, 8.0f)
                     close()
                     moveTo(7.0f, 7.0f)
                     lineTo(7.0f, 17.0f)
                     lineTo(17.0f, 17.0f)
                     lineTo(17.0f, 7.0f)
+                    lineTo(7.0f, 7.0f)
                     close()
                 }
             }.build().also {

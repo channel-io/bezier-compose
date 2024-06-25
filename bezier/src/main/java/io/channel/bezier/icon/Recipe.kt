@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -37,6 +36,7 @@ val BezierIcons.Recipe: BezierIcon
                     lineTo(7.0f, 15.0f)
                     lineTo(7.0f, 17.0f)
                     lineTo(17.0f, 17.0f)
+                    lineTo(17.0f, 15.0f)
                     close()
                 }
 
@@ -44,26 +44,27 @@ val BezierIcons.Recipe: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(4.5f, 2.0f)
                     curveTo(3.673f, 2.0f, 3.0f, 2.673f, 3.0f, 3.5f)
                     lineTo(3.0f, 20.5f)
-                    curveTo(3.0f, 21.326999999999998f, 3.673f, 22.0f, 4.5f, 22.0f)
+                    curveTo(3.0f, 21.327f, 3.673f, 22.0f, 4.5f, 22.0f)
                     lineTo(19.5f, 22.0f)
-                    curveTo(20.326999999999998f, 22.0f, 21.0f, 21.326999999999998f, 21.0f, 20.5f)
+                    curveTo(20.327f, 22.0f, 21.0f, 21.327f, 21.0f, 20.5f)
                     lineTo(21.0f, 3.5f)
-                    curveTo(21.0f, 2.673f, 20.326999999999998f, 2.0f, 19.5f, 2.0f)
+                    curveTo(21.0f, 2.673f, 20.327f, 2.0f, 19.5f, 2.0f)
+                    lineTo(4.5f, 2.0f)
                     close()
                     moveTo(19.0f, 20.0f)
                     lineTo(5.0f, 20.0f)
                     lineTo(5.0f, 4.0f)
                     lineTo(7.0f, 4.0f)
                     lineTo(7.0f, 12.0f)
-                    lineTo(10.0f, 9.817f)
+                    lineTo(10.0f, 9.81714f)
                     lineTo(13.0f, 12.0f)
                     lineTo(13.0f, 4.0f)
                     lineTo(19.0f, 4.0f)
+                    lineTo(19.0f, 20.0f)
                     close()
                 }
             }.build().also {

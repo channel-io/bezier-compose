@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,26 +31,27 @@ val BezierIcons.CallApp: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.0f, 0.0f)
-                    curveTo(5.373f, 0.0f, 0.0f, 5.373f, 0.0f, 12.0f)
-                    curveTo(0.0f, 18.627f, 5.373f, 24.0f, 12.0f, 24.0f)
-                    curveTo(18.627f, 24.0f, 24.0f, 18.627f, 24.0f, 12.0f)
-                    curveTo(24.0f, 5.373000000000001f, 18.627f, 0.0f, 12.0f, 0.0f)
-                    moveTo(9.224f, 14.776f)
-                    curveTo(5.524f, 11.076f, 5.524f, 7.84f, 6.68f, 6.683999999999999f)
-                    curveTo(7.374f, 5.989999999999999f, 8.388f, 5.802f, 8.993f, 6.2219999999999995f)
-                    curveTo(9.547f, 6.592f, 10.38f, 7.635999999999999f, 10.38f, 8.533999999999999f)
-                    curveTo(10.38f, 9.075f, 9.98f, 9.540999999999999f, 9.65f, 9.924f)
-                    curveTo(9.418000000000001f, 10.197f, 9.22f, 10.427f, 9.224f, 10.613999999999999f)
-                    curveTo(9.233f, 11.066999999999998f, 9.73f, 12.244f, 10.744f, 13.256999999999998f)
-                    curveTo(11.756f, 14.269999999999998f, 12.934f, 14.766999999999998f, 13.386f, 14.776999999999997f)
-                    curveTo(13.572999999999999f, 14.779999999999998f, 13.803999999999998f, 14.581999999999997f, 14.075999999999999f, 14.348999999999997f)
-                    curveTo(14.459f, 14.018999999999997f, 14.924999999999999f, 13.619999999999997f, 15.466f, 13.619999999999997f)
-                    curveTo(16.365f, 13.619999999999997f, 17.409f, 14.452999999999998f, 17.779f, 15.007999999999997f)
-                    curveTo(18.198f, 15.611999999999997f, 18.009f, 16.625999999999998f, 17.316f, 17.319999999999997f)
-                    curveTo(16.16f, 18.475999999999996f, 12.922999999999998f, 18.475999999999996f, 9.223999999999998f, 14.775999999999996f)
+                    curveTo(5.37258f, 0.0f, 0.0f, 5.37258f, 0.0f, 12.0f)
+                    curveTo(0.0f, 18.6274f, 5.37258f, 24.0f, 12.0f, 24.0f)
+                    curveTo(18.6274f, 24.0f, 24.0f, 18.6274f, 24.0f, 12.0f)
+                    curveTo(24.0f, 5.37258f, 18.6274f, 0.0f, 12.0f, 0.0f)
+                    close()
+                    moveTo(9.22372f, 14.7763f)
+                    curveTo(5.52436f, 11.0769f, 5.52436f, 7.83999f, 6.68041f, 6.68395f)
+                    curveTo(7.37404f, 5.99032f, 8.38813f, 5.80211f, 8.99251f, 6.22152f)
+                    curveTo(9.54741f, 6.59146f, 10.3798f, 7.63552f, 10.3798f, 8.53362f)
+                    curveTo(10.3798f, 9.07527f, 9.98016f, 9.54104f, 9.65082f, 9.92491f)
+                    curveTo(9.41783f, 10.1965f, 9.22001f, 10.4271f, 9.22372f, 10.6145f)
+                    curveTo(9.23268f, 11.0669f, 9.73018f, 12.244f, 10.7431f, 13.2569f)
+                    curveTo(11.756f, 14.2698f, 12.9331f, 14.7673f, 13.3855f, 14.7763f)
+                    curveTo(13.5729f, 14.78f, 13.8035f, 14.5822f, 14.0751f, 14.3492f)
+                    curveTo(14.459f, 14.0198f, 14.9247f, 13.6202f, 15.4664f, 13.6202f)
+                    curveTo(16.3645f, 13.6202f, 17.4085f, 14.4526f, 17.7785f, 15.0075f)
+                    curveTo(18.1979f, 15.6119f, 18.0097f, 16.626f, 17.3161f, 17.3196f)
+                    curveTo(16.16f, 18.4756f, 12.9231f, 18.4756f, 9.22372f, 14.7763f)
+                    close()
                 }
             }.build().also {
                 _callApp = it

@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,35 +31,37 @@ val BezierIcons.GraphFilled: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(13.776f, 21.0f)
-                    lineTo(10.225f, 21.0f)
-                    arcTo(0.475f, 0.475f, 90.12062278267386f, isMoreThanHalf = false, isPositiveArc = true, 9.751f, 20.525f)
-                    lineTo(9.751f, 3.475f)
-                    curveTo(9.751f, 3.212f, 9.963f, 3.0f, 10.225f, 3.0f)
-                    lineTo(13.774999999999999f, 3.0f)
-                    curveTo(14.037999999999998f, 3.0f, 14.250999999999998f, 3.212f, 14.250999999999998f, 3.475f)
-                    lineTo(14.250999999999998f, 20.525000000000002f)
-                    arcTo(0.475f, 0.475f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 13.775999999999998f, 21.000000000000004f)
-                    moveTo(20.525999999999996f, 21.000000000000004f)
-                    lineTo(16.974999999999994f, 21.000000000000004f)
-                    arcTo(0.475f, 0.475f, 90.12062278267386f, isMoreThanHalf = false, isPositiveArc = true, 16.500999999999994f, 20.525000000000002f)
-                    lineTo(16.500999999999994f, 8.475f)
-                    curveTo(16.500999999999994f, 8.212f, 16.712999999999994f, 8.0f, 16.974999999999994f, 8.0f)
-                    lineTo(20.524999999999995f, 8.0f)
-                    curveTo(20.787999999999997f, 8.0f, 21.000999999999994f, 8.212f, 21.000999999999994f, 8.475f)
-                    lineTo(21.000999999999994f, 20.525f)
-                    arcTo(0.475f, 0.475f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 20.525999999999993f, 21.0f)
-                    moveTo(3.52f, 21.0f)
-                    lineTo(6.98f, 21.0f)
-                    arcTo(0.52f, 0.52f, 89.99999999999994f, isMoreThanHalf = false, isPositiveArc = false, 7.5f, 20.48f)
-                    lineTo(7.5f, 15.52f)
-                    arcTo(0.52f, 0.52f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 6.98f, 15.0f)
-                    lineTo(3.52f, 15.0f)
-                    arcTo(0.52f, 0.52f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 3.0f, 15.52f)
-                    lineTo(3.0f, 20.48f)
-                    curveTo(3.0f, 20.768f, 3.232f, 21.0f, 3.52f, 21.0f)
+                    moveTo(13.7756f, 21.0001f)
+                    lineTo(10.2246f, 21.0001f)
+                    curveTo(9.96259f, 21.0001f, 9.75059f, 20.7871f, 9.75059f, 20.5251f)
+                    lineTo(9.75059f, 3.47512f)
+                    curveTo(9.75059f, 3.21212f, 9.96259f, 3.00012f, 10.2246f, 3.00012f)
+                    lineTo(13.7756f, 3.00012f)
+                    curveTo(14.0376f, 3.00012f, 14.2506f, 3.21212f, 14.2506f, 3.47512f)
+                    lineTo(14.2506f, 20.5251f)
+                    curveTo(14.2506f, 20.7871f, 14.0376f, 21.0001f, 13.7756f, 21.0001f)
+                    close()
+                    moveTo(20.5256f, 21.0001f)
+                    lineTo(16.9746f, 21.0001f)
+                    curveTo(16.7126f, 21.0001f, 16.5006f, 20.7871f, 16.5006f, 20.5251f)
+                    lineTo(16.5006f, 8.47512f)
+                    curveTo(16.5006f, 8.21212f, 16.7126f, 8.00012f, 16.9746f, 8.00012f)
+                    lineTo(20.5256f, 8.00012f)
+                    curveTo(20.7876f, 8.00012f, 21.0006f, 8.21212f, 21.0006f, 8.47512f)
+                    lineTo(21.0006f, 20.5251f)
+                    curveTo(21.0006f, 20.7871f, 20.7876f, 21.0001f, 20.5256f, 21.0001f)
+                    close()
+                    moveTo(3.52009f, 21.0001f)
+                    lineTo(6.98009f, 21.0001f)
+                    curveTo(7.26709f, 21.0001f, 7.50009f, 20.7681f, 7.50009f, 20.4801f)
+                    lineTo(7.50009f, 15.5201f)
+                    curveTo(7.50009f, 15.2321f, 7.26709f, 15.0001f, 6.98009f, 15.0001f)
+                    lineTo(3.52009f, 15.0001f)
+                    curveTo(3.23209f, 15.0001f, 3.00009f, 15.2321f, 3.00009f, 15.5201f)
+                    lineTo(3.00009f, 20.4801f)
+                    curveTo(3.00009f, 20.7681f, 3.23209f, 21.0001f, 3.52009f, 21.0001f)
+                    close()
                 }
             }.build().also {
                 _graphFilled = it

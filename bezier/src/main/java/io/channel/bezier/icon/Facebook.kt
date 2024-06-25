@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,27 +31,28 @@ val BezierIcons.Facebook: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(12.0f, 2.0f)
-                    curveTo(6.477f, 2.0f, 2.0f, 6.477f, 2.0f, 12.0f)
-                    curveTo(2.0f, 16.986f, 5.654f, 21.11f, 10.43f, 21.864f)
-                    lineTo(10.43f, 14.866f)
-                    lineTo(7.881f, 14.866f)
-                    lineTo(7.881f, 12.0f)
-                    lineTo(10.428f, 12.0f)
-                    lineTo(10.428f, 10.346f)
-                    curveTo(10.428f, 10.049f, 9.926f, 4.732f, 16.433f, 6.096f)
-                    lineTo(16.433f, 8.586f)
-                    lineTo(14.959999999999999f, 8.586f)
-                    curveTo(14.190999999999999f, 8.586f, 13.568f, 9.208f, 13.568f, 9.977f)
-                    lineTo(13.568f, 12.0f)
-                    lineTo(16.328f, 12.0f)
-                    lineTo(15.924f, 14.866f)
-                    lineTo(13.57f, 14.866f)
-                    lineTo(13.57f, 21.866f)
-                    curveTo(18.345f, 21.11f, 22.0f, 16.986f, 22.0f, 12.0f)
-                    curveTo(22.0f, 6.477f, 17.522f, 2.0f, 12.0f, 2.0f)
+                    moveTo(12.0002f, 2.00012f)
+                    curveTo(6.47718f, 2.00012f, 2.00018f, 6.47712f, 2.00018f, 12.0001f)
+                    curveTo(2.00018f, 16.9861f, 5.65418f, 21.1091f, 10.4292f, 21.8641f)
+                    lineTo(10.4292f, 14.8661f)
+                    lineTo(7.88218f, 14.8661f)
+                    lineTo(7.88218f, 12.0001f)
+                    lineTo(10.4292f, 12.0001f)
+                    lineTo(10.4292f, 10.3461f)
+                    curveTo(10.4292f, 10.0491f, 9.92718f, 4.73212f, 16.4342f, 6.09512f)
+                    lineTo(16.4342f, 8.58512f)
+                    lineTo(14.9612f, 8.58512f)
+                    curveTo(14.1922f, 8.58512f, 13.5692f, 9.20812f, 13.5692f, 9.97712f)
+                    lineTo(13.5692f, 10.3461f)
+                    lineTo(13.5692f, 12.0001f)
+                    lineTo(16.3282f, 12.0001f)
+                    lineTo(15.9252f, 14.8661f)
+                    lineTo(13.5692f, 14.8661f)
+                    lineTo(13.5692f, 21.8651f)
+                    curveTo(18.3452f, 21.1101f, 22.0002f, 16.9871f, 22.0002f, 12.0001f)
+                    curveTo(22.0002f, 6.47712f, 17.5222f, 2.00012f, 12.0002f, 2.00012f)
+                    close()
                 }
             }.build().also {
                 _facebook = it

@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,42 +31,50 @@ val BezierIcons.BookEditing: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(7.0f, 2.0f)
-                    arcTo(4.0f, 4.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 3.0f, 6.0f)
+                    curveTo(4.79086f, 2.0f, 3.0f, 3.79086f, 3.0f, 6.0f)
                     lineTo(3.0f, 18.0f)
-                    arcTo(4.0f, 4.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 7.0f, 22.0f)
+                    curveTo(3.0f, 20.2091f, 4.79086f, 22.0f, 7.0f, 22.0f)
                     lineTo(9.0f, 22.0f)
+                    lineTo(9.0f, 21.0f)
+                    lineTo(9.0f, 20.0f)
                     lineTo(9.0f, 4.0f)
                     lineTo(17.0f, 4.0f)
-                    arcTo(2.0f, 2.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 19.0f, 6.0f)
+                    curveTo(18.1046f, 4.0f, 19.0f, 4.89543f, 19.0f, 6.0f)
                     lineTo(19.0f, 9.0f)
                     lineTo(21.0f, 9.0f)
                     lineTo(21.0f, 6.0f)
-                    arcTo(4.0f, 4.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 17.0f, 2.0f)
+                    curveTo(21.0f, 3.79086f, 19.2091f, 2.0f, 17.0f, 2.0f)
+                    lineTo(7.0f, 2.0f)
                     close()
                     moveTo(7.0f, 4.0f)
-                    arcTo(2.0f, 2.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 5.0f, 6.0f)
+                    curveTo(5.89543f, 4.0f, 5.0f, 4.89543f, 5.0f, 6.0f)
                     lineTo(5.0f, 18.0f)
-                    arcTo(2.0f, 2.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 7.0f, 20.0f)
+                    curveTo(5.0f, 19.1046f, 5.89543f, 20.0f, 7.0f, 20.0f)
+                    lineTo(7.0f, 4.0f)
                     close()
                     moveTo(11.0f, 8.0f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 7.0f)
+                    curveTo(11.0f, 7.44772f, 11.4477f, 7.0f, 12.0f, 7.0f)
                     lineTo(16.0f, 7.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 16.0f, 9.0f)
+                    curveTo(16.5523f, 7.0f, 17.0f, 7.44772f, 17.0f, 8.0f)
+                    curveTo(17.0f, 8.55228f, 16.5523f, 9.0f, 16.0f, 9.0f)
                     lineTo(12.0f, 9.0f)
-                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 11.0f, 8.0f)
-                    moveTo(21.198f, 13.296f)
-                    lineTo(19.704f, 11.802999999999999f)
-                    lineTo(21.198f, 10.309f)
-                    arcTo(1.056f, 1.056f, 226.37965484278146f, isMoreThanHalf = false, isPositiveArc = true, 22.69f, 11.802999999999999f)
+                    curveTo(11.4477f, 9.0f, 11.0f, 8.55228f, 11.0f, 8.0f)
                     close()
-                    moveTo(12.493f, 22.0f)
-                    lineTo(11.0f, 22.0f)
-                    lineTo(11.0f, 20.507f)
-                    lineTo(18.958f, 12.549000000000001f)
-                    lineTo(20.450999999999997f, 14.042000000000002f)
+                    moveTo(21.1975f, 13.2955f)
+                    lineTo(19.7037f, 11.8027f)
+                    lineTo(21.1975f, 10.3088f)
+                    curveTo(21.6103f, 9.89707f, 22.2775f, 9.89707f, 22.6903f, 10.3088f)
+                    curveTo(23.1031f, 10.7216f, 23.1031f, 11.3899f, 22.6903f, 11.8027f)
+                    lineTo(21.1975f, 13.2955f)
+                    close()
+                    moveTo(12.4928f, 22.0001f)
+                    lineTo(11.0f, 22.0001f)
+                    lineTo(11.0f, 20.5073f)
+                    lineTo(18.9579f, 12.5494f)
+                    lineTo(20.4507f, 14.0422f)
+                    lineTo(12.4928f, 22.0001f)
                     close()
                 }
             }.build().also {

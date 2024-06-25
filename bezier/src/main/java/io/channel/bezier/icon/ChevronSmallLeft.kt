@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,17 +31,18 @@ val BezierIcons.ChevronSmallLeft: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(14.207f, 17.207f)
-                    arcTo(1.0f, 1.0f, 45.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 12.793000000000001f, 17.207f)
-                    lineTo(8.293000000000001f, 12.707f)
-                    arcTo(1.0f, 1.0f, 135.00865166283802f, isMoreThanHalf = false, isPositiveArc = true, 8.293000000000001f, 11.293000000000001f)
-                    lineTo(12.793000000000001f, 6.793000000000001f)
-                    arcTo(1.0f, 1.0f, 224.00425538642025f, isMoreThanHalf = true, isPositiveArc = true, 14.207f, 8.207f)
-                    lineTo(10.414f, 12.0f)
-                    lineTo(14.207f, 15.793f)
-                    arcTo(1.0f, 1.0f, 315.0086516628379f, isMoreThanHalf = false, isPositiveArc = true, 14.207f, 17.207f)
+                    moveTo(14.2071f, 17.2071f)
+                    curveTo(13.8166f, 17.5976f, 13.1834f, 17.5976f, 12.7929f, 17.2071f)
+                    lineTo(8.29289f, 12.7071f)
+                    curveTo(7.90237f, 12.3166f, 7.90237f, 11.6834f, 8.29289f, 11.2929f)
+                    lineTo(12.7929f, 6.79289f)
+                    curveTo(13.1834f, 6.40237f, 13.8166f, 6.40237f, 14.2071f, 6.79289f)
+                    curveTo(14.5976f, 7.18342f, 14.5976f, 7.81658f, 14.2071f, 8.20711f)
+                    lineTo(10.4142f, 12.0f)
+                    lineTo(14.2071f, 15.7929f)
+                    curveTo(14.5976f, 16.1834f, 14.5976f, 16.8166f, 14.2071f, 17.2071f)
+                    close()
                 }
             }.build().also {
                 _chevronSmallLeft = it

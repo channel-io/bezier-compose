@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,26 +31,27 @@ val BezierIcons.VideocamFilled: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(13.998f, 6.0f)
-                    lineTo(4.002f, 6.0f)
-                    arcTo(2.0f, 2.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 2.002f, 8.0f)
-                    lineTo(2.002f, 16.0f)
-                    arcTo(2.0f, 2.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 4.002f, 18.0f)
-                    lineTo(13.998000000000001f, 18.0f)
-                    arcTo(2.0f, 2.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 15.998000000000001f, 16.0f)
-                    lineTo(15.998000000000001f, 8.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 13.998000000000001f, 6.0f)
-                    moveTo(21.188000000000002f, 17.35f)
-                    lineTo(17.188000000000002f, 14.150000000000002f)
-                    arcTo(0.5f, 0.5f, 128.75562134106767f, isMoreThanHalf = false, isPositiveArc = true, 17.001f, 13.760000000000002f)
-                    lineTo(17.001f, 10.240000000000002f)
-                    arcTo(0.5f, 0.5f, 179.98986262433894f, isMoreThanHalf = false, isPositiveArc = true, 17.188000000000002f, 9.850000000000001f)
-                    lineTo(21.188000000000002f, 6.650000000000001f)
-                    arcTo(0.5f, 0.5f, 231.39109801289013f, isMoreThanHalf = false, isPositiveArc = true, 22.000000000000004f, 7.040000000000001f)
-                    lineTo(22.000000000000004f, 16.96f)
-                    arcTo(0.5f, 0.5f, 0.08156237144868975f, isMoreThanHalf = false, isPositiveArc = true, 21.188000000000002f, 17.35f)
+                    moveTo(13.9981f, 6.00012f)
+                    lineTo(4.00211f, 6.00012f)
+                    curveTo(2.89711f, 6.00012f, 2.00211f, 6.89612f, 2.00211f, 8.00012f)
+                    lineTo(2.00211f, 16.0001f)
+                    curveTo(2.00211f, 17.1041f, 2.89711f, 18.0001f, 4.00211f, 18.0001f)
+                    lineTo(13.9981f, 18.0001f)
+                    curveTo(15.1031f, 18.0001f, 15.9981f, 17.1041f, 15.9981f, 16.0001f)
+                    lineTo(15.9981f, 8.00012f)
+                    curveTo(15.9981f, 6.89612f, 15.1031f, 6.00012f, 13.9981f, 6.00012f)
+                    close()
+                    moveTo(21.1877f, 17.3495f)
+                    lineTo(17.1877f, 14.1505f)
+                    curveTo(17.0687f, 14.0545f, 17.0007f, 13.9115f, 17.0007f, 13.7595f)
+                    lineTo(17.0007f, 10.2405f)
+                    curveTo(17.0007f, 10.0885f, 17.0687f, 9.94451f, 17.1877f, 9.84951f)
+                    lineTo(21.1877f, 6.64951f)
+                    curveTo(21.5147f, 6.38751f, 21.9997f, 6.62151f, 21.9997f, 7.04051f)
+                    lineTo(21.9997f, 16.9605f)
+                    curveTo(21.9997f, 17.3795f, 21.5147f, 17.6125f, 21.1877f, 17.3495f)
+                    close()
                 }
             }.build().also {
                 _videocamFilled = it

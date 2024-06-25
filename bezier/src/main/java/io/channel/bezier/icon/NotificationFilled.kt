@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,21 +31,23 @@ val BezierIcons.NotificationFilled: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(5.857f, 8.144f)
-                    curveTo(5.857f, 9.699f, 5.421f, 11.224f, 4.599f, 12.545f)
-                    lineTo(2.249f, 16.316f)
-                    arcTo(1.1f, 1.1f, 212.0669182154023f, isMoreThanHalf = false, isPositiveArc = false, 3.182f, 18.0f)
-                    lineTo(20.822999999999997f, 18.0f)
-                    arcTo(1.1f, 1.1f, 90.0174135357663f, isMoreThanHalf = false, isPositiveArc = false, 21.757999999999996f, 16.32f)
-                    lineTo(19.405999999999995f, 12.544f)
-                    arcTo(8.3f, 8.3f, 148.02865953596734f, isMoreThanHalf = false, isPositiveArc = true, 18.146999999999995f, 8.144f)
-                    arcTo(6.144f, 6.144f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 5.857999999999995f, 8.144f)
+                    moveTo(5.85724f, 8.14424f)
+                    curveTo(5.85724f, 9.69908f, 5.42128f, 11.2233f, 4.59911f, 12.5451f)
+                    lineTo(2.24988f, 16.3162f)
+                    curveTo(1.79054f, 17.0475f, 2.31684f, 18.0002f, 3.18124f, 18.0002f)
+                    lineTo(20.8222f, 18.0002f)
+                    curveTo(21.6851f, 18.0002f, 22.2111f, 17.0511f, 21.7567f, 16.3196f)
+                    lineTo(19.405f, 12.5445f)
+                    curveTo(18.5824f, 11.2234f, 18.1462f, 9.6994f, 18.1462f, 8.14424f)
+                    curveTo(18.1462f, 4.75096f, 15.3955f, 2.00024f, 12.0022f, 2.00024f)
+                    curveTo(8.60814f, 2.00024f, 5.85724f, 4.75077f, 5.85724f, 8.14424f)
+                    close()
                     moveTo(12.0f, 22.0f)
-                    arcTo(4.0f, 4.0f, 89.98543798475636f, isMoreThanHalf = false, isPositiveArc = true, 8.126f, 19.0f)
-                    lineTo(15.873999999999999f, 19.0f)
-                    arcTo(4.0f, 4.0f, 14.477510274736266f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 22.0f)
+                    curveTo(10.1362f, 22.0f, 8.57006f, 20.7252f, 8.12602f, 19.0f)
+                    lineTo(15.874f, 19.0f)
+                    curveTo(15.4299f, 20.7252f, 13.8638f, 22.0f, 12.0f, 22.0f)
+                    close()
                 }
             }.build().also {
                 _notificationFilled = it

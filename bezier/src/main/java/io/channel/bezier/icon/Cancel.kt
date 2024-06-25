@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -33,18 +32,23 @@ val BezierIcons.Cancel: BezierIcon
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
                 ) {
-                    moveTo(19.071f, 6.343f)
-                    arcTo(1.0f, 1.0f, 45.995744613577585f, isMoreThanHalf = true, isPositiveArc = false, 17.657f, 4.929f)
-                    lineTo(12.0f, 10.586f)
-                    lineTo(6.343f, 4.929f)
-                    arcTo(1.0f, 1.0f, 313.1596653490923f, isMoreThanHalf = false, isPositiveArc = false, 4.93f, 6.343f)
-                    lineTo(10.586f, 12.0f)
-                    lineTo(4.929f, 17.657f)
-                    arcTo(1.0f, 1.0f, 225.99574461357759f, isMoreThanHalf = true, isPositiveArc = false, 6.343f, 19.071f)
-                    lineTo(12.0f, 13.414f)
-                    lineTo(17.657f, 19.070999999999998f)
-                    arcTo(1.0f, 1.0f, 135.99574461357543f, isMoreThanHalf = true, isPositiveArc = false, 19.071f, 17.656999999999996f)
-                    lineTo(13.414f, 12.0f)
+                    moveTo(19.071f, 6.34312f)
+                    curveTo(19.4616f, 5.9526f, 19.4616f, 5.31943f, 19.071f, 4.92891f)
+                    curveTo(18.6805f, 4.53839f, 18.0474f, 4.53839f, 17.6568f, 4.92891f)
+                    lineTo(12.0f, 10.5858f)
+                    lineTo(6.34314f, 4.92891f)
+                    curveTo(5.95262f, 4.53839f, 5.31945f, 4.53839f, 4.92893f, 4.92891f)
+                    curveTo(4.5384f, 5.31943f, 4.5384f, 5.9526f, 4.92893f, 6.34312f)
+                    lineTo(10.5858f, 12.0f)
+                    lineTo(4.92891f, 17.6568f)
+                    curveTo(4.53839f, 18.0474f, 4.53839f, 18.6805f, 4.92891f, 19.071f)
+                    curveTo(5.31943f, 19.4616f, 5.9526f, 19.4616f, 6.34312f, 19.071f)
+                    lineTo(12.0f, 13.4142f)
+                    lineTo(17.6568f, 19.071f)
+                    curveTo(18.0474f, 19.4616f, 18.6805f, 19.4616f, 19.0711f, 19.071f)
+                    curveTo(19.4616f, 18.6805f, 19.4616f, 18.0474f, 19.0711f, 17.6568f)
+                    lineTo(13.4142f, 12.0f)
+                    lineTo(19.071f, 6.34312f)
                     close()
                 }
             }.build().also {

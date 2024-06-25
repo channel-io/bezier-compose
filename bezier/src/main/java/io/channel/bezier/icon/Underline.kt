@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,21 +31,28 @@ val BezierIcons.Underline: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(7.0f, 4.0f)
-                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 5.0f, 4.0f)
+                    curveTo(7.0f, 3.44772f, 6.55228f, 3.0f, 6.0f, 3.0f)
+                    curveTo(5.44772f, 3.0f, 5.0f, 3.44772f, 5.0f, 4.0f)
                     lineTo(5.0f, 11.0f)
-                    arcTo(7.0f, 7.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 19.0f, 11.0f)
+                    curveTo(5.0f, 14.866f, 8.13401f, 18.0f, 12.0f, 18.0f)
+                    curveTo(15.866f, 18.0f, 19.0f, 14.866f, 19.0f, 11.0f)
                     lineTo(19.0f, 4.0f)
-                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = false, 17.0f, 4.0f)
+                    curveTo(19.0f, 3.44772f, 18.5523f, 3.0f, 18.0f, 3.0f)
+                    curveTo(17.4477f, 3.0f, 17.0f, 3.44772f, 17.0f, 4.0f)
                     lineTo(17.0f, 11.0f)
-                    arcTo(5.0f, 5.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 7.0f, 11.0f)
+                    curveTo(17.0f, 13.7614f, 14.7614f, 16.0f, 12.0f, 16.0f)
+                    curveTo(9.23858f, 16.0f, 7.0f, 13.7614f, 7.0f, 11.0f)
+                    lineTo(7.0f, 4.0f)
                     close()
                     moveTo(4.0f, 19.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 4.0f, 21.0f)
+                    curveTo(3.44772f, 19.0f, 3.0f, 19.4477f, 3.0f, 20.0f)
+                    curveTo(3.0f, 20.5523f, 3.44772f, 21.0f, 4.0f, 21.0f)
                     lineTo(20.0f, 21.0f)
-                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 20.0f, 19.0f)
+                    curveTo(20.5523f, 21.0f, 21.0f, 20.5523f, 21.0f, 20.0f)
+                    curveTo(21.0f, 19.4477f, 20.5523f, 19.0f, 20.0f, 19.0f)
+                    lineTo(4.0f, 19.0f)
                     close()
                 }
             }.build().also {

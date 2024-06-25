@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,19 +31,19 @@ val BezierIcons.LightningFilled: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(18.54f, 10.226f)
-                    lineTo(14.221f, 9.226f)
-                    lineTo(16.303f, 2.1430000000000007f)
-                    curveTo(16.449f, 1.6470000000000007f, 15.835f, 1.2830000000000008f, 15.47f, 1.6500000000000008f)
-                    lineTo(5.146f, 12.003f)
-                    arcTo(0.5f, 0.5f, 224.87483778107978f, isMoreThanHalf = false, isPositiveArc = false, 5.388f, 12.843f)
-                    lineTo(9.708f, 13.843f)
-                    lineTo(7.6240000000000006f, 20.924f)
-                    curveTo(7.478000000000001f, 21.422f, 8.092f, 21.785f, 8.458f, 21.418f)
-                    lineTo(18.781f, 11.065999999999999f)
-                    arcTo(0.5f, 0.5f, 44.93587333147426f, isMoreThanHalf = false, isPositiveArc = false, 18.541f, 10.225999999999999f)
+                    moveTo(18.5402f, 10.2255f)
+                    lineTo(14.2212f, 9.2255f)
+                    lineTo(16.3032f, 2.1435f)
+                    curveTo(16.4492f, 1.6465f, 15.8352f, 1.2825f, 15.4702f, 1.6495f)
+                    lineTo(5.14621f, 12.0025f)
+                    curveTo(4.86921f, 12.2805f, 5.00521f, 12.7545f, 5.38821f, 12.8425f)
+                    lineTo(9.70721f, 13.8425f)
+                    lineTo(7.62421f, 20.9245f)
+                    curveTo(7.47821f, 21.4215f, 8.09221f, 21.7855f, 8.45821f, 21.4175f)
+                    lineTo(18.7812f, 11.0655f)
+                    curveTo(19.0582f, 10.7875f, 18.9222f, 10.3135f, 18.5402f, 10.2255f)
+                    close()
                 }
             }.build().also {
                 _lightningFilled = it

@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,17 +31,17 @@ val BezierIcons.BookmarkFilled: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(19.007f, 4.993f)
-                    arcTo(2.0f, 2.0f, 359.7994643633512f, isMoreThanHalf = false, isPositiveArc = false, 17.007f, 3.0f)
-                    lineTo(7.0f, 3.0f)
-                    arcTo(2.0f, 2.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 5.0f, 5.0f)
-                    lineTo(5.0f, 20.576999999999998f)
-                    arcTo(1.0f, 1.0f, 179.97852267806027f, isMoreThanHalf = false, isPositiveArc = false, 6.64f, 21.345f)
-                    lineTo(12.036f, 16.84f)
-                    lineTo(17.423f, 21.338f)
-                    arcTo(1.0f, 1.0f, 129.79191809666034f, isMoreThanHalf = false, isPositiveArc = false, 19.063f, 20.568f)
+                    moveTo(19.0072f, 4.99286f)
+                    curveTo(19.0032f, 3.89113f, 18.109f, 3.00012f, 17.0073f, 3.00012f)
+                    lineTo(6.9996f, 3.00012f)
+                    curveTo(5.89503f, 3.00012f, 4.9996f, 3.89555f, 4.9996f, 5.00012f)
+                    lineTo(4.9996f, 20.5774f)
+                    curveTo(4.9996f, 21.4257f, 5.98939f, 21.8887f, 6.64054f, 21.345f)
+                    lineTo(12.0356f, 16.8401f)
+                    lineTo(17.4229f, 21.3384f)
+                    curveTo(18.0753f, 21.8832f, 19.0669f, 21.4172f, 19.0638f, 20.5672f)
+                    lineTo(19.0072f, 4.99286f)
                     close()
                 }
             }.build().also {

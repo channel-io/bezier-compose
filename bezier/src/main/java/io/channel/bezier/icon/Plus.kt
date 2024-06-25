@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -34,19 +33,23 @@ val BezierIcons.Plus: BezierIcon
                         strokeAlpha = 1.0f,
                 ) {
                     moveTo(12.0f, 3.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 11.0f, 4.0f)
+                    curveTo(11.4477f, 3.0f, 11.0f, 3.44772f, 11.0f, 4.0f)
                     lineTo(11.0f, 11.0f)
                     lineTo(4.0f, 11.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 4.0f, 13.0f)
+                    curveTo(3.44772f, 11.0f, 3.0f, 11.4477f, 3.0f, 12.0f)
+                    curveTo(3.0f, 12.5523f, 3.44772f, 13.0f, 4.0f, 13.0f)
                     lineTo(11.0f, 13.0f)
                     lineTo(11.0f, 20.0f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 13.0f, 20.0f)
+                    curveTo(11.0f, 20.5523f, 11.4477f, 21.0f, 12.0f, 21.0f)
+                    curveTo(12.5523f, 21.0f, 13.0f, 20.5523f, 13.0f, 20.0f)
                     lineTo(13.0f, 13.0f)
                     lineTo(20.0f, 13.0f)
-                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 20.0f, 11.0f)
+                    curveTo(20.5523f, 13.0f, 21.0f, 12.5523f, 21.0f, 12.0f)
+                    curveTo(21.0f, 11.4477f, 20.5523f, 11.0f, 20.0f, 11.0f)
                     lineTo(13.0f, 11.0f)
                     lineTo(13.0f, 4.0f)
-                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 3.0f)
+                    curveTo(13.0f, 3.44772f, 12.5523f, 3.0f, 12.0f, 3.0f)
+                    close()
                 }
             }.build().also {
                 _plus = it

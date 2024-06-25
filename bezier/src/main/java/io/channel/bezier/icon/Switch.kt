@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,16 +31,21 @@ val BezierIcons.Switch: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(9.0f, 4.0f)
-                    arcTo(8.0f, 8.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 9.0f, 20.0f)
+                    curveTo(4.58172f, 4.0f, 1.0f, 7.58172f, 1.0f, 12.0f)
+                    curveTo(1.0f, 16.4183f, 4.58172f, 20.0f, 9.0f, 20.0f)
                     lineTo(15.0f, 20.0f)
-                    arcTo(8.0f, 8.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 15.0f, 4.0f)
+                    curveTo(19.4183f, 20.0f, 23.0f, 16.4183f, 23.0f, 12.0f)
+                    curveTo(23.0f, 7.58172f, 19.4183f, 4.0f, 15.0f, 4.0f)
+                    lineTo(9.0f, 4.0f)
                     close()
                     moveTo(15.0f, 6.0f)
-                    arcTo(6.0f, 6.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 15.0f, 18.0f)
-                    arcTo(6.0f, 6.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 15.0f, 6.0f)
+                    curveTo(11.6863f, 6.0f, 9.0f, 8.68629f, 9.0f, 12.0f)
+                    curveTo(9.0f, 15.3137f, 11.6863f, 18.0f, 15.0f, 18.0f)
+                    curveTo(18.3137f, 18.0f, 21.0f, 15.3137f, 21.0f, 12.0f)
+                    curveTo(21.0f, 8.68629f, 18.3137f, 6.0f, 15.0f, 6.0f)
+                    close()
                 }
             }.build().also {
                 _switch = it

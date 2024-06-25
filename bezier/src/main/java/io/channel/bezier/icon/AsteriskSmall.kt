@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -34,25 +33,31 @@ val BezierIcons.AsteriskSmall: BezierIcon
                         strokeAlpha = 1.0f,
                 ) {
                     moveTo(12.0f, 5.5f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 6.5f)
+                    curveTo(12.5523f, 5.5f, 13.0f, 5.94772f, 13.0f, 6.5f)
                     lineTo(13.0f, 10.268f)
-                    lineTo(16.262999999999998f, 8.384f)
-                    arcTo(1.0f, 1.0f, 239.61921222659703f, isMoreThanHalf = true, isPositiveArc = true, 17.262999999999998f, 10.116f)
+                    lineTo(16.2632f, 8.38397f)
+                    curveTo(16.7415f, 8.10783f, 17.3531f, 8.27171f, 17.6292f, 8.75f)
+                    curveTo(17.9053f, 9.22829f, 17.7415f, 9.83988f, 17.2632f, 10.116f)
                     lineTo(14.0f, 12.0f)
-                    lineTo(17.262999999999998f, 13.884f)
-                    arcTo(1.0f, 1.0f, 299.6206677882518f, isMoreThanHalf = true, isPositiveArc = true, 16.262999999999998f, 15.616f)
-                    lineTo(13.0f, 13.732f)
+                    lineTo(17.2631f, 13.884f)
+                    curveTo(17.7414f, 14.1601f, 17.9053f, 14.7717f, 17.6292f, 15.25f)
+                    curveTo(17.353f, 15.7283f, 16.7414f, 15.8922f, 16.2631f, 15.616f)
+                    lineTo(13.0f, 13.7321f)
                     lineTo(13.0f, 17.5f)
-                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 11.0f, 17.5f)
-                    lineTo(11.0f, 13.732f)
-                    lineTo(7.737f, 15.616f)
-                    arcTo(1.0f, 1.0f, 59.61921222659702f, isMoreThanHalf = true, isPositiveArc = true, 6.737f, 13.884f)
+                    curveTo(13.0f, 18.0523f, 12.5523f, 18.5f, 12.0f, 18.5f)
+                    curveTo(11.4477f, 18.5f, 11.0f, 18.0523f, 11.0f, 17.5f)
+                    lineTo(11.0f, 13.7321f)
+                    lineTo(7.73689f, 15.616f)
+                    curveTo(7.2586f, 15.8922f, 6.64701f, 15.7283f, 6.37086f, 15.25f)
+                    curveTo(6.09472f, 14.7717f, 6.2586f, 14.1601f, 6.73689f, 13.884f)
                     lineTo(10.0f, 12.0f)
-                    lineTo(6.737f, 10.116f)
-                    arcTo(1.0f, 1.0f, 119.62066778825178f, isMoreThanHalf = true, isPositiveArc = true, 7.737f, 8.384f)
+                    lineTo(6.73686f, 10.116f)
+                    curveTo(6.25857f, 9.83988f, 6.09469f, 9.22829f, 6.37084f, 8.75f)
+                    curveTo(6.64698f, 8.27171f, 7.25857f, 8.10783f, 7.73686f, 8.38397f)
                     lineTo(11.0f, 10.268f)
                     lineTo(11.0f, 6.5f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 5.5f)
+                    curveTo(11.0f, 5.94772f, 11.4477f, 5.5f, 12.0f, 5.5f)
+                    close()
                 }
             }.build().also {
                 _asteriskSmall = it

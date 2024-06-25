@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,36 +31,43 @@ val BezierIcons.Credit: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(21.0f, 9.0f)
-                    arcTo(6.0f, 6.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 15.0f, 3.0f)
+                    curveTo(21.0f, 5.68629f, 18.3137f, 3.0f, 15.0f, 3.0f)
                     lineTo(9.0f, 3.0f)
-                    arcTo(6.0f, 6.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 3.0f, 9.0f)
+                    curveTo(5.68629f, 3.0f, 3.0f, 5.68629f, 3.0f, 9.0f)
                     lineTo(3.0f, 15.0f)
-                    arcTo(6.0f, 6.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 9.0f, 21.0f)
+                    curveTo(3.0f, 18.3137f, 5.68629f, 21.0f, 9.0f, 21.0f)
                     lineTo(15.0f, 21.0f)
-                    arcTo(6.0f, 6.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 21.0f, 15.0f)
+                    curveTo(18.3137f, 21.0f, 21.0f, 18.3137f, 21.0f, 15.0f)
+                    lineTo(21.0f, 9.0f)
                     close()
                     moveTo(9.0f, 5.0f)
                     lineTo(15.0f, 5.0f)
-                    lineTo(15.2f, 5.005f)
-                    arcTo(4.0f, 4.0f, 272.86598398258127f, isMoreThanHalf = false, isPositiveArc = true, 19.0f, 9.0f)
+                    lineTo(15.1996f, 5.0049f)
+                    curveTo(17.316f, 5.10892f, 19.0f, 6.8578f, 19.0f, 9.0f)
                     lineTo(19.0f, 15.0f)
-                    lineTo(18.995f, 15.2f)
-                    arcTo(4.0f, 4.0f, 2.8659839825813025f, isMoreThanHalf = false, isPositiveArc = true, 15.0f, 19.0f)
+                    lineTo(18.9951f, 15.1996f)
+                    curveTo(18.8911f, 17.316f, 17.1422f, 19.0f, 15.0f, 19.0f)
                     lineTo(9.0f, 19.0f)
-                    lineTo(8.8f, 18.995f)
-                    arcTo(4.0f, 4.0f, 92.86598398258131f, isMoreThanHalf = false, isPositiveArc = true, 5.0f, 15.0f)
+                    lineTo(8.80036f, 18.9951f)
+                    curveTo(6.68397f, 18.8911f, 5.0f, 17.1422f, 5.0f, 15.0f)
                     lineTo(5.0f, 9.0f)
-                    lineTo(5.005f, 8.8f)
-                    arcTo(4.0f, 4.0f, 182.8659839825813f, isMoreThanHalf = false, isPositiveArc = true, 9.0f, 5.0f)
+                    lineTo(5.0049f, 8.80036f)
+                    curveTo(5.10892f, 6.68397f, 6.8578f, 5.0f, 9.0f, 5.0f)
+                    close()
                     moveTo(12.0f, 8.0f)
-                    curveTo(13.487f, 8.0f, 14.783999999999999f, 8.811f, 15.474f, 10.015f)
-                    lineTo(13.737f, 11.008000000000001f)
-                    arcTo(2.0f, 2.0f, 330.26428689244716f, isMoreThanHalf = true, isPositiveArc = false, 13.737f, 12.992f)
-                    lineTo(15.474f, 13.985000000000001f)
-                    arcTo(4.0f, 4.0f, 29.752213962274247f, isMoreThanHalf = true, isPositiveArc = true, 12.0f, 8.0f)
+                    curveTo(13.4868f, 8.0f, 14.7841f, 8.81118f, 15.4736f, 10.0151f)
+                    lineTo(13.7368f, 11.0076f)
+                    curveTo(13.3921f, 10.4056f, 12.7434f, 10.0f, 12.0f, 10.0f)
+                    curveTo(10.8954f, 10.0f, 10.0f, 10.8954f, 10.0f, 12.0f)
+                    curveTo(10.0f, 13.1046f, 10.8954f, 14.0f, 12.0f, 14.0f)
+                    curveTo(12.7434f, 14.0f, 13.3921f, 13.5944f, 13.7368f, 12.9924f)
+                    lineTo(15.4736f, 13.9849f)
+                    curveTo(14.7841f, 15.1888f, 13.4868f, 16.0f, 12.0f, 16.0f)
+                    curveTo(9.79086f, 16.0f, 8.0f, 14.2091f, 8.0f, 12.0f)
+                    curveTo(8.0f, 9.79086f, 9.79086f, 8.0f, 12.0f, 8.0f)
+                    close()
                 }
             }.build().also {
                 _credit = it

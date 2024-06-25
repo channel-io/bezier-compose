@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -33,18 +32,21 @@ val BezierIcons.ArrowLeftDownSmall: BezierIcon
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
                 ) {
-                    moveTo(16.95f, 7.05f)
-                    arcTo(1.0f, 1.0f, 314.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 15.536f, 7.05f)
-                    lineTo(8.757f, 13.83f)
-                    lineTo(8.757f, 8.465f)
-                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 6.757f, 8.465f)
-                    lineTo(6.757f, 16.243f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 7.757f, 17.243f)
-                    lineTo(15.536f, 17.243f)
-                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 15.536f, 15.242999999999999f)
-                    lineTo(10.172f, 15.242999999999999f)
-                    lineTo(16.95f, 8.465f)
-                    arcTo(1.0f, 1.0f, 45.03187078392833f, isMoreThanHalf = false, isPositiveArc = false, 16.95f, 7.05f)
+                    moveTo(16.9498f, 7.05034f)
+                    curveTo(16.5592f, 6.65982f, 15.9261f, 6.65982f, 15.5356f, 7.05034f)
+                    lineTo(8.75738f, 13.8285f)
+                    lineTo(8.75739f, 8.46455f)
+                    curveTo(8.75739f, 7.91227f, 8.30967f, 7.46455f, 7.75738f, 7.46455f)
+                    curveTo(7.2051f, 7.46455f, 6.75738f, 7.91227f, 6.75739f, 8.46455f)
+                    lineTo(6.75739f, 16.2427f)
+                    curveTo(6.75738f, 16.795f, 7.2051f, 17.2427f, 7.75739f, 17.2427f)
+                    lineTo(15.5356f, 17.2427f)
+                    curveTo(16.0878f, 17.2427f, 16.5356f, 16.795f, 16.5356f, 16.2427f)
+                    curveTo(16.5356f, 15.6904f, 16.0878f, 15.2427f, 15.5356f, 15.2427f)
+                    lineTo(10.1716f, 15.2427f)
+                    lineTo(16.9498f, 8.46455f)
+                    curveTo(17.3403f, 8.07403f, 17.3403f, 7.44086f, 16.9498f, 7.05034f)
+                    close()
                 }
             }.build().also {
                 _arrowLeftDownSmall = it

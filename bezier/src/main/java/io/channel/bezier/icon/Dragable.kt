@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,26 +31,43 @@ val BezierIcons.Dragable: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(8.25f, 7.0f)
-                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 8.25f, 2.5f)
-                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 8.25f, 7.0f)
-                    moveTo(15.75f, 7.0f)
-                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 15.75f, 2.5f)
-                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 15.75f, 7.0f)
+                    curveTo(9.492f, 7.0f, 10.5f, 5.9929f, 10.5f, 4.75f)
+                    curveTo(10.5f, 3.5071f, 9.492f, 2.5f, 8.25f, 2.5f)
+                    curveTo(7.0071f, 2.5f, 6.0f, 3.5071f, 6.0f, 4.75f)
+                    curveTo(6.0f, 5.9929f, 7.0071f, 7.0f, 8.25f, 7.0f)
+                    close()
+                    moveTo(15.7502f, 7.0f)
+                    curveTo(16.9922f, 7.0f, 18.0002f, 5.9929f, 18.0002f, 4.75f)
+                    curveTo(18.0002f, 3.5071f, 16.9922f, 2.5f, 15.7502f, 2.5f)
+                    curveTo(14.5073f, 2.5f, 13.5002f, 3.5071f, 13.5002f, 4.75f)
+                    curveTo(13.5002f, 5.9929f, 14.5073f, 7.0f, 15.7502f, 7.0f)
+                    close()
                     moveTo(10.5f, 12.0f)
-                    arcTo(2.25f, 2.25f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 6.0f, 12.0f)
-                    arcTo(2.25f, 2.25f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 10.5f, 12.0f)
-                    moveTo(15.75f, 14.25f)
-                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 15.75f, 9.75f)
-                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 15.75f, 14.25f)
-                    moveTo(10.5f, 19.25f)
-                    arcTo(2.25f, 2.25f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 6.0f, 19.25f)
-                    arcTo(2.25f, 2.25f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 10.5f, 19.25f)
-                    moveTo(15.75f, 21.5f)
-                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 15.75f, 17.0f)
-                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 15.75f, 21.5f)
+                    curveTo(10.5f, 13.2429f, 9.492f, 14.25f, 8.25f, 14.25f)
+                    curveTo(7.0071f, 14.25f, 6.0f, 13.2429f, 6.0f, 12.0f)
+                    curveTo(6.0f, 10.7571f, 7.0071f, 9.75f, 8.25f, 9.75f)
+                    curveTo(9.492f, 9.75f, 10.5f, 10.7571f, 10.5f, 12.0f)
+                    close()
+                    moveTo(15.7502f, 14.25f)
+                    curveTo(16.9922f, 14.25f, 18.0002f, 13.2429f, 18.0002f, 12.0f)
+                    curveTo(18.0002f, 10.7571f, 16.9922f, 9.75f, 15.7502f, 9.75f)
+                    curveTo(14.5073f, 9.75f, 13.5002f, 10.7571f, 13.5002f, 12.0f)
+                    curveTo(13.5002f, 13.2429f, 14.5073f, 14.25f, 15.7502f, 14.25f)
+                    close()
+                    moveTo(10.5f, 19.2501f)
+                    curveTo(10.5f, 20.493f, 9.492f, 21.5001f, 8.25f, 21.5001f)
+                    curveTo(7.0071f, 21.5001f, 6.0f, 20.493f, 6.0f, 19.2501f)
+                    curveTo(6.0f, 18.0072f, 7.0071f, 17.0001f, 8.25f, 17.0001f)
+                    curveTo(9.492f, 17.0001f, 10.5f, 18.0072f, 10.5f, 19.2501f)
+                    close()
+                    moveTo(15.7502f, 21.5001f)
+                    curveTo(16.9922f, 21.5001f, 18.0002f, 20.493f, 18.0002f, 19.2501f)
+                    curveTo(18.0002f, 18.0072f, 16.9922f, 17.0001f, 15.7502f, 17.0001f)
+                    curveTo(14.5073f, 17.0001f, 13.5002f, 18.0072f, 13.5002f, 19.2501f)
+                    curveTo(13.5002f, 20.493f, 14.5073f, 21.5001f, 15.7502f, 21.5001f)
+                    close()
                 }
             }.build().also {
                 _dragable = it

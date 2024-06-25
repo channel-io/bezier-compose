@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,21 +31,22 @@ val BezierIcons.TriangleDownCircleFilled: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(12.212f, 15.831f)
-                    arcTo(0.3f, 0.3f, 90.09794482412407f, isMoreThanHalf = false, isPositiveArc = true, 11.982f, 15.722999999999999f)
-                    lineTo(7.621999999999999f, 10.492999999999999f)
-                    arcTo(0.3f, 0.3f, 139.95912703212358f, isMoreThanHalf = false, isPositiveArc = true, 7.851999999999999f, 9.999999999999998f)
-                    lineTo(16.572f, 9.999999999999998f)
-                    arcTo(0.3f, 0.3f, 270.09780556290906f, isMoreThanHalf = false, isPositiveArc = true, 16.802f, 10.491999999999997f)
-                    lineTo(12.442f, 15.722999999999997f)
-                    arcTo(0.3f, 0.3f, 39.791710547175164f, isMoreThanHalf = false, isPositiveArc = true, 12.212f, 15.830999999999998f)
-                    moveTo(12.0f, 2.001f)
-                    curveTo(6.478f, 2.0f, 2.0f, 6.476f, 2.0f, 12.0f)
-                    curveTo(2.0f, 17.522f, 6.477f, 22.0f, 12.0f, 22.0f)
-                    curveTo(17.523f, 22.0f, 22.0f, 17.522f, 22.0f, 12.0f)
-                    curveTo(22.0f, 6.476f, 17.522f, 2.0f, 12.0f, 2.0f)
+                    moveTo(12.2116f, 15.8311f)
+                    curveTo(12.1266f, 15.8311f, 12.0416f, 15.7951f, 11.9816f, 15.7231f)
+                    lineTo(7.62163f, 10.4921f)
+                    curveTo(7.45963f, 10.2961f, 7.59763f, 10.0001f, 7.85263f, 10.0001f)
+                    lineTo(16.5716f, 10.0001f)
+                    curveTo(16.8256f, 10.0001f, 16.9646f, 10.2961f, 16.8016f, 10.4921f)
+                    lineTo(12.4416f, 15.7231f)
+                    curveTo(12.3826f, 15.7951f, 12.2966f, 15.8311f, 12.2116f, 15.8311f)
+                    close()
+                    moveTo(12.0006f, 2.00012f)
+                    curveTo(6.47761f, 2.00012f, 2.00061f, 6.47712f, 2.00061f, 12.0001f)
+                    curveTo(2.00061f, 17.5231f, 6.47761f, 22.0001f, 12.0006f, 22.0001f)
+                    curveTo(17.5226f, 22.0001f, 22.0006f, 17.5231f, 22.0006f, 12.0001f)
+                    curveTo(22.0006f, 6.47712f, 17.5226f, 2.00012f, 12.0006f, 2.00012f)
+                    close()
                 }
             }.build().also {
                 _triangleDownCircleFilled = it

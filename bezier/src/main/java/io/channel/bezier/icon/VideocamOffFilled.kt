@@ -9,7 +9,6 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -32,32 +31,34 @@ val BezierIcons.VideocamOffFilled: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 1.0f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(15.998f, 8.0f)
-                    lineTo(15.998f, 13.876999999999999f)
-                    lineTo(22.253f, 20.131999999999998f)
-                    lineTo(20.839f, 21.546f)
-                    lineTo(2.454f, 3.161f)
-                    lineTo(3.8680000000000003f, 1.747f)
-                    lineTo(8.121f, 6.0f)
-                    lineTo(13.998000000000001f, 6.0f)
-                    arcTo(2.0f, 2.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 15.998000000000001f, 8.0f)
-                    moveTo(2.002f, 8.0f)
-                    lineTo(2.002f, 16.0f)
-                    arcTo(2.0f, 2.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 4.002f, 18.0f)
-                    lineTo(13.998000000000001f, 18.0f)
-                    curveTo(14.520000000000001f, 18.0f, 14.991000000000001f, 17.795f, 15.348f, 17.468f)
-                    lineTo(3.89f, 6.011f)
-                    arcTo(1.994f, 1.994f, 266.9527599307834f, isMoreThanHalf = false, isPositiveArc = false, 2.0020000000000002f, 8.001f)
-                    moveTo(21.188f, 17.351f)
-                    arcTo(0.5f, 0.5f, 128.60890198710987f, isMoreThanHalf = false, isPositiveArc = false, 22.0f, 16.961f)
-                    lineTo(22.0f, 7.04f)
-                    arcTo(0.5f, 0.5f, 359.9184376285513f, isMoreThanHalf = false, isPositiveArc = false, 21.188f, 6.65f)
-                    lineTo(17.188f, 9.850000000000001f)
-                    arcTo(0.5f, 0.5f, 231.24437865893233f, isMoreThanHalf = false, isPositiveArc = false, 17.000999999999998f, 10.240000000000002f)
-                    lineTo(17.000999999999998f, 13.760000000000002f)
-                    arcTo(0.5f, 0.5f, 180.01013737566106f, isMoreThanHalf = false, isPositiveArc = false, 17.188f, 14.150000000000002f)
+                    moveTo(15.9982f, 8.00007f)
+                    lineTo(15.9982f, 13.8771f)
+                    lineTo(22.2532f, 20.1321f)
+                    lineTo(20.8392f, 21.5461f)
+                    lineTo(2.45418f, 3.16107f)
+                    lineTo(3.86818f, 1.74707f)
+                    lineTo(8.12117f, 6.00007f)
+                    lineTo(13.9982f, 6.00007f)
+                    curveTo(15.1022f, 6.00007f, 15.9982f, 6.89607f, 15.9982f, 8.00007f)
+                    close()
+                    moveTo(2.00208f, 8.00017f)
+                    lineTo(2.00208f, 16.0002f)
+                    curveTo(2.00208f, 17.1042f, 2.89808f, 18.0002f, 4.00208f, 18.0002f)
+                    lineTo(13.9981f, 18.0002f)
+                    curveTo(14.5201f, 18.0002f, 14.9911f, 17.7952f, 15.3471f, 17.4682f)
+                    lineTo(3.89008f, 6.01117f)
+                    curveTo(2.83808f, 6.07017f, 2.00208f, 6.93417f, 2.00208f, 8.00017f)
+                    close()
+                    moveTo(21.1877f, 17.3498f)
+                    curveTo(21.5147f, 17.6128f, 21.9997f, 17.3788f, 21.9997f, 16.9598f)
+                    lineTo(21.9997f, 7.03977f)
+                    curveTo(21.9997f, 6.62077f, 21.5147f, 6.38777f, 21.1877f, 6.64977f)
+                    lineTo(17.1877f, 9.84977f)
+                    curveTo(17.0687f, 9.94477f, 17.0007f, 10.0878f, 17.0007f, 10.2408f)
+                    lineTo(17.0007f, 13.7598f)
+                    curveTo(17.0007f, 13.9118f, 17.0687f, 14.0548f, 17.1877f, 14.1508f)
+                    lineTo(21.1877f, 17.3498f)
                     close()
                 }
             }.build().also {
