@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,31 +31,29 @@ val BezierIcons.StarCircleFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(12.0002f, 2.00012f)
-                    curveTo(17.5228f, 2.00012f, 22.0002f, 6.47717f, 22.0002f, 12.0001f)
-                    curveTo(22.0002f, 17.5231f, 17.5228f, 22.0001f, 12.0002f, 22.0001f)
-                    curveTo(6.47693f, 22.0001f, 2.00021f, 17.5234f, 2.00021f, 12.0001f)
-                    curveTo(2.00021f, 6.47684f, 6.47693f, 2.00012f, 12.0002f, 2.00012f)
-                    close()
-                    moveTo(14.7345f, 16.849f)
-                    lineTo(12.0002f, 14.9479f)
-                    lineTo(9.26588f, 16.849f)
-                    curveTo(8.6333f, 17.2888f, 7.78243f, 16.697f, 8.02415f, 15.9854f)
-                    lineTo(9.06816f, 12.9088f)
-                    lineTo(6.33384f, 11.0077f)
-                    curveTo(5.70183f, 10.5679f, 6.02698f, 9.61023f, 6.8087f, 9.61023f)
-                    lineTo(10.1882f, 9.61023f)
-                    lineTo(11.2328f, 6.53368f)
-                    curveTo(11.4745f, 5.82211f, 12.5259f, 5.82211f, 12.7676f, 6.53368f)
-                    lineTo(13.8122f, 9.61023f)
-                    lineTo(17.1917f, 9.61023f)
-                    curveTo(17.9734f, 9.61023f, 18.298f, 10.5679f, 17.666f, 11.0077f)
-                    lineTo(14.9317f, 12.9088f)
-                    lineTo(15.9763f, 15.9854f)
-                    curveTo(16.2174f, 16.697f, 15.3671f, 17.2888f, 14.7345f, 16.849f)
-                    close()
+                    moveTo(12.0f, 2.0f)
+                    curveTo(17.523f, 2.0f, 22.0f, 6.477f, 22.0f, 12.0f)
+                    curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
+                    curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
+                    curveTo(2.0f, 6.477f, 6.477f, 2.0f, 12.0f, 2.0f)
+                    moveTo(14.735f, 16.849f)
+                    lineTo(12.0f, 14.948f)
+                    lineTo(9.266f, 16.849f)
+                    curveTo(8.633f, 17.289f, 7.782f, 16.697f, 8.024000000000001f, 15.985f)
+                    lineTo(9.068000000000001f, 12.908999999999999f)
+                    lineTo(6.334000000000001f, 11.008f)
+                    curveTo(5.702000000000002f, 10.568f, 6.027000000000001f, 9.61f, 6.809000000000001f, 9.61f)
+                    lineTo(10.189f, 9.61f)
+                    lineTo(11.233f, 6.533999999999999f)
+                    curveTo(11.475000000000001f, 5.821999999999999f, 12.526f, 5.821999999999999f, 12.768f, 6.533999999999999f)
+                    lineTo(13.812000000000001f, 9.61f)
+                    lineTo(17.192f, 9.61f)
+                    curveTo(17.973f, 9.61f, 18.298000000000002f, 10.568f, 17.666f, 11.008f)
+                    lineTo(14.932f, 12.908f)
+                    lineTo(15.976f, 15.985f)
+                    curveTo(16.217000000000002f, 16.697f, 15.367f, 17.288999999999998f, 14.734000000000002f, 16.849f)
                 }
             }.build().also {
                 _starCircleFilled = it

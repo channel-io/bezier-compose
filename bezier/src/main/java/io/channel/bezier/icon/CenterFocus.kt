@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,50 +31,43 @@ val BezierIcons.CenterFocus: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(21.0002f, 10.0001f)
-                    lineTo(19.0002f, 10.0001f)
-                    lineTo(19.0002f, 5.00009f)
-                    lineTo(14.0002f, 5.00009f)
-                    lineTo(14.0002f, 3.00009f)
-                    lineTo(19.5002f, 3.00009f)
-                    curveTo(20.3272f, 3.00009f, 21.0002f, 3.67309f, 21.0002f, 4.50009f)
-                    lineTo(21.0002f, 10.0001f)
+                    moveTo(21.0f, 10.0f)
+                    lineTo(19.0f, 10.0f)
+                    lineTo(19.0f, 5.0f)
+                    lineTo(14.0f, 5.0f)
+                    lineTo(14.0f, 3.0f)
+                    lineTo(19.5f, 3.0f)
+                    curveTo(20.326999999999998f, 3.0f, 21.0f, 3.673f, 21.0f, 4.5f)
                     close()
-                    moveTo(19.5002f, 21.0001f)
-                    lineTo(14.0002f, 21.0001f)
-                    lineTo(14.0002f, 19.0001f)
-                    lineTo(19.0002f, 19.0001f)
-                    lineTo(19.0002f, 14.0001f)
-                    lineTo(21.0002f, 14.0001f)
-                    lineTo(21.0002f, 19.5001f)
-                    curveTo(21.0002f, 20.3271f, 20.3272f, 21.0001f, 19.5002f, 21.0001f)
-                    close()
-                    moveTo(4.50018f, 21.0001f)
-                    lineTo(10.0002f, 21.0001f)
-                    lineTo(10.0002f, 19.0001f)
-                    lineTo(5.00018f, 19.0001f)
-                    lineTo(5.00018f, 14.0001f)
-                    lineTo(3.00018f, 14.0001f)
-                    lineTo(3.00018f, 19.5001f)
-                    curveTo(3.00018f, 20.3271f, 3.67318f, 21.0001f, 4.50018f, 21.0001f)
-                    close()
-                    moveTo(5.00018f, 10.0001f)
-                    lineTo(3.00018f, 10.0001f)
-                    lineTo(3.00018f, 4.50009f)
-                    curveTo(3.00018f, 3.67309f, 3.67318f, 3.00009f, 4.50018f, 3.00009f)
-                    lineTo(10.0002f, 3.00009f)
-                    lineTo(10.0002f, 5.00009f)
-                    lineTo(5.00018f, 5.00009f)
-                    lineTo(5.00018f, 10.0001f)
+                    moveTo(19.5f, 21.0f)
+                    lineTo(14.0f, 21.0f)
+                    lineTo(14.0f, 19.0f)
+                    lineTo(19.0f, 19.0f)
+                    lineTo(19.0f, 14.0f)
+                    lineTo(21.0f, 14.0f)
+                    lineTo(21.0f, 19.5f)
+                    curveTo(21.0f, 20.326999999999998f, 20.326999999999998f, 21.0f, 19.5f, 21.0f)
+                    moveTo(4.5f, 21.0f)
+                    lineTo(10.0f, 21.0f)
+                    lineTo(10.0f, 19.0f)
+                    lineTo(5.0f, 19.0f)
+                    lineTo(5.0f, 14.0f)
+                    lineTo(3.0f, 14.0f)
+                    lineTo(3.0f, 19.5f)
+                    curveTo(3.0f, 20.326999999999998f, 3.673f, 21.0f, 4.5f, 21.0f)
+                    moveTo(5.0f, 10.0f)
+                    lineTo(3.0f, 10.0f)
+                    lineTo(3.0f, 4.5f)
+                    curveTo(3.0f, 3.673f, 3.673f, 3.0f, 4.5f, 3.0f)
+                    lineTo(10.0f, 3.0f)
+                    lineTo(10.0f, 5.0f)
+                    lineTo(5.0f, 5.0f)
                     close()
                     moveTo(12.0f, 16.0f)
-                    curveTo(14.2091f, 16.0f, 16.0f, 14.2091f, 16.0f, 12.0f)
-                    curveTo(16.0f, 9.79086f, 14.2091f, 8.0f, 12.0f, 8.0f)
-                    curveTo(9.79086f, 8.0f, 8.0f, 9.79086f, 8.0f, 12.0f)
-                    curveTo(8.0f, 14.2091f, 9.79086f, 16.0f, 12.0f, 16.0f)
-                    close()
+                    arcTo(4.0f, 4.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 12.0f, 8.0f)
+                    arcTo(4.0f, 4.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 16.0f)
                 }
             }.build().also {
                 _centerFocus = it

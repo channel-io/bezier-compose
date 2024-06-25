@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,38 +31,28 @@ val BezierIcons.Badge: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.0f, 3.0f)
-                    curveTo(8.41015f, 3.0f, 5.5f, 5.91015f, 5.5f, 9.5f)
-                    curveTo(5.5f, 13.0899f, 8.41015f, 16.0f, 12.0f, 16.0f)
-                    curveTo(15.5899f, 16.0f, 18.5f, 13.0899f, 18.5f, 9.5f)
-                    curveTo(18.5f, 5.91015f, 15.5899f, 3.0f, 12.0f, 3.0f)
+                    arcTo(6.5f, 6.5f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 12.0f, 16.0f)
+                    arcTo(6.5f, 6.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 3.0f)
+                    moveTo(16.0f, 17.002000000000002f)
+                    arcTo(8.5f, 8.5f, 61.92751306414704f, isMoreThanHalf = true, isPositiveArc = false, 8.0f, 17.002000000000002f)
+                    lineTo(8.0f, 22.162000000000003f)
+                    arcTo(0.5f, 0.5f, 180.0845538584112f, isMoreThanHalf = false, isPositiveArc = false, 8.737f, 22.603f)
+                    lineTo(12.0f, 20.846f)
+                    lineTo(15.263f, 22.603f)
+                    arcTo(0.5f, 0.5f, 118.29426903930927f, isMoreThanHalf = false, isPositiveArc = false, 16.0f, 22.163f)
                     close()
-                    moveTo(16.0f, 17.0019f)
-                    curveTo(18.6779f, 15.5711f, 20.5f, 12.7483f, 20.5f, 9.5f)
-                    curveTo(20.5f, 4.80558f, 16.6944f, 1.0f, 12.0f, 1.0f)
-                    curveTo(7.30558f, 1.0f, 3.5f, 4.80558f, 3.5f, 9.5f)
-                    curveTo(3.5f, 12.7483f, 5.32211f, 15.5711f, 8.0f, 17.0019f)
-                    lineTo(8.0f, 22.1629f)
-                    curveTo(8.0f, 22.5412f, 8.40393f, 22.7825f, 8.73705f, 22.6031f)
-                    lineTo(12.0f, 20.8462f)
-                    lineTo(15.263f, 22.6031f)
-                    curveTo(15.5961f, 22.7825f, 16.0f, 22.5412f, 16.0f, 22.1629f)
-                    lineTo(16.0f, 17.0019f)
-                    close()
-                    moveTo(15.6965f, 7.28242f)
-                    curveTo(16.0928f, 7.66707f, 16.1022f, 8.30017f, 15.7176f, 8.69648f)
-                    lineTo(11.8352f, 12.6965f)
-                    curveTo(11.6469f, 12.8905f, 11.388f, 13.0f, 11.1176f, 13.0f)
-                    curveTo(10.8473f, 13.0f, 10.5884f, 12.8905f, 10.4001f, 12.6965f)
-                    lineTo(8.28242f, 10.5147f)
-                    curveTo(7.89777f, 10.1183f, 7.90722f, 9.48525f, 8.30353f, 9.1006f)
-                    curveTo(8.69983f, 8.71595f, 9.33293f, 8.7254f, 9.71758f, 9.12171f)
-                    lineTo(11.1176f, 10.5642f)
-                    lineTo(14.2824f, 7.30353f)
-                    curveTo(14.6671f, 6.90722f, 15.3002f, 6.89777f, 15.6965f, 7.28242f)
-                    close()
+                    moveTo(15.697f, 7.282f)
+                    arcTo(1.0f, 1.0f, 314.19256905648416f, isMoreThanHalf = false, isPositiveArc = true, 15.716999999999999f, 8.696f)
+                    lineTo(11.834999999999999f, 12.696f)
+                    arcTo(1.0f, 1.0f, 44.151540331358824f, isMoreThanHalf = false, isPositiveArc = true, 10.399999999999999f, 12.696f)
+                    lineTo(8.281999999999998f, 10.515f)
+                    arcTo(1.0f, 1.0f, 135.87081319195835f, isMoreThanHalf = false, isPositiveArc = true, 9.717999999999998f, 9.122f)
+                    lineTo(11.117999999999999f, 10.564f)
+                    lineTo(14.281999999999998f, 7.304f)
+                    arcTo(1.0f, 1.0f, 224.07045041714787f, isMoreThanHalf = false, isPositiveArc = true, 15.697f, 7.282f)
                 }
             }.build().also {
                 _badge = it

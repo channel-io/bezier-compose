@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,22 +31,18 @@ val BezierIcons.MapPin: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(12.0006f, 12.732f)
-                    curveTo(10.2256f, 12.732f, 8.78656f, 11.293f, 8.78656f, 9.51798f)
-                    curveTo(8.78656f, 7.74198f, 10.2256f, 6.30298f, 12.0006f, 6.30298f)
-                    curveTo(13.7756f, 6.30298f, 15.2146f, 7.74198f, 15.2146f, 9.51798f)
-                    curveTo(15.2146f, 11.293f, 13.7756f, 12.732f, 12.0006f, 12.732f)
-                    close()
-                    moveTo(18.2566f, 5.33201f)
-                    curveTo(15.2166f, 0.889006f, 8.78457f, 0.889006f, 5.74357f, 5.33201f)
-                    curveTo(3.98257f, 7.90501f, 4.14657f, 11.345f, 5.88957f, 13.931f)
-                    lineTo(11.5566f, 22.339f)
-                    curveTo(11.7686f, 22.655f, 12.2326f, 22.655f, 12.4446f, 22.339f)
-                    lineTo(18.1106f, 13.931f)
-                    curveTo(19.8536f, 11.345f, 20.0186f, 7.90501f, 18.2566f, 5.33201f)
-                    close()
+                    moveTo(12.0f, 12.732f)
+                    arcTo(3.214f, 3.214f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 12.0f, 6.303999999999999f)
+                    arcTo(3.214f, 3.214f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 12.732f)
+                    moveTo(18.256999999999998f, 5.331999999999999f)
+                    arcTo(7.54f, 7.54f, 326.07558434306037f, isMoreThanHalf = false, isPositiveArc = false, 5.743999999999998f, 5.331999999999999f)
+                    curveTo(3.982999999999998f, 7.904999999999999f, 4.1469999999999985f, 11.344999999999999f, 5.889999999999998f, 13.931f)
+                    lineTo(11.556999999999999f, 22.339f)
+                    arcTo(0.534f, 0.534f, 146.2490782230518f, isMoreThanHalf = false, isPositiveArc = false, 12.444999999999999f, 22.339f)
+                    lineTo(18.110999999999997f, 13.931f)
+                    curveTo(19.853999999999996f, 11.344999999999999f, 20.019f, 7.904999999999999f, 18.256999999999998f, 5.331999999999999f)
                 }
             }.build().also {
                 _mapPin = it

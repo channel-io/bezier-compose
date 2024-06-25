@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,32 +31,24 @@ val BezierIcons.Cash: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(4.0f, 12.0f)
                     curveTo(4.0f, 16.411f, 7.589f, 20.0f, 12.0f, 20.0f)
                     curveTo(16.411f, 20.0f, 20.0f, 16.411f, 20.0f, 12.0f)
-                    curveTo(20.0f, 7.589f, 16.411f, 4.0f, 12.0f, 4.0f)
-                    curveTo(7.589f, 4.0f, 4.0f, 7.589f, 4.0f, 12.0f)
-                    close()
+                    curveTo(20.0f, 7.588999999999999f, 16.411f, 4.0f, 12.0f, 4.0f)
+                    curveTo(7.588999999999999f, 4.0f, 4.0f, 7.589f, 4.0f, 12.0f)
                     moveTo(2.0f, 12.0f)
                     curveTo(2.0f, 6.486f, 6.486f, 2.0f, 12.0f, 2.0f)
                     curveTo(17.514f, 2.0f, 22.0f, 6.486f, 22.0f, 12.0f)
                     curveTo(22.0f, 17.514f, 17.514f, 22.0f, 12.0f, 22.0f)
-                    curveTo(6.486f, 22.0f, 2.0f, 17.514f, 2.0f, 12.0f)
-                    close()
+                    curveTo(6.486000000000001f, 22.0f, 2.0f, 17.514f, 2.0f, 12.0f)
                     moveTo(12.0f, 8.0f)
-                    curveTo(13.4868f, 8.0f, 14.7841f, 8.81118f, 15.4736f, 10.0151f)
-                    lineTo(13.7368f, 11.0076f)
-                    curveTo(13.3921f, 10.4056f, 12.7434f, 10.0f, 12.0f, 10.0f)
-                    curveTo(10.8954f, 10.0f, 10.0f, 10.8954f, 10.0f, 12.0f)
-                    curveTo(10.0f, 13.1046f, 10.8954f, 14.0f, 12.0f, 14.0f)
-                    curveTo(12.7434f, 14.0f, 13.3921f, 13.5944f, 13.7368f, 12.9924f)
-                    lineTo(15.4736f, 13.9849f)
-                    curveTo(14.7841f, 15.1888f, 13.4868f, 16.0f, 12.0f, 16.0f)
-                    curveTo(9.79086f, 16.0f, 8.0f, 14.2091f, 8.0f, 12.0f)
-                    curveTo(8.0f, 9.79086f, 9.79086f, 8.0f, 12.0f, 8.0f)
-                    close()
+                    curveTo(13.487f, 8.0f, 14.783999999999999f, 8.811f, 15.474f, 10.015f)
+                    lineTo(13.737f, 11.008000000000001f)
+                    arcTo(2.0f, 2.0f, 330.26428689244716f, isMoreThanHalf = true, isPositiveArc = false, 13.737f, 12.992f)
+                    lineTo(15.474f, 13.985000000000001f)
+                    arcTo(4.0f, 4.0f, 29.752213962274247f, isMoreThanHalf = true, isPositiveArc = true, 12.0f, 8.0f)
                 }
             }.build().also {
                 _cash = it

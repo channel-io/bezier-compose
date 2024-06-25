@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,38 +31,26 @@ val BezierIcons.Workflow: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(2.0f, 6.0f)
-                    curveTo(2.0f, 4.067f, 3.567f, 2.5f, 5.5f, 2.5f)
-                    curveTo(7.08551f, 2.5f, 8.42479f, 3.55426f, 8.85506f, 5.0f)
-                    lineTo(13.9333f, 5.0f)
-                    curveTo(16.1425f, 5.0f, 17.9333f, 6.79086f, 17.9333f, 9.0f)
-                    curveTo(17.9333f, 11.2091f, 16.1425f, 13.0f, 13.9333f, 13.0f)
+                    arcTo(3.5f, 3.5f, 179.95053834815639f, isMoreThanHalf = false, isPositiveArc = true, 8.855f, 5.0f)
+                    lineTo(13.933f, 5.0f)
+                    arcTo(4.0f, 4.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 13.933f, 13.0f)
                     lineTo(10.0f, 13.0f)
-                    curveTo(8.89543f, 13.0f, 8.0f, 13.8954f, 8.0f, 15.0f)
-                    curveTo(8.0f, 16.1046f, 8.89543f, 17.0f, 10.0f, 17.0f)
-                    lineTo(16.1449f, 17.0f)
-                    curveTo(16.5752f, 15.5543f, 17.9145f, 14.5f, 19.5f, 14.5f)
-                    curveTo(21.433f, 14.5f, 23.0f, 16.067f, 23.0f, 18.0f)
-                    curveTo(23.0f, 19.933f, 21.433f, 21.5f, 19.5f, 21.5f)
-                    curveTo(17.9145f, 21.5f, 16.5752f, 20.4457f, 16.1449f, 19.0f)
+                    arcTo(2.0f, 2.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 10.0f, 17.0f)
+                    lineTo(16.145f, 17.0f)
+                    arcTo(3.502f, 3.502f, 196.77263067536254f, isMoreThanHalf = false, isPositiveArc = true, 23.0f, 18.0f)
+                    arcTo(3.5f, 3.5f, 359.9505383481564f, isMoreThanHalf = false, isPositiveArc = true, 16.145f, 19.0f)
                     lineTo(10.0f, 19.0f)
-                    curveTo(7.79086f, 19.0f, 6.0f, 17.2091f, 6.0f, 15.0f)
-                    curveTo(6.0f, 12.7909f, 7.79086f, 11.0f, 10.0f, 11.0f)
-                    lineTo(13.9333f, 11.0f)
-                    curveTo(15.0379f, 11.0f, 15.9333f, 10.1046f, 15.9333f, 9.0f)
-                    curveTo(15.9333f, 7.89543f, 15.0379f, 7.0f, 13.9333f, 7.0f)
-                    lineTo(8.85506f, 7.0f)
-                    curveTo(8.42479f, 8.44574f, 7.08551f, 9.5f, 5.5f, 9.5f)
-                    curveTo(3.567f, 9.5f, 2.0f, 7.933f, 2.0f, 6.0f)
-                    close()
-                    moveTo(18.3333f, 18.0f)
-                    curveTo(18.3333f, 18.6443f, 18.8557f, 19.1667f, 19.5f, 19.1667f)
-                    curveTo(20.1443f, 19.1667f, 20.6667f, 18.6443f, 20.6667f, 18.0f)
-                    curveTo(20.6667f, 17.3557f, 20.1443f, 16.8333f, 19.5f, 16.8333f)
-                    curveTo(18.8557f, 16.8333f, 18.3333f, 17.3557f, 18.3333f, 18.0f)
-                    close()
+                    arcTo(4.0f, 4.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 10.0f, 11.0f)
+                    lineTo(13.933f, 11.0f)
+                    arcTo(2.0f, 2.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 13.933f, 7.0f)
+                    lineTo(8.855f, 7.0f)
+                    arcTo(3.502f, 3.502f, 16.772630675362542f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 6.0f)
+                    moveTo(18.333f, 18.0f)
+                    arcTo(1.167f, 1.167f, 180.00000120741828f, isMoreThanHalf = true, isPositiveArc = false, 20.666999999999998f, 18.0f)
+                    arcTo(1.167f, 1.167f, 359.9999987925817f, isMoreThanHalf = false, isPositiveArc = false, 18.333f, 18.0f)
                 }
             }.build().also {
                 _workflow = it

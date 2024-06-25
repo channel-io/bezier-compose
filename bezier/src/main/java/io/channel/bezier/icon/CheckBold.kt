@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,18 +31,15 @@ val BezierIcons.CheckBold: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(10.0f, 14.0634f)
-                    lineTo(17.0711f, 6.99238f)
-                    curveTo(17.6569f, 6.40659f, 18.6066f, 6.40659f, 19.1924f, 6.99238f)
-                    curveTo(19.7782f, 7.57816f, 19.7782f, 8.52791f, 19.1924f, 9.1137f)
-                    lineTo(10.4632f, 17.8429f)
-                    curveTo(10.2074f, 18.0987f, 9.79262f, 18.0987f, 9.53681f, 17.8429f)
-                    lineTo(4.80761f, 13.1137f)
-                    curveTo(4.22183f, 12.5279f, 4.22183f, 11.5782f, 4.80761f, 10.9924f)
-                    curveTo(5.3934f, 10.4066f, 6.34315f, 10.4066f, 6.92893f, 10.9924f)
-                    lineTo(10.0f, 14.0634f)
+                    moveTo(10.0f, 14.063f)
+                    lineTo(17.070999999999998f, 6.993f)
+                    arcTo(1.5f, 1.5f, 223.39306813950847f, isMoreThanHalf = true, isPositiveArc = true, 19.191999999999997f, 9.113f)
+                    lineTo(10.462999999999997f, 17.843f)
+                    arcTo(0.655f, 0.655f, 45.01916425610011f, isMoreThanHalf = false, isPositiveArc = true, 9.536999999999997f, 17.843f)
+                    lineTo(4.806999999999997f, 13.113f)
+                    arcTo(1.5f, 1.5f, 134.0316354095093f, isMoreThanHalf = true, isPositiveArc = true, 6.928999999999997f, 10.992999999999999f)
                     close()
                 }
             }.build().also {

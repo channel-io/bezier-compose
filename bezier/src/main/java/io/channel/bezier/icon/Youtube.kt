@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,27 +31,23 @@ val BezierIcons.Youtube: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(10.1459f, 14.947f)
-                    lineTo(10.1459f, 8.95703f)
-                    lineTo(15.055f, 11.952f)
-                    lineTo(10.1459f, 14.947f)
+                    moveTo(10.146f, 14.947f)
+                    lineTo(10.146f, 8.956999999999999f)
+                    lineTo(15.055f, 11.951999999999998f)
                     close()
-                    moveTo(21.9069f, 9.02703f)
-                    curveTo(21.7819f, 7.08604f, 20.278f, 5.51801f, 18.3449f, 5.31201f)
-                    curveTo(16.34f, 5.10904f, 14.209f, 5.0f, 12.0f, 5.0f)
-                    curveTo(9.79094f, 5.0f, 7.65999f, 5.10904f, 5.65494f, 5.31106f)
-                    curveTo(3.72197f, 5.51801f, 2.218f, 7.08604f, 2.09299f, 9.02703f)
-                    curveTo(2.03203f, 9.98303f, 2.0f, 10.96f, 2.0f, 11.952f)
-                    curveTo(2.0f, 12.944f, 2.03203f, 13.921f, 2.09299f, 14.877f)
-                    curveTo(2.218f, 16.818f, 3.72197f, 18.386f, 5.65494f, 18.592f)
-                    curveTo(7.65999f, 18.795f, 9.79094f, 18.904f, 12.0f, 18.904f)
-                    curveTo(14.209f, 18.904f, 16.34f, 18.795f, 18.3449f, 18.593f)
-                    curveTo(20.278f, 18.386f, 21.7819f, 16.818f, 21.9069f, 14.877f)
-                    curveTo(21.968f, 13.921f, 22.0f, 12.944f, 22.0f, 11.952f)
-                    curveTo(22.0f, 10.96f, 21.968f, 9.98303f, 21.9069f, 9.02703f)
-                    close()
+                    moveTo(21.906f, 9.027f)
+                    arcTo(3.99f, 3.99f, 356.36842756126606f, isMoreThanHalf = false, isPositiveArc = false, 18.345f, 5.311999999999999f)
+                    arcTo(63.0f, 63.0f, 275.705076739269f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 5.0f)
+                    curveTo(9.79f, 5.0f, 7.66f, 5.109f, 5.655f, 5.311f)
+                    arcTo(3.995f, 3.995f, 263.8965155352465f, isMoreThanHalf = false, isPositiveArc = false, 2.0930000000000004f, 9.027000000000001f)
+                    arcTo(46.0f, 46.0f, 183.64572385432396f, isMoreThanHalf = false, isPositiveArc = false, 2.0930000000000004f, 14.877f)
+                    arcTo(3.994f, 3.994f, 176.3184827007944f, isMoreThanHalf = false, isPositiveArc = false, 5.655f, 18.592f)
+                    arcTo(63.0f, 63.0f, 95.70507673926903f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 18.904f)
+                    curveTo(14.209f, 18.904f, 16.34f, 18.794999999999998f, 18.345f, 18.593f)
+                    arcTo(3.995f, 3.995f, 83.89651553524658f, isMoreThanHalf = false, isPositiveArc = false, 21.907f, 14.876999999999999f)
+                    arcTo(46.0f, 46.0f, 3.6457238543239776f, isMoreThanHalf = false, isPositiveArc = false, 21.907f, 9.027f)
                 }
             }.build().also {
                 _youtube = it

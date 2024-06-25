@@ -28,7 +28,21 @@ val BezierIcons.Square: BezierIcon
                     viewportWidth = 24f,
                     viewportHeight = 24f,
             ).apply {
-
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                ) {
+                    moveTo(4.0f, 3.0f)
+                    lineTo(20.0f, 3.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 21.0f, 4.0f)
+                    lineTo(21.0f, 20.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 20.0f, 21.0f)
+                    lineTo(4.0f, 21.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 3.0f, 20.0f)
+                    lineTo(3.0f, 4.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 4.0f, 3.0f)
+                    close()
+                }
             }.build().also {
                 _square = it
             }

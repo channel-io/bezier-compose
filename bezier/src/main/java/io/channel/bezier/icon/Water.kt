@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,18 +31,17 @@ val BezierIcons.Water: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(18.1106f, 10.0649f)
-                    lineTo(12.4446f, 1.65592f)
-                    curveTo(12.3386f, 1.49892f, 12.1696f, 1.41992f, 12.0006f, 1.41992f)
-                    curveTo(11.8316f, 1.41992f, 11.6626f, 1.49892f, 11.5566f, 1.65592f)
-                    lineTo(5.88957f, 10.0649f)
-                    curveTo(4.14657f, 12.6509f, 3.98257f, 16.0909f, 5.74357f, 18.6639f)
-                    curveTo(7.26357f, 20.8849f, 9.63257f, 21.9959f, 12.0006f, 21.9959f)
-                    curveTo(14.3686f, 21.9959f, 16.7366f, 20.8849f, 18.2566f, 18.6639f)
-                    curveTo(20.0186f, 16.0909f, 19.8536f, 12.6509f, 18.1106f, 10.0649f)
-                    close()
+                    moveTo(18.11f, 10.065f)
+                    lineTo(12.445f, 1.6549999999999994f)
+                    arcTo(0.53f, 0.53f, 326.18143171216417f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 1.42f)
+                    arcTo(0.53f, 0.53f, 270.3257837143662f, isMoreThanHalf = false, isPositiveArc = false, 11.556f, 1.656f)
+                    lineTo(5.89f, 10.065f)
+                    curveTo(4.146999999999999f, 12.651f, 3.9829999999999997f, 16.091f, 5.744f, 18.664f)
+                    curveTo(7.263999999999999f, 20.884f, 9.633f, 21.996000000000002f, 12.001f, 21.996000000000002f)
+                    curveTo(14.369f, 21.996000000000002f, 16.737f, 20.885f, 18.256999999999998f, 18.664f)
+                    curveTo(20.019f, 16.091f, 19.854f, 12.651000000000002f, 18.110999999999997f, 10.064000000000002f)
                 }
             }.build().also {
                 _water = it

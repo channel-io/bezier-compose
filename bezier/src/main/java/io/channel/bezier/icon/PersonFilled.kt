@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,21 +31,17 @@ val BezierIcons.PersonFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(16.4874f, 6.50012f)
-                    curveTo(16.4874f, 8.98512f, 14.4724f, 11.0001f, 11.9874f, 11.0001f)
-                    curveTo(9.50242f, 11.0001f, 7.48742f, 8.98512f, 7.48742f, 6.50012f)
-                    curveTo(7.48742f, 4.01512f, 9.50242f, 2.00012f, 11.9874f, 2.00012f)
-                    curveTo(14.4724f, 2.00012f, 16.4874f, 4.01512f, 16.4874f, 6.50012f)
-                    close()
-                    moveTo(2.00092f, 21.4781f)
-                    curveTo(1.98592f, 21.7611f, 2.22392f, 22.0001f, 2.50792f, 22.0001f)
-                    lineTo(21.4669f, 22.0001f)
-                    curveTo(21.7509f, 22.0001f, 21.9879f, 21.7611f, 21.9739f, 21.4781f)
-                    curveTo(21.7019f, 16.1981f, 17.3349f, 12.0001f, 11.9869f, 12.0001f)
-                    curveTo(6.63992f, 12.0001f, 2.27192f, 16.1981f, 2.00092f, 21.4781f)
-                    close()
+                    moveTo(16.487f, 6.5f)
+                    arcTo(4.5f, 4.5f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 7.486999999999998f, 6.5f)
+                    arcTo(4.5f, 4.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 16.487f, 6.5f)
+                    moveTo(2.001f, 21.478f)
+                    arcTo(0.506f, 0.506f, 181.81220207903192f, isMoreThanHalf = false, isPositiveArc = false, 2.508f, 22.0f)
+                    lineTo(21.467f, 22.0f)
+                    arcTo(0.507f, 0.507f, 90.02508170938532f, isMoreThanHalf = false, isPositiveArc = false, 21.974f, 21.478f)
+                    curveTo(21.702f, 16.198f, 17.334f, 12.000000000000002f, 11.987f, 12.000000000000002f)
+                    curveTo(6.640000000000001f, 12.000000000000002f, 2.272f, 16.198f, 2.0f, 21.478f)
                 }
             }.build().also {
                 _personFilled = it

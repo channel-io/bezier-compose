@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,30 +31,26 @@ val BezierIcons.ChevronSmallUpdown: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(16.2071f, 13.7929f)
-                    curveTo(16.5976f, 14.1834f, 16.5976f, 14.8166f, 16.2071f, 15.2071f)
-                    lineTo(12.7071f, 18.7071f)
-                    curveTo(12.3166f, 19.0976f, 11.6834f, 19.0976f, 11.2929f, 18.7071f)
-                    lineTo(7.79289f, 15.2071f)
-                    curveTo(7.40237f, 14.8166f, 7.40237f, 14.1834f, 7.79289f, 13.7929f)
-                    curveTo(8.18342f, 13.4024f, 8.81658f, 13.4024f, 9.20711f, 13.7929f)
-                    lineTo(12.0f, 16.5858f)
-                    lineTo(14.7929f, 13.7929f)
-                    curveTo(15.1834f, 13.4024f, 15.8166f, 13.4024f, 16.2071f, 13.7929f)
-                    close()
-                    moveTo(16.2071f, 10.2071f)
-                    curveTo(15.8166f, 10.5976f, 15.1834f, 10.5976f, 14.7929f, 10.2071f)
-                    lineTo(12.0f, 7.41421f)
-                    lineTo(9.20711f, 10.2071f)
-                    curveTo(8.81658f, 10.5976f, 8.18342f, 10.5976f, 7.79289f, 10.2071f)
-                    curveTo(7.40237f, 9.81658f, 7.40237f, 9.18342f, 7.79289f, 8.79289f)
-                    lineTo(11.2929f, 5.29289f)
-                    curveTo(11.6834f, 4.90237f, 12.3166f, 4.90237f, 12.7071f, 5.29289f)
-                    lineTo(16.2071f, 8.79289f)
-                    curveTo(16.5976f, 9.18342f, 16.5976f, 9.81658f, 16.2071f, 10.2071f)
-                    close()
+                    moveTo(16.207f, 13.793f)
+                    arcTo(1.0f, 1.0f, 315.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 16.207f, 15.206999999999999f)
+                    lineTo(12.707f, 18.707f)
+                    arcTo(1.0f, 1.0f, 45.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 11.293000000000001f, 18.707f)
+                    lineTo(7.793000000000001f, 15.207f)
+                    arcTo(1.0f, 1.0f, 134.00425538642028f, isMoreThanHalf = true, isPositiveArc = true, 9.207f, 13.793000000000001f)
+                    lineTo(12.0f, 16.586f)
+                    lineTo(14.793f, 13.793f)
+                    arcTo(1.0f, 1.0f, 225.0086516628379f, isMoreThanHalf = false, isPositiveArc = true, 16.207f, 13.793f)
+                    moveTo(16.207f, 10.207f)
+                    arcTo(1.0f, 1.0f, 45.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 14.793000000000001f, 10.207f)
+                    lineTo(12.0f, 7.414f)
+                    lineTo(9.207f, 10.207f)
+                    arcTo(1.0f, 1.0f, 45.99574461357973f, isMoreThanHalf = false, isPositiveArc = true, 7.793000000000001f, 8.793000000000001f)
+                    lineTo(11.293000000000001f, 5.293000000000001f)
+                    arcTo(1.0f, 1.0f, 225.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 12.707f, 5.293000000000001f)
+                    lineTo(16.207f, 8.793000000000001f)
+                    arcTo(1.0f, 1.0f, 315.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 16.207f, 10.207f)
                 }
             }.build().also {
                 _chevronSmallUpdown = it

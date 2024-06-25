@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,26 +31,21 @@ val BezierIcons.PlusSmall: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(12.0f, 5.0f)
-                    curveTo(11.4477f, 5.0f, 11.0f, 5.44772f, 11.0f, 6.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 11.0f, 6.0f)
                     lineTo(11.0f, 11.0f)
                     lineTo(6.0f, 11.0f)
-                    curveTo(5.44772f, 11.0f, 5.0f, 11.4477f, 5.0f, 12.0f)
-                    curveTo(5.0f, 12.5523f, 5.44772f, 13.0f, 6.0f, 13.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 6.0f, 13.0f)
                     lineTo(11.0f, 13.0f)
                     lineTo(11.0f, 18.0f)
-                    curveTo(11.0f, 18.5523f, 11.4477f, 19.0f, 12.0f, 19.0f)
-                    curveTo(12.5523f, 19.0f, 13.0f, 18.5523f, 13.0f, 18.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 13.0f, 18.0f)
                     lineTo(13.0f, 13.0f)
                     lineTo(18.0f, 13.0f)
-                    curveTo(18.5523f, 13.0f, 19.0f, 12.5523f, 19.0f, 12.0f)
-                    curveTo(19.0f, 11.4477f, 18.5523f, 11.0f, 18.0f, 11.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 18.0f, 11.0f)
                     lineTo(13.0f, 11.0f)
                     lineTo(13.0f, 6.0f)
-                    curveTo(13.0f, 5.44772f, 12.5523f, 5.0f, 12.0f, 5.0f)
-                    close()
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 5.0f)
                 }
             }.build().also {
                 _plusSmall = it

@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,60 +31,55 @@ val BezierIcons.GooglePlay: BezierIcon
                 path(
                         fill = SolidColor(Color(0x66313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        strokeAlpha = 0.4f,
                 ) {
                     moveTo(13.0f, 12.0f)
-                    lineTo(5.07388f, 19.5024f)
-                    curveTo(5.31769f, 20.3632f, 6.14516f, 20.993f, 7.12777f, 20.993f)
-                    curveTo(7.51934f, 20.993f, 7.88875f, 20.895f, 8.20643f, 20.7131f)
-                    lineTo(8.2286f, 20.6991f)
-                    lineTo(17.0795f, 15.8632f)
-                    lineTo(13.0f, 12.0f)
+                    lineTo(5.074f, 19.502f)
+                    curveTo(5.318f, 20.363f, 6.145f, 20.993f, 7.128f, 20.993f)
+                    curveTo(7.519f, 20.993f, 7.888f, 20.895f, 8.206f, 20.712999999999997f)
+                    lineTo(8.229f, 20.698999999999998f)
+                    lineTo(17.079f, 15.862999999999998f)
                     close()
                 }
 
                 path(
                         fill = SolidColor(Color(0x99313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        strokeAlpha = 0.6f,
                 ) {
-                    moveTo(20.8992f, 10.2503f)
-                    lineTo(20.8918f, 10.2503f)
-                    lineTo(17.0721f, 8.1438f)
+                    moveTo(20.9f, 10.25f)
+                    lineTo(20.892f, 10.25f)
+                    lineTo(17.072f, 8.144f)
                     lineTo(13.0f, 12.0f)
-                    lineTo(17.0869f, 15.8701f)
-                    lineTo(20.8918f, 13.7915f)
-                    curveTo(21.5567f, 13.4486f, 22.0074f, 12.7838f, 22.0074f, 12.0209f)
-                    curveTo(22.0074f, 11.2581f, 21.5641f, 10.5933f, 20.8992f, 10.2573f)
-                    lineTo(20.8992f, 10.2503f)
+                    lineTo(17.087f, 15.870000000000001f)
+                    lineTo(20.892f, 13.792000000000002f)
+                    curveTo(21.557f, 13.449000000000002f, 22.006999999999998f, 12.784000000000002f, 22.006999999999998f, 12.021f)
+                    curveTo(22.006999999999998f, 11.258f, 21.563999999999997f, 10.593f, 20.898999999999997f, 10.257000000000001f)
                     close()
                 }
 
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
-                    moveTo(5.07388f, 4.49768f)
-                    curveTo(5.02955f, 4.66564f, 5.0f, 4.83361f, 5.0f, 5.01557f)
-                    lineTo(5.0f, 18.9915f)
-                    curveTo(5.0f, 19.1734f, 5.02216f, 19.3414f, 5.07388f, 19.5093f)
+                    moveTo(5.074f, 4.498f)
+                    arcTo(2.0f, 2.0f, 195.64677874185722f, isMoreThanHalf = false, isPositiveArc = false, 5.0f, 5.016f)
+                    lineTo(5.0f, 18.99f)
+                    curveTo(5.0f, 19.171999999999997f, 5.022f, 19.34f, 5.074f, 19.508f)
                     lineTo(13.0f, 12.0f)
-                    lineTo(5.07388f, 4.49768f)
                     close()
                 }
 
                 path(
                         fill = SolidColor(Color(0xCC313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        strokeAlpha = 0.8f,
                 ) {
                     moveTo(13.0f, 12.0f)
-                    lineTo(17.0742f, 8.14453f)
-                    lineTo(8.22121f, 3.28694f)
-                    curveTo(7.90352f, 3.10498f, 7.52673f, 3.0f, 7.12038f, 3.0f)
-                    curveTo(6.14516f, 3.0f, 5.31064f, 3.6501f, 5.07422f, 4.50391f)
-                    lineTo(13.0f, 12.0f)
+                    lineTo(17.073999999999998f, 8.145f)
+                    lineTo(8.220999999999998f, 3.287f)
+                    arcTo(2.2f, 2.2f, 299.5963072227365f, isMoreThanHalf = false, isPositiveArc = false, 7.121f, 3.0f)
+                    curveTo(6.1450000000000005f, 3.0f, 5.311f, 3.65f, 5.074f, 4.504f)
                     close()
                 }
             }.build().also {

@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,41 +31,36 @@ val BezierIcons.ChatQuestionFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(20.8223f, 16.683f)
-                    curveTo(20.5763f, 17.144f, 20.5573f, 17.694f, 20.7233f, 18.19f)
-                    lineTo(21.3613f, 20.105f)
-                    curveTo(21.6223f, 20.886f, 20.8793f, 21.63f, 20.0973f, 21.37f)
-                    curveTo(19.6395f, 21.2172f, 19.1583f, 21.0569f, 18.7279f, 20.9135f)
-                    curveTo(18.5302f, 20.8476f, 18.3433f, 20.7853f, 18.1743f, 20.729f)
-                    curveTo(17.6813f, 20.565f, 17.1373f, 20.584f, 16.6783f, 20.829f)
-                    curveTo(14.7293f, 21.868f, 12.4033f, 22.29f, 9.94729f, 21.796f)
-                    curveTo(5.94629f, 20.991f, 2.78229f, 17.703f, 2.12929f, 13.675f)
-                    curveTo(1.02329f, 6.848f, 6.83729f, 1.033f, 13.6643f, 2.137f)
-                    curveTo(17.6933f, 2.789f, 20.9823f, 5.954f, 21.7873f, 9.954f)
-                    curveTo(22.2813f, 12.409f, 21.8613f, 14.734f, 20.8223f, 16.683f)
+                    moveTo(20.822f, 16.683f)
+                    curveTo(20.576f, 17.144f, 20.557f, 17.694f, 20.723f, 18.19f)
+                    lineTo(21.361f, 20.105f)
+                    arcTo(1.0f, 1.0f, 341.5796019120572f, isMoreThanHalf = false, isPositiveArc = true, 20.097f, 21.37f)
+                    lineTo(18.727f, 20.913f)
+                    lineTo(18.174f, 20.729f)
+                    curveTo(17.681f, 20.564999999999998f, 17.137f, 20.584f, 16.678f, 20.829f)
+                    curveTo(14.729000000000001f, 21.868000000000002f, 12.403f, 22.29f, 9.948f, 21.796f)
+                    curveTo(5.946000000000001f, 20.991f, 2.782f, 17.703f, 2.1290000000000004f, 13.674999999999999f)
+                    arcTo(10.013f, 10.013f, 170.4353703196768f, isMoreThanHalf = false, isPositiveArc = true, 13.664f, 2.137f)
+                    curveTo(17.694f, 2.789f, 20.982f, 5.954000000000001f, 21.787f, 9.954f)
+                    curveTo(22.281f, 12.409f, 21.861f, 14.734000000000002f, 20.822f, 16.683f)
+                    moveTo(12.831f, 14.541f)
+                    lineTo(10.93f, 14.541f)
+                    lineTo(10.93f, 13.833f)
+                    curveTo(10.93f, 12.677f, 11.555f, 11.593f, 12.602f, 10.933f)
+                    curveTo(13.469000000000001f, 10.387f, 13.939f, 9.994f, 13.939f, 9.486f)
+                    curveTo(13.939f, 8.472000000000001f, 12.939f, 7.925000000000001f, 11.999f, 7.925000000000001f)
+                    curveTo(10.964f, 7.925000000000001f, 10.057f, 8.655000000000001f, 10.057f, 9.485000000000001f)
+                    lineTo(8.157f, 9.485000000000001f)
+                    curveTo(8.157f, 7.610000000000001f, 9.915f, 6.025000000000001f, 11.998000000000001f, 6.025000000000001f)
+                    curveTo(14.152000000000001f, 6.025000000000001f, 15.840000000000002f, 7.545000000000002f, 15.840000000000002f, 9.485000000000001f)
+                    curveTo(15.840000000000002f, 11.14f, 14.448000000000002f, 12.018f, 13.615000000000002f, 12.541f)
+                    curveTo(13.379000000000001f, 12.691f, 12.831000000000001f, 13.114f, 12.831000000000001f, 13.833f)
                     close()
-                    moveTo(12.8307f, 14.541f)
-                    lineTo(10.9299f, 14.541f)
-                    lineTo(10.9299f, 13.8327f)
-                    curveTo(10.9299f, 12.6772f, 11.5552f, 11.5937f, 12.6016f, 10.9334f)
-                    curveTo(13.469f, 10.3871f, 13.9392f, 9.99397f, 13.9392f, 9.48575f)
-                    curveTo(13.9392f, 8.47229f, 12.9388f, 7.92505f, 11.9984f, 7.92505f)
-                    curveTo(10.9639f, 7.92505f, 10.0575f, 8.65438f, 10.0575f, 9.48575f)
-                    lineTo(8.15665f, 9.48575f)
-                    curveTo(8.15665f, 7.60991f, 9.91543f, 6.0242f, 11.9984f, 6.0242f)
-                    curveTo(14.1523f, 6.0242f, 15.8401f, 7.54488f, 15.8401f, 9.48575f)
-                    curveTo(15.8401f, 11.1395f, 14.4475f, 12.0179f, 13.6151f, 12.5411f)
-                    curveTo(13.379f, 12.6902f, 12.8307f, 13.1144f, 12.8307f, 13.8327f)
-                    lineTo(12.8307f, 14.541f)
-                    close()
-                    moveTo(13.1849f, 16.9288f)
-                    curveTo(13.1849f, 17.6161f, 12.6286f, 18.1723f, 11.9413f, 18.1723f)
-                    curveTo(11.255f, 18.1723f, 10.6978f, 17.6161f, 10.6978f, 16.9288f)
-                    curveTo(10.6978f, 16.2415f, 11.255f, 15.6852f, 11.9413f, 15.6852f)
-                    curveTo(12.6286f, 15.6852f, 13.1849f, 16.2415f, 13.1849f, 16.9288f)
-                    close()
+                    moveTo(13.185f, 16.929f)
+                    arcTo(1.243f, 1.243f, 359.9769526241261f, isMoreThanHalf = true, isPositiveArc = true, 10.699f, 16.93f)
+                    arcTo(1.243f, 1.243f, 179.97695262412614f, isMoreThanHalf = false, isPositiveArc = true, 13.185f, 16.929f)
                 }
             }.build().also {
                 _chatQuestionFilled = it

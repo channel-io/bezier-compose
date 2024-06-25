@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,33 +31,29 @@ val BezierIcons.Lightning: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(6.526f, 12.5372f)
-                    lineTo(11.001f, 13.5732f)
-                    lineTo(9.174f, 19.7852f)
-                    lineTo(17.474f, 11.4622f)
-                    lineTo(12.999f, 10.4262f)
-                    lineTo(14.825f, 4.21423f)
-                    lineTo(6.526f, 12.5372f)
+                    moveTo(6.526f, 12.537f)
+                    lineTo(11.001f, 13.573f)
+                    lineTo(9.174f, 19.785f)
+                    lineTo(17.474f, 11.462f)
+                    lineTo(12.999f, 10.426f)
+                    lineTo(14.825000000000001f, 4.214f)
                     close()
-                    moveTo(8.14599f, 23.0362f)
-                    curveTo(7.88299f, 23.0362f, 7.61799f, 22.9652f, 7.37599f, 22.8212f)
-                    curveTo(6.77599f, 22.4662f, 6.50499f, 21.7772f, 6.70099f, 21.1082f)
-                    lineTo(8.48399f, 15.0432f)
-                    lineTo(5.19799f, 14.2832f)
-                    curveTo(4.66799f, 14.1602f, 4.24499f, 13.7592f, 4.09499f, 13.2362f)
-                    curveTo(3.94399f, 12.7122f, 4.08899f, 12.1482f, 4.47399f, 11.7622f)
-                    lineTo(14.798f, 1.41023f)
-                    curveTo(15.289f, 0.916231f, 16.024f, 0.823231f, 16.624f, 1.17823f)
-                    curveTo(17.224f, 1.53423f, 17.496f, 2.22223f, 17.299f, 2.89123f)
-                    lineTo(15.515f, 8.95623f)
-                    lineTo(18.802f, 9.71723f)
-                    curveTo(19.332f, 9.84023f, 19.755f, 10.2412f, 19.905f, 10.7652f)
-                    curveTo(20.055f, 11.2882f, 19.91f, 11.8522f, 19.525f, 12.2382f)
-                    lineTo(9.20199f, 22.5902f)
-                    curveTo(8.90899f, 22.8842f, 8.52999f, 23.0362f, 8.14599f, 23.0362f)
-                    close()
+                    moveTo(8.146f, 23.037f)
+                    curveTo(7.883000000000001f, 23.037f, 7.618f, 22.965f, 7.376000000000001f, 22.820999999999998f)
+                    arcTo(1.48f, 1.48f, 120.02914852246481f, isMoreThanHalf = false, isPositiveArc = true, 6.701000000000001f, 21.107999999999997f)
+                    lineTo(8.484000000000002f, 15.042999999999996f)
+                    lineTo(5.198000000000002f, 14.282999999999996f)
+                    arcTo(1.5f, 1.5f, 103.04601993869294f, isMoreThanHalf = false, isPositiveArc = true, 4.474000000000002f, 11.762999999999996f)
+                    lineTo(14.798f, 1.41f)
+                    arcTo(1.48f, 1.48f, 224.3077196221451f, isMoreThanHalf = false, isPositiveArc = true, 16.624f, 1.178f)
+                    curveTo(17.224f, 1.5339999999999998f, 17.496f, 2.222f, 17.299f, 2.891f)
+                    lineTo(15.514999999999999f, 8.956f)
+                    lineTo(18.802f, 9.716999999999999f)
+                    arcTo(1.5f, 1.5f, 283.0461064467155f, isMoreThanHalf = false, isPositiveArc = true, 19.525f, 12.238f)
+                    lineTo(9.202f, 22.59f)
+                    arcTo(1.49f, 1.49f, 44.479960713718135f, isMoreThanHalf = false, isPositiveArc = true, 8.146f, 23.036f)
                 }
             }.build().also {
                 _lightning = it

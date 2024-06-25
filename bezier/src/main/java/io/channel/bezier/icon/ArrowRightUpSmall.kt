@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,23 +31,19 @@ val BezierIcons.ArrowRightUpSmall: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
-                    moveTo(7.05022f, 16.9498f)
-                    curveTo(7.44074f, 17.3403f, 8.07391f, 17.3403f, 8.46443f, 16.9498f)
-                    lineTo(15.2426f, 10.1716f)
-                    lineTo(15.2426f, 15.5356f)
-                    curveTo(15.2426f, 16.0878f, 15.6903f, 16.5356f, 16.2426f, 16.5356f)
-                    curveTo(16.7949f, 16.5356f, 17.2426f, 16.0878f, 17.2426f, 15.5356f)
-                    lineTo(17.2426f, 7.75738f)
-                    curveTo(17.2426f, 7.2051f, 16.7949f, 6.75738f, 16.2426f, 6.75739f)
-                    lineTo(8.46443f, 6.75739f)
-                    curveTo(7.91215f, 6.75739f, 7.46443f, 7.2051f, 7.46443f, 7.75739f)
-                    curveTo(7.46443f, 8.30967f, 7.91215f, 8.75739f, 8.46443f, 8.75739f)
-                    lineTo(13.8284f, 8.75738f)
-                    lineTo(7.05022f, 15.5356f)
-                    curveTo(6.65969f, 15.9261f, 6.65969f, 16.5592f, 7.05022f, 16.9498f)
-                    close()
+                    moveTo(7.05f, 16.95f)
+                    arcTo(1.0f, 1.0f, 134.99134833716204f, isMoreThanHalf = false, isPositiveArc = false, 8.464f, 16.95f)
+                    lineTo(15.243f, 10.172f)
+                    lineTo(15.243f, 15.536000000000001f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 17.243000000000002f, 15.536000000000001f)
+                    lineTo(17.243000000000002f, 7.757f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 16.243000000000002f, 6.757f)
+                    lineTo(8.464f, 6.757f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 8.464f, 8.757f)
+                    lineTo(13.828f, 8.757f)
+                    lineTo(7.05f, 15.536f)
+                    arcTo(1.0f, 1.0f, 224.99134833716198f, isMoreThanHalf = false, isPositiveArc = false, 7.05f, 16.95f)
                 }
             }.build().also {
                 _arrowRightUpSmall = it

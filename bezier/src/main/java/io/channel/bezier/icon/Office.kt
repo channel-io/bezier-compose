@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,51 +31,45 @@ val BezierIcons.Office: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(7.0f, 6.0f)
                     lineTo(9.0f, 6.0f)
                     lineTo(9.0f, 8.0f)
                     lineTo(7.0f, 8.0f)
-                    lineTo(7.0f, 6.0f)
                     close()
                     moveTo(13.0f, 6.0f)
                     lineTo(11.0f, 6.0f)
                     lineTo(11.0f, 8.0f)
                     lineTo(13.0f, 8.0f)
-                    lineTo(13.0f, 6.0f)
                     close()
                     moveTo(7.0f, 10.0f)
                     lineTo(9.0f, 10.0f)
                     lineTo(9.0f, 12.0f)
                     lineTo(7.0f, 12.0f)
-                    lineTo(7.0f, 10.0f)
                     close()
                     moveTo(13.0f, 10.0f)
                     lineTo(11.0f, 10.0f)
                     lineTo(11.0f, 12.0f)
                     lineTo(13.0f, 12.0f)
-                    lineTo(13.0f, 10.0f)
                     close()
                 }
 
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(16.2222f, 2.0f)
-                    curveTo(16.6518f, 2.0f, 17.0f, 2.44772f, 17.0f, 3.0f)
+                    moveTo(16.222f, 2.0f)
+                    curveTo(16.652f, 2.0f, 17.0f, 2.448f, 17.0f, 3.0f)
                     lineTo(17.0f, 10.0f)
                     lineTo(20.0f, 10.0f)
-                    curveTo(20.5523f, 10.0f, 21.0f, 10.4477f, 21.0f, 11.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 21.0f, 11.0f)
                     lineTo(21.0f, 20.0f)
-                    curveTo(21.0f, 20.5523f, 20.5523f, 21.0f, 20.0f, 21.0f)
-                    lineTo(3.77778f, 21.0f)
-                    curveTo(3.34822f, 21.0f, 3.0f, 20.5523f, 3.0f, 20.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 20.0f, 21.0f)
+                    lineTo(3.778f, 21.0f)
+                    curveTo(3.348f, 21.0f, 3.0f, 20.552f, 3.0f, 20.0f)
                     lineTo(3.0f, 3.0f)
-                    curveTo(3.0f, 2.44772f, 3.34822f, 2.0f, 3.77778f, 2.0f)
-                    lineTo(16.2222f, 2.0f)
+                    curveTo(3.0f, 2.448f, 3.348f, 2.0f, 3.778f, 2.0f)
                     close()
                     moveTo(15.0f, 19.0f)
                     lineTo(15.0f, 4.0f)
@@ -84,13 +79,11 @@ val BezierIcons.Office: BezierIcon
                     lineTo(8.0f, 14.0f)
                     lineTo(12.0f, 14.0f)
                     lineTo(12.0f, 19.0f)
-                    lineTo(15.0f, 19.0f)
                     close()
                     moveTo(17.0f, 19.0f)
                     lineTo(19.0f, 19.0f)
                     lineTo(19.0f, 12.0f)
                     lineTo(17.0f, 12.0f)
-                    lineTo(17.0f, 19.0f)
                     close()
                 }
             }.build().also {
