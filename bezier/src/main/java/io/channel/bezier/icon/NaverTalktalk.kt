@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,31 +31,29 @@ val BezierIcons.NaverTalktalk: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(6.5f, 3.0f)
                     lineTo(17.5f, 3.0f)
-                    curveTo(19.433f, 3.0f, 21.0f, 4.567f, 21.0f, 6.5f)
+                    arcTo(3.5f, 3.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 21.0f, 6.5f)
                     lineTo(21.0f, 15.5f)
-                    curveTo(21.0f, 17.433f, 19.433f, 19.0f, 17.5f, 19.0f)
-                    lineTo(9.10593f, 19.0f)
-                    curveTo(8.40156f, 19.0f, 7.72988f, 19.2971f, 7.25607f, 19.8183f)
-                    lineTo(5.26192f, 22.0119f)
-                    curveTo(4.46263f, 22.8911f, 3.0f, 22.3257f, 3.0f, 21.1374f)
-                    lineTo(3.0f, 6.5f)
-                    curveTo(3.0f, 4.567f, 4.567f, 3.0f, 6.5f, 3.0f)
-                    close()
+                    arcTo(3.5f, 3.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 17.5f, 19.0f)
+                    lineTo(9.106f, 19.0f)
+                    arcTo(2.5f, 2.5f, 270.0100596711706f, isMoreThanHalf = false, isPositiveArc = false, 7.256f, 19.818f)
+                    lineTo(5.2620000000000005f, 22.012f)
+                    curveTo(4.462000000000001f, 22.892f, 3.0000000000000004f, 22.326f, 3.0000000000000004f, 21.137f)
+                    lineTo(3.0000000000000004f, 6.5f)
+                    arcTo(3.5f, 3.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 6.5f, 3.0f)
                     moveTo(8.25f, 14.75f)
-                    lineTo(8.25f, 7.2565f)
-                    lineTo(10.8259f, 7.2565f)
-                    lineTo(13.1844f, 10.9818f)
-                    lineTo(13.1917f, 7.25f)
-                    lineTo(15.75f, 7.2565f)
+                    lineTo(8.25f, 7.257f)
+                    lineTo(10.826f, 7.257f)
+                    lineTo(13.184000000000001f, 10.982f)
+                    lineTo(13.192f, 7.249999999999999f)
+                    lineTo(15.75f, 7.255999999999999f)
                     lineTo(15.75f, 14.75f)
-                    lineTo(13.1557f, 14.75f)
-                    lineTo(10.8421f, 11.0309f)
-                    lineTo(10.8268f, 14.75f)
-                    lineTo(8.25f, 14.75f)
+                    lineTo(13.156f, 14.75f)
+                    lineTo(10.842f, 11.03f)
+                    lineTo(10.827f, 14.75f)
                     close()
                 }
             }.build().also {

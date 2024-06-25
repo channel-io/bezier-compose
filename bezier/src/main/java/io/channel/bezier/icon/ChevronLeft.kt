@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,19 +31,17 @@ val BezierIcons.ChevronLeft: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(15.2071f, 19.7071f)
-                    curveTo(14.8166f, 20.0976f, 14.1834f, 20.0976f, 13.7929f, 19.7071f)
-                    lineTo(6.79289f, 12.7071f)
-                    curveTo(6.40237f, 12.3166f, 6.40237f, 11.6834f, 6.79289f, 11.2929f)
-                    lineTo(13.7929f, 4.29289f)
-                    curveTo(14.1834f, 3.90237f, 14.8166f, 3.90237f, 15.2071f, 4.29289f)
-                    curveTo(15.5976f, 4.68342f, 15.5976f, 5.31658f, 15.2071f, 5.70711f)
-                    lineTo(8.91421f, 12.0f)
-                    lineTo(15.2071f, 18.2929f)
-                    curveTo(15.5976f, 18.6834f, 15.5976f, 19.3166f, 15.2071f, 19.7071f)
-                    close()
+                    moveTo(15.207f, 19.707f)
+                    arcTo(1.0f, 1.0f, 45.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 13.793000000000001f, 19.707f)
+                    lineTo(6.793000000000001f, 12.707f)
+                    arcTo(1.0f, 1.0f, 135.00865166283802f, isMoreThanHalf = false, isPositiveArc = true, 6.793000000000001f, 11.293000000000001f)
+                    lineTo(13.793000000000001f, 4.293000000000001f)
+                    arcTo(1.0f, 1.0f, 224.00425538642025f, isMoreThanHalf = true, isPositiveArc = true, 15.207f, 5.707000000000001f)
+                    lineTo(8.914f, 12.0f)
+                    lineTo(15.207f, 18.293f)
+                    arcTo(1.0f, 1.0f, 315.0086516628379f, isMoreThanHalf = false, isPositiveArc = true, 15.207f, 19.707f)
                 }
             }.build().also {
                 _chevronLeft = it

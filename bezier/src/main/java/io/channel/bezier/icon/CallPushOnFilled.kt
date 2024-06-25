@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,26 +31,21 @@ val BezierIcons.CallPushOnFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
-                    moveTo(4.19998f, 4.95491f)
-                    curveTo(2.58593f, 6.56896f, 2.58593f, 11.0883f, 7.75088f, 16.2532f)
-                    curveTo(12.9158f, 21.4182f, 17.4352f, 21.4182f, 19.0492f, 19.8042f)
-                    curveTo(20.0176f, 18.8357f, 20.2804f, 17.4199f, 19.6948f, 16.5761f)
-                    curveTo(19.1783f, 15.8013f, 17.7207f, 14.6392f, 16.4667f, 14.6392f)
-                    curveTo(15.1755f, 14.6392f, 14.1931f, 16.2658f, 13.5615f, 16.2532f)
-                    curveTo(12.9298f, 16.2407f, 11.2864f, 15.5461f, 9.8722f, 14.1319f)
-                    curveTo(8.45799f, 12.7177f, 7.76339f, 11.0743f, 7.75088f, 10.4427f)
-                    curveTo(7.73837f, 9.81101f, 9.36493f, 8.82862f, 9.36493f, 7.53739f)
-                    curveTo(9.36494f, 6.28347f, 8.20282f, 4.82579f, 7.42807f, 4.30928f)
-                    curveTo(6.58425f, 3.72371f, 5.16841f, 3.98648f, 4.19998f, 4.95491f)
-                    close()
+                    moveTo(4.2f, 4.955f)
+                    curveTo(2.5860000000000003f, 6.569f, 2.5860000000000003f, 11.088000000000001f, 7.75f, 16.253f)
+                    curveTo(12.916f, 21.418f, 17.435000000000002f, 21.418f, 19.05f, 19.804000000000002f)
+                    curveTo(20.018f, 18.836000000000002f, 20.28f, 17.42f, 19.695f, 16.576f)
+                    curveTo(19.178f, 15.801f, 17.721f, 14.639000000000001f, 16.467f, 14.639000000000001f)
+                    curveTo(15.175999999999998f, 14.639000000000001f, 14.192999999999998f, 16.266000000000002f, 13.562f, 16.253f)
+                    curveTo(12.93f, 16.241f, 11.286f, 15.546f, 9.872f, 14.132f)
+                    curveTo(8.458f, 12.718f, 7.763f, 11.074f, 7.7509999999999994f, 10.442f)
+                    curveTo(7.7379999999999995f, 9.811f, 9.365f, 8.829f, 9.365f, 7.537000000000001f)
+                    curveTo(9.365f, 6.283000000000001f, 8.203f, 4.8260000000000005f, 7.428f, 4.309000000000001f)
+                    curveTo(6.584f, 3.724000000000001f, 5.168f, 3.986000000000001f, 4.199999999999999f, 4.955000000000001f)
                     moveTo(21.0f, 6.5f)
-                    curveTo(21.0f, 8.433f, 19.433f, 10.0f, 17.5f, 10.0f)
-                    curveTo(15.567f, 10.0f, 14.0f, 8.433f, 14.0f, 6.5f)
-                    curveTo(14.0f, 4.567f, 15.567f, 3.0f, 17.5f, 3.0f)
-                    curveTo(19.433f, 3.0f, 21.0f, 4.567f, 21.0f, 6.5f)
-                    close()
+                    arcTo(3.5f, 3.5f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 14.0f, 6.5f)
+                    arcTo(3.5f, 3.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 21.0f, 6.5f)
                 }
             }.build().also {
                 _callPushOnFilled = it

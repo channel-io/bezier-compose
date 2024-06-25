@@ -31,7 +31,6 @@ val BezierIcons.SplitLeftFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(5.5f, 7.0f)
                     arcTo(0.5f, 0.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 5.0f, 7.5f)
@@ -47,7 +46,6 @@ val BezierIcons.SplitLeftFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(2.0f, 7.0f)

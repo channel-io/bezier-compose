@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,22 +31,19 @@ val BezierIcons.KakaoFilledAlt: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.0f, 2.0f)
-                    curveTo(5.92938f, 2.0f, 1.0f, 5.86375f, 1.0f, 10.6762f)
-                    curveTo(1.0f, 13.77f, 3.0625f, 16.4856f, 6.15625f, 18.0325f)
-                    curveTo(6.11819f, 18.1673f, 6.04025f, 18.4389f, 5.94236f, 18.7801f)
-                    curveTo(5.61586f, 19.918f, 5.06736f, 21.8296f, 5.03563f, 22.02f)
-                    curveTo(5.02916f, 22.0687f, 5.03524f, 22.1183f, 5.05328f, 22.164f)
-                    curveTo(5.07133f, 22.2097f, 5.10075f, 22.2501f, 5.13875f, 22.2812f)
-                    curveTo(5.1801f, 22.2986f, 5.22451f, 22.3076f, 5.26937f, 22.3076f)
-                    curveTo(5.31424f, 22.3076f, 5.35865f, 22.2986f, 5.4f, 22.2812f)
-                    curveTo(5.74375f, 22.2331f, 9.415f, 19.655f, 10.0475f, 19.2081f)
-                    curveTo(10.6943f, 19.2996f, 11.3468f, 19.3455f, 12.0f, 19.3456f)
-                    curveTo(18.0775f, 19.3456f, 23.0f, 15.4681f, 23.0f, 10.6762f)
-                    curveTo(23.0f, 5.88437f, 18.0706f, 2.0f, 12.0f, 2.0f)
-                    close()
+                    curveTo(5.93f, 2.0f, 1.0f, 5.864f, 1.0f, 10.676f)
+                    curveTo(1.0f, 13.77f, 3.063f, 16.486f, 6.156f, 18.032f)
+                    lineTo(5.941999999999999f, 18.78f)
+                    curveTo(5.616f, 19.918f, 5.066999999999999f, 21.830000000000002f, 5.036f, 22.020000000000003f)
+                    arcTo(0.29f, 0.29f, 187.3961732495313f, isMoreThanHalf = false, isPositiveArc = false, 5.138999999999999f, 22.281000000000002f)
+                    arcTo(0.34f, 0.34f, 112.57072293172737f, isMoreThanHalf = false, isPositiveArc = false, 5.3999999999999995f, 22.281000000000002f)
+                    curveTo(5.744f, 22.233000000000004f, 9.415f, 19.655f, 10.047f, 19.208000000000002f)
+                    quadTo(11.019f, 19.346000000000004f, 12.0f, 19.346000000000004f)
+                    curveTo(18.078f, 19.346000000000004f, 23.0f, 15.468000000000004f, 23.0f, 10.676000000000004f)
+                    curveTo(23.0f, 5.884000000000004f, 18.07f, 2.0f, 12.0f, 2.0f)
                 }
             }.build().also {
                 _kakaoFilledAlt = it

@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,28 +31,26 @@ val BezierIcons.MessagingApp: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(6.0f, 2.0f)
-                    curveTo(3.79086f, 2.0f, 2.0f, 3.79086f, 2.0f, 6.0f)
+                    arcTo(4.0f, 4.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 2.0f, 6.0f)
                     lineTo(2.0f, 18.0f)
-                    curveTo(2.0f, 20.2091f, 3.79086f, 22.0f, 6.0f, 22.0f)
+                    arcTo(4.0f, 4.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 6.0f, 22.0f)
                     lineTo(18.0f, 22.0f)
-                    curveTo(20.2091f, 22.0f, 22.0f, 20.2091f, 22.0f, 18.0f)
+                    arcTo(4.0f, 4.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 22.0f, 18.0f)
                     lineTo(22.0f, 6.0f)
-                    curveTo(22.0f, 3.79086f, 20.2091f, 2.0f, 18.0f, 2.0f)
-                    lineTo(6.0f, 2.0f)
+                    arcTo(4.0f, 4.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 18.0f, 2.0f)
                     close()
-                    moveTo(19.0f, 11.5274f)
-                    curveTo(19.0f, 14.8411f, 15.866f, 17.5274f, 12.0f, 17.5274f)
-                    curveTo(11.4194f, 17.5274f, 10.8552f, 17.4668f, 10.3158f, 17.3525f)
-                    curveTo(9.19433f, 18.2321f, 7.93415f, 18.6104f, 7.22682f, 18.7641f)
-                    curveTo(7.01411f, 18.8103f, 6.86812f, 18.5737f, 6.98357f, 18.3891f)
-                    curveTo(7.26573f, 17.9381f, 7.67103f, 17.2089f, 7.91819f, 16.4022f)
-                    curveTo(6.15091f, 15.3132f, 5.0f, 13.5355f, 5.0f, 11.5274f)
-                    curveTo(5.0f, 8.21364f, 8.13401f, 5.52735f, 12.0f, 5.52735f)
-                    curveTo(15.866f, 5.52735f, 19.0f, 8.21364f, 19.0f, 11.5274f)
-                    close()
+                    moveTo(19.0f, 11.527f)
+                    curveTo(19.0f, 14.841f, 15.866f, 17.527f, 12.0f, 17.527f)
+                    curveTo(11.42f, 17.527f, 10.855f, 17.467000000000002f, 10.316f, 17.352f)
+                    curveTo(9.194f, 18.232f, 7.934000000000001f, 18.61f, 7.226000000000001f, 18.764f)
+                    curveTo(7.014000000000001f, 18.81f, 6.868000000000001f, 18.573999999999998f, 6.984000000000001f, 18.389f)
+                    curveTo(7.266000000000001f, 17.939f, 7.671000000000001f, 17.209f, 7.918000000000001f, 16.402f)
+                    curveTo(6.151f, 15.313f, 5.0f, 13.535f, 5.0f, 11.527f)
+                    curveTo(5.0f, 8.213999999999999f, 8.134f, 5.526999999999999f, 12.0f, 5.526999999999999f)
+                    curveTo(15.866f, 5.526999999999999f, 19.0f, 8.213999999999999f, 19.0f, 11.527f)
                 }
             }.build().also {
                 _messagingApp = it

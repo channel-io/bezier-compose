@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,23 +31,20 @@ val BezierIcons.ArrowLeftUp: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(20.0002f, 20.0001f)
-                    curveTo(20.3906f, 19.6097f, 20.3906f, 18.9766f, 20.0002f, 18.5861f)
-                    lineTo(7.41418f, 6.00012f)
-                    lineTo(19.0002f, 6.00012f)
-                    curveTo(19.5525f, 6.00012f, 20.0002f, 5.55241f, 20.0002f, 5.00012f)
-                    curveTo(20.0002f, 4.44784f, 19.5525f, 4.00012f, 19.0002f, 4.00012f)
-                    lineTo(5.50018f, 4.00012f)
-                    curveTo(4.67318f, 4.00012f, 4.00018f, 4.67312f, 4.00018f, 5.50012f)
-                    lineTo(4.00018f, 19.0001f)
-                    curveTo(4.00018f, 19.5524f, 4.4479f, 20.0001f, 5.00018f, 20.0001f)
-                    curveTo(5.55247f, 20.0001f, 6.00018f, 19.5524f, 6.00018f, 19.0001f)
-                    lineTo(6.00018f, 7.41412f)
-                    lineTo(18.5862f, 20.0001f)
-                    curveTo(18.9766f, 20.3906f, 19.6097f, 20.3906f, 20.0002f, 20.0001f)
-                    close()
+                    moveTo(20.0f, 20.0f)
+                    arcTo(1.0f, 1.0f, 44.99134833716207f, isMoreThanHalf = false, isPositiveArc = false, 20.0f, 18.586f)
+                    lineTo(7.414f, 6.0f)
+                    lineTo(19.0f, 6.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 19.0f, 4.0f)
+                    lineTo(5.5f, 4.0f)
+                    curveTo(4.673f, 4.0f, 4.0f, 4.673f, 4.0f, 5.5f)
+                    lineTo(4.0f, 19.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 6.0f, 19.0f)
+                    lineTo(6.0f, 7.414f)
+                    lineTo(18.586f, 20.0f)
+                    arcTo(1.0f, 1.0f, 134.9913483371621f, isMoreThanHalf = false, isPositiveArc = false, 20.0f, 20.0f)
                 }
             }.build().also {
                 _arrowLeftUp = it

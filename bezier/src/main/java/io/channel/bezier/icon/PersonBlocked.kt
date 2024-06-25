@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,40 +31,31 @@ val BezierIcons.PersonBlocked: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(9.48411f, 11.0001f)
-                    curveTo(11.4171f, 11.0001f, 12.9841f, 9.43312f, 12.9841f, 7.50012f)
-                    curveTo(12.9841f, 5.56712f, 11.4171f, 4.00012f, 9.48411f, 4.00012f)
-                    curveTo(7.55111f, 4.00012f, 5.98411f, 5.56712f, 5.98411f, 7.50012f)
-                    curveTo(5.98411f, 9.43312f, 7.55111f, 11.0001f, 9.48411f, 11.0001f)
+                    moveTo(9.484f, 11.0f)
+                    arcTo(3.5f, 3.5f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 9.484f, 4.0f)
+                    arcTo(3.5f, 3.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 9.484f, 11.0f)
+                    moveTo(11.0f, 17.0f)
+                    curveTo(11.0f, 15.328f, 11.69f, 13.814f, 12.796f, 12.725999999999999f)
+                    arcTo(7.9f, 7.9f, 294.7557511073756f, isMoreThanHalf = false, isPositiveArc = false, 9.484f, 12.0f)
+                    arcTo(8.0f, 8.0f, 270.0012851851782f, isMoreThanHalf = false, isPositiveArc = false, 1.5010000000000003f, 19.476f)
+                    arcTo(0.503f, 0.503f, 182.3941061184876f, isMoreThanHalf = false, isPositiveArc = false, 2.0070000000000006f, 20.0f)
+                    lineTo(11.812000000000001f, 20.0f)
+                    arcTo(5.96f, 5.96f, 149.74121327095736f, isMoreThanHalf = false, isPositiveArc = true, 11.0f, 17.0f)
+                    moveTo(15.715f, 19.7f)
+                    curveTo(16.106f, 19.886f, 16.538f, 20.0f, 17.0f, 20.0f)
+                    curveTo(18.654f, 20.0f, 20.0f, 18.654f, 20.0f, 17.0f)
+                    curveTo(20.0f, 16.538f, 19.886f, 16.106f, 19.7f, 15.715f)
                     close()
-                    moveTo(11.0002f, 17.0001f)
-                    curveTo(11.0002f, 15.3281f, 11.6892f, 13.8141f, 12.7962f, 12.7261f)
-                    curveTo(11.7862f, 12.2641f, 10.6672f, 12.0001f, 9.48421f, 12.0001f)
-                    curveTo(5.24221f, 12.0001f, 1.77121f, 15.3021f, 1.50121f, 19.4761f)
-                    curveTo(1.48221f, 19.7601f, 1.72221f, 20.0001f, 2.00721f, 20.0001f)
-                    lineTo(11.8122f, 20.0001f)
-                    curveTo(11.2992f, 19.1161f, 11.0002f, 18.0931f, 11.0002f, 17.0001f)
+                    moveTo(18.285f, 14.301f)
+                    arcTo(2.95f, 2.95f, 296.0647735311907f, isMoreThanHalf = false, isPositiveArc = false, 17.0f, 14.001f)
+                    curveTo(15.346f, 14.001f, 14.0f, 15.346f, 14.0f, 17.000999999999998f)
+                    curveTo(14.0f, 17.461999999999996f, 14.113f, 17.894f, 14.301f, 18.284999999999997f)
                     close()
-                    moveTo(15.7152f, 19.6991f)
-                    curveTo(16.1062f, 19.8861f, 16.5382f, 20.0001f, 17.0002f, 20.0001f)
-                    curveTo(18.6542f, 20.0001f, 20.0002f, 18.6541f, 20.0002f, 17.0001f)
-                    curveTo(20.0002f, 16.5381f, 19.8862f, 16.1061f, 19.6992f, 15.7151f)
-                    lineTo(15.7152f, 19.6991f)
-                    close()
-                    moveTo(18.2852f, 14.3011f)
-                    curveTo(17.8942f, 14.1131f, 17.4612f, 14.0001f, 17.0002f, 14.0001f)
-                    curveTo(15.3462f, 14.0001f, 14.0002f, 15.3461f, 14.0002f, 17.0001f)
-                    curveTo(14.0002f, 17.4621f, 14.1132f, 17.8941f, 14.3012f, 18.2851f)
-                    lineTo(18.2852f, 14.3011f)
-                    close()
-                    moveTo(12.0002f, 17.0001f)
-                    curveTo(12.0002f, 14.2381f, 14.2382f, 12.0001f, 17.0002f, 12.0001f)
-                    curveTo(19.7612f, 12.0001f, 22.0002f, 14.2381f, 22.0002f, 17.0001f)
-                    curveTo(22.0002f, 19.7611f, 19.7612f, 22.0001f, 17.0002f, 22.0001f)
-                    curveTo(14.2382f, 22.0001f, 12.0002f, 19.7611f, 12.0002f, 17.0001f)
-                    close()
+                    moveTo(12.0f, 17.001f)
+                    arcTo(5.0f, 5.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 22.0f, 17.001f)
+                    arcTo(5.0f, 5.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 17.001f)
                 }
             }.build().also {
                 _personBlocked = it

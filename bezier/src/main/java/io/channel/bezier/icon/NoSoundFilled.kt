@@ -31,7 +31,6 @@ val BezierIcons.NoSoundFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(12.829f, 2.008f)
                     lineTo(12.96f, 2.0f)

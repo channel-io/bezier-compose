@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,45 +31,38 @@ val BezierIcons.Wallet: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(20.0f, 3.00021f)
-                    curveTo(20.0f, 2.92725f, 19.992f, 2.85451f, 19.9762f, 2.78328f)
-                    curveTo(19.8564f, 2.24415f, 19.3222f, 1.90422f, 18.7831f, 2.02403f)
-                    lineTo(3.56614f, 5.40557f)
-                    curveTo(2.65106f, 5.60892f, 2.0f, 6.42054f, 2.0f, 7.35794f)
+                    moveTo(20.0f, 3.0f)
+                    arcTo(1.002f, 1.002f, 359.8478363427463f, isMoreThanHalf = false, isPositiveArc = false, 18.783f, 2.024f)
+                    lineTo(3.566f, 5.406f)
+                    arcTo(2.0f, 2.0f, 257.4671114527286f, isMoreThanHalf = false, isPositiveArc = false, 2.0f, 7.358f)
                     lineTo(2.0f, 18.5f)
-                    curveTo(2.0f, 19.3284f, 2.67157f, 20.0f, 3.5f, 20.0f)
+                    arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 3.5f, 20.0f)
                     lineTo(20.5f, 20.0f)
-                    curveTo(21.3284f, 20.0f, 22.0f, 19.3284f, 22.0f, 18.5f)
+                    arcTo(1.5f, 1.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 22.0f, 18.5f)
                     lineTo(22.0f, 7.5f)
-                    curveTo(22.0f, 6.67157f, 21.3284f, 6.0f, 20.5f, 6.0f)
+                    arcTo(1.5f, 1.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 20.5f, 6.0f)
                     lineTo(20.0f, 6.0f)
-                    lineTo(20.0f, 3.00021f)
                     close()
-                    moveTo(11.217f, 5.7536f)
-                    lineTo(18.0f, 4.2456f)
-                    lineTo(18.0f, 5.7536f)
-                    lineTo(11.217f, 5.7536f)
+                    moveTo(11.217f, 5.754f)
+                    lineTo(18.0f, 4.246f)
+                    lineTo(18.0f, 5.7540000000000004f)
                     close()
                     moveTo(4.0f, 8.0f)
                     lineTo(20.0f, 8.0f)
                     lineTo(20.0f, 10.0f)
                     lineTo(17.0f, 10.0f)
-                    curveTo(16.4477f, 10.0f, 16.0f, 10.4477f, 16.0f, 11.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 16.0f, 11.0f)
                     lineTo(16.0f, 15.0f)
-                    curveTo(16.0f, 15.5523f, 16.4477f, 16.0f, 17.0f, 16.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 17.0f, 16.0f)
                     lineTo(20.0f, 16.0f)
                     lineTo(20.0f, 18.0f)
                     lineTo(4.0f, 18.0f)
-                    lineTo(4.0f, 8.0f)
                     close()
                     moveTo(20.0f, 13.0f)
-                    curveTo(20.0f, 12.4477f, 19.5523f, 12.0f, 19.0f, 12.0f)
-                    curveTo(18.4477f, 12.0f, 18.0f, 12.4477f, 18.0f, 13.0f)
-                    curveTo(18.0f, 13.5523f, 18.4477f, 14.0f, 19.0f, 14.0f)
-                    curveTo(19.5523f, 14.0f, 20.0f, 13.5523f, 20.0f, 13.0f)
-                    close()
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = false, 18.0f, 13.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 20.0f, 13.0f)
                 }
             }.build().also {
                 _wallet = it

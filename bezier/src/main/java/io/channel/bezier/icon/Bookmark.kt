@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,29 +31,27 @@ val BezierIcons.Bookmark: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(5.99999f, 5.0f)
-                    lineTo(5.99999f, 20.355f)
+                    moveTo(6.0f, 5.0f)
+                    lineTo(6.0f, 20.355f)
                     lineTo(12.0f, 15.113f)
                     lineTo(18.0f, 20.355f)
                     lineTo(18.0f, 5.0f)
-                    lineTo(5.99999f, 5.0f)
                     close()
-                    moveTo(5.46899f, 22.953f)
-                    curveTo(5.25799f, 22.953f, 5.04399f, 22.908f, 4.84099f, 22.815f)
-                    curveTo(4.29999f, 22.568f, 3.96399f, 22.046f, 3.96399f, 21.451f)
-                    curveTo(3.96399f, 19.9153f, 3.96399f, 9.44968f, 3.96399f, 4.99773f)
-                    curveTo(3.96399f, 3.89316f, 4.85942f, 3.0f, 5.96399f, 3.0f)
-                    lineTo(18.0045f, 3.0f)
-                    curveTo(19.1073f, 3.0f, 20.002f, 3.89172f, 20.0044f, 4.99452f)
-                    curveTo(20.0141f, 9.34423f, 20.036f, 19.4541f, 20.036f, 21.45f)
-                    curveTo(20.036f, 22.045f, 19.699f, 22.568f, 19.158f, 22.815f)
-                    curveTo(18.617f, 23.062f, 18.002f, 22.973f, 17.552f, 22.584f)
+                    moveTo(5.469f, 22.953f)
+                    curveTo(5.258f, 22.953f, 5.0440000000000005f, 22.907999999999998f, 4.841f, 22.814999999999998f)
+                    arcTo(1.48f, 1.48f, 114.04144793346718f, isMoreThanHalf = false, isPositiveArc = true, 3.9640000000000004f, 21.450999999999997f)
+                    lineTo(3.964f, 4.998f)
+                    curveTo(3.964f, 3.8930000000000002f, 4.859f, 3.0f, 5.964f, 3.0f)
+                    lineTo(18.003999999999998f, 3.0f)
+                    curveTo(19.107f, 3.0f, 20.002f, 3.892f, 20.003999999999998f, 4.995f)
+                    curveTo(20.014f, 9.344999999999999f, 20.035999999999998f, 19.455000000000002f, 20.035999999999998f, 21.45f)
+                    curveTo(20.035999999999998f, 22.044999999999998f, 19.698999999999998f, 22.567999999999998f, 19.157999999999998f, 22.814999999999998f)
+                    arcTo(1.49f, 1.49f, 65.19641440250575f, isMoreThanHalf = false, isPositiveArc = true, 17.551999999999996f, 22.583999999999996f)
                     lineTo(12.0f, 17.762f)
-                    lineTo(6.44799f, 22.583f)
-                    curveTo(6.16699f, 22.827f, 5.82099f, 22.953f, 5.46899f, 22.953f)
-                    close()
+                    lineTo(6.448f, 22.583f)
+                    curveTo(6.167000000000001f, 22.826999999999998f, 5.821000000000001f, 22.953f, 5.469f, 22.953f)
                 }
             }.build().also {
                 _bookmark = it

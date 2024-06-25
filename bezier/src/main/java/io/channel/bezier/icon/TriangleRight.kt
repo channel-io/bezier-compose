@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,16 +31,15 @@ val BezierIcons.TriangleRight: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(16.3701f, 11.9227f)
-                    lineTo(9.63478f, 17.5353f)
-                    curveTo(9.38241f, 17.7452f, 9.0f, 17.5662f, 9.0f, 17.2392f)
-                    lineTo(9.0f, 6.01273f)
-                    curveTo(9.0f, 5.68569f, 9.38241f, 5.50671f, 9.63478f, 5.7153f)
-                    lineTo(16.3701f, 11.3292f)
-                    curveTo(16.5555f, 11.4837f, 16.5555f, 11.7682f, 16.3701f, 11.9227f)
-                    close()
+                    moveTo(16.37f, 11.923f)
+                    lineTo(9.635000000000002f, 17.535f)
+                    arcTo(0.387f, 0.387f, 50.145407038469266f, isMoreThanHalf = false, isPositiveArc = true, 9.0f, 17.24f)
+                    lineTo(9.0f, 6.013f)
+                    curveTo(9.0f, 5.686f, 9.382f, 5.507f, 9.635f, 5.715f)
+                    lineTo(16.37f, 11.329f)
+                    arcTo(0.386f, 0.386f, 309.6972644422416f, isMoreThanHalf = false, isPositiveArc = true, 16.37f, 11.923f)
                 }
             }.build().also {
                 _triangleRight = it

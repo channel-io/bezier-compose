@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,25 +31,22 @@ val BezierIcons.ClockFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(2.0f, 11.999f)
-                    curveTo(2.0f, 17.5144f, 6.4846f, 21.999f, 12.0f, 21.999f)
-                    curveTo(17.5154f, 21.999f, 22.0f, 17.5144f, 22.0f, 11.999f)
-                    curveTo(22.0f, 6.48443f, 17.5152f, 2.0f, 12.0f, 2.0f)
-                    curveTo(6.48477f, 2.0f, 2.0f, 6.48443f, 2.0f, 11.999f)
-                    close()
+                    curveTo(2.0f, 17.514f, 6.485f, 21.999000000000002f, 12.0f, 21.999000000000002f)
+                    curveTo(17.515f, 21.999000000000002f, 22.0f, 17.514000000000003f, 22.0f, 11.999000000000002f)
+                    curveTo(22.0f, 6.484000000000002f, 17.515f, 2.0f, 12.0f, 2.0f)
+                    curveTo(6.484999999999999f, 2.0f, 2.0f, 6.484f, 2.0f, 11.999f)
                     moveTo(13.0f, 6.0f)
-                    curveTo(13.5523f, 6.0f, 14.0f, 6.44771f, 14.0f, 7.0f)
-                    lineTo(14.0f, 11.3156f)
-                    lineTo(16.6397f, 12.6671f)
-                    curveTo(17.1312f, 12.9188f, 17.3257f, 13.5214f, 17.074f, 14.013f)
-                    curveTo(16.8223f, 14.5046f, 16.2197f, 14.6991f, 15.7281f, 14.4473f)
-                    lineTo(12.5442f, 12.8171f)
-                    curveTo(12.2102f, 12.646f, 12.0f, 12.3023f, 12.0f, 11.927f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 14.0f, 7.0f)
+                    lineTo(14.0f, 11.315999999999999f)
+                    lineTo(16.64f, 12.666999999999998f)
+                    arcTo(1.0f, 1.0f, 297.1287666630611f, isMoreThanHalf = false, isPositiveArc = true, 15.728f, 14.446999999999997f)
+                    lineTo(12.544f, 12.816999999999997f)
+                    arcTo(1.0f, 1.0f, 117.12929445141671f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 11.926999999999996f)
                     lineTo(12.0f, 7.0f)
-                    curveTo(12.0f, 6.44772f, 12.4477f, 6.0f, 13.0f, 6.0f)
-                    close()
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 6.0f)
                 }
             }.build().also {
                 _clockFilled = it

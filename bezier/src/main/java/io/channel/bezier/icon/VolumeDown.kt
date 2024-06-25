@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,46 +31,43 @@ val BezierIcons.VolumeDown: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(13.0002f, 2.00012f)
-                    lineTo(12.8687f, 2.00879f)
-                    curveTo(12.652f, 2.03752f, 12.4494f, 2.13673f, 12.2931f, 2.29302f)
-                    lineTo(7.58498f, 7.00002f)
-                    lineTo(3.00018f, 7.00012f)
-                    curveTo(2.4479f, 7.00012f, 2.00018f, 7.44784f, 2.00018f, 8.00012f)
-                    lineTo(2.00018f, 16.0001f)
-                    lineTo(2.00691f, 16.1167f)
-                    curveTo(2.06468f, 16.6141f, 2.48735f, 17.0001f, 3.00018f, 17.0001f)
-                    lineTo(7.58598f, 17.0f)
-                    lineTo(12.2931f, 21.7072f)
-                    curveTo(12.4806f, 21.8948f, 12.735f, 22.0001f, 13.0002f, 22.0001f)
-                    lineTo(14.0002f, 22.0001f)
-                    curveTo(14.5525f, 22.0001f, 15.0002f, 21.5524f, 15.0002f, 21.0001f)
-                    lineTo(15.0002f, 3.00012f)
-                    curveTo(15.0002f, 2.44784f, 14.5525f, 2.00012f, 14.0002f, 2.00012f)
-                    lineTo(13.0002f, 2.00012f)
+                    moveTo(13.0f, 2.0f)
+                    lineTo(12.869f, 2.009f)
+                    arcTo(1.0f, 1.0f, 262.4838661647403f, isMoreThanHalf = false, isPositiveArc = false, 12.293f, 2.2929999999999997f)
+                    lineTo(7.585f, 7.0f)
+                    lineTo(3.0f, 7.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 2.0f, 8.0f)
+                    lineTo(2.0f, 16.0f)
+                    lineTo(2.007f, 16.117f)
+                    arcTo(1.0f, 1.0f, 173.28100503297748f, isMoreThanHalf = false, isPositiveArc = false, 3.0f, 17.0f)
+                    lineTo(7.586f, 17.0f)
+                    lineTo(12.293f, 21.707f)
+                    arcTo(1.0f, 1.0f, 135.0086535104836f, isMoreThanHalf = false, isPositiveArc = false, 13.0f, 22.0f)
+                    lineTo(14.0f, 22.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 15.0f, 21.0f)
+                    lineTo(15.0f, 3.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 14.0f, 2.0f)
                     close()
                     moveTo(13.0f, 4.414f)
                     lineTo(13.0f, 19.585f)
-                    lineTo(8.70731f, 15.293f)
-                    lineTo(8.60823f, 15.2062f)
-                    curveTo(8.43468f, 15.0733f, 8.22121f, 15.0001f, 8.0002f, 15.0001f)
+                    lineTo(8.707f, 15.293000000000001f)
+                    lineTo(8.608f, 15.206000000000001f)
+                    arcTo(1.0f, 1.0f, 307.4390954080092f, isMoreThanHalf = false, isPositiveArc = false, 8.0f, 15.0f)
                     lineTo(4.0f, 15.0f)
                     lineTo(4.0f, 9.0f)
-                    lineTo(8.0002f, 9.0001f)
-                    curveTo(8.26542f, 9.0001f, 8.51977f, 8.89474f, 8.70731f, 8.70721f)
-                    lineTo(13.0f, 4.414f)
+                    lineTo(8.0f, 9.0f)
+                    arcTo(1.0f, 1.0f, 89.98776339474553f, isMoreThanHalf = false, isPositiveArc = false, 8.707f, 8.707f)
                     close()
-                    moveTo(19.8814f, 8.52216f)
-                    curveTo(19.5672f, 8.06798f, 18.9248f, 8.07171f, 18.5343f, 8.46223f)
-                    lineTo(18.4971f, 8.49944f)
-                    curveTo(18.1214f, 8.87512f, 18.1173f, 9.47544f, 18.3741f, 9.94055f)
-                    curveTo(19.0741f, 11.2082f, 19.1223f, 12.8098f, 18.4179f, 14.0538f)
-                    curveTo(18.1515f, 14.5244f, 18.1372f, 15.1411f, 18.5196f, 15.5235f)
-                    curveTo(18.9133f, 15.9172f, 19.5629f, 15.9064f, 19.8672f, 15.4401f)
-                    curveTo(21.2254f, 13.3595f, 21.2874f, 10.5544f, 19.8814f, 8.52216f)
-                    close()
+                    moveTo(19.881f, 8.522f)
+                    curveTo(19.567f, 8.068f, 18.925f, 8.072000000000001f, 18.534f, 8.462f)
+                    lineTo(18.497f, 8.499f)
+                    curveTo(18.121f, 8.875f, 18.117f, 9.475000000000001f, 18.374f, 9.941f)
+                    curveTo(19.073999999999998f, 11.208f, 19.122f, 12.81f, 18.418f, 14.054000000000002f)
+                    curveTo(18.151f, 14.524000000000003f, 18.137999999999998f, 15.141000000000002f, 18.52f, 15.524000000000003f)
+                    curveTo(18.913f, 15.917000000000003f, 19.563f, 15.906000000000002f, 19.867f, 15.440000000000003f)
+                    curveTo(21.225f, 13.360000000000003f, 21.287f, 10.554000000000002f, 19.881f, 8.522000000000002f)
                 }
             }.build().also {
                 _volumeDown = it

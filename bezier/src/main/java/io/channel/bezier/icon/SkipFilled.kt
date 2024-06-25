@@ -31,7 +31,6 @@ val BezierIcons.SkipFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(15.5f, 11.4f)
@@ -46,7 +45,6 @@ val BezierIcons.SkipFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(16.3f, 4.2f)
                     arcTo(0.6f, 0.6f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 16.900000000000002f, 3.6f)

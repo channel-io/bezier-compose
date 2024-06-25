@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,31 +31,26 @@ val BezierIcons.Pencil: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(16.7767f, 10.395f)
-                    lineTo(6.67525f, 20.4964f)
-                    lineTo(3.2773f, 20.4815f)
-                    lineTo(3.27729f, 17.3363f)
-                    lineTo(13.5662f, 7.18447f)
-                    lineTo(16.7767f, 10.395f)
+                    moveTo(16.777f, 10.395f)
+                    lineTo(6.675f, 20.496f)
+                    lineTo(3.2769999999999997f, 20.482f)
+                    lineTo(3.2769999999999997f, 17.336f)
+                    lineTo(13.566999999999998f, 7.183999999999999f)
                     close()
-                    moveTo(18.1909f, 8.98074f)
-                    lineTo(19.5758f, 7.59587f)
-                    curveTo(20.4571f, 6.71451f, 20.4571f, 5.28554f, 19.5758f, 4.40418f)
-                    curveTo(18.6986f, 3.527f, 17.2779f, 3.52224f, 16.3948f, 4.39352f)
-                    lineTo(14.9899f, 5.77973f)
-                    lineTo(18.1909f, 8.98074f)
+                    moveTo(18.191f, 8.981f)
+                    lineTo(19.576f, 7.596f)
+                    arcTo(2.257f, 2.257f, 44.32469838403331f, isMoreThanHalf = false, isPositiveArc = false, 16.395f, 4.394f)
+                    lineTo(14.99f, 5.78f)
                     close()
-                    moveTo(20.99f, 9.01008f)
-                    lineTo(7.50004f, 22.5f)
-                    lineTo(2.27293f, 22.4771f)
-                    curveTo(1.72236f, 22.4747f, 1.27731f, 22.0277f, 1.27731f, 21.4771f)
-                    lineTo(1.27728f, 16.5001f)
-                    lineTo(14.9901f, 2.96986f)
-                    curveTo(16.6557f, 1.32646f, 19.3354f, 1.33544f, 20.99f, 2.98997f)
-                    curveTo(22.6524f, 4.65238f, 22.6524f, 7.34767f, 20.99f, 9.01008f)
-                    close()
+                    moveTo(20.99f, 9.011f)
+                    lineTo(7.5f, 22.5f)
+                    lineTo(2.2729999999999997f, 22.477f)
+                    arcTo(1.0f, 1.0f, 90.22918372737823f, isMoreThanHalf = false, isPositiveArc = true, 1.2769999999999997f, 21.477f)
+                    lineTo(1.277f, 16.5f)
+                    lineTo(14.99f, 2.97f)
+                    arcTo(4.257f, 4.257f, 225.7369082750439f, isMoreThanHalf = false, isPositiveArc = true, 20.990000000000002f, 9.01f)
                 }
             }.build().also {
                 _pencil = it

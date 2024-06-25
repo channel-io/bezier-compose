@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,18 +31,14 @@ val BezierIcons.MoonFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
-                    moveTo(20.6408f, 17.0367f)
-                    curveTo(21.0976f, 16.2548f, 20.1855f, 15.4689f, 19.3101f, 15.7007f)
-                    curveTo(18.5729f, 15.896f, 17.7986f, 16.0f, 17.0f, 16.0f)
-                    curveTo(12.0294f, 16.0f, 8.0f, 11.9705f, 8.0f, 6.99996f)
-                    curveTo(8.0f, 6.20138f, 8.10401f, 5.4271f, 8.29922f, 4.68991f)
-                    curveTo(8.53103f, 3.8145f, 7.74515f, 2.90239f, 6.96321f, 3.35917f)
-                    curveTo(3.9945f, 5.09339f, 2.0f, 8.31376f, 2.0f, 12.0f)
-                    curveTo(2.0f, 17.5228f, 6.47715f, 22.0f, 12.0f, 22.0f)
-                    curveTo(15.6862f, 22.0f, 18.9066f, 20.0055f, 20.6408f, 17.0367f)
-                    close()
+                    moveTo(20.64f, 17.037f)
+                    curveTo(21.098f, 16.255f, 20.186f, 15.469f, 19.310000000000002f, 15.700999999999999f)
+                    arcTo(9.0f, 9.0f, 75.11229315400158f, isMoreThanHalf = false, isPositiveArc = true, 8.3f, 4.69f)
+                    curveTo(8.531f, 3.8130000000000006f, 7.745000000000001f, 2.9010000000000007f, 6.963000000000001f, 3.3580000000000005f)
+                    arcTo(10.0f, 10.0f, 239.75490999085474f, isMoreThanHalf = false, isPositiveArc = false, 2.0f, 12.0f)
+                    curveTo(2.0f, 17.523f, 6.477f, 22.0f, 12.0f, 22.0f)
+                    arcTo(10.0f, 10.0f, 90.00695299235853f, isMoreThanHalf = false, isPositiveArc = false, 20.64f, 17.037f)
                 }
             }.build().also {
                 _moonFilled = it

@@ -28,7 +28,15 @@ val BezierIcons.CircleSmall: BezierIcon
                     viewportWidth = 24f,
                     viewportHeight = 24f,
             ).apply {
-
+                path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                ) {
+                    moveTo(12.0f, 12.0f)
+                    moveTo(5.0f, 12.0f)
+                    arcTo(7.0f, 7.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 19.0f, 12.0f)
+                    arcTo(7.0f, 7.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 5.0f, 12.0f)
+                }
             }.build().also {
                 _circleSmall = it
             }

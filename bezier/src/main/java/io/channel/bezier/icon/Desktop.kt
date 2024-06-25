@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,13 +31,12 @@ val BezierIcons.Desktop: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(4.0f, 14.0f)
                     lineTo(20.0f, 14.0f)
                     lineTo(20.0f, 6.0f)
                     lineTo(4.0f, 6.0f)
-                    lineTo(4.0f, 14.0f)
                     close()
                     moveTo(20.5f, 4.0f)
                     lineTo(3.5f, 4.0f)
@@ -46,18 +46,15 @@ val BezierIcons.Desktop: BezierIcon
                     lineTo(11.0f, 16.0f)
                     lineTo(11.0f, 18.0f)
                     lineTo(9.0f, 18.0f)
-                    curveTo(8.44772f, 18.0f, 8.0f, 18.4477f, 8.0f, 19.0f)
-                    curveTo(8.0f, 19.5523f, 8.44772f, 20.0f, 9.0f, 20.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 9.0f, 20.0f)
                     lineTo(15.0f, 20.0f)
-                    curveTo(15.5523f, 20.0f, 16.0f, 19.5523f, 16.0f, 19.0f)
-                    curveTo(16.0f, 18.4477f, 15.5523f, 18.0f, 15.0f, 18.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 15.0f, 18.0f)
                     lineTo(13.0f, 18.0f)
                     lineTo(13.0f, 16.0f)
                     lineTo(20.5f, 16.0f)
-                    curveTo(21.327f, 16.0f, 22.0f, 15.327f, 22.0f, 14.5f)
+                    curveTo(21.326999999999998f, 16.0f, 22.0f, 15.327f, 22.0f, 14.5f)
                     lineTo(22.0f, 5.5f)
-                    curveTo(22.0f, 4.673f, 21.327f, 4.0f, 20.5f, 4.0f)
-                    close()
+                    curveTo(22.0f, 4.673f, 21.326999999999998f, 4.0f, 20.5f, 4.0f)
                 }
             }.build().also {
                 _desktop = it

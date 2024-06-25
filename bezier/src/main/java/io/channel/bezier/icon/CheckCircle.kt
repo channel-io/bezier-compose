@@ -9,6 +9,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
@@ -30,31 +31,24 @@ val BezierIcons.CheckCircle: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(22.0f, 12.0f)
-                    curveTo(22.0f, 17.523f, 17.5226f, 22.0f, 12.0f, 22.0f)
-                    curveTo(6.47672f, 22.0f, 2.0f, 17.5233f, 2.0f, 12.0f)
-                    curveTo(2.0f, 6.47672f, 6.47672f, 2.0f, 12.0f, 2.0f)
-                    curveTo(17.5226f, 2.0f, 22.0f, 6.47704f, 22.0f, 12.0f)
-                    close()
+                    curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
+                    curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
+                    curveTo(2.0f, 6.477f, 6.477f, 2.0f, 12.0f, 2.0f)
+                    curveTo(17.523f, 2.0f, 22.0f, 6.477f, 22.0f, 12.0f)
                     moveTo(20.0f, 12.0f)
-                    curveTo(20.0f, 7.58165f, 16.4181f, 4.0f, 12.0f, 4.0f)
-                    curveTo(7.58128f, 4.0f, 4.0f, 7.58128f, 4.0f, 12.0f)
-                    curveTo(4.0f, 16.4187f, 7.58128f, 20.0f, 12.0f, 20.0f)
-                    curveTo(16.4181f, 20.0f, 20.0f, 16.4184f, 20.0f, 12.0f)
-                    close()
-                    moveTo(8.08406f, 11.6708f)
-                    lineTo(10.4035f, 13.898f)
-                    lineTo(15.852f, 8.77854f)
-                    curveTo(16.2544f, 8.40048f, 16.887f, 8.42018f, 17.2651f, 8.82254f)
-                    curveTo(17.6431f, 9.22487f, 17.6234f, 9.85746f, 17.2212f, 10.2355f)
-                    lineTo(11.1002f, 15.9881f)
-                    curveTo(10.7014f, 16.3629f, 10.0788f, 16.3596f, 9.68408f, 15.9805f)
-                    lineTo(6.69867f, 13.1135f)
-                    curveTo(6.30037f, 12.731f, 6.28747f, 12.0981f, 6.66987f, 11.6997f)
-                    curveTo(7.05239f, 11.3011f, 7.6856f, 11.2882f, 8.08406f, 11.6708f)
-                    close()
+                    arcTo(8.0f, 8.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = false, 4.0f, 12.0f)
+                    arcTo(8.0f, 8.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 20.0f, 12.0f)
+                    moveTo(8.084f, 11.67f)
+                    lineTo(10.404f, 13.898f)
+                    lineTo(15.852f, 8.777999999999999f)
+                    arcTo(1.0f, 1.0f, 227.21657521144041f, isMoreThanHalf = false, isPositiveArc = true, 17.222f, 10.235f)
+                    lineTo(11.1f, 15.989f)
+                    arcTo(1.03f, 1.03f, 46.8998740059744f, isMoreThanHalf = false, isPositiveArc = true, 9.684f, 15.981000000000002f)
+                    lineTo(6.7f, 13.113f)
+                    arcTo(1.0f, 1.0f, 135.25172610641144f, isMoreThanHalf = false, isPositiveArc = true, 8.085f, 11.671f)
                 }
             }.build().also {
                 _checkCircle = it
