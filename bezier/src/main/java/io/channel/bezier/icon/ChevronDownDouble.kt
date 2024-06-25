@@ -31,7 +31,6 @@ val BezierIcons.ChevronDownDouble: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(19.65f, 6.76f)
                     arcTo(1.0f, 1.0f, 49.460848258516535f, isMoreThanHalf = true, isPositiveArc = false, 18.349999999999998f, 5.24f)

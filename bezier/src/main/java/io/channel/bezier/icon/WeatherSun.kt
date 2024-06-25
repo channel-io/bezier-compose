@@ -31,7 +31,6 @@ val BezierIcons.WeatherSun: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(11.0f, 6.0f)
@@ -59,10 +58,10 @@ val BezierIcons.WeatherSun: BezierIcon
                     lineTo(6.0f, 11.0f)
                     lineTo(2.0f, 11.0f)
                     close()
-                    moveTo(18.364f, 4.2219999999999995f)
-                    lineTo(19.778000000000002f, 5.635999999999999f)
-                    lineTo(16.950000000000003f, 8.463999999999999f)
-                    lineTo(15.536000000000003f, 7.049999999999999f)
+                    moveTo(18.364f, 4.222f)
+                    lineTo(19.778f, 5.636f)
+                    lineTo(16.95f, 8.464f)
+                    lineTo(15.536f, 7.05f)
                     close()
                     moveTo(18.0f, 13.0f)
                     lineTo(22.0f, 13.0f)
@@ -70,9 +69,9 @@ val BezierIcons.WeatherSun: BezierIcon
                     lineTo(18.0f, 11.0f)
                     close()
                     moveTo(18.364f, 19.778f)
-                    lineTo(15.536000000000001f, 16.948999999999998f)
-                    lineTo(16.950000000000003f, 15.534999999999998f)
-                    lineTo(19.778000000000002f, 18.365f)
+                    lineTo(15.536f, 16.949f)
+                    lineTo(16.95f, 15.535f)
+                    lineTo(19.778f, 18.365f)
                     close()
                     moveTo(11.0f, 22.0f)
                     lineTo(13.0f, 22.0f)
@@ -80,9 +79,9 @@ val BezierIcons.WeatherSun: BezierIcon
                     lineTo(11.0f, 18.0f)
                     close()
                     moveTo(5.636f, 19.778f)
-                    lineTo(4.222f, 18.363999999999997f)
-                    lineTo(7.051f, 15.534999999999997f)
-                    lineTo(8.465f, 16.948999999999998f)
+                    lineTo(4.222f, 18.364f)
+                    lineTo(7.051f, 15.535f)
+                    lineTo(8.465f, 16.949f)
                     close()
                 }
             }.build().also {

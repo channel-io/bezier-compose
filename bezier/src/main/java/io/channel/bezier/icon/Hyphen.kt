@@ -31,7 +31,6 @@ val BezierIcons.Hyphen: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(7.0f, 12.0f)
                     arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 8.0f, 11.0f)

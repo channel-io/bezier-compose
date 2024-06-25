@@ -31,7 +31,6 @@ val BezierIcons.ChatCancel: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(20.825f, 16.69f)
@@ -60,8 +59,8 @@ val BezierIcons.ChatCancel: BezierIcon
                     curveTo(16.392f, 18.717f, 17.105999999999998f, 18.648f, 17.764f, 18.866999999999997f)
                     lineTo(19.419f, 19.418999999999997f)
                     close()
-                    moveTo(14.828000000000003f, 7.757f)
-                    lineTo(16.243000000000002f, 9.172f)
+                    moveTo(14.828f, 7.757f)
+                    lineTo(16.243f, 9.172f)
                     lineTo(13.414f, 12.0f)
                     lineTo(16.243f, 14.828f)
                     lineTo(14.828f, 16.243f)

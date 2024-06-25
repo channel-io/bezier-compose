@@ -31,7 +31,6 @@ val BezierIcons.ChevronUpdown: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(5.793f, 7.793f)
                     arcTo(1.0f, 1.0f, 224.0042553864214f, isMoreThanHalf = false, isPositiveArc = false, 7.207f, 9.207f)

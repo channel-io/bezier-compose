@@ -31,7 +31,6 @@ val BezierIcons.ChatError: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(19.061f, 15.747f)
@@ -60,8 +59,8 @@ val BezierIcons.ChatError: BezierIcon
                     curveTo(20.276f, 21.811f, 20.866f, 21.675f, 21.271f, 21.27f)
                     curveTo(21.675f, 20.866f, 21.814f, 20.278f, 21.633f, 19.735f)
                     close()
-                    moveTo(11.933f, 15.595000000000002f)
-                    arcTo(1.322f, 1.322f, 269.9783386612734f, isMoreThanHalf = true, isPositiveArc = false, 11.934f, 18.240000000000002f)
+                    moveTo(11.933f, 15.595f)
+                    arcTo(1.322f, 1.322f, 269.9783386612739f, isMoreThanHalf = true, isPositiveArc = false, 11.934f, 18.240000000000002f)
                     arcTo(1.322f, 1.322f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 11.934f, 15.595000000000002f)
                     moveTo(13.148f, 5.980000000000002f)
                     lineTo(13.015f, 13.987000000000002f)

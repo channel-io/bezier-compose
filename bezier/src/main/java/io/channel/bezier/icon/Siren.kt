@@ -31,7 +31,6 @@ val BezierIcons.Siren: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.0f, 4.0f)
@@ -51,16 +50,16 @@ val BezierIcons.Siren: BezierIcon
                     lineTo(20.536f, 4.12f)
                     arcTo(1.0f, 1.0f, 44.97974758928053f, isMoreThanHalf = true, isPositiveArc = false, 19.121000000000002f, 2.7060000000000004f)
                     close()
-                    moveTo(12.007000000000001f, 5.0f)
-                    arcTo(7.0f, 7.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 5.0070000000000014f, 12.0f)
-                    lineTo(5.0070000000000014f, 20.0f)
-                    lineTo(4.0070000000000014f, 20.0f)
-                    lineTo(4.0070000000000014f, 22.0f)
-                    lineTo(20.007f, 22.0f)
-                    lineTo(20.007f, 20.0f)
-                    lineTo(19.007f, 20.0f)
-                    lineTo(19.007f, 12.0f)
-                    arcTo(7.0f, 7.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 12.007000000000001f, 5.0f)
+                    moveTo(12.007f, 5.0f)
+                    arcTo(7.0f, 7.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 5.007f, 12.0f)
+                    lineTo(5.007f, 20.0f)
+                    lineTo(4.007f, 20.0f)
+                    lineTo(4.007f, 22.0f)
+                    lineTo(20.006999999999998f, 22.0f)
+                    lineTo(20.006999999999998f, 20.0f)
+                    lineTo(19.006999999999998f, 20.0f)
+                    lineTo(19.006999999999998f, 12.0f)
+                    arcTo(7.0f, 7.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 12.006999999999998f, 5.0f)
                     moveTo(9.0f, 10.0f)
                     arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 8.0f, 11.0f)
                     lineTo(8.0f, 17.0f)

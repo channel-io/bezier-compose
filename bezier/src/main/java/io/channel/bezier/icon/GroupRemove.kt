@@ -31,7 +31,6 @@ val BezierIcons.GroupRemove: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(9.0f, 4.0f)
@@ -50,14 +49,14 @@ val BezierIcons.GroupRemove: BezierIcon
                     quadTo(16.365999999999996f, 14.501999999999999f, 16.459999999999997f, 14.5f)
                     curveTo(19.119999999999997f, 14.5f, 21.392999999999997f, 16.435f, 21.868f, 19.0f)
                     close()
-                    moveTo(14.939999999999998f, 19.0f)
+                    moveTo(14.94f, 19.0f)
                     lineTo(2.07f, 19.0f)
                     arcTo(7.015f, 7.015f, 188.31925172841787f, isMoreThanHalf = false, isPositiveArc = true, 9.0f, 13.0f)
                     arcTo(7.014f, 7.014f, 270.0842862919194f, isMoreThanHalf = false, isPositiveArc = true, 15.93f, 19.0f)
                     close()
-                    moveTo(16.459999999999997f, 12.5f)
-                    curveTo(16.019999999999996f, 12.5f, 15.579999999999997f, 12.542f, 15.109999999999998f, 12.627f)
-                    lineTo(14.335999999999999f, 12.768f)
+                    moveTo(16.46f, 12.5f)
+                    curveTo(16.02f, 12.5f, 15.58f, 12.542f, 15.110000000000001f, 12.627f)
+                    lineTo(14.336000000000002f, 12.768f)
                     arcTo(8.96f, 8.96f, 306.6133831413474f, isMoreThanHalf = false, isPositiveArc = false, 9.0f, 11.0f)
                     curveTo(4.27f, 11.0f, 0.324f, 14.694f, 0.018f, 19.412f)
                     arcTo(1.5f, 1.5f, 183.2650742657597f, isMoreThanHalf = false, isPositiveArc = false, 0.42000000000000004f, 20.522f)

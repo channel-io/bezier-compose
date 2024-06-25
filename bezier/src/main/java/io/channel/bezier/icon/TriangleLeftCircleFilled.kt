@@ -31,7 +31,6 @@ val BezierIcons.TriangleLeftCircleFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(13.808f, 7.356f)

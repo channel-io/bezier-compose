@@ -31,7 +31,6 @@ val BezierIcons.PageZip: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(13.0f, 12.0f)
                     lineTo(13.0f, 14.0f)
@@ -48,7 +47,6 @@ val BezierIcons.PageZip: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(7.0f, 2.0f)

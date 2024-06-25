@@ -31,7 +31,6 @@ val BezierIcons.AsteriskSmall: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(12.0f, 5.5f)
                     arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 6.5f)

@@ -31,7 +31,6 @@ val BezierIcons.Dropdown: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(16.26f, 14.26f)
                     arcTo(0.5f, 0.5f, 33.90126199686626f, isMoreThanHalf = false, isPositiveArc = true, 15.430000000000001f, 14.26f)
@@ -45,7 +44,6 @@ val BezierIcons.Dropdown: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(1.0f, 8.0f)

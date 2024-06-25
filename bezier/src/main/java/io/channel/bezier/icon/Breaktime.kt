@@ -31,7 +31,6 @@ val BezierIcons.Breaktime: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(14.997f, 5.0f)
@@ -53,11 +52,11 @@ val BezierIcons.Breaktime: BezierIcon
                     moveTo(13.0f, 18.996f)
                     curveTo(15.757f, 18.996f, 18.0f, 16.753f, 18.0f, 13.995999999999999f)
                     lineTo(18.0f, 8.995999999999999f)
-                    lineTo(6.0f, 8.995999999999999f)
-                    lineTo(6.0f, 13.995999999999999f)
-                    curveTo(6.0f, 16.753f, 8.243f, 18.996f, 11.0f, 18.996f)
+                    lineTo(6.0f, 8.996f)
+                    lineTo(6.0f, 13.996f)
+                    curveTo(6.0f, 16.753f, 8.243f, 18.996000000000002f, 11.0f, 18.996000000000002f)
                     close()
-                    moveTo(20.0f, 6.995999999999999f)
+                    moveTo(20.0f, 6.996f)
                     lineTo(20.0f, 7.0f)
                     lineTo(22.0f, 7.0f)
                     arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 23.0f, 8.0f)

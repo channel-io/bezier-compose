@@ -31,7 +31,7 @@ val BezierIcons.WifiWeak: BezierIcon
                 path(
                         fill = SolidColor(Color(0x4C313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        strokeAlpha = 0.3f,
                 ) {
                     moveTo(19.883f, 10.952f)
                     arcTo(0.517f, 0.517f, 131.54495568990436f, isMoreThanHalf = false, isPositiveArc = false, 20.596999999999998f, 10.925f)
@@ -49,7 +49,6 @@ val BezierIcons.WifiWeak: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(8.98f, 16.015f)
                     curveTo(8.738f, 16.198f, 8.73f, 16.549f, 8.940000000000001f, 16.769000000000002f)

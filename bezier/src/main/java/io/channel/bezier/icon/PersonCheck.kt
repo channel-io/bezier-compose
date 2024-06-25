@@ -31,7 +31,6 @@ val BezierIcons.PersonCheck: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(9.484f, 11.0f)
                     arcTo(3.5f, 3.5f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 9.484f, 4.0f)

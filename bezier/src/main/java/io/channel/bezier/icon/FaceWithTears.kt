@@ -31,7 +31,6 @@ val BezierIcons.FaceWithTears: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(14.015f, 9.72f)
                     curveTo(14.015f, 11.215f, 14.368f, 11.825000000000001f, 15.214f, 11.825000000000001f)
@@ -43,7 +42,6 @@ val BezierIcons.FaceWithTears: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.0f, 2.0f)

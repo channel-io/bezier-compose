@@ -31,7 +31,6 @@ val BezierIcons.ChatQuestionFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(20.822f, 16.683f)
@@ -59,9 +58,9 @@ val BezierIcons.ChatQuestionFilled: BezierIcon
                     curveTo(15.840000000000002f, 11.14f, 14.448000000000002f, 12.018f, 13.615000000000002f, 12.541f)
                     curveTo(13.379000000000001f, 12.691f, 12.831000000000001f, 13.114f, 12.831000000000001f, 13.833f)
                     close()
-                    moveTo(13.184999999999999f, 16.929000000000002f)
-                    arcTo(1.243f, 1.243f, 359.9769526241261f, isMoreThanHalf = true, isPositiveArc = true, 10.698999999999998f, 16.930000000000003f)
-                    arcTo(1.243f, 1.243f, 179.97695262412614f, isMoreThanHalf = false, isPositiveArc = true, 13.184999999999999f, 16.929000000000002f)
+                    moveTo(13.185f, 16.929f)
+                    arcTo(1.243f, 1.243f, 359.9769526241261f, isMoreThanHalf = true, isPositiveArc = true, 10.699f, 16.93f)
+                    arcTo(1.243f, 1.243f, 179.97695262412614f, isMoreThanHalf = false, isPositiveArc = true, 13.185f, 16.929f)
                 }
             }.build().also {
                 _chatQuestionFilled = it

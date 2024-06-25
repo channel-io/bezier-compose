@@ -31,7 +31,6 @@ val BezierIcons.WeatherCloud: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(6.019f, 10.232f)
@@ -47,8 +46,8 @@ val BezierIcons.WeatherCloud: BezierIcon
                     curveTo(10.116f, 6.0f, 8.45f, 7.451f, 8.172f, 9.375f)
                     lineTo(8.049000000000001f, 10.232f)
                     close()
-                    moveTo(16.921f, 18.616999999999997f)
-                    lineTo(6.019f, 18.616999999999997f)
+                    moveTo(16.921f, 18.617f)
+                    lineTo(6.019f, 18.617f)
                     arcTo(5.025f, 5.025f, 90.06838456433628f, isMoreThanHalf = false, isPositiveArc = true, 1.0f, 13.597f)
                     lineTo(1.0f, 13.251999999999999f)
                     arcTo(5.025f, 5.025f, 180.05696992555826f, isMoreThanHalf = false, isPositiveArc = true, 6.019f, 8.232f)

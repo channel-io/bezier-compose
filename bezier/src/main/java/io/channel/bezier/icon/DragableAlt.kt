@@ -31,7 +31,6 @@ val BezierIcons.DragableAlt: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(17.0f, 8.25f)
                     arcTo(2.25f, 2.25f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 21.5f, 8.25f)

@@ -31,7 +31,6 @@ val BezierIcons.IntoPageAlt: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(10.357f, 3.0f)
@@ -80,7 +79,6 @@ val BezierIcons.IntoPageAlt: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(10.192f, 8.412f)
                     curveTo(10.0f, 8.636f, 10.0f, 9.12f, 10.0f, 10.09f)

@@ -31,7 +31,6 @@ val BezierIcons.Out: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(18.793f, 13.0f)
                     lineTo(16.378999999999998f, 15.414f)

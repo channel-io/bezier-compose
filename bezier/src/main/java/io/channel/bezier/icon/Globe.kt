@@ -31,7 +31,6 @@ val BezierIcons.Globe: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(15.334f, 19.263f)
@@ -50,13 +49,13 @@ val BezierIcons.Globe: BezierIcon
                     curveTo(9.465f, 6.697f, 10.952f, 4.0f, 12.0f, 4.0f)
                     curveTo(13.048f, 4.0f, 14.533999999999999f, 6.697f, 14.738f, 11.0f)
                     close()
-                    moveTo(12.0f, 19.999000000000002f)
-                    curveTo(10.953f, 19.999000000000002f, 9.465f, 17.303f, 9.261f, 12.999000000000002f)
-                    lineTo(14.738f, 12.999000000000002f)
-                    curveTo(14.533f, 17.303000000000004f, 13.048f, 19.999000000000002f, 12.0f, 19.999000000000002f)
-                    moveTo(19.93f, 10.999000000000002f)
-                    lineTo(16.737f, 10.999000000000002f)
-                    curveTo(16.63f, 8.703000000000003f, 16.151999999999997f, 6.428000000000003f, 15.332999999999998f, 4.737000000000003f)
+                    moveTo(12.0f, 19.999f)
+                    curveTo(10.953f, 19.999f, 9.465f, 17.302999999999997f, 9.261f, 12.998999999999999f)
+                    lineTo(14.738f, 12.998999999999999f)
+                    curveTo(14.533f, 17.302999999999997f, 13.048f, 19.999f, 12.0f, 19.999f)
+                    moveTo(19.93f, 10.998999999999999f)
+                    lineTo(16.737f, 10.998999999999999f)
+                    curveTo(16.63f, 8.703f, 16.151999999999997f, 6.427999999999999f, 15.332999999999998f, 4.736999999999999f)
                     arcTo(8.01f, 8.01f, 294.71191388827367f, isMoreThanHalf = false, isPositiveArc = true, 19.93f, 11.0f)
                     moveTo(12.0f, 2.0f)
                     curveTo(6.485f, 2.0f, 2.0f, 6.487f, 2.0f, 12.0f)

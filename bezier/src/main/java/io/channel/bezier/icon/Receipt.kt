@@ -31,7 +31,6 @@ val BezierIcons.Receipt: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(13.994f, 18.882f)
@@ -44,7 +43,7 @@ val BezierIcons.Receipt: BezierIcon
                     lineTo(9.995f, 18.881999999999998f)
                     lineTo(11.995f, 19.881999999999998f)
                     close()
-                    moveTo(7.997f, 22.118000000000002f)
+                    moveTo(7.997f, 22.118f)
                     lineTo(5.0f, 20.617f)
                     lineTo(5.0f, 3.5f)
                     arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 6.5f, 2.0f)

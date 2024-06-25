@@ -31,7 +31,6 @@ val BezierIcons.SmsUnsubscribed: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(6.0f, 12.0f)
                     curveTo(6.0f, 12.825f, 6.676f, 13.5f, 7.5f, 13.5f)
@@ -53,7 +52,6 @@ val BezierIcons.SmsUnsubscribed: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.0f, 3.0f)

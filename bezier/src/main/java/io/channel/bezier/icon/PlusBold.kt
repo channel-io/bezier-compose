@@ -31,7 +31,6 @@ val BezierIcons.PlusBold: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(3.0f, 12.0f)
                     arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 4.5f, 13.5f)

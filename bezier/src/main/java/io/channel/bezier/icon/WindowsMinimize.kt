@@ -31,7 +31,6 @@ val BezierIcons.WindowsMinimize: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(7.0f, 12.0f)
                     lineTo(17.0f, 12.0f)

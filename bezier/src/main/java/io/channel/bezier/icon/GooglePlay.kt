@@ -31,7 +31,7 @@ val BezierIcons.GooglePlay: BezierIcon
                 path(
                         fill = SolidColor(Color(0x66313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        strokeAlpha = 0.4f,
                 ) {
                     moveTo(13.0f, 12.0f)
                     lineTo(5.074f, 19.502f)
@@ -45,7 +45,7 @@ val BezierIcons.GooglePlay: BezierIcon
                 path(
                         fill = SolidColor(Color(0x99313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        strokeAlpha = 0.6f,
                 ) {
                     moveTo(20.9f, 10.25f)
                     lineTo(20.892f, 10.25f)
@@ -61,7 +61,6 @@ val BezierIcons.GooglePlay: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(5.074f, 4.498f)
                     arcTo(2.0f, 2.0f, 195.64677874185722f, isMoreThanHalf = false, isPositiveArc = false, 5.0f, 5.016f)
@@ -74,7 +73,7 @@ val BezierIcons.GooglePlay: BezierIcon
                 path(
                         fill = SolidColor(Color(0xCC313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
+                        strokeAlpha = 0.8f,
                 ) {
                     moveTo(13.0f, 12.0f)
                     lineTo(17.073999999999998f, 8.145f)

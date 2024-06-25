@@ -31,7 +31,6 @@ val BezierIcons.FaceDisappointed: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(12.911f, 17.296f)
                     lineTo(12.974f, 17.354f)
@@ -70,7 +69,6 @@ val BezierIcons.FaceDisappointed: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(19.448f, 1.683f)

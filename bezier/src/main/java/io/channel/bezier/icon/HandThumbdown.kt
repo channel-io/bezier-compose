@@ -31,7 +31,6 @@ val BezierIcons.HandThumbdown: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(18.25f, 18.0f)
@@ -48,28 +47,27 @@ val BezierIcons.HandThumbdown: BezierIcon
                     arcTo(2.504f, 2.504f, 44.89992205289978f, isMoreThanHalf = false, isPositiveArc = false, 17.055f, 18.723f)
                     lineTo(16.332f, 18.0f)
                     close()
-                    moveTo(17.872f, 7.297000000000001f)
-                    lineTo(20.122f, 13.298000000000002f)
-                    arcTo(1.97f, 1.97f, 338.9802442510001f, isMoreThanHalf = false, isPositiveArc = true, 19.893f, 15.140000000000002f)
-                    curveTo(19.515f, 15.687000000000003f, 18.915f, 16.000000000000004f, 18.25f, 16.000000000000004f)
-                    lineTo(14.16f, 16.000000000000004f)
-                    arcTo(1.098f, 1.098f, 270.2192701551778f, isMoreThanHalf = false, isPositiveArc = false, 13.38f, 17.875000000000004f)
-                    lineTo(15.641000000000002f, 20.137000000000004f)
-                    arcTo(0.5f, 0.5f, 315.0086516628379f, isMoreThanHalf = false, isPositiveArc = true, 15.641000000000002f, 20.844000000000005f)
-                    arcTo(0.498f, 0.498f, 44.778153488770116f, isMoreThanHalf = false, isPositiveArc = true, 14.934000000000001f, 20.844000000000005f)
-                    lineTo(9.464000000000002f, 15.375000000000004f)
-                    arcTo(4.97f, 4.97f, 134.86421130919544f, isMoreThanHalf = false, isPositiveArc = true, 8.0f, 11.839f)
+                    moveTo(17.872f, 7.297f)
+                    lineTo(20.122f, 13.298f)
+                    arcTo(1.97f, 1.97f, 338.9802442510001f, isMoreThanHalf = false, isPositiveArc = true, 19.893f, 15.14f)
+                    curveTo(19.515f, 15.687000000000001f, 18.915f, 16.0f, 18.25f, 16.0f)
+                    lineTo(14.16f, 16.0f)
+                    arcTo(1.098f, 1.098f, 270.2192701551778f, isMoreThanHalf = false, isPositiveArc = false, 13.38f, 17.875f)
+                    lineTo(15.641000000000002f, 20.137f)
+                    arcTo(0.5f, 0.5f, 315.0086516628379f, isMoreThanHalf = false, isPositiveArc = true, 15.641000000000002f, 20.844f)
+                    arcTo(0.498f, 0.498f, 44.778153488770116f, isMoreThanHalf = false, isPositiveArc = true, 14.934000000000001f, 20.844f)
+                    lineTo(9.464000000000002f, 15.375f)
+                    arcTo(4.97f, 4.97f, 134.8642113091954f, isMoreThanHalf = false, isPositiveArc = true, 8.0f, 11.839f)
                     lineTo(8.0f, 11.063f)
                     arcTo(4.98f, 4.98f, 179.83677019622857f, isMoreThanHalf = false, isPositiveArc = true, 11.143f, 6.420000000000001f)
                     arcTo(5.9f, 5.9f, 248.2505330665033f, isMoreThanHalf = false, isPositiveArc = true, 13.323f, 6.000000000000001f)
-                    lineTo(16.0f, 6.000000000000001f)
-                    arcTo(2.01f, 2.01f, 270.2079484488162f, isMoreThanHalf = false, isPositiveArc = true, 17.872f, 7.297000000000001f)
+                    lineTo(16.0f, 6.0f)
+                    arcTo(2.01f, 2.01f, 270.2079484488162f, isMoreThanHalf = false, isPositiveArc = true, 17.872f, 7.297f)
                 }
 
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(2.054f, 14.727f)
                     curveTo(2.0f, 14.62f, 2.0f, 14.48f, 2.0f, 14.2f)

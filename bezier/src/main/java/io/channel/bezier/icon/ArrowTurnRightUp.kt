@@ -31,7 +31,6 @@ val BezierIcons.ArrowTurnRightUp: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(17.207f, 14.207f)
                     arcTo(1.0f, 1.0f, 45.99574461357973f, isMoreThanHalf = false, isPositiveArc = true, 15.793000000000001f, 12.793000000000001f)

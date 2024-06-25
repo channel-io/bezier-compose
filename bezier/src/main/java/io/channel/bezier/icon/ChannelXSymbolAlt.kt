@@ -31,7 +31,6 @@ val BezierIcons.ChannelXSymbolAlt: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(21.61f, 16.148f)
                     lineTo(18.81f, 14.824f)

@@ -31,7 +31,6 @@ val BezierIcons.HandWave: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(18.0f, 3.0f)
                     lineTo(18.0f, 1.0f)
@@ -48,7 +47,6 @@ val BezierIcons.HandWave: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(15.721f, 4.748f)

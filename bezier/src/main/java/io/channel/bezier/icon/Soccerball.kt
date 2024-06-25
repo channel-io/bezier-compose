@@ -31,7 +31,6 @@ val BezierIcons.Soccerball: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(15.804f, 13.236f)
                     lineTo(12.0f, 15.999f)
@@ -44,7 +43,6 @@ val BezierIcons.Soccerball: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.0f, 22.0f)

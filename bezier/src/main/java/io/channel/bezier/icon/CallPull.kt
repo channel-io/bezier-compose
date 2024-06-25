@@ -31,7 +31,6 @@ val BezierIcons.CallPull: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.414f, 8.364f)
@@ -52,7 +51,7 @@ val BezierIcons.CallPull: BezierIcon
                     lineTo(16.657f, 9.778f)
                     arcTo(1.0f, 1.0f, 314.00425538642025f, isMoreThanHalf = true, isPositiveArc = true, 15.243f, 11.192f)
                     close()
-                    moveTo(7.7509999999999994f, 16.254f)
+                    moveTo(7.751f, 16.254f)
                     curveTo(2.586f, 11.087f, 2.586f, 6.568f, 4.2f, 4.953f)
                     curveTo(5.168f, 3.9850000000000003f, 6.584f, 3.7230000000000003f, 7.428000000000001f, 4.308f)
                     curveTo(8.203000000000001f, 4.825f, 9.365f, 6.282f, 9.365f, 7.536f)

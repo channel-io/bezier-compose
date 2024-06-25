@@ -31,7 +31,6 @@ val BezierIcons.BrowserSafari: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(22.0f, 12.0f)
@@ -49,9 +48,9 @@ val BezierIcons.BrowserSafari: BezierIcon
                     lineTo(11.099f, 11.078f)
                     lineTo(11.086f, 11.084999999999999f)
                     close()
-                    moveTo(10.48f, 10.129999999999999f)
-                    lineTo(16.604f, 7.093999999999999f)
-                    curveTo(16.797f, 6.997999999999999f, 17.003f, 7.204f, 16.907f, 7.395999999999999f)
+                    moveTo(10.48f, 10.13f)
+                    lineTo(16.604f, 7.094f)
+                    curveTo(16.797f, 6.998f, 17.003f, 7.204000000000001f, 16.907f, 7.396f)
                     lineTo(13.872f, 13.52f)
                     arcTo(0.78f, 0.78f, 26.50079461675215f, isMoreThanHalf = false, isPositiveArc = true, 13.522f, 13.87f)
                     lineTo(7.399f, 16.906f)

@@ -31,7 +31,6 @@ val BezierIcons.Trophy: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(7.0f, 4.0f)
@@ -39,9 +38,9 @@ val BezierIcons.Trophy: BezierIcon
                     lineTo(17.0f, 9.0f)
                     arcTo(5.0f, 5.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 7.0f, 9.0f)
                     close()
-                    moveTo(17.744999999999997f, 13.0f)
-                    arcTo(7.0f, 7.0f, 34.82610745089747f, isMoreThanHalf = false, isPositiveArc = true, 13.914999999999997f, 15.735f)
-                    arcTo(3.0f, 3.0f, 144.66662295913125f, isMoreThanHalf = false, isPositiveArc = false, 16.365f, 17.0f)
+                    moveTo(17.745f, 13.0f)
+                    arcTo(7.0f, 7.0f, 34.82610745089747f, isMoreThanHalf = false, isPositiveArc = true, 13.915000000000001f, 15.735f)
+                    arcTo(3.0f, 3.0f, 144.66662295913127f, isMoreThanHalf = false, isPositiveArc = false, 16.365f, 17.0f)
                     lineTo(16.500999999999998f, 17.0f)
                     arcTo(0.5f, 0.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 17.000999999999998f, 17.5f)
                     lineTo(17.000999999999998f, 21.5f)
@@ -72,8 +71,8 @@ val BezierIcons.Trophy: BezierIcon
                     arcTo(2.0f, 2.0f, 180.02179001971152f, isMoreThanHalf = false, isPositiveArc = false, 5.248f, 10.854f)
                     arcTo(7.0f, 7.0f, 164.70292641248423f, isMoreThanHalf = false, isPositiveArc = true, 5.0f, 9.0f)
                     close()
-                    moveTo(18.752000000000002f, 10.854f)
-                    arcTo(2.0f, 2.0f, 67.91387204101956f, isMoreThanHalf = false, isPositiveArc = false, 20.0f, 9.0f)
+                    moveTo(18.752f, 10.854f)
+                    arcTo(2.0f, 2.0f, 67.91387204101967f, isMoreThanHalf = false, isPositiveArc = false, 20.0f, 9.0f)
                     lineTo(20.0f, 6.0f)
                     lineTo(19.0f, 6.0f)
                     lineTo(19.0f, 9.0f)

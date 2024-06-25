@@ -31,7 +31,6 @@ val BezierIcons.ChatBubbleAltFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(12.0f, 20.0f)
                     curveTo(17.247f, 20.0f, 21.5f, 16.418f, 21.5f, 12.0f)

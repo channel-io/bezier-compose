@@ -31,7 +31,6 @@ val BezierIcons.Repeat: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(14.0f, 3.931f)
                     lineTo(14.0f, 6.0f)

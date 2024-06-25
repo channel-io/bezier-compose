@@ -31,7 +31,6 @@ val BezierIcons.Hourglass3: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(17.0f, 6.553f)
@@ -73,11 +72,11 @@ val BezierIcons.Hourglass3: BezierIcon
                     moveTo(12.000000000000004f, 13.035f)
                     arcTo(1.0f, 1.0f, 270.01692097620617f, isMoreThanHalf = false, isPositiveArc = false, 11.233000000000004f, 13.393f)
                     curveTo(8.145000000000003f, 17.087f, 8.007000000000005f, 17.253f, 8.000000000000004f, 17.423000000000002f)
-                    lineTo(8.000000000000004f, 19.0f)
-                    lineTo(16.000000000000004f, 19.0f)
-                    lineTo(16.000000000000004f, 17.423000000000002f)
-                    curveTo(15.994000000000003f, 17.253f, 15.855000000000004f, 17.087000000000003f, 12.766000000000004f, 13.393f)
-                    arcTo(1.0f, 1.0f, 320.0589019218899f, isMoreThanHalf = false, isPositiveArc = false, 12.000000000000004f, 13.035f)
+                    lineTo(8.0f, 19.0f)
+                    lineTo(16.0f, 19.0f)
+                    lineTo(16.0f, 17.423000000000002f)
+                    curveTo(15.994f, 17.253f, 15.855f, 17.087000000000003f, 12.766f, 13.393f)
+                    arcTo(1.0f, 1.0f, 320.0589019218899f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 13.035f)
                     moveTo(9.307f, 8.322f)
                     lineTo(9.036f, 8.0f)
                     lineTo(14.963999999999999f, 8.0f)

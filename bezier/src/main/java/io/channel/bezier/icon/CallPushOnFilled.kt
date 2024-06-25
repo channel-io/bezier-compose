@@ -31,7 +31,6 @@ val BezierIcons.CallPushOnFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(4.2f, 4.955f)
                     curveTo(2.5860000000000003f, 6.569f, 2.5860000000000003f, 11.088000000000001f, 7.75f, 16.253f)

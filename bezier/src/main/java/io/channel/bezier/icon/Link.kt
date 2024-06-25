@@ -31,7 +31,6 @@ val BezierIcons.Link: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(9.879f, 14.121f)
                     arcTo(6.0f, 6.0f, 134.99810008786542f, isMoreThanHalf = false, isPositiveArc = false, 18.363999999999997f, 14.121f)

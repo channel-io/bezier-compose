@@ -31,7 +31,6 @@ val BezierIcons.Instagram: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(7.25f, 12.0f)
@@ -95,7 +94,6 @@ val BezierIcons.Instagram: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                 ) {
                     moveTo(16.625f, 8.5f)
                     arcTo(1.125f, 1.125f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 16.625f, 6.25f)

@@ -31,7 +31,6 @@ val BezierIcons.Translate: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        strokeAlpha = 1.0f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(10.0f, 19.0f)
@@ -42,9 +41,9 @@ val BezierIcons.Translate: BezierIcon
                     arcTo(21.0f, 21.0f, 53.02459698153082f, isMoreThanHalf = false, isPositiveArc = false, 12.767f, 8.162f)
                     arcTo(0.789f, 0.789f, 45.21541882660676f, isMoreThanHalf = false, isPositiveArc = false, 12.209999999999999f, 6.813000000000001f)
                     lineTo(10.434999999999999f, 6.813000000000001f)
-                    lineTo(10.434999999999999f, 5.0f)
-                    lineTo(8.854999999999999f, 5.0f)
-                    lineTo(8.854999999999999f, 6.813f)
+                    lineTo(10.435f, 5.0f)
+                    lineTo(8.855f, 5.0f)
+                    lineTo(8.855f, 6.813f)
                     lineTo(6.232f, 6.813f)
                     lineTo(6.232f, 8.393f)
                     lineTo(10.1f, 8.393f)
@@ -68,18 +67,18 @@ val BezierIcons.Translate: BezierIcon
                     lineTo(15.0f, 3.0f)
                     arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 16.0f, 4.0f)
                     close()
-                    moveTo(14.447999999999997f, 13.161999999999999f)
-                    lineTo(13.694999999999997f, 15.088999999999999f)
-                    lineTo(15.209999999999997f, 15.088999999999999f)
+                    moveTo(14.448f, 13.162f)
+                    lineTo(13.695f, 15.089f)
+                    lineTo(15.21f, 15.089f)
                     close()
-                    moveTo(10.840999999999998f, 17.987f)
-                    lineTo(13.855999999999998f, 11.011999999999999f)
-                    lineTo(15.126999999999999f, 11.011999999999999f)
-                    lineTo(18.160999999999998f, 17.987f)
-                    lineTo(16.360999999999997f, 17.987f)
-                    lineTo(15.773999999999997f, 16.509999999999998f)
-                    lineTo(13.169999999999998f, 16.509999999999998f)
-                    lineTo(12.602999999999998f, 17.987f)
+                    moveTo(10.841f, 17.987f)
+                    lineTo(13.856f, 11.012f)
+                    lineTo(15.126999999999999f, 11.012f)
+                    lineTo(18.160999999999998f, 17.987000000000002f)
+                    lineTo(16.360999999999997f, 17.987000000000002f)
+                    lineTo(15.773999999999997f, 16.51f)
+                    lineTo(13.169999999999998f, 16.51f)
+                    lineTo(12.602999999999998f, 17.987000000000002f)
                     close()
                 }
             }.build().also {
