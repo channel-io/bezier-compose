@@ -7,6 +7,7 @@
     <color name="bg_grey_light">@color/grey700</color>
     <color name="bg_grey_lighter">@color/grey800</color>
     <color name="bg_grey_lightest">@color/grey850</color>
+    <color name="inverted_bg_grey_lighter">@color/grey100</color>
 
     <color name="bg_black_darkest">@color/white_60</color>
     <color name="bg_black_darker">@color/white_40</color>
