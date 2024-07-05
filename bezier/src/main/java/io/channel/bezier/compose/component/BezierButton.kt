@@ -24,6 +24,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -85,10 +86,14 @@ fun BezierButton(
             }
 
             Text(
-                    modifier = Modifier.padding(size.textPadding),
+                    modifier = Modifier
+                            .padding(size.textPadding)
+                            .weight(1f, fill = false),
                     text = text,
                     style = size.textStyle,
                     color = colorSchemes.contentColor(enabled),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
             )
 
             if (suffixContent != null) {
