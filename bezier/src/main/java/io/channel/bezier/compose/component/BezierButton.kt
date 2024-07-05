@@ -15,6 +15,7 @@ import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Stable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -22,7 +23,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
@@ -30,7 +30,6 @@ import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
-import io.channel.bezier.compose.R
 import io.channel.bezier.compose.color_v2.BezierColor
 import io.channel.bezier.extension.thenIf
 import io.channel.bezier.icon.ArrowRight
@@ -123,7 +122,7 @@ private fun BezierButtonContent(
         is BezierButtonContent.Avatar -> Box(
                 modifier = Modifier
                         .size(size.iconSize)
-                        .background(colorSchemes.backgroundColor(enabled))
+                        .background(colorSchemes.backgroundColor(enabled)),
         )
 
         // TODO : Not Implementation
@@ -427,6 +426,7 @@ private fun BezierButtonEnabledPreview() {
     }
 }
 
+@Stable
 sealed interface BezierButtonContent {
     data class Icon(val icon: BezierIcon) : BezierButtonContent
     data class Avatar(val painter: Painter) : BezierButtonContent
