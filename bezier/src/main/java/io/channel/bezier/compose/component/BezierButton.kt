@@ -250,7 +250,7 @@ enum class BezierButtonSize {
     Large,
     XLarge;
 
-    val textStyle: TextStyle
+    internal val textStyle: TextStyle
         @Composable
         get() = when (this) {
             XsSmall -> BezierTheme.typography.caption2SemiBold
@@ -260,7 +260,7 @@ enum class BezierButtonSize {
             XLarge -> BezierTheme.typography.title2SemiBold
         }
 
-    val radius: Dp
+    internal val radius: Dp
         get() = when (this) {
             XsSmall -> 8.dp
             Small -> 10.dp
@@ -269,7 +269,7 @@ enum class BezierButtonSize {
             XLarge -> 16.dp
         }
 
-    val containerPadding: PaddingValues
+    internal val containerPadding: PaddingValues
         get() = when (this) {
             XsSmall -> PaddingValues(horizontal = 6.dp, vertical = 3.dp)
             Small -> PaddingValues(horizontal = 8.dp, vertical = 6.dp)
@@ -278,7 +278,7 @@ enum class BezierButtonSize {
             XLarge -> PaddingValues(horizontal = 16.dp, vertical = 15.dp)
         }
 
-    val textPadding: PaddingValues
+    internal val textPadding: PaddingValues
         get() = when (this) {
             XsSmall -> PaddingValues(horizontal = 3.dp, vertical = 0.dp)
             Small -> PaddingValues(horizontal = 4.dp, vertical = 1.dp)
@@ -287,7 +287,7 @@ enum class BezierButtonSize {
             XLarge -> PaddingValues(horizontal = 6.dp, vertical = 0.dp)
         }
 
-    val iconSize: Dp
+    internal val iconSize: Dp
         get() = when (this) {
             XsSmall,
             Small -> 16.dp
