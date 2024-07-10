@@ -125,9 +125,7 @@ private fun BezierButtonContent(
 
         // TODO : Not Implementation
         is BezierButtonContent.Avatar -> Box(
-                modifier = Modifier
-                        .size(size.iconSize)
-                        .background(colorSchemes.backgroundColor),
+                modifier = Modifier,
         )
 
         // TODO : Not Implementation
