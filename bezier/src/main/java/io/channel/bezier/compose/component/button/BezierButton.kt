@@ -60,6 +60,7 @@ fun BezierButton(
             contentAlignment = Alignment.Center,
     ) {
         if (isLoading) {
+            // TODO : 베지어 로더로 변경 예정
             CircularProgressIndicator(
                     modifier = Modifier.size(size.iconSize),
                     color = colorSchemes.contentColor,
