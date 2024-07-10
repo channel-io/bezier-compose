@@ -50,8 +50,8 @@ fun BezierButton(
         enabled: Boolean = true,
 ) {
     val colorSchemes = BezierButtonColorSchemes(
-            backgroundColor = getBackgroundColor(variant, color),
-            contentColor = getContentColor(variant, color),
+            backgroundColor = color.getBackgroundColor(variant),
+            contentColor = color.getContentColor(variant),
     )
 
     Box(
@@ -142,76 +142,6 @@ private class BezierButtonColorSchemes(
         val contentColor: Color,
 )
 
-@Composable
-private fun getContentColor(variant: BezierButtonVariant, color: BezierButtonColor): Color {
-    return when (variant) {
-        BezierButtonVariant.Primary -> when (color) {
-            BezierButtonColor.Blue,
-            BezierButtonColor.Cobalt,
-            BezierButtonColor.Red,
-            BezierButtonColor.Orange,
-            BezierButtonColor.Green,
-            BezierButtonColor.Pink,
-            BezierButtonColor.Purple,
-            BezierButtonColor.DarkGrey,
-            BezierButtonColor.LightGrey -> BezierTheme.colorSchemes.fgAbsoluteWhiteDark
-
-            BezierButtonColor.White -> BezierTheme.colorSchemes.fgAbsoluteBlackNormal
-        }
-
-        BezierButtonVariant.Secondary,
-        BezierButtonVariant.Tertiary -> when (color) {
-            BezierButtonColor.Blue -> BezierTheme.colorSchemes.primaryFgNormal
-            BezierButtonColor.Cobalt -> BezierTheme.colorSchemes.accentFgNormal
-            BezierButtonColor.Red -> BezierTheme.colorSchemes.criticalFgNormal
-            BezierButtonColor.Orange -> BezierTheme.colorSchemes.warningFgNormal
-            BezierButtonColor.Green -> BezierTheme.colorSchemes.successFgNormal
-            BezierButtonColor.Pink -> BezierTheme.colorSchemes.fgPinkNormal
-            BezierButtonColor.Purple -> BezierTheme.colorSchemes.fgPurpleNormal
-            BezierButtonColor.DarkGrey -> BezierTheme.colorSchemes.fgBlackDarkest
-            BezierButtonColor.LightGrey -> BezierTheme.colorSchemes.fgBlackDarker
-            BezierButtonColor.White -> BezierTheme.colorSchemes.bgAbsoluteWhiteNormal
-        }
-    }.color
-}
-
-@Composable
-private fun getBackgroundColor(variant: BezierButtonVariant, color: BezierButtonColor): Color {
-    return when (variant) {
-        BezierButtonVariant.Primary -> when (color) {
-            BezierButtonColor.Blue -> BezierTheme.colorSchemes.primaryBgNormal
-            BezierButtonColor.Cobalt -> BezierTheme.colorSchemes.accentBgNormal
-            BezierButtonColor.Red -> BezierTheme.colorSchemes.criticalBgNormal
-            BezierButtonColor.Orange -> BezierTheme.colorSchemes.warningBgNormal
-            BezierButtonColor.Green -> BezierTheme.colorSchemes.successBgNormal
-            BezierButtonColor.Pink -> BezierTheme.colorSchemes.bgPinkNormal
-            BezierButtonColor.Purple -> BezierTheme.colorSchemes.bgPurpleNormal
-            BezierButtonColor.DarkGrey -> BezierTheme.colorSchemes.bgGreyDarkest
-            BezierButtonColor.LightGrey -> BezierTheme.colorSchemes.bgBlackDark
-            BezierButtonColor.White -> BezierTheme.colorSchemes.bgAbsoluteWhiteDark
-        }
-
-        BezierButtonVariant.Secondary -> when (color) {
-            BezierButtonColor.Blue -> BezierTheme.colorSchemes.primaryBgLightest
-            BezierButtonColor.Cobalt -> BezierTheme.colorSchemes.accentBgLightest
-            BezierButtonColor.Red -> BezierTheme.colorSchemes.criticalBgLightest
-            BezierButtonColor.Orange -> BezierTheme.colorSchemes.warningBgLightest
-            BezierButtonColor.Green -> BezierTheme.colorSchemes.successBgLightest
-            BezierButtonColor.Pink -> BezierTheme.colorSchemes.bgPinkLightest
-            BezierButtonColor.Purple -> BezierTheme.colorSchemes.bgPurpleLightest
-            BezierButtonColor.DarkGrey -> BezierTheme.colorSchemes.bgBlackLighter
-            BezierButtonColor.LightGrey -> BezierTheme.colorSchemes.bgBlackLighter
-            BezierButtonColor.White -> BezierTheme.colorSchemes.bgAbsoluteWhiteLightest
-        }
-
-        // TODO : Transparent 교체 필요
-        BezierButtonVariant.Tertiary -> object : BezierColor {
-            override val color: Color
-                get() = Color(0x00000000)
-        }
-    }.color
-}
-
 enum class BezierButtonVariant {
     Primary,
     Secondary,
@@ -284,7 +214,77 @@ enum class BezierButtonColor {
     Purple,
     DarkGrey,
     LightGrey,
-    White,
+    White;
+
+    @Composable
+    internal fun getContentColor(variant: BezierButtonVariant): Color {
+        return when (variant) {
+            BezierButtonVariant.Primary -> when (this) {
+                Blue,
+                Cobalt,
+                Red,
+                Orange,
+                Green,
+                Pink,
+                Purple,
+                DarkGrey,
+                LightGrey -> BezierTheme.colorSchemes.fgAbsoluteWhiteDark
+
+                White -> BezierTheme.colorSchemes.fgAbsoluteBlackNormal
+            }
+
+            BezierButtonVariant.Secondary,
+            BezierButtonVariant.Tertiary -> when (this) {
+                Blue -> BezierTheme.colorSchemes.primaryFgNormal
+                Cobalt -> BezierTheme.colorSchemes.accentFgNormal
+                Red -> BezierTheme.colorSchemes.criticalFgNormal
+                Orange -> BezierTheme.colorSchemes.warningFgNormal
+                Green -> BezierTheme.colorSchemes.successFgNormal
+                Pink -> BezierTheme.colorSchemes.fgPinkNormal
+                Purple -> BezierTheme.colorSchemes.fgPurpleNormal
+                DarkGrey -> BezierTheme.colorSchemes.fgBlackDarkest
+                LightGrey -> BezierTheme.colorSchemes.fgBlackDarker
+                White -> BezierTheme.colorSchemes.bgAbsoluteWhiteNormal
+            }
+        }.color
+    }
+
+    @Composable
+    internal fun getBackgroundColor(variant: BezierButtonVariant): Color {
+        return when (variant) {
+            BezierButtonVariant.Primary -> when (this) {
+                Blue -> BezierTheme.colorSchemes.primaryBgNormal
+                Cobalt -> BezierTheme.colorSchemes.accentBgNormal
+                Red -> BezierTheme.colorSchemes.criticalBgNormal
+                Orange -> BezierTheme.colorSchemes.warningBgNormal
+                Green -> BezierTheme.colorSchemes.successBgNormal
+                Pink -> BezierTheme.colorSchemes.bgPinkNormal
+                Purple -> BezierTheme.colorSchemes.bgPurpleNormal
+                DarkGrey -> BezierTheme.colorSchemes.bgGreyDarkest
+                LightGrey -> BezierTheme.colorSchemes.bgBlackDark
+                White -> BezierTheme.colorSchemes.bgAbsoluteWhiteDark
+            }
+
+            BezierButtonVariant.Secondary -> when (this) {
+                Blue -> BezierTheme.colorSchemes.primaryBgLightest
+                Cobalt -> BezierTheme.colorSchemes.accentBgLightest
+                Red -> BezierTheme.colorSchemes.criticalBgLightest
+                Orange -> BezierTheme.colorSchemes.warningBgLightest
+                Green -> BezierTheme.colorSchemes.successBgLightest
+                Pink -> BezierTheme.colorSchemes.bgPinkLightest
+                Purple -> BezierTheme.colorSchemes.bgPurpleLightest
+                DarkGrey -> BezierTheme.colorSchemes.bgBlackLighter
+                LightGrey -> BezierTheme.colorSchemes.bgBlackLighter
+                White -> BezierTheme.colorSchemes.bgAbsoluteWhiteLightest
+            }
+
+            // TODO : Transparent 교체 필요
+            BezierButtonVariant.Tertiary -> object : BezierColor {
+                override val color: Color
+                    get() = Color(0x00000000)
+            }
+        }.color
+    }
 }
 
 @Composable
