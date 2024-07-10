@@ -16,19 +16,19 @@ import io.channel.bezier.compose.color_v2.BezierColor
 
 @Composable
 fun BezierLoader(
-        variants: BezierLoaderVariants,
+        variant: BezierLoaderVariant,
         size: BezierLoaderSize,
 ) {
     CircularProgressIndicator(
             modifier = Modifier.size(size.size),
-            color = variants.foregroundColor.color,
+            color = variant.foregroundColor.color,
             strokeWidth = size.strokeWidth,
-            backgroundColor = variants.backgroundColor.color,
+            backgroundColor = variant.backgroundColor.color,
             strokeCap = StrokeCap.Round,
     )
 }
 
-enum class BezierLoaderVariants {
+enum class BezierLoaderVariant {
     Primary,
     Secondary,
     OnOverlay;
@@ -74,8 +74,8 @@ private fun BezierLoaderPreview() {
         Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
             BezierLoaderSize.entries.forEach { size ->
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    BezierLoaderVariants.entries.forEach { variants ->
-                        BezierLoader(variants = variants, size = size)
+                    BezierLoaderVariant.entries.forEach { variants ->
+                        BezierLoader(variant = variants, size = size)
                     }
                 }
             }
