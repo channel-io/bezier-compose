@@ -57,7 +57,10 @@ fun BezierButton(
     Box(
             modifier = modifier
                     .clip(RoundedCornerShape(size.radius))
-                    .background(colorSchemes.backgroundColor(enabled))
+                    .thenIf(!enabled) {
+                        alpha(0.4f)
+                    }
+                    .background(colorSchemes.backgroundColor)
                     .clickable(enabled = enabled) { onClick() }
                     .padding(size.containerPadding),
             contentAlignment = Alignment.Center,
@@ -65,7 +68,7 @@ fun BezierButton(
         if (isLoading) {
             CircularProgressIndicator(
                     modifier = Modifier.size(size.iconSize),
-                    color = colorSchemes.contentColor(enabled),
+                    color = colorSchemes.contentColor,
             )
         }
 
@@ -91,7 +94,7 @@ fun BezierButton(
                             .weight(1f, fill = false),
                     text = text,
                     style = size.textStyle,
-                    color = colorSchemes.contentColor(enabled),
+                    color = colorSchemes.contentColor,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
             )
@@ -120,14 +123,14 @@ private fun BezierButtonContent(
                 modifier = Modifier.size(size.iconSize),
                 painter = rememberVectorPainter(content.icon.imageVector),
                 contentDescription = null,
-                tint = colorSchemes.contentColor(enabled),
+                tint = colorSchemes.contentColor,
         )
 
         // TODO : Not Implementation
         is BezierButtonContent.Avatar -> Box(
                 modifier = Modifier
                         .size(size.iconSize)
-                        .background(colorSchemes.backgroundColor(enabled)),
+                        .background(colorSchemes.backgroundColor),
         )
 
         // TODO : Not Implementation
@@ -140,32 +143,9 @@ private fun BezierButtonContent(
 }
 
 private class BezierButtonColorSchemes(
-        private val backgroundColor: Color,
-        private val contentColor: Color,
-) {
-    private val disabledBackgroundColor: Color = backgroundColor.toDisabledColor()
-    private val disabledContentColor: Color = contentColor.toDisabledColor()
-
-    private fun Color.toDisabledColor(): Color {
-        return copy(alpha = alpha * 0.4f)
-    }
-
-    fun backgroundColor(enabled: Boolean): Color {
-        return if (enabled) {
-            backgroundColor
-        } else {
-            disabledBackgroundColor
-        }
-    }
-
-    fun contentColor(enabled: Boolean): Color {
-        return if (enabled) {
-            contentColor
-        } else {
-            disabledContentColor
-        }
-    }
-}
+        val backgroundColor: Color,
+        val contentColor: Color,
+)
 
 @Composable
 private fun getContentColor(variant: BezierButtonVariants, color: BezierButtonColors): Color {
