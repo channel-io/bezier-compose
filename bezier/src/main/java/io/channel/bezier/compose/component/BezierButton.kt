@@ -84,7 +84,6 @@ fun BezierButton(
                         content = prefixContent,
                         size = size,
                         colorSchemes = colorSchemes,
-                        enabled = enabled,
                 )
             }
 
@@ -104,7 +103,6 @@ fun BezierButton(
                         content = suffixContent,
                         size = size,
                         colorSchemes = colorSchemes,
-                        enabled = enabled,
                 )
             }
         }
@@ -116,7 +114,6 @@ private fun BezierButtonContent(
         content: BezierButtonContent,
         size: BezierButtonSize,
         colorSchemes: BezierButtonColorSchemes,
-        enabled: Boolean,
 ) {
     when (content) {
         is BezierButtonContent.Icon -> Icon(
