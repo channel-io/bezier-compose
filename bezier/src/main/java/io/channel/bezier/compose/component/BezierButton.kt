@@ -40,8 +40,8 @@ import io.channel.bezier.icon.Plus
 fun BezierButton(
         text: String,
         size: BezierButtonSize,
-        variant: BezierButtonVariants,
-        color: BezierButtonColors,
+        variant: BezierButtonVariant,
+        color: BezierButtonColor,
         onClick: () -> Unit,
         modifier: Modifier = Modifier,
         prefixContent: BezierButtonContent? = null,
@@ -148,76 +148,76 @@ private class BezierButtonColorSchemes(
 )
 
 @Composable
-private fun getContentColor(variant: BezierButtonVariants, color: BezierButtonColors): Color {
+private fun getContentColor(variant: BezierButtonVariant, color: BezierButtonColor): Color {
     return when (variant) {
-        BezierButtonVariants.Primary -> when (color) {
-            BezierButtonColors.Blue,
-            BezierButtonColors.Cobalt,
-            BezierButtonColors.Red,
-            BezierButtonColors.Orange,
-            BezierButtonColors.Green,
-            BezierButtonColors.Pink,
-            BezierButtonColors.Purple,
-            BezierButtonColors.DarkGrey,
-            BezierButtonColors.LightGrey -> BezierTheme.colorSchemes.fgAbsoluteWhiteDark
+        BezierButtonVariant.Primary -> when (color) {
+            BezierButtonColor.Blue,
+            BezierButtonColor.Cobalt,
+            BezierButtonColor.Red,
+            BezierButtonColor.Orange,
+            BezierButtonColor.Green,
+            BezierButtonColor.Pink,
+            BezierButtonColor.Purple,
+            BezierButtonColor.DarkGrey,
+            BezierButtonColor.LightGrey -> BezierTheme.colorSchemes.fgAbsoluteWhiteDark
 
-            BezierButtonColors.White -> BezierTheme.colorSchemes.fgAbsoluteBlackNormal
+            BezierButtonColor.White -> BezierTheme.colorSchemes.fgAbsoluteBlackNormal
         }
 
-        BezierButtonVariants.Secondary,
-        BezierButtonVariants.Tertiary -> when (color) {
-            BezierButtonColors.Blue -> BezierTheme.colorSchemes.primaryFgNormal
-            BezierButtonColors.Cobalt -> BezierTheme.colorSchemes.accentFgNormal
-            BezierButtonColors.Red -> BezierTheme.colorSchemes.criticalFgNormal
-            BezierButtonColors.Orange -> BezierTheme.colorSchemes.warningFgNormal
-            BezierButtonColors.Green -> BezierTheme.colorSchemes.successFgNormal
-            BezierButtonColors.Pink -> BezierTheme.colorSchemes.fgPinkNormal
-            BezierButtonColors.Purple -> BezierTheme.colorSchemes.fgPurpleNormal
-            BezierButtonColors.DarkGrey -> BezierTheme.colorSchemes.fgBlackDarkest
-            BezierButtonColors.LightGrey -> BezierTheme.colorSchemes.fgBlackDarker
-            BezierButtonColors.White -> BezierTheme.colorSchemes.bgAbsoluteWhiteNormal
+        BezierButtonVariant.Secondary,
+        BezierButtonVariant.Tertiary -> when (color) {
+            BezierButtonColor.Blue -> BezierTheme.colorSchemes.primaryFgNormal
+            BezierButtonColor.Cobalt -> BezierTheme.colorSchemes.accentFgNormal
+            BezierButtonColor.Red -> BezierTheme.colorSchemes.criticalFgNormal
+            BezierButtonColor.Orange -> BezierTheme.colorSchemes.warningFgNormal
+            BezierButtonColor.Green -> BezierTheme.colorSchemes.successFgNormal
+            BezierButtonColor.Pink -> BezierTheme.colorSchemes.fgPinkNormal
+            BezierButtonColor.Purple -> BezierTheme.colorSchemes.fgPurpleNormal
+            BezierButtonColor.DarkGrey -> BezierTheme.colorSchemes.fgBlackDarkest
+            BezierButtonColor.LightGrey -> BezierTheme.colorSchemes.fgBlackDarker
+            BezierButtonColor.White -> BezierTheme.colorSchemes.bgAbsoluteWhiteNormal
         }
     }.color
 }
 
 @Composable
-private fun getBackgroundColor(variant: BezierButtonVariants, color: BezierButtonColors): Color {
+private fun getBackgroundColor(variant: BezierButtonVariant, color: BezierButtonColor): Color {
     return when (variant) {
-        BezierButtonVariants.Primary -> when (color) {
-            BezierButtonColors.Blue -> BezierTheme.colorSchemes.primaryBgNormal
-            BezierButtonColors.Cobalt -> BezierTheme.colorSchemes.accentBgNormal
-            BezierButtonColors.Red -> BezierTheme.colorSchemes.criticalBgNormal
-            BezierButtonColors.Orange -> BezierTheme.colorSchemes.warningBgNormal
-            BezierButtonColors.Green -> BezierTheme.colorSchemes.successBgNormal
-            BezierButtonColors.Pink -> BezierTheme.colorSchemes.bgPinkNormal
-            BezierButtonColors.Purple -> BezierTheme.colorSchemes.bgPurpleNormal
-            BezierButtonColors.DarkGrey -> BezierTheme.colorSchemes.bgGreyDarkest
-            BezierButtonColors.LightGrey -> BezierTheme.colorSchemes.bgBlackDark
-            BezierButtonColors.White -> BezierTheme.colorSchemes.bgAbsoluteWhiteDark
+        BezierButtonVariant.Primary -> when (color) {
+            BezierButtonColor.Blue -> BezierTheme.colorSchemes.primaryBgNormal
+            BezierButtonColor.Cobalt -> BezierTheme.colorSchemes.accentBgNormal
+            BezierButtonColor.Red -> BezierTheme.colorSchemes.criticalBgNormal
+            BezierButtonColor.Orange -> BezierTheme.colorSchemes.warningBgNormal
+            BezierButtonColor.Green -> BezierTheme.colorSchemes.successBgNormal
+            BezierButtonColor.Pink -> BezierTheme.colorSchemes.bgPinkNormal
+            BezierButtonColor.Purple -> BezierTheme.colorSchemes.bgPurpleNormal
+            BezierButtonColor.DarkGrey -> BezierTheme.colorSchemes.bgGreyDarkest
+            BezierButtonColor.LightGrey -> BezierTheme.colorSchemes.bgBlackDark
+            BezierButtonColor.White -> BezierTheme.colorSchemes.bgAbsoluteWhiteDark
         }
 
-        BezierButtonVariants.Secondary -> when (color) {
-            BezierButtonColors.Blue -> BezierTheme.colorSchemes.primaryBgLightest
-            BezierButtonColors.Cobalt -> BezierTheme.colorSchemes.accentBgLightest
-            BezierButtonColors.Red -> BezierTheme.colorSchemes.criticalBgLightest
-            BezierButtonColors.Orange -> BezierTheme.colorSchemes.warningBgLightest
-            BezierButtonColors.Green -> BezierTheme.colorSchemes.successBgLightest
-            BezierButtonColors.Pink -> BezierTheme.colorSchemes.bgPinkLightest
-            BezierButtonColors.Purple -> BezierTheme.colorSchemes.bgPurpleLightest
-            BezierButtonColors.DarkGrey -> BezierTheme.colorSchemes.bgBlackLighter
-            BezierButtonColors.LightGrey -> BezierTheme.colorSchemes.bgBlackLighter
-            BezierButtonColors.White -> BezierTheme.colorSchemes.bgAbsoluteWhiteLightest
+        BezierButtonVariant.Secondary -> when (color) {
+            BezierButtonColor.Blue -> BezierTheme.colorSchemes.primaryBgLightest
+            BezierButtonColor.Cobalt -> BezierTheme.colorSchemes.accentBgLightest
+            BezierButtonColor.Red -> BezierTheme.colorSchemes.criticalBgLightest
+            BezierButtonColor.Orange -> BezierTheme.colorSchemes.warningBgLightest
+            BezierButtonColor.Green -> BezierTheme.colorSchemes.successBgLightest
+            BezierButtonColor.Pink -> BezierTheme.colorSchemes.bgPinkLightest
+            BezierButtonColor.Purple -> BezierTheme.colorSchemes.bgPurpleLightest
+            BezierButtonColor.DarkGrey -> BezierTheme.colorSchemes.bgBlackLighter
+            BezierButtonColor.LightGrey -> BezierTheme.colorSchemes.bgBlackLighter
+            BezierButtonColor.White -> BezierTheme.colorSchemes.bgAbsoluteWhiteLightest
         }
 
         // TODO : Transparent 교체 필요
-        BezierButtonVariants.Tertiary -> object : BezierColor {
+        BezierButtonVariant.Tertiary -> object : BezierColor {
             override val color: Color
                 get() = Color(0x00000000)
         }
     }.color
 }
 
-enum class BezierButtonVariants {
+enum class BezierButtonVariant {
     Primary,
     Secondary,
     Tertiary,
@@ -279,7 +279,7 @@ enum class BezierButtonSize {
         }
 }
 
-enum class BezierButtonColors {
+enum class BezierButtonColor {
     Blue,
     Cobalt,
     Red,
@@ -303,11 +303,11 @@ private fun BezierButtonStylePreview() {
                 modifier = Modifier.padding(8.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
-            BezierButtonVariants.entries.forEach { variant ->
+            BezierButtonVariant.entries.forEach { variant ->
                 Row(
                         horizontalArrangement = Arrangement.spacedBy(4.dp),
                 ) {
-                    BezierButtonColors.entries.forEach { color ->
+                    BezierButtonColor.entries.forEach { color ->
                         BezierButton(
                                 text = "Label",
                                 size = BezierButtonSize.Medium,
@@ -336,8 +336,8 @@ private fun BezierButtonSizePreview() {
                 BezierButton(
                         text = "Label",
                         size = size,
-                        variant = BezierButtonVariants.Primary,
-                        color = BezierButtonColors.Blue,
+                        variant = BezierButtonVariant.Primary,
+                        color = BezierButtonColor.Blue,
                         prefixContent = BezierButtonContent.Icon(BezierIcons.Plus),
                         suffixContent = BezierButtonContent.Icon(BezierIcons.ArrowRight),
                         onClick = { },
@@ -354,8 +354,8 @@ private fun BezierButtonOnlyTextPreview() {
         BezierButton(
                 text = "Label",
                 size = BezierButtonSize.Medium,
-                variant = BezierButtonVariants.Primary,
-                color = BezierButtonColors.Blue,
+                variant = BezierButtonVariant.Primary,
+                color = BezierButtonColor.Blue,
                 onClick = { },
         )
     }
@@ -368,8 +368,8 @@ private fun BezierButtonLoadingPreview() {
         BezierButton(
                 text = "Label",
                 size = BezierButtonSize.Large,
-                variant = BezierButtonVariants.Primary,
-                color = BezierButtonColors.Blue,
+                variant = BezierButtonVariant.Primary,
+                color = BezierButtonColor.Blue,
                 onClick = { },
                 prefixContent = BezierButtonContent.Icon(BezierIcons.Plus),
                 suffixContent = BezierButtonContent.Icon(BezierIcons.ArrowRight),
@@ -389,8 +389,8 @@ private fun BezierButtonEnabledPreview() {
             BezierButton(
                     text = "Label",
                     size = BezierButtonSize.Large,
-                    variant = BezierButtonVariants.Primary,
-                    color = BezierButtonColors.Blue,
+                    variant = BezierButtonVariant.Primary,
+                    color = BezierButtonColor.Blue,
                     onClick = { },
                     prefixContent = BezierButtonContent.Icon(BezierIcons.Plus),
                     suffixContent = BezierButtonContent.Icon(BezierIcons.ArrowRight),
@@ -400,8 +400,8 @@ private fun BezierButtonEnabledPreview() {
             BezierButton(
                     text = "Label",
                     size = BezierButtonSize.Large,
-                    variant = BezierButtonVariants.Primary,
-                    color = BezierButtonColors.Blue,
+                    variant = BezierButtonVariant.Primary,
+                    color = BezierButtonColor.Blue,
                     onClick = { },
                     prefixContent = BezierButtonContent.Icon(BezierIcons.Plus),
                     suffixContent = BezierButtonContent.Icon(BezierIcons.ArrowRight),
