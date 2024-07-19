@@ -31,19 +31,18 @@ val BezierIcons.LightningFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(18.54f, 10.226f)
-                    lineTo(14.221f, 9.226f)
-                    lineTo(16.303f, 2.1430000000000007f)
-                    curveTo(16.449f, 1.6470000000000007f, 15.835f, 1.2830000000000008f, 15.47f, 1.6500000000000008f)
-                    lineTo(5.146f, 12.003f)
-                    arcTo(0.5f, 0.5f, 224.87483778107978f, isMoreThanHalf = false, isPositiveArc = false, 5.388f, 12.843f)
-                    lineTo(9.708f, 13.843f)
-                    lineTo(7.6240000000000006f, 20.924f)
-                    curveTo(7.478000000000001f, 21.422f, 8.092f, 21.785f, 8.458f, 21.418f)
-                    lineTo(18.781f, 11.065999999999999f)
-                    arcTo(0.5f, 0.5f, 44.93587333147426f, isMoreThanHalf = false, isPositiveArc = false, 18.541f, 10.225999999999999f)
+                    moveTo(16.557f, 3.354f)
+                    curveTo(17.180999999999997f, 1.9360000000000002f, 15.380999999999998f, 0.7050000000000001f, 14.284999999999998f, 1.8010000000000002f)
+                    lineTo(5.0f, 11.086f)
+                    curveTo(3.74f, 12.346f, 4.632f, 14.5f, 6.414f, 14.5f)
+                    lineTo(9.884f, 14.5f)
+                    lineTo(7.61f, 20.079f)
+                    curveTo(6.98f, 21.624000000000002f, 8.966000000000001f, 22.889f, 10.100000000000001f, 21.664f)
+                    lineTo(19.179000000000002f, 11.859000000000002f)
+                    curveTo(20.364f, 10.579000000000002f, 19.456000000000003f, 8.500000000000002f, 17.711000000000002f, 8.500000000000002f)
+                    lineTo(14.293000000000003f, 8.500000000000002f)
+                    close()
                 }
             }.build().also {
                 _lightningFilled = it

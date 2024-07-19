@@ -18,11 +18,11 @@ import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
 import io.channel.bezier.BezierIcons
 
-val BezierIcons.Workflow: BezierIcon
+val BezierIcons.Flow: BezierIcon
     get() = object : BezierIcon {
         override val imageVector: ImageVector
-            get() = _workflow ?: ImageVector.Builder(
-                    name = "Workflow",
+            get() = _flow ?: ImageVector.Builder(
+                    name = "Flow",
                     defaultWidth = 24.dp,
                     defaultHeight = 24.dp,
                     viewportWidth = 24f,
@@ -53,19 +53,19 @@ val BezierIcons.Workflow: BezierIcon
                     arcTo(1.167f, 1.167f, 359.9999987925817f, isMoreThanHalf = false, isPositiveArc = false, 18.333f, 18.0f)
                 }
             }.build().also {
-                _workflow = it
+                _flow = it
             }
     }
 
 
-private var _workflow: ImageVector? = null
+private var _flow: ImageVector? = null
 
 @Preview(showBackground = true)
 @Composable
-private fun WorkflowIconPreview() {
+private fun FlowIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcons.Workflow.imageVector,
+            imageVector = BezierIcons.Flow.imageVector,
             contentDescription = null,
     )
 }
