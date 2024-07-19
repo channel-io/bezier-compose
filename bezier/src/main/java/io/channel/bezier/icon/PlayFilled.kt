@@ -41,6 +41,20 @@ val BezierIcons.PlayFilled: BezierIcon
                     curveTo(6.0f, 3.605f, 7.335f, 2.89f, 8.332f, 3.555f)
                     close()
                 }
+
+                path(
+                        fill = SolidColor(Color(0x19D9D9D9)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 0.1f,
+                ) {
+                    moveTo(9.7f, 20.1f)
+                    lineTo(18.314f, 13.64f)
+                    arcTo(2.0f, 2.0f, 53.152286601408235f, isMoreThanHalf = false, isPositiveArc = false, 18.277f, 10.412f)
+                    lineTo(9.662f, 4.259f)
+                    curveTo(8.34f, 3.313f, 6.5f, 4.259f, 6.5f, 5.886f)
+                    lineTo(6.5f, 18.5f)
+                    curveTo(6.5f, 20.148f, 8.382f, 21.089f, 9.7f, 20.1f)
+                }
             }.build().also {
                 _playFilled = it
             }
