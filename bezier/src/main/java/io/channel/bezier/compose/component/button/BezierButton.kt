@@ -46,10 +46,9 @@ fun BezierButton(
         isLoading: Boolean = false,
         enabled: Boolean = true,
 ) {
-    val colorSchemes = BezierButtonColorSchemes(
-            backgroundColor = color.getBackgroundColor(variant),
-            contentColor = color.getContentColor(variant),
-    )
+    val colorSchemes = color.getColorSchemes(variant)
+    val backgroundColor = colorSchemes.backgroundColor().color
+    val contentColor = colorSchemes.contentColor().color
 
     Box(
             modifier = modifier
@@ -57,7 +56,7 @@ fun BezierButton(
                     .thenIf(!enabled) {
                         alpha(0.4f)
                     }
-                    .background(colorSchemes.backgroundColor)
+                    .background(backgroundColor)
                     .clickable(enabled = enabled) { onClick() }
                     .padding(size.containerPadding),
             contentAlignment = Alignment.Center,
@@ -66,7 +65,7 @@ fun BezierButton(
             // TODO : 베지어 로더로 변경 예정
             CircularProgressIndicator(
                     modifier = Modifier.size(size.iconSize),
-                    color = colorSchemes.contentColor,
+                    color = contentColor,
             )
         }
 
@@ -81,7 +80,7 @@ fun BezierButton(
                 BezierButtonContent(
                         content = prefixContent,
                         size = size,
-                        colorSchemes = colorSchemes,
+                        contentColor = contentColor,
                 )
             }
 
@@ -90,8 +89,8 @@ fun BezierButton(
                             .padding(size.textPadding)
                             .weight(1f, fill = false),
                     text = text,
-                    style = size.textStyle,
-                    color = colorSchemes.contentColor,
+                    style = size.textStyle(),
+                    color = contentColor,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
             )
@@ -100,7 +99,7 @@ fun BezierButton(
                 BezierButtonContent(
                         content = suffixContent,
                         size = size,
-                        colorSchemes = colorSchemes,
+                        contentColor = contentColor,
                 )
             }
         }
@@ -111,14 +110,14 @@ fun BezierButton(
 private fun BezierButtonContent(
         content: BezierButtonContent,
         size: BezierButtonSize,
-        colorSchemes: BezierButtonColorSchemes,
+        contentColor: Color,
 ) {
     when (content) {
         is BezierButtonContent.Icon -> Icon(
                 modifier = Modifier.size(size.iconSize),
                 painter = rememberVectorPainter(content.icon.imageVector),
                 contentDescription = null,
-                tint = colorSchemes.contentColor,
+                tint = contentColor,
         )
 
         // TODO : Not Implementation
@@ -134,11 +133,6 @@ private fun BezierButtonContent(
         )
     }
 }
-
-private class BezierButtonColorSchemes(
-        val backgroundColor: Color,
-        val contentColor: Color,
-)
 
 @Composable
 @Preview(

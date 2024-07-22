@@ -7,58 +7,46 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 
-enum class BezierButtonSize {
-    XSmall,
-    Small,
-    Medium,
-    Large,
-    XLarge;
-
-    internal val textStyle: TextStyle
-        @Composable
-        get() = when (this) {
-            XSmall -> BezierTheme.typography.caption2SemiBold
-            Small -> BezierTheme.typography.caption1SemiBold
-            Medium -> BezierTheme.typography.body2SemiBold
-            Large -> BezierTheme.typography.body1SemiBold
-            XLarge -> BezierTheme.typography.title2SemiBold
-        }
-
-    internal val radius: Dp
-        get() = when (this) {
-            XSmall -> 8.dp
-            Small -> 10.dp
-            Medium -> 12.dp
-            Large -> 14.dp
-            XLarge -> 16.dp
-        }
-
-    internal val containerPadding: PaddingValues
-        get() = when (this) {
-            XSmall -> PaddingValues(horizontal = 6.dp, vertical = 3.dp)
-            Small -> PaddingValues(horizontal = 8.dp, vertical = 6.dp)
-            Medium -> PaddingValues(horizontal = 12.dp, vertical = 9.dp)
-            Large -> PaddingValues(horizontal = 14.dp, vertical = 11.dp)
-            XLarge -> PaddingValues(horizontal = 16.dp, vertical = 15.dp)
-        }
-
-    internal val textPadding: PaddingValues
-        get() = when (this) {
-            XSmall -> PaddingValues(horizontal = 3.dp, vertical = 0.dp)
-            Small -> PaddingValues(horizontal = 4.dp, vertical = 1.dp)
-            Medium -> PaddingValues(horizontal = 4.dp, vertical = 0.dp)
-            Large -> PaddingValues(horizontal = 5.dp, vertical = 1.dp)
-            XLarge -> PaddingValues(horizontal = 6.dp, vertical = 0.dp)
-        }
-
-    internal val iconSize: Dp
-        get() = when (this) {
-            XSmall,
-            Small -> 16.dp
-
-            Medium,
-            Large -> 20.dp
-
-            XLarge -> 24.dp
-        }
+enum class BezierButtonSize(
+        internal val textStyle: @Composable () -> TextStyle,
+        internal val radius: Dp,
+        internal val containerPadding: PaddingValues,
+        internal val textPadding: PaddingValues,
+        internal val iconSize: Dp,
+) {
+    XSmall(
+            textStyle = { BezierTheme.typography.caption2SemiBold },
+            radius = 8.dp,
+            containerPadding = PaddingValues(horizontal = 6.dp, vertical = 3.dp),
+            textPadding = PaddingValues(horizontal = 3.dp, vertical = 0.dp),
+            iconSize = 16.dp,
+    ),
+    Small(
+            textStyle = { BezierTheme.typography.caption1SemiBold },
+            radius = 10.dp,
+            containerPadding = PaddingValues(horizontal = 8.dp, vertical = 6.dp),
+            textPadding = PaddingValues(horizontal = 4.dp, vertical = 1.dp),
+            iconSize = 16.dp,
+    ),
+    Medium(
+            textStyle = { BezierTheme.typography.body2SemiBold },
+            radius = 12.dp,
+            containerPadding = PaddingValues(horizontal = 12.dp, vertical = 9.dp),
+            textPadding = PaddingValues(horizontal = 4.dp, vertical = 0.dp),
+            iconSize = 20.dp,
+    ),
+    Large(
+            textStyle = { BezierTheme.typography.body1SemiBold },
+            radius = 14.dp,
+            containerPadding = PaddingValues(horizontal = 14.dp, vertical = 11.dp),
+            textPadding = PaddingValues(horizontal = 5.dp, vertical = 1.dp),
+            iconSize = 20.dp,
+    ),
+    XLarge(
+            textStyle = { BezierTheme.typography.title2SemiBold },
+            radius = 16.dp,
+            containerPadding = PaddingValues(horizontal = 16.dp, vertical = 15.dp),
+            textPadding = PaddingValues(horizontal = 6.dp, vertical = 0.dp),
+            iconSize = 24.dp,
+    ),
 }
