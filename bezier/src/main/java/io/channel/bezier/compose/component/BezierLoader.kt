@@ -23,50 +23,43 @@ fun BezierLoader(
 ) {
     CircularProgressIndicator(
             modifier = Modifier.size(size.size),
-            color = variant.foregroundColor.color,
+            color = variant.foregroundColor().color,
             strokeWidth = size.strokeWidth,
-            backgroundColor = variant.backgroundColor.color,
+            backgroundColor = variant.backgroundColor().color,
             strokeCap = StrokeCap.Round,
     )
 }
 
-enum class BezierLoaderVariant {
-    Primary,
-    Secondary,
-    OnOverlay;
-
-    internal val backgroundColor: BezierColor
-        @Composable
-        get() = when (this) {
-            Primary -> BezierTheme.colorSchemes.primaryBgLightest
-            Secondary -> BezierTheme.colorSchemes.bgBlackLight
-            OnOverlay -> BezierTheme.colorSchemes.bgAbsoluteWhiteLightest
-        }
-
-    internal val foregroundColor: BezierColor
-        @Composable
-        get() = when (this) {
-            Primary -> BezierTheme.colorSchemes.fgBlueNormal
-            Secondary -> BezierTheme.colorSchemes.fgBlackLight
-            OnOverlay -> BezierTheme.colorSchemes.fgAbsoluteWhiteLight
-        }
+enum class BezierLoaderVariant(
+        internal val backgroundColor: @Composable () -> BezierColor,
+        internal val foregroundColor: @Composable () -> BezierColor,
+) {
+    Primary(
+            backgroundColor = { BezierTheme.colorSchemes.primaryBgLightest },
+            foregroundColor = { BezierTheme.colorSchemes.fgBlueNormal },
+    ),
+    Secondary(
+            backgroundColor = { BezierTheme.colorSchemes.bgBlackLight },
+            foregroundColor = { BezierTheme.colorSchemes.fgBlackLight },
+    ),
+    OnOverlay(
+            backgroundColor = { BezierTheme.colorSchemes.bgAbsoluteWhiteLightest },
+            foregroundColor = { BezierTheme.colorSchemes.fgAbsoluteWhiteLight },
+    ),
 }
 
-enum class BezierLoaderSize {
-    Small,
-    Medium;
-
-    internal val size: Dp
-        get() = when (this) {
-            Small -> 28.dp
-            Medium -> 50.dp
-        }
-
-    internal val strokeWidth: Dp
-        get() = when (this) {
-            Small -> 4.dp
-            Medium -> 6.dp
-        }
+enum class BezierLoaderSize(
+        internal val size: Dp,
+        internal val strokeWidth: Dp,
+) {
+    Small(
+            size = 28.dp,
+            strokeWidth = 4.dp,
+    ),
+    Medium(
+            size = 50.dp,
+            strokeWidth = 6.dp,
+    ),
 }
 
 @Composable
