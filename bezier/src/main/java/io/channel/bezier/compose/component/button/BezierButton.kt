@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Button
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
@@ -26,6 +25,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
+import io.channel.bezier.compose.component.button.properties.BezierButtonColor
+import io.channel.bezier.compose.component.button.properties.BezierButtonContent
+import io.channel.bezier.compose.component.button.properties.BezierButtonSize
+import io.channel.bezier.compose.component.button.properties.BezierButtonVariant
 import io.channel.bezier.extension.thenIf
 import io.channel.bezier.icon.ArrowRight
 import io.channel.bezier.icon.Plus
