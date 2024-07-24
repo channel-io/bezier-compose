@@ -51,5 +51,5 @@ dependencies {
 // build.gradle.kts (:app)
 dependencies {
     implementation("com.github.channel-io:bezier-compose:$bezier_compose_version")
-
+}
 ```
