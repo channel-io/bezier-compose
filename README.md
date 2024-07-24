@@ -42,7 +42,7 @@ allprojects {
 // build.gradle (:app)
 dependencies {
     implementation 'com.github.channel-io:bezier-compose:bezier_compose_version'
-
+}
 ```
 
 만약 kts라면 다음과 같이 설정해주세요.
