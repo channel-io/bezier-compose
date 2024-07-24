@@ -1,4 +1,4 @@
-package io.channel.bezier.compose.component
+package io.channel.bezier.compose.component.loader
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -11,10 +11,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
-import io.channel.bezier.compose.color_v2.BezierColor
+import io.channel.bezier.compose.component.loader.properties.BezierLoaderSize
+import io.channel.bezier.compose.component.loader.properties.BezierLoaderVariant
 
 @Composable
 fun BezierLoader(
@@ -28,38 +28,6 @@ fun BezierLoader(
             backgroundColor = variant.backgroundColor().color,
             strokeCap = StrokeCap.Round,
     )
-}
-
-enum class BezierLoaderVariant(
-        internal val backgroundColor: @Composable () -> BezierColor,
-        internal val foregroundColor: @Composable () -> BezierColor,
-) {
-    Primary(
-            backgroundColor = { BezierTheme.colorSchemes.primaryBgLightest },
-            foregroundColor = { BezierTheme.colorSchemes.fgBlueNormal },
-    ),
-    Secondary(
-            backgroundColor = { BezierTheme.colorSchemes.bgBlackLight },
-            foregroundColor = { BezierTheme.colorSchemes.fgBlackLight },
-    ),
-    OnOverlay(
-            backgroundColor = { BezierTheme.colorSchemes.bgAbsoluteWhiteLightest },
-            foregroundColor = { BezierTheme.colorSchemes.fgAbsoluteWhiteLight },
-    ),
-}
-
-enum class BezierLoaderSize(
-        internal val size: Dp,
-        internal val strokeWidth: Dp,
-) {
-    Small(
-            size = 28.dp,
-            strokeWidth = 4.dp,
-    ),
-    Medium(
-            size = 50.dp,
-            strokeWidth = 6.dp,
-    ),
 }
 
 @Composable
