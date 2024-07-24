@@ -1,4 +1,4 @@
-## Bezier-Compose
+# Bezier-Compose
 [![](https://jitpack.io/v/channel-io/bezier-compose.svg)](https://jitpack.io/#channel-io/bezier-compose) <br>
 ChannelTalk의 Bezier DesignSystem을 Jetpack Compose로 구현한 레포지토리입니다.
 
