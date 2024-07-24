@@ -20,6 +20,15 @@ import androidx.compose.ui.graphics.isSpecified
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
+internal inline fun Modifier.thenIf(
+        condition: Boolean,
+        block: Modifier.() -> Modifier
+): Modifier = if (condition) {
+    this.then(block(Modifier))
+} else {
+    this
+}
+
 fun Modifier.roundedBackground(
         backgroundColor: Color,
         borderRadius: Dp,
