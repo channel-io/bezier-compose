@@ -18,6 +18,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import coil.compose.rememberAsyncImagePainter
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
 import io.channel.bezier.compose.component.avatar.properties.BezierAvatarBadge
@@ -29,6 +30,29 @@ import io.channel.bezier.extension.thenIf
 import io.channel.bezier.shape.SmoothRoundedCornerShape
 
 private const val AvatarRadiusFraction = 42
+
+@Composable
+fun BezierAvatar(
+        url: String,
+        avatarSize: BezierAvatarSize,
+        modifier: Modifier = Modifier,
+        showBorder: Boolean = false,
+        badge: BezierAvatarBadge = BezierAvatarBadge.None,
+        errorPainter: Painter = painterResource(id = R.drawable.unknown),
+) {
+    val painter = rememberAsyncImagePainter(
+            model = url,
+            error = errorPainter,
+    )
+
+    BezierAvatar(
+            painter = painter,
+            avatarSize = avatarSize,
+            modifier = modifier,
+            showBorder = showBorder,
+            badge = badge,
+    )
+}
 
 @Composable
 fun BezierAvatar(
