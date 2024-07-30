@@ -144,7 +144,7 @@ private fun BezierAvatarPreview() {
         Column(
                 modifier = Modifier
                         .fillMaxSize()
-                        .padding(start = 20.dp),
+                        .padding(start = 20.dp, top = 20.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
             Row(
