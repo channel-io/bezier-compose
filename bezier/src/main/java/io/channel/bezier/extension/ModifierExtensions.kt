@@ -9,6 +9,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
@@ -41,22 +42,27 @@ internal fun Modifier.outlineBorder(
         color: Color,
         shape: Shape = RectangleShape,
 ): Modifier = this.drawBehind {
+    /**
+     * 테두리와 컨텐츠 사이에 약간의 공간이 남는 현상을 방지하기 위해서
+     * 안쪽으로 1px 만큼 테두리를 표시합니다.
+     */
+    val adjustmentValue = 1
     val widthPx = width.toPx()
 
     val outline = shape.createOutline(
-            Size(size.width + widthPx, size.height + widthPx),
+            Size(size.width + widthPx - adjustmentValue, size.height + widthPx - adjustmentValue),
             layoutDirection,
             this,
     )
 
     translate(
-            left = -widthPx / 2,
-            top = -widthPx / 2,
+            left = -(widthPx - adjustmentValue) / 2,
+            top = -(widthPx - adjustmentValue) / 2,
     ) {
         drawOutline(
                 outline = outline,
                 color = color,
-                style = Stroke(widthPx),
+                style = Stroke(widthPx + adjustmentValue),
         )
     }
 }
