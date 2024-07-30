@@ -23,6 +23,7 @@ fun BezierStatusBadge(
         isOnline: Boolean,
         doNotDisturb: Boolean,
         badgeSize: BezierStatusBadgeSize,
+        modifier: Modifier = Modifier,
 ) {
     val contentColor = if (isOnline) {
         BezierTheme.colorSchemes.fgGreenNormal.color
@@ -33,7 +34,7 @@ fun BezierStatusBadge(
     }
 
     Box(
-            modifier = Modifier
+            modifier = modifier
                     .clip(CircleShape)
                     .size(badgeSize.badgeSize)
                     .background(BezierTheme.colorSchemes.bgWhiteHighest.color),

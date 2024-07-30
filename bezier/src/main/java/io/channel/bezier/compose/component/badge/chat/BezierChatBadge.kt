@@ -21,9 +21,10 @@ import io.channel.bezier.icon.Lock
 @Composable
 fun BezierChatBadge(
         badgeSize: BezierChatBadgeSize,
+        modifier: Modifier = Modifier,
 ) {
     Box(
-            modifier = Modifier
+            modifier = modifier
                     .clip(CircleShape)
                     .size(badgeSize.badgeSize)
                     .background(BezierTheme.colorSchemes.bgWhiteHighest.color),
