@@ -4,9 +4,9 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
 enum class BezierStatusBadgeSize(
-        val badgeSize: Dp,
-        val dotSize: Dp,
-        val moonSize: Dp,
+        internal val badgeSize: Dp,
+        internal val dotSize: Dp,
+        internal val moonSize: Dp,
 ) {
     Medium(
             badgeSize = 12.dp,
