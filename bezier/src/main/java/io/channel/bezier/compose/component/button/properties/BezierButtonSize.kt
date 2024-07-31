@@ -14,6 +14,7 @@ enum class BezierButtonSize(
         internal val containerPadding: PaddingValues,
         internal val textPadding: PaddingValues,
         internal val iconSize: Dp,
+        internal val emojiSize: Dp,
         internal val avatarSize: BezierAvatarSize,
 ) {
     XSmall(
@@ -22,6 +23,7 @@ enum class BezierButtonSize(
             containerPadding = PaddingValues(horizontal = 6.dp, vertical = 3.dp),
             textPadding = PaddingValues(horizontal = 3.dp, vertical = 0.dp),
             iconSize = 16.dp,
+            emojiSize = 16.dp,
             avatarSize = BezierAvatarSize.Size16,
     ),
     Small(
@@ -30,6 +32,7 @@ enum class BezierButtonSize(
             containerPadding = PaddingValues(horizontal = 8.dp, vertical = 6.dp),
             textPadding = PaddingValues(horizontal = 4.dp, vertical = 1.dp),
             iconSize = 16.dp,
+            emojiSize = 16.dp,
             avatarSize = BezierAvatarSize.Size16,
     ),
     Medium(
@@ -38,6 +41,7 @@ enum class BezierButtonSize(
             containerPadding = PaddingValues(horizontal = 12.dp, vertical = 9.dp),
             textPadding = PaddingValues(horizontal = 4.dp, vertical = 0.dp),
             iconSize = 20.dp,
+            emojiSize = 20.dp,
             avatarSize = BezierAvatarSize.Size20,
     ),
     Large(
@@ -46,6 +50,7 @@ enum class BezierButtonSize(
             containerPadding = PaddingValues(horizontal = 14.dp, vertical = 11.dp),
             textPadding = PaddingValues(horizontal = 5.dp, vertical = 1.dp),
             iconSize = 20.dp,
+            emojiSize = 20.dp,
             avatarSize = BezierAvatarSize.Size20,
     ),
     XLarge(
@@ -54,6 +59,7 @@ enum class BezierButtonSize(
             containerPadding = PaddingValues(horizontal = 16.dp, vertical = 15.dp),
             textPadding = PaddingValues(horizontal = 6.dp, vertical = 0.dp),
             iconSize = 24.dp,
+            emojiSize = 24.dp,
             avatarSize = BezierAvatarSize.Size24,
     ),
 }

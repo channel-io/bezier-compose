@@ -31,5 +31,5 @@ sealed interface BezierButtonContent {
         }
     }
 
-    data class Emoji(val painter: Painter) : BezierButtonContent
+    data class Emoji(val name: String) : BezierButtonContent
 }

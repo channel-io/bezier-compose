@@ -35,6 +35,7 @@ import io.channel.bezier.compose.component.button.properties.BezierButtonContent
 import io.channel.bezier.compose.component.button.properties.BezierButtonSize
 import io.channel.bezier.compose.component.button.properties.BezierButtonVariant
 import io.channel.bezier.extension.thenIf
+import io.channel.bezier.extension.toEmojiPainter
 import io.channel.bezier.icon.ArrowRight
 import io.channel.bezier.icon.Plus
 
@@ -127,11 +128,10 @@ private fun BezierButtonContent(
                 avatarSize = size.avatarSize,
         )
 
-        // TODO : Not Implementation
         is BezierButtonContent.Emoji -> Image(
-                modifier = Modifier.size(size.iconSize),
-                painter = content.painter,
-                contentDescription = null,
+                modifier = Modifier.size(size.emojiSize),
+                painter = content.name.toEmojiPainter,
+                contentDescription = content.name,
         )
     }
 }
@@ -216,6 +216,7 @@ private fun BezierButtonOtherContentsPreview() {
                 color = BezierButtonColor.Blue,
                 onClick = { },
                 prefixContent = BezierButtonContent.Avatar(painterResource(id = R.drawable.unknown)),
+                suffixContent = BezierButtonContent.Emoji("smile")
         )
     }
 }
