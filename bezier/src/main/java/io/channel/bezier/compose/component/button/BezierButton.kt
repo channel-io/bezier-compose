@@ -25,6 +25,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
+import io.channel.bezier.compose.component.BezierLoader
+import io.channel.bezier.compose.component.BezierLoaderSize
+import io.channel.bezier.compose.component.BezierLoaderVariant
 import io.channel.bezier.compose.component.button.properties.BezierButtonColor
 import io.channel.bezier.compose.component.button.properties.BezierButtonContent
 import io.channel.bezier.compose.component.button.properties.BezierButtonSize
@@ -62,10 +65,9 @@ fun BezierButton(
             contentAlignment = Alignment.Center,
     ) {
         if (isLoading) {
-            // TODO : 베지어 로더로 변경 예정
-            CircularProgressIndicator(
-                    modifier = Modifier.size(size.iconSize),
-                    color = contentColor,
+            BezierLoader(
+                    variant = BezierLoaderVariant.OnOverlay,
+                    size = BezierLoaderSize.Small,
             )
         }
 
