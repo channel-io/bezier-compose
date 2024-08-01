@@ -1,7 +1,6 @@
 package io.channel.bezier.compose.component.badge.chat
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -22,18 +21,18 @@ import io.channel.bezier.icon.Lock
 
 @Composable
 fun BezierChatBadge(
-        badgeSize: BezierChatBadgeSize,
+        size: BezierChatBadgeSize,
         modifier: Modifier = Modifier,
 ) {
     Box(
             modifier = modifier
                     .clip(CircleShape)
-                    .requiredSize(badgeSize.badgeSize)
+                    .requiredSize(size.badgeSize)
                     .background(BezierTheme.colorSchemes.bgWhiteHighest.color),
             contentAlignment = Alignment.Center,
     ) {
         Icon(
-                modifier = Modifier.size(badgeSize.iconSize),
+                modifier = Modifier.size(size.iconSize),
                 imageVector = BezierIcons.Lock.imageVector,
                 contentDescription = "private chat",
                 tint = BezierTheme.colorSchemes.fgBlackDarker.color,

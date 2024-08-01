@@ -23,7 +23,7 @@ import io.channel.bezier.icon.MoonFilled
 fun BezierStatusBadge(
         isOnline: Boolean,
         doNotDisturb: Boolean,
-        badgeSize: BezierStatusBadgeSize,
+        size: BezierStatusBadgeSize,
         modifier: Modifier = Modifier,
 ) {
     val contentColor = if (isOnline) {
@@ -37,13 +37,13 @@ fun BezierStatusBadge(
     Box(
             modifier = modifier
                     .clip(CircleShape)
-                    .requiredSize(badgeSize.badgeSize)
+                    .requiredSize(size.badgeSize)
                     .background(BezierTheme.colorSchemes.bgWhiteHighest.color),
             contentAlignment = Alignment.Center,
     ) {
         if (doNotDisturb) {
             Icon(
-                    modifier = Modifier.size(badgeSize.moonSize),
+                    modifier = Modifier.size(size.moonSize),
                     imageVector = BezierIcons.MoonFilled.imageVector,
                     contentDescription = "doNotDisturb",
                     tint = contentColor,
@@ -52,7 +52,7 @@ fun BezierStatusBadge(
             Box(
                     modifier = Modifier
                             .clip(CircleShape)
-                            .size(badgeSize.dotSize)
+                            .size(size.dotSize)
                             .background(contentColor),
             )
         }
@@ -71,12 +71,12 @@ private fun BezierStatusBadgePreview() {
                 BezierStatusBadge(
                         isOnline = true,
                         doNotDisturb = false,
-                        badgeSize = it,
+                        size = it,
                 )
                 BezierStatusBadge(
                         isOnline = false,
                         doNotDisturb = false,
-                        badgeSize = it,
+                        size = it,
                 )
             }
         }
@@ -95,13 +95,13 @@ private fun BezierStatusBadgeDoNotDisturbPreview() {
                 BezierStatusBadge(
                         isOnline = true,
                         doNotDisturb = true,
-                        badgeSize = it,
+                        size = it,
                 )
 
                 BezierStatusBadge(
                         isOnline = false,
                         doNotDisturb = true,
-                        badgeSize = it,
+                        size = it,
                 )
             }
         }
