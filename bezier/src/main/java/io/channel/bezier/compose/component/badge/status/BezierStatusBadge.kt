@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Icon
@@ -36,7 +37,7 @@ fun BezierStatusBadge(
     Box(
             modifier = modifier
                     .clip(CircleShape)
-                    .size(badgeSize.badgeSize)
+                    .requiredSize(badgeSize.badgeSize)
                     .background(BezierTheme.colorSchemes.bgWhiteHighest.color),
             contentAlignment = Alignment.Center,
     ) {
