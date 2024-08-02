@@ -65,19 +65,18 @@ fun BezierAvatar(
     val avatarShape = SmoothRoundedCornerShape(AvatarRadiusFraction)
 
     Box(
-            modifier = modifier
-                    .size(avatarSize.size)
-                    .thenIf(showBorder) {
-                        outlineBorder(
-                                width = avatarSize.outlineBorderWidth,
-                                color = BezierTheme.colorSchemes.surfaceNormal.color,
-                                shape = avatarShape,
-                        )
-                    },
+            modifier = modifier.size(avatarSize.size),
     ) {
         Image(
                 modifier = Modifier
                         .fillMaxSize()
+                        .thenIf(showBorder) {
+                            outlineBorder(
+                                    width = avatarSize.outlineBorderWidth,
+                                    color = BezierTheme.colorSchemes.surfaceNormal.color,
+                                    shape = avatarShape,
+                            )
+                        }
                         .clip(avatarShape),
                 painter = painter,
                 contentDescription = null,
