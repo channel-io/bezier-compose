@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -65,7 +66,7 @@ fun BezierAvatar(
     val avatarShape = SmoothRoundedCornerShape(AvatarRadiusFraction)
 
     Box(
-            modifier = modifier.size(avatarSize.size),
+            modifier = modifier.requiredSize(avatarSize.size),
     ) {
         Image(
                 modifier = Modifier
