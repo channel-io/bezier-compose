@@ -91,7 +91,6 @@ fun BezierButton(
                     text = text,
                     style = size.textStyle(),
                     color = contentColor,
-                    overflow = TextOverflow.Ellipsis,
             )
 
             if (suffixContent != null) {
