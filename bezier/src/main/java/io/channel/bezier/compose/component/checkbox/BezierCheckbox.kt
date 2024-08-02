@@ -33,7 +33,6 @@ import io.channel.bezier.compose.component.checkbox.properties.BezierCheckboxSta
 import io.channel.bezier.compose.component.checkbox.properties.BezierCheckboxVariant
 import io.channel.bezier.extension.thenIf
 import io.channel.bezier.icon.CheckBold
-import io.channel.bezier.icon.HyphenBold
 
 @Composable
 fun BezierCheckbox(
@@ -105,22 +104,40 @@ private fun BezierCheckboxControl(
                     .background(backgroundColor),
             contentAlignment = Alignment.Center,
     ) {
-        if (enabled && variant == BezierCheckboxVariant.Primary && status == BezierCheckboxStatus.False) {
-            Box(
-                    modifier = Modifier
-                            .size(16.dp)
-                            .clip(CircleShape)
-                            .background(iconColor),
+        when (variant) {
+            BezierCheckboxVariant.Primary -> BezierPrimaryCheckboxIcon(
+                    enabled = enabled,
+                    status = status,
+                    iconColor = iconColor,
+            )
+
+            BezierCheckboxVariant.Secondary -> BezierSecondaryCheckboxIcon(
+                    status = status,
+                    iconColor = iconColor,
             )
         }
+    }
+}
 
-        if (
-                status == BezierCheckboxStatus.True
-                || (
-                        (status == BezierCheckboxStatus.False || status == BezierCheckboxStatus.Indeterminate)
-                                && variant == BezierCheckboxVariant.Secondary
-                        )
-        ) {
+@Composable
+private fun BezierPrimaryCheckboxIcon(
+        enabled: Boolean,
+        status: BezierCheckboxStatus,
+        iconColor: Color,
+) {
+    when (status) {
+        BezierCheckboxStatus.False -> {
+            if (enabled) {
+                Box(
+                        modifier = Modifier
+                                .size(16.dp)
+                                .clip(CircleShape)
+                                .background(iconColor),
+                )
+            }
+        }
+
+        BezierCheckboxStatus.True -> {
             Icon(
                     modifier = Modifier
                             .size(16.dp),
@@ -130,11 +147,40 @@ private fun BezierCheckboxControl(
             )
         }
 
-        if (variant == BezierCheckboxVariant.Primary && status == BezierCheckboxStatus.Indeterminate) {
+        BezierCheckboxStatus.Indeterminate -> {
             Icon(
                     modifier = Modifier
                             .size(16.dp),
-                    imageVector = BezierIcons.HyphenBold.imageVector,
+                    imageVector = BezierIcons.CheckBold.imageVector,
+                    tint = iconColor,
+                    contentDescription = null,
+            )
+        }
+    }
+}
+
+@Composable
+private fun BezierSecondaryCheckboxIcon(
+        status: BezierCheckboxStatus,
+        iconColor: Color,
+) {
+    when (status) {
+        BezierCheckboxStatus.False,
+        BezierCheckboxStatus.Indeterminate -> {
+            Icon(
+                    modifier = Modifier
+                            .size(16.dp),
+                    imageVector = BezierIcons.CheckBold.imageVector,
+                    tint = iconColor,
+                    contentDescription = null,
+            )
+        }
+
+        BezierCheckboxStatus.True -> {
+            Icon(
+                    modifier = Modifier
+                            .size(16.dp),
+                    imageVector = BezierIcons.CheckBold.imageVector,
                     tint = iconColor,
                     contentDescription = null,
             )
