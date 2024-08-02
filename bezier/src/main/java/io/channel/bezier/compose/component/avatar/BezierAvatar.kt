@@ -90,11 +90,11 @@ fun BezierAvatar(
         ) {
             when (badge) {
                 BezierAvatarBadge.None -> Unit
-                BezierAvatarBadge.Chat -> BezierChatBadge(badgeSize = avatarSize.chatBadgeSize)
+                BezierAvatarBadge.Chat -> BezierChatBadge(size = avatarSize.chatBadgeSize)
                 is BezierAvatarBadge.Status -> BezierStatusBadge(
                         isOnline = badge.isOnline,
                         doNotDisturb = badge.doNotDisturb,
-                        badgeSize = avatarSize.statusBadgeSize,
+                        size = avatarSize.statusBadgeSize,
                 )
 
                 is BezierAvatarBadge.Integration -> IntegrationBadge(
