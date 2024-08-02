@@ -36,10 +36,40 @@ import io.channel.bezier.icon.CheckBold
 
 @Composable
 fun BezierCheckbox(
+        checked: Boolean,
         color: BezierCheckboxColor,
         variant: BezierCheckboxVariant,
+        onCheckedChange: (Boolean) -> Unit,
+        modifier: Modifier = Modifier,
+        text: String? = null,
+        enabled: Boolean = true,
+) {
+    BezierCheckbox(
+            status = when (checked) {
+                true -> BezierCheckboxStatus.True
+                false -> BezierCheckboxStatus.False
+            },
+            color = color,
+            variant = variant,
+            onCheckedChange = { status ->
+                when (status) {
+                    BezierCheckboxStatus.False -> onCheckedChange(false)
+                    BezierCheckboxStatus.True,
+                    BezierCheckboxStatus.Indeterminate -> onCheckedChange(true)
+                }
+            },
+            modifier = modifier,
+            text = text,
+            enabled = enabled,
+    )
+}
+
+@Composable
+fun BezierCheckbox(
         status: BezierCheckboxStatus,
-        onClick: (BezierCheckboxStatus) -> Unit,
+        color: BezierCheckboxColor,
+        variant: BezierCheckboxVariant,
+        onCheckedChange: (BezierCheckboxStatus) -> Unit,
         modifier: Modifier = Modifier,
         text: String? = null,
         enabled: Boolean = true,
@@ -54,7 +84,7 @@ fun BezierCheckbox(
                         alpha(0.4f)
                     }
                     .clickable(enabled = enabled) {
-                        onClick.invoke(status.switch())
+                        onCheckedChange.invoke(status.switch())
                     },
     ) {
         if (variant == BezierCheckboxVariant.Secondary) {
@@ -68,7 +98,7 @@ fun BezierCheckbox(
                 variant = variant,
                 status = status,
                 onClick = {
-                    onClick.invoke(status.switch())
+                    onCheckedChange.invoke(status.switch())
                 },
                 enabled = enabled,
         )
@@ -220,7 +250,7 @@ private fun BezierCheckboxPreview() {
                     variant = BezierCheckboxVariant.Primary,
                     status = switchStatus1,
                     text = "Checkbox label",
-                    onClick = { switchStatus1 = it },
+                    onCheckedChange = { switchStatus1 = it },
             )
 
             BezierCheckbox(
@@ -229,7 +259,7 @@ private fun BezierCheckboxPreview() {
                     variant = BezierCheckboxVariant.Secondary,
                     status = switchStatus2,
                     text = "Checkbox label",
-                    onClick = { switchStatus2 = it },
+                    onCheckedChange = { switchStatus2 = it },
             )
 
             BezierCheckbox(
@@ -238,7 +268,7 @@ private fun BezierCheckboxPreview() {
                     variant = BezierCheckboxVariant.Secondary,
                     status = switchStatus3,
                     text = "Checkbox label Checkbox label Checkbox label Checkbox label Checkbox label Checkbox label Checkbox label Checkbox label Checkbox label Checkbox label Checkbox label Checkbox label Checkbox label Checkbox label",
-                    onClick = { switchStatus3 = it },
+                    onCheckedChange = { switchStatus3 = it },
             )
         }
     }
@@ -259,7 +289,7 @@ private fun BezierCheckboxControlPreview() {
                         color = BezierCheckboxColor.Blue,
                         variant = BezierCheckboxVariant.Primary,
                         status = switchStatus1,
-                        onClick = { switchStatus1 = it },
+                        onCheckedChange = { switchStatus1 = it },
                 )
 
                 var switchStatus2 by remember { mutableStateOf(BezierCheckboxStatus.True) }
@@ -267,7 +297,7 @@ private fun BezierCheckboxControlPreview() {
                         color = BezierCheckboxColor.Blue,
                         variant = BezierCheckboxVariant.Primary,
                         status = switchStatus2,
-                        onClick = { switchStatus2 = it },
+                        onCheckedChange = { switchStatus2 = it },
                 )
 
                 var switchStatus3 by remember { mutableStateOf(BezierCheckboxStatus.Indeterminate) }
@@ -275,7 +305,7 @@ private fun BezierCheckboxControlPreview() {
                         color = BezierCheckboxColor.Blue,
                         variant = BezierCheckboxVariant.Primary,
                         status = switchStatus3,
-                        onClick = { switchStatus3 = it },
+                        onCheckedChange = { switchStatus3 = it },
                 )
             }
 
@@ -288,7 +318,7 @@ private fun BezierCheckboxControlPreview() {
                         variant = BezierCheckboxVariant.Primary,
                         status = switchStatus4,
                         enabled = false,
-                        onClick = { switchStatus4 = it },
+                        onCheckedChange = { switchStatus4 = it },
                 )
 
                 var switchStatus5 by remember { mutableStateOf(BezierCheckboxStatus.True) }
@@ -297,7 +327,7 @@ private fun BezierCheckboxControlPreview() {
                         variant = BezierCheckboxVariant.Primary,
                         status = switchStatus5,
                         enabled = false,
-                        onClick = { switchStatus5 = it },
+                        onCheckedChange = { switchStatus5 = it },
                 )
 
                 var switchStatus6 by remember { mutableStateOf(BezierCheckboxStatus.Indeterminate) }
@@ -306,7 +336,7 @@ private fun BezierCheckboxControlPreview() {
                         variant = BezierCheckboxVariant.Primary,
                         status = switchStatus6,
                         enabled = false,
-                        onClick = { switchStatus6 = it },
+                        onCheckedChange = { switchStatus6 = it },
                 )
             }
 
@@ -318,7 +348,7 @@ private fun BezierCheckboxControlPreview() {
                         color = BezierCheckboxColor.Blue,
                         variant = BezierCheckboxVariant.Secondary,
                         status = switchStatus7,
-                        onClick = { switchStatus7 = it },
+                        onCheckedChange = { switchStatus7 = it },
                 )
 
                 var switchStatus8 by remember { mutableStateOf(BezierCheckboxStatus.True) }
@@ -326,7 +356,7 @@ private fun BezierCheckboxControlPreview() {
                         color = BezierCheckboxColor.Blue,
                         variant = BezierCheckboxVariant.Secondary,
                         status = switchStatus8,
-                        onClick = { switchStatus8 = it },
+                        onCheckedChange = { switchStatus8 = it },
                 )
 
                 var switchStatus9 by remember { mutableStateOf(BezierCheckboxStatus.Indeterminate) }
@@ -334,7 +364,7 @@ private fun BezierCheckboxControlPreview() {
                         color = BezierCheckboxColor.Blue,
                         variant = BezierCheckboxVariant.Secondary,
                         status = switchStatus9,
-                        onClick = { switchStatus9 = it },
+                        onCheckedChange = { switchStatus9 = it },
                 )
             }
         }
