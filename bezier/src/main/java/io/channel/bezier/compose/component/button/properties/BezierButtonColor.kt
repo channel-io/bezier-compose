@@ -6,7 +6,7 @@ import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.color_v2.BezierColor
 
 // TODO : 임시 선언
-private val Transparent = object : BezierColor {
+internal val Transparent = object : BezierColor {
     override val color: Color
         get() = Color(0x00000000)
 }
