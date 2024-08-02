@@ -6,11 +6,9 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
@@ -83,14 +81,13 @@ fun BezierCheckbox(
                     .thenIf(!enabled) {
                         alpha(0.4f)
                     }
+                    .thenIf(variant == BezierCheckboxVariant.Secondary) {
+                        padding(start = 32.dp)
+                    }
                     .clickable(enabled = enabled) {
                         onCheckedChange.invoke(status.switch())
                     },
     ) {
-        if (variant == BezierCheckboxVariant.Secondary) {
-            Spacer(modifier = Modifier.width(32.dp))
-        }
-
         BezierCheckboxControl(
                 modifier = Modifier.padding(variant.controlPadding),
                 backgroundColor = backgroundColor,
