@@ -109,11 +109,13 @@ private fun BezierCheckboxControl(
                     enabled = enabled,
                     status = status,
                     iconColor = iconColor,
+                    variant = variant,
             )
 
             BezierCheckboxVariant.Secondary -> BezierSecondaryCheckboxIcon(
                     status = status,
                     iconColor = iconColor,
+                    variant = variant,
             )
         }
     }
@@ -122,6 +124,7 @@ private fun BezierCheckboxControl(
 @Composable
 private fun BezierPrimaryCheckboxIcon(
         enabled: Boolean,
+        variant: BezierCheckboxVariant,
         status: BezierCheckboxStatus,
         iconColor: Color,
 ) {
@@ -130,7 +133,7 @@ private fun BezierPrimaryCheckboxIcon(
             if (enabled) {
                 Box(
                         modifier = Modifier
-                                .size(16.dp)
+                                .size(variant.iconSize)
                                 .clip(CircleShape)
                                 .background(iconColor),
                 )
@@ -140,7 +143,7 @@ private fun BezierPrimaryCheckboxIcon(
         BezierCheckboxStatus.True -> {
             Icon(
                     modifier = Modifier
-                            .size(16.dp),
+                            .size(variant.iconSize),
                     imageVector = BezierIcons.CheckBold.imageVector,
                     tint = iconColor,
                     contentDescription = null,
@@ -150,7 +153,7 @@ private fun BezierPrimaryCheckboxIcon(
         BezierCheckboxStatus.Indeterminate -> {
             Icon(
                     modifier = Modifier
-                            .size(16.dp),
+                            .size(variant.iconSize),
                     imageVector = BezierIcons.CheckBold.imageVector,
                     tint = iconColor,
                     contentDescription = null,
@@ -162,6 +165,7 @@ private fun BezierPrimaryCheckboxIcon(
 @Composable
 private fun BezierSecondaryCheckboxIcon(
         status: BezierCheckboxStatus,
+        variant: BezierCheckboxVariant,
         iconColor: Color,
 ) {
     when (status) {
@@ -169,7 +173,7 @@ private fun BezierSecondaryCheckboxIcon(
         BezierCheckboxStatus.Indeterminate -> {
             Icon(
                     modifier = Modifier
-                            .size(16.dp),
+                            .size(variant.iconSize),
                     imageVector = BezierIcons.CheckBold.imageVector,
                     tint = iconColor,
                     contentDescription = null,
@@ -179,7 +183,7 @@ private fun BezierSecondaryCheckboxIcon(
         BezierCheckboxStatus.True -> {
             Icon(
                     modifier = Modifier
-                            .size(16.dp),
+                            .size(variant.iconSize),
                     imageVector = BezierIcons.CheckBold.imageVector,
                     tint = iconColor,
                     contentDescription = null,
