@@ -26,9 +26,9 @@ import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
-import io.channel.bezier.compose.component.BezierLoader
-import io.channel.bezier.compose.component.BezierLoaderSize
-import io.channel.bezier.compose.component.BezierLoaderVariant
+import io.channel.bezier.compose.component.loader.BezierLoader
+import io.channel.bezier.compose.component.loader.properties.BezierLoaderSize
+import io.channel.bezier.compose.component.loader.properties.BezierLoaderVariant
 import io.channel.bezier.compose.component.avatar.BezierAvatar
 import io.channel.bezier.compose.component.button.properties.BezierButtonColor
 import io.channel.bezier.compose.component.button.properties.BezierButtonContent
