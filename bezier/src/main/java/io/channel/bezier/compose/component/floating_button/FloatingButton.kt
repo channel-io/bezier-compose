@@ -151,7 +151,9 @@ private fun BezierFloatingButtonContent(
 private fun BezierFloatingButtonStylePreview() {
     BezierTheme {
         Column(
-            modifier = Modifier.padding(8.dp),
+            modifier = Modifier
+                .background(Color.White)
+                .padding(8.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             BezierFloatingButtonVariant.entries.forEach { variant ->
