@@ -1,4 +1,4 @@
-package io.channel.bezier.compose.component.button.properties
+package io.channel.bezier.compose.component.floating_button.properties
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
@@ -9,9 +9,9 @@ import io.channel.bezier.BezierIcon
 import io.channel.bezier.compose.R
 
 @Stable
-sealed interface BezierButtonContent {
-    data class Icon(val icon: BezierIcon) : BezierButtonContent
-    class Avatar : BezierButtonContent {
+sealed interface BezierFloatingButtonContent {
+    data class Icon(val icon: BezierIcon) : BezierFloatingButtonContent
+    class Avatar : BezierFloatingButtonContent {
         private val _painter: @Composable () -> Painter
         val painter: Painter
             @Composable
@@ -20,8 +20,8 @@ sealed interface BezierButtonContent {
         constructor(url: String, error: Painter? = null) {
             _painter = {
                 rememberAsyncImagePainter(
-                        model = url,
-                        error = error ?: painterResource(id = R.drawable.unknown),
+                    model = url,
+                    error = error ?: painterResource(id = R.drawable.unknown),
                 )
             }
         }
@@ -31,5 +31,5 @@ sealed interface BezierButtonContent {
         }
     }
 
-    data class Emoji(val name: String) : BezierButtonContent
+    data class Emoji(val name: String) : BezierFloatingButtonContent
 }
