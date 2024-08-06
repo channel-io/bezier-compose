@@ -92,7 +92,7 @@ enum class BezierAvatarSize(
     ),
     Size120(
             size = 120.dp,
-            outlineBorderWidth = 2.dp,
+            outlineBorderWidth = 4.dp,
             statusBadgeSize = BezierStatusBadgeSize.Large,
             chatBadgeSize = BezierChatBadgeSize.Large,
             integrationBadgeSize = DefaultIntegrationBadgeSize,
