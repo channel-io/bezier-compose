@@ -30,7 +30,7 @@ import io.channel.bezier.extension.outlineBorder
 import io.channel.bezier.extension.thenIf
 import io.channel.bezier.shape.SmoothRoundedCornerShape
 
-private const val AvatarRadiusFraction = 42
+internal const val AvatarRadiusFraction = 42
 
 @Composable
 fun BezierAvatar(
@@ -99,7 +99,7 @@ fun BezierAvatar(
 
                 is BezierAvatarBadge.Integration -> IntegrationBadge(
                         integration = badge,
-                        size = size.integrationBadgeSize,
+                        size = size,
                 )
             }
         }
@@ -109,19 +109,19 @@ fun BezierAvatar(
 @Composable
 private fun IntegrationBadge(
         integration: BezierAvatarBadge.Integration,
-        size: Dp,
+        size: BezierAvatarSize,
 ) {
-    val avatarShape = SmoothRoundedCornerShape(AvatarRadiusFraction)
+    val shape = integration.createShape(size)
 
     Image(
             modifier = Modifier
-                    .size(size)
+                    .size(size.size)
                     .outlineBorder(
                             width = 2.dp,
                             color = BezierTheme.colorSchemes.surfaceNormal.color,
-                            shape = avatarShape,
+                            shape = shape,
                     )
-                    .clip(avatarShape),
+                    .clip(shape),
             painter = integration.painter(),
             contentDescription = integration.name,
     )
