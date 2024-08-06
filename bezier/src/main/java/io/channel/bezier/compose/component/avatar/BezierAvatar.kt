@@ -35,7 +35,7 @@ private const val AvatarRadiusFraction = 42
 @Composable
 fun BezierAvatar(
         url: String,
-        avatarSize: BezierAvatarSize,
+        size: BezierAvatarSize,
         modifier: Modifier = Modifier,
         showBorder: Boolean = false,
         badge: BezierAvatarBadge = BezierAvatarBadge.None,
@@ -48,7 +48,7 @@ fun BezierAvatar(
 
     BezierAvatar(
             painter = painter,
-            avatarSize = avatarSize,
+            size = size,
             modifier = modifier,
             showBorder = showBorder,
             badge = badge,
@@ -58,7 +58,7 @@ fun BezierAvatar(
 @Composable
 fun BezierAvatar(
         painter: Painter,
-        avatarSize: BezierAvatarSize,
+        size: BezierAvatarSize,
         modifier: Modifier = Modifier,
         showBorder: Boolean = false,
         badge: BezierAvatarBadge = BezierAvatarBadge.None,
@@ -66,14 +66,14 @@ fun BezierAvatar(
     val avatarShape = SmoothRoundedCornerShape(AvatarRadiusFraction)
 
     Box(
-            modifier = modifier.requiredSize(avatarSize.size),
+            modifier = modifier.requiredSize(size.size),
     ) {
         Image(
                 modifier = Modifier
                         .fillMaxSize()
                         .thenIf(showBorder) {
                             outlineBorder(
-                                    width = avatarSize.outlineBorderWidth,
+                                    width = size.outlineBorderWidth,
                                     color = BezierTheme.colorSchemes.surfaceNormal.color,
                                     shape = avatarShape,
                             )
@@ -86,20 +86,20 @@ fun BezierAvatar(
         Box(
                 modifier = Modifier
                         .align(Alignment.BottomEnd)
-                        .offset(x = avatarSize.badgeOffset, y = avatarSize.badgeOffset),
+                        .offset(x = size.badgeOffset, y = size.badgeOffset),
         ) {
             when (badge) {
                 BezierAvatarBadge.None -> Unit
-                BezierAvatarBadge.Chat -> BezierChatBadge(size = avatarSize.chatBadgeSize)
+                BezierAvatarBadge.Chat -> BezierChatBadge(size = size.chatBadgeSize)
                 is BezierAvatarBadge.Status -> BezierStatusBadge(
                         isOnline = badge.isOnline,
                         doNotDisturb = badge.doNotDisturb,
-                        size = avatarSize.statusBadgeSize,
+                        size = size.statusBadgeSize,
                 )
 
                 is BezierAvatarBadge.Integration -> IntegrationBadge(
                         integration = badge,
-                        size = avatarSize.integrationBadgeSize,
+                        size = size.integrationBadgeSize,
                 )
             }
         }
@@ -154,7 +154,7 @@ private fun BezierAvatarPreview() {
                 BezierAvatarSize.entries.forEach { size ->
                     BezierAvatar(
                             painter = painterResource(id = R.drawable.unknown),
-                            avatarSize = size,
+                            size = size,
                             showBorder = false,
                     )
                 }
@@ -168,7 +168,7 @@ private fun BezierAvatarPreview() {
                     BezierAvatarSize.entries.forEach { size ->
                         BezierAvatar(
                                 painter = painterResource(id = R.drawable.unknown),
-                                avatarSize = size,
+                                size = size,
                                 showBorder = true,
                                 badge = badge,
                         )
