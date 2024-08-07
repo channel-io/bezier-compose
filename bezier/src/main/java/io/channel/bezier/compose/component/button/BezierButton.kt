@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -20,16 +19,23 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
+import io.channel.bezier.compose.R
+import io.channel.bezier.compose.component.loader.BezierLoader
+import io.channel.bezier.compose.component.loader.properties.BezierLoaderSize
+import io.channel.bezier.compose.component.loader.properties.BezierLoaderVariant
+import io.channel.bezier.compose.component.avatar.BezierAvatar
 import io.channel.bezier.compose.component.button.properties.BezierButtonColor
 import io.channel.bezier.compose.component.button.properties.BezierButtonContent
 import io.channel.bezier.compose.component.button.properties.BezierButtonSize
 import io.channel.bezier.compose.component.button.properties.BezierButtonVariant
 import io.channel.bezier.extension.thenIf
+import io.channel.bezier.extension.toEmojiPainter
 import io.channel.bezier.icon.ArrowRight
 import io.channel.bezier.icon.Plus
 
@@ -62,10 +68,9 @@ fun BezierButton(
             contentAlignment = Alignment.Center,
     ) {
         if (isLoading) {
-            // TODO : 베지어 로더로 변경 예정
-            CircularProgressIndicator(
-                    modifier = Modifier.size(size.iconSize),
-                    color = contentColor,
+            BezierLoader(
+                    variant = BezierLoaderVariant.OnOverlay,
+                    size = BezierLoaderSize.Small,
             )
         }
 
@@ -118,16 +123,15 @@ private fun BezierButtonContent(
                 tint = contentColor,
         )
 
-        // TODO : Not Implementation
-        is BezierButtonContent.Avatar -> Box(
-                modifier = Modifier,
+        is BezierButtonContent.Avatar -> BezierAvatar(
+                painter = content.painter,
+                size = size.avatarSize,
         )
 
-        // TODO : Not Implementation
         is BezierButtonContent.Emoji -> Image(
-                modifier = Modifier.size(size.iconSize),
-                painter = content.painter,
-                contentDescription = null,
+                modifier = Modifier.size(size.emojiSize),
+                painter = content.name.toEmojiPainter,
+                contentDescription = content.name,
         )
     }
 }
@@ -197,6 +201,22 @@ private fun BezierButtonOnlyTextPreview() {
                 variant = BezierButtonVariant.Primary,
                 color = BezierButtonColor.Blue,
                 onClick = { },
+        )
+    }
+}
+
+@Composable
+@Preview(showBackground = true)
+private fun BezierButtonOtherContentsPreview() {
+    BezierTheme {
+        BezierButton(
+                text = "Label",
+                size = BezierButtonSize.Medium,
+                variant = BezierButtonVariant.Primary,
+                color = BezierButtonColor.Blue,
+                onClick = { },
+                prefixContent = BezierButtonContent.Avatar(painterResource(id = R.drawable.unknown)),
+                suffixContent = BezierButtonContent.Emoji("smile")
         )
     }
 }
