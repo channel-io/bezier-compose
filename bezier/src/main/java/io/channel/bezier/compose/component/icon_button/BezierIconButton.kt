@@ -126,7 +126,7 @@ private fun BezierIconButtonContent(
 
         is BezierIconButtonContent.Avatar -> BezierAvatar(
                 painter = content.painter,
-                avatarSize = size.avatarSize,
+                size = size.avatarSize,
         )
 
         is BezierIconButtonContent.Emoji -> Image(
