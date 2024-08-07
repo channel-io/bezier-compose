@@ -22,9 +22,9 @@ enum class BezierIconButtonSize(
     Small(
             radius = 10.dp,
             containerPadding = PaddingValues(6.dp),
-            iconSize = 16.dp,
-            emojiSize = 16.dp,
-            avatarSize = BezierAvatarSize.Size16,
+            iconSize = 20.dp,
+            emojiSize = 20.dp,
+            avatarSize = BezierAvatarSize.Size20,
     ),
     Medium(
             radius = 12.dp,
