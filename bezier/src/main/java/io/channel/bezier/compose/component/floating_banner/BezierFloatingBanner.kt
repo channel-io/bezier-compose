@@ -51,7 +51,7 @@ fun BezierFloatingBanner(
     ) {
         Row(
                 modifier = Modifier
-                        .fillMaxWidth()
+                        .weight(1f)
                         .padding(horizontal = 6.dp),
                 horizontalArrangement = Arrangement.spacedBy(6.dp),
         ) {
