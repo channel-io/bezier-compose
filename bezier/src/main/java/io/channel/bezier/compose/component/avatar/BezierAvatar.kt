@@ -76,29 +76,6 @@ fun BezierAvatar(
 
 @Composable
 fun BezierAvatar(
-        url: String,
-        avatarSize: BezierAvatarSize,
-        modifier: Modifier = Modifier,
-        showBorder: Boolean = false,
-        badge: BezierAvatarBadge = BezierAvatarBadge.None,
-        errorPainter: Painter = painterResource(id = R.drawable.unknown),
-) {
-    val painter = rememberAsyncImagePainter(
-            model = url,
-            error = errorPainter,
-    )
-
-    BezierAvatar(
-            painter = painter,
-            avatarSize = avatarSize,
-            modifier = modifier,
-            showBorder = showBorder,
-            badge = badge,
-    )
-}
-
-@Composable
-fun BezierAvatar(
         painter: Painter,
         size: BezierAvatarSize,
         isOnline: Boolean,
