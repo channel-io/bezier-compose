@@ -17,7 +17,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
 import io.channel.bezier.BezierTheme
@@ -31,6 +30,26 @@ import io.channel.bezier.extension.thenIf
 import io.channel.bezier.shape.SmoothRoundedCornerShape
 
 internal const val AvatarRadiusFraction = 42
+
+@Composable
+fun BezierAvatar(
+        url: String,
+        size: BezierAvatarSize,
+        isOnline: Boolean,
+        doNotDisturb: Boolean,
+        modifier: Modifier = Modifier,
+        showBorder: Boolean = false,
+        errorPainter: Painter = painterResource(id = R.drawable.unknown),
+) {
+    BezierAvatar(
+            url = url,
+            size = size,
+            modifier = modifier,
+            showBorder = showBorder,
+            badge = BezierAvatarBadge.Status(isOnline = isOnline, doNotDisturb = doNotDisturb),
+            errorPainter = errorPainter,
+    )
+}
 
 @Composable
 fun BezierAvatar(
@@ -52,6 +71,24 @@ fun BezierAvatar(
             modifier = modifier,
             showBorder = showBorder,
             badge = badge,
+    )
+}
+
+@Composable
+fun BezierAvatar(
+        painter: Painter,
+        size: BezierAvatarSize,
+        isOnline: Boolean,
+        doNotDisturb: Boolean,
+        modifier: Modifier = Modifier,
+        showBorder: Boolean = false,
+) {
+    BezierAvatar(
+            painter = painter,
+            size = size,
+            modifier = modifier,
+            showBorder = showBorder,
+            badge = BezierAvatarBadge.Status(isOnline = isOnline, doNotDisturb = doNotDisturb),
     )
 }
 
