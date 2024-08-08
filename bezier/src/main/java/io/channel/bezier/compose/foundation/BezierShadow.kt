@@ -53,10 +53,12 @@ private class ShadowModifier(
         var shadowStyle: ShadowStyle,
         var shape: Shape,
 ) : Modifier.Node(), DrawModifierNode, CompositionLocalConsumerModifierNode {
-    private val transparentColor = 0x00000000
-
     override fun ContentDrawScope.draw() {
         val shadowInfo = shadowStyle.asShadowInfo()
+        val transparentColor = currentValueOf(LocalColorsV2)
+                .bgWhiteWhiteAlphaTransparent
+                .color
+                .toArgb()
 
         drawIntoCanvas { canvas ->
             val paint = Paint()
