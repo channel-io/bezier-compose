@@ -29,7 +29,7 @@ internal object GlobalTokens {
     internal val cobalt300_15: BezierColor = GlobalToken(Color(0X267DC2FA))
     internal val green100: BezierColor = GlobalToken(Color(0XFFA4ECB3))
     internal val green200: BezierColor = GlobalToken(Color(0XFF91E5A4))
-    internal val green300: BezierColor = GlobalToken(Color(0XFF7AD890))
+    internal val green300: BezierColor = GlobalToken(Color(0XFF6AD081))
     internal val green400: BezierColor = GlobalToken(Color(0XFF40AD67))
     internal val green500: BezierColor = GlobalToken(Color(0XFF358761))
     internal val green600: BezierColor = GlobalToken(Color(0XFF327055))
