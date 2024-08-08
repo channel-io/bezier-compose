@@ -16,6 +16,8 @@ import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.component.loader.properties.BezierLoaderSize
 import io.channel.bezier.compose.component.loader.properties.BezierLoaderVariant
 
+private const val StrokeWidthRatio = 0.12f
+
 @Composable
 fun BezierLoader(
         variant: BezierLoaderVariant,
@@ -24,7 +26,7 @@ fun BezierLoader(
     CircularProgressIndicator(
             modifier = Modifier.size(size.size),
             color = variant.foregroundColor().color,
-            strokeWidth = size.strokeWidth,
+            strokeWidth = size.size * StrokeWidthRatio,
             backgroundColor = variant.backgroundColor().color,
             strokeCap = StrokeCap.Round,
     )
