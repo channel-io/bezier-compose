@@ -240,6 +240,7 @@ enum class BezierButtonColor(
 
 폴더 [[참고]](https://github.com/channel-io/bezier-compose/pull/16#issuecomment-2222027811)
 
+- 모든 컴포넌트는 component 폴더 하위에 properties 패키지와 컴포넌트 파일로 생성합니다.
 - bezier prefix를 제외하고 생성합니다.
 
 ```kotlin
