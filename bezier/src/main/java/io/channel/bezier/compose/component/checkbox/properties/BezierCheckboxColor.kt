@@ -25,11 +25,11 @@ enum class BezierCheckboxColor(
                     iconColor = { BezierTheme.colorSchemes.bgWhiteNormal },
             ),
             secondaryCheckedColorScheme = BezierCheckboxColorScheme(
-                    backgroundColor = { io.channel.bezier.compose.component.button.properties.Transparent },
+                    backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
                     iconColor = { BezierTheme.colorSchemes.primaryBgNormal },
             ),
             secondaryUncheckedColorScheme = BezierCheckboxColorScheme(
-                    backgroundColor = { io.channel.bezier.compose.component.button.properties.Transparent },
+                    backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
                     iconColor = { BezierTheme.colorSchemes.fgBlackDark },
             ),
     ),
@@ -40,14 +40,14 @@ enum class BezierCheckboxColor(
             ),
             primaryUncheckedColorScheme = BezierCheckboxColorScheme(
                     backgroundColor = { BezierTheme.colorSchemes.bgWhiteNormal },
-                    iconColor = { io.channel.bezier.compose.component.button.properties.Transparent },
+                    iconColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
             ),
             secondaryCheckedColorScheme = BezierCheckboxColorScheme(
-                    backgroundColor = { io.channel.bezier.compose.component.button.properties.Transparent },
+                    backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
                     iconColor = { BezierTheme.colorSchemes.bgGreenNormal },
             ),
             secondaryUncheckedColorScheme = BezierCheckboxColorScheme(
-                    backgroundColor = { io.channel.bezier.compose.component.button.properties.Transparent },
+                    backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
                     iconColor = { BezierTheme.colorSchemes.fgBlackDark },
             ),
     );

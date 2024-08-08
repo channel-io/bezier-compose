@@ -298,6 +298,7 @@ class ColorSchemes internal constructor(
     val bgWhiteWhiteAlphaLightest: BezierColor = functionalTokens.bgWhiteWhiteAlphaLightest
     val bgWhiteWhiteAlphaLighter: BezierColor = functionalTokens.bgWhiteWhiteAlphaLighter
     val bgWhiteWhiteAlphaLight: BezierColor = functionalTokens.bgWhiteWhiteAlphaLight
+    val bgWhiteWhiteAlphaTransparent: BezierColor = functionalTokens.bgWhiteWhiteAlphaTransparent
     val bgBlueNormal: BezierColor = functionalTokens.bgBlueNormal
     val bgBlueLight: BezierColor = functionalTokens.bgBlueLight
     val bgBlueLighter: BezierColor = functionalTokens.bgBlueLighter
@@ -435,4 +436,11 @@ class ColorSchemes internal constructor(
     val successFgNormal: BezierColor = semanticTokens.successFgNormal
     val successFgLight: BezierColor = semanticTokens.successFgLight
     val successFgDark: BezierColor = semanticTokens.successFgDark
+
+    val gradientFgGreen: List<BezierColor> = listOf(GlobalTokens.green400, GlobalTokens.green300)
+    val gradientFgBlack: List<BezierColor> = listOf(functionalTokens.fgBlackLightest, functionalTokens.fgBlackLight)
+    val gradientBgPurple: List<BezierColor> = listOf(GlobalTokens.purple300, GlobalTokens.pink200)
+    val gradientBgOrange: List<BezierColor> = listOf(GlobalTokens.orange300, GlobalTokens.yellow200)
+    val gradientBgGreen: List<BezierColor> = listOf(GlobalTokens.green300, GlobalTokens.teal200)
+    val gradientBgBlue: List<BezierColor> = listOf(GlobalTokens.blue300, GlobalTokens.green200)
 }
