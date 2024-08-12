@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "io.channel.bezier.compose.sample"
-        minSdk = 21
+        minSdk = 29
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
