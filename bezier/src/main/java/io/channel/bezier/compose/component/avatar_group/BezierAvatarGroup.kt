@@ -47,20 +47,25 @@ fun BezierAvatarGroup(
                         },
                 ),
         ) {
-            showingPainters.forEach { painter ->
+            showingPainters.forEachIndexed { index, painter ->
+                val isEllipsis = index == showingPainters.lastIndex
+                        && variant == BezierAvatarGroupVariant.Icon
+                        && painters.size - itemCount > 0
+
                 BezierAvatar(
                         painter = painter,
                         size = BezierAvatarSize.Size24,
                         showBorder = type == BezierAvatarGroupType.Stack,
+                        isEllipsis = isEllipsis,
                 )
             }
         }
 
-        if (variant == BezierAvatarGroupVariant.Count) {
+        if (variant == BezierAvatarGroupVariant.Count && painters.size - itemCount > 0) {
             Spacer(Modifier.width(4.dp))
 
             Text(
-                    text = (painters.size - itemCount).toString(),
+                    text = "+${painters.size - itemCount}",
                     color = BezierTheme.colorSchemes.fgBlackDark.color,
                     style = BezierTheme.typography.body1SemiBold,
             )
@@ -71,38 +76,25 @@ fun BezierAvatarGroup(
 @Composable
 @Preview
 private fun BezierAvatarGroupPreview() {
+    val painters = List(104) {
+        painterResource(id = R.drawable.unknown)
+    }
+
     BezierTheme {
         Column(
                 modifier = Modifier.background(Color.LightGray),
         ) {
-            BezierAvatarGroup(
-                    modifier = Modifier.padding(16.dp),
-                    painters = listOf(
-                            painterResource(id = R.drawable.unknown),
-                            painterResource(id = R.drawable.unknown),
-                            painterResource(id = R.drawable.unknown),
-                            painterResource(id = R.drawable.unknown),
-                            painterResource(id = R.drawable.unknown),
-                            painterResource(id = R.drawable.unknown),
-                            painterResource(id = R.drawable.unknown),
-                            painterResource(id = R.drawable.unknown),
-                    ),
-                    variant = BezierAvatarGroupVariant.Count,
-                    type = BezierAvatarGroupType.Stack,
-            )
-            BezierAvatarGroup(
-                    modifier = Modifier.padding(16.dp),
-                    painters = listOf(
-                            painterResource(id = R.drawable.unknown),
-                            painterResource(id = R.drawable.unknown),
-                            painterResource(id = R.drawable.unknown),
-                            painterResource(id = R.drawable.unknown),
-                            painterResource(id = R.drawable.unknown),
-                            painterResource(id = R.drawable.unknown),
-                    ),
-                    variant = BezierAvatarGroupVariant.Count,
-                    type = BezierAvatarGroupType.Spread,
-            )
+
+            BezierAvatarGroupVariant.entries.forEach { variant ->
+                BezierAvatarGroupType.entries.forEach { type ->
+                    BezierAvatarGroup(
+                            modifier = Modifier.padding(16.dp),
+                            painters = painters,
+                            variant = variant,
+                            type = type,
+                    )
+                }
+            }
         }
     }
 }
