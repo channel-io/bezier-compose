@@ -443,4 +443,7 @@ class ColorSchemes internal constructor(
     val gradientBgOrange: List<BezierColor> = listOf(GlobalTokens.orange300, GlobalTokens.yellow200)
     val gradientBgGreen: List<BezierColor> = listOf(GlobalTokens.green300, GlobalTokens.teal200)
     val gradientBgBlue: List<BezierColor> = listOf(GlobalTokens.blue300, GlobalTokens.green200)
+
+    val dimBlackNormal: BezierColor = functionalTokens.bgAbsoluteBlackLighter
+    val dimBlackLight: BezierColor = functionalTokens.bgAbsoluteBlackLightest
 }
