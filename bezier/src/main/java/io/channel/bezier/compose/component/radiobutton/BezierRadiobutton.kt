@@ -54,7 +54,9 @@ fun BezierRadiobutton(
         )
 
         BezierRadiobuttonLabel(
-                modifier = Modifier.align(Alignment.CenterVertically),
+                modifier = Modifier
+                        .align(Alignment.CenterVertically)
+                        .padding(end = 12.dp),
                 text = text,
         )
     }
