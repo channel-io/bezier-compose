@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.compose.component.avatar.properties.BezierAvatarSize
+import io.channel.bezier.compose.component.loader.properties.BezierLoaderSize
 
 enum class BezierIconButtonSize(
         internal val radius: Dp,
@@ -11,6 +12,7 @@ enum class BezierIconButtonSize(
         internal val iconSize: Dp,
         internal val emojiSize: Dp,
         internal val avatarSize: BezierAvatarSize,
+        internal val loaderSize: BezierLoaderSize,
 ) {
     XSmall(
             radius = 8.dp,
@@ -18,6 +20,7 @@ enum class BezierIconButtonSize(
             iconSize = 16.dp,
             emojiSize = 16.dp,
             avatarSize = BezierAvatarSize.Size16,
+            loaderSize = BezierLoaderSize.XXSmall,
     ),
     Small(
             radius = 10.dp,
@@ -25,6 +28,7 @@ enum class BezierIconButtonSize(
             iconSize = 20.dp,
             emojiSize = 20.dp,
             avatarSize = BezierAvatarSize.Size20,
+            loaderSize = BezierLoaderSize.XSmall,
     ),
     Medium(
             radius = 12.dp,
@@ -32,6 +36,7 @@ enum class BezierIconButtonSize(
             iconSize = 20.dp,
             emojiSize = 20.dp,
             avatarSize = BezierAvatarSize.Size20,
+            loaderSize = BezierLoaderSize.XSmall,
     ),
     Large(
             radius = 14.dp,
@@ -39,6 +44,7 @@ enum class BezierIconButtonSize(
             iconSize = 20.dp,
             emojiSize = 20.dp,
             avatarSize = BezierAvatarSize.Size20,
+            loaderSize = BezierLoaderSize.XSmall,
     ),
     XLarge(
             radius = 16.dp,
@@ -46,5 +52,6 @@ enum class BezierIconButtonSize(
             iconSize = 24.dp,
             emojiSize = 24.dp,
             avatarSize = BezierAvatarSize.Size24,
+            loaderSize = BezierLoaderSize.Small,
     ),
 }

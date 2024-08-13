@@ -90,7 +90,7 @@ fun BezierIconButton(
         if (isLoading) {
             BezierLoader(
                     variant = BezierLoaderVariant.OnOverlay,
-                    size = BezierLoaderSize.Small,
+                    size = size.loaderSize,
             )
         }
 
