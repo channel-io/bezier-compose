@@ -114,25 +114,25 @@ enum class BezierIconButtonColor(
             ),
             secondaryColorSchemes = BezierIconButtonColorSchemes(
                     backgroundColor = { BezierTheme.colorSchemes.bgBlackLighter },
-                    contentColor = { BezierTheme.colorSchemes.fgBlackDarkest },
+                    contentColor = { BezierTheme.colorSchemes.fgBlackDarker },
             ),
             tertiaryColorSchemes = BezierIconButtonColorSchemes(
                     backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
-                    contentColor = { BezierTheme.colorSchemes.fgBlackDarkest },
+                    contentColor = { BezierTheme.colorSchemes.fgBlackDarker },
             ),
     ),
     LightGrey(
             primaryColorSchemes = BezierIconButtonColorSchemes(
                     backgroundColor = { BezierTheme.colorSchemes.bgBlackDark },
-                    contentColor = { BezierTheme.colorSchemes.fgAbsoluteWhiteDark },
+                    contentColor = { BezierTheme.colorSchemes.fgAbsoluteWhiteNormal },
             ),
             secondaryColorSchemes = BezierIconButtonColorSchemes(
                     backgroundColor = { BezierTheme.colorSchemes.bgBlackLighter },
-                    contentColor = { BezierTheme.colorSchemes.fgBlackDarker },
+                    contentColor = { BezierTheme.colorSchemes.fgBlackDark },
             ),
             tertiaryColorSchemes = BezierIconButtonColorSchemes(
                     backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
-                    contentColor = { BezierTheme.colorSchemes.fgBlackDarker },
+                    contentColor = { BezierTheme.colorSchemes.fgBlackDark },
             ),
     ),
     White(
