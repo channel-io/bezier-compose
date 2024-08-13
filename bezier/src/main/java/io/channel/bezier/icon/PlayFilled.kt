@@ -31,14 +31,29 @@ val BezierIcons.PlayFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(9.147f, 20.297f)
-                    lineTo(18.602f, 13.679f)
-                    arcTo(2.0f, 2.0f, 55.011013754539995f, isMoreThanHalf = false, isPositiveArc = false, 18.564f, 10.376000000000001f)
-                    lineTo(9.11f, 4.073f)
-                    curveTo(7.78f, 3.187f, 6.0f, 4.14f, 6.0f, 5.737f)
-                    lineTo(6.0f, 18.659f)
-                    curveTo(6.0f, 20.276999999999997f, 7.821f, 21.224999999999998f, 9.147f, 20.296999999999997f)
+                    moveTo(19.128f, 10.752f)
+                    arcTo(1.5f, 1.5f, 303.6952621471169f, isMoreThanHalf = false, isPositiveArc = true, 19.128f, 13.248000000000001f)
+                    lineTo(8.332f, 20.445f)
+                    curveTo(7.335f, 21.11f, 6.0f, 20.395f, 6.0f, 19.197f)
+                    lineTo(6.0f, 4.803f)
+                    curveTo(6.0f, 3.605f, 7.335f, 2.89f, 8.332f, 3.555f)
+                    close()
+                }
+
+                path(
+                        fill = SolidColor(Color(0x19D9D9D9)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 0.1f,
+                ) {
+                    moveTo(9.7f, 20.1f)
+                    lineTo(18.314f, 13.64f)
+                    arcTo(2.0f, 2.0f, 53.152286601408235f, isMoreThanHalf = false, isPositiveArc = false, 18.277f, 10.412f)
+                    lineTo(9.662f, 4.259f)
+                    curveTo(8.34f, 3.313f, 6.5f, 4.259f, 6.5f, 5.886f)
+                    lineTo(6.5f, 18.5f)
+                    curveTo(6.5f, 20.148f, 8.382f, 21.089f, 9.7f, 20.1f)
                 }
             }.build().also {
                 _playFilled = it
