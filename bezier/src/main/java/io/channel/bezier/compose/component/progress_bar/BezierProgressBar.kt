@@ -44,7 +44,7 @@ fun BezierProgressBar(
     val coercedProgress = progress.coerceIn(0f, 1f)
 
     val progressRatio: Float by animateFloatAsState(
-            targetValue = coercedProgress / 1f,
+            targetValue = coercedProgress,
             animationSpec = tween(
                     durationMillis = 1000,
                     easing = CubicBezierEasing(0.24f, 1f, 0.24f, 1f),
