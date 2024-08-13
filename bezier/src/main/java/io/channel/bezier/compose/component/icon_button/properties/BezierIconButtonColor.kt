@@ -1,15 +1,8 @@
 package io.channel.bezier.compose.component.icon_button.properties
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.color_v2.BezierColor
-
-// TODO : 임시 선언
-private val Transparent = object : BezierColor {
-    override val color: Color
-        get() = Color(0x00000000)
-}
 
 enum class BezierIconButtonColor(
         private val primaryColorSchemes: BezierIconButtonColorSchemes,
@@ -26,7 +19,7 @@ enum class BezierIconButtonColor(
                     contentColor = { BezierTheme.colorSchemes.primaryFgNormal },
             ),
             tertiaryColorSchemes = BezierIconButtonColorSchemes(
-                    backgroundColor = { Transparent },
+                    backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
                     contentColor = { BezierTheme.colorSchemes.primaryFgNormal },
             ),
     ),
@@ -40,7 +33,7 @@ enum class BezierIconButtonColor(
                     contentColor = { BezierTheme.colorSchemes.accentFgNormal },
             ),
             tertiaryColorSchemes = BezierIconButtonColorSchemes(
-                    backgroundColor = { Transparent },
+                    backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
                     contentColor = { BezierTheme.colorSchemes.accentFgNormal },
             ),
     ),
@@ -54,7 +47,7 @@ enum class BezierIconButtonColor(
                     contentColor = { BezierTheme.colorSchemes.criticalFgNormal },
             ),
             tertiaryColorSchemes = BezierIconButtonColorSchemes(
-                    backgroundColor = { Transparent },
+                    backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
                     contentColor = { BezierTheme.colorSchemes.criticalFgNormal },
             ),
     ),
@@ -68,7 +61,7 @@ enum class BezierIconButtonColor(
                     contentColor = { BezierTheme.colorSchemes.warningFgNormal },
             ),
             tertiaryColorSchemes = BezierIconButtonColorSchemes(
-                    backgroundColor = { Transparent },
+                    backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
                     contentColor = { BezierTheme.colorSchemes.warningFgNormal },
             ),
     ),
@@ -82,7 +75,7 @@ enum class BezierIconButtonColor(
                     contentColor = { BezierTheme.colorSchemes.successFgNormal },
             ),
             tertiaryColorSchemes = BezierIconButtonColorSchemes(
-                    backgroundColor = { Transparent },
+                    backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
                     contentColor = { BezierTheme.colorSchemes.successFgNormal },
             ),
     ),
@@ -96,7 +89,7 @@ enum class BezierIconButtonColor(
                     contentColor = { BezierTheme.colorSchemes.fgPinkNormal },
             ),
             tertiaryColorSchemes = BezierIconButtonColorSchemes(
-                    backgroundColor = { Transparent },
+                    backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
                     contentColor = { BezierTheme.colorSchemes.fgPinkNormal },
             ),
     ),
@@ -110,7 +103,7 @@ enum class BezierIconButtonColor(
                     contentColor = { BezierTheme.colorSchemes.fgPurpleNormal },
             ),
             tertiaryColorSchemes = BezierIconButtonColorSchemes(
-                    backgroundColor = { Transparent },
+                    backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
                     contentColor = { BezierTheme.colorSchemes.fgPurpleNormal },
             ),
     ),
@@ -124,7 +117,7 @@ enum class BezierIconButtonColor(
                     contentColor = { BezierTheme.colorSchemes.fgBlackDarkest },
             ),
             tertiaryColorSchemes = BezierIconButtonColorSchemes(
-                    backgroundColor = { Transparent },
+                    backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
                     contentColor = { BezierTheme.colorSchemes.fgBlackDarkest },
             ),
     ),
@@ -138,7 +131,7 @@ enum class BezierIconButtonColor(
                     contentColor = { BezierTheme.colorSchemes.fgBlackDarker },
             ),
             tertiaryColorSchemes = BezierIconButtonColorSchemes(
-                    backgroundColor = { Transparent },
+                    backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
                     contentColor = { BezierTheme.colorSchemes.fgBlackDarker },
             ),
     ),
@@ -152,7 +145,7 @@ enum class BezierIconButtonColor(
                     contentColor = { BezierTheme.colorSchemes.bgAbsoluteWhiteNormal },
             ),
             tertiaryColorSchemes = BezierIconButtonColorSchemes(
-                    backgroundColor = { Transparent },
+                    backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
                     contentColor = { BezierTheme.colorSchemes.bgAbsoluteWhiteNormal },
             ),
     );
