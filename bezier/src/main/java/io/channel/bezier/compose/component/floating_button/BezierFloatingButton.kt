@@ -32,7 +32,6 @@ import io.channel.bezier.compose.component.floating_button.properties.BezierFloa
 import io.channel.bezier.compose.component.floating_button.properties.BezierFloatingButtonSize
 import io.channel.bezier.compose.component.floating_button.properties.BezierFloatingButtonVariant
 import io.channel.bezier.compose.component.loader.BezierLoader
-import io.channel.bezier.compose.component.loader.properties.BezierLoaderSize
 import io.channel.bezier.compose.component.loader.properties.BezierLoaderVariant
 import io.channel.bezier.compose.foundation.ShadowStyle
 import io.channel.bezier.compose.foundation.bezierShadow
