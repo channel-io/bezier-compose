@@ -5,7 +5,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.dp
 
-enum class ToggleButtonShape(
+enum class BezierToggleButtonShape(
         internal val shape: Shape,
 ) {
     Rectangle(RoundedCornerShape(10.dp)),

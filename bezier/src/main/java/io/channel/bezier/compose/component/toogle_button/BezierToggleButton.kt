@@ -25,16 +25,16 @@ import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
-import io.channel.bezier.compose.component.toogle_button.properties.ToggleButtonShape
-import io.channel.bezier.compose.component.toogle_button.properties.ToggleButtonVariant
+import io.channel.bezier.compose.component.toogle_button.properties.BezierToggleButtonShape
+import io.channel.bezier.compose.component.toogle_button.properties.BezierToggleButtonVariant
 import io.channel.bezier.icon.ChevronSmallDown
 
 @Composable
-fun ToggleButton(
+fun BezierToggleButton(
         selected: Boolean,
         text: String,
-        variant: ToggleButtonVariant,
-        shape: ToggleButtonShape,
+        variant: BezierToggleButtonVariant,
+        shape: BezierToggleButtonShape,
         modifier: Modifier = Modifier,
         prefixIcon: BezierIcon? = null,
         suffixIcon: BezierIcon? = null,
@@ -79,7 +79,7 @@ fun ToggleButton(
             )
         }
 
-        ToggleButtonLabel(
+        BezierToggleButtonLabel(
                 text = text,
                 color = colorSchemes.contentColor().color,
                 textStyle = if (selected) {
@@ -101,7 +101,7 @@ fun ToggleButton(
 }
 
 @Composable
-private fun ToggleButtonLabel(
+private fun BezierToggleButtonLabel(
         color: Color,
         text: String,
         textStyle: TextStyle,
@@ -124,18 +124,18 @@ private fun ToggleButtonPreview() {
             Row(
                     horizontalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                ToggleButton(
+                BezierToggleButton(
                         selected = false,
                         text = "label",
-                        variant = ToggleButtonVariant.Primary,
-                        shape = ToggleButtonShape.Rectangle,
+                        variant = BezierToggleButtonVariant.Primary,
+                        shape = BezierToggleButtonShape.Rectangle,
                         onClick = {},
                 )
-                ToggleButton(
+                BezierToggleButton(
                         selected = true,
                         text = "label",
-                        variant = ToggleButtonVariant.Primary,
-                        shape = ToggleButtonShape.Capsule,
+                        variant = BezierToggleButtonVariant.Primary,
+                        shape = BezierToggleButtonShape.Capsule,
                         onClick = {},
                 )
             }
@@ -143,18 +143,18 @@ private fun ToggleButtonPreview() {
             Row(
                     horizontalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                ToggleButton(
+                BezierToggleButton(
                         selected = false,
                         text = "label",
-                        variant = ToggleButtonVariant.Secondary,
-                        shape = ToggleButtonShape.Rectangle,
+                        variant = BezierToggleButtonVariant.Secondary,
+                        shape = BezierToggleButtonShape.Rectangle,
                         onClick = {},
                 )
-                ToggleButton(
+                BezierToggleButton(
                         selected = true,
                         text = "label",
-                        variant = ToggleButtonVariant.Secondary,
-                        shape = ToggleButtonShape.Capsule,
+                        variant = BezierToggleButtonVariant.Secondary,
+                        shape = BezierToggleButtonShape.Capsule,
                         onClick = {},
                 )
             }
@@ -162,18 +162,18 @@ private fun ToggleButtonPreview() {
             Row(
                     horizontalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                ToggleButton(
+                BezierToggleButton(
                         selected = false,
                         text = "label",
-                        variant = ToggleButtonVariant.Primary,
-                        shape = ToggleButtonShape.Capsule,
+                        variant = BezierToggleButtonVariant.Primary,
+                        shape = BezierToggleButtonShape.Capsule,
                         onClick = {},
                 )
-                ToggleButton(
+                BezierToggleButton(
                         selected = true,
                         text = "label",
-                        variant = ToggleButtonVariant.Primary,
-                        shape = ToggleButtonShape.Capsule,
+                        variant = BezierToggleButtonVariant.Primary,
+                        shape = BezierToggleButtonShape.Capsule,
                         onClick = {},
                 )
             }
@@ -181,18 +181,18 @@ private fun ToggleButtonPreview() {
             Row(
                     horizontalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                ToggleButton(
+                BezierToggleButton(
                         selected = false,
                         text = "label",
-                        variant = ToggleButtonVariant.Secondary,
-                        shape = ToggleButtonShape.Capsule,
+                        variant = BezierToggleButtonVariant.Secondary,
+                        shape = BezierToggleButtonShape.Capsule,
                         onClick = {},
                 )
-                ToggleButton(
+                BezierToggleButton(
                         selected = true,
                         text = "label",
-                        variant = ToggleButtonVariant.Secondary,
-                        shape = ToggleButtonShape.Capsule,
+                        variant = BezierToggleButtonVariant.Secondary,
+                        shape = BezierToggleButtonShape.Capsule,
                         onClick = {},
                 )
             }
@@ -200,21 +200,21 @@ private fun ToggleButtonPreview() {
             Row(
                     horizontalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                ToggleButton(
+                BezierToggleButton(
                         selected = false,
                         text = "Label",
-                        variant = ToggleButtonVariant.Primary,
-                        shape = ToggleButtonShape.Rectangle,
+                        variant = BezierToggleButtonVariant.Primary,
+                        shape = BezierToggleButtonShape.Rectangle,
                         prefixIcon = BezierIcons.ChevronSmallDown,
                         suffixIcon = BezierIcons.ChevronSmallDown,
                         onClick = {},
                 )
 
-                ToggleButton(
+                BezierToggleButton(
                         selected = true,
                         text = "Label",
-                        variant = ToggleButtonVariant.Primary,
-                        shape = ToggleButtonShape.Rectangle,
+                        variant = BezierToggleButtonVariant.Primary,
+                        shape = BezierToggleButtonShape.Rectangle,
                         prefixIcon = BezierIcons.ChevronSmallDown,
                         suffixIcon = BezierIcons.ChevronSmallDown,
                         onClick = {},

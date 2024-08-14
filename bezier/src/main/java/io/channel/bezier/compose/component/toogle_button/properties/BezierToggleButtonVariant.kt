@@ -6,7 +6,7 @@ import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.color_v2.BezierColor
 
-enum class ToggleButtonVariant(
+enum class BezierToggleButtonVariant(
         internal val borderWidth: Dp,
         internal val selectedBackgroundColor: @Composable () -> BezierColor,
         internal val selectedBorderColor: @Composable () -> BezierColor,
