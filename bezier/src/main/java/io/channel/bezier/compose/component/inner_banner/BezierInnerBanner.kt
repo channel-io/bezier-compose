@@ -67,7 +67,9 @@ fun BezierInnerBanner(
                 modifier = Modifier
                         .padding(top = 6.dp)
                         .size(20.dp),
-                imageVector = icon.imageVector, contentDescription = null, tint = contentColor,
+                imageVector = icon.imageVector,
+                contentDescription = null,
+                tint = contentColor,
         )
         Column(
                 modifier = Modifier
