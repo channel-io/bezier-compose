@@ -34,7 +34,7 @@ import io.channel.bezier.compose.component.floating_button.properties.BezierFloa
 import io.channel.bezier.compose.component.loader.BezierLoader
 import io.channel.bezier.compose.component.loader.properties.BezierLoaderSize
 import io.channel.bezier.compose.component.loader.properties.BezierLoaderVariant
-import io.channel.bezier.compose.foundation.BezierShadowStyle
+import io.channel.bezier.compose.foundation.ShadowStyle
 import io.channel.bezier.compose.foundation.bezierShadow
 import io.channel.bezier.extension.thenIf
 import io.channel.bezier.extension.toEmojiPainter
@@ -62,7 +62,7 @@ fun BezierFloatingButton(
 
     Box(
         modifier = modifier
-            .bezierShadow(BezierShadowStyle.Shadow2, shape)
+            .bezierShadow(ShadowStyle.Shadow2, shape)
             .clip(shape)
             .thenIf(!enabled) {
                 alpha(0.4f)
@@ -132,7 +132,7 @@ private fun BezierFloatingButtonContent(
 
         is BezierFloatingButtonContent.Avatar -> BezierAvatar(
             painter = content.painter,
-            avatarSize = size.avatarSize,
+            size = size.avatarSize,
         )
 
         is BezierFloatingButtonContent.Emoji -> Image(
