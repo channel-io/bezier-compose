@@ -7,6 +7,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.component.avatar.properties.BezierAvatarSize
+import io.channel.bezier.compose.component.loader.properties.BezierLoaderSize
 
 enum class BezierFloatingButtonSize(
         internal val textStyle: @Composable () -> TextStyle,
@@ -15,6 +16,7 @@ enum class BezierFloatingButtonSize(
         internal val iconSize: Dp,
         internal val emojiSize: Dp,
         internal val avatarSize: BezierAvatarSize,
+        internal val loaderSize: BezierLoaderSize,
 ) {
     XSmall(
             textStyle = { BezierTheme.typography.caption2SemiBold },
@@ -23,6 +25,7 @@ enum class BezierFloatingButtonSize(
             iconSize = 16.dp,
             emojiSize = 16.dp,
             avatarSize = BezierAvatarSize.Size16,
+            loaderSize = BezierLoaderSize.XXSmall,
     ),
     Small(
             textStyle = { BezierTheme.typography.caption1SemiBold },
@@ -31,6 +34,7 @@ enum class BezierFloatingButtonSize(
             iconSize = 16.dp,
             emojiSize = 16.dp,
             avatarSize = BezierAvatarSize.Size16,
+            loaderSize = BezierLoaderSize.XSmall,
     ),
     Medium(
             textStyle = { BezierTheme.typography.body2SemiBold },
@@ -39,6 +43,7 @@ enum class BezierFloatingButtonSize(
             iconSize = 20.dp,
             emojiSize = 20.dp,
             avatarSize = BezierAvatarSize.Size20,
+            loaderSize = BezierLoaderSize.XSmall,
     ),
     Large(
             textStyle = { BezierTheme.typography.body1SemiBold },
@@ -47,6 +52,7 @@ enum class BezierFloatingButtonSize(
             iconSize = 20.dp,
             emojiSize = 20.dp,
             avatarSize = BezierAvatarSize.Size20,
+            loaderSize = BezierLoaderSize.XSmall,
     ),
     XLarge(
             textStyle = { BezierTheme.typography.title3SemiBold },
@@ -55,5 +61,6 @@ enum class BezierFloatingButtonSize(
             iconSize = 24.dp,
             emojiSize = 24.dp,
             avatarSize = BezierAvatarSize.Size24,
+            loaderSize = BezierLoaderSize.Small,
     ),
 }
