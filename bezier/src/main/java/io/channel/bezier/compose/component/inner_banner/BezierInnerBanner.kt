@@ -65,7 +65,7 @@ fun BezierInnerBanner(
                         onAction()
                     }
                     .background(backgroundColor)
-                    .padding(start = 12.dp, end = 6.dp, top = 8.dp, bottom = 8.dp),
+                    .padding(start = 12.dp, top = 8.dp, end = 6.dp, bottom = 8.dp),
             horizontalArrangement = Arrangement.spacedBy(6.dp),
     ) {
         Icon(
