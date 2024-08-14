@@ -4,7 +4,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -57,7 +56,6 @@ fun BezierInnerBanner(
 
     Row(
             modifier = modifier
-                    .fillMaxWidth()
                     .clip(RoundedCornerShape(14.dp))
                     .background(backgroundColor)
                     .padding(start = 12.dp, end = 6.dp, top = 8.dp, bottom = 8.dp),
