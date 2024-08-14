@@ -104,10 +104,10 @@ fun BezierInnerBanner(
                 color = BezierIconButtonColor.LightGrey,
                 shape = BezierIconButtonShape.Rectangle,
                 variant = BezierIconButtonVariant.Tertiary,
-                onClick = {
-                    if (actionType == BezierInnerBannerActionType.CloseButton) {
-                        onAction()
-                    }
+                onClick = if (actionType == BezierInnerBannerActionType.CloseButton) {
+                    { onAction() }
+                } else {
+                    null
                 },
         )
     }
