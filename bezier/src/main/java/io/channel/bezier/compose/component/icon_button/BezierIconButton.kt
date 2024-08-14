@@ -42,7 +42,7 @@ fun BezierIconButton(
         variant: BezierIconButtonVariant,
         color: BezierIconButtonColor,
         shape: BezierIconButtonShape,
-        onClick: () -> Unit,
+        onClick: (() -> Unit)?,
         modifier: Modifier = Modifier,
         isLoading: Boolean = false,
         enabled: Boolean = true,
@@ -67,7 +67,7 @@ fun BezierIconButton(
         variant: BezierIconButtonVariant,
         color: BezierIconButtonColor,
         shape: BezierIconButtonShape,
-        onClick: () -> Unit,
+        onClick: (() -> Unit)?,
         modifier: Modifier = Modifier,
         isLoading: Boolean = false,
         enabled: Boolean = true,
@@ -83,7 +83,9 @@ fun BezierIconButton(
                         alpha(0.4f)
                     }
                     .background(backgroundColor)
-                    .clickable(enabled = enabled) { onClick() }
+                    .thenIf(onClick != null) {
+                        clickable(enabled = enabled) { onClick?.invoke() }
+                    }
                     .padding(size.containerPadding),
             contentAlignment = Alignment.Center,
     ) {
