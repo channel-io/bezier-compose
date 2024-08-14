@@ -1,6 +1,7 @@
 package io.channel.bezier.compose.component.inner_banner
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -29,6 +30,7 @@ fun BezierInnerBanner(
         description: String,
         semantic: BezierInnerBannerSemantic,
         actionType: BezierInnerBannerActionType,
+        onAction: () -> Unit,
         modifier: Modifier = Modifier,
         title: String? = null,
 ) {
@@ -37,6 +39,7 @@ fun BezierInnerBanner(
             description = description,
             semantic = semantic,
             actionType = actionType,
+            onAction = onAction,
             modifier = modifier,
             title = title,
     )
@@ -48,6 +51,7 @@ fun BezierInnerBanner(
         description: String,
         semantic: BezierInnerBannerSemantic,
         actionType: BezierInnerBannerActionType,
+        onAction: () -> Unit,
         modifier: Modifier = Modifier,
         title: String? = null,
 ) {
@@ -57,6 +61,9 @@ fun BezierInnerBanner(
     Row(
             modifier = modifier
                     .clip(RoundedCornerShape(14.dp))
+                    .clickable(enabled = actionType == BezierInnerBannerActionType.ChevronIcon) {
+                        onAction()
+                    }
                     .background(backgroundColor)
                     .padding(start = 12.dp, end = 6.dp, top = 8.dp, bottom = 8.dp),
             horizontalArrangement = Arrangement.spacedBy(6.dp),
@@ -97,7 +104,11 @@ fun BezierInnerBanner(
                 color = BezierIconButtonColor.LightGrey,
                 shape = BezierIconButtonShape.Rectangle,
                 variant = BezierIconButtonVariant.Tertiary,
-                onClick = {},
+                onClick = {
+                    if (actionType == BezierInnerBannerActionType.CloseButton) {
+                        onAction()
+                    }
+                },
         )
     }
 }
@@ -115,6 +126,7 @@ private fun BezierInnerBannerSemanticPreview() {
                         description = "description",
                         semantic = semantic,
                         actionType = BezierInnerBannerActionType.CloseButton,
+                        onAction = {},
                         title = "title",
                 )
             }
@@ -135,6 +147,7 @@ private fun BezierInnerBannerActionTypePreview() {
                         description = "description",
                         semantic = BezierInnerBannerSemantic.Info,
                         actionType = actionType,
+                        onAction = {},
                         title = "title",
                 )
             }
@@ -154,6 +167,7 @@ private fun BezierInnerBannerNoTitlePreview() {
                     description = "description",
                     semantic = BezierInnerBannerSemantic.Info,
                     actionType = BezierInnerBannerActionType.CloseButton,
+                    onAction = {},
             )
         }
     }
