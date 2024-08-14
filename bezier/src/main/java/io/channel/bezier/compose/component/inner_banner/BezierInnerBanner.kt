@@ -73,7 +73,7 @@ fun BezierInnerBanner(
                         .padding(top = 6.dp)
                         .size(20.dp),
                 imageVector = icon.imageVector,
-                contentDescription = null,
+                contentDescription = icon.imageVector.name,
                 tint = contentColor,
         )
         Column(
