@@ -1,6 +1,7 @@
 package io.channel.bezier.compose.component.floating_banner
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -12,6 +13,7 @@ import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -25,6 +27,7 @@ import io.channel.bezier.compose.component.icon_button.properties.BezierIconButt
 import io.channel.bezier.compose.component.icon_button.properties.BezierIconButtonShape
 import io.channel.bezier.compose.component.icon_button.properties.BezierIconButtonSize
 import io.channel.bezier.compose.component.icon_button.properties.BezierIconButtonVariant
+import io.channel.bezier.compose.component.inner_banner.properties.BezierInnerBannerActionType
 import io.channel.bezier.compose.foundation.ShadowStyle
 import io.channel.bezier.compose.foundation.bezierShadow
 import io.channel.bezier.icon.InfoFilled
@@ -32,6 +35,7 @@ import io.channel.bezier.icon.InfoFilled
 @Composable
 fun BezierFloatingBanner(
         description: String,
+        onAction: () -> Unit,
         actionType: BezierFloatingBannerActionType,
         modifier: Modifier = Modifier,
         iconColor: BezierColor = BezierTheme.colorSchemes.fgBlackDark,
@@ -44,10 +48,11 @@ fun BezierFloatingBanner(
                             style = ShadowStyle.Shadow3,
                             shape = shape,
                     )
-                    .background(
-                            color = BezierTheme.colorSchemes.bgGreyLighter.color,
-                            shape = shape,
-                    )
+                    .clip(shape)
+                    .background(BezierTheme.colorSchemes.bgGreyLighter.color)
+                    .clickable(enabled = actionType == BezierFloatingBannerActionType.ChevronIcon) {
+                        onAction()
+                    }
                     .padding(8.dp),
     ) {
         Row(
@@ -81,7 +86,11 @@ fun BezierFloatingBanner(
                 variant = BezierIconButtonVariant.Tertiary,
                 color = BezierIconButtonColor.LightGrey,
                 shape = BezierIconButtonShape.Rectangle,
-                onClick = {},
+                onClick = if (actionType == BezierFloatingBannerActionType.CloseButton) {
+                    { onAction() }
+                } else {
+                    null
+                },
         )
     }
 }
@@ -98,6 +107,7 @@ fun BezierFloatingBannerPreview() {
                             .fillMaxWidth()
                             .padding(16.dp),
                     description = "description",
+                    onAction = {},
                     actionType = BezierFloatingBannerActionType.CloseButton,
             )
         }
