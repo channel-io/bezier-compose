@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
+import io.channel.bezier.compose.color_v2.BezierColor
 import io.channel.bezier.compose.component.floating_banner.properties.BezierFloatingBannerActionType
 import io.channel.bezier.compose.component.icon_button.BezierIconButton
 import io.channel.bezier.compose.component.icon_button.properties.BezierIconButtonColor
@@ -30,10 +31,10 @@ import io.channel.bezier.icon.InfoFilled
 
 @Composable
 fun BezierFloatingBanner(
-        icon: BezierIcon,
         description: String,
         actionType: BezierFloatingBannerActionType,
         modifier: Modifier = Modifier,
+        iconColor: BezierColor = BezierTheme.colorSchemes.fgBlackDark,
 ) {
     val shape = RoundedCornerShape(14.dp)
 
@@ -59,9 +60,9 @@ fun BezierFloatingBanner(
                     modifier = Modifier
                             .padding(vertical = 6.dp)
                             .size(20.dp),
-                    imageVector = icon.imageVector,
-                    contentDescription = icon.imageVector.name,
-                    tint = BezierTheme.colorSchemes.fgBlackDark.color,
+                    imageVector = BezierIcons.InfoFilled.imageVector,
+                    contentDescription = BezierIcons.InfoFilled.imageVector.name,
+                    tint = iconColor.color,
             )
 
             Text(
@@ -96,7 +97,6 @@ fun BezierFloatingBannerPreview() {
                     modifier = Modifier
                             .fillMaxWidth()
                             .padding(16.dp),
-                    icon = BezierIcons.InfoFilled,
                     description = "description",
                     actionType = BezierFloatingBannerActionType.CloseButton,
             )
