@@ -131,7 +131,7 @@ fun BezierAvatar(
                 contentDescription = null,
         )
 
-        if (isEllipsis) {
+        if (isEllipsis && size.shouldShowEllipsisIcon) {
             Box(
                     modifier = Modifier
                             .fillMaxSize()

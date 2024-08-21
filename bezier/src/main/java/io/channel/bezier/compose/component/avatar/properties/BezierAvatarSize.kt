@@ -97,5 +97,8 @@ enum class BezierAvatarSize(
             chatBadgeSize = BezierChatBadgeSize.Large,
             integrationBadgeSize = DefaultIntegrationBadgeSize,
             badgeOffset = (-2).dp,
-    ),
+    );
+
+    val shouldShowEllipsisIcon: Boolean
+        get() = this == Size24
 }
