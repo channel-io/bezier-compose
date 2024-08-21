@@ -7,10 +7,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -32,7 +30,7 @@ import io.channel.bezier.compose.component.floating_icon_button.properties.Bezie
 import io.channel.bezier.compose.component.loader.BezierLoader
 import io.channel.bezier.compose.component.loader.properties.BezierLoaderSize
 import io.channel.bezier.compose.component.loader.properties.BezierLoaderVariant
-import io.channel.bezier.compose.foundation.BezierShadowStyle
+import io.channel.bezier.compose.foundation.ShadowStyle
 import io.channel.bezier.compose.foundation.bezierShadow
 import io.channel.bezier.extension.thenIf
 import io.channel.bezier.extension.toEmojiPainter
@@ -58,7 +56,7 @@ fun BezierFloatingIconButton(
 
     Box(
             modifier = modifier
-                    .bezierShadow(BezierShadowStyle.Shadow2, createdShape)
+                    .bezierShadow(ShadowStyle.Shadow2, createdShape)
                     .clip(createdShape)
                     .thenIf(!enabled) {
                         alpha(0.4f)
@@ -107,7 +105,7 @@ private fun BezierFloatingIconButtonContent(
 
         is BezierFloatingIconButtonContent.Avatar -> BezierAvatar(
                 painter = content.painter,
-                avatarSize = size.avatarSize,
+                size = size.avatarSize,
         )
 
         is BezierFloatingIconButtonContent.Emoji -> Image(
@@ -118,13 +116,12 @@ private fun BezierFloatingIconButtonContent(
     }
 }
 
-
 @Composable
 @Preview(
         showBackground = true,
         widthDp = 500,
 )
-private fun BezierIconButtonRectanglePreview() {
+private fun BezierFloatingIconButtonRectanglePreview() {
     BezierTheme {
         Column(
                 modifier = Modifier
