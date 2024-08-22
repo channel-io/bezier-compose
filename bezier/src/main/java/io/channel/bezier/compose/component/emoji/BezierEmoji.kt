@@ -1,5 +1,6 @@
 package io.channel.bezier.compose.component.emoji
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -28,7 +29,7 @@ fun BezierEmoji(
     Box(
             modifier = modifier,
     ) {
-        Icon(
+        Image(
                 modifier = Modifier.size(size.size),
                 painter = name.toEmojiPainter,
                 contentDescription = null,
