@@ -1,6 +1,7 @@
 package io.channel.bezier.compose.component.avatar
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -10,6 +11,7 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
+import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -19,6 +21,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
+import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
 import io.channel.bezier.compose.component.avatar.properties.BezierAvatarBadge
@@ -27,6 +30,7 @@ import io.channel.bezier.compose.component.badge.chat.BezierChatBadge
 import io.channel.bezier.compose.component.badge.status.BezierStatusBadge
 import io.channel.bezier.extension.outlineBorder
 import io.channel.bezier.extension.thenIf
+import io.channel.bezier.icon.More
 import io.channel.bezier.shape.SmoothRoundedCornerShape
 
 internal const val AvatarRadiusFraction = 42
@@ -40,6 +44,7 @@ fun BezierAvatar(
         modifier: Modifier = Modifier,
         showBorder: Boolean = false,
         errorPainter: Painter = painterResource(id = R.drawable.unknown),
+        isEllipsis: Boolean = false,
 ) {
     BezierAvatar(
             url = url,
@@ -48,6 +53,7 @@ fun BezierAvatar(
             showBorder = showBorder,
             badge = BezierAvatarBadge.Status(isOnline = isOnline, doNotDisturb = doNotDisturb),
             errorPainter = errorPainter,
+            isEllipsis = isEllipsis,
     )
 }
 
@@ -59,6 +65,7 @@ fun BezierAvatar(
         showBorder: Boolean = false,
         badge: BezierAvatarBadge = BezierAvatarBadge.None,
         errorPainter: Painter = painterResource(id = R.drawable.unknown),
+        isEllipsis: Boolean = false,
 ) {
     val painter = rememberAsyncImagePainter(
             model = url,
@@ -71,6 +78,7 @@ fun BezierAvatar(
             modifier = modifier,
             showBorder = showBorder,
             badge = badge,
+            isEllipsis = isEllipsis,
     )
 }
 
@@ -82,6 +90,7 @@ fun BezierAvatar(
         doNotDisturb: Boolean,
         modifier: Modifier = Modifier,
         showBorder: Boolean = false,
+        isEllipsis: Boolean = false,
 ) {
     BezierAvatar(
             painter = painter,
@@ -89,6 +98,7 @@ fun BezierAvatar(
             modifier = modifier,
             showBorder = showBorder,
             badge = BezierAvatarBadge.Status(isOnline = isOnline, doNotDisturb = doNotDisturb),
+            isEllipsis = isEllipsis,
     )
 }
 
@@ -99,6 +109,7 @@ fun BezierAvatar(
         modifier: Modifier = Modifier,
         showBorder: Boolean = false,
         badge: BezierAvatarBadge = BezierAvatarBadge.None,
+        isEllipsis: Boolean = false,
 ) {
     val avatarShape = SmoothRoundedCornerShape(AvatarRadiusFraction)
 
@@ -119,6 +130,22 @@ fun BezierAvatar(
                 painter = painter,
                 contentDescription = null,
         )
+
+        if (isEllipsis && size.shouldShowEllipsisIcon) {
+            Box(
+                    modifier = Modifier
+                            .fillMaxSize()
+                            .background(BezierTheme.colorSchemes.dimBlackLight.color, avatarShape),
+                    contentAlignment = Alignment.Center,
+            ) {
+                Icon(
+                        modifier = Modifier.size(16.dp),
+                        imageVector = BezierIcons.More.imageVector,
+                        contentDescription = BezierIcons.More.imageVector.name,
+                        tint = BezierTheme.colorSchemes.fgAbsoluteWhiteDark.color,
+                )
+            }
+        }
 
         Box(
                 modifier = Modifier
