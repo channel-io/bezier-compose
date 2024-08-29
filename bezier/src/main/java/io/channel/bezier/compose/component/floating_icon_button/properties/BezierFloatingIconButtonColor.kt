@@ -81,11 +81,11 @@ enum class BezierFloatingIconButtonColor(
     DarkGrey(
             primaryColorSchemes = BezierFloatingButtonColorSchemes(
                     backgroundColor = { BezierTheme.colorSchemes.bgGreyDarkest },
-                    contentColor = { BezierTheme.colorSchemes.fgAbsoluteWhiteDark },
+                    contentColor = { BezierTheme.colorSchemes.fgWhiteNormal },
             ),
             secondaryColorSchemes = BezierFloatingButtonColorSchemes(
                     backgroundColor = { BezierTheme.colorSchemes.bgWhiteHigher },
-                    contentColor = { BezierTheme.colorSchemes.fgBlackDarkest },
+                    contentColor = { BezierTheme.colorSchemes.fgBlackDarker },
             ),
     ),
     LightGrey(
@@ -95,7 +95,7 @@ enum class BezierFloatingIconButtonColor(
             ),
             secondaryColorSchemes = BezierFloatingButtonColorSchemes(
                     backgroundColor = { BezierTheme.colorSchemes.bgWhiteHigher },
-                    contentColor = { BezierTheme.colorSchemes.fgBlackDarker },
+                    contentColor = { BezierTheme.colorSchemes.fgBlackDark },
             ),
     );
 
