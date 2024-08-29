@@ -8,7 +8,9 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
@@ -53,14 +55,14 @@ fun BezierFloatingIconButton(
 
     Box(
             modifier = modifier
+                    .requiredSize(size.contentSize)
                     .bezierShadow(ShadowStyle.Shadow2, CircleShape)
                     .clip(CircleShape)
                     .thenIf(!enabled) {
                         alpha(0.4f)
                     }
                     .background(backgroundColor)
-                    .clickable(enabled = enabled) { onClick() }
-                    .padding(size.containerPadding),
+                    .clickable(enabled = enabled) { onClick() },
             contentAlignment = Alignment.Center,
     ) {
         if (isLoading) {
@@ -122,20 +124,27 @@ private fun BezierIconButtonPreview() {
     BezierTheme {
         Column(
                 modifier = Modifier.padding(8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
             BezierFloatingIconButtonVariant.entries.forEach { variant ->
-                Row(
-                        horizontalArrangement = Arrangement.spacedBy(4.dp),
-                ) {
-                    BezierFloatingIconButtonColor.entries.forEach { color ->
-                        BezierFloatingIconButton(
-                                content = BezierFloatingIconButtonContent.Icon(BezierIcons.Plus),
-                                size = BezierFloatingIconButtonSize.Medium,
-                                variant = variant,
-                                color = color,
-                                onClick = { },
-                        )
+                BezierFloatingIconButtonSize.entries.forEach { size ->
+                    Row(
+                            horizontalArrangement = Arrangement.spacedBy(4.dp),
+                    ) {
+                        BezierFloatingIconButtonColor.entries.forEach { color ->
+                            Box(
+                                    modifier = Modifier.width(BezierFloatingIconButtonSize.XLarge.contentSize),
+                                    contentAlignment = Alignment.Center,
+                            ) {
+                                BezierFloatingIconButton(
+                                        content = BezierFloatingIconButtonContent.Icon(BezierIcons.Plus),
+                                        size = size,
+                                        variant = variant,
+                                        color = color,
+                                        onClick = { },
+                                )
+                            }
+                        }
                     }
                 }
             }
