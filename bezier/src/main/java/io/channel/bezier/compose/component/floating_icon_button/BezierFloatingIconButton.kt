@@ -72,12 +72,11 @@ fun BezierFloatingIconButton(
             )
         }
 
-        Row(
+        Box(
                 modifier = Modifier
                         .thenIf(isLoading) {
                             alpha(0f)
                         },
-                verticalAlignment = Alignment.CenterVertically,
         ) {
             BezierFloatingIconButtonContent(
                     content = content,
