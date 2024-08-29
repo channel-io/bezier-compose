@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -24,7 +25,6 @@ import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.component.avatar.BezierAvatar
 import io.channel.bezier.compose.component.floating_icon_button.properties.BezierFloatingIconButtonColor
 import io.channel.bezier.compose.component.floating_icon_button.properties.BezierFloatingIconButtonContent
-import io.channel.bezier.compose.component.floating_icon_button.properties.BezierFloatingIconButtonShape
 import io.channel.bezier.compose.component.floating_icon_button.properties.BezierFloatingIconButtonSize
 import io.channel.bezier.compose.component.floating_icon_button.properties.BezierFloatingIconButtonVariant
 import io.channel.bezier.compose.component.loader.BezierLoader
@@ -42,7 +42,6 @@ fun BezierFloatingIconButton(
         size: BezierFloatingIconButtonSize,
         variant: BezierFloatingIconButtonVariant,
         color: BezierFloatingIconButtonColor,
-        shape: BezierFloatingIconButtonShape,
         onClick: () -> Unit,
         modifier: Modifier = Modifier,
         isLoading: Boolean = false,
@@ -52,12 +51,10 @@ fun BezierFloatingIconButton(
     val backgroundColor = colorSchemes.backgroundColor().color
     val contentColor = colorSchemes.contentColor().color
 
-    val createdShape = shape.createShape(size)
-
     Box(
             modifier = modifier
-                    .bezierShadow(ShadowStyle.Shadow2, createdShape)
-                    .clip(createdShape)
+                    .bezierShadow(ShadowStyle.Shadow2, CircleShape)
+                    .clip(CircleShape)
                     .thenIf(!enabled) {
                         alpha(0.4f)
                     }
@@ -121,40 +118,7 @@ private fun BezierFloatingIconButtonContent(
         showBackground = true,
         widthDp = 500,
 )
-private fun BezierFloatingIconButtonRectanglePreview() {
-    BezierTheme {
-        Column(
-                modifier = Modifier
-                        .background(Color.White)
-                        .padding(8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            BezierFloatingIconButtonVariant.entries.forEach { variant ->
-                Row(
-                        horizontalArrangement = Arrangement.spacedBy(4.dp),
-                ) {
-                    BezierFloatingIconButtonColor.entries.forEach { color ->
-                        BezierFloatingIconButton(
-                                content = BezierFloatingIconButtonContent.Icon(BezierIcons.Plus),
-                                size = BezierFloatingIconButtonSize.Medium,
-                                variant = variant,
-                                color = color,
-                                shape = BezierFloatingIconButtonShape.Rectangle,
-                                onClick = { },
-                        )
-                    }
-                }
-            }
-        }
-    }
-}
-
-@Composable
-@Preview(
-        showBackground = true,
-        widthDp = 500,
-)
-private fun BezierIconButtonCirclePreview() {
+private fun BezierIconButtonPreview() {
     BezierTheme {
         Column(
                 modifier = Modifier.padding(8.dp),
@@ -170,7 +134,6 @@ private fun BezierIconButtonCirclePreview() {
                                 size = BezierFloatingIconButtonSize.Medium,
                                 variant = variant,
                                 color = color,
-                                shape = BezierFloatingIconButtonShape.Circle,
                                 onClick = { },
                         )
                     }
