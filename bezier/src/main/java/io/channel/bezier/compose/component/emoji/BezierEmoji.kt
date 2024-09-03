@@ -5,9 +5,9 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
-import androidx.compose.foundation.layout.size
-import androidx.compose.material.Icon
+import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -27,10 +27,11 @@ fun BezierEmoji(
         badge: BezierEmojiBadge = BezierEmojiBadge.None,
 ) {
     Box(
-            modifier = modifier,
+            modifier = modifier
+                    .requiredSize(size.size),
     ) {
         Image(
-                modifier = Modifier.size(size.size),
+                modifier = Modifier.fillMaxSize(),
                 painter = name.toEmojiPainter,
                 contentDescription = null,
         )
