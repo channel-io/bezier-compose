@@ -31,9 +31,9 @@ fun BezierToggleEmojiButton(
         selected: Boolean,
         name: String,
         variant: BezierToggleEmojiButtonVariant,
+        onClick: () -> Unit,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
-        onClick: () -> Unit,
 ) {
     val colorSchemes = variant.getColorSchemes(selected)
 
