@@ -90,14 +90,14 @@ private fun BezierToggleEmojiButtonPreview() {
             ) {
                 BezierToggleEmojiButton(
                         selected = checked1,
-                        name = "",
+                        name = "ghost",
                         variant = BezierToggleEmojiButtonVariant.Primary,
                         onClick = { checked1 = !checked1 },
                 )
 
                 BezierToggleEmojiButton(
                         selected = checked2,
-                        name = "",
+                        name = "innocent",
                         variant = BezierToggleEmojiButtonVariant.Primary,
                         onClick = { checked2 = !checked2 },
                 )
@@ -108,14 +108,14 @@ private fun BezierToggleEmojiButtonPreview() {
             ) {
                 BezierToggleEmojiButton(
                         selected = checked3,
-                        name = "",
+                        name = "thinking_face",
                         variant = BezierToggleEmojiButtonVariant.Secondary,
                         onClick = { checked3 = !checked3 },
                 )
 
                 BezierToggleEmojiButton(
                         selected = checked4,
-                        name = "",
+                        name = "+1",
                         variant = BezierToggleEmojiButtonVariant.Secondary,
                         onClick = { checked4 = !checked4 },
                 )
