@@ -1,4 +1,4 @@
-package io.channel.bezier.compose.component.toggle_emoji_button.properties
+package io.channel.bezier.compose.component.toggle_emoji_button_group.source.toggle_emoji_button.properties
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.Dp
