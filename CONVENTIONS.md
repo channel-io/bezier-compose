@@ -200,7 +200,7 @@ internal fun getBackgroundColor(color: BezierButtonColor, variant: BezierButtonV
 
 접근 제한
 
-- 디자인 시스템에서 사용하는 property는 전부 internal 접근 제한자를 붙입니다.
+- 디자인 시스템에서 사용하는 property는 전부 internal 혹은 private 접근 제한자를 붙입니다.
 - Preview는 private 접근 제한자를 붙입니다.
 
 ```kotlin
@@ -209,13 +209,13 @@ enum class BezierButtonColor(
     internal val backgroundColor: @Composable () -> BezierColor,
 )
 
+enum class BezierButtonColor(
+    private val backgroundColor: @Composable () -> BezierColor,
+)
+
 // Don't
 enum class BezierButtonColor(
     val backgroundColor: @Composable () -> BezierColor,
-)
-
-enum class BezierButtonColor(
-    private val backgroundColor: @Composable () -> BezierColor,
 )
 ```
 
