@@ -1,4 +1,4 @@
-package io.channel.bezier.compose.component.toggle_emoji_button
+package io.channel.bezier.compose.component.toggle_emoji_button_group.source.toggle_emoji_button
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.component.emoji.BezierEmoji
 import io.channel.bezier.compose.component.emoji.properties.BezierEmojiSize
-import io.channel.bezier.compose.component.toggle_emoji_button.properties.BezierToggleEmojiButtonVariant
+import io.channel.bezier.compose.component.toggle_emoji_button_group.source.toggle_emoji_button.properties.BezierToggleEmojiButtonVariant
 
 @Composable
 fun BezierToggleEmojiButton(
