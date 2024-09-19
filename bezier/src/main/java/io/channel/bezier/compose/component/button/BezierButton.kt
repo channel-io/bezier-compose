@@ -131,13 +131,11 @@ private fun BezierButtonContent(
                 size = size.emojiSize,
         )
 
-        is BezierButtonContent.Slot -> {
-            Box(
-                    modifier = Modifier
-                            .size(size.slotSize),
-            ) {
-                content.content()
-            }
+        is BezierButtonContent.Slot -> Box(
+                modifier = Modifier
+                        .size(size.slotSize),
+        ) {
+            content.content()
         }
     }
 }
