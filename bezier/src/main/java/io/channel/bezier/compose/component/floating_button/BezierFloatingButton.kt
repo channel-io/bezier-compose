@@ -1,6 +1,5 @@
 package io.channel.bezier.compose.component.floating_button
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -27,6 +26,7 @@ import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
 import io.channel.bezier.compose.component.avatar.BezierAvatar
+import io.channel.bezier.compose.component.emoji.BezierEmoji
 import io.channel.bezier.compose.component.floating_button.properties.BezierFloatingButtonColor
 import io.channel.bezier.compose.component.floating_button.properties.BezierFloatingButtonContent
 import io.channel.bezier.compose.component.floating_button.properties.BezierFloatingButtonSize
@@ -36,22 +36,21 @@ import io.channel.bezier.compose.component.loader.properties.BezierLoaderVariant
 import io.channel.bezier.compose.foundation.ShadowStyle
 import io.channel.bezier.compose.foundation.bezierShadow
 import io.channel.bezier.extension.thenIf
-import io.channel.bezier.extension.toEmojiPainter
 import io.channel.bezier.icon.ArrowRight
 import io.channel.bezier.icon.Plus
 
 @Composable
 fun BezierFloatingButton(
-    text: String,
-    size: BezierFloatingButtonSize,
-    variant: BezierFloatingButtonVariant,
-    color: BezierFloatingButtonColor,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-    prefixContent: BezierFloatingButtonContent? = null,
-    suffixContent: BezierFloatingButtonContent? = null,
-    isLoading: Boolean = false,
-    enabled: Boolean = true,
+        text: String,
+        size: BezierFloatingButtonSize,
+        variant: BezierFloatingButtonVariant,
+        color: BezierFloatingButtonColor,
+        onClick: () -> Unit,
+        modifier: Modifier = Modifier,
+        prefixContent: BezierFloatingButtonContent? = null,
+        suffixContent: BezierFloatingButtonContent? = null,
+        isLoading: Boolean = false,
+        enabled: Boolean = true,
 ) {
     val colorSchemes = color.getColorSchemes(variant)
     val backgroundColor = colorSchemes.backgroundColor().color
@@ -60,55 +59,55 @@ fun BezierFloatingButton(
     val shape = RoundedCornerShape(100.dp)
 
     Box(
-        modifier = modifier
-            .bezierShadow(ShadowStyle.Shadow2, shape)
-            .clip(shape)
-            .thenIf(!enabled) {
-                alpha(0.4f)
-            }
-            .background(backgroundColor)
-            .clickable(enabled = enabled) { onClick() }
-            .padding(size.containerPadding),
-        contentAlignment = Alignment.Center,
+            modifier = modifier
+                    .bezierShadow(ShadowStyle.Shadow2, shape)
+                    .clip(shape)
+                    .thenIf(!enabled) {
+                        alpha(0.4f)
+                    }
+                    .background(backgroundColor)
+                    .clickable(enabled = enabled) { onClick() }
+                    .padding(size.containerPadding),
+            contentAlignment = Alignment.Center,
     ) {
         if (isLoading) {
             BezierLoader(
-                variant = BezierLoaderVariant.OnOverlay,
-                size = size.loaderSize,
+                    variant = BezierLoaderVariant.OnOverlay,
+                    size = size.loaderSize,
             )
         }
 
         Row(
-            modifier = Modifier
-                .thenIf(isLoading) {
-                    alpha(0f)
-                },
-            verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier
+                        .thenIf(isLoading) {
+                            alpha(0f)
+                        },
+                verticalAlignment = Alignment.CenterVertically,
         ) {
             if (prefixContent != null) {
                 BezierFloatingButtonContent(
-                    content = prefixContent,
-                    size = size,
-                    contentColor = contentColor,
+                        content = prefixContent,
+                        size = size,
+                        contentColor = contentColor,
                 )
             }
 
             Text(
-                modifier = Modifier
-                    .padding(size.textPadding)
-                    .weight(1f, fill = false),
-                text = text,
-                style = size.textStyle(),
-                color = contentColor,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier
+                            .padding(size.textPadding)
+                            .weight(1f, fill = false),
+                    text = text,
+                    style = size.textStyle(),
+                    color = contentColor,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
             )
 
             if (suffixContent != null) {
                 BezierFloatingButtonContent(
-                    content = suffixContent,
-                    size = size,
-                    contentColor = contentColor,
+                        content = suffixContent,
+                        size = size,
+                        contentColor = contentColor,
                 )
             }
         }
@@ -117,57 +116,63 @@ fun BezierFloatingButton(
 
 @Composable
 private fun BezierFloatingButtonContent(
-    content: BezierFloatingButtonContent,
-    size: BezierFloatingButtonSize,
-    contentColor: Color,
+        content: BezierFloatingButtonContent,
+        size: BezierFloatingButtonSize,
+        contentColor: Color,
 ) {
     when (content) {
         is BezierFloatingButtonContent.Icon -> Icon(
-            modifier = Modifier.size(size.iconSize),
-            painter = rememberVectorPainter(content.icon.imageVector),
-            contentDescription = null,
-            tint = contentColor,
+                modifier = Modifier.size(size.iconSize),
+                painter = rememberVectorPainter(content.icon.imageVector),
+                contentDescription = null,
+                tint = contentColor,
         )
 
         is BezierFloatingButtonContent.Avatar -> BezierAvatar(
-            painter = content.painter,
-            size = size.avatarSize,
+                painter = content.painter,
+                size = size.avatarSize,
         )
 
-        is BezierFloatingButtonContent.Emoji -> Image(
-            modifier = Modifier.size(size.emojiSize),
-            painter = content.name.toEmojiPainter,
-            contentDescription = content.name,
+        is BezierFloatingButtonContent.Emoji -> BezierEmoji(
+                name = content.name,
+                size = size.emojiSize,
         )
+
+        is BezierFloatingButtonContent.Slot -> Box(
+                modifier = Modifier
+                        .size(size.slotSize),
+        ) {
+            content.content()
+        }
     }
 }
 
 @Composable
 @Preview(
-    showBackground = true,
-    widthDp = 1200,
+        showBackground = true,
+        widthDp = 1200,
 )
 private fun BezierFloatingButtonStylePreview() {
     BezierTheme {
         Column(
-            modifier = Modifier
-                .background(Color.White)
-                .padding(8.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
+                modifier = Modifier
+                        .background(Color.White)
+                        .padding(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             BezierFloatingButtonVariant.entries.forEach { variant ->
                 Row(
-                    horizontalArrangement = Arrangement.spacedBy(4.dp),
+                        horizontalArrangement = Arrangement.spacedBy(4.dp),
                 ) {
                     BezierFloatingButtonColor.entries.forEach { color ->
                         BezierFloatingButton(
-                            text = "Label",
-                            size = BezierFloatingButtonSize.Medium,
-                            variant = variant,
-                            color = color,
-                            prefixContent = BezierFloatingButtonContent.Icon(BezierIcons.Plus),
-                            suffixContent = BezierFloatingButtonContent.Icon(BezierIcons.ArrowRight),
-                            onClick = { },
+                                text = "Label",
+                                size = BezierFloatingButtonSize.Medium,
+                                variant = variant,
+                                color = color,
+                                prefixContent = BezierFloatingButtonContent.Icon(BezierIcons.Plus),
+                                suffixContent = BezierFloatingButtonContent.Icon(BezierIcons.ArrowRight),
+                                onClick = { },
                         )
                     }
                 }
@@ -181,18 +186,18 @@ private fun BezierFloatingButtonStylePreview() {
 private fun BezierFloatingButtonSizePreview() {
     BezierTheme {
         Column(
-            modifier = Modifier.padding(8.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
+                modifier = Modifier.padding(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             BezierFloatingButtonSize.entries.forEach { size ->
                 BezierFloatingButton(
-                    text = "Label",
-                    size = size,
-                    variant = BezierFloatingButtonVariant.Primary,
-                    color = BezierFloatingButtonColor.Blue,
-                    prefixContent = BezierFloatingButtonContent.Icon(BezierIcons.Plus),
-                    suffixContent = BezierFloatingButtonContent.Icon(BezierIcons.ArrowRight),
-                    onClick = { },
+                        text = "Label",
+                        size = size,
+                        variant = BezierFloatingButtonVariant.Primary,
+                        color = BezierFloatingButtonColor.Blue,
+                        prefixContent = BezierFloatingButtonContent.Icon(BezierIcons.Plus),
+                        suffixContent = BezierFloatingButtonContent.Icon(BezierIcons.ArrowRight),
+                        onClick = { },
                 )
             }
         }
@@ -204,11 +209,28 @@ private fun BezierFloatingButtonSizePreview() {
 private fun BezierFloatingButtonOnlyTextPreview() {
     BezierTheme {
         BezierFloatingButton(
-            text = "Label",
-            size = BezierFloatingButtonSize.Medium,
-            variant = BezierFloatingButtonVariant.Primary,
-            color = BezierFloatingButtonColor.Blue,
-            onClick = { },
+                text = "Label",
+                size = BezierFloatingButtonSize.Medium,
+                variant = BezierFloatingButtonVariant.Primary,
+                color = BezierFloatingButtonColor.Blue,
+                onClick = { },
+        )
+    }
+}
+
+@Composable
+@Preview(showBackground = true)
+private fun BezierFloatingButtonSlotPreview() {
+    BezierTheme {
+        BezierFloatingButton(
+                text = "Label",
+                size = BezierFloatingButtonSize.Medium,
+                variant = BezierFloatingButtonVariant.Primary,
+                color = BezierFloatingButtonColor.Blue,
+                onClick = { },
+                prefixContent = BezierFloatingButtonContent.Slot {
+                    Text(text = "SLOT")
+                }
         )
     }
 }
@@ -218,13 +240,13 @@ private fun BezierFloatingButtonOnlyTextPreview() {
 private fun BezierFloatingButtonOtherContentsPreview() {
     BezierTheme {
         BezierFloatingButton(
-            text = "Label",
-            size = BezierFloatingButtonSize.Medium,
-            variant = BezierFloatingButtonVariant.Primary,
-            color = BezierFloatingButtonColor.Blue,
-            onClick = { },
-            prefixContent = BezierFloatingButtonContent.Avatar(painterResource(id = R.drawable.unknown)),
-            suffixContent = BezierFloatingButtonContent.Emoji("smile")
+                text = "Label",
+                size = BezierFloatingButtonSize.Medium,
+                variant = BezierFloatingButtonVariant.Primary,
+                color = BezierFloatingButtonColor.Blue,
+                onClick = { },
+                prefixContent = BezierFloatingButtonContent.Avatar(painterResource(id = R.drawable.unknown)),
+                suffixContent = BezierFloatingButtonContent.Emoji("smile"),
         )
     }
 }
@@ -234,14 +256,14 @@ private fun BezierFloatingButtonOtherContentsPreview() {
 private fun BezierFloatingButtonLoadingPreview() {
     BezierTheme {
         BezierFloatingButton(
-            text = "Label",
-            size = BezierFloatingButtonSize.Large,
-            variant = BezierFloatingButtonVariant.Primary,
-            color = BezierFloatingButtonColor.Blue,
-            onClick = { },
-            prefixContent = BezierFloatingButtonContent.Icon(BezierIcons.Plus),
-            suffixContent = BezierFloatingButtonContent.Icon(BezierIcons.ArrowRight),
-            isLoading = true,
+                text = "Label",
+                size = BezierFloatingButtonSize.Large,
+                variant = BezierFloatingButtonVariant.Primary,
+                color = BezierFloatingButtonColor.Blue,
+                onClick = { },
+                prefixContent = BezierFloatingButtonContent.Icon(BezierIcons.Plus),
+                suffixContent = BezierFloatingButtonContent.Icon(BezierIcons.ArrowRight),
+                isLoading = true,
         )
     }
 }
@@ -251,29 +273,29 @@ private fun BezierFloatingButtonLoadingPreview() {
 private fun BezierFloatingButtonEnabledPreview() {
     BezierTheme {
         Column(
-            modifier = Modifier.padding(8.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
+                modifier = Modifier.padding(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             BezierFloatingButton(
-                text = "Label",
-                size = BezierFloatingButtonSize.Large,
-                variant = BezierFloatingButtonVariant.Primary,
-                color = BezierFloatingButtonColor.Blue,
-                onClick = { },
-                prefixContent = BezierFloatingButtonContent.Icon(BezierIcons.Plus),
-                suffixContent = BezierFloatingButtonContent.Icon(BezierIcons.ArrowRight),
-                enabled = true,
+                    text = "Label",
+                    size = BezierFloatingButtonSize.Large,
+                    variant = BezierFloatingButtonVariant.Primary,
+                    color = BezierFloatingButtonColor.Blue,
+                    onClick = { },
+                    prefixContent = BezierFloatingButtonContent.Icon(BezierIcons.Plus),
+                    suffixContent = BezierFloatingButtonContent.Icon(BezierIcons.ArrowRight),
+                    enabled = true,
             )
 
             BezierFloatingButton(
-                text = "Label",
-                size = BezierFloatingButtonSize.Large,
-                variant = BezierFloatingButtonVariant.Primary,
-                color = BezierFloatingButtonColor.Blue,
-                onClick = { },
-                prefixContent = BezierFloatingButtonContent.Icon(BezierIcons.Plus),
-                suffixContent = BezierFloatingButtonContent.Icon(BezierIcons.ArrowRight),
-                enabled = false,
+                    text = "Label",
+                    size = BezierFloatingButtonSize.Large,
+                    variant = BezierFloatingButtonVariant.Primary,
+                    color = BezierFloatingButtonColor.Blue,
+                    onClick = { },
+                    prefixContent = BezierFloatingButtonContent.Icon(BezierIcons.Plus),
+                    suffixContent = BezierFloatingButtonContent.Icon(BezierIcons.ArrowRight),
+                    enabled = false,
             )
         }
     }

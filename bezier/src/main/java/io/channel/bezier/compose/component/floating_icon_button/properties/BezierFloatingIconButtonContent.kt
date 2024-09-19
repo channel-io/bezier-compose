@@ -20,8 +20,8 @@ sealed interface BezierFloatingIconButtonContent {
         constructor(url: String, error: Painter? = null) {
             _painter = {
                 rememberAsyncImagePainter(
-                    model = url,
-                    error = error ?: painterResource(id = R.drawable.unknown),
+                        model = url,
+                        error = error ?: painterResource(id = R.drawable.unknown),
                 )
             }
         }
@@ -32,4 +32,5 @@ sealed interface BezierFloatingIconButtonContent {
     }
 
     data class Emoji(val name: String) : BezierFloatingIconButtonContent
+    data class Slot(val content: @Composable () -> Unit) : BezierFloatingIconButtonContent
 }

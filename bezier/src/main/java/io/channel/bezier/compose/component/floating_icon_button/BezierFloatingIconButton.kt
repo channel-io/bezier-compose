@@ -1,6 +1,5 @@
 package io.channel.bezier.compose.component.floating_icon_button
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -25,17 +24,16 @@ import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.component.avatar.BezierAvatar
+import io.channel.bezier.compose.component.emoji.BezierEmoji
 import io.channel.bezier.compose.component.floating_icon_button.properties.BezierFloatingIconButtonColor
 import io.channel.bezier.compose.component.floating_icon_button.properties.BezierFloatingIconButtonContent
 import io.channel.bezier.compose.component.floating_icon_button.properties.BezierFloatingIconButtonSize
 import io.channel.bezier.compose.component.floating_icon_button.properties.BezierFloatingIconButtonVariant
 import io.channel.bezier.compose.component.loader.BezierLoader
-import io.channel.bezier.compose.component.loader.properties.BezierLoaderSize
 import io.channel.bezier.compose.component.loader.properties.BezierLoaderVariant
 import io.channel.bezier.compose.foundation.ShadowStyle
 import io.channel.bezier.compose.foundation.bezierShadow
 import io.channel.bezier.extension.thenIf
-import io.channel.bezier.extension.toEmojiPainter
 import io.channel.bezier.icon.Plus
 
 @Composable
@@ -68,7 +66,7 @@ fun BezierFloatingIconButton(
         if (isLoading) {
             BezierLoader(
                     variant = BezierLoaderVariant.OnOverlay,
-                    size = BezierLoaderSize.Small,
+                    size = size.loaderSize,
             )
         }
 
@@ -106,11 +104,17 @@ private fun BezierFloatingIconButtonContent(
                 size = size.avatarSize,
         )
 
-        is BezierFloatingIconButtonContent.Emoji -> Image(
-                modifier = Modifier.size(size.emojiSize),
-                painter = content.name.toEmojiPainter,
-                contentDescription = content.name,
+        is BezierFloatingIconButtonContent.Emoji -> BezierEmoji(
+                name = content.name,
+                size = size.emojiSize,
         )
+
+        is BezierFloatingIconButtonContent.Slot -> Box(
+                modifier = Modifier
+                        .size(size.slotSize),
+        ) {
+            content.content()
+        }
     }
 }
 

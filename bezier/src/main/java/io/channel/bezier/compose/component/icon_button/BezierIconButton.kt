@@ -1,6 +1,5 @@
 package io.channel.bezier.compose.component.icon_button
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -23,16 +22,15 @@ import io.channel.bezier.BezierIcon
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.component.avatar.BezierAvatar
+import io.channel.bezier.compose.component.emoji.BezierEmoji
 import io.channel.bezier.compose.component.icon_button.properties.BezierIconButtonColor
 import io.channel.bezier.compose.component.icon_button.properties.BezierIconButtonContent
 import io.channel.bezier.compose.component.icon_button.properties.BezierIconButtonShape
 import io.channel.bezier.compose.component.icon_button.properties.BezierIconButtonSize
 import io.channel.bezier.compose.component.icon_button.properties.BezierIconButtonVariant
 import io.channel.bezier.compose.component.loader.BezierLoader
-import io.channel.bezier.compose.component.loader.properties.BezierLoaderSize
 import io.channel.bezier.compose.component.loader.properties.BezierLoaderVariant
 import io.channel.bezier.extension.thenIf
-import io.channel.bezier.extension.toEmojiPainter
 import io.channel.bezier.icon.Plus
 
 @Composable
@@ -131,11 +129,17 @@ private fun BezierIconButtonContent(
                 size = size.avatarSize,
         )
 
-        is BezierIconButtonContent.Emoji -> Image(
-                modifier = Modifier.size(size.emojiSize),
-                painter = content.name.toEmojiPainter,
-                contentDescription = content.name,
+        is BezierIconButtonContent.Emoji -> BezierEmoji(
+                name = content.name,
+                size = size.emojiSize,
         )
+
+        is BezierIconButtonContent.Slot -> Box(
+                modifier = Modifier
+                        .size(size.slotSize),
+        ) {
+            content.content()
+        }
     }
 }
 

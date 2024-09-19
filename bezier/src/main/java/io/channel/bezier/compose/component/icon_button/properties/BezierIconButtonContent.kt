@@ -32,4 +32,5 @@ sealed interface BezierIconButtonContent {
     }
 
     data class Emoji(val name: String) : BezierIconButtonContent
+    data class Slot(val content: @Composable () -> Unit) : BezierIconButtonContent
 }

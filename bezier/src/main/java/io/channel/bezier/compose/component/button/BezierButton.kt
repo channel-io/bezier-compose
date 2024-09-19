@@ -1,6 +1,5 @@
 package io.channel.bezier.compose.component.button
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -20,22 +19,21 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
-import io.channel.bezier.compose.component.loader.BezierLoader
-import io.channel.bezier.compose.component.loader.properties.BezierLoaderSize
-import io.channel.bezier.compose.component.loader.properties.BezierLoaderVariant
 import io.channel.bezier.compose.component.avatar.BezierAvatar
 import io.channel.bezier.compose.component.button.properties.BezierButtonColor
 import io.channel.bezier.compose.component.button.properties.BezierButtonContent
 import io.channel.bezier.compose.component.button.properties.BezierButtonSize
 import io.channel.bezier.compose.component.button.properties.BezierButtonVariant
+import io.channel.bezier.compose.component.emoji.BezierEmoji
+import io.channel.bezier.compose.component.loader.BezierLoader
+import io.channel.bezier.compose.component.loader.properties.BezierLoaderSize
+import io.channel.bezier.compose.component.loader.properties.BezierLoaderVariant
 import io.channel.bezier.extension.thenIf
-import io.channel.bezier.extension.toEmojiPainter
 import io.channel.bezier.icon.ArrowRight
 import io.channel.bezier.icon.Plus
 
@@ -70,7 +68,7 @@ fun BezierButton(
         if (isLoading) {
             BezierLoader(
                     variant = BezierLoaderVariant.OnOverlay,
-                    size = BezierLoaderSize.Small,
+                    size = size.loaderSize,
             )
         }
 
@@ -119,7 +117,7 @@ private fun BezierButtonContent(
         is BezierButtonContent.Icon -> Icon(
                 modifier = Modifier.size(size.iconSize),
                 painter = rememberVectorPainter(content.icon.imageVector),
-                contentDescription = null,
+                contentDescription = content.icon.imageVector.name,
                 tint = contentColor,
         )
 
@@ -128,11 +126,17 @@ private fun BezierButtonContent(
                 size = size.avatarSize,
         )
 
-        is BezierButtonContent.Emoji -> Image(
-                modifier = Modifier.size(size.emojiSize),
-                painter = content.name.toEmojiPainter,
-                contentDescription = content.name,
+        is BezierButtonContent.Emoji -> BezierEmoji(
+                name = content.name,
+                size = size.emojiSize,
         )
+
+        is BezierButtonContent.Slot -> Box(
+                modifier = Modifier
+                        .size(size.slotSize),
+        ) {
+            content.content()
+        }
     }
 }
 
@@ -216,7 +220,24 @@ private fun BezierButtonOtherContentsPreview() {
                 color = BezierButtonColor.Blue,
                 onClick = { },
                 prefixContent = BezierButtonContent.Avatar(painterResource(id = R.drawable.unknown)),
-                suffixContent = BezierButtonContent.Emoji("smile")
+                suffixContent = BezierButtonContent.Emoji("smile"),
+        )
+    }
+}
+
+@Composable
+@Preview(showBackground = true)
+private fun BezierButtonSlotPreview() {
+    BezierTheme {
+        BezierButton(
+                text = "Label",
+                size = BezierButtonSize.Medium,
+                variant = BezierButtonVariant.Primary,
+                color = BezierButtonColor.Blue,
+                onClick = { },
+                prefixContent = BezierButtonContent.Slot {
+                    Text(text = "SLOT")
+                },
         )
     }
 }
