@@ -31,6 +31,7 @@ import io.channel.bezier.compose.component.icon_button.properties.BezierIconButt
 import io.channel.bezier.compose.component.loader.BezierLoader
 import io.channel.bezier.compose.component.loader.properties.BezierLoaderVariant
 import io.channel.bezier.extension.thenIf
+import io.channel.bezier.icon.ChevronSmallDown
 import io.channel.bezier.icon.Plus
 
 @Composable
@@ -44,6 +45,7 @@ fun BezierIconButton(
         modifier: Modifier = Modifier,
         isLoading: Boolean = false,
         enabled: Boolean = true,
+        dropdown: Boolean = false,
 ) {
     BezierIconButton(
             content = BezierIconButtonContent.Icon(icon),
@@ -55,6 +57,7 @@ fun BezierIconButton(
             modifier = modifier,
             isLoading = isLoading,
             enabled = enabled,
+            dropdown = dropdown,
     )
 }
 
@@ -69,10 +72,12 @@ fun BezierIconButton(
         modifier: Modifier = Modifier,
         isLoading: Boolean = false,
         enabled: Boolean = true,
+        dropdown: Boolean = false,
 ) {
     val colorSchemes = color.getColorSchemes(variant)
     val backgroundColor = colorSchemes.backgroundColor().color
     val contentColor = colorSchemes.contentColor().color
+    val dropdownColor = colorSchemes.dropdownColor().color
 
     Box(
             modifier = modifier
@@ -94,7 +99,7 @@ fun BezierIconButton(
             )
         }
 
-        Box(
+        Row(
                 modifier = Modifier
                         .thenIf(isLoading) {
                             alpha(0f)
@@ -105,8 +110,16 @@ fun BezierIconButton(
                     size = size,
                     contentColor = contentColor,
             )
-        }
 
+            if (dropdown) {
+                Icon(
+                        modifier = Modifier.size(size.iconSize),
+                        painter = rememberVectorPainter(BezierIcons.ChevronSmallDown.imageVector),
+                        contentDescription = null,
+                        tint = dropdownColor,
+                )
+            }
+        }
     }
 }
 
@@ -146,7 +159,7 @@ private fun BezierIconButtonContent(
 @Composable
 @Preview(
         showBackground = true,
-        widthDp = 500,
+        widthDp = 700,
 )
 private fun BezierIconButtonRectanglePreview() {
     BezierTheme {
@@ -166,6 +179,24 @@ private fun BezierIconButtonRectanglePreview() {
                                 color = color,
                                 shape = BezierIconButtonShape.Rectangle,
                                 onClick = { },
+                        )
+                    }
+                }
+            }
+
+            BezierIconButtonVariant.entries.forEach { variant ->
+                Row(
+                        horizontalArrangement = Arrangement.spacedBy(4.dp),
+                ) {
+                    BezierIconButtonColor.entries.forEach { color ->
+                        BezierIconButton(
+                                content = BezierIconButtonContent.Icon(BezierIcons.Plus),
+                                size = BezierIconButtonSize.Medium,
+                                variant = variant,
+                                color = color,
+                                shape = BezierIconButtonShape.Rectangle,
+                                onClick = { },
+                                dropdown = true,
                         )
                     }
                 }
