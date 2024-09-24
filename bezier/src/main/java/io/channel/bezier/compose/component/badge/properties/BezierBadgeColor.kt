@@ -50,7 +50,7 @@ enum class BezierBadgeColor(
     ),
     Orange(
             backgroundColor = { BezierTheme.colorSchemes.bgOrangeShadeLight },
-            contentColor = { BezierTheme.colorSchemes.fgOrangeDark },
+            contentColor = { BezierTheme.colorSchemes.warningFgDark },
     ),
     Red(
             backgroundColor = { BezierTheme.colorSchemes.bgRedShadeLight },
