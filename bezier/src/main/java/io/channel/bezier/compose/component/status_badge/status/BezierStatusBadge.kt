@@ -1,4 +1,4 @@
-package io.channel.bezier.compose.component.badge.status
+package io.channel.bezier.compose.component.status_badge.status
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -16,7 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
-import io.channel.bezier.compose.component.badge.status.properties.BezierStatusBadgeSize
+import io.channel.bezier.compose.component.status_badge.status.properties.BezierStatusBadgeSize
 import io.channel.bezier.icon.MoonFilled
 
 @Composable

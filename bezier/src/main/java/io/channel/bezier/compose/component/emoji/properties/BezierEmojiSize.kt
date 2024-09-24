@@ -2,7 +2,7 @@ package io.channel.bezier.compose.component.emoji.properties
 
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import io.channel.bezier.compose.component.badge.chat.properties.BezierChatBadgeSize
+import io.channel.bezier.compose.component.status_badge.chat.properties.BezierChatBadgeSize
 
 enum class BezierEmojiSize(
         internal val size: Dp,

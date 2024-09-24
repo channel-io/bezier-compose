@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
-import io.channel.bezier.compose.component.badge.chat.BezierChatBadge
+import io.channel.bezier.compose.component.status_badge.chat.BezierChatBadge
 import io.channel.bezier.compose.component.emoji.properties.BezierEmojiBadge
 import io.channel.bezier.compose.component.emoji.properties.BezierEmojiSize
 import io.channel.bezier.extension.toEmojiPainter
