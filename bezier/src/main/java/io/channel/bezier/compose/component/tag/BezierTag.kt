@@ -2,6 +2,7 @@ package io.channel.bezier.compose.component.tag
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -19,16 +20,20 @@ fun BezierTag(
         text: String,
         color: BezierTagColor,
 ) {
-    Text(
+    Box(
             modifier = Modifier
                     .clip(RoundedCornerShape(8.dp))
                     .background(color.backgroundColor().color)
-                    .padding(horizontal = 8.dp, vertical = 3.dp)
-                    .padding(horizontal = 3.dp),
-            text = text,
-            style = BezierTheme.typography.body2Regular,
-            color = BezierTheme.colorSchemes.fgBlackDarkest.color,
-    )
+                    .padding(horizontal = 8.dp, vertical = 3.dp),
+    ) {
+        Text(
+                modifier = Modifier
+                        .padding(horizontal = 3.dp),
+                text = text,
+                style = BezierTheme.typography.body2Regular,
+                color = BezierTheme.colorSchemes.fgBlackDarkest.color,
+        )
+    }
 }
 
 @Preview(showBackground = true)
