@@ -21,6 +21,7 @@ import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.component.badge.properties.BezierBadgeColor
 import io.channel.bezier.compose.component.badge.properties.BezierBadgeSize
 import io.channel.bezier.icon.CircleSmall
+import io.channel.bezier.icon.Communication
 
 @Composable
 fun BezierBadge(
@@ -28,7 +29,8 @@ fun BezierBadge(
         size: BezierBadgeSize,
         color: BezierBadgeColor,
         modifier: Modifier = Modifier,
-        icon: BezierIcon? = null,
+        prefixIcon: BezierIcon? = null,
+        suffixIcon: BezierIcon? = null,
 ) {
     Row(
             modifier = modifier
@@ -38,11 +40,11 @@ fun BezierBadge(
             horizontalArrangement = Arrangement.spacedBy(size.contentGap),
             verticalAlignment = Alignment.CenterVertically,
     ) {
-        if (icon != null) {
+        if (prefixIcon != null) {
             Icon(
                     modifier = Modifier.size(size.iconSize),
-                    imageVector = icon.imageVector,
-                    contentDescription = icon.imageVector.name,
+                    imageVector = prefixIcon.imageVector,
+                    contentDescription = prefixIcon.imageVector.name,
                     tint = color.contentColor().color,
             )
         }
@@ -53,6 +55,15 @@ fun BezierBadge(
                 style = size.textStyle(),
                 color = color.contentColor().color,
         )
+
+        if (suffixIcon != null) {
+            Icon(
+                    modifier = Modifier.size(size.iconSize),
+                    imageVector = suffixIcon.imageVector,
+                    contentDescription = suffixIcon.imageVector.name,
+                    tint = color.contentColor().color,
+            )
+        }
     }
 }
 
@@ -76,7 +87,8 @@ fun BezierBadgePreview() {
                                 text = "Label",
                                 size = size,
                                 color = color,
-                                icon = BezierIcons.CircleSmall,
+                                prefixIcon = BezierIcons.CircleSmall,
+                                suffixIcon = BezierIcons.Communication,
                         )
                     }
                 }
