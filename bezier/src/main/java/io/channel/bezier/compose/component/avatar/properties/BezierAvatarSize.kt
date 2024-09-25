@@ -2,8 +2,8 @@ package io.channel.bezier.compose.component.avatar.properties
 
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import io.channel.bezier.compose.component.badge.chat.properties.BezierChatBadgeSize
-import io.channel.bezier.compose.component.badge.status.properties.BezierStatusBadgeSize
+import io.channel.bezier.compose.component.status_badge.chat.properties.BezierChatBadgeSize
+import io.channel.bezier.compose.component.status_badge.status.properties.BezierStatusBadgeSize
 
 /**
  * 정의되지 않은 값에 대한 fallback 입니다.

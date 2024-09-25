@@ -26,8 +26,8 @@ import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
 import io.channel.bezier.compose.component.avatar.properties.BezierAvatarBadge
 import io.channel.bezier.compose.component.avatar.properties.BezierAvatarSize
-import io.channel.bezier.compose.component.badge.chat.BezierChatBadge
-import io.channel.bezier.compose.component.badge.status.BezierStatusBadge
+import io.channel.bezier.compose.component.status_badge.chat.BezierChatBadge
+import io.channel.bezier.compose.component.status_badge.status.BezierStatusBadge
 import io.channel.bezier.extension.outlineBorder
 import io.channel.bezier.extension.thenIf
 import io.channel.bezier.icon.More

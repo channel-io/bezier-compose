@@ -1,4 +1,4 @@
-package io.channel.bezier.compose.component.badge.status.properties
+package io.channel.bezier.compose.component.status_badge.status.properties
 
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp

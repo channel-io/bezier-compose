@@ -1,4 +1,4 @@
-package io.channel.bezier.compose.component.badge.chat.properties
+package io.channel.bezier.compose.component.status_badge.chat.properties
 
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
