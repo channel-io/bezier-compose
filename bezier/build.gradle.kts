@@ -49,6 +49,7 @@ dependencies {
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
     implementation(libs.material)
+    implementation(libs.material.icons)
     implementation(libs.coil)
     implementation(libs.coil.gif)
 

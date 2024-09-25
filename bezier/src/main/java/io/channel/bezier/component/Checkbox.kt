@@ -17,7 +17,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
-import androidx.compose.material.ripple.rememberRipple
+import androidx.compose.material.ripple
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -197,7 +197,7 @@ fun Checkbox(
                         .background(color.backgroundColor(type, state))
                         .clickable(
                                 interactionSource = remember { MutableInteractionSource() },
-                                indication = rememberRipple(),
+                                indication = ripple(),
                                 enabled = enabled,
                         ) {
                             onStateChange(state.toggle())
