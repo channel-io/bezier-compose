@@ -22,6 +22,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
@@ -36,19 +37,25 @@ import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.foundation.ShadowStyle
 import io.channel.bezier.compose.foundation.bezierShadow
-import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.debounce
+import kotlinx.coroutines.flow.filter
+import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.launch
 
 private val SwitchWidth = 44.dp
 private val SwitchPadding = 3.dp
 private val ThumbSize = 22.dp
 
-@OptIn(ExperimentalFoundationApi::class)
+@OptIn(ExperimentalFoundationApi::class, FlowPreview::class)
 @Composable
 internal fun BezierSwitchControl(
         checked: Boolean,
         onCheckedChange: (Boolean) -> Unit,
         modifier: Modifier = Modifier,
 ) {
+    val coroutineScope = rememberCoroutineScope()
+
     /**
      * 스위치에서 Thumb가 그려질 수 있는 너비는 양 옆 패딩을 제외한 38입니다.
      * Thumb은 중앙 점을 기준으로 그리므로 22의 절반인 11에서 그리면 시작 점이 됩니다.
@@ -77,23 +84,27 @@ internal fun BezierSwitchControl(
 
     val currentOnCheckedChange by rememberUpdatedState(onCheckedChange)
     val currentChecked by rememberUpdatedState(checked)
+    var forceAnimationCheck by remember { mutableStateOf(false) }
 
     LaunchedEffect(anchoredDraggableState) {
         snapshotFlow { anchoredDraggableState.currentValue }
-                .collectLatest { newValue ->
-                    if (currentChecked != newValue) {
+                .onEach { newValue ->
+                    if (newValue != currentChecked) {
                         currentOnCheckedChange(newValue)
                     }
                 }
+                .debounce(1000L)
+                .filter { it != currentChecked }
+                .collect {
+                    forceAnimationCheck = !forceAnimationCheck
+                }
     }
 
-    LaunchedEffect(checked) {
+    LaunchedEffect(checked, forceAnimationCheck) {
         if (checked != anchoredDraggableState.currentValue) {
             anchoredDraggableState.animateTo(checked)
         }
     }
-
-
 
     Box(
             modifier = modifier
@@ -102,7 +113,15 @@ internal fun BezierSwitchControl(
                     .clickable(
                             interactionSource = remember { MutableInteractionSource() },
                             indication = null,
-                            onClick = { onCheckedChange(!checked) },
+                            onClick = {
+                                onCheckedChange(!checked)
+
+                                coroutineScope.launch {
+                                    if (!anchoredDraggableState.isAnimationRunning) {
+                                        anchoredDraggableState.animateTo(!anchoredDraggableState.currentValue)
+                                    }
+                                }
+                            },
                     ),
     ) {
         Track(fraction = { anchoredDraggableState.requireOffset().dp / SwitchWidth })
