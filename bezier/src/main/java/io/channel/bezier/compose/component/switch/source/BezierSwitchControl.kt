@@ -105,9 +105,9 @@ internal fun BezierSwitchControl(
             anchoredDraggableState.animateTo(checked)
         }
     }
-
     Box(
             modifier = modifier
+                    .padding(2.dp)
                     .clip(CircleShape)
                     .requiredSize(width = SwitchWidth, height = 28.dp)
                     .clickable(
