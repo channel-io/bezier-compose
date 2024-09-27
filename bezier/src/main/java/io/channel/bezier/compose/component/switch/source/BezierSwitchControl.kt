@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -47,64 +48,24 @@ private val SwitchWidth = 44.dp
 private val SwitchPadding = 3.dp
 private val ThumbSize = 22.dp
 
-@OptIn(ExperimentalFoundationApi::class, FlowPreview::class)
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 internal fun BezierSwitchControl(
-        checked: Boolean,
+        state: BezierSwitchControlState,
         onCheckedChange: (Boolean) -> Unit,
         modifier: Modifier = Modifier,
 ) {
     val coroutineScope = rememberCoroutineScope()
 
-    /**
-     * 스위치에서 Thumb가 그려질 수 있는 너비는 양 옆 패딩을 제외한 38입니다.
-     * Thumb은 중앙 점을 기준으로 그리므로 22의 절반인 11에서 그리면 시작 점이 됩니다.
-     * 끝 점은 마찬가지로 끝에서 11만큼 멀어져야 하므로 38 - 11 = 27 에서 그려져야합니다.
-     * Thumb은 그려질 때 11을 항상 더하므로 계산식에서는 ThumbSize를 빼줍니다.
-     * 결과적으로 maxBound는 16이 되며 11을 더해서 27이 되었을 때 스위치 끝에 그려지게 됩니다.
-     */
-    val maxBound = SwitchWidth - SwitchPadding * 2 - ThumbSize
-    val maxBoundPx = with(LocalDensity.current) { maxBound.toPx() }
+    val checked = state.initialChecked
+    val anchoredDraggableState = state.anchoredDraggableState
 
-    val switchVelocityThresholdPx = with(LocalDensity.current) { 10.dp.toPx() }
-
-    val anchoredDraggableState = remember {
-        AnchoredDraggableState(
-                initialValue = checked,
-                snapAnimationSpec = TweenSpec(durationMillis = 100),
-                decayAnimationSpec = exponentialDecay(),
-                anchors = DraggableAnchors {
-                    false at 0f
-                    true at maxBoundPx
-                },
-                positionalThreshold = { totalDistance -> totalDistance * 0.7f },
-                velocityThreshold = { switchVelocityThresholdPx },
-        )
-    }
-
-    val currentOnCheckedChange by rememberUpdatedState(onCheckedChange)
-    val currentChecked by rememberUpdatedState(checked)
-    var forceAnimationCheck by remember { mutableStateOf(false) }
-
-    LaunchedEffect(anchoredDraggableState) {
-        snapshotFlow { anchoredDraggableState.currentValue }
-                .onEach { newValue ->
-                    if (newValue != currentChecked) {
-                        currentOnCheckedChange(newValue)
-                    }
-                }
-                .debounce(1000L)
-                .filter { it != currentChecked }
-                .collect {
-                    forceAnimationCheck = !forceAnimationCheck
-                }
-    }
-
-    LaunchedEffect(checked, forceAnimationCheck) {
+    LaunchedEffect(checked, state.forceAnimationCheck) {
         if (checked != anchoredDraggableState.currentValue) {
             anchoredDraggableState.animateTo(checked)
         }
     }
+
     Box(
             modifier = modifier
                     .padding(2.dp)
@@ -114,12 +75,8 @@ internal fun BezierSwitchControl(
                             interactionSource = remember { MutableInteractionSource() },
                             indication = null,
                             onClick = {
-                                onCheckedChange(!checked)
-
                                 coroutineScope.launch {
-                                    if (!anchoredDraggableState.isAnimationRunning) {
-                                        anchoredDraggableState.animateTo(!anchoredDraggableState.currentValue)
-                                    }
+                                    state.trySwitch(onCheckedChange)
                                 }
                             },
                     ),
@@ -138,6 +95,10 @@ internal fun BezierSwitchControl(
     }
 }
 
+/**
+ * 리컴포지션을 피하기 위해 값을 Canvas 가 읽도록 람다를 받습니다.
+ * [공식 문서](https://developer.android.com/develop/ui/compose/phases?hl=ko)
+ */
 @Composable
 private fun Track(fraction: () -> Float) {
     val start = BezierTheme.colorSchemes.bgBlackDark.color
@@ -185,10 +146,59 @@ private fun BezierSwitchControlPreview() {
 
     BezierTheme {
         BezierSwitchControl(
-                checked = checked,
+                state = rememberBezierSwitchControlState(checked),
                 onCheckedChange = {
                     checked = it
                 },
+        )
+    }
+}
+
+@OptIn(ExperimentalFoundationApi::class)
+@Stable
+internal class BezierSwitchControlState(
+        val initialChecked: Boolean,
+        val anchoredDraggableState: AnchoredDraggableState<Boolean>,
+) {
+    var forceAnimationCheck by mutableStateOf(false)
+
+    suspend fun trySwitch(onCheckedChange: (Boolean) -> Unit) {
+        if (!anchoredDraggableState.isAnimationRunning) {
+            onCheckedChange(!anchoredDraggableState.currentValue)
+            anchoredDraggableState.animateTo(!anchoredDraggableState.currentValue)
+        }
+    }
+}
+
+@Composable
+@OptIn(ExperimentalFoundationApi::class)
+internal fun rememberBezierSwitchControlState(checked: Boolean): BezierSwitchControlState {
+    /**
+     * 스위치에서 Thumb가 그려질 수 있는 너비는 양 옆 패딩을 제외한 38입니다.
+     * Thumb은 중앙 점을 기준으로 그리므로 22의 절반인 11에서 그리면 시작 점이 됩니다.
+     * 끝 점은 마찬가지로 끝에서 11만큼 멀어져야 하므로 38 - 11 = 27 에서 그려져야합니다.
+     * Thumb은 그려질 때 11을 항상 더하므로 계산식에서는 ThumbSize를 빼줍니다.
+     * 결과적으로 maxBound는 16이 되며 11을 더해서 27이 되었을 때 스위치 끝에 그려지게 됩니다.
+     */
+    val maxBound = SwitchWidth - SwitchPadding * 2 - ThumbSize
+    val maxBoundPx = with(LocalDensity.current) { maxBound.toPx() }
+
+    val switchVelocityThresholdPx = with(LocalDensity.current) { 10.dp.toPx() }
+
+    return remember {
+        BezierSwitchControlState(
+                initialChecked = checked,
+                anchoredDraggableState = AnchoredDraggableState(
+                        initialValue = checked,
+                        snapAnimationSpec = TweenSpec(durationMillis = 100),
+                        decayAnimationSpec = exponentialDecay(),
+                        anchors = DraggableAnchors {
+                            false at 0f
+                            true at maxBoundPx
+                        },
+                        positionalThreshold = { totalDistance -> totalDistance * 0.7f },
+                        velocityThreshold = { switchVelocityThresholdPx },
+                ),
         )
     }
 }
