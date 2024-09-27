@@ -52,7 +52,7 @@ fun BezierSwitch(
                         currentOnCheckedChange(newValue)
                     }
                 }
-                .debounce(1000L)
+                .debounce(10000L)
                 .filter { it != currentChecked }
                 .collect {
                     state.forceAnimationCheck = !state.forceAnimationCheck
