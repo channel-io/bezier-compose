@@ -24,13 +24,10 @@ import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.component.switch.source.BezierSwitchControl
 import io.channel.bezier.compose.component.switch.source.rememberBezierSwitchControlState
-import kotlinx.coroutines.FlowPreview
-import kotlinx.coroutines.flow.debounce
-import kotlinx.coroutines.flow.filter
-import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalFoundationApi::class, FlowPreview::class)
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun BezierSwitch(
         text: String,
@@ -40,22 +37,19 @@ fun BezierSwitch(
 ) {
     val coroutineScope = rememberCoroutineScope()
 
-    val state = rememberBezierSwitchControlState(checked)
-
+    val switchControlState = rememberBezierSwitchControlState(checked)
     val currentOnCheckedChange by rememberUpdatedState(onCheckedChange)
-    val currentChecked by rememberUpdatedState(checked)
 
-    LaunchedEffect(state.anchoredDraggableState) {
-        snapshotFlow { state.anchoredDraggableState.currentValue }
-                .onEach { newValue ->
-                    if (newValue != currentChecked) {
+    LaunchedEffect(switchControlState.anchoredDraggableState) {
+        snapshotFlow { switchControlState.anchoredDraggableState.currentValue }
+                .collect { newValue ->
+                    if (newValue == switchControlState.checked) {
                         currentOnCheckedChange(newValue)
+                        return@collect
                     }
-                }
-                .debounce(10000L)
-                .filter { it != currentChecked }
-                .collect {
-                    state.forceAnimationCheck = !state.forceAnimationCheck
+
+                    delay(10000L)
+                    switchControlState.forceAnimationCheck = !switchControlState.forceAnimationCheck
                 }
     }
 
@@ -65,7 +59,7 @@ fun BezierSwitch(
                     indication = null,
                     onClick = {
                         coroutineScope.launch {
-                            state.trySwitch(onCheckedChange)
+                            switchControlState.trySwitch(onCheckedChange)
                         }
                     },
             ),
@@ -80,7 +74,7 @@ fun BezierSwitch(
         )
         BezierSwitchControl(
                 modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
-                state = state,
+                state = switchControlState,
                 onCheckedChange = { newValue ->
                     onCheckedChange(newValue)
                 },

@@ -24,9 +24,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
-import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
@@ -38,10 +36,6 @@ import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.foundation.ShadowStyle
 import io.channel.bezier.compose.foundation.bezierShadow
-import kotlinx.coroutines.FlowPreview
-import kotlinx.coroutines.flow.debounce
-import kotlinx.coroutines.flow.filter
-import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 
 private val SwitchWidth = 44.dp
@@ -57,7 +51,7 @@ internal fun BezierSwitchControl(
 ) {
     val coroutineScope = rememberCoroutineScope()
 
-    val checked = state.initialChecked
+    val checked = state.checked
     val anchoredDraggableState = state.anchoredDraggableState
 
     LaunchedEffect(checked, state.forceAnimationCheck) {
@@ -157,9 +151,10 @@ private fun BezierSwitchControlPreview() {
 @OptIn(ExperimentalFoundationApi::class)
 @Stable
 internal class BezierSwitchControlState(
-        val initialChecked: Boolean,
+        initialChecked: Boolean,
         val anchoredDraggableState: AnchoredDraggableState<Boolean>,
 ) {
+    var checked by mutableStateOf(initialChecked)
     var forceAnimationCheck by mutableStateOf(false)
 
     suspend fun trySwitch(onCheckedChange: (Boolean) -> Unit) {
@@ -200,5 +195,7 @@ internal fun rememberBezierSwitchControlState(checked: Boolean): BezierSwitchCon
                         velocityThreshold = { switchVelocityThresholdPx },
                 ),
         )
+    }.apply {
+        this.checked = checked
     }
 }
