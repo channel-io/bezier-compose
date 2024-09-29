@@ -6,6 +6,9 @@ ChannelTalk의 Bezier DesignSystem을 Jetpack Compose로 구현한 레포지토�
 
 minSdk = 29
 
+## 코딩 컨벤션
+[컨벤션 문서](./CONVENTIONS.md)를 참고 해주세요.
+
 ## 설치하기
 
 jitpack 저장소에 배포되어 있어, 저장소를 추가해야합니다.
