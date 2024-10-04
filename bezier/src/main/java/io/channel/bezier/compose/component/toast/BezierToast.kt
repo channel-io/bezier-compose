@@ -17,7 +17,6 @@ import io.channel.bezier.BezierIcon
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.icon.ErrorTriangleFilled
-import io.channel.bezier.icon.More
 
 @Composable
 fun BezierToast(
@@ -43,6 +42,7 @@ fun BezierToast(
         )
 
         Text(
+                modifier = Modifier.padding(vertical = 4.dp),
                 text = text,
                 fontStyle = BezierTheme.typography.caption1SemiBold.fontStyle,
                 color = BezierTheme.colorSchemes.fgAbsoluteWhiteDark.color,
