@@ -14,7 +14,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
@@ -38,13 +37,11 @@ fun BezierSwitch(
     val coroutineScope = rememberCoroutineScope()
 
     val switchControlState = rememberBezierSwitchControlState(checked)
-    val currentOnCheckedChange by rememberUpdatedState(onCheckedChange)
 
     LaunchedEffect(switchControlState.anchoredDraggableState) {
         snapshotFlow { switchControlState.anchoredDraggableState.currentValue }
                 .collect { newValue ->
                     if (newValue == switchControlState.checked) {
-                        currentOnCheckedChange(newValue)
                         return@collect
                     }
 
