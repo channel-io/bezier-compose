@@ -76,16 +76,7 @@ internal fun BezierSwitchControl(
                     ),
     ) {
         Track(fraction = { anchoredDraggableState.requireOffset().dp / SwitchWidth })
-        Box(
-                modifier = Modifier
-                        .padding(SwitchPadding)
-                        .anchoredDraggable(
-                                state = anchoredDraggableState,
-                                orientation = Orientation.Horizontal,
-                        ),
-        ) {
-            Thumb(thumbValue = { anchoredDraggableState.requireOffset() })
-        }
+        Thumb(anchoredDraggableState = anchoredDraggableState)
     }
 }
 
@@ -112,22 +103,36 @@ private fun Track(fraction: () -> Float) {
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
-private fun Thumb(thumbValue: () -> Float) {
+private fun Thumb(
+        anchoredDraggableState: AnchoredDraggableState<Boolean>,
+) {
     val color = BezierTheme.colorSchemes.fgAbsoluteWhiteDark.color
 
-    Canvas(
+    Box(
             modifier = Modifier
-                    .size(ThumbSize)
-                    .bezierShadow(ShadowStyle.Shadow2, CircleShape),
+                    .padding(SwitchPadding)
+                    .anchoredDraggable(
+                            state = anchoredDraggableState,
+                            orientation = Orientation.Horizontal,
+                    ),
     ) {
-        drawLine(
-                color = color,
-                start = Offset(thumbValue() + (size.width / 2), this.center.y),
-                end = Offset(thumbValue() + (size.width / 2), this.center.y),
-                strokeWidth = size.width,
-                cap = StrokeCap.Round,
-        )
+        Canvas(
+                modifier = Modifier
+                        .size(ThumbSize)
+                        .bezierShadow(ShadowStyle.Shadow2, CircleShape),
+        ) {
+            val thumbValue = anchoredDraggableState.requireOffset()
+
+            drawLine(
+                    color = color,
+                    start = Offset(thumbValue + (size.width / 2), this.center.y),
+                    end = Offset(thumbValue + (size.width / 2), this.center.y),
+                    strokeWidth = size.width,
+                    cap = StrokeCap.Round,
+            )
+        }
     }
 }
 
