@@ -288,6 +288,7 @@ class ColorSchemes internal constructor(
     val bgBlackLight: BezierColor = functionalTokens.bgBlackLight
     val bgBlackLighter: BezierColor = functionalTokens.bgBlackLighter
     val bgBlackLightest: BezierColor = functionalTokens.bgBlackLightest
+    val bgBlackTransparent: BezierColor = functionalTokens.bgBlackTransparent
     val bgGreyDarkest: BezierColor = functionalTokens.bgGreyDarkest
     val bgGreyDark: BezierColor = functionalTokens.bgGreyDark
     val bgGreyLight: BezierColor = functionalTokens.bgGreyLight
