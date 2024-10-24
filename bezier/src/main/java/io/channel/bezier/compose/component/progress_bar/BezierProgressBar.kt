@@ -62,7 +62,7 @@ fun BezierProgressBar(
 
         Canvas(
                 modifier = Modifier
-                        .progressSemantics(progressRatio)
+                        .progressSemantics()
                         .fillMaxSize(),
         ) {
             drawRoundRect(
