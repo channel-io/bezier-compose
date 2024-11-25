@@ -117,7 +117,7 @@ enum class BezierButtonColor(
                     contentColor = { BezierTheme.colorSchemes.fgBlackDarkest },
             ),
             tertiaryColorSchemes = BezierButtonColorSchemes(
-                    backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
+                    backgroundColor = { BezierTheme.colorSchemes.bgBlackTransparent },
                     contentColor = { BezierTheme.colorSchemes.fgBlackDarkest },
             ),
     ),
@@ -131,7 +131,7 @@ enum class BezierButtonColor(
                     contentColor = { BezierTheme.colorSchemes.fgBlackDarker },
             ),
             tertiaryColorSchemes = BezierButtonColorSchemes(
-                    backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
+                    backgroundColor = { BezierTheme.colorSchemes.bgBlackTransparent },
                     contentColor = { BezierTheme.colorSchemes.fgBlackDarker },
             ),
     ),
@@ -145,7 +145,7 @@ enum class BezierButtonColor(
                     contentColor = { BezierTheme.colorSchemes.bgAbsoluteWhiteNormal },
             ),
             tertiaryColorSchemes = BezierButtonColorSchemes(
-                    backgroundColor = { BezierTheme.colorSchemes.bgWhiteWhiteAlphaTransparent },
+                    backgroundColor = { BezierTheme.colorSchemes.bgAbsoluteWhiteTransparent },
                     contentColor = { BezierTheme.colorSchemes.bgAbsoluteWhiteNormal },
             ),
     );
