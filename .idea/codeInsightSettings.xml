@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+    <component name="JavaProjectCodeInsightSettings">
+        <excluded-names>
+            <!-- Alignment -->
+            <name>android.text.Layout.Alignment</name>
+            <!-- Modifier -->
+            <name>java.lang.reflect.Modifier</name>
+            <name>java.nio.file.WatchEvent.Modifier</name>
+            <name>com.ibm.icu.impl.number.Modifier</name>
+            <name>com.google.errorprone.annotations.Modifier</name>
+            <!-- Immutable -->
+            <name>javax.annotation.concurrent.Immutable</name>
+            <name>com.google.errorprone.annotations.Immutable</name>
+            <!-- Text -->
+            <name>org.w3c.dom.Text</name>
+            <!-- Flow -->
+            <name>java.util.concurrent.Flow</name>
+            <name>org.intellij.lang.annotations.Flow</name>
+            <name>androidx.constraintlayout.helper.widget.Flow</name>
+            <!-- TextStyle -->
+            <name>io.channel.org.threeten.bp.format.TextStyle</name>
+            <name>java.time.format.TextStyle</name>
+            <!-- Row -->
+            <name>com.ibm.icu.impl.Row</name>
+            <!-- Keyboard -->
+            <name>android.inputmethodservice.Keyboard</name>
+        </excluded-names>
+    </component>
+</project>

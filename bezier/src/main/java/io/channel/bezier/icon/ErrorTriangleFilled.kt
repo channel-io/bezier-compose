@@ -4,6 +4,7 @@
 
 package io.channel.bezier.icon
 
+import androidx.annotation.DrawableRes
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
@@ -17,9 +18,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
 import io.channel.bezier.BezierIcons
+import io.channel.bezier.compose.R
 
 val BezierIcons.ErrorTriangleFilled: BezierIcon
     get() = object : BezierIcon {
+        @DrawableRes
+        override val resourceId: Int = R.drawable.icon_error_triangle_filled
         override val imageVector: ImageVector
             get() = _errorTriangleFilled ?: ImageVector.Builder(
                     name = "ErrorTriangleFilled",
