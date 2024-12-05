@@ -44,7 +44,7 @@ val BezierIcons.ArrowUp: BezierIcon
                     arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 13.0f, 20.0f)
                     lineTo(13.0f, 5.933f)
                     lineTo(19.329f, 11.881f)
-                    arcTo(1.0f, 1.0f, 133.21767883821073f, isMoreThanHalf = false, isPositiveArc = false, 20.699f, 10.423f)
+                    arcTo(1.0f, 1.0f, 133.2176803160058f, isMoreThanHalf = true, isPositiveArc = false, 20.699f, 10.423f)
                     lineTo(13.04f, 3.227f)
                     arcTo(1.5f, 1.5f, 313.2356071489822f, isMoreThanHalf = false, isPositiveArc = false, 10.985f, 3.227f)
                     lineTo(3.33f, 10.423f)
