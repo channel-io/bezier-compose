@@ -20,13 +20,13 @@ import io.channel.bezier.BezierIcon
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.compose.R
 
-val BezierIcons.ArrowLeftUpSmall: BezierIcon
+val BezierIcons.ChevronUpBold: BezierIcon
     get() = object : BezierIcon {
         @DrawableRes
-        override val resourceId: Int = R.drawable.icon_arrow_left_up_small
+        override val resourceId: Int = R.drawable.icon_chevron_up_bold
         override val imageVector: ImageVector
-            get() = _arrowLeftUpSmall ?: ImageVector.Builder(
-                    name = "ArrowLeftUpSmall",
+            get() = _chevronUpBold ?: ImageVector.Builder(
+                    name = "ChevronUpBold",
                     defaultWidth = 24.dp,
                     defaultHeight = 24.dp,
                     viewportWidth = 24f,
@@ -35,34 +35,32 @@ val BezierIcons.ArrowLeftUpSmall: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(16.95f, 16.95f)
-                    arcTo(1.0f, 1.0f, 44.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 16.95f, 15.536f)
-                    lineTo(10.172f, 8.757f)
-                    lineTo(15.536000000000001f, 8.757f)
-                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 15.536000000000001f, 6.757f)
-                    lineTo(7.757f, 6.757f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 6.757f, 7.757f)
-                    lineTo(6.757f, 15.536f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 8.757f, 15.536f)
-                    lineTo(8.757f, 10.172f)
-                    lineTo(15.536f, 16.95f)
-                    arcTo(1.0f, 1.0f, 134.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 16.95f, 16.95f)
+                    moveTo(4.94f, 15.56f)
+                    arcTo(1.5f, 1.5f, 135.0356507164543f, isMoreThanHalf = false, isPositiveArc = true, 4.94f, 13.440000000000001f)
+                    lineTo(10.940000000000001f, 7.440000000000001f)
+                    arcTo(1.5f, 1.5f, 225.03565071645426f, isMoreThanHalf = false, isPositiveArc = true, 13.060000000000002f, 7.440000000000001f)
+                    lineTo(19.060000000000002f, 13.440000000000001f)
+                    arcTo(1.5f, 1.5f, 317.021624564715f, isMoreThanHalf = false, isPositiveArc = true, 16.94f, 15.560000000000002f)
+                    lineTo(12.0f, 10.622f)
+                    lineTo(7.06f, 15.562000000000001f)
+                    arcTo(1.5f, 1.5f, 45.03565071645429f, isMoreThanHalf = false, isPositiveArc = true, 4.9399999999999995f, 15.562000000000001f)
                 }
             }.build().also {
-                _arrowLeftUpSmall = it
+                _chevronUpBold = it
             }
     }
 
 
-private var _arrowLeftUpSmall: ImageVector? = null
+private var _chevronUpBold: ImageVector? = null
 
 @Preview(showBackground = true)
 @Composable
-private fun ArrowLeftUpSmallIconPreview() {
+private fun ChevronUpBoldIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcons.ArrowLeftUpSmall.imageVector,
+            imageVector = BezierIcons.ChevronUpBold.imageVector,
             contentDescription = null,
     )
 }
