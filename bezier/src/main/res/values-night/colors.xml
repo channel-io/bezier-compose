@@ -9,8 +9,8 @@
     <color name="bg_grey_lightest">@color/grey850</color>
     <color name="inverted_bg_grey_lighter">@color/grey100</color>
 
-    <color name="bg_grey_dim_lightest">@color/grey50_80</color>
-    <color name="inverted_bg_grey_dim_lightest">@color/grey850_80</color>
+    <color name="bg_grey_dim_lightest">@color/grey850_80</color>
+    <color name="inverted_bg_grey_dim_lightest">@color/grey50_80</color>
 
     <color name="bg_black_darkest">@color/white_60</color>
     <color name="bg_black_darker">@color/white_40</color>
