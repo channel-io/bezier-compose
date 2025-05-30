@@ -9,6 +9,9 @@
     <color name="bg_grey_lightest">@color/grey50</color>
     <color name="inverted_bg_grey_lighter">@color/grey800</color>
 
+    <color name="bg_grey_dim_lightest">@color/grey50_80</color>
+    <color name="inverted_bg_grey_dim_lightest">@color/grey850_80</color>
+
     <color name="bg_black_darkest">@color/black_60</color>
     <color name="bg_black_darker">@color/black_40</color>
     <color name="bg_black_dark">@color/black_15</color>
@@ -36,6 +39,7 @@
     <color name="txt_black_darkest">@color/black_85</color>
     <color name="txt_black_darker">@color/black_60</color>
     <color name="txt_black_dark">@color/black_40</color>
+    <color name="inverted_txt_black_darkest">@color/white_80</color>
 
     <!-- dim -->
     <color name="bg_white_dim_dark">@color/white_60</color>
