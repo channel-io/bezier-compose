@@ -169,7 +169,6 @@
 
     <color name="grey900">#242428</color>
     <color name="grey850">#2A2B2D</color>
-    <color name="grey850_80">#CC2A2B2D</color>
     <color name="grey800">#313234</color>
     <color name="grey800_80">#CC313234</color>
     <color name="grey700">#464748</color>
@@ -180,7 +179,7 @@
     <color name="grey100">#F7F7F8</color>
     <color name="grey100_80">#CCF7F7F8</color>
     <color name="grey50">#FCFCFC</color>
-    <color name="grey50_80">#CCFCFCFC</color>
+
 
     <!--  black -->
 
