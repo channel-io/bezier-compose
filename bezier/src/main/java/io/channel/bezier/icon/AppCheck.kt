@@ -78,14 +78,14 @@ val BezierIcons.AppCheck: BezierIcon
                     curveTo(8.471f, 5.001f, 9.264f, 5.0f, 10.4f, 5.0f)
                     lineTo(12.0f, 5.0f)
                     close()
-                    moveTo(19.469f, 5.293f)
-                    lineTo(14.754f, 10.007f)
+                    moveTo(19.468f, 5.293f)
+                    lineTo(14.755f, 10.007f)
                     lineTo(12.707f, 7.96f)
                     arcTo(1.0f, 1.0f, 315.9957446135786f, isMoreThanHalf = true, isPositiveArc = false, 11.293000000000001f, 9.374f)
                     lineTo(14.446000000000002f, 12.527000000000001f)
                     curveTo(14.616000000000001f, 12.697000000000001f, 14.893f, 12.697000000000001f, 15.063000000000002f, 12.527000000000001f)
                     lineTo(20.883000000000003f, 6.707000000000001f)
-                    arcTo(1.0f, 1.0f, 44.004255386422344f, isMoreThanHalf = false, isPositiveArc = false, 19.469f, 5.293000000000001f)
+                    arcTo(1.0f, 1.0f, 44.97974758928053f, isMoreThanHalf = true, isPositiveArc = false, 19.468000000000004f, 5.293000000000001f)
                 }
             }.build().also {
                 _appCheck = it

@@ -33,6 +33,20 @@ val BezierIcons.WifiPoor: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
+                        fill = SolidColor(Color(0xFF313234)),
+                        strokeLineWidth = 1f,
+                ) {
+                    moveTo(8.98f, 16.015f)
+                    curveTo(8.738f, 16.198f, 8.73f, 16.549f, 8.940000000000001f, 16.769000000000002f)
+                    lineTo(11.637f, 19.617f)
+                    arcTo(0.5f, 0.5f, 136.55209973030455f, isMoreThanHalf = false, isPositiveArc = false, 12.363f, 19.617f)
+                    lineTo(15.061f, 16.769000000000002f)
+                    curveTo(15.269f, 16.549000000000003f, 15.261f, 16.199f, 15.02f, 16.015f)
+                    arcTo(4.98f, 4.98f, 307.23278812143695f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 15.0f)
+                    curveTo(10.866f, 15.0f, 9.82f, 15.378f, 8.98f, 16.015f)
+                }
+
+                path(
                         fill = SolidColor(Color(0x4C313234)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 0.3f,
@@ -59,20 +73,6 @@ val BezierIcons.WifiPoor: BezierIcon
                     curveTo(3.5929999999999995f, 11.126000000000001f, 3.909f, 11.134f, 4.116999999999999f, 10.952f)
                     arcTo(11.95f, 11.95f, 228.84825671583874f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 8.0f)
                     curveTo(15.017f, 8.0f, 17.774f, 9.114f, 19.883f, 10.952f)
-                }
-
-                path(
-                        fill = SolidColor(Color(0xFF313234)),
-                        strokeLineWidth = 1f,
-                ) {
-                    moveTo(8.98f, 16.015f)
-                    curveTo(8.738f, 16.198f, 8.73f, 16.549f, 8.940000000000001f, 16.769000000000002f)
-                    lineTo(11.637f, 19.617f)
-                    arcTo(0.5f, 0.5f, 136.55209973030455f, isMoreThanHalf = false, isPositiveArc = false, 12.363f, 19.617f)
-                    lineTo(15.061f, 16.769000000000002f)
-                    curveTo(15.269f, 16.549000000000003f, 15.261f, 16.199f, 15.02f, 16.015f)
-                    arcTo(4.98f, 4.98f, 307.23278812143695f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 15.0f)
-                    curveTo(10.866f, 15.0f, 9.82f, 15.378f, 8.98f, 16.015f)
                 }
             }.build().also {
                 _wifiPoor = it
