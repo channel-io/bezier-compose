@@ -62,7 +62,11 @@
     <color name="bgtxt_green_lightest">@color/green400_10</color>
     <color name="inverted_bgtxt_green_normal">@color/green300</color>
 
+    <color name="bgtxt_teal_dark">@color/teal500</color>
     <color name="bgtxt_teal_normal">@color/teal400</color>
+    <color name="bgtxt_teal_light">@color/teal400_30</color>
+    <color name="bgtxt_teal_lighter">@color/teal400_20</color>
+    <color name="bgtxt_teal_lightest">@color/teal400_10</color>
 
     <color name="bgtxt_orange_dark">@color/orange500</color>
     <color name="bgtxt_orange_normal">@color/orange400</color>
