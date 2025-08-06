@@ -33,24 +33,6 @@ val BezierIcons.WifiWeak: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x4C313234)),
-                        strokeLineWidth = 1f,
-                        strokeAlpha = 0.3f,
-                ) {
-                    moveTo(19.883f, 10.952f)
-                    arcTo(0.517f, 0.517f, 131.54495568990436f, isMoreThanHalf = false, isPositiveArc = false, 20.596999999999998f, 10.925f)
-                    lineTo(21.938f, 9.510000000000002f)
-                    curveTo(22.147f, 9.290000000000001f, 22.137999999999998f, 8.940000000000001f, 21.91f, 8.740000000000002f)
-                    arcTo(14.94f, 14.94f, 311.4387017159682f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 5.0f)
-                    arcTo(14.94f, 14.94f, 270.08603266656394f, isMoreThanHalf = false, isPositiveArc = false, 2.09f, 8.74f)
-                    arcTo(0.535f, 0.535f, 228.14545090033627f, isMoreThanHalf = false, isPositiveArc = false, 2.062f, 9.51f)
-                    lineTo(3.4029999999999996f, 10.925f)
-                    curveTo(3.5929999999999995f, 11.126000000000001f, 3.909f, 11.134f, 4.116999999999999f, 10.952f)
-                    arcTo(11.95f, 11.95f, 228.84825671583874f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 8.0f)
-                    curveTo(15.017f, 8.0f, 17.774f, 9.114f, 19.883f, 10.952f)
-                }
-
-                path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                 ) {
@@ -73,6 +55,24 @@ val BezierIcons.WifiWeak: BezierIcon
                     curveTo(7.031000000000001f, 14.754999999999999f, 7.347f, 14.763f, 7.561f, 14.588f)
                     arcTo(6.97f, 6.97f, 230.54873786211982f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 13.0f)
                     curveTo(13.685f, 13.0f, 15.231f, 13.595f, 16.44f, 14.588000000000001f)
+                }
+
+                path(
+                        fill = SolidColor(Color(0x4C313234)),
+                        strokeLineWidth = 1f,
+                        strokeAlpha = 0.3f,
+                ) {
+                    moveTo(19.883f, 10.952f)
+                    arcTo(0.517f, 0.517f, 131.54495568990436f, isMoreThanHalf = false, isPositiveArc = false, 20.596999999999998f, 10.925f)
+                    lineTo(21.938f, 9.510000000000002f)
+                    curveTo(22.147f, 9.290000000000001f, 22.137999999999998f, 8.940000000000001f, 21.91f, 8.740000000000002f)
+                    arcTo(14.94f, 14.94f, 311.4387017159682f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 5.0f)
+                    arcTo(14.94f, 14.94f, 270.08603266656394f, isMoreThanHalf = false, isPositiveArc = false, 2.09f, 8.74f)
+                    arcTo(0.535f, 0.535f, 228.14545090033627f, isMoreThanHalf = false, isPositiveArc = false, 2.062f, 9.51f)
+                    lineTo(3.4029999999999996f, 10.925f)
+                    curveTo(3.5929999999999995f, 11.126000000000001f, 3.909f, 11.134f, 4.116999999999999f, 10.952f)
+                    arcTo(11.95f, 11.95f, 228.84825671583874f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 8.0f)
+                    curveTo(15.017f, 8.0f, 17.774f, 9.114f, 19.883f, 10.952f)
                 }
             }.build().also {
                 _wifiWeak = it

@@ -20,13 +20,13 @@ import io.channel.bezier.BezierIcon
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.compose.R
 
-val BezierIcons.GooglePlay: BezierIcon
+val BezierIcons.Straight: BezierIcon
     get() = object : BezierIcon {
         @DrawableRes
-        override val resourceId: Int = R.drawable.icon_google_play
+        override val resourceId: Int = R.drawable.icon_straight
         override val imageVector: ImageVector
-            get() = _googlePlay ?: ImageVector.Builder(
-                    name = "GooglePlay",
+            get() = _straight ?: ImageVector.Builder(
+                    name = "Straight",
                     defaultWidth = 24.dp,
                     defaultHeight = 24.dp,
                     viewportWidth = 24f,
@@ -35,43 +35,27 @@ val BezierIcons.GooglePlay: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(16.683f, 16.044f)
-                    lineTo(13.1f, 12.685f)
-                    lineTo(5.289f, 20.01f)
-                    curveTo(5.835999999999999f, 20.934f, 7.0649999999999995f, 21.360000000000003f, 8.116f, 20.78f)
-                    close()
-                    moveTo(17.603f, 15.536f)
-                    lineTo(13.83f, 12.0f)
-                    lineTo(17.601f, 8.464f)
-                    lineTo(20.99f, 10.337f)
-                    curveTo(22.298f, 11.06f, 22.298f, 12.94f, 20.99f, 13.663f)
-                    close()
-                    moveTo(16.683f, 7.956f)
-                    lineTo(13.1f, 11.315f)
-                    lineTo(5.289f, 3.992f)
-                    curveTo(5.835999999999999f, 3.067f, 7.0649999999999995f, 2.642f, 8.116f, 3.222f)
-                    close()
-                    moveTo(5.0f, 5.092f)
-                    lineTo(5.0f, 18.908f)
-                    lineTo(12.369f, 12.0f)
+                    moveTo(18.998f, 3.338f)
+                    arcTo(1.0f, 1.0f, 224.00425538642233f, isMoreThanHalf = true, isPositiveArc = true, 20.412000000000003f, 4.752f)
+                    lineTo(4.856f, 20.31f)
+                    arcTo(1.0f, 1.0f, 45.020253617648635f, isMoreThanHalf = false, isPositiveArc = true, 3.442f, 18.895f)
                     close()
                 }
             }.build().also {
-                _googlePlay = it
+                _straight = it
             }
     }
 
 
-private var _googlePlay: ImageVector? = null
+private var _straight: ImageVector? = null
 
 @Preview(showBackground = true)
 @Composable
-private fun GooglePlayIconPreview() {
+private fun StraightIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcons.GooglePlay.imageVector,
+            imageVector = BezierIcons.Straight.imageVector,
             contentDescription = null,
     )
 }
