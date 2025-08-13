@@ -35,26 +35,26 @@ val BezierIcons.ChainReaction: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(12.0f, 8.0f)
-                    curveTo(13.11f, 8.0f, 14.08f, 7.396f, 14.6f, 6.5f)
-                    arcTo(7.02f, 7.02f, 291.8833081369794f, isMoreThanHalf = false, isPositiveArc = true, 18.948f, 12.133f)
-                    arcTo(1.0f, 1.0f, 174.559722864939f, isMoreThanHalf = true, isPositiveArc = false, 20.932000000000002f, 11.886999999999999f)
-                    arcTo(9.02f, 9.02f, 352.8280941702015f, isMoreThanHalf = false, isPositiveArc = false, 14.958000000000002f, 4.497999999999998f)
-                    arcTo(3.0f, 3.0f, 350.3671902504217f, isMoreThanHalf = true, isPositiveArc = false, 12.0f, 8.0f)
-                    moveTo(16.402f, 18.5f)
-                    arcTo(3.0f, 3.0f, 149.99764498916622f, isMoreThanHalf = true, isPositiveArc = true, 17.955000000000002f, 19.812f)
-                    arcTo(9.02f, 9.02f, 49.26090996082992f, isMoreThanHalf = false, isPositiveArc = true, 8.571000000000002f, 21.292f)
-                    arcTo(1.0f, 1.0f, 112.88644820213702f, isMoreThanHalf = false, isPositiveArc = true, 9.349000000000002f, 19.449f)
-                    arcTo(7.02f, 7.02f, 112.79278356845698f, isMoreThanHalf = false, isPositiveArc = false, 16.402f, 18.5f)
-                    moveTo(8.0f, 17.0f)
-                    arcTo(3.0f, 3.0f, 359.9979165977637f, isMoreThanHalf = true, isPositiveArc = true, 3.0860000000000003f, 14.69f)
-                    arcTo(9.0f, 9.0f, 169.18246543171117f, isMoreThanHalf = false, isPositiveArc = true, 6.498f, 5.821999999999999f)
-                    arcTo(1.0f, 1.0f, 234.58226947630519f, isMoreThanHalf = false, isPositiveArc = true, 7.702f, 7.417999999999999f)
-                    arcTo(7.0f, 7.0f, 232.88237938574235f, isMoreThanHalf = false, isPositiveArc = false, 4.998f, 14.0f)
-                    lineTo(5.0f, 14.0f)
-                    arcTo(3.0f, 3.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 8.0f, 17.0f)
+                    moveTo(19.0f, 14.0f)
+                    arcTo(3.0f, 3.0f, 269.89205059155245f, isMoreThanHalf = true, isPositiveArc = true, 17.955f, 19.81f)
+                    arcTo(9.02f, 9.02f, 49.254370327717886f, isMoreThanHalf = false, isPositiveArc = true, 8.570999999999998f, 21.291f)
+                    arcTo(1.0f, 1.0f, 114.09679040890406f, isMoreThanHalf = false, isPositiveArc = true, 9.348999999999998f, 19.449f)
+                    arcTo(7.02f, 7.02f, 112.77651285474987f, isMoreThanHalf = false, isPositiveArc = false, 16.403f, 18.497f)
+                    arcTo(3.0f, 3.0f, 149.95876650348757f, isMoreThanHalf = false, isPositiveArc = true, 16.0f, 17.0f)
+                    arcTo(3.0f, 3.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 19.0f, 14.0f)
+                    moveTo(6.498f, 5.822f)
+                    arcTo(1.0f, 1.0f, 231.35695131233754f, isMoreThanHalf = true, isPositiveArc = true, 7.702f, 7.418f)
+                    arcTo(7.0f, 7.0f, 232.86387150146828f, isMoreThanHalf = false, isPositiveArc = false, 5.0f, 14.0f)
+                    arcTo(3.0f, 3.0f, 270.02452655893137f, isMoreThanHalf = true, isPositiveArc = true, 3.0869999999999997f, 14.688f)
+                    arcTo(9.0f, 9.0f, 169.18950906009462f, isMoreThanHalf = false, isPositiveArc = true, 6.497999999999999f, 5.822000000000001f)
+                    moveTo(12.0f, 2.0f)
+                    arcTo(3.0f, 3.0f, 269.9975303093629f, isMoreThanHalf = false, isPositiveArc = true, 14.958f, 4.4990000000000006f)
+                    arcTo(9.02f, 9.02f, 289.2529639712878f, isMoreThanHalf = false, isPositiveArc = true, 20.933f, 11.887f)
+                    arcTo(1.0f, 1.0f, 352.9389066294127f, isMoreThanHalf = false, isPositiveArc = true, 18.947f, 12.133000000000001f)
+                    arcTo(7.01f, 7.01f, 352.8318784902328f, isMoreThanHalf = false, isPositiveArc = false, 14.594999999999999f, 6.4990000000000006f)
+                    arcTo(3.0f, 3.0f, 29.97790021393641f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 8.0f)
+                    arcTo(3.0f, 3.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 12.0f, 2.0f)
                 }
             }.build().also {
                 _chainReaction = it

@@ -35,22 +35,20 @@ val BezierIcons.ArrowDown: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(3.285f, 12.163f)
-                    arcTo(1.0f, 1.0f, 223.23783331786345f, isMoreThanHalf = false, isPositiveArc = true, 4.698f, 12.119f)
-                    lineTo(11.001000000000001f, 18.042f)
+                    moveTo(10.986f, 20.773f)
+                    arcTo(1.5f, 1.5f, 133.23560714898218f, isMoreThanHalf = false, isPositiveArc = false, 13.041f, 20.773f)
+                    lineTo(20.698f, 13.577f)
+                    arcTo(1.0f, 1.0f, 48.35026838514163f, isMoreThanHalf = true, isPositiveArc = false, 19.329f, 12.12f)
+                    lineTo(12.996f, 18.07f)
+                    quadTo(13.0f, 18.036f, 13.0f, 18.0f)
+                    lineTo(13.0f, 4.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 11.0f, 4.0f)
                     lineTo(11.0f, 18.0f)
-                    lineTo(11.0f, 4.0f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 13.0f, 4.0f)
-                    lineTo(13.0f, 18.0f)
-                    quadTo(13.0f, 18.035f, 12.998f, 18.069f)
-                    lineTo(19.328f, 12.119f)
-                    arcTo(1.0f, 1.0f, 226.78232116178927f, isMoreThanHalf = false, isPositiveArc = true, 20.698f, 13.577f)
-                    lineTo(13.041f, 20.773f)
-                    arcTo(1.5f, 1.5f, 46.764392851017824f, isMoreThanHalf = false, isPositiveArc = true, 10.986f, 20.773f)
-                    lineTo(3.33f, 13.577f)
-                    arcTo(1.0f, 1.0f, 133.19860008111993f, isMoreThanHalf = false, isPositiveArc = true, 3.286f, 12.163f)
+                    lineTo(11.002f, 18.044f)
+                    lineTo(4.698f, 12.120000000000001f)
+                    arcTo(1.0f, 1.0f, 314.7831064216941f, isMoreThanHalf = true, isPositiveArc = false, 3.3290000000000006f, 13.577000000000002f)
+                    close()
                 }
             }.build().also {
                 _arrowDown = it

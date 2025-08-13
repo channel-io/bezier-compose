@@ -35,21 +35,20 @@ val BezierIcons.TrendingUp: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(11.634f, 6.152f)
-                    lineTo(6.468f, 11.318000000000001f)
-                    arcTo(0.4f, 0.4f, 225.03189588902558f, isMoreThanHalf = false, isPositiveArc = false, 6.751f, 12.001000000000001f)
-                    lineTo(10.0f, 12.001000000000001f)
-                    lineTo(10.0f, 17.5f)
-                    arcTo(0.5f, 0.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 10.5f, 18.0f)
-                    lineTo(13.5f, 18.0f)
-                    arcTo(0.5f, 0.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 14.0f, 17.5f)
-                    lineTo(14.0f, 12.0f)
-                    lineTo(17.25f, 12.0f)
-                    arcTo(0.4f, 0.4f, 89.75944054344441f, isMoreThanHalf = false, isPositiveArc = false, 17.532f, 11.318f)
-                    lineTo(12.367f, 6.151999999999999f)
-                    arcTo(0.52f, 0.52f, 314.7364017918737f, isMoreThanHalf = false, isPositiveArc = false, 11.635000000000002f, 6.151999999999999f)
+                    moveTo(11.634f, 6.151f)
+                    arcTo(0.52f, 0.52f, 225.26359820812633f, isMoreThanHalf = false, isPositiveArc = true, 12.366f, 6.151f)
+                    lineTo(17.531f, 11.317f)
+                    arcTo(0.4f, 0.4f, 314.7646406201229f, isMoreThanHalf = false, isPositiveArc = true, 17.247999999999998f, 12.001f)
+                    lineTo(13.997999999999998f, 12.001f)
+                    lineTo(13.997999999999998f, 17.5f)
+                    arcTo(0.5f, 0.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 13.497999999999998f, 18.0f)
+                    lineTo(10.497999999999998f, 18.0f)
+                    arcTo(0.5f, 0.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 9.997999999999998f, 17.5f)
+                    lineTo(9.997999999999998f, 12.0f)
+                    lineTo(6.751f, 12.0f)
+                    arcTo(0.4f, 0.4f, 89.95491014093503f, isMoreThanHalf = false, isPositiveArc = true, 6.468f, 11.317f)
+                    close()
                 }
             }.build().also {
                 _trendingUp = it

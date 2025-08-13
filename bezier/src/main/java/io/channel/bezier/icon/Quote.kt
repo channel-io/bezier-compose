@@ -35,12 +35,12 @@ val BezierIcons.Quote: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(11.496f, 5.067f)
-                    curveTo(11.496f, 5.6930000000000005f, 10.985000000000001f, 6.189f, 10.369f, 6.3020000000000005f)
-                    arcTo(6.24f, 6.24f, 259.5475008195604f, isMoreThanHalf = false, isPositiveArc = false, 5.753f, 10.010000000000002f)
-                    arcTo(3.0f, 3.0f, 265.3203220826053f, isMoreThanHalf = false, isPositiveArc = true, 6.0f, 10.0f)
+                    moveTo(10.366f, 4.009f)
+                    curveTo(10.985999999999999f, 3.926f, 11.495999999999999f, 4.442f, 11.495999999999999f, 5.067f)
+                    curveTo(11.495999999999999f, 5.6930000000000005f, 10.985f, 6.189f, 10.368999999999998f, 6.3020000000000005f)
+                    arcTo(6.24f, 6.24f, 259.5432238039676f, isMoreThanHalf = false, isPositiveArc = false, 5.752999999999998f, 10.011000000000001f)
+                    quadTo(5.875f, 10.0f, 6.0f, 10.0f)
                     lineTo(8.0f, 10.0f)
                     arcTo(3.0f, 3.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 11.0f, 13.0f)
                     lineTo(11.0f, 15.0f)
@@ -49,11 +49,11 @@ val BezierIcons.Quote: BezierIcon
                     arcTo(3.0f, 3.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 3.0f, 15.0f)
                     lineTo(3.0f, 12.43f)
                     curveTo(3.0f, 8.120999999999999f, 6.208f, 4.561f, 10.366f, 4.009f)
-                    curveTo(10.985999999999999f, 3.926f, 11.495999999999999f, 4.441000000000001f, 11.495999999999999f, 5.067f)
-                    moveTo(20.996f, 5.067f)
+                    moveTo(19.866f, 4.009f)
+                    curveTo(20.486f, 3.926f, 20.996f, 4.442f, 20.996f, 5.067f)
                     curveTo(20.996f, 5.6930000000000005f, 20.485f, 6.189f, 19.869f, 6.3020000000000005f)
-                    arcTo(6.24f, 6.24f, 259.5475008195604f, isMoreThanHalf = false, isPositiveArc = false, 15.253f, 10.010000000000002f)
-                    arcTo(3.0f, 3.0f, 265.3203220826053f, isMoreThanHalf = false, isPositiveArc = true, 15.5f, 10.0f)
+                    arcTo(6.24f, 6.24f, 259.5432238039676f, isMoreThanHalf = false, isPositiveArc = false, 15.253f, 10.011000000000001f)
+                    arcTo(3.0f, 3.0f, 265.0883681913173f, isMoreThanHalf = false, isPositiveArc = true, 15.5f, 10.0f)
                     lineTo(17.5f, 10.0f)
                     arcTo(3.0f, 3.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 20.5f, 13.0f)
                     lineTo(20.5f, 15.0f)
@@ -62,7 +62,6 @@ val BezierIcons.Quote: BezierIcon
                     arcTo(3.0f, 3.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 12.5f, 15.0f)
                     lineTo(12.5f, 12.43f)
                     curveTo(12.5f, 8.120999999999999f, 15.708f, 4.561f, 19.866f, 4.009f)
-                    curveTo(20.486f, 3.926f, 20.996f, 4.441000000000001f, 20.996f, 5.067f)
                 }
             }.build().also {
                 _quote = it

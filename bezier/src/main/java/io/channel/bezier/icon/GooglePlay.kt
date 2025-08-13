@@ -35,27 +35,26 @@ val BezierIcons.GooglePlay: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(16.683f, 16.044f)
-                    lineTo(13.1f, 12.685f)
-                    lineTo(5.289f, 20.01f)
-                    curveTo(5.835999999999999f, 20.934f, 7.0649999999999995f, 21.360000000000003f, 8.116f, 20.78f)
+                    moveTo(16.682f, 16.044f)
+                    lineTo(8.115999999999998f, 20.778f)
+                    curveTo(7.065999999999998f, 21.358999999999998f, 5.8359999999999985f, 20.933f, 5.2879999999999985f, 20.008f)
+                    lineTo(13.099999999999998f, 12.686f)
                     close()
-                    moveTo(17.603f, 15.536f)
-                    lineTo(13.83f, 12.0f)
-                    lineTo(17.601f, 8.464f)
-                    lineTo(20.99f, 10.337f)
-                    curveTo(22.298f, 11.06f, 22.298f, 12.94f, 20.99f, 13.663f)
+                    moveTo(12.368f, 12.0f)
+                    lineTo(5.0f, 18.907f)
+                    lineTo(5.0f, 5.092f)
                     close()
-                    moveTo(16.683f, 7.956f)
-                    lineTo(13.1f, 11.315f)
-                    lineTo(5.289f, 3.992f)
-                    curveTo(5.835999999999999f, 3.067f, 7.0649999999999995f, 2.642f, 8.116f, 3.222f)
+                    moveTo(20.991f, 10.337f)
+                    curveTo(22.299f, 11.06f, 22.299f, 12.94f, 20.991f, 13.663f)
+                    lineTo(17.602f, 15.535f)
+                    lineTo(13.833f, 12.0f)
+                    lineTo(17.603f, 8.464f)
                     close()
-                    moveTo(5.0f, 5.092f)
-                    lineTo(5.0f, 18.908f)
-                    lineTo(12.369f, 12.0f)
+                    moveTo(5.288f, 3.99f)
+                    curveTo(5.836f, 3.0660000000000003f, 7.066000000000001f, 2.64f, 8.116f, 3.22f)
+                    lineTo(16.682000000000002f, 7.954000000000001f)
+                    lineTo(13.100000000000001f, 11.312000000000001f)
                     close()
                 }
             }.build().also {

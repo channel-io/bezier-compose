@@ -35,10 +35,19 @@ val BezierIcons.CallOutgoing: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(15.0f, 3.0f)
-                    lineTo(19.5f, 3.0f)
+                    moveTo(4.2f, 4.955f)
+                    curveTo(5.168f, 3.987f, 6.584f, 3.725f, 7.428000000000001f, 4.3100000000000005f)
+                    curveTo(8.202000000000002f, 4.8260000000000005f, 9.365f, 6.283f, 9.365f, 7.537000000000001f)
+                    curveTo(9.365f, 8.828000000000001f, 7.739000000000001f, 9.811f, 7.751f, 10.443000000000001f)
+                    curveTo(7.763f, 11.074000000000002f, 8.458f, 12.718000000000002f, 9.871f, 14.132000000000001f)
+                    curveTo(11.286000000000001f, 15.546000000000001f, 12.93f, 16.241f, 13.561f, 16.253f)
+                    curveTo(14.193f, 16.265f, 15.175f, 14.639f, 16.467f, 14.639f)
+                    curveTo(17.721f, 14.639f, 19.179f, 15.802f, 19.695f, 16.576f)
+                    curveTo(20.28f, 17.42f, 20.017f, 18.836f, 19.049f, 19.804000000000002f)
+                    curveTo(17.435f, 21.418000000000003f, 12.916f, 21.418000000000003f, 7.7509999999999994f, 16.253f)
+                    curveTo(2.5859999999999985f, 11.087999999999997f, 2.586f, 6.569f, 4.2f, 4.955f)
+                    moveTo(19.5f, 3.0f)
                     curveTo(20.326999999999998f, 3.0f, 21.0f, 3.673f, 21.0f, 4.5f)
                     lineTo(21.0f, 9.0f)
                     arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 19.0f, 9.0f)
@@ -47,20 +56,8 @@ val BezierIcons.CallOutgoing: BezierIcon
                     arcTo(1.0f, 1.0f, 45.02023930876911f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 9.585f)
                     lineTo(17.59f, 5.0f)
                     lineTo(15.0f, 5.0f)
-                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 15.0f, 3.0f)
-                    moveTo(7.75f, 16.253f)
-                    curveTo(2.587f, 11.088f, 2.587f, 6.57f, 4.2f, 4.955f)
-                    curveTo(5.168f, 3.986f, 6.584f, 3.724f, 7.428000000000001f, 4.309f)
-                    curveTo(8.203000000000001f, 4.8260000000000005f, 9.365f, 6.283f, 9.365f, 7.537000000000001f)
-                    curveTo(9.365f, 8.294f, 8.807f, 8.944f, 8.347f, 9.48f)
-                    curveTo(8.022f, 9.859f, 7.7459999999999996f, 10.181000000000001f, 7.7509999999999994f, 10.443f)
-                    curveTo(7.762999999999999f, 11.074f, 8.458f, 12.718f, 9.872f, 14.132f)
-                    curveTo(11.286f, 15.546f, 12.93f, 16.241f, 13.562f, 16.253f)
-                    curveTo(13.822999999999999f, 16.258f, 14.145f, 15.983f, 14.524f, 15.657f)
-                    curveTo(15.059999999999999f, 15.197f, 15.710999999999999f, 14.639f, 16.467f, 14.639f)
-                    curveTo(17.721f, 14.639f, 19.177999999999997f, 15.800999999999998f, 19.695f, 16.576f)
-                    curveTo(20.28f, 17.42f, 20.018f, 18.836f, 19.049f, 19.804000000000002f)
-                    curveTo(17.435f, 21.418000000000003f, 12.916f, 21.418000000000003f, 7.7509999999999994f, 16.254f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 15.0f, 3.0f)
+                    close()
                 }
             }.build().also {
                 _callOutgoing = it

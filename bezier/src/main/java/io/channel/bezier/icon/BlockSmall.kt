@@ -35,18 +35,17 @@ val BezierIcons.BlockSmall: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(17.0f, 12.0f)
-                    arcTo(5.0f, 5.0f, 359.99088928344105f, isMoreThanHalf = false, isPositiveArc = true, 9.243f, 16.172f)
-                    lineTo(16.172f, 9.242f)
-                    curveTo(16.695f, 10.033000000000001f, 17.0f, 10.981000000000002f, 17.0f, 12.0f)
-                    moveTo(7.827999999999999f, 14.758f)
-                    lineTo(14.758f, 7.827999999999999f)
-                    arcTo(5.0f, 5.0f, 303.49536615611447f, isMoreThanHalf = false, isPositiveArc = false, 7.828999999999999f, 14.757f)
-                    moveTo(19.0f, 12.0f)
-                    arcTo(7.0f, 7.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 5.0f, 12.0f)
-                    arcTo(7.0f, 7.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 19.0f, 12.0f)
+                    moveTo(12.0f, 5.0f)
+                    arcTo(7.0f, 7.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 12.0f, 19.0f)
+                    arcTo(7.0f, 7.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 5.0f)
+                    moveTo(9.242f, 16.17f)
+                    arcTo(5.0f, 5.0f, 123.49536615611444f, isMoreThanHalf = false, isPositiveArc = false, 16.171f, 9.241000000000001f)
+                    close()
+                    moveTo(12.0f, 7.0f)
+                    arcTo(5.0f, 5.0f, 270.00911071657373f, isMoreThanHalf = false, isPositiveArc = false, 7.828f, 14.757f)
+                    lineTo(14.757000000000001f, 7.827999999999999f)
+                    arcTo(4.98f, 4.98f, 303.5157684237633f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 7.0f)
                 }
             }.build().also {
                 _blockSmall = it
