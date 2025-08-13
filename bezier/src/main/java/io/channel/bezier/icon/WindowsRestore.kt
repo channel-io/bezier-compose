@@ -35,28 +35,27 @@ val BezierIcons.WindowsRestore: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(16.0f, 8.0f)
-                    lineTo(10.0f, 8.0f)
-                    lineTo(10.0f, 9.0f)
-                    lineTo(15.0f, 9.0f)
-                    lineTo(15.0f, 14.0f)
-                    lineTo(16.0f, 14.0f)
-                    close()
-                    moveTo(15.0f, 15.0f)
+                    moveTo(17.0f, 15.0f)
+                    lineTo(15.0f, 15.0f)
                     lineTo(15.0f, 17.0f)
                     lineTo(7.0f, 17.0f)
                     lineTo(7.0f, 9.0f)
                     lineTo(9.0f, 9.0f)
                     lineTo(9.0f, 7.0f)
                     lineTo(17.0f, 7.0f)
-                    lineTo(17.0f, 15.0f)
                     close()
-                    moveTo(8.0f, 10.0f)
-                    lineTo(14.0f, 10.0f)
+                    moveTo(8.0f, 16.0f)
                     lineTo(14.0f, 16.0f)
-                    lineTo(8.0f, 16.0f)
+                    lineTo(14.0f, 10.0f)
+                    lineTo(8.0f, 10.0f)
+                    close()
+                    moveTo(15.0f, 14.0f)
+                    lineTo(16.0f, 14.0f)
+                    lineTo(16.0f, 8.0f)
+                    lineTo(10.0f, 8.0f)
+                    lineTo(10.0f, 9.0f)
+                    lineTo(15.0f, 9.0f)
                     close()
                 }
             }.build().also {

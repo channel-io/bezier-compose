@@ -35,26 +35,26 @@ val BezierIcons.Timezone: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(18.756f, 5.332f)
-                    arcTo(7.54f, 7.54f, 326.07558434306037f, isMoreThanHalf = false, isPositiveArc = false, 6.243f, 5.332f)
-                    curveTo(4.4830000000000005f, 7.904999999999999f, 4.646000000000001f, 11.344999999999999f, 6.389f, 13.931000000000001f)
-                    lineTo(12.056000000000001f, 22.339f)
-                    arcTo(0.534f, 0.534f, 146.2490782230518f, isMoreThanHalf = false, isPositiveArc = false, 12.944f, 22.339f)
-                    lineTo(18.61f, 13.931f)
-                    curveTo(20.352999999999998f, 11.344999999999999f, 20.518f, 7.904999999999999f, 18.756f, 5.331999999999999f)
-                    moveTo(18.0f, 9.5f)
-                    arcTo(5.5f, 5.5f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 7.0f, 9.5f)
-                    arcTo(5.5f, 5.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 18.0f, 9.5f)
-                    moveTo(13.5f, 6.0f)
-                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = false, 11.5f, 6.0f)
-                    lineTo(11.5f, 9.5f)
-                    arcTo(1.0f, 1.0f, 179.95471505575156f, isMoreThanHalf = false, isPositiveArc = false, 11.986f, 10.357f)
-                    lineTo(14.486f, 11.857f)
-                    arcTo(1.0f, 1.0f, 118.84437088824265f, isMoreThanHalf = false, isPositiveArc = false, 15.514000000000001f, 10.142999999999999f)
+                    moveTo(6.243f, 5.332f)
+                    arcTo(7.54f, 7.54f, 213.91760720141556f, isMoreThanHalf = false, isPositiveArc = true, 18.756999999999998f, 5.332f)
+                    curveTo(20.517999999999997f, 7.904999999999999f, 20.352999999999998f, 11.346f, 18.61f, 13.931999999999999f)
+                    lineTo(12.943999999999999f, 22.339f)
+                    arcTo(0.534f, 0.534f, 33.750921776948175f, isMoreThanHalf = false, isPositiveArc = true, 12.056f, 22.339f)
+                    lineTo(6.39f, 13.932f)
+                    curveTo(4.648f, 11.345f, 4.483f, 7.905f, 6.244f, 5.332000000000001f)
+                    moveTo(12.5f, 4.0f)
+                    arcTo(5.5f, 5.5f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 12.5f, 15.0f)
+                    arcTo(5.5f, 5.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 12.5f, 4.0f)
+                    moveTo(12.5f, 5.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 13.5f, 6.0f)
                     lineTo(13.5f, 8.933f)
-                    close()
+                    lineTo(15.514f, 10.143f)
+                    arcTo(1.0f, 1.0f, 303.0634765575929f, isMoreThanHalf = false, isPositiveArc = true, 14.485999999999999f, 11.857000000000001f)
+                    lineTo(11.985999999999999f, 10.357000000000001f)
+                    arcTo(1.0f, 1.0f, 120.93061613026815f, isMoreThanHalf = false, isPositiveArc = true, 11.5f, 9.5f)
+                    lineTo(11.5f, 6.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 12.5f, 5.0f)
                 }
             }.build().also {
                 _timezone = it

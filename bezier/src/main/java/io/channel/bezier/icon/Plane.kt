@@ -35,16 +35,15 @@ val BezierIcons.Plane: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(10.5f, 3.5f)
-                    arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 13.5f, 3.5f)
+                    moveTo(12.0f, 2.0f)
+                    arcTo(1.5f, 1.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 13.5f, 3.5f)
                     lineTo(13.5f, 9.333f)
                     lineTo(21.555f, 14.703f)
                     arcTo(1.0f, 1.0f, 303.71071401021305f, isMoreThanHalf = false, isPositiveArc = true, 22.0f, 15.535f)
                     lineTo(22.0f, 16.653f)
-                    arcTo(0.25f, 0.25f, 359.96662436322873f, isMoreThanHalf = false, isPositiveArc = true, 21.67f, 16.889999999999997f)
-                    lineTo(13.500000000000002f, 14.166999999999998f)
+                    arcTo(0.25f, 0.25f, 359.7372401014377f, isMoreThanHalf = false, isPositiveArc = true, 21.67f, 16.891f)
+                    lineTo(13.500000000000002f, 14.165999999999999f)
                     lineTo(13.500000000000002f, 18.5f)
                     lineTo(14.854000000000003f, 19.854f)
                     arcTo(0.5f, 0.5f, 315.072420111427f, isMoreThanHalf = false, isPositiveArc = true, 15.000000000000004f, 20.207f)
@@ -52,15 +51,16 @@ val BezierIcons.Plane: BezierIcon
                     lineTo(12.000000000000004f, 21.0f)
                     lineTo(9.000000000000004f, 22.0f)
                     lineTo(9.000000000000004f, 20.207f)
-                    arcTo(0.5f, 0.5f, 180.0121727895169f, isMoreThanHalf = false, isPositiveArc = true, 9.146000000000004f, 19.854f)
+                    arcTo(0.5f, 0.5f, 179.8976714885224f, isMoreThanHalf = false, isPositiveArc = true, 9.146000000000004f, 19.853f)
                     lineTo(10.5f, 18.5f)
-                    lineTo(10.5f, 14.167f)
-                    lineTo(2.33f, 16.89f)
-                    arcTo(0.25f, 0.25f, 71.33706485463908f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 16.653000000000002f)
+                    lineTo(10.5f, 14.166f)
+                    lineTo(2.33f, 16.891000000000002f)
+                    arcTo(0.25f, 0.25f, 71.33643916329692f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 16.653000000000002f)
                     lineTo(2.0f, 15.535000000000002f)
                     arcTo(1.0f, 1.0f, 179.9914259494673f, isMoreThanHalf = false, isPositiveArc = true, 2.445f, 14.703000000000001f)
                     lineTo(10.5f, 9.333000000000002f)
-                    close()
+                    lineTo(10.5f, 3.5f)
+                    arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 2.0f)
                 }
             }.build().also {
                 _plane = it

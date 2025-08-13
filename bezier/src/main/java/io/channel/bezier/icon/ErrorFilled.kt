@@ -35,20 +35,19 @@ val BezierIcons.ErrorFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.0f, 2.0f)
-                    curveTo(6.486f, 2.0f, 2.0f, 6.486f, 2.0f, 12.0f)
-                    curveTo(2.0f, 17.514f, 6.486f, 22.0f, 12.0f, 22.0f)
-                    curveTo(17.514f, 22.0f, 22.0f, 17.514f, 22.0f, 12.0f)
-                    curveTo(22.0f, 6.486000000000001f, 17.515f, 2.0f, 12.0f, 2.0f)
+                    curveTo(17.515f, 2.0f, 22.0f, 6.486f, 22.0f, 12.0f)
+                    curveTo(22.0f, 17.514f, 17.515f, 22.0f, 12.0f, 22.0f)
+                    curveTo(6.484999999999999f, 22.0f, 2.0f, 17.514f, 2.0f, 12.0f)
+                    curveTo(2.0f, 6.486000000000001f, 6.486f, 2.0f, 12.0f, 2.0f)
                     moveTo(11.933f, 15.595f)
-                    arcTo(1.322f, 1.322f, 269.9783386612739f, isMoreThanHalf = true, isPositiveArc = false, 11.934f, 18.240000000000002f)
-                    arcTo(1.322f, 1.322f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 11.934f, 15.595000000000002f)
-                    moveTo(13.148f, 5.980000000000002f)
-                    lineTo(13.015f, 13.987000000000002f)
-                    lineTo(10.853000000000002f, 13.987000000000002f)
-                    lineTo(10.72f, 5.98f)
+                    arcTo(1.323f, 1.323f, 269.9566934891721f, isMoreThanHalf = true, isPositiveArc = false, 11.935f, 18.241f)
+                    arcTo(1.323f, 1.323f, 89.95669188983942f, isMoreThanHalf = false, isPositiveArc = false, 11.933f, 15.594999999999999f)
+                    moveTo(10.853f, 13.985999999999999f)
+                    lineTo(13.014f, 13.985999999999999f)
+                    lineTo(13.146999999999998f, 5.979999999999999f)
+                    lineTo(10.72f, 5.979999999999999f)
                     close()
                 }
             }.build().also {

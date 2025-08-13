@@ -35,22 +35,21 @@ val BezierIcons.ChatBubbleAltPushFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(18.5f, 10.0f)
-                    arcTo(3.5f, 3.5f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 18.5f, 3.0f)
-                    arcTo(3.5f, 3.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 18.5f, 10.0f)
                     moveTo(12.0f, 4.0f)
-                    quadTo(12.791f, 4.0f, 13.547f, 4.106f)
-                    arcTo(5.5f, 5.5f, 205.85325746313455f, isMoreThanHalf = false, isPositiveArc = false, 21.447000000000003f, 11.146f)
-                    quadTo(21.500000000000004f, 11.566f, 21.500000000000004f, 12.0f)
-                    curveTo(21.500000000000004f, 16.418f, 17.247000000000003f, 20.0f, 12.000000000000004f, 20.0f)
-                    quadTo(10.965000000000003f, 19.998f, 9.992000000000004f, 19.821f)
-                    curveTo(8.576000000000004f, 21.032f, 6.9390000000000045f, 21.612000000000002f, 5.879000000000004f, 21.881f)
-                    curveTo(5.457000000000004f, 21.987000000000002f, 5.161000000000004f, 21.517f, 5.382000000000004f, 21.142f)
-                    curveTo(5.770000000000004f, 20.483f, 6.247000000000004f, 19.547f, 6.525000000000004f, 18.538f)
+                    quadTo(12.79f, 4.001f, 13.546f, 4.106f)
+                    arcTo(5.5f, 5.5f, 205.8031178374968f, isMoreThanHalf = false, isPositiveArc = false, 21.445999999999998f, 11.143f)
+                    quadTo(21.499f, 11.566f, 21.499999999999996f, 12.0f)
+                    curveTo(21.499999999999996f, 16.418f, 17.246999999999996f, 20.0f, 11.999999999999996f, 20.0f)
+                    quadTo(10.964999999999996f, 19.999f, 9.991999999999997f, 19.821f)
+                    curveTo(8.575999999999997f, 21.032f, 6.938999999999997f, 21.611f, 5.878999999999997f, 21.880000000000003f)
+                    curveTo(5.456999999999997f, 21.987000000000002f, 5.161999999999997f, 21.518000000000004f, 5.381999999999997f, 21.143000000000004f)
+                    curveTo(5.769999999999997f, 20.483000000000004f, 6.246999999999997f, 19.547000000000004f, 6.523999999999997f, 18.538000000000004f)
                     curveTo(4.09f, 17.09f, 2.5f, 14.701f, 2.5f, 12.0f)
                     curveTo(2.5f, 7.582f, 6.753f, 4.0f, 12.0f, 4.0f)
+                    moveTo(18.5f, 3.0f)
+                    arcTo(3.5f, 3.5f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 18.5f, 10.0f)
+                    arcTo(3.5f, 3.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 18.5f, 3.0f)
                 }
             }.build().also {
                 _chatBubbleAltPushFilled = it

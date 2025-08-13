@@ -35,21 +35,22 @@ val BezierIcons.CloudUploadComplete: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(17.0f, 19.0f)
+                    moveTo(12.0f, 4.0f)
+                    arcTo(6.0f, 6.0f, 269.9797892421169f, isMoreThanHalf = false, isPositiveArc = true, 17.2f, 7.003f)
+                    arcTo(6.0f, 6.0f, 271.8091065370883f, isMoreThanHalf = false, isPositiveArc = true, 17.0f, 19.0f)
                     lineTo(6.25f, 19.0f)
                     arcTo(5.25f, 5.25f, 89.67260021563486f, isMoreThanHalf = false, isPositiveArc = true, 6.19f, 8.5f)
-                    arcTo(6.002f, 6.002f, 194.50484111102298f, isMoreThanHalf = false, isPositiveArc = true, 17.199f, 7.003f)
-                    arcTo(6.0f, 6.0f, 271.8096417282573f, isMoreThanHalf = false, isPositiveArc = true, 17.0f, 19.0f)
-                    moveTo(15.707f, 11.207f)
-                    arcTo(1.0f, 1.0f, 44.00425538642027f, isMoreThanHalf = false, isPositiveArc = false, 14.293000000000001f, 9.793000000000001f)
+                    arcTo(6.0f, 6.0f, 194.47751195942305f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 4.0f)
+                    moveTo(15.707f, 9.793f)
+                    arcTo(1.0f, 1.0f, 314.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 14.293000000000001f, 9.793f)
                     lineTo(11.0f, 13.086f)
                     lineTo(9.207f, 11.293000000000001f)
-                    arcTo(1.0f, 1.0f, 314.00425538642025f, isMoreThanHalf = false, isPositiveArc = false, 7.793000000000001f, 12.707f)
+                    arcTo(1.0f, 1.0f, 315.99574461357975f, isMoreThanHalf = true, isPositiveArc = false, 7.793000000000001f, 12.707f)
                     lineTo(10.293000000000001f, 15.207f)
                     arcTo(1.0f, 1.0f, 134.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 11.707f, 15.207f)
-                    close()
+                    lineTo(15.707f, 11.207f)
+                    arcTo(1.0f, 1.0f, 44.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 15.707f, 9.793000000000001f)
                 }
             }.build().also {
                 _cloudUploadComplete = it

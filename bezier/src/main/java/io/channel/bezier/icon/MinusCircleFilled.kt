@@ -35,13 +35,12 @@ val BezierIcons.MinusCircleFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(2.0f, 12.0f)
-                    curveTo(2.0f, 6.5f, 6.5f, 2.0f, 12.0f, 2.0f)
+                    moveTo(12.0f, 2.0f)
                     curveTo(17.5f, 2.0f, 22.0f, 6.5f, 22.0f, 12.0f)
                     curveTo(22.0f, 17.5f, 17.5f, 22.0f, 12.0f, 22.0f)
                     curveTo(6.5f, 22.0f, 2.0f, 17.5f, 2.0f, 12.0f)
+                    curveTo(2.0f, 6.5f, 6.5f, 2.0f, 12.0f, 2.0f)
                     moveTo(8.0f, 11.0f)
                     arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 8.0f, 13.0f)
                     lineTo(16.0f, 13.0f)

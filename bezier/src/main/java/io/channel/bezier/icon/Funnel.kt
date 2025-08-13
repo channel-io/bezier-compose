@@ -35,7 +35,6 @@ val BezierIcons.Funnel: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(20.0f, 2.0f)
                     arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 21.0f, 3.0f)
@@ -54,20 +53,20 @@ val BezierIcons.Funnel: BezierIcon
                     lineTo(3.0f, 3.0f)
                     arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 4.0f, 2.0f)
                     close()
-                    moveTo(19.0f, 4.0f)
-                    lineTo(5.0f, 4.0f)
-                    lineTo(5.0f, 5.172f)
-                    lineTo(9.828f, 10.0f)
-                    curveTo(10.125f, 10.296f, 10.37f, 10.634f, 10.558f, 11.0f)
-                    lineTo(13.442f, 11.0f)
-                    quadTo(13.674f, 10.549f, 14.016f, 10.165f)
-                    lineTo(14.172f, 10.0f)
-                    lineTo(19.0f, 5.172f)
-                    close()
-                    moveTo(13.0f, 13.0f)
-                    lineTo(11.0f, 13.0f)
+                    moveTo(11.0f, 13.0f)
                     lineTo(11.0f, 19.762999999999998f)
                     lineTo(13.0f, 18.762999999999998f)
+                    lineTo(13.0f, 13.0f)
+                    close()
+                    moveTo(5.0f, 5.172f)
+                    lineTo(9.828f, 10.0f)
+                    curveTo(10.123999999999999f, 10.296f, 10.367999999999999f, 10.634f, 10.556999999999999f, 11.0f)
+                    lineTo(13.442999999999998f, 11.0f)
+                    quadTo(13.674999999999997f, 10.549f, 14.015999999999998f, 10.165f)
+                    lineTo(14.171999999999999f, 10.0f)
+                    lineTo(19.0f, 5.172f)
+                    lineTo(19.0f, 4.0f)
+                    lineTo(5.0f, 4.0f)
                     close()
                 }
             }.build().also {

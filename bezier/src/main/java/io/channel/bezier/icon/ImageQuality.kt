@@ -64,15 +64,15 @@ val BezierIcons.ImageQuality: BezierIcon
                     curveTo(3.673f, 21.0f, 3.0f, 20.326999999999998f, 3.0f, 19.5f)
                     lineTo(3.0f, 4.5f)
                     curveTo(3.0f, 3.673f, 3.673f, 3.0f, 4.5f, 3.0f)
-                    moveTo(18.0f, 18.0f)
+                    moveTo(14.005f, 10.0f)
                     lineTo(18.0f, 12.0f)
-                    lineTo(14.004999999999999f, 10.0f)
-                    lineTo(6.0f, 14.0f)
+                    lineTo(18.0f, 18.0f)
                     lineTo(6.0f, 18.0f)
+                    lineTo(6.0f, 14.0f)
                     close()
-                    moveTo(10.0f, 8.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 6.0f, 8.0f)
-                    arcTo(2.0f, 2.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 10.0f, 8.0f)
+                    moveTo(8.0f, 6.0f)
+                    arcTo(2.0f, 2.0f, 270.0286331027778f, isMoreThanHalf = true, isPositiveArc = true, 7.998f, 10.001999999999999f)
+                    arcTo(2.0f, 2.0f, 90.02863403839478f, isMoreThanHalf = false, isPositiveArc = true, 8.0f, 6.0f)
                 }
             }.build().also {
                 _imageQuality = it

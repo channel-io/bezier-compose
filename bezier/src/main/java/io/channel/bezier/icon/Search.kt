@@ -35,17 +35,18 @@ val BezierIcons.Search: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(18.0f, 10.0f)
-                    arcTo(8.0f, 8.0f, 359.99363337728624f, isMoreThanHalf = true, isPositiveArc = false, 14.906f, 16.32f)
-                    lineTo(20.293f, 21.707f)
-                    arcTo(1.0f, 1.0f, 134.00425538642457f, isMoreThanHalf = false, isPositiveArc = false, 21.707f, 20.293f)
-                    lineTo(16.32f, 14.905999999999999f)
-                    arcTo(7.97f, 7.97f, 37.88839316411509f, isMoreThanHalf = false, isPositiveArc = false, 18.0f, 10.0f)
-                    moveTo(16.0f, 10.0f)
-                    arcTo(6.0f, 6.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 4.0f, 10.0f)
-                    arcTo(6.0f, 6.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 16.0f, 10.0f)
+                    moveTo(10.0f, 2.0f)
+                    arcTo(8.0f, 8.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 18.0f, 10.0f)
+                    curveTo(18.0f, 11.849f, 17.37f, 13.549f, 16.318f, 14.902999999999999f)
+                    lineTo(21.708000000000002f, 20.293f)
+                    arcTo(1.0f, 1.0f, 315.02025216075623f, isMoreThanHalf = true, isPositiveArc = true, 20.293000000000003f, 21.707f)
+                    lineTo(14.903000000000002f, 16.317f)
+                    arcTo(7.96f, 7.96f, 52.051827371120076f, isMoreThanHalf = false, isPositiveArc = true, 10.0f, 18.0f)
+                    arcTo(8.0f, 8.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 10.0f, 2.0f)
+                    moveTo(10.0f, 4.0f)
+                    arcTo(6.0f, 6.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 10.0f, 16.0f)
+                    arcTo(6.0f, 6.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 10.0f, 4.0f)
                 }
             }.build().also {
                 _search = it

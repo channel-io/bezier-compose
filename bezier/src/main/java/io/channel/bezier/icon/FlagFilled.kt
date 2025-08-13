@@ -35,19 +35,18 @@ val BezierIcons.FlagFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(5.407f, 4.0f)
-                    curveTo(4.63f, 4.0f, 4.0f, 4.63f, 4.0f, 5.407f)
-                    lineTo(4.0f, 21.5f)
-                    arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 7.0f, 21.5f)
-                    lineTo(7.0f, 15.0f)
-                    lineTo(20.036f, 15.0f)
-                    arcTo(1.0f, 1.0f, 90.00796867143366f, isMoreThanHalf = false, isPositiveArc = false, 20.845000000000002f, 13.411999999999999f)
+                    moveTo(20.036f, 4.0f)
+                    arcTo(1.0f, 1.0f, 269.9920313285664f, isMoreThanHalf = false, isPositiveArc = true, 20.845000000000002f, 5.588f)
                     lineTo(18.0f, 9.5f)
-                    lineTo(20.845f, 5.588f)
-                    arcTo(1.0f, 1.0f, 36.01521090220225f, isMoreThanHalf = false, isPositiveArc = false, 20.036f, 4.0f)
-                    lineTo(5.407f, 4.0f)
+                    lineTo(20.845f, 13.411999999999999f)
+                    arcTo(1.0f, 1.0f, 323.9847890977977f, isMoreThanHalf = false, isPositiveArc = true, 20.036f, 15.0f)
+                    lineTo(7.0f, 15.0f)
+                    lineTo(7.0f, 21.5f)
+                    arcTo(1.5f, 1.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 4.0f, 21.5f)
+                    lineTo(4.0f, 5.407f)
+                    curveTo(4.0f, 4.63f, 4.63f, 4.0f, 5.407f, 4.0f)
+                    close()
                 }
             }.build().also {
                 _flagFilled = it

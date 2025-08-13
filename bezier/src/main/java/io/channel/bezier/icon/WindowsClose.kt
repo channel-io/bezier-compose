@@ -35,20 +35,19 @@ val BezierIcons.WindowsClose: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(7.404f, 6.697f)
-                    lineTo(6.697f, 7.404f)
-                    lineTo(11.293f, 12.0f)
-                    lineTo(6.696999999999999f, 16.596f)
-                    lineTo(7.403999999999999f, 17.303f)
-                    lineTo(12.0f, 12.707f)
-                    lineTo(16.596f, 17.303f)
-                    lineTo(17.303f, 16.596f)
+                    moveTo(12.0f, 11.293f)
+                    lineTo(16.596f, 6.696999999999999f)
+                    lineTo(17.303f, 7.403999999999999f)
                     lineTo(12.707f, 12.0f)
-                    lineTo(17.303f, 7.404f)
-                    lineTo(16.596f, 6.697f)
-                    lineTo(12.0f, 11.293f)
+                    lineTo(17.303f, 16.596f)
+                    lineTo(16.596f, 17.303f)
+                    lineTo(12.0f, 12.707f)
+                    lineTo(7.404f, 17.303f)
+                    lineTo(6.697f, 16.596f)
+                    lineTo(11.293f, 12.0f)
+                    lineTo(6.697f, 7.404f)
+                    lineTo(7.404f, 6.697f)
                     close()
                 }
             }.build().also {

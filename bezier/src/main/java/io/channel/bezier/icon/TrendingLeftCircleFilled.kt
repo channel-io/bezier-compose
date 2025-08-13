@@ -35,26 +35,25 @@ val BezierIcons.TrendingLeftCircleFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(2.0f, 12.0f)
-                    curveTo(2.0f, 6.478f, 6.477f, 2.0f, 12.0f, 2.0f)
+                    moveTo(12.0f, 2.0f)
                     curveTo(17.523f, 2.0f, 22.0f, 6.478f, 22.0f, 12.0f)
                     curveTo(22.0f, 17.522f, 17.523f, 22.0f, 12.0f, 22.0f)
                     curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
-                    moveTo(11.317f, 6.469f)
-                    lineTo(6.151f, 11.634f)
-                    arcTo(0.52f, 0.52f, 224.73640179187365f, isMoreThanHalf = false, isPositiveArc = false, 6.151f, 12.366f)
-                    lineTo(11.317f, 17.532f)
-                    arcTo(0.4f, 0.4f, 135.03231011641648f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 17.248f)
+                    curveTo(2.0f, 6.477f, 6.477f, 2.0f, 12.0f, 2.0f)
+                    moveTo(12.0f, 6.752f)
+                    arcTo(0.4f, 0.4f, 0.18929568617961356f, isMoreThanHalf = false, isPositiveArc = false, 11.316f, 6.468999999999999f)
+                    lineTo(6.15f, 11.635f)
+                    arcTo(0.52f, 0.52f, 224.65889770565386f, isMoreThanHalf = false, isPositiveArc = false, 6.15f, 12.366f)
+                    lineTo(11.316f, 17.531f)
+                    arcTo(0.4f, 0.4f, 135.23503292824864f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 17.25f)
                     lineTo(12.0f, 14.0f)
                     lineTo(16.642f, 14.0f)
-                    curveTo(16.84f, 14.0f, 17.0f, 13.776f, 17.0f, 13.5f)
-                    lineTo(17.0f, 10.5f)
-                    curveTo(17.0f, 10.224f, 16.84f, 10.0f, 16.642f, 10.0f)
+                    curveTo(16.839f, 14.0f, 16.999f, 13.776f, 16.999f, 13.5f)
+                    lineTo(16.999f, 10.5f)
+                    curveTo(16.999f, 10.224f, 16.839f, 10.0f, 16.642f, 10.0f)
                     lineTo(12.0f, 10.0f)
-                    lineTo(12.0f, 6.752f)
-                    arcTo(0.4f, 0.4f, 0.18862271096810787f, isMoreThanHalf = false, isPositiveArc = false, 11.317f, 6.468f)
+                    close()
                 }
             }.build().also {
                 _trendingLeftCircleFilled = it

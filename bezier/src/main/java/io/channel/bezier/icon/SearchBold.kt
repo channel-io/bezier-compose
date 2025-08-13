@@ -35,17 +35,16 @@ val BezierIcons.SearchBold: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(18.0f, 10.0f)
-                    arcTo(8.0f, 8.0f, 359.9886726039236f, isMoreThanHalf = true, isPositiveArc = false, 14.497f, 16.618000000000002f)
-                    lineTo(18.939f, 21.061f)
-                    arcTo(1.5f, 1.5f, 134.99999892742673f, isMoreThanHalf = false, isPositiveArc = false, 21.061f, 18.939f)
-                    lineTo(16.618000000000002f, 14.497f)
-                    arcTo(7.96f, 7.96f, 34.271324879754054f, isMoreThanHalf = false, isPositiveArc = false, 18.0f, 10.0f)
-                    moveTo(15.0f, 10.0f)
-                    arcTo(5.0f, 5.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 5.0f, 10.0f)
-                    arcTo(5.0f, 5.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 15.0f, 10.0f)
+                    moveTo(10.0f, 2.0f)
+                    arcTo(8.0f, 8.0f, 270.0127272601327f, isMoreThanHalf = false, isPositiveArc = true, 16.616f, 14.495f)
+                    lineTo(21.061f, 18.939999999999998f)
+                    arcTo(1.5f, 1.5f, 316.6069318604907f, isMoreThanHalf = false, isPositiveArc = true, 18.94f, 21.06f)
+                    lineTo(14.495000000000001f, 16.616f)
+                    arcTo(8.0f, 8.0f, 55.791792998005626f, isMoreThanHalf = true, isPositiveArc = true, 10.0f, 2.0f)
+                    moveTo(10.0f, 5.0f)
+                    arcTo(5.0f, 5.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 10.0f, 15.0f)
+                    arcTo(5.0f, 5.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 10.0f, 5.0f)
                 }
             }.build().also {
                 _searchBold = it

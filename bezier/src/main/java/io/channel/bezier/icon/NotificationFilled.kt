@@ -35,21 +35,20 @@ val BezierIcons.NotificationFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(5.857f, 8.144f)
-                    curveTo(5.857f, 9.699f, 5.421f, 11.224f, 4.599f, 12.545f)
-                    lineTo(2.249f, 16.316f)
-                    arcTo(1.1f, 1.1f, 212.0669182154023f, isMoreThanHalf = false, isPositiveArc = false, 3.182f, 18.0f)
-                    lineTo(20.822999999999997f, 18.0f)
-                    arcTo(1.1f, 1.1f, 90.0174135357663f, isMoreThanHalf = false, isPositiveArc = false, 21.757999999999996f, 16.32f)
-                    lineTo(19.405999999999995f, 12.544f)
-                    arcTo(8.3f, 8.3f, 148.02865953596734f, isMoreThanHalf = false, isPositiveArc = true, 18.146999999999995f, 8.144f)
-                    arcTo(6.144f, 6.144f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 5.857999999999995f, 8.144f)
-                    moveTo(12.0f, 22.0f)
-                    arcTo(4.0f, 4.0f, 89.98543798475636f, isMoreThanHalf = false, isPositiveArc = true, 8.126f, 19.0f)
-                    lineTo(15.873999999999999f, 19.0f)
-                    arcTo(4.0f, 4.0f, 14.477510274736266f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 22.0f)
+                    moveTo(15.874f, 19.0f)
+                    arcTo(4.002f, 4.002f, 14.530095232347715f, isMoreThanHalf = false, isPositiveArc = true, 8.126000000000001f, 19.0f)
+                    close()
+                    moveTo(12.002f, 2.0f)
+                    arcTo(6.145f, 6.145f, 269.9999992413371f, isMoreThanHalf = false, isPositiveArc = true, 18.147f, 8.144f)
+                    curveTo(18.147f, 9.699f, 18.583f, 11.224f, 19.404999999999998f, 12.544f)
+                    lineTo(21.756999999999998f, 16.32f)
+                    arcTo(1.1f, 1.1f, 328.1786283606145f, isMoreThanHalf = false, isPositiveArc = true, 20.822f, 18.0f)
+                    lineTo(3.181f, 18.0f)
+                    arcTo(1.1f, 1.1f, 90.14559321279651f, isMoreThanHalf = false, isPositiveArc = true, 2.251f, 16.317f)
+                    lineTo(4.599f, 12.545f)
+                    arcTo(8.34f, 8.34f, 31.892530768578347f, isMoreThanHalf = false, isPositiveArc = false, 5.8580000000000005f, 8.144f)
+                    arcTo(6.144f, 6.144f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 12.002f, 2.0f)
                 }
             }.build().also {
                 _notificationFilled = it

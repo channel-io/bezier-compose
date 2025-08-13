@@ -45,7 +45,7 @@ val BezierIcons.ChevronRightDouble: BezierIcon
                     arcTo(1.0f, 1.0f, 40.541601873504554f, isMoreThanHalf = false, isPositiveArc = false, 12.758f, 11.350000000000001f)
                     close()
                     moveTo(14.76f, 4.35f)
-                    arcTo(1.0f, 1.0f, 319.46084740482826f, isMoreThanHalf = false, isPositiveArc = false, 13.24f, 5.6499999999999995f)
+                    arcTo(1.0f, 1.0f, 319.4608491122048f, isMoreThanHalf = true, isPositiveArc = false, 13.24f, 5.6499999999999995f)
                     lineTo(18.684f, 12.0f)
                     lineTo(13.242f, 18.35f)
                     arcTo(1.0f, 1.0f, 218.4175977866872f, isMoreThanHalf = false, isPositiveArc = false, 14.760000000000002f, 19.650000000000002f)

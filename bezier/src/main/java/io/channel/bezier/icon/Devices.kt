@@ -35,10 +35,22 @@ val BezierIcons.Devices: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(3.5f, 5.0f)
-                    lineTo(20.5f, 5.0f)
+                    moveTo(21.506f, 10.0f)
+                    arcTo(0.5f, 0.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 22.006f, 10.5f)
+                    lineTo(22.006f, 21.5f)
+                    arcTo(0.5f, 0.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 21.506f, 22.0f)
+                    lineTo(15.506f, 22.0f)
+                    arcTo(0.5f, 0.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 15.006f, 21.5f)
+                    lineTo(15.006f, 10.5f)
+                    arcTo(0.5f, 0.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 15.506f, 10.0f)
+                    close()
+                    moveTo(17.006f, 20.0f)
+                    lineTo(20.006f, 20.0f)
+                    lineTo(20.006f, 12.0f)
+                    lineTo(17.006f, 12.0f)
+                    close()
+                    moveTo(20.5f, 5.0f)
                     curveTo(21.326999999999998f, 5.0f, 22.0f, 5.673f, 22.0f, 6.5f)
                     lineTo(22.0f, 9.0f)
                     lineTo(20.0f, 9.0f)
@@ -52,20 +64,7 @@ val BezierIcons.Devices: BezierIcon
                     lineTo(2.0f, 17.0f)
                     lineTo(2.0f, 6.5f)
                     curveTo(2.0f, 5.673f, 2.673f, 5.0f, 3.5f, 5.0f)
-                    moveTo(20.006f, 20.0f)
-                    lineTo(17.006f, 20.0f)
-                    lineTo(17.006f, 12.0f)
-                    lineTo(20.006f, 12.0f)
                     close()
-                    moveTo(15.506f, 10.0f)
-                    lineTo(21.506f, 10.0f)
-                    arcTo(0.5f, 0.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 22.006f, 10.5f)
-                    lineTo(22.006f, 21.5f)
-                    arcTo(0.5f, 0.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 21.506f, 22.0f)
-                    lineTo(15.506f, 22.0f)
-                    arcTo(0.5f, 0.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 15.006f, 21.5f)
-                    lineTo(15.006f, 10.5f)
-                    arcTo(0.5f, 0.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 15.506f, 10.0f)
                 }
             }.build().also {
                 _devices = it

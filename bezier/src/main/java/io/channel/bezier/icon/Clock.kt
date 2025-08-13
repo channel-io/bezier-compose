@@ -35,27 +35,26 @@ val BezierIcons.Clock: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(20.049f, 11.999f)
-                    curveTo(20.049f, 16.437f, 16.438f, 20.048000000000002f, 12.0f, 20.048000000000002f)
-                    curveTo(7.562000000000001f, 20.048000000000002f, 3.9510000000000005f, 16.437f, 3.9510000000000005f, 11.999000000000002f)
-                    curveTo(3.9510000000000005f, 7.5610000000000035f, 7.562f, 3.951f, 12.0f, 3.951f)
-                    curveTo(16.438f, 3.951f, 20.049f, 7.562f, 20.049f, 12.0f)
-                    moveTo(2.0f, 11.999f)
-                    curveTo(2.0f, 17.514f, 6.485f, 21.999000000000002f, 12.0f, 21.999000000000002f)
-                    curveTo(17.515f, 21.999000000000002f, 22.0f, 17.514000000000003f, 22.0f, 11.999000000000002f)
-                    curveTo(22.0f, 6.484000000000002f, 17.515f, 2.0f, 12.0f, 2.0f)
-                    curveTo(6.484999999999999f, 2.0f, 2.0f, 6.484f, 2.0f, 11.999f)
-                    moveTo(12.0f, 6.021000000000001f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 7.021000000000001f)
-                    lineTo(13.0f, 11.336000000000002f)
-                    lineTo(15.64f, 12.688000000000002f)
-                    arcTo(1.0f, 1.0f, 297.1287666630611f, isMoreThanHalf = false, isPositiveArc = true, 14.728f, 14.468000000000002f)
-                    lineTo(11.544f, 12.838000000000001f)
-                    arcTo(1.0f, 1.0f, 117.12929445141671f, isMoreThanHalf = false, isPositiveArc = true, 11.0f, 11.948f)
-                    lineTo(11.0f, 7.02f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 6.02f)
+                    moveTo(12.0f, 2.0f)
+                    curveTo(17.515f, 2.0f, 22.0f, 6.484f, 22.0f, 11.999f)
+                    curveTo(22.0f, 17.514000000000003f, 17.515f, 21.999000000000002f, 12.0f, 21.999000000000002f)
+                    curveTo(6.484999999999999f, 21.999000000000002f, 2.0f, 17.514000000000003f, 2.0f, 11.999000000000002f)
+                    curveTo(2.0f, 6.484000000000002f, 6.485f, 2.0f, 12.0f, 2.0f)
+                    moveTo(12.0f, 3.951f)
+                    curveTo(7.562f, 3.951f, 3.9510000000000005f, 7.562f, 3.9510000000000005f, 11.999f)
+                    curveTo(3.9510000000000005f, 16.437f, 7.562000000000001f, 20.048000000000002f, 12.0f, 20.048000000000002f)
+                    curveTo(16.438f, 20.048000000000002f, 20.049f, 16.437f, 20.049f, 11.999000000000002f)
+                    curveTo(20.049f, 7.5610000000000035f, 16.438f, 3.951f, 12.0f, 3.951f)
+                    moveTo(12.0f, 6.021f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 7.021f)
+                    lineTo(13.0f, 11.336f)
+                    lineTo(15.64f, 12.687000000000001f)
+                    arcTo(1.001f, 1.001f, 299.6668844848178f, isMoreThanHalf = false, isPositiveArc = true, 14.728f, 14.467f)
+                    lineTo(11.544f, 12.837f)
+                    arcTo(1.0f, 1.0f, 117.1292635485765f, isMoreThanHalf = false, isPositiveArc = true, 11.0f, 11.948f)
+                    lineTo(11.0f, 7.021f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 6.021f)
                 }
             }.build().also {
                 _clock = it

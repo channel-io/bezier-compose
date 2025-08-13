@@ -35,26 +35,25 @@ val BezierIcons.MessagingApp: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(6.0f, 2.0f)
-                    arcTo(4.0f, 4.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 2.0f, 6.0f)
-                    lineTo(2.0f, 18.0f)
-                    arcTo(4.0f, 4.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 6.0f, 22.0f)
-                    lineTo(18.0f, 22.0f)
-                    arcTo(4.0f, 4.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 22.0f, 18.0f)
-                    lineTo(22.0f, 6.0f)
-                    arcTo(4.0f, 4.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 18.0f, 2.0f)
+                    moveTo(18.0f, 2.0f)
+                    arcTo(4.0f, 4.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 22.0f, 6.0f)
+                    lineTo(22.0f, 18.0f)
+                    arcTo(4.0f, 4.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 18.0f, 22.0f)
+                    lineTo(6.0f, 22.0f)
+                    arcTo(4.0f, 4.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 18.0f)
+                    lineTo(2.0f, 6.0f)
+                    arcTo(4.0f, 4.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 6.0f, 2.0f)
                     close()
-                    moveTo(19.0f, 11.527f)
-                    curveTo(19.0f, 14.841f, 15.866f, 17.527f, 12.0f, 17.527f)
-                    curveTo(11.42f, 17.527f, 10.855f, 17.467000000000002f, 10.316f, 17.352f)
-                    curveTo(9.194f, 18.232f, 7.934000000000001f, 18.61f, 7.226000000000001f, 18.764f)
-                    curveTo(7.014000000000001f, 18.81f, 6.868000000000001f, 18.573999999999998f, 6.984000000000001f, 18.389f)
-                    curveTo(7.266000000000001f, 17.939f, 7.671000000000001f, 17.209f, 7.918000000000001f, 16.402f)
-                    curveTo(6.151f, 15.313f, 5.0f, 13.535f, 5.0f, 11.527f)
-                    curveTo(5.0f, 8.213999999999999f, 8.134f, 5.526999999999999f, 12.0f, 5.526999999999999f)
-                    curveTo(15.866f, 5.526999999999999f, 19.0f, 8.213999999999999f, 19.0f, 11.527f)
+                    moveTo(12.0f, 5.527f)
+                    curveTo(8.134f, 5.527f, 5.0f, 8.214f, 5.0f, 11.527000000000001f)
+                    curveTo(5.0f, 13.534f, 6.15f, 15.31f, 7.916f, 16.399f)
+                    curveTo(7.6690000000000005f, 17.207f, 7.266f, 17.937f, 6.9830000000000005f, 18.389f)
+                    curveTo(6.868f, 18.573f, 7.014f, 18.809f, 7.227f, 18.764f)
+                    curveTo(7.934f, 18.61f, 9.194f, 18.230999999999998f, 10.315000000000001f, 17.352f)
+                    quadTo(11.127f, 17.525f, 12.000000000000002f, 17.527f)
+                    curveTo(15.866000000000001f, 17.527f, 19.0f, 14.841000000000001f, 19.0f, 11.527000000000001f)
+                    curveTo(19.0f, 8.213000000000001f, 15.866f, 5.527000000000001f, 12.0f, 5.527000000000001f)
                 }
             }.build().also {
                 _messagingApp = it

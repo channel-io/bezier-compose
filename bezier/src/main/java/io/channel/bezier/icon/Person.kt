@@ -35,26 +35,25 @@ val BezierIcons.Person: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(7.5f, 6.5f)
-                    arcTo(4.5f, 4.5f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 16.5f, 6.5f)
-                    arcTo(4.5f, 4.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 7.5f, 6.5f)
-                    moveTo(14.5f, 6.5f)
-                    curveTo(14.5f, 5.122f, 13.378f, 4.0f, 12.0f, 4.0f)
-                    arcTo(2.503f, 2.503f, 269.93136856010074f, isMoreThanHalf = false, isPositiveArc = false, 9.5f, 6.5f)
-                    curveTo(9.5f, 7.878f, 10.621f, 9.0f, 12.0f, 9.0f)
-                    curveTo(13.378f, 9.0f, 14.5f, 7.878f, 14.5f, 6.5f)
-                    moveTo(2.062f, 20.876f)
-                    curveTo(2.622f, 15.882f, 6.857f, 12.0f, 12.0f, 12.0f)
-                    curveTo(17.143f, 12.0f, 21.380000000000003f, 15.882f, 21.938000000000002f, 20.875999999999998f)
+                    moveTo(12.0f, 12.0f)
+                    curveTo(17.143f, 12.0f, 21.378999999999998f, 15.882f, 21.938000000000002f, 20.875999999999998f)
                     arcTo(1.007f, 1.007f, 353.3268380257319f, isMoreThanHalf = false, isPositiveArc = true, 20.944f, 22.0f)
                     lineTo(3.056f, 22.0f)
                     curveTo(2.456f, 22.0f, 1.996f, 21.473f, 2.0620000000000003f, 20.876f)
-                    moveTo(19.75f, 20.0f)
-                    arcTo(7.99f, 7.99f, 345.57809101260096f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 14.0f)
+                    curveTo(2.62f, 15.882f, 6.857f, 12.0f, 12.0f, 12.0f)
+                    moveTo(12.0f, 14.0f)
                     arcTo(7.99f, 7.99f, 270.08448023805164f, isMoreThanHalf = false, isPositiveArc = false, 4.25f, 20.0f)
-                    close()
+                    lineTo(19.75f, 20.0f)
+                    arcTo(7.99f, 7.99f, 345.57809101260096f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 14.0f)
+                    moveTo(12.0f, 2.0f)
+                    arcTo(4.5f, 4.5f, 269.99999904620245f, isMoreThanHalf = true, isPositiveArc = true, 12.0f, 11.001f)
+                    arcTo(4.5f, 4.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 2.0009999999999994f)
+                    moveTo(12.0f, 4.0009999999999994f)
+                    arcTo(2.503f, 2.503f, 269.93136856010074f, isMoreThanHalf = false, isPositiveArc = false, 9.5f, 6.5009999999999994f)
+                    curveTo(9.5f, 7.878f, 10.621f, 9.0f, 12.0f, 9.0f)
+                    curveTo(13.378f, 9.0f, 14.5f, 7.878f, 14.5f, 6.5f)
+                    curveTo(14.5f, 5.122f, 13.378f, 4.0f, 12.0f, 4.0f)
                 }
             }.build().also {
                 _person = it

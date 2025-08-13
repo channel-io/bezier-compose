@@ -35,26 +35,26 @@ val BezierIcons.Assignee: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
+                    moveTo(8.5f, 13.487f)
+                    arcTo(6.513f, 6.513f, 269.99051527029815f, isMoreThanHalf = false, isPositiveArc = true, 15.0f, 19.572f)
+                    arcTo(0.41f, 0.41f, 357.6233279943793f, isMoreThanHalf = false, isPositiveArc = true, 14.589f, 19.999f)
+                    lineTo(2.413f, 19.999f)
+                    arcTo(0.41f, 0.41f, 89.53703989298369f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 19.573f)
+                    arcTo(6.515f, 6.515f, 183.76673264650057f, isMoreThanHalf = false, isPositiveArc = true, 8.5f, 13.486f)
                     moveTo(21.716f, 2.0f)
-                    lineTo(14.284f, 2.0f)
-                    arcTo(0.284f, 0.284f, 270.0000000000001f, isMoreThanHalf = false, isPositiveArc = false, 14.0f, 2.284f)
-                    lineTo(14.0f, 13.030999999999999f)
-                    curveTo(14.0f, 13.274999999999999f, 14.287f, 13.405999999999999f, 14.47f, 13.245999999999999f)
+                    curveTo(21.873f, 2.0f, 22.002000000000002f, 2.127f, 22.002000000000002f, 2.284f)
+                    lineTo(22.002000000000002f, 13.030999999999999f)
+                    arcTo(0.284f, 0.284f, 359.7463524973037f, isMoreThanHalf = false, isPositiveArc = true, 21.531000000000002f, 13.245999999999999f)
                     lineTo(18.0f, 10.182f)
-                    lineTo(21.53f, 13.246f)
-                    curveTo(21.713f, 13.406f, 22.0f, 13.276f, 22.0f, 13.031f)
-                    lineTo(22.0f, 2.284f)
-                    arcTo(0.285f, 0.285f, 359.7993132336655f, isMoreThanHalf = false, isPositiveArc = false, 21.716f, 2.0f)
-                    moveTo(8.5f, 12.673f)
-                    arcTo(2.85f, 2.85f, 91.51784666145447f, isMoreThanHalf = true, isPositiveArc = false, 8.5f, 6.975f)
-                    arcTo(2.85f, 2.85f, 268.4821533385455f, isMoreThanHalf = false, isPositiveArc = false, 8.5f, 12.673f)
-                    moveTo(2.0f, 19.573f)
-                    arcTo(6.514f, 6.514f, 183.75712448143955f, isMoreThanHalf = false, isPositiveArc = true, 15.0f, 19.573f)
-                    arcTo(0.41f, 0.41f, 357.62172224302145f, isMoreThanHalf = false, isPositiveArc = true, 14.587f, 20.0f)
-                    lineTo(2.413f, 20.0f)
-                    arcTo(0.41f, 0.41f, 89.53140475076566f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 19.573f)
+                    lineTo(14.47f, 13.246f)
+                    arcTo(0.284f, 0.284f, 49.085620227509615f, isMoreThanHalf = false, isPositiveArc = true, 14.0f, 13.031f)
+                    lineTo(14.0f, 2.284f)
+                    curveTo(14.0f, 2.127f, 14.128f, 1.9999999999999998f, 14.285f, 1.9999999999999998f)
+                    close()
+                    moveTo(8.501f, 6.974f)
+                    arcTo(2.85f, 2.85f, 268.94703168155536f, isMoreThanHalf = true, isPositiveArc = true, 8.498999999999999f, 12.673f)
+                    arcTo(2.85f, 2.85f, 90.02010460201474f, isMoreThanHalf = false, isPositiveArc = true, 8.501f, 6.973f)
                 }
             }.build().also {
                 _assignee = it

@@ -35,23 +35,22 @@ val BezierIcons.MoreVertical: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(9.75f, 4.75f)
-                    arcTo(2.257f, 2.257f, 179.82257374203724f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 7.0f)
-                    arcTo(2.257f, 2.257f, 89.82257374203616f, isMoreThanHalf = false, isPositiveArc = false, 14.25f, 4.75f)
-                    arcTo(2.257f, 2.257f, 359.8225737420372f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 2.5f)
-                    arcTo(2.257f, 2.257f, 269.8225737420362f, isMoreThanHalf = false, isPositiveArc = false, 9.75f, 4.75f)
-                    moveTo(12.0f, 14.25f)
+                    moveTo(14.25f, 4.75f)
+                    arcTo(2.257f, 2.257f, 0.17742625796276584f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 7.0f)
+                    arcTo(2.257f, 2.257f, 90.17742625796384f, isMoreThanHalf = false, isPositiveArc = true, 9.75f, 4.75f)
+                    arcTo(2.257f, 2.257f, 180.17742625796276f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 2.5f)
+                    arcTo(2.257f, 2.257f, 270.1774262579638f, isMoreThanHalf = false, isPositiveArc = true, 14.25f, 4.75f)
+                    moveTo(14.25f, 12.0f)
+                    arcTo(2.257f, 2.257f, 0.17742625796276584f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 14.25f)
                     arcTo(2.257f, 2.257f, 90.17742625796384f, isMoreThanHalf = false, isPositiveArc = true, 9.75f, 12.0f)
                     arcTo(2.257f, 2.257f, 180.17742625796276f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 9.75f)
                     arcTo(2.257f, 2.257f, 270.1774262579638f, isMoreThanHalf = false, isPositiveArc = true, 14.25f, 12.0f)
-                    arcTo(2.257f, 2.257f, 0.17742625796276584f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 14.25f)
-                    moveTo(12.0f, 21.5f)
+                    moveTo(14.25f, 19.25f)
+                    arcTo(2.257f, 2.257f, 0.17742625796276584f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 21.5f)
                     arcTo(2.257f, 2.257f, 90.17742625796384f, isMoreThanHalf = false, isPositiveArc = true, 9.75f, 19.25f)
                     arcTo(2.257f, 2.257f, 180.17742625796276f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 17.0f)
                     arcTo(2.257f, 2.257f, 270.1774262579638f, isMoreThanHalf = false, isPositiveArc = true, 14.25f, 19.25f)
-                    arcTo(2.257f, 2.257f, 0.17742625796276584f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 21.5f)
                 }
             }.build().also {
                 _moreVertical = it

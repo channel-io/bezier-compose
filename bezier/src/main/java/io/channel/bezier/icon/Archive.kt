@@ -35,18 +35,7 @@ val BezierIcons.Archive: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(18.994f, 19.0f)
-                    lineTo(4.994f, 19.0f)
-                    lineTo(4.994f, 9.0f)
-                    lineTo(18.994f, 9.0f)
-                    close()
-                    moveTo(20.0f, 5.0f)
-                    lineTo(4.0f, 5.0f)
-                    lineTo(4.0f, 7.0f)
-                    lineTo(20.0f, 7.0f)
-                    close()
                     moveTo(20.5f, 3.0f)
                     curveTo(21.326999999999998f, 3.0f, 22.0f, 3.673f, 22.0f, 4.5f)
                     lineTo(22.0f, 9.0f)
@@ -60,10 +49,20 @@ val BezierIcons.Archive: BezierIcon
                     lineTo(2.0f, 4.5f)
                     curveTo(2.0f, 3.673f, 2.673f, 3.0f, 3.5f, 3.0f)
                     close()
-                    moveTo(14.494f, 13.0f)
+                    moveTo(4.994f, 19.0f)
+                    lineTo(18.994f, 19.0f)
+                    lineTo(18.994f, 9.0f)
+                    lineTo(4.994f, 9.0f)
+                    close()
+                    moveTo(14.494f, 11.0f)
+                    lineTo(14.494f, 13.0f)
                     lineTo(9.494f, 13.0f)
                     lineTo(9.494f, 11.0f)
-                    lineTo(14.494f, 11.0f)
+                    close()
+                    moveTo(4.0f, 5.0f)
+                    lineTo(4.0f, 7.0f)
+                    lineTo(20.0f, 7.0f)
+                    lineTo(20.0f, 5.0f)
                     close()
                 }
             }.build().also {

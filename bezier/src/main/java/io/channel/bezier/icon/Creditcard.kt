@@ -35,20 +35,8 @@ val BezierIcons.Creditcard: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(20.0f, 17.0f)
-                    lineTo(4.0f, 17.0f)
-                    lineTo(4.0f, 12.0f)
-                    lineTo(20.0f, 12.0f)
-                    close()
-                    moveTo(20.0f, 9.0f)
-                    lineTo(4.0f, 9.0f)
-                    lineTo(4.0f, 7.0f)
-                    lineTo(20.0f, 7.0f)
-                    close()
-                    moveTo(3.5f, 5.0f)
-                    lineTo(20.5f, 5.0f)
+                    moveTo(20.5f, 5.0f)
                     curveTo(21.326999999999998f, 5.0f, 22.0f, 5.673f, 22.0f, 6.5f)
                     lineTo(22.0f, 17.5f)
                     curveTo(22.0f, 18.326999999999998f, 21.326999999999998f, 19.0f, 20.5f, 19.0f)
@@ -56,10 +44,21 @@ val BezierIcons.Creditcard: BezierIcon
                     curveTo(2.673f, 19.0f, 2.0f, 18.326999999999998f, 2.0f, 17.5f)
                     lineTo(2.0f, 6.5f)
                     curveTo(2.0f, 5.673f, 2.673f, 5.0f, 3.5f, 5.0f)
-                    moveTo(10.0f, 15.0f)
+                    close()
+                    moveTo(4.0f, 17.0f)
+                    lineTo(20.0f, 17.0f)
+                    lineTo(20.0f, 12.0f)
+                    lineTo(4.0f, 12.0f)
+                    close()
+                    moveTo(10.0f, 13.0f)
+                    lineTo(10.0f, 15.0f)
                     lineTo(6.0f, 15.0f)
                     lineTo(6.0f, 13.0f)
-                    lineTo(10.0f, 13.0f)
+                    close()
+                    moveTo(4.0f, 9.0f)
+                    lineTo(20.0f, 9.0f)
+                    lineTo(20.0f, 7.0f)
+                    lineTo(4.0f, 7.0f)
                     close()
                 }
             }.build().also {

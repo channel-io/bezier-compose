@@ -35,25 +35,25 @@ val BezierIcons.CheckboxFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(8.0f, 3.0f)
-                    arcTo(5.0f, 5.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 3.0f, 8.0f)
-                    lineTo(3.0f, 16.0f)
-                    arcTo(5.0f, 5.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 8.0f, 21.0f)
-                    lineTo(16.0f, 21.0f)
-                    arcTo(5.0f, 5.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 21.0f, 16.0f)
-                    lineTo(21.0f, 8.0f)
-                    arcTo(5.0f, 5.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 16.0f, 3.0f)
+                    moveTo(16.0f, 3.0f)
+                    arcTo(5.0f, 5.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 21.0f, 8.0f)
+                    lineTo(21.0f, 16.0f)
+                    arcTo(5.0f, 5.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 16.0f, 21.0f)
+                    lineTo(8.0f, 21.0f)
+                    arcTo(5.0f, 5.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 3.0f, 16.0f)
+                    lineTo(3.0f, 8.0f)
+                    arcTo(5.0f, 5.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 8.0f, 3.0f)
                     close()
-                    moveTo(15.38f, 8.662f)
-                    lineTo(10.667f, 13.376f)
-                    lineTo(8.619f, 11.328f)
-                    arcTo(1.0f, 1.0f, 314.00425538642025f, isMoreThanHalf = false, isPositiveArc = false, 7.205f, 12.741999999999999f)
-                    lineTo(10.358f, 15.895f)
-                    curveTo(10.528f, 16.065f, 10.805f, 16.065f, 10.975000000000001f, 15.895f)
-                    lineTo(16.795f, 10.075f)
-                    arcTo(1.0f, 1.0f, 43.15966534909231f, isMoreThanHalf = false, isPositiveArc = false, 15.381000000000002f, 8.661999999999999f)
+                    moveTo(16.795f, 8.661f)
+                    arcTo(1.0f, 1.0f, 314.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 15.381000000000002f, 8.661f)
+                    lineTo(10.667000000000002f, 13.376f)
+                    lineTo(8.619000000000002f, 11.328f)
+                    arcTo(1.0f, 1.0f, 314.00425538642025f, isMoreThanHalf = false, isPositiveArc = false, 7.205000000000002f, 12.741999999999999f)
+                    lineTo(10.357000000000003f, 15.895f)
+                    curveTo(10.527000000000003f, 16.066f, 10.805000000000003f, 16.066f, 10.976000000000003f, 15.895f)
+                    lineTo(16.795f, 10.076f)
+                    curveTo(17.185000000000002f, 9.686f, 17.185000000000002f, 9.052f, 16.795f, 8.661000000000001f)
                 }
             }.build().also {
                 _checkboxFilled = it

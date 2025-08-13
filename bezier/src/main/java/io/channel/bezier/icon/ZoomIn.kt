@@ -35,25 +35,22 @@ val BezierIcons.ZoomIn: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(4.0f, 10.0f)
-                    curveTo(4.0f, 13.31f, 6.691f, 16.0f, 10.0f, 16.0f)
-                    curveTo(13.309000000000001f, 16.0f, 16.0f, 13.31f, 16.0f, 10.0f)
-                    curveTo(16.0f, 6.6899999999999995f, 13.31f, 4.0f, 10.0f, 4.0f)
-                    curveTo(6.6899999999999995f, 4.0f, 4.0f, 6.691f, 4.0f, 10.0f)
-                    moveTo(21.707f, 20.293f)
+                    moveTo(10.0f, 2.0f)
+                    curveTo(14.411f, 2.0f, 18.0f, 5.59f, 18.0f, 10.0f)
+                    arcTo(7.95f, 7.95f, 359.99959683076327f, isMoreThanHalf = false, isPositiveArc = true, 16.312f, 14.898f)
+                    lineTo(21.707f, 20.293f)
                     arcTo(1.0f, 1.0f, 314.0042553864246f, isMoreThanHalf = true, isPositiveArc = true, 20.293f, 21.707f)
-                    lineTo(14.896999999999998f, 16.312f)
-                    arcTo(7.95f, 7.95f, 51.968573651440124f, isMoreThanHalf = false, isPositiveArc = true, 10.0f, 18.0f)
+                    lineTo(14.898f, 16.312f)
+                    arcTo(7.95f, 7.95f, 51.9685743049438f, isMoreThanHalf = false, isPositiveArc = true, 10.0f, 18.0f)
                     curveTo(5.59f, 18.0f, 2.0f, 14.411f, 2.0f, 10.0f)
                     curveTo(2.0f, 5.589f, 5.59f, 2.0f, 10.0f, 2.0f)
-                    curveTo(14.41f, 2.0f, 18.0f, 5.59f, 18.0f, 10.0f)
-                    arcTo(7.95f, 7.95f, 0.0068043613930332345f, isMoreThanHalf = false, isPositiveArc = true, 16.312f, 14.897f)
-                    close()
-                    moveTo(9.0f, 9.0f)
-                    lineTo(9.0f, 6.0f)
-                    lineTo(11.0f, 6.0f)
+                    moveTo(10.0f, 4.0f)
+                    curveTo(6.691f, 4.0f, 4.0f, 6.691f, 4.0f, 10.0f)
+                    curveTo(4.0f, 13.309000000000001f, 6.691f, 16.0f, 10.0f, 16.0f)
+                    curveTo(13.309000000000001f, 16.0f, 16.0f, 13.31f, 16.0f, 10.0f)
+                    curveTo(16.0f, 6.6899999999999995f, 13.31f, 4.0f, 10.0f, 4.0f)
+                    moveTo(11.0f, 6.0f)
                     lineTo(11.0f, 9.0f)
                     lineTo(14.0f, 9.0f)
                     lineTo(14.0f, 11.0f)
@@ -63,6 +60,8 @@ val BezierIcons.ZoomIn: BezierIcon
                     lineTo(9.0f, 11.0f)
                     lineTo(6.0f, 11.0f)
                     lineTo(6.0f, 9.0f)
+                    lineTo(9.0f, 9.0f)
+                    lineTo(9.0f, 6.0f)
                     close()
                 }
             }.build().also {
