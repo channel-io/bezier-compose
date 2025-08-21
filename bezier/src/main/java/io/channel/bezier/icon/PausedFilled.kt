@@ -35,26 +35,25 @@ val BezierIcons.PausedFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(5.5f, 21.0f)
-                    lineTo(9.5f, 21.0f)
-                    arcTo(0.5f, 0.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 10.0f, 20.5f)
-                    lineTo(10.0f, 3.5f)
-                    arcTo(0.5f, 0.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 9.5f, 3.0f)
-                    lineTo(5.5f, 3.0f)
-                    arcTo(0.5f, 0.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 5.0f, 3.5f)
-                    lineTo(5.0f, 20.5f)
-                    arcTo(0.5f, 0.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 5.5f, 21.0f)
-                    moveTo(14.5f, 21.0f)
-                    lineTo(18.5f, 21.0f)
-                    arcTo(0.5f, 0.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 19.0f, 20.5f)
-                    lineTo(19.0f, 3.5f)
-                    arcTo(0.5f, 0.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 18.5f, 3.0f)
-                    lineTo(14.5f, 3.0f)
-                    arcTo(0.5f, 0.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 14.0f, 3.5f)
-                    lineTo(14.0f, 20.5f)
-                    arcTo(0.5f, 0.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 14.5f, 21.0f)
+                    moveTo(9.5f, 3.0f)
+                    arcTo(0.5f, 0.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 10.0f, 3.5f)
+                    lineTo(10.0f, 20.5f)
+                    arcTo(0.5f, 0.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 9.5f, 21.0f)
+                    lineTo(5.5f, 21.0f)
+                    arcTo(0.5f, 0.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 5.0f, 20.5f)
+                    lineTo(5.0f, 3.5f)
+                    arcTo(0.5f, 0.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 5.5f, 3.0f)
+                    close()
+                    moveTo(18.5f, 3.0f)
+                    arcTo(0.5f, 0.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 19.0f, 3.5f)
+                    lineTo(19.0f, 20.5f)
+                    arcTo(0.5f, 0.5f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 18.5f, 21.0f)
+                    lineTo(14.5f, 21.0f)
+                    arcTo(0.5f, 0.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 14.0f, 20.5f)
+                    lineTo(14.0f, 3.5f)
+                    arcTo(0.5f, 0.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 14.5f, 3.0f)
+                    close()
                 }
             }.build().also {
                 _pausedFilled = it

@@ -35,7 +35,6 @@ val BezierIcons.ShoppingFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.0f, 1.0f)
                     arcTo(4.0f, 4.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 16.0f, 5.0f)
@@ -51,20 +50,20 @@ val BezierIcons.ShoppingFilled: BezierIcon
                     lineTo(8.0f, 7.0f)
                     lineTo(8.0f, 5.0f)
                     arcTo(4.0f, 4.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 1.0f)
-                    moveTo(10.0f, 7.0f)
+                    moveTo(9.0f, 10.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 9.0f, 12.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 9.0f, 10.0f)
+                    moveTo(15.0f, 10.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 15.0f, 12.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 15.0f, 10.0f)
+                    moveTo(12.0f, 3.0f)
+                    arcTo(2.0f, 2.0f, 269.9894842175746f, isMoreThanHalf = false, isPositiveArc = false, 10.006f, 4.85f)
+                    lineTo(10.0f, 5.0f)
+                    lineTo(10.0f, 7.0f)
                     lineTo(14.0f, 7.0f)
                     lineTo(14.0f, 5.0f)
-                    arcTo(2.0f, 2.0f, 0.018131964495591554f, isMoreThanHalf = false, isPositiveArc = false, 12.15f, 3.005f)
-                    lineTo(12.0f, 3.0f)
-                    arcTo(2.0f, 2.0f, 270.0181319644869f, isMoreThanHalf = false, isPositiveArc = false, 10.004999999999999f, 4.85f)
-                    lineTo(10.0f, 5.0f)
+                    arcTo(2.0f, 2.0f, 359.9894842175953f, isMoreThanHalf = false, isPositiveArc = false, 12.15f, 3.0060000000000002f)
                     close()
-                    moveTo(9.0f, 12.0f)
-                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 9.0f, 10.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 9.0f, 12.0f)
-                    moveTo(15.0f, 12.0f)
-                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 15.0f, 10.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 15.0f, 12.0f)
                 }
             }.build().also {
                 _shoppingFilled = it

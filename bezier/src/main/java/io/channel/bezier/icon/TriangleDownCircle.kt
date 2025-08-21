@@ -35,25 +35,24 @@ val BezierIcons.TriangleDownCircle: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(4.0f, 12.0f)
-                    curveTo(4.0f, 16.411f, 7.59f, 20.0f, 12.0f, 20.0f)
-                    curveTo(16.41f, 20.0f, 20.0f, 16.411f, 20.0f, 12.0f)
-                    curveTo(20.0f, 7.588999999999999f, 16.411f, 4.0f, 12.0f, 4.0f)
-                    curveTo(7.588999999999999f, 4.0f, 4.0f, 7.59f, 4.0f, 12.0f)
-                    moveTo(2.0f, 12.0f)
-                    curveTo(2.0f, 6.477f, 6.477f, 2.0f, 12.0f, 2.0f)
+                    moveTo(12.0f, 2.0f)
                     curveTo(17.523f, 2.0f, 22.0f, 6.477f, 22.0f, 12.0f)
                     curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
                     curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
-                    moveTo(7.852f, 10.0f)
-                    lineTo(16.572000000000003f, 10.0f)
-                    arcTo(0.3f, 0.3f, 270.0978055629088f, isMoreThanHalf = false, isPositiveArc = true, 16.802000000000003f, 10.492f)
-                    lineTo(12.442000000000004f, 15.723f)
-                    arcTo(0.3f, 0.3f, 39.94450518981475f, isMoreThanHalf = false, isPositiveArc = true, 11.982000000000003f, 15.723f)
-                    lineTo(7.6220000000000026f, 10.493f)
-                    arcTo(0.3f, 0.3f, 139.95912703212358f, isMoreThanHalf = false, isPositiveArc = true, 7.852000000000003f, 10.0f)
+                    curveTo(2.0f, 6.477f, 6.477f, 2.0f, 12.0f, 2.0f)
+                    moveTo(12.0f, 4.0f)
+                    curveTo(7.59f, 4.0f, 4.0f, 7.59f, 4.0f, 12.0f)
+                    curveTo(4.0f, 16.41f, 7.59f, 20.0f, 12.0f, 20.0f)
+                    curveTo(16.41f, 20.0f, 20.0f, 16.411f, 20.0f, 12.0f)
+                    curveTo(20.0f, 7.588999999999999f, 16.411f, 4.0f, 12.0f, 4.0f)
+                    moveTo(16.572f, 10.0f)
+                    arcTo(0.3f, 0.3f, 270.0978055629088f, isMoreThanHalf = false, isPositiveArc = true, 16.802f, 10.492f)
+                    lineTo(12.442f, 15.722000000000001f)
+                    arcTo(0.3f, 0.3f, 39.94450518981475f, isMoreThanHalf = false, isPositiveArc = true, 11.982f, 15.722000000000001f)
+                    lineTo(7.621999999999999f, 10.492f)
+                    arcTo(0.3f, 0.3f, 140.2080718574927f, isMoreThanHalf = false, isPositiveArc = true, 7.851999999999999f, 10.0f)
+                    close()
                 }
             }.build().also {
                 _triangleDownCircle = it

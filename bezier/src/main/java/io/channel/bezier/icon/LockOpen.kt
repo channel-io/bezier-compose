@@ -35,14 +35,9 @@ val BezierIcons.LockOpen: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(5.5f, 9.0f)
-                    lineTo(16.0f, 9.0f)
-                    lineTo(16.0f, 7.0f)
-                    arcTo(4.0f, 4.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 8.8f, 4.6f)
-                    lineTo(7.2f, 3.4f)
-                    arcTo(6.0f, 6.0f, 216.869897645844f, isMoreThanHalf = false, isPositiveArc = true, 18.0f, 7.0f)
+                    moveTo(12.0f, 1.0f)
+                    arcTo(6.0f, 6.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 18.0f, 7.0f)
                     lineTo(18.0f, 9.0f)
                     lineTo(18.5f, 9.0f)
                     arcTo(1.5f, 1.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 20.0f, 10.5f)
@@ -52,15 +47,20 @@ val BezierIcons.LockOpen: BezierIcon
                     arcTo(1.5f, 1.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 4.0f, 20.5f)
                     lineTo(4.0f, 10.5f)
                     arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 5.5f, 9.0f)
-                    moveTo(18.0f, 11.0f)
+                    lineTo(16.0f, 9.0f)
+                    lineTo(16.0f, 7.0f)
+                    arcTo(4.0f, 4.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 8.8f, 4.6f)
+                    lineTo(7.2f, 3.4f)
+                    arcTo(5.99f, 5.99f, 216.8220614624433f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 1.0f)
+                    moveTo(6.0f, 20.0f)
                     lineTo(18.0f, 20.0f)
-                    lineTo(6.0f, 20.0f)
+                    lineTo(18.0f, 11.0f)
                     lineTo(6.0f, 11.0f)
                     close()
-                    moveTo(9.498f, 14.5f)
-                    lineTo(14.498f, 14.5f)
+                    moveTo(14.498f, 14.5f)
                     lineTo(14.498f, 16.5f)
                     lineTo(9.498f, 16.5f)
+                    lineTo(9.498f, 14.5f)
                     close()
                 }
             }.build().also {

@@ -35,22 +35,21 @@ val BezierIcons.ClockFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(2.0f, 11.999f)
-                    curveTo(2.0f, 17.514f, 6.485f, 21.999000000000002f, 12.0f, 21.999000000000002f)
-                    curveTo(17.515f, 21.999000000000002f, 22.0f, 17.514000000000003f, 22.0f, 11.999000000000002f)
-                    curveTo(22.0f, 6.484000000000002f, 17.515f, 2.0f, 12.0f, 2.0f)
-                    curveTo(6.484999999999999f, 2.0f, 2.0f, 6.484f, 2.0f, 11.999f)
+                    moveTo(12.0f, 2.0f)
+                    curveTo(17.515f, 2.0f, 22.0f, 6.484f, 22.0f, 11.999f)
+                    curveTo(22.0f, 17.514000000000003f, 17.515f, 21.999000000000002f, 12.0f, 21.999000000000002f)
+                    curveTo(6.484999999999999f, 21.999000000000002f, 2.0f, 17.514000000000003f, 2.0f, 11.999000000000002f)
+                    curveTo(2.0f, 6.484000000000002f, 6.485f, 2.0f, 12.0f, 2.0f)
                     moveTo(13.0f, 6.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 14.0f, 7.0f)
-                    lineTo(14.0f, 11.315999999999999f)
-                    lineTo(16.64f, 12.666999999999998f)
-                    arcTo(1.0f, 1.0f, 297.1287666630611f, isMoreThanHalf = false, isPositiveArc = true, 15.728f, 14.446999999999997f)
-                    lineTo(12.544f, 12.816999999999997f)
-                    arcTo(1.0f, 1.0f, 117.12929445141671f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 11.926999999999996f)
-                    lineTo(12.0f, 7.0f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 6.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 7.0f)
+                    lineTo(12.0f, 11.927f)
+                    arcTo(1.0f, 1.0f, 180.00115879825793f, isMoreThanHalf = false, isPositiveArc = false, 12.544f, 12.817f)
+                    lineTo(15.729000000000001f, 14.447f)
+                    arcTo(1.0f, 1.0f, 115.38267212838068f, isMoreThanHalf = false, isPositiveArc = false, 16.639f, 12.667f)
+                    lineTo(14.0f, 11.315f)
+                    lineTo(14.0f, 7.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 13.0f, 6.0f)
                 }
             }.build().also {
                 _clockFilled = it

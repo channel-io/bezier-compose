@@ -35,26 +35,25 @@ val BezierIcons.Dragable: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(8.25f, 7.0f)
-                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 8.25f, 2.5f)
-                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 8.25f, 7.0f)
-                    moveTo(15.75f, 7.0f)
-                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 15.75f, 2.5f)
-                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 15.75f, 7.0f)
-                    moveTo(10.5f, 12.0f)
-                    arcTo(2.25f, 2.25f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 6.0f, 12.0f)
-                    arcTo(2.25f, 2.25f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 10.5f, 12.0f)
-                    moveTo(15.75f, 14.25f)
-                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 15.75f, 9.75f)
-                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 15.75f, 14.25f)
-                    moveTo(10.5f, 19.25f)
-                    arcTo(2.25f, 2.25f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 6.0f, 19.25f)
-                    arcTo(2.25f, 2.25f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 10.5f, 19.25f)
-                    moveTo(15.75f, 21.5f)
-                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 15.75f, 17.0f)
-                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 15.75f, 21.5f)
+                    moveTo(8.25f, 17.0f)
+                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 8.25f, 21.5f)
+                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 8.25f, 17.0f)
+                    moveTo(15.75f, 17.0f)
+                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 15.75f, 21.5f)
+                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 15.75f, 17.0f)
+                    moveTo(8.25f, 9.75f)
+                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 8.25f, 14.25f)
+                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 8.25f, 9.75f)
+                    moveTo(15.75f, 9.75f)
+                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 15.75f, 14.25f)
+                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 15.75f, 9.75f)
+                    moveTo(8.25f, 2.5f)
+                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 8.25f, 7.0f)
+                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 8.25f, 2.5f)
+                    moveTo(15.75f, 2.5f)
+                    arcTo(2.25f, 2.25f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 15.75f, 7.0f)
+                    arcTo(2.25f, 2.25f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 15.75f, 2.5f)
                 }
             }.build().also {
                 _dragable = it

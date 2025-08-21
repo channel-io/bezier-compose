@@ -35,20 +35,19 @@ val BezierIcons.ArrowRight: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(11.729f, 20.742f)
-                    arcTo(1.0f, 1.0f, 133.23783331786345f, isMoreThanHalf = false, isPositiveArc = true, 11.684999999999999f, 19.329f)
-                    lineTo(17.632f, 13.0f)
-                    lineTo(4.0f, 13.0f)
-                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 4.0f, 11.0f)
-                    lineTo(17.607f, 11.0f)
-                    lineTo(11.684999999999999f, 4.698f)
-                    arcTo(1.0f, 1.0f, 137.21657521144286f, isMoreThanHalf = false, isPositiveArc = true, 13.142f, 3.3280000000000003f)
+                    moveTo(11.729f, 3.285f)
+                    arcTo(1.0f, 1.0f, 226.76324092690342f, isMoreThanHalf = false, isPositiveArc = true, 13.142999999999999f, 3.329f)
                     lineTo(20.339f, 10.986f)
                     arcTo(1.5f, 1.5f, 316.7643928510178f, isMoreThanHalf = false, isPositiveArc = true, 20.339f, 13.041f)
-                    lineTo(13.142f, 20.698f)
-                    arcTo(1.0f, 1.0f, 43.23783331786347f, isMoreThanHalf = false, isPositiveArc = true, 11.729f, 20.742f)
+                    lineTo(13.142999999999999f, 20.698f)
+                    arcTo(1.0f, 1.0f, 43.2176801804156f, isMoreThanHalf = false, isPositiveArc = true, 11.684999999999999f, 19.328f)
+                    lineTo(17.633f, 13.0f)
+                    lineTo(4.0f, 13.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 4.0f, 11.0f)
+                    lineTo(17.606f, 11.0f)
+                    lineTo(11.685000000000002f, 4.698f)
+                    arcTo(1.0f, 1.0f, 136.76573083047037f, isMoreThanHalf = false, isPositiveArc = true, 11.728000000000002f, 3.285f)
                 }
             }.build().also {
                 _arrowRight = it

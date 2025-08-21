@@ -35,24 +35,23 @@ val BezierIcons.SpaceVertical: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(12.707f, 21.293f)
-                    arcTo(1.0f, 1.0f, 45.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 11.293000000000001f, 21.293f)
-                    lineTo(8.366000000000001f, 18.366f)
-                    arcTo(0.8f, 0.8f, 134.96801042191746f, isMoreThanHalf = false, isPositiveArc = true, 8.93f, 17.0f)
-                    lineTo(11.0f, 17.0f)
-                    lineTo(11.0f, 7.0f)
-                    lineTo(8.931f, 7.0f)
+                    moveTo(8.931f, 7.0f)
                     arcTo(0.8f, 0.8f, 90.02654147845973f, isMoreThanHalf = false, isPositiveArc = true, 8.366f, 5.634f)
                     lineTo(11.293f, 2.7070000000000003f)
                     arcTo(1.0f, 1.0f, 225.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 12.706999999999999f, 2.7070000000000003f)
                     lineTo(15.633999999999999f, 5.634f)
-                    arcTo(0.8f, 0.8f, 314.9680104219174f, isMoreThanHalf = false, isPositiveArc = true, 15.07f, 7.0f)
+                    curveTo(16.137999999999998f, 6.138f, 15.780999999999999f, 7.0f, 15.067999999999998f, 7.0f)
                     lineTo(13.0f, 7.0f)
                     lineTo(13.0f, 17.0f)
-                    lineTo(15.068999999999999f, 17.0f)
-                    arcTo(0.8f, 0.8f, 270.02654147845976f, isMoreThanHalf = false, isPositiveArc = true, 15.633999999999999f, 18.366f)
+                    lineTo(15.068f, 17.0f)
+                    arcTo(0.8f, 0.8f, 269.954910140935f, isMoreThanHalf = false, isPositiveArc = true, 15.634f, 18.366f)
+                    lineTo(12.707f, 21.292f)
+                    arcTo(1.0f, 1.0f, 45.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 11.293000000000001f, 21.292f)
+                    lineTo(8.366000000000001f, 18.366f)
+                    arcTo(0.8f, 0.8f, 134.96812051737223f, isMoreThanHalf = false, isPositiveArc = true, 8.931f, 17.0f)
+                    lineTo(11.0f, 17.0f)
+                    lineTo(11.0f, 7.0f)
                     close()
                 }
             }.build().also {

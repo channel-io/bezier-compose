@@ -35,12 +35,11 @@ val BezierIcons.Switch: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(9.0f, 4.0f)
-                    arcTo(8.0f, 8.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 9.0f, 20.0f)
-                    lineTo(15.0f, 20.0f)
-                    arcTo(8.0f, 8.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 15.0f, 4.0f)
+                    moveTo(15.0f, 4.0f)
+                    arcTo(8.0f, 8.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 15.0f, 20.0f)
+                    lineTo(9.0f, 20.0f)
+                    arcTo(8.0f, 8.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 9.0f, 4.0f)
                     close()
                     moveTo(15.0f, 6.0f)
                     arcTo(6.0f, 6.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 15.0f, 18.0f)

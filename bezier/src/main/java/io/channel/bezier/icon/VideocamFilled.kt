@@ -35,26 +35,25 @@ val BezierIcons.VideocamFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(13.998f, 6.0f)
-                    lineTo(4.002f, 6.0f)
-                    arcTo(2.0f, 2.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 2.002f, 8.0f)
-                    lineTo(2.002f, 16.0f)
-                    arcTo(2.0f, 2.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 4.002f, 18.0f)
-                    lineTo(13.998000000000001f, 18.0f)
-                    arcTo(2.0f, 2.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 15.998000000000001f, 16.0f)
-                    lineTo(15.998000000000001f, 8.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 13.998000000000001f, 6.0f)
-                    moveTo(21.188000000000002f, 17.35f)
-                    lineTo(17.188000000000002f, 14.150000000000002f)
-                    arcTo(0.5f, 0.5f, 128.75562134106767f, isMoreThanHalf = false, isPositiveArc = true, 17.001f, 13.760000000000002f)
-                    lineTo(17.001f, 10.240000000000002f)
-                    arcTo(0.5f, 0.5f, 179.98986262433894f, isMoreThanHalf = false, isPositiveArc = true, 17.188000000000002f, 9.850000000000001f)
-                    lineTo(21.188000000000002f, 6.650000000000001f)
-                    arcTo(0.5f, 0.5f, 231.39109801289013f, isMoreThanHalf = false, isPositiveArc = true, 22.000000000000004f, 7.040000000000001f)
-                    lineTo(22.000000000000004f, 16.96f)
-                    arcTo(0.5f, 0.5f, 0.08156237144868975f, isMoreThanHalf = false, isPositiveArc = true, 21.188000000000002f, 17.35f)
+                    arcTo(2.0f, 2.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 15.998f, 8.0f)
+                    lineTo(15.998f, 16.0f)
+                    arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 13.998f, 18.0f)
+                    lineTo(4.002f, 18.0f)
+                    arcTo(2.0f, 2.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 2.002f, 16.0f)
+                    lineTo(2.002f, 8.0f)
+                    arcTo(2.0f, 2.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 4.002f, 6.0f)
+                    close()
+                    moveTo(21.188f, 6.65f)
+                    arcTo(0.5f, 0.5f, 231.39109801289013f, isMoreThanHalf = false, isPositiveArc = true, 22.0f, 7.04f)
+                    lineTo(22.0f, 16.96f)
+                    arcTo(0.5f, 0.5f, 0.08156237144868975f, isMoreThanHalf = false, isPositiveArc = true, 21.188f, 17.35f)
+                    lineTo(17.188f, 14.150000000000002f)
+                    arcTo(0.5f, 0.5f, 128.75562134106767f, isMoreThanHalf = false, isPositiveArc = true, 17.000999999999998f, 13.760000000000002f)
+                    lineTo(17.000999999999998f, 10.240000000000002f)
+                    curveTo(17.000999999999998f, 10.088000000000003f, 17.069f, 9.945000000000002f, 17.188f, 9.850000000000001f)
+                    close()
                 }
             }.build().also {
                 _videocamFilled = it
