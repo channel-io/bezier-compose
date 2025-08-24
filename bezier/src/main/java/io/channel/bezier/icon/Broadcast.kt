@@ -35,27 +35,26 @@ val BezierIcons.Broadcast: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(17.657f, 6.343f)
-                    arcTo(8.0f, 8.0f, 315.0f, isMoreThanHalf = false, isPositiveArc = false, 6.343f, 17.657f)
-                    arcTo(1.0f, 1.0f, 312.6262102850577f, isMoreThanHalf = true, isPositiveArc = true, 4.93f, 19.07f)
-                    curveTo(1.025f, 15.165000000000001f, 1.025f, 8.833f, 4.93f, 4.928000000000001f)
-                    curveTo(8.834999999999999f, 1.0230000000000015f, 15.167f, 1.023000000000001f, 19.072f, 4.928000000000001f)
-                    curveTo(22.976999999999997f, 8.833f, 22.977f, 15.165000000000001f, 19.072f, 19.07f)
-                    arcTo(1.0f, 1.0f, 45.99574461357543f, isMoreThanHalf = false, isPositiveArc = true, 17.657999999999998f, 17.656f)
-                    arcTo(8.0f, 8.0f, 45.00147626156967f, isMoreThanHalf = false, isPositiveArc = false, 17.657999999999998f, 6.341999999999999f)
-                    moveTo(9.172f, 9.172f)
-                    arcTo(4.0f, 4.0f, 224.00425538642025f, isMoreThanHalf = true, isPositiveArc = true, 14.828f, 14.828f)
-                    arcTo(1.0f, 1.0f, 224.9999991471751f, isMoreThanHalf = false, isPositiveArc = false, 16.243f, 16.243f)
-                    arcTo(6.0f, 6.0f, 44.99514736576191f, isMoreThanHalf = true, isPositiveArc = false, 7.756999999999998f, 16.243f)
-                    arcTo(1.0f, 1.0f, 135.0000008528249f, isMoreThanHalf = true, isPositiveArc = false, 9.171999999999997f, 14.828f)
-                    arcTo(4.0f, 4.0f, 135.00865166283802f, isMoreThanHalf = false, isPositiveArc = true, 9.171999999999997f, 9.172f)
-                    moveTo(11.0f, 13.732f)
-                    arcTo(2.0f, 2.0f, 120.00000000000001f, isMoreThanHalf = true, isPositiveArc = true, 13.0f, 13.732f)
+                    moveTo(12.0f, 10.0f)
+                    arcTo(2.0f, 2.0f, 270.101365606786f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 13.73f)
                     lineTo(13.0f, 21.0f)
                     arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 11.0f, 21.0f)
-                    close()
+                    lineTo(11.0f, 13.73f)
+                    arcTo(2.0f, 2.0f, 120.11711604780746f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 10.0f)
+                    moveTo(4.93f, 4.93f)
+                    curveTo(8.834999999999999f, 1.025f, 15.167f, 1.025f, 19.072f, 4.93f)
+                    curveTo(22.977999999999998f, 8.834999999999999f, 22.977999999999998f, 15.167f, 19.072f, 19.072f)
+                    arcTo(1.0f, 1.0f, 45.99574461357543f, isMoreThanHalf = false, isPositiveArc = true, 17.657999999999998f, 17.657999999999998f)
+                    arcTo(8.0f, 8.0f, 44.998523738430336f, isMoreThanHalf = true, isPositiveArc = false, 6.343999999999998f, 17.657999999999998f)
+                    arcTo(1.0f, 1.0f, 314.9797463823514f, isMoreThanHalf = true, isPositiveArc = true, 4.929999999999998f, 19.072999999999997f)
+                    curveTo(1.0249999999999981f, 15.166999999999996f, 1.0249999999999981f, 8.834999999999997f, 4.929999999999998f, 4.929999999999996f)
+                    moveTo(7.758999999999999f, 7.758999999999997f)
+                    arcTo(5.999f, 5.999f, 224.99999946320753f, isMoreThanHalf = true, isPositiveArc = true, 16.243f, 16.242999999999995f)
+                    arcTo(1.0f, 1.0f, 44.00425538642027f, isMoreThanHalf = true, isPositiveArc = true, 14.828999999999999f, 14.828999999999995f)
+                    arcTo(4.0f, 4.0f, 45.00865166283798f, isMoreThanHalf = true, isPositiveArc = false, 9.172999999999998f, 14.828999999999995f)
+                    arcTo(1.0f, 1.0f, 315.99574461357975f, isMoreThanHalf = false, isPositiveArc = true, 7.758999999999999f, 16.242999999999995f)
+                    arcTo(6.0f, 6.0f, 135.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 7.758999999999999f, 7.758999999999995f)
                 }
             }.build().also {
                 _broadcast = it

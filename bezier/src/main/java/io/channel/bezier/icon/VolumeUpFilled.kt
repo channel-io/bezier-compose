@@ -35,10 +35,8 @@ val BezierIcons.VolumeUpFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(13.014f, 2.0f)
-                    lineTo(14.014f, 2.0f)
+                    moveTo(14.014f, 2.0f)
                     arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 15.014f, 3.0f)
                     lineTo(15.014f, 21.0f)
                     arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 14.014f, 22.0f)
@@ -50,22 +48,23 @@ val BezierIcons.VolumeUpFilled: BezierIcon
                     lineTo(2.014f, 8.0f)
                     arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 3.014f, 7.0f)
                     lineTo(7.6f, 7.0f)
-                    lineTo(12.306999999999999f, 2.293f)
-                    arcTo(1.0f, 1.0f, 224.9913464895163f, isMoreThanHalf = false, isPositiveArc = true, 13.014f, 2.0f)
+                    lineTo(12.306999999999999f, 2.292f)
+                    arcTo(1.0f, 1.0f, 225.07239680101327f, isMoreThanHalf = false, isPositiveArc = true, 13.014f, 2.0f)
+                    close()
                     moveTo(19.407f, 6.414f)
                     curveTo(19.797f, 6.024f, 20.436f, 6.02f, 20.78f, 6.452f)
                     arcTo(8.92f, 8.92f, 321.5437375403024f, isMoreThanHalf = false, isPositiveArc = true, 20.78f, 17.547f)
-                    curveTo(20.436f, 17.979f, 19.797f, 17.976f, 19.407f, 17.585f)
-                    curveTo(19.017f, 17.195f, 19.024f, 16.565f, 19.354f, 16.123f)
+                    curveTo(20.436f, 17.979f, 19.798000000000002f, 17.976f, 19.407f, 17.585f)
+                    curveTo(19.017f, 17.195f, 19.023f, 16.565f, 19.354f, 16.123f)
                     arcTo(6.92f, 6.92f, 36.57549798267761f, isMoreThanHalf = false, isPositiveArc = false, 19.354f, 7.876000000000001f)
-                    curveTo(19.024f, 7.434000000000001f, 19.016f, 6.804000000000001f, 19.407f, 6.4140000000000015f)
+                    curveTo(19.024f, 7.434000000000001f, 19.017f, 6.804000000000001f, 19.407f, 6.4140000000000015f)
                     moveTo(16.99f, 8.83f)
                     curveTo(17.38f, 8.44f, 18.023999999999997f, 8.436f, 18.337f, 8.89f)
                     arcTo(5.5f, 5.5f, 325.5724533224715f, isMoreThanHalf = false, isPositiveArc = true, 18.337f, 15.109000000000002f)
-                    curveTo(18.023f, 15.564000000000002f, 17.381f, 15.559000000000001f, 16.991f, 15.169000000000002f)
-                    curveTo(16.601f, 14.779000000000003f, 16.617f, 14.149000000000003f, 16.881f, 13.664000000000001f)
-                    arcTo(3.5f, 3.5f, 28.39656220578764f, isMoreThanHalf = false, isPositiveArc = false, 16.881f, 10.335f)
-                    curveTo(16.617f, 9.850000000000001f, 16.6f, 9.221f, 16.991f, 8.830000000000002f)
+                    curveTo(18.024f, 15.563000000000002f, 17.381f, 15.559000000000001f, 16.99f, 15.169000000000002f)
+                    curveTo(16.599999999999998f, 14.779000000000002f, 16.616f, 14.149000000000003f, 16.88f, 13.664000000000001f)
+                    arcTo(3.5f, 3.5f, 28.39656220578764f, isMoreThanHalf = false, isPositiveArc = false, 16.88f, 10.335f)
+                    curveTo(16.616f, 9.850000000000001f, 16.599999999999998f, 9.22f, 16.99f, 8.830000000000002f)
                 }
             }.build().also {
                 _volumeUpFilled = it

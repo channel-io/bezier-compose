@@ -36,15 +36,15 @@ val BezierIcons.Square: BezierIcon
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
                 ) {
-                    moveTo(4.0f, 3.0f)
-                    lineTo(20.0f, 3.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 21.0f, 4.0f)
-                    lineTo(21.0f, 20.0f)
-                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 20.0f, 21.0f)
-                    lineTo(4.0f, 21.0f)
-                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 3.0f, 20.0f)
-                    lineTo(3.0f, 4.0f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 4.0f, 3.0f)
+                    moveTo(8.5f, 3.5f)
+                    lineTo(15.5f, 3.5f)
+                    arcTo(5.0f, 5.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 20.5f, 8.5f)
+                    lineTo(20.5f, 15.5f)
+                    arcTo(5.0f, 5.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 15.5f, 20.5f)
+                    lineTo(8.5f, 20.5f)
+                    arcTo(5.0f, 5.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 3.5f, 15.5f)
+                    lineTo(3.5f, 8.5f)
+                    arcTo(5.0f, 5.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 8.5f, 3.5f)
                     close()
                 }
             }.build().also {

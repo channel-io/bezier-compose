@@ -4,7 +4,6 @@
     android:viewportWidth="24"
     android:viewportHeight="24">
   <path
-      android:pathData="M5,19h14V5H5zM19.5,3h-15C3.673,3 3,3.673 3,4.5v15c0,0.827 0.673,1.5 1.5,1.5h15c0.827,0 1.5,-0.673 1.5,-1.5v-15c0,-0.827 -0.673,-1.5 -1.5,-1.5M18,18v-6l-3.995,-2L6,14v4zM10,8A2,2 0,1 1,6 8,2 2,0 0,1 10,8"
-      android:fillColor="#313234"
-      android:fillType="evenOdd"/>
+      android:pathData="M19.5,3c0.827,0 1.5,0.673 1.5,1.5v15c0,0.827 -0.673,1.5 -1.5,1.5h-15c-0.827,0 -1.5,-0.673 -1.5,-1.5v-15C3,3.673 3.673,3 4.5,3zM5,19h14L19,5L5,5zM18,12v6L6,18v-4l8.005,-4zM8,6a2,2 0,1 1,-0.002 4.002A2,2 0,0 1,8 6"
+      android:fillColor="#313234"/>
 </vector>

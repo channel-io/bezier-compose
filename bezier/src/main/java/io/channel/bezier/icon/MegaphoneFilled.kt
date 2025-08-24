@@ -35,28 +35,27 @@ val BezierIcons.MegaphoneFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(20.138f, 2.018f)
-                    arcTo(0.86f, 0.86f, 269.8248548952809f, isMoreThanHalf = false, isPositiveArc = false, 19.711000000000002f, 2.133f)
-                    lineTo(13.201000000000002f, 5.859999999999999f)
-                    arcTo(0.86f, 0.86f, 60.162713319406656f, isMoreThanHalf = false, isPositiveArc = true, 12.773000000000001f, 5.973999999999999f)
-                    lineTo(4.0f, 5.973999999999999f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 3.0f, 6.973999999999999f)
-                    lineTo(3.0f, 15.0f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 4.0f, 16.0f)
+                    curveTo(20.587000000000003f, 2.018f, 21.0f, 2.3779999999999997f, 21.0f, 2.88f)
+                    lineTo(21.0f, 19.093999999999998f)
+                    arcTo(0.863f, 0.863f, 0.23399021437649445f, isMoreThanHalf = false, isPositiveArc = true, 19.711f, 19.840999999999998f)
+                    lineTo(13.200999999999999f, 16.113999999999997f)
+                    arcTo(0.86f, 0.86f, 299.837346449457f, isMoreThanHalf = false, isPositiveArc = false, 12.774f, 15.999999999999996f)
+                    lineTo(11.254999999999999f, 15.999999999999996f)
+                    lineTo(10.354f, 20.361999999999995f)
+                    arcTo(0.8f, 0.8f, 11.683175364983294f, isMoreThanHalf = false, isPositiveArc = true, 9.57f, 21.0f)
+                    lineTo(6.25f, 21.0f)
+                    arcTo(0.5f, 0.5f, 89.82638960366133f, isMoreThanHalf = false, isPositiveArc = true, 5.759f, 20.398f)
                     lineTo(6.668f, 16.0f)
-                    lineTo(5.76f, 20.4f)
-                    arcTo(0.5f, 0.5f, 191.53696025088894f, isMoreThanHalf = false, isPositiveArc = false, 6.25f, 21.0f)
-                    lineTo(9.571f, 21.0f)
-                    arcTo(0.8f, 0.8f, 89.96950191493933f, isMoreThanHalf = false, isPositiveArc = false, 10.354f, 20.362f)
-                    lineTo(11.255f, 16.0f)
-                    lineTo(12.773000000000001f, 16.0f)
-                    arcTo(0.86f, 0.86f, 269.99221679848733f, isMoreThanHalf = false, isPositiveArc = true, 13.201000000000002f, 16.114f)
-                    lineTo(19.711000000000002f, 19.841f)
-                    arcTo(0.86f, 0.86f, 120.00022039242025f, isMoreThanHalf = false, isPositiveArc = false, 21.001f, 19.094f)
-                    lineTo(21.001f, 2.88f)
-                    arcTo(0.86f, 0.86f, 0.13359527323006576f, isMoreThanHalf = false, isPositiveArc = false, 20.138f, 2.018f)
+                    lineTo(4.0f, 16.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 3.0f, 15.0f)
+                    lineTo(3.0f, 6.975f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 4.0f, 5.975f)
+                    lineTo(12.774f, 5.975f)
+                    arcTo(0.86f, 0.86f, 89.94110834568714f, isMoreThanHalf = false, isPositiveArc = false, 13.200999999999999f, 5.861f)
+                    lineTo(19.711f, 2.134f)
+                    arcTo(0.86f, 0.86f, 240.02854490408873f, isMoreThanHalf = false, isPositiveArc = true, 20.137999999999998f, 2.0189999999999997f)
                 }
             }.build().also {
                 _megaphoneFilled = it

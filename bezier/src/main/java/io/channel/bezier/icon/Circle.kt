@@ -37,9 +37,9 @@ val BezierIcons.Circle: BezierIcon
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(12.0f, 12.0f)
-                    moveTo(2.0f, 12.0f)
-                    arcTo(10.0f, 10.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 22.0f, 12.0f)
-                    arcTo(10.0f, 10.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 2.0f, 12.0f)
+                    moveTo(3.0f, 12.0f)
+                    arcTo(9.0f, 9.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 21.0f, 12.0f)
+                    arcTo(9.0f, 9.0f, 0.0f, isMoreThanHalf = true, isPositiveArc = true, 3.0f, 12.0f)
                 }
             }.build().also {
                 _circle = it

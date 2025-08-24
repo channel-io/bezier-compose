@@ -35,26 +35,26 @@ val BezierIcons.Pencil: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(16.777f, 10.395f)
-                    lineTo(6.675f, 20.496f)
-                    lineTo(3.2769999999999997f, 20.482f)
-                    lineTo(3.2769999999999997f, 17.336f)
-                    lineTo(13.566999999999998f, 7.183999999999999f)
-                    close()
-                    moveTo(18.191f, 8.981f)
-                    lineTo(19.576f, 7.596f)
-                    arcTo(2.257f, 2.257f, 44.32469838403331f, isMoreThanHalf = false, isPositiveArc = false, 16.395f, 4.394f)
-                    lineTo(14.99f, 5.78f)
-                    close()
-                    moveTo(20.99f, 9.011f)
+                    moveTo(14.99f, 2.97f)
+                    arcTo(4.257f, 4.257f, 225.7369082750439f, isMoreThanHalf = false, isPositiveArc = true, 20.990000000000002f, 9.01f)
                     lineTo(7.5f, 22.5f)
                     lineTo(2.2729999999999997f, 22.477f)
                     arcTo(1.0f, 1.0f, 90.22918372737823f, isMoreThanHalf = false, isPositiveArc = true, 1.2769999999999997f, 21.477f)
                     lineTo(1.277f, 16.5f)
-                    lineTo(14.99f, 2.97f)
-                    arcTo(4.257f, 4.257f, 225.7369082750439f, isMoreThanHalf = false, isPositiveArc = true, 20.990000000000002f, 9.01f)
+                    close()
+                    moveTo(3.277f, 17.336f)
+                    lineTo(3.277f, 20.480999999999998f)
+                    lineTo(6.676f, 20.496f)
+                    lineTo(16.776f, 10.393999999999998f)
+                    lineTo(13.565999999999999f, 7.183999999999998f)
+                    close()
+                    moveTo(19.577f, 4.404f)
+                    arcTo(2.26f, 2.26f, 314.9455205580141f, isMoreThanHalf = false, isPositiveArc = false, 16.394000000000002f, 4.394f)
+                    lineTo(14.99f, 5.778f)
+                    lineTo(18.19f, 8.98f)
+                    lineTo(19.576f, 7.596f)
+                    arcTo(2.257f, 2.257f, 45.00215391367203f, isMoreThanHalf = false, isPositiveArc = false, 19.576f, 4.404f)
                 }
             }.build().also {
                 _pencil = it

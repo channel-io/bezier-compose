@@ -35,21 +35,20 @@ val BezierIcons.PersonCircleFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.0f, 2.0f)
-                    curveTo(6.477f, 2.0f, 2.0f, 6.477f, 2.0f, 12.0f)
-                    curveTo(2.0f, 17.523f, 6.477f, 22.0f, 12.0f, 22.0f)
-                    curveTo(17.523f, 22.0f, 22.0f, 17.523f, 22.0f, 12.0f)
-                    curveTo(22.0f, 6.477f, 17.523f, 2.0f, 12.0f, 2.0f)
+                    curveTo(17.523f, 2.0f, 22.0f, 6.477f, 22.0f, 12.0f)
+                    curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
+                    curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
+                    curveTo(2.0f, 6.477f, 6.477f, 2.0f, 12.0f, 2.0f)
                     moveTo(12.0f, 4.0f)
-                    arcTo(8.0f, 8.0f, 269.99711243912594f, isMoreThanHalf = false, isPositiveArc = true, 17.736f, 17.576999999999998f)
-                    curveTo(17.080000000000002f, 15.122999999999998f, 14.751000000000001f, 13.296f, 12.0f, 13.296f)
-                    curveTo(9.248999999999999f, 13.296f, 6.92f, 15.123f, 6.264f, 17.576999999999998f)
-                    arcTo(8.0f, 8.0f, 135.8032048473529f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 4.0f)
-                    moveTo(12.0f, 12.302f)
-                    arcTo(2.551f, 2.551f, 90.0f, isMoreThanHalf = true, isPositiveArc = false, 12.0f, 7.199f)
-                    arcTo(2.551f, 2.551f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 12.302f)
+                    arcTo(8.0f, 8.0f, 269.98180531249f, isMoreThanHalf = false, isPositiveArc = false, 6.265f, 17.575f)
+                    curveTo(6.920999999999999f, 15.122f, 9.248999999999999f, 13.296f, 12.0f, 13.296f)
+                    curveTo(14.75f, 13.296f, 17.078f, 15.123f, 17.735f, 17.576f)
+                    arcTo(8.0f, 8.0f, 44.186807928070905f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 4.0f)
+                    moveTo(12.0f, 7.198f)
+                    arcTo(2.552f, 2.552f, 270.0336696940329f, isMoreThanHalf = true, isPositiveArc = true, 11.997f, 12.303f)
+                    arcTo(2.552f, 2.552f, 90.03367107727074f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 7.198f)
                 }
             }.build().also {
                 _personCircleFilled = it

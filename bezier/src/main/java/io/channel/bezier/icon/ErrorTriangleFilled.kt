@@ -35,22 +35,21 @@ val BezierIcons.ErrorTriangleFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(8.987f, 4.1f)
-                    curveTo(10.341000000000001f, 1.8069999999999995f, 13.658999999999999f, 1.8069999999999995f, 15.013f, 4.1f)
+                    curveTo(10.342f, 1.8069999999999995f, 13.658999999999999f, 1.8069999999999995f, 15.013f, 4.1f)
                     lineTo(21.88f, 15.719999999999999f)
-                    curveTo(23.258f, 18.052999999999997f, 21.576999999999998f, 21.0f, 18.866f, 21.0f)
+                    curveTo(23.258f, 18.052f, 21.576f, 21.0f, 18.866f, 21.0f)
                     lineTo(5.134f, 21.0f)
-                    curveTo(2.4240000000000004f, 21.0f, 0.742f, 18.053f, 2.1200000000000006f, 15.719999999999999f)
+                    curveTo(2.4240000000000004f, 21.0f, 0.7410000000000005f, 18.052f, 2.1200000000000006f, 15.719999999999999f)
                     close()
-                    moveTo(12.0f, 18.8f)
-                    arcTo(1.4f, 1.4f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 12.0f, 15.999f)
-                    arcTo(1.4f, 1.4f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 18.8f)
+                    moveTo(12.001f, 16.0f)
+                    arcTo(1.4f, 1.4f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 12.001f, 18.801000000000002f)
+                    arcTo(1.4f, 1.4f, 89.99999893300522f, isMoreThanHalf = false, isPositiveArc = false, 12.001f, 16.001f)
                     moveTo(12.0f, 6.0f)
                     arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 11.0f, 7.0f)
                     lineTo(11.0f, 13.0f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 13.0f, 13.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 13.0f, 13.0f)
                     lineTo(13.0f, 7.0f)
                     arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 6.0f)
                 }

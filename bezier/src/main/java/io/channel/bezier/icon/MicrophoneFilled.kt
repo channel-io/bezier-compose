@@ -35,25 +35,24 @@ val BezierIcons.MicrophoneFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF313234)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(12.0f, 2.0f)
-                    arcTo(4.0f, 4.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 8.0f, 6.0f)
-                    lineTo(8.0f, 13.0f)
-                    arcTo(4.0f, 4.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 16.0f, 13.0f)
-                    lineTo(16.0f, 6.0f)
-                    arcTo(4.0f, 4.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 2.0f)
-                    moveTo(11.0f, 20.938f)
-                    arcTo(8.004f, 8.004f, 97.20004919071103f, isMoreThanHalf = false, isPositiveArc = true, 4.062f, 13.997999999999998f)
+                    moveTo(19.0f, 13.0f)
+                    curveTo(19.552f, 13.0f, 20.007f, 13.45f, 19.939f, 13.998f)
+                    arcTo(8.0f, 8.0f, 7.1768956629274445f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 20.936f)
+                    lineTo(13.0f, 23.0f)
+                    lineTo(11.0f, 23.0f)
+                    lineTo(11.0f, 20.936f)
+                    arcTo(8.0f, 8.0f, 97.17597267194618f, isMoreThanHalf = false, isPositiveArc = true, 4.062f, 13.998000000000001f)
                     curveTo(3.993f, 13.45f, 4.448f, 13.0f, 5.0f, 13.0f)
                     curveTo(5.552f, 13.0f, 5.991f, 13.451f, 6.082f, 13.996f)
                     arcTo(6.002f, 6.002f, 170.4029647399896f, isMoreThanHalf = false, isPositiveArc = false, 17.918f, 13.996f)
-                    curveTo(18.008f, 13.451f, 18.448f, 13.0f, 19.0f, 13.0f)
-                    curveTo(19.552f, 13.0f, 20.007f, 13.45f, 19.938f, 13.998f)
-                    arcTo(8.004f, 8.004f, 7.183535059246383f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 20.938f)
-                    lineTo(13.0f, 23.0f)
-                    lineTo(11.0f, 23.0f)
-                    close()
+                    curveTo(18.009f, 13.451f, 18.448f, 13.0f, 19.0f, 13.0f)
+                    moveTo(12.0f, 2.0f)
+                    arcTo(4.0f, 4.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 16.0f, 6.0f)
+                    lineTo(16.0f, 13.0f)
+                    arcTo(4.0f, 4.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 8.0f, 13.0f)
+                    lineTo(8.0f, 6.0f)
+                    arcTo(4.0f, 4.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 2.0f)
                 }
             }.build().also {
                 _microphoneFilled = it
