@@ -4,14 +4,14 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
@@ -97,12 +97,17 @@ class Badge @JvmOverloads constructor(
         Normal(0, R.color.bg_black_lighter, R.color.txt_black_darker, R.color.txt_black_darkest),
         Blue(1, R.color.bgtxt_blue_lighter, R.color.bgtxt_blue_normal, R.color.bgtxt_blue_normal),
         Cobalt(2, R.color.bgtxt_cobalt_lighter, R.color.bgtxt_cobalt_normal, R.color.bgtxt_cobalt_normal),
-        Green(3, R.color.bgtxt_green_lighter, R.color.bgtxt_green_normal, R.color.bgtxt_green_normal),
-        Orange(4, R.color.bgtxt_orange_lighter, R.color.bgtxt_orange_normal, R.color.bgtxt_orange_normal),
-        Red(5, R.color.bgtxt_red_lighter, R.color.bgtxt_red_normal, R.color.bgtxt_red_normal),
-        Purple(6, R.color.bgtxt_purple_lighter, R.color.bgtxt_purple_normal, R.color.bgtxt_purple_normal),
-        MonochromeDark(7, R.color.bg_black_darker, R.color.bgtxt_absolute_white_dark, R.color.bgtxt_absolute_white_dark),
-        MonochromeLight(8, R.color.bg_black_lighter, R.color.txt_black_dark, R.color.txt_black_dark);
+        Teal(3, R.color.bgtxt_teal_lighter, R.color.bgtxt_teal_normal, R.color.bgtxt_teal_normal),
+        Green(4, R.color.bgtxt_green_lighter, R.color.bgtxt_green_normal, R.color.bgtxt_green_normal),
+        Olive(5, R.color.bgtxt_olive_lighter, R.color.bgtxt_olive_normal, R.color.bgtxt_olive_normal),
+        Pink(6, R.color.bgtxt_pink_lighter, R.color.bgtxt_pink_normal, R.color.bgtxt_pink_normal),
+        Navy(7, R.color.bgtxt_navy_lighter, R.color.bgtxt_navy_normal, R.color.bgtxt_navy_normal),
+        Yellow(8, R.color.bgtxt_yellow_lighter, R.color.bgtxt_yellow_normal, R.color.bgtxt_yellow_normal),
+        Orange(9, R.color.bgtxt_orange_lighter, R.color.bgtxt_orange_normal, R.color.bgtxt_orange_normal),
+        Red(10, R.color.bgtxt_red_lighter, R.color.bgtxt_red_normal, R.color.bgtxt_red_normal),
+        Purple(11, R.color.bgtxt_purple_lighter, R.color.bgtxt_purple_normal, R.color.bgtxt_purple_normal),
+        MonochromeDark(12, R.color.bg_black_darker, R.color.bgtxt_absolute_white_dark, R.color.bgtxt_absolute_white_dark),
+        MonochromeLight(13, R.color.bg_black_lighter, R.color.txt_black_dark, R.color.txt_black_dark);
 
         companion object {
             fun fromId(id: Int): Color {
@@ -153,9 +158,9 @@ fun Badge(
 
 @Preview(showBackground = true)
 @Composable
-private fun BadgePreview() {
-    LazyVerticalGrid(columns = GridCells.Fixed(2)) {
-        items(BadgeColor.values()) {
+private fun BadgeColorPreview() {
+    LazyColumn {
+        items(Badge.Color.entries) {
             Badge(
                     modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp),
                     painter = painterResource(id = R.drawable.icon_person),
@@ -164,24 +169,26 @@ private fun BadgePreview() {
                     size = BadgeSize.L,
             )
         }
+    }
+}
 
-        item {
-            Badge(
-                    modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp),
-                    painter = painterResource(id = R.drawable.icon_person),
-                    text = null,
-                    color = BadgeColor.Blue,
-                    size = BadgeSize.L,
-            )
-        }
+@Preview(showBackground = true)
+@Composable
+private fun BadgeColorCaseByCasePreview() {
+    Column {
+        Badge(
+                modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp),
+                painter = painterResource(id = R.drawable.icon_person),
+                text = null,
+                color = BadgeColor.Blue,
+                size = BadgeSize.L,
+        )
 
-        item {
-            Badge(
-                    modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp),
-                    text = "text",
-                    color = BadgeColor.Blue,
-                    size = BadgeSize.L,
-            )
-        }
+        Badge(
+                modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp),
+                text = "text",
+                color = BadgeColor.Blue,
+                size = BadgeSize.L,
+        )
     }
 }
