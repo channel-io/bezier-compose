@@ -119,8 +119,8 @@ class Badge @JvmOverloads constructor(
 
 @Composable
 fun Badge(
-        text: String? = null,
         modifier: Modifier = Modifier,
+        text: String? = null,
         painter: Painter? = null,
         color: BadgeColor = BadgeColor.Normal,
         size: BadgeSize = BadgeSize.XS,
