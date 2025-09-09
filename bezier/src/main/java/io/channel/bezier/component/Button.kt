@@ -1,6 +1,7 @@
 package io.channel.bezier.component
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
+import androidx.compose.foundation.Indication
 import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -48,6 +49,7 @@ fun Button(
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        indication: Indication? = LocalIndication.current,
         text: String? = null,
         leftIcon: (@Composable (iconSize: Dp) -> Unit)? = null,
         rightIcon: (@Composable (iconSize: Dp) -> Unit)? = null,
@@ -72,7 +74,7 @@ fun Button(
                     )
                     .clickable(
                             interactionSource = interactionSource,
-                            indication = LocalIndication.current,
+                            indication = indication,
                             enabled = enabled,
                     ) {
                         onClick.invoke()
@@ -120,6 +122,7 @@ fun Button(
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        indication: Indication? = LocalIndication.current,
         text: String? = null,
 ) {
     Button(
@@ -130,6 +133,7 @@ fun Button(
             modifier = modifier,
             enabled = enabled,
             interactionSource = interactionSource,
+            indication = indication,
             text = text,
             leftIconPainter = null,
             rightIconPainter = null,
@@ -145,6 +149,7 @@ fun Button(
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        indication: Indication? = LocalIndication.current,
         text: String? = null,
         leftIconPainter: Painter? = null,
         rightIconPainter: Painter? = null,
@@ -157,6 +162,7 @@ fun Button(
             modifier = modifier,
             enabled = enabled,
             interactionSource = interactionSource,
+            indication = indication,
             text = text,
             leftIcon = leftIconPainter?.let {
                 { iconSize ->
