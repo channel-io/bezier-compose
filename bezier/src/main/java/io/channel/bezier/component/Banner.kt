@@ -41,7 +41,7 @@ import io.channel.bezier.compose.R
 
 @Deprecated(
         message = "Use leftIcon and leftIconColor parameters instead",
-        replaceWith = ReplaceWith("Banner(type, description, modifier, title, leftIcon = icon, leftIconColor = iconColor, onClick, onRemove, content)")
+        replaceWith = ReplaceWith("Banner(type = type, description = description, modifier = modifier, title = title, leftIcon = icon, leftIconColor = iconColor, onClick = onClick, onRemove = onRemove, content = content)"),
 )
 @Composable
 fun Banner(
@@ -77,7 +77,7 @@ fun Banner(
 
 @Deprecated(
         message = "Use leftIcon and leftIconColor parameters instead",
-        replaceWith = ReplaceWith("Banner(type, description, modifier, title, leftIcon = icon, leftIconColor = iconColor, onClick, onRemove, content)")
+        replaceWith = ReplaceWith("Banner(type = type, description = description, modifier = modifier, title = title, leftIcon = icon, leftIconColor = iconColor, onClick = onClick, onRemove = onRemove, content = content)"),
 )
 @Composable
 fun Banner(
