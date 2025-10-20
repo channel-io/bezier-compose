@@ -39,6 +39,34 @@ import androidx.compose.ui.unit.sp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
 
+@Composable
+fun Banner(
+        type: BannerType,
+        description: AnnotatedString,
+        title: String? = null,
+) {
+    Banner(
+            type = type,
+            description = description,
+            title = title,
+            leftIcon = null,
+    )
+}
+
+@Composable
+fun Banner(
+        type: BannerType,
+        description: String,
+        title: String? = null,
+) {
+    Banner(
+            type = type,
+            description = description,
+            title = title,
+            leftIcon = null,
+    )
+}
+
 @Deprecated(
         message = "Use leftIcon and leftIconColor parameters instead",
         replaceWith = ReplaceWith("Banner(type = type, description = description, modifier = modifier, title = title, leftIcon = icon, leftIconColor = iconColor, onClick = onClick, onRemove = onRemove, content = content)"),
