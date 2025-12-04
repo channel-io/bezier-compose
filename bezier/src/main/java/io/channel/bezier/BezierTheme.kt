@@ -31,8 +31,16 @@ fun BezierTheme(
         }
     }
 
+    val colorsV3 = remember(isDark) {
+        when (isDark) {
+            true -> BezierColorV3Dark()
+            else -> BezierColorV3Light()
+        }
+    }
+
     CompositionLocalProvider(
             LocalColors provides colors,
+            LocalColorsV3 provides colorsV3,
             LocalIndication provides rememberRipple(),
             LocalRippleTheme provides BezierRippleTheme,
     ) {
@@ -45,12 +53,21 @@ object BezierTheme {
     val colors: Colors
         @Composable
         @ReadOnlyComposable
+        @Deprecated("Please Migrate colorsV3")
         get() = LocalColors.current
+
+    val colorsV3: BezierColorV3
+        @Composable
+        @ReadOnlyComposable
+        get() = LocalColorsV3.current
 
     var isDark by mutableStateOf(false)
 }
 
 internal val LocalColors = staticCompositionLocalOf { lightColors() }
+
+internal val LocalColorsV3 = staticCompositionLocalOf<BezierColorV3> { BezierColorV3Light() }
+
 
 private object BezierRippleTheme : RippleTheme {
     @Composable
