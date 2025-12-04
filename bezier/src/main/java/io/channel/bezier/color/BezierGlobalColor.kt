@@ -1,8 +1,8 @@
-package io.channel.bezier
+package io.channel.bezier.color
 
 import androidx.compose.ui.graphics.Color
 
-internal object BezierGlobalVariables {
+internal object BezierGlobalColor {
     val Black0: Color = Color(0x00000000)
     val Black1: Color = Color(0x02000000)
     val Black100: Color = Color(0xFF000000)
