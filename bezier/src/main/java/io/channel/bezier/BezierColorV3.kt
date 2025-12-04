@@ -3,388 +3,388 @@ package io.channel.bezier
 import androidx.compose.ui.graphics.Color
 
 interface BezierColorV3 {
-    val BorderAbsoluteWhite: Color
-    val BorderAction: Color
-    val BorderActionLight: Color
-    val BorderDetachHigh: Color
-    val BorderDetachHigher: Color
-    val BorderDetachHighest: Color
-    val BorderNeutral: Color
-    val BorderNeutralHeavy: Color
-    val BorderWarning: Color
-    val BorderWarningLight: Color
-    val DimAbsoluteBlack: Color
-    val DimAbsoluteBlackHeavy: Color
-    val DimAbsoluteWhite: Color
-    val DimAbsoluteWhiteHeavy: Color
-    val FillAbsoluteBlackLight: Color
-    val FillAbsoluteWhite: Color
-    val FillAccentBlueLighter: Color
-    val FillAccentBlueLightest: Color
-    val FillAccentCobaltLighter: Color
-    val FillAccentCobaltLightest: Color
-    val FillAccentGreenLighter: Color
-    val FillAccentGreenLightest: Color
-    val FillAccentNavyLighter: Color
-    val FillAccentNavyLightest: Color
-    val FillAccentOliveLighter: Color
-    val FillAccentOliveLightest: Color
-    val FillAccentOrangeLighter: Color
-    val FillAccentOrangeLightest: Color
-    val FillAccentPinkLighter: Color
-    val FillAccentPinkLightest: Color
-    val FillAccentPurpleLighter: Color
-    val FillAccentPurpleLightest: Color
-    val FillAccentRedLighter: Color
-    val FillAccentRedLightest: Color
-    val FillAccentTealLighter: Color
-    val FillAccentTealLightest: Color
-    val FillAccentYellowLighter: Color
-    val FillAccentYellowLightest: Color
-    val FillAction: Color
-    val FillActionLight: Color
-    val FillActionLighter: Color
-    val FillCritical: Color
-    val FillCriticalLight: Color
-    val FillCriticalLighter: Color
-    val FillHighlight: Color
-    val FillHighlightLight: Color
-    val FillHighlightLighter: Color
-    val FillNeutralHeavier: Color
-    val FillNeutralHeaviest: Color
-    val FillNeutralHeavy: Color
-    val FillNeutralLight: Color
-    val FillNeutralLighter: Color
-    val FillNeutralLightest: Color
-    val FillSuccess: Color
-    val FillSuccessLight: Color
-    val FillSuccessLighter: Color
-    val FillWarning: Color
-    val FillWarningLight: Color
-    val FillWarningLighter: Color
-    val IconAbsoluteWhite: Color
-    val IconAccentBlue: Color
-    val IconAccentCobalt: Color
-    val IconAccentGreen: Color
-    val IconAccentNavy: Color
-    val IconAccentOlive: Color
-    val IconAccentOrange: Color
-    val IconAccentPink: Color
-    val IconAccentPurple: Color
-    val IconAccentRed: Color
-    val IconAccentTeal: Color
-    val IconAccentYellow: Color
-    val IconAction: Color
-    val IconCritical: Color
-    val IconHighlight: Color
-    val IconNeutral: Color
-    val IconNeutralHeavier: Color
-    val IconNeutralHeavy: Color
-    val IconSuccess: Color
-    val IconWarning: Color
-    val ShadowBase: Color
-    val ShadowBase_inner: Color
-    val ShadowLarge: Color
-    val ShadowMedium: Color
-    val ShadowSmall: Color
-    val ShadowXlarge: Color
-    val Surface: Color
-    val SurfaceAccentBlue: Color
-    val SurfaceAccentCobalt: Color
-    val SurfaceAccentGreen: Color
-    val SurfaceAccentNavy: Color
-    val SurfaceAccentOrange: Color
-    val SurfaceAccentPink: Color
-    val SurfaceAccentPurple: Color
-    val SurfaceAccentRed: Color
-    val SurfaceAccentTeal: Color
-    val SurfaceAccentYellow: Color
-    val SurfaceGlass: Color
-    val SurfaceGlassHigh: Color
-    val SurfaceGlassHigher: Color
-    val SurfaceGlassHighest: Color
-    val SurfaceHigh: Color
-    val SurfaceHigher: Color
-    val SurfaceHighest: Color
-    val SurfaceLow: Color
-    val SurfaceLower: Color
-    val TextAbsoluteBlack: Color
-    val TextAbsoluteWhite: Color
-    val TextAccentBlue: Color
-    val TextAccentCobalt: Color
-    val TextAccentGreen: Color
-    val TextAccentNavy: Color
-    val TextAccentOrange: Color
-    val TextAccentPink: Color
-    val TextAccentPurple: Color
-    val TextAccentRed: Color
-    val TextAccentTeal: Color
-    val TextAccentYellow: Color
-    val TextAction: Color
-    val TextCritical: Color
-    val TextHighlight: Color
-    val TextNeutral: Color
-    val TextNeutralHeaviest: Color
-    val TextNeutralLight: Color
-    val TextNeutralLighter: Color
-    val TextSuccess: Color
-    val TextWarning: Color
+    val borderAbsoluteWhite: Color
+    val borderAction: Color
+    val borderActionLight: Color
+    val borderDetachHigh: Color
+    val borderDetachHigher: Color
+    val borderDetachHighest: Color
+    val borderNeutral: Color
+    val borderNeutralHeavy: Color
+    val borderWarning: Color
+    val borderWarningLight: Color
+    val dimAbsoluteBlack: Color
+    val dimAbsoluteBlackHeavy: Color
+    val dimAbsoluteWhite: Color
+    val dimAbsoluteWhiteHeavy: Color
+    val fillAbsoluteBlackLight: Color
+    val fillAbsoluteWhite: Color
+    val fillAccentBlueLighter: Color
+    val fillAccentBlueLightest: Color
+    val fillAccentCobaltLighter: Color
+    val fillAccentCobaltLightest: Color
+    val fillAccentGreenLighter: Color
+    val fillAccentGreenLightest: Color
+    val fillAccentNavyLighter: Color
+    val fillAccentNavyLightest: Color
+    val fillAccentOliveLighter: Color
+    val fillAccentOliveLightest: Color
+    val fillAccentOrangeLighter: Color
+    val fillAccentOrangeLightest: Color
+    val fillAccentPinkLighter: Color
+    val fillAccentPinkLightest: Color
+    val fillAccentPurpleLighter: Color
+    val fillAccentPurpleLightest: Color
+    val fillAccentRedLighter: Color
+    val fillAccentRedLightest: Color
+    val fillAccentTealLighter: Color
+    val fillAccentTealLightest: Color
+    val fillAccentYellowLighter: Color
+    val fillAccentYellowLightest: Color
+    val fillAction: Color
+    val fillActionLight: Color
+    val fillActionLighter: Color
+    val fillCritical: Color
+    val fillCriticalLight: Color
+    val fillCriticalLighter: Color
+    val fillHighlight: Color
+    val fillHighlightLight: Color
+    val fillHighlightLighter: Color
+    val fillNeutralHeavier: Color
+    val fillNeutralHeaviest: Color
+    val fillNeutralHeavy: Color
+    val fillNeutralLight: Color
+    val fillNeutralLighter: Color
+    val fillNeutralLightest: Color
+    val fillSuccess: Color
+    val fillSuccessLight: Color
+    val fillSuccessLighter: Color
+    val fillWarning: Color
+    val fillWarningLight: Color
+    val fillWarningLighter: Color
+    val iconAbsoluteWhite: Color
+    val iconAccentBlue: Color
+    val iconAccentCobalt: Color
+    val iconAccentGreen: Color
+    val iconAccentNavy: Color
+    val iconAccentOlive: Color
+    val iconAccentOrange: Color
+    val iconAccentPink: Color
+    val iconAccentPurple: Color
+    val iconAccentRed: Color
+    val iconAccentTeal: Color
+    val iconAccentYellow: Color
+    val iconAction: Color
+    val iconCritical: Color
+    val iconHighlight: Color
+    val iconNeutral: Color
+    val iconNeutralHeavier: Color
+    val iconNeutralHeavy: Color
+    val iconSuccess: Color
+    val iconWarning: Color
+    val shadowBase: Color
+    val shadowBase_inner: Color
+    val shadowLarge: Color
+    val shadowMedium: Color
+    val shadowSmall: Color
+    val shadowXlarge: Color
+    val surface: Color
+    val surfaceAccentBlue: Color
+    val surfaceAccentCobalt: Color
+    val surfaceAccentGreen: Color
+    val surfaceAccentNavy: Color
+    val surfaceAccentOrange: Color
+    val surfaceAccentPink: Color
+    val surfaceAccentPurple: Color
+    val surfaceAccentRed: Color
+    val surfaceAccentTeal: Color
+    val surfaceAccentYellow: Color
+    val surfaceGlass: Color
+    val surfaceGlassHigh: Color
+    val surfaceGlassHigher: Color
+    val surfaceGlassHighest: Color
+    val surfaceHigh: Color
+    val surfaceHigher: Color
+    val surfaceHighest: Color
+    val surfaceLow: Color
+    val surfaceLower: Color
+    val textAbsoluteBlack: Color
+    val textAbsoluteWhite: Color
+    val textAccentBlue: Color
+    val textAccentCobalt: Color
+    val textAccentGreen: Color
+    val textAccentNavy: Color
+    val textAccentOrange: Color
+    val textAccentPink: Color
+    val textAccentPurple: Color
+    val textAccentRed: Color
+    val textAccentTeal: Color
+    val textAccentYellow: Color
+    val textAction: Color
+    val textCritical: Color
+    val textHighlight: Color
+    val textNeutral: Color
+    val textNeutralHeaviest: Color
+    val textNeutralLight: Color
+    val textNeutralLighter: Color
+    val textSuccess: Color
+    val textWarning: Color
 }
 
 internal class BezierColorV3Light : BezierColorV3 {
-    override val BorderAbsoluteWhite: Color = BezierGlobalVariables.White100
-    override val BorderAction: Color = BezierGlobalVariables.Blue400
-    override val BorderActionLight: Color = BezierGlobalVariables.Blue400_30
-    override val BorderDetachHigh: Color = BezierGlobalVariables.White100
-    override val BorderDetachHigher: Color = BezierGlobalVariables.White100
-    override val BorderDetachHighest: Color = BezierGlobalVariables.White100
-    override val BorderNeutral: Color = BezierGlobalVariables.Black8
-    override val BorderNeutralHeavy: Color = BezierGlobalVariables.Black40
-    override val BorderWarning: Color = BezierGlobalVariables.Orange400
-    override val BorderWarningLight: Color = BezierGlobalVariables.Orange400_30
-    override val DimAbsoluteBlack: Color = BezierGlobalVariables.Black40
-    override val DimAbsoluteBlackHeavy: Color = BezierGlobalVariables.Black60
-    override val DimAbsoluteWhite: Color = BezierGlobalVariables.White40
-    override val DimAbsoluteWhiteHeavy: Color = BezierGlobalVariables.White60
-    override val FillAbsoluteBlackLight: Color = BezierGlobalVariables.Black20
-    override val FillAbsoluteWhite: Color = BezierGlobalVariables.White100
-    override val FillAccentBlueLighter: Color = BezierGlobalVariables.Blue400_20
-    override val FillAccentBlueLightest: Color = BezierGlobalVariables.Blue400_10
-    override val FillAccentCobaltLighter: Color = BezierGlobalVariables.Cobalt400_20
-    override val FillAccentCobaltLightest: Color = BezierGlobalVariables.Cobalt400_10
-    override val FillAccentGreenLighter: Color = BezierGlobalVariables.Green400_20
-    override val FillAccentGreenLightest: Color = BezierGlobalVariables.Green400_10
-    override val FillAccentNavyLighter: Color = BezierGlobalVariables.Navy400_20
-    override val FillAccentNavyLightest: Color = BezierGlobalVariables.Navy400_10
-    override val FillAccentOliveLighter: Color = BezierGlobalVariables.Olive400_20
-    override val FillAccentOliveLightest: Color = BezierGlobalVariables.Olive400_10
-    override val FillAccentOrangeLighter: Color = BezierGlobalVariables.Orange400_20
-    override val FillAccentOrangeLightest: Color = BezierGlobalVariables.Orange400_10
-    override val FillAccentPinkLighter: Color = BezierGlobalVariables.Pink400_20
-    override val FillAccentPinkLightest: Color = BezierGlobalVariables.Pink400_10
-    override val FillAccentPurpleLighter: Color = BezierGlobalVariables.Purple400_20
-    override val FillAccentPurpleLightest: Color = BezierGlobalVariables.Purple400_10
-    override val FillAccentRedLighter: Color = BezierGlobalVariables.Red400_20
-    override val FillAccentRedLightest: Color = BezierGlobalVariables.Red400_10
-    override val FillAccentTealLighter: Color = BezierGlobalVariables.Teal400_20
-    override val FillAccentTealLightest: Color = BezierGlobalVariables.Teal400_10
-    override val FillAccentYellowLighter: Color = BezierGlobalVariables.Yellow400_20
-    override val FillAccentYellowLightest: Color = BezierGlobalVariables.Yellow400_10
-    override val FillAction: Color = BezierGlobalVariables.Blue400
-    override val FillActionLight: Color = BezierGlobalVariables.Blue400_20
-    override val FillActionLighter: Color = BezierGlobalVariables.Blue400_10
-    override val FillCritical: Color = BezierGlobalVariables.Red400
-    override val FillCriticalLight: Color = BezierGlobalVariables.Red400_20
-    override val FillCriticalLighter: Color = BezierGlobalVariables.Red400_10
-    override val FillHighlight: Color = BezierGlobalVariables.Cobalt400
-    override val FillHighlightLight: Color = BezierGlobalVariables.Cobalt400_20
-    override val FillHighlightLighter: Color = BezierGlobalVariables.Cobalt400_10
-    override val FillNeutralHeavier: Color = BezierGlobalVariables.Black40
-    override val FillNeutralHeaviest: Color = BezierGlobalVariables.Black85
-    override val FillNeutralHeavy: Color = BezierGlobalVariables.Black15
-    override val FillNeutralLight: Color = BezierGlobalVariables.Black5
-    override val FillNeutralLighter: Color = BezierGlobalVariables.Black3
-    override val FillNeutralLightest: Color = BezierGlobalVariables.Black1
-    override val FillSuccess: Color = BezierGlobalVariables.Green400
-    override val FillSuccessLight: Color = BezierGlobalVariables.Green400_20
-    override val FillSuccessLighter: Color = BezierGlobalVariables.Green400_10
-    override val FillWarning: Color = BezierGlobalVariables.Orange400
-    override val FillWarningLight: Color = BezierGlobalVariables.Orange400_20
-    override val FillWarningLighter: Color = BezierGlobalVariables.Orange400_10
-    override val IconAbsoluteWhite: Color = BezierGlobalVariables.White100
-    override val IconAccentBlue: Color = BezierGlobalVariables.Blue400
-    override val IconAccentCobalt: Color = BezierGlobalVariables.Cobalt400
-    override val IconAccentGreen: Color = BezierGlobalVariables.Green400
-    override val IconAccentNavy: Color = BezierGlobalVariables.Navy400
-    override val IconAccentOlive: Color = BezierGlobalVariables.Olive400
-    override val IconAccentOrange: Color = BezierGlobalVariables.Orange400
-    override val IconAccentPink: Color = BezierGlobalVariables.Pink400
-    override val IconAccentPurple: Color = BezierGlobalVariables.Purple400
-    override val IconAccentRed: Color = BezierGlobalVariables.Red400
-    override val IconAccentTeal: Color = BezierGlobalVariables.Teal400
-    override val IconAccentYellow: Color = BezierGlobalVariables.Yellow400
-    override val IconAction: Color = BezierGlobalVariables.Blue400
-    override val IconCritical: Color = BezierGlobalVariables.Red400
-    override val IconHighlight: Color = BezierGlobalVariables.Cobalt400
-    override val IconNeutral: Color = BezierGlobalVariables.Black40
-    override val IconNeutralHeavier: Color = BezierGlobalVariables.Black85
-    override val IconNeutralHeavy: Color = BezierGlobalVariables.Black60
-    override val IconSuccess: Color = BezierGlobalVariables.Green400
-    override val IconWarning: Color = BezierGlobalVariables.Orange400
-    override val ShadowBase: Color = BezierGlobalVariables.Black5
-    override val ShadowBase_inner: Color = BezierGlobalVariables.White12
-    override val ShadowLarge: Color = BezierGlobalVariables.Black22
-    override val ShadowMedium: Color = BezierGlobalVariables.Black15
-    override val ShadowSmall: Color = BezierGlobalVariables.Black8
-    override val ShadowXlarge: Color = BezierGlobalVariables.Black30
-    override val Surface: Color = BezierGlobalVariables.White100
-    override val SurfaceAccentBlue: Color = BezierGlobalVariables.Blue400
-    override val SurfaceAccentCobalt: Color = BezierGlobalVariables.Cobalt400
-    override val SurfaceAccentGreen: Color = BezierGlobalVariables.Green400
-    override val SurfaceAccentNavy: Color = BezierGlobalVariables.Navy400
-    override val SurfaceAccentOrange: Color = BezierGlobalVariables.Orange400
-    override val SurfaceAccentPink: Color = BezierGlobalVariables.Pink400
-    override val SurfaceAccentPurple: Color = BezierGlobalVariables.Purple400
-    override val SurfaceAccentRed: Color = BezierGlobalVariables.Red400
-    override val SurfaceAccentTeal: Color = BezierGlobalVariables.Teal400
-    override val SurfaceAccentYellow: Color = BezierGlobalVariables.Yellow400
-    override val SurfaceGlass: Color = BezierGlobalVariables.White90
-    override val SurfaceGlassHigh: Color = BezierGlobalVariables.White90
-    override val SurfaceGlassHigher: Color = BezierGlobalVariables.Grey_alpha100_90
-    override val SurfaceGlassHighest: Color = BezierGlobalVariables.Grey_alpha200_90
-    override val SurfaceHigh: Color = BezierGlobalVariables.White100
-    override val SurfaceHigher: Color = BezierGlobalVariables.White100
-    override val SurfaceHighest: Color = BezierGlobalVariables.White100
-    override val SurfaceLow: Color = BezierGlobalVariables.Grey50
-    override val SurfaceLower: Color = BezierGlobalVariables.Grey100
-    override val TextAbsoluteBlack: Color = BezierGlobalVariables.Black100
-    override val TextAbsoluteWhite: Color = BezierGlobalVariables.White100
-    override val TextAccentBlue: Color = BezierGlobalVariables.Blue400
-    override val TextAccentCobalt: Color = BezierGlobalVariables.Cobalt400
-    override val TextAccentGreen: Color = BezierGlobalVariables.Green400
-    override val TextAccentNavy: Color = BezierGlobalVariables.Navy400
-    override val TextAccentOrange: Color = BezierGlobalVariables.Orange400
-    override val TextAccentPink: Color = BezierGlobalVariables.Pink400
-    override val TextAccentPurple: Color = BezierGlobalVariables.Purple400
-    override val TextAccentRed: Color = BezierGlobalVariables.Red400
-    override val TextAccentTeal: Color = BezierGlobalVariables.Teal400
-    override val TextAccentYellow: Color = BezierGlobalVariables.Yellow400
-    override val TextAction: Color = BezierGlobalVariables.Blue400
-    override val TextCritical: Color = BezierGlobalVariables.Red400
-    override val TextHighlight: Color = BezierGlobalVariables.Cobalt400
-    override val TextNeutral: Color = BezierGlobalVariables.Black85
-    override val TextNeutralHeaviest: Color = BezierGlobalVariables.Black100
-    override val TextNeutralLight: Color = BezierGlobalVariables.Black60
-    override val TextNeutralLighter: Color = BezierGlobalVariables.Black40
-    override val TextSuccess: Color = BezierGlobalVariables.Green400
-    override val TextWarning: Color = BezierGlobalVariables.Orange400
+    override val borderAbsoluteWhite: Color = BezierGlobalVariables.White100
+    override val borderAction: Color = BezierGlobalVariables.Blue400
+    override val borderActionLight: Color = BezierGlobalVariables.Blue400_30
+    override val borderDetachHigh: Color = BezierGlobalVariables.White100
+    override val borderDetachHigher: Color = BezierGlobalVariables.White100
+    override val borderDetachHighest: Color = BezierGlobalVariables.White100
+    override val borderNeutral: Color = BezierGlobalVariables.Black8
+    override val borderNeutralHeavy: Color = BezierGlobalVariables.Black40
+    override val borderWarning: Color = BezierGlobalVariables.Orange400
+    override val borderWarningLight: Color = BezierGlobalVariables.Orange400_30
+    override val dimAbsoluteBlack: Color = BezierGlobalVariables.Black40
+    override val dimAbsoluteBlackHeavy: Color = BezierGlobalVariables.Black60
+    override val dimAbsoluteWhite: Color = BezierGlobalVariables.White40
+    override val dimAbsoluteWhiteHeavy: Color = BezierGlobalVariables.White60
+    override val fillAbsoluteBlackLight: Color = BezierGlobalVariables.Black20
+    override val fillAbsoluteWhite: Color = BezierGlobalVariables.White100
+    override val fillAccentBlueLighter: Color = BezierGlobalVariables.Blue400_20
+    override val fillAccentBlueLightest: Color = BezierGlobalVariables.Blue400_10
+    override val fillAccentCobaltLighter: Color = BezierGlobalVariables.Cobalt400_20
+    override val fillAccentCobaltLightest: Color = BezierGlobalVariables.Cobalt400_10
+    override val fillAccentGreenLighter: Color = BezierGlobalVariables.Green400_20
+    override val fillAccentGreenLightest: Color = BezierGlobalVariables.Green400_10
+    override val fillAccentNavyLighter: Color = BezierGlobalVariables.Navy400_20
+    override val fillAccentNavyLightest: Color = BezierGlobalVariables.Navy400_10
+    override val fillAccentOliveLighter: Color = BezierGlobalVariables.Olive400_20
+    override val fillAccentOliveLightest: Color = BezierGlobalVariables.Olive400_10
+    override val fillAccentOrangeLighter: Color = BezierGlobalVariables.Orange400_20
+    override val fillAccentOrangeLightest: Color = BezierGlobalVariables.Orange400_10
+    override val fillAccentPinkLighter: Color = BezierGlobalVariables.Pink400_20
+    override val fillAccentPinkLightest: Color = BezierGlobalVariables.Pink400_10
+    override val fillAccentPurpleLighter: Color = BezierGlobalVariables.Purple400_20
+    override val fillAccentPurpleLightest: Color = BezierGlobalVariables.Purple400_10
+    override val fillAccentRedLighter: Color = BezierGlobalVariables.Red400_20
+    override val fillAccentRedLightest: Color = BezierGlobalVariables.Red400_10
+    override val fillAccentTealLighter: Color = BezierGlobalVariables.Teal400_20
+    override val fillAccentTealLightest: Color = BezierGlobalVariables.Teal400_10
+    override val fillAccentYellowLighter: Color = BezierGlobalVariables.Yellow400_20
+    override val fillAccentYellowLightest: Color = BezierGlobalVariables.Yellow400_10
+    override val fillAction: Color = BezierGlobalVariables.Blue400
+    override val fillActionLight: Color = BezierGlobalVariables.Blue400_20
+    override val fillActionLighter: Color = BezierGlobalVariables.Blue400_10
+    override val fillCritical: Color = BezierGlobalVariables.Red400
+    override val fillCriticalLight: Color = BezierGlobalVariables.Red400_20
+    override val fillCriticalLighter: Color = BezierGlobalVariables.Red400_10
+    override val fillHighlight: Color = BezierGlobalVariables.Cobalt400
+    override val fillHighlightLight: Color = BezierGlobalVariables.Cobalt400_20
+    override val fillHighlightLighter: Color = BezierGlobalVariables.Cobalt400_10
+    override val fillNeutralHeavier: Color = BezierGlobalVariables.Black40
+    override val fillNeutralHeaviest: Color = BezierGlobalVariables.Black85
+    override val fillNeutralHeavy: Color = BezierGlobalVariables.Black15
+    override val fillNeutralLight: Color = BezierGlobalVariables.Black5
+    override val fillNeutralLighter: Color = BezierGlobalVariables.Black3
+    override val fillNeutralLightest: Color = BezierGlobalVariables.Black1
+    override val fillSuccess: Color = BezierGlobalVariables.Green400
+    override val fillSuccessLight: Color = BezierGlobalVariables.Green400_20
+    override val fillSuccessLighter: Color = BezierGlobalVariables.Green400_10
+    override val fillWarning: Color = BezierGlobalVariables.Orange400
+    override val fillWarningLight: Color = BezierGlobalVariables.Orange400_20
+    override val fillWarningLighter: Color = BezierGlobalVariables.Orange400_10
+    override val iconAbsoluteWhite: Color = BezierGlobalVariables.White100
+    override val iconAccentBlue: Color = BezierGlobalVariables.Blue400
+    override val iconAccentCobalt: Color = BezierGlobalVariables.Cobalt400
+    override val iconAccentGreen: Color = BezierGlobalVariables.Green400
+    override val iconAccentNavy: Color = BezierGlobalVariables.Navy400
+    override val iconAccentOlive: Color = BezierGlobalVariables.Olive400
+    override val iconAccentOrange: Color = BezierGlobalVariables.Orange400
+    override val iconAccentPink: Color = BezierGlobalVariables.Pink400
+    override val iconAccentPurple: Color = BezierGlobalVariables.Purple400
+    override val iconAccentRed: Color = BezierGlobalVariables.Red400
+    override val iconAccentTeal: Color = BezierGlobalVariables.Teal400
+    override val iconAccentYellow: Color = BezierGlobalVariables.Yellow400
+    override val iconAction: Color = BezierGlobalVariables.Blue400
+    override val iconCritical: Color = BezierGlobalVariables.Red400
+    override val iconHighlight: Color = BezierGlobalVariables.Cobalt400
+    override val iconNeutral: Color = BezierGlobalVariables.Black40
+    override val iconNeutralHeavier: Color = BezierGlobalVariables.Black85
+    override val iconNeutralHeavy: Color = BezierGlobalVariables.Black60
+    override val iconSuccess: Color = BezierGlobalVariables.Green400
+    override val iconWarning: Color = BezierGlobalVariables.Orange400
+    override val shadowBase: Color = BezierGlobalVariables.Black5
+    override val shadowBase_inner: Color = BezierGlobalVariables.White12
+    override val shadowLarge: Color = BezierGlobalVariables.Black22
+    override val shadowMedium: Color = BezierGlobalVariables.Black15
+    override val shadowSmall: Color = BezierGlobalVariables.Black8
+    override val shadowXlarge: Color = BezierGlobalVariables.Black30
+    override val surface: Color = BezierGlobalVariables.White100
+    override val surfaceAccentBlue: Color = BezierGlobalVariables.Blue400
+    override val surfaceAccentCobalt: Color = BezierGlobalVariables.Cobalt400
+    override val surfaceAccentGreen: Color = BezierGlobalVariables.Green400
+    override val surfaceAccentNavy: Color = BezierGlobalVariables.Navy400
+    override val surfaceAccentOrange: Color = BezierGlobalVariables.Orange400
+    override val surfaceAccentPink: Color = BezierGlobalVariables.Pink400
+    override val surfaceAccentPurple: Color = BezierGlobalVariables.Purple400
+    override val surfaceAccentRed: Color = BezierGlobalVariables.Red400
+    override val surfaceAccentTeal: Color = BezierGlobalVariables.Teal400
+    override val surfaceAccentYellow: Color = BezierGlobalVariables.Yellow400
+    override val surfaceGlass: Color = BezierGlobalVariables.White90
+    override val surfaceGlassHigh: Color = BezierGlobalVariables.White90
+    override val surfaceGlassHigher: Color = BezierGlobalVariables.Grey_alpha100_90
+    override val surfaceGlassHighest: Color = BezierGlobalVariables.Grey_alpha200_90
+    override val surfaceHigh: Color = BezierGlobalVariables.White100
+    override val surfaceHigher: Color = BezierGlobalVariables.White100
+    override val surfaceHighest: Color = BezierGlobalVariables.White100
+    override val surfaceLow: Color = BezierGlobalVariables.Grey50
+    override val surfaceLower: Color = BezierGlobalVariables.Grey100
+    override val textAbsoluteBlack: Color = BezierGlobalVariables.Black100
+    override val textAbsoluteWhite: Color = BezierGlobalVariables.White100
+    override val textAccentBlue: Color = BezierGlobalVariables.Blue400
+    override val textAccentCobalt: Color = BezierGlobalVariables.Cobalt400
+    override val textAccentGreen: Color = BezierGlobalVariables.Green400
+    override val textAccentNavy: Color = BezierGlobalVariables.Navy400
+    override val textAccentOrange: Color = BezierGlobalVariables.Orange400
+    override val textAccentPink: Color = BezierGlobalVariables.Pink400
+    override val textAccentPurple: Color = BezierGlobalVariables.Purple400
+    override val textAccentRed: Color = BezierGlobalVariables.Red400
+    override val textAccentTeal: Color = BezierGlobalVariables.Teal400
+    override val textAccentYellow: Color = BezierGlobalVariables.Yellow400
+    override val textAction: Color = BezierGlobalVariables.Blue400
+    override val textCritical: Color = BezierGlobalVariables.Red400
+    override val textHighlight: Color = BezierGlobalVariables.Cobalt400
+    override val textNeutral: Color = BezierGlobalVariables.Black85
+    override val textNeutralHeaviest: Color = BezierGlobalVariables.Black100
+    override val textNeutralLight: Color = BezierGlobalVariables.Black60
+    override val textNeutralLighter: Color = BezierGlobalVariables.Black40
+    override val textSuccess: Color = BezierGlobalVariables.Green400
+    override val textWarning: Color = BezierGlobalVariables.Orange400
 }
 
 internal class BezierColorV3Dark : BezierColorV3 {
-    override val BorderAbsoluteWhite: Color = BezierGlobalVariables.White100
-    override val BorderAction: Color = BezierGlobalVariables.Blue300
-    override val BorderActionLight: Color = BezierGlobalVariables.Blue300_30
-    override val BorderDetachHigh: Color = BezierGlobalVariables.Grey850
-    override val BorderDetachHigher: Color = BezierGlobalVariables.Grey800
-    override val BorderDetachHighest: Color = BezierGlobalVariables.Grey700
-    override val BorderNeutral: Color = BezierGlobalVariables.White12
-    override val BorderNeutralHeavy: Color = BezierGlobalVariables.White40
-    override val BorderWarning: Color = BezierGlobalVariables.Orange300
-    override val BorderWarningLight: Color = BezierGlobalVariables.Orange300_30
-    override val DimAbsoluteBlack: Color = BezierGlobalVariables.Black40
-    override val DimAbsoluteBlackHeavy: Color = BezierGlobalVariables.Black60
-    override val DimAbsoluteWhite: Color = BezierGlobalVariables.White40
-    override val DimAbsoluteWhiteHeavy: Color = BezierGlobalVariables.White60
-    override val FillAbsoluteBlackLight: Color = BezierGlobalVariables.Black20
-    override val FillAbsoluteWhite: Color = BezierGlobalVariables.White100
-    override val FillAccentBlueLighter: Color = BezierGlobalVariables.Blue300_30
-    override val FillAccentBlueLightest: Color = BezierGlobalVariables.Blue300_18
-    override val FillAccentCobaltLighter: Color = BezierGlobalVariables.Cobalt300_30
-    override val FillAccentCobaltLightest: Color = BezierGlobalVariables.Cobalt300_18
-    override val FillAccentGreenLighter: Color = BezierGlobalVariables.Green300_30
-    override val FillAccentGreenLightest: Color = BezierGlobalVariables.Green300_18
-    override val FillAccentNavyLighter: Color = BezierGlobalVariables.Navy300_30
-    override val FillAccentNavyLightest: Color = BezierGlobalVariables.Navy300_18
-    override val FillAccentOliveLighter: Color = BezierGlobalVariables.Olive300_30
-    override val FillAccentOliveLightest: Color = BezierGlobalVariables.Olive300_18
-    override val FillAccentOrangeLighter: Color = BezierGlobalVariables.Orange300_30
-    override val FillAccentOrangeLightest: Color = BezierGlobalVariables.Orange300_18
-    override val FillAccentPinkLighter: Color = BezierGlobalVariables.Pink300_30
-    override val FillAccentPinkLightest: Color = BezierGlobalVariables.Pink300_18
-    override val FillAccentPurpleLighter: Color = BezierGlobalVariables.Purple300_30
-    override val FillAccentPurpleLightest: Color = BezierGlobalVariables.Purple300_18
-    override val FillAccentRedLighter: Color = BezierGlobalVariables.Red300_30
-    override val FillAccentRedLightest: Color = BezierGlobalVariables.Red300_18
-    override val FillAccentTealLighter: Color = BezierGlobalVariables.Teal300_30
-    override val FillAccentTealLightest: Color = BezierGlobalVariables.Teal300_18
-    override val FillAccentYellowLighter: Color = BezierGlobalVariables.Yellow300_30
-    override val FillAccentYellowLightest: Color = BezierGlobalVariables.Yellow300_18
-    override val FillAction: Color = BezierGlobalVariables.Blue300
-    override val FillActionLight: Color = BezierGlobalVariables.Blue300_18
-    override val FillActionLighter: Color = BezierGlobalVariables.Blue300_18
-    override val FillCritical: Color = BezierGlobalVariables.Red300
-    override val FillCriticalLight: Color = BezierGlobalVariables.Red300_30
-    override val FillCriticalLighter: Color = BezierGlobalVariables.Red300_18
-    override val FillHighlight: Color = BezierGlobalVariables.Cobalt300
-    override val FillHighlightLight: Color = BezierGlobalVariables.Cobalt300_30
-    override val FillHighlightLighter: Color = BezierGlobalVariables.Cobalt300_18
-    override val FillNeutralHeavier: Color = BezierGlobalVariables.White40
-    override val FillNeutralHeaviest: Color = BezierGlobalVariables.White90
-    override val FillNeutralHeavy: Color = BezierGlobalVariables.White20
-    override val FillNeutralLight: Color = BezierGlobalVariables.White8
-    override val FillNeutralLighter: Color = BezierGlobalVariables.White5
-    override val FillNeutralLightest: Color = BezierGlobalVariables.White3
-    override val FillSuccess: Color = BezierGlobalVariables.Green300
-    override val FillSuccessLight: Color = BezierGlobalVariables.Green300_30
-    override val FillSuccessLighter: Color = BezierGlobalVariables.Green300_18
-    override val FillWarning: Color = BezierGlobalVariables.Orange300
-    override val FillWarningLight: Color = BezierGlobalVariables.Orange300_30
-    override val FillWarningLighter: Color = BezierGlobalVariables.Orange300_18
-    override val IconAbsoluteWhite: Color = BezierGlobalVariables.White100
-    override val IconAccentBlue: Color = BezierGlobalVariables.Blue300
-    override val IconAccentCobalt: Color = BezierGlobalVariables.Cobalt300
-    override val IconAccentGreen: Color = BezierGlobalVariables.Green300
-    override val IconAccentNavy: Color = BezierGlobalVariables.Navy300
-    override val IconAccentOlive: Color = BezierGlobalVariables.Olive300
-    override val IconAccentOrange: Color = BezierGlobalVariables.Orange300
-    override val IconAccentPink: Color = BezierGlobalVariables.Pink300
-    override val IconAccentPurple: Color = BezierGlobalVariables.Purple300
-    override val IconAccentRed: Color = BezierGlobalVariables.Red300
-    override val IconAccentTeal: Color = BezierGlobalVariables.Teal300
-    override val IconAccentYellow: Color = BezierGlobalVariables.Yellow300
-    override val IconAction: Color = BezierGlobalVariables.Blue300
-    override val IconCritical: Color = BezierGlobalVariables.Red300
-    override val IconHighlight: Color = BezierGlobalVariables.Cobalt300
-    override val IconNeutral: Color = BezierGlobalVariables.White40
-    override val IconNeutralHeavier: Color = BezierGlobalVariables.White80
-    override val IconNeutralHeavy: Color = BezierGlobalVariables.White60
-    override val IconSuccess: Color = BezierGlobalVariables.Green300
-    override val IconWarning: Color = BezierGlobalVariables.Orange300
-    override val ShadowBase: Color = BezierGlobalVariables.Black5
-    override val ShadowBase_inner: Color = BezierGlobalVariables.White12
-    override val ShadowLarge: Color = BezierGlobalVariables.Black22
-    override val ShadowMedium: Color = BezierGlobalVariables.Black15
-    override val ShadowSmall: Color = BezierGlobalVariables.Black8
-    override val ShadowXlarge: Color = BezierGlobalVariables.Black30
-    override val Surface: Color = BezierGlobalVariables.Grey900
-    override val SurfaceAccentBlue: Color = BezierGlobalVariables.Blue300
-    override val SurfaceAccentCobalt: Color = BezierGlobalVariables.Cobalt300
-    override val SurfaceAccentGreen: Color = BezierGlobalVariables.Green300
-    override val SurfaceAccentNavy: Color = BezierGlobalVariables.Navy300
-    override val SurfaceAccentOrange: Color = BezierGlobalVariables.Orange300
-    override val SurfaceAccentPink: Color = BezierGlobalVariables.Pink300
-    override val SurfaceAccentPurple: Color = BezierGlobalVariables.Purple300
-    override val SurfaceAccentRed: Color = BezierGlobalVariables.Red300
-    override val SurfaceAccentTeal: Color = BezierGlobalVariables.Teal300
-    override val SurfaceAccentYellow: Color = BezierGlobalVariables.Yellow300
-    override val SurfaceGlass: Color = BezierGlobalVariables.Grey_alpha800_90
-    override val SurfaceGlassHigh: Color = BezierGlobalVariables.Grey_alpha850_90
-    override val SurfaceGlassHigher: Color = BezierGlobalVariables.Grey_alpha800_90
-    override val SurfaceGlassHighest: Color = BezierGlobalVariables.Grey_alpha700_90
-    override val SurfaceHigh: Color = BezierGlobalVariables.Grey850
-    override val SurfaceHigher: Color = BezierGlobalVariables.Grey800
-    override val SurfaceHighest: Color = BezierGlobalVariables.Grey700
-    override val SurfaceLow: Color = BezierGlobalVariables.Grey950
-    override val SurfaceLower: Color = BezierGlobalVariables.Black100
-    override val TextAbsoluteBlack: Color = BezierGlobalVariables.Black100
-    override val TextAbsoluteWhite: Color = BezierGlobalVariables.White100
-    override val TextAccentBlue: Color = BezierGlobalVariables.Blue300
-    override val TextAccentCobalt: Color = BezierGlobalVariables.Cobalt300
-    override val TextAccentGreen: Color = BezierGlobalVariables.Green300
-    override val TextAccentNavy: Color = BezierGlobalVariables.Navy300
-    override val TextAccentOrange: Color = BezierGlobalVariables.Orange300
-    override val TextAccentPink: Color = BezierGlobalVariables.Pink300
-    override val TextAccentPurple: Color = BezierGlobalVariables.Purple300
-    override val TextAccentRed: Color = BezierGlobalVariables.Red300
-    override val TextAccentTeal: Color = BezierGlobalVariables.Teal300
-    override val TextAccentYellow: Color = BezierGlobalVariables.Yellow300
-    override val TextAction: Color = BezierGlobalVariables.Blue300
-    override val TextCritical: Color = BezierGlobalVariables.Red300
-    override val TextHighlight: Color = BezierGlobalVariables.Cobalt300
-    override val TextNeutral: Color = BezierGlobalVariables.White80
-    override val TextNeutralHeaviest: Color = BezierGlobalVariables.White100
-    override val TextNeutralLight: Color = BezierGlobalVariables.White60
-    override val TextNeutralLighter: Color = BezierGlobalVariables.White40
-    override val TextSuccess: Color = BezierGlobalVariables.Green300
-    override val TextWarning: Color = BezierGlobalVariables.Orange300
+    override val borderAbsoluteWhite: Color = BezierGlobalVariables.White100
+    override val borderAction: Color = BezierGlobalVariables.Blue300
+    override val borderActionLight: Color = BezierGlobalVariables.Blue300_30
+    override val borderDetachHigh: Color = BezierGlobalVariables.Grey850
+    override val borderDetachHigher: Color = BezierGlobalVariables.Grey800
+    override val borderDetachHighest: Color = BezierGlobalVariables.Grey700
+    override val borderNeutral: Color = BezierGlobalVariables.White12
+    override val borderNeutralHeavy: Color = BezierGlobalVariables.White40
+    override val borderWarning: Color = BezierGlobalVariables.Orange300
+    override val borderWarningLight: Color = BezierGlobalVariables.Orange300_30
+    override val dimAbsoluteBlack: Color = BezierGlobalVariables.Black40
+    override val dimAbsoluteBlackHeavy: Color = BezierGlobalVariables.Black60
+    override val dimAbsoluteWhite: Color = BezierGlobalVariables.White40
+    override val dimAbsoluteWhiteHeavy: Color = BezierGlobalVariables.White60
+    override val fillAbsoluteBlackLight: Color = BezierGlobalVariables.Black20
+    override val fillAbsoluteWhite: Color = BezierGlobalVariables.White100
+    override val fillAccentBlueLighter: Color = BezierGlobalVariables.Blue300_30
+    override val fillAccentBlueLightest: Color = BezierGlobalVariables.Blue300_18
+    override val fillAccentCobaltLighter: Color = BezierGlobalVariables.Cobalt300_30
+    override val fillAccentCobaltLightest: Color = BezierGlobalVariables.Cobalt300_18
+    override val fillAccentGreenLighter: Color = BezierGlobalVariables.Green300_30
+    override val fillAccentGreenLightest: Color = BezierGlobalVariables.Green300_18
+    override val fillAccentNavyLighter: Color = BezierGlobalVariables.Navy300_30
+    override val fillAccentNavyLightest: Color = BezierGlobalVariables.Navy300_18
+    override val fillAccentOliveLighter: Color = BezierGlobalVariables.Olive300_30
+    override val fillAccentOliveLightest: Color = BezierGlobalVariables.Olive300_18
+    override val fillAccentOrangeLighter: Color = BezierGlobalVariables.Orange300_30
+    override val fillAccentOrangeLightest: Color = BezierGlobalVariables.Orange300_18
+    override val fillAccentPinkLighter: Color = BezierGlobalVariables.Pink300_30
+    override val fillAccentPinkLightest: Color = BezierGlobalVariables.Pink300_18
+    override val fillAccentPurpleLighter: Color = BezierGlobalVariables.Purple300_30
+    override val fillAccentPurpleLightest: Color = BezierGlobalVariables.Purple300_18
+    override val fillAccentRedLighter: Color = BezierGlobalVariables.Red300_30
+    override val fillAccentRedLightest: Color = BezierGlobalVariables.Red300_18
+    override val fillAccentTealLighter: Color = BezierGlobalVariables.Teal300_30
+    override val fillAccentTealLightest: Color = BezierGlobalVariables.Teal300_18
+    override val fillAccentYellowLighter: Color = BezierGlobalVariables.Yellow300_30
+    override val fillAccentYellowLightest: Color = BezierGlobalVariables.Yellow300_18
+    override val fillAction: Color = BezierGlobalVariables.Blue300
+    override val fillActionLight: Color = BezierGlobalVariables.Blue300_18
+    override val fillActionLighter: Color = BezierGlobalVariables.Blue300_18
+    override val fillCritical: Color = BezierGlobalVariables.Red300
+    override val fillCriticalLight: Color = BezierGlobalVariables.Red300_30
+    override val fillCriticalLighter: Color = BezierGlobalVariables.Red300_18
+    override val fillHighlight: Color = BezierGlobalVariables.Cobalt300
+    override val fillHighlightLight: Color = BezierGlobalVariables.Cobalt300_30
+    override val fillHighlightLighter: Color = BezierGlobalVariables.Cobalt300_18
+    override val fillNeutralHeavier: Color = BezierGlobalVariables.White40
+    override val fillNeutralHeaviest: Color = BezierGlobalVariables.White90
+    override val fillNeutralHeavy: Color = BezierGlobalVariables.White20
+    override val fillNeutralLight: Color = BezierGlobalVariables.White8
+    override val fillNeutralLighter: Color = BezierGlobalVariables.White5
+    override val fillNeutralLightest: Color = BezierGlobalVariables.White3
+    override val fillSuccess: Color = BezierGlobalVariables.Green300
+    override val fillSuccessLight: Color = BezierGlobalVariables.Green300_30
+    override val fillSuccessLighter: Color = BezierGlobalVariables.Green300_18
+    override val fillWarning: Color = BezierGlobalVariables.Orange300
+    override val fillWarningLight: Color = BezierGlobalVariables.Orange300_30
+    override val fillWarningLighter: Color = BezierGlobalVariables.Orange300_18
+    override val iconAbsoluteWhite: Color = BezierGlobalVariables.White100
+    override val iconAccentBlue: Color = BezierGlobalVariables.Blue300
+    override val iconAccentCobalt: Color = BezierGlobalVariables.Cobalt300
+    override val iconAccentGreen: Color = BezierGlobalVariables.Green300
+    override val iconAccentNavy: Color = BezierGlobalVariables.Navy300
+    override val iconAccentOlive: Color = BezierGlobalVariables.Olive300
+    override val iconAccentOrange: Color = BezierGlobalVariables.Orange300
+    override val iconAccentPink: Color = BezierGlobalVariables.Pink300
+    override val iconAccentPurple: Color = BezierGlobalVariables.Purple300
+    override val iconAccentRed: Color = BezierGlobalVariables.Red300
+    override val iconAccentTeal: Color = BezierGlobalVariables.Teal300
+    override val iconAccentYellow: Color = BezierGlobalVariables.Yellow300
+    override val iconAction: Color = BezierGlobalVariables.Blue300
+    override val iconCritical: Color = BezierGlobalVariables.Red300
+    override val iconHighlight: Color = BezierGlobalVariables.Cobalt300
+    override val iconNeutral: Color = BezierGlobalVariables.White40
+    override val iconNeutralHeavier: Color = BezierGlobalVariables.White80
+    override val iconNeutralHeavy: Color = BezierGlobalVariables.White60
+    override val iconSuccess: Color = BezierGlobalVariables.Green300
+    override val iconWarning: Color = BezierGlobalVariables.Orange300
+    override val shadowBase: Color = BezierGlobalVariables.Black5
+    override val shadowBase_inner: Color = BezierGlobalVariables.White12
+    override val shadowLarge: Color = BezierGlobalVariables.Black22
+    override val shadowMedium: Color = BezierGlobalVariables.Black15
+    override val shadowSmall: Color = BezierGlobalVariables.Black8
+    override val shadowXlarge: Color = BezierGlobalVariables.Black30
+    override val surface: Color = BezierGlobalVariables.Grey900
+    override val surfaceAccentBlue: Color = BezierGlobalVariables.Blue300
+    override val surfaceAccentCobalt: Color = BezierGlobalVariables.Cobalt300
+    override val surfaceAccentGreen: Color = BezierGlobalVariables.Green300
+    override val surfaceAccentNavy: Color = BezierGlobalVariables.Navy300
+    override val surfaceAccentOrange: Color = BezierGlobalVariables.Orange300
+    override val surfaceAccentPink: Color = BezierGlobalVariables.Pink300
+    override val surfaceAccentPurple: Color = BezierGlobalVariables.Purple300
+    override val surfaceAccentRed: Color = BezierGlobalVariables.Red300
+    override val surfaceAccentTeal: Color = BezierGlobalVariables.Teal300
+    override val surfaceAccentYellow: Color = BezierGlobalVariables.Yellow300
+    override val surfaceGlass: Color = BezierGlobalVariables.Grey_alpha800_90
+    override val surfaceGlassHigh: Color = BezierGlobalVariables.Grey_alpha850_90
+    override val surfaceGlassHigher: Color = BezierGlobalVariables.Grey_alpha800_90
+    override val surfaceGlassHighest: Color = BezierGlobalVariables.Grey_alpha700_90
+    override val surfaceHigh: Color = BezierGlobalVariables.Grey850
+    override val surfaceHigher: Color = BezierGlobalVariables.Grey800
+    override val surfaceHighest: Color = BezierGlobalVariables.Grey700
+    override val surfaceLow: Color = BezierGlobalVariables.Grey950
+    override val surfaceLower: Color = BezierGlobalVariables.Black100
+    override val textAbsoluteBlack: Color = BezierGlobalVariables.Black100
+    override val textAbsoluteWhite: Color = BezierGlobalVariables.White100
+    override val textAccentBlue: Color = BezierGlobalVariables.Blue300
+    override val textAccentCobalt: Color = BezierGlobalVariables.Cobalt300
+    override val textAccentGreen: Color = BezierGlobalVariables.Green300
+    override val textAccentNavy: Color = BezierGlobalVariables.Navy300
+    override val textAccentOrange: Color = BezierGlobalVariables.Orange300
+    override val textAccentPink: Color = BezierGlobalVariables.Pink300
+    override val textAccentPurple: Color = BezierGlobalVariables.Purple300
+    override val textAccentRed: Color = BezierGlobalVariables.Red300
+    override val textAccentTeal: Color = BezierGlobalVariables.Teal300
+    override val textAccentYellow: Color = BezierGlobalVariables.Yellow300
+    override val textAction: Color = BezierGlobalVariables.Blue300
+    override val textCritical: Color = BezierGlobalVariables.Red300
+    override val textHighlight: Color = BezierGlobalVariables.Cobalt300
+    override val textNeutral: Color = BezierGlobalVariables.White80
+    override val textNeutralHeaviest: Color = BezierGlobalVariables.White100
+    override val textNeutralLight: Color = BezierGlobalVariables.White60
+    override val textNeutralLighter: Color = BezierGlobalVariables.White40
+    override val textSuccess: Color = BezierGlobalVariables.Green300
+    override val textWarning: Color = BezierGlobalVariables.Orange300
 }
