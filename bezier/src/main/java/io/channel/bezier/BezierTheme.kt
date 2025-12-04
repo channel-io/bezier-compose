@@ -15,8 +15,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
-import io.channel.bezier.color.Colors
+import io.channel.bezier.color.*
+import io.channel.bezier.color.darkColorV3
 import io.channel.bezier.color.darkColors
+import io.channel.bezier.color.lightColorV3
 import io.channel.bezier.color.lightColors
 
 @Composable
@@ -33,8 +35,8 @@ fun BezierTheme(
 
     val colorsV3 = remember(isDark) {
         when (isDark) {
-            true -> BezierColorV3Dark()
-            else -> BezierColorV3Light()
+            true -> darkColorV3()
+            else -> lightColorV3()
         }
     }
 
@@ -61,12 +63,20 @@ object BezierTheme {
         @ReadOnlyComposable
         get() = LocalColorsV3.current
 
+    fun getColorsV3(): BezierColorV3 {
+        return if (isDark) {
+            darkColorV3()
+        } else {
+            lightColorV3()
+        }
+    }
+
     var isDark by mutableStateOf(false)
 }
 
 internal val LocalColors = staticCompositionLocalOf { lightColors() }
 
-internal val LocalColorsV3 = staticCompositionLocalOf<BezierColorV3> { BezierColorV3Light() }
+internal val LocalColorsV3 = staticCompositionLocalOf { lightColorV3() }
 
 
 private object BezierRippleTheme : RippleTheme {
