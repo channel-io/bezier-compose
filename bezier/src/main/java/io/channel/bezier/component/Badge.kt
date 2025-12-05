@@ -100,7 +100,7 @@ class Badge @JvmOverloads constructor(
         Cobalt(2, R.color.fillAccentCobaltHeavy, R.color.iconAccentCobalt, R.color.textAccentCobalt),
         Teal(3, R.color.fillAccentTealHeavy, R.color.iconAccentTeal, R.color.textAccentTeal),
         Green(4, R.color.fillAccentGreenHeavy, R.color.iconAccentGreen, R.color.textAccentGreen),
-        Olive(5, R.color.fillAccentOliveHeavy, R.color.iconAccentOlive, R.color.textacc),
+        Olive(5, R.color.fillAccentOliveHeavy, R.color.iconAccentOlive, R.color.iconAccentOlive),
         Pink(6, R.color.fillAccentPinkHeavy, R.color.iconAccentPink, R.color.textAccentPink),
         Navy(7, R.color.fillAccentNavyHeavy, R.color.iconAccentNavy, R.color.textAccentNavy),
         Yellow(8, R.color.fillAccentYellowHeavy, R.color.iconAccentYellow, R.color.textAccentYellow),

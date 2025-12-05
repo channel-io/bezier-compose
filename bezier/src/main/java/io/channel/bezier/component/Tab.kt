@@ -46,15 +46,15 @@ fun Tab(
                 modifier = Modifier
                         .fillMaxWidth()
                         .height(47.dp)
-                        .background(BezierTheme.colors.bgWhiteNormal)
+                        .background(BezierTheme.colorsV3.surface)
                         .padding(horizontal = 12.dp),
                 selectedTabIndex = pagerState.currentPage,
-                backgroundColor = BezierTheme.colors.bgWhiteNormal,
+                backgroundColor = BezierTheme.colorsV3.surface,
                 indicator = { tabPositions ->
                     TabRowDefaults.Indicator(
                             modifier = Modifier.tabIndicatorOffset(tabPositions[pagerState.currentPage]),
                             height = 2.dp,
-                            color = BezierTheme.colors.bgGreyDarkest,
+                            color = BezierTheme.colorsV3.fillNeutralHeaviest,
                     )
                 },
                 divider = {},
@@ -79,9 +79,9 @@ fun Tab(
                                     fontSize = 15.sp,
                                     textAlign = TextAlign.Center,
                                     color = if (pagerState.currentPage == index) {
-                                        BezierTheme.colors.txtBlackDarkest
+                                        BezierTheme.colorsV3.textNeutral
                                     } else {
-                                        BezierTheme.colors.txtBlackDark
+                                        BezierTheme.colorsV3.textNeutralLighter
                                     },
                                     fontWeight = FontWeight.Bold,
                                     maxLines = 1,
@@ -96,7 +96,7 @@ fun Tab(
                 modifier = Modifier
                         .fillMaxWidth()
                         .height(1.dp)
-                        .background(BezierTheme.colors.bdrBlackLight),
+                        .background(BezierTheme.colorsV3.borderNeutral),
         )
     }
 }
