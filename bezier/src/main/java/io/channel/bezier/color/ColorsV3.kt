@@ -2,7 +2,6 @@ package io.channel.bezier.color
 
 import androidx.compose.ui.graphics.Color
 
-// Caused by: java.lang.VerifyError: Verifier rejected class io.channel.bezier.color.ColorsV3Kt: io.channel.bezier.color.BezierSemanticColorV3 io.channel.bezier.color.ColorsV3Kt.darkColorV3() failed to verify: io.channel.bezier.color.BezierSemanticColorV3 io.channel.bezier.color.ColorsV3Kt.darkColorV3(): [0x36D] Rejecting invocation, expected 20 argument registers, method signature has 22 or more
 interface BezierSemanticColorV3 {
     val borderAbsoluteWhite: Color
     val borderAction: Color
