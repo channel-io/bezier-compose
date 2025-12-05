@@ -95,20 +95,20 @@ class Badge @JvmOverloads constructor(
     }
 
     enum class Color(val id: Int, val backgroundColor: Int, val iconColor: Int, val textColor: Int) {
-        Normal(0, R.color.bg_black_lighter, R.color.txt_black_darker, R.color.txt_black_darkest),
-        Blue(1, R.color.bgtxt_blue_lighter, R.color.bgtxt_blue_normal, R.color.bgtxt_blue_normal),
-        Cobalt(2, R.color.bgtxt_cobalt_lighter, R.color.bgtxt_cobalt_normal, R.color.bgtxt_cobalt_normal),
-        Teal(3, R.color.bgtxt_teal_lighter, R.color.bgtxt_teal_normal, R.color.bgtxt_teal_normal),
-        Green(4, R.color.bgtxt_green_lighter, R.color.bgtxt_green_normal, R.color.bgtxt_green_normal),
-        Olive(5, R.color.bgtxt_olive_lighter, R.color.bgtxt_olive_normal, R.color.bgtxt_olive_normal),
-        Pink(6, R.color.bgtxt_pink_lighter, R.color.bgtxt_pink_normal, R.color.bgtxt_pink_normal),
-        Navy(7, R.color.bgtxt_navy_lighter, R.color.bgtxt_navy_normal, R.color.bgtxt_navy_normal),
-        Yellow(8, R.color.bgtxt_yellow_lighter, R.color.bgtxt_yellow_normal, R.color.bgtxt_yellow_normal),
-        Orange(9, R.color.bgtxt_orange_lighter, R.color.bgtxt_orange_normal, R.color.bgtxt_orange_normal),
-        Red(10, R.color.bgtxt_red_lighter, R.color.bgtxt_red_normal, R.color.bgtxt_red_normal),
-        Purple(11, R.color.bgtxt_purple_lighter, R.color.bgtxt_purple_normal, R.color.bgtxt_purple_normal),
-        MonochromeDark(12, R.color.bg_black_darker, R.color.bgtxt_absolute_white_dark, R.color.bgtxt_absolute_white_dark),
-        MonochromeLight(13, R.color.bg_black_lighter, R.color.txt_black_dark, R.color.txt_black_dark);
+        Normal(0, R.color.fillNeutralLight, R.color.textNeutralLight, R.color.textNeutral),
+        Blue(1, R.color.fillAccentBlueHeavy, R.color.iconAccentBlue, R.color.textAccentBlue),
+        Cobalt(2, R.color.fillAccentCobaltHeavy, R.color.iconAccentCobalt, R.color.textAccentCobalt),
+        Teal(3, R.color.fillAccentTealHeavy, R.color.iconAccentTeal, R.color.textAccentTeal),
+        Green(4, R.color.fillAccentGreenHeavy, R.color.iconAccentGreen, R.color.textAccentGreen),
+        Olive(5, R.color.fillAccentOliveHeavy, R.color.iconAccentOlive, R.color.textacc),
+        Pink(6, R.color.fillAccentPinkHeavy, R.color.iconAccentPink, R.color.textAccentPink),
+        Navy(7, R.color.fillAccentNavyHeavy, R.color.iconAccentNavy, R.color.textAccentNavy),
+        Yellow(8, R.color.fillAccentYellowHeavy, R.color.iconAccentYellow, R.color.textAccentYellow),
+        Orange(9, R.color.fillAccentOrangeHeavy, R.color.iconAccentOrange, R.color.textAccentOrange),
+        Red(10, R.color.fillAccentRedHeavy, R.color.iconAccentRed, R.color.textAccentRed),
+        Purple(11, R.color.fillAccentPurpleHeavy, R.color.iconAccentPurple, R.color.textAccentPurple),
+        MonochromeDark(12, R.color.fillNeutralHeavier, R.color.iconAbsoluteWhite, R.color.textAbsoluteWhite),
+        MonochromeLight(13, R.color.fillNeutralLight, R.color.iconNeutral, R.color.textNeutralLighter);
 
         companion object {
             fun fromId(id: Int): Color {

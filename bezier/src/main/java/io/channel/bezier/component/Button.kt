@@ -271,38 +271,38 @@ enum class ButtonColor {
         return when (type) {
             ButtonType.Primary -> {
                 when (this) {
-                    Blue -> BezierTheme.colors.bgtxtBlueNormal
-                    Red -> BezierTheme.colors.bgtxtRedNormal
-                    Cobalt -> BezierTheme.colors.bgtxtCobaltNormal
-                    Green -> BezierTheme.colors.bgtxtGreenNormal
-                    MonochromeLight -> BezierTheme.colors.bgBlackLighter
-                    MonochromeDark -> BezierTheme.colors.bgGreyDarkest
+                    Blue -> BezierTheme.colorsV3.fillAccentBlueHeavier
+                    Red -> BezierTheme.colorsV3.fillAccentRedHeavier
+                    Cobalt -> BezierTheme.colorsV3.fillAccentCobaltHeavier
+                    Green -> BezierTheme.colorsV3.fillAccentGreenHeavier
+                    MonochromeLight -> BezierTheme.colorsV3.fillNeutralLight
+                    MonochromeDark -> BezierTheme.colorsV3.fillNeutralHeaviest
                     AbsoluteWhite -> BezierTheme.colors.bgTransparent
-                    Orange -> BezierTheme.colors.bgtxtOrangeNormal
+                    Orange -> BezierTheme.colorsV3.fillAccentOrangeHeavier
                 }
             }
 
             ButtonType.Floating -> {
                 when (this) {
-                    Blue -> BezierTheme.colors.bgtxtBlueNormal
-                    Red -> BezierTheme.colors.bgtxtRedNormal
-                    Cobalt -> BezierTheme.colors.bgtxtCobaltNormal
-                    Green -> BezierTheme.colors.bgtxtGreenNormal
-                    MonochromeLight, MonochromeDark -> BezierTheme.colors.bgWhiteLow
+                    Blue -> BezierTheme.colorsV3.fillAccentBlueHeavier
+                    Red -> BezierTheme.colorsV3.fillAccentRedHeavier
+                    Cobalt -> BezierTheme.colorsV3.fillAccentCobaltHeavier
+                    Green -> BezierTheme.colorsV3.fillAccentGreenHeavier
+                    MonochromeLight, MonochromeDark -> BezierTheme.colorsV3.surfaceHigh
                     AbsoluteWhite -> BezierTheme.colors.bgTransparent
-                    Orange -> BezierTheme.colors.bgtxtOrangeNormal
+                    Orange -> BezierTheme.colorsV3.fillAccentOrangeHeavier
                 }
             }
 
             ButtonType.Secondary -> {
                 when (this) {
-                    Blue -> BezierTheme.colors.bgtxtBlueLightest
-                    Red -> BezierTheme.colors.bgtxtRedLightest
-                    Cobalt -> BezierTheme.colors.bgtxtCobaltLightest
-                    Green -> BezierTheme.colors.bgtxtGreenLightest
-                    MonochromeLight, MonochromeDark -> BezierTheme.colors.bgBlackLighter
+                    Blue -> BezierTheme.colorsV3.fillAccentBlue
+                    Red -> BezierTheme.colorsV3.fillAccentRed
+                    Cobalt -> BezierTheme.colorsV3.fillAccentCobalt
+                    Green -> BezierTheme.colorsV3.fillAccentGreen
+                    MonochromeLight, MonochromeDark -> BezierTheme.colorsV3.fillNeutralLight
                     AbsoluteWhite -> BezierTheme.colors.bgTransparent
-                    Orange -> BezierTheme.colors.bgtxtOrangeLightest
+                    Orange -> BezierTheme.colorsV3.fillAccentOrange
                 }
             }
 
@@ -315,21 +315,21 @@ enum class ButtonColor {
         return when (type) {
             ButtonType.Primary, ButtonType.Floating -> {
                 when (this) {
-                    MonochromeDark -> BezierTheme.colors.txtWhiteNormal
-                    else -> BezierTheme.colors.bgtxtAbsoluteWhiteDark
+                    MonochromeDark -> BezierTheme.colorsV3.textAbsoluteWhite
+                    else -> BezierTheme.colorsV3.textAbsoluteWhite
                 }
             }
 
             ButtonType.Secondary, ButtonType.Tertiary -> {
                 when (this) {
-                    Blue -> BezierTheme.colors.bgtxtBlueNormal
-                    Red -> BezierTheme.colors.bgtxtRedNormal
-                    Cobalt -> BezierTheme.colors.bgtxtCobaltNormal
-                    Green -> BezierTheme.colors.bgtxtGreenNormal
-                    MonochromeLight -> BezierTheme.colors.txtBlackDarker
-                    MonochromeDark -> BezierTheme.colors.txtBlackDarkest
-                    AbsoluteWhite -> BezierTheme.colors.bgtxtAbsoluteWhiteDark
-                    Orange -> BezierTheme.colors.bgtxtOrangeNormal
+                    Blue -> BezierTheme.colorsV3.textAccentBlue
+                    Red -> BezierTheme.colorsV3.textAccentRed
+                    Cobalt -> BezierTheme.colorsV3.textAccentCobalt
+                    Green -> BezierTheme.colorsV3.textAccentGreen
+                    MonochromeLight -> BezierTheme.colorsV3.textNeutralLight
+                    MonochromeDark -> BezierTheme.colorsV3.textNeutral
+                    AbsoluteWhite -> BezierTheme.colorsV3.textAbsoluteWhite
+                    Orange -> BezierTheme.colorsV3.textAccentOrange
                 }
             }
         }
@@ -341,21 +341,21 @@ enum class ButtonColor {
         return when (type) {
             ButtonType.Primary, ButtonType.Floating -> {
                 when (this) {
-                    MonochromeDark -> BezierTheme.colors.txtWhiteNormal
-                    else -> BezierTheme.colors.bgtxtAbsoluteWhiteDark
+                    MonochromeDark -> BezierTheme.colorsV3.iconAbsoluteWhite
+                    else -> BezierTheme.colorsV3.iconAbsoluteWhite
                 }
             }
 
             ButtonType.Secondary, ButtonType.Tertiary -> {
                 when (this) {
-                    Blue -> BezierTheme.colors.bgtxtBlueNormal
-                    Red -> BezierTheme.colors.bgtxtRedNormal
-                    Cobalt -> BezierTheme.colors.bgtxtCobaltNormal
-                    Green -> BezierTheme.colors.bgtxtGreenNormal
-                    MonochromeLight -> BezierTheme.colors.txtBlackDark
-                    MonochromeDark -> BezierTheme.colors.txtBlackDarker
-                    AbsoluteWhite -> BezierTheme.colors.bgtxtAbsoluteWhiteDark
-                    Orange -> BezierTheme.colors.bgtxtOrangeNormal
+                    Blue -> BezierTheme.colorsV3.iconAccentBlue
+                    Red -> BezierTheme.colorsV3.iconAccentRed
+                    Cobalt -> BezierTheme.colorsV3.iconAccentCobalt
+                    Green -> BezierTheme.colorsV3.iconAccentGreen
+                    MonochromeLight -> BezierTheme.colorsV3.iconNeutral
+                    MonochromeDark -> BezierTheme.colorsV3.iconNeutralHeavy
+                    AbsoluteWhite -> BezierTheme.colorsV3.iconAbsoluteWhite
+                    Orange -> BezierTheme.colorsV3.iconAccentOrange
                 }
             }
         }
@@ -374,7 +374,7 @@ fun ButtonColorAndTypePreview() {
     LazyVerticalGrid(
             modifier = Modifier
                     .background(
-                            color = BezierTheme.colors.bgBlackLightest,
+                            color = BezierTheme.colorsV3.surfaceLow,
                     )
                     .padding(10.dp),
             columns = GridCells.Fixed(ButtonColor.values().size),
@@ -447,7 +447,7 @@ fun ButtonSizeAndTypePreview() {
     Row(
             modifier = Modifier
                     .background(
-                            color = BezierTheme.colors.bgBlackLightest,
+                            color = BezierTheme.colorsV3.surfaceLow,
                     )
                     .padding(10.dp),
     ) {

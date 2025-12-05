@@ -290,7 +290,7 @@ fun ProfileEmailListItemPreview() {
                 centerContent = {
                     Text(
                             "Email",
-                            color = colorResource(id = R.color.txt_black_darkest),
+                            color = colorResource(id = R.color.textNeutral),
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis,
                             fontSize = 16.sp,
@@ -299,7 +299,7 @@ fun ProfileEmailListItemPreview() {
                 rightContent = {
                     Text(
                             "longemailaddress@example.com",
-                            color = colorResource(id = R.color.bgtxt_cobalt_normal),
+                            color = colorResource(id = R.color.textAccentCobalt),
                             fontSize = 16.sp,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis,
@@ -316,7 +316,7 @@ fun ProfileEmailListItemPreview() {
                 centerContent = {
                     Text(
                             "Call",
-                            color = colorResource(id = R.color.txt_black_darkest),
+                            color = colorResource(id = R.color.textNeutral),
                             fontSize = 16.sp,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis,
@@ -325,7 +325,7 @@ fun ProfileEmailListItemPreview() {
                 rightContent = {
                     Text(
                             "010-1234-5678",
-                            color = colorResource(id = R.color.bgtxt_cobalt_normal),
+                            color = colorResource(id = R.color.textAccentCobalt),
                             fontSize = 16.sp,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis,

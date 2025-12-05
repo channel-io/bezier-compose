@@ -54,7 +54,7 @@ fun SectionLabel(
                                 .padding(end = 8.dp)
                                 .size(20.dp),
                         painter = painter,
-                        tint = BezierTheme.colors.txtBlackDark,
+                        tint = BezierTheme.colorsV3.iconNeutral,
                         contentDescription = null,
                 )
             }
@@ -69,7 +69,7 @@ fun SectionLabel(
                         maxLines = 1,
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = BezierTheme.colors.txtBlackDark,
+                        color = BezierTheme.colorsV3.textNeutralLighter,
                 )
 
                 if (leftContents != null) {
@@ -79,7 +79,7 @@ fun SectionLabel(
         }
 
         if (rightContents != null) {
-            CompositionLocalProvider(LocalContentColor provides BezierTheme.colors.txtBlackDark) {
+            CompositionLocalProvider(LocalContentColor provides BezierTheme.colorsV3.textNeutralLighter) {
                 Row(
                         modifier = Modifier
                                 .padding(vertical = 1.dp),
@@ -122,7 +122,7 @@ fun SectionLabelWithRightContentsPreview() {
                         .padding(end = 10.dp)
                         .size(20.dp),
                 painter = painterResource(R.drawable.icon_lock),
-                tint = BezierTheme.colors.txtBlackDark,
+                tint = BezierTheme.colorsV3.iconNeutral,
                 contentDescription = null,
         )
 
@@ -131,7 +131,7 @@ fun SectionLabelWithRightContentsPreview() {
                         .padding(end = 10.dp)
                         .size(20.dp),
                 painter = painterResource(R.drawable.icon_hyphen_bold),
-                tint = BezierTheme.colors.txtBlackDark,
+                tint = BezierTheme.colorsV3.iconNeutral,
                 contentDescription = null,
         )
 
@@ -140,7 +140,7 @@ fun SectionLabelWithRightContentsPreview() {
                         .padding(end = 5.dp)
                         .size(20.dp),
                 painter = painterResource(R.drawable.icon_cancel),
-                tint = BezierTheme.colors.txtBlackDark,
+                tint = BezierTheme.colorsV3.iconNeutral,
                 contentDescription = null,
         )
     }
@@ -182,7 +182,7 @@ fun SectionLabelWithAllContentsPreview() {
                         .padding(5.dp)
                         .size(20.dp),
                 painter = painterResource(R.drawable.icon_lock),
-                tint = BezierTheme.colors.txtBlackDark,
+                tint = BezierTheme.colorsV3.iconNeutral,
                 contentDescription = null,
         )
 
@@ -191,7 +191,7 @@ fun SectionLabelWithAllContentsPreview() {
                         .padding(5.dp)
                         .size(20.dp),
                 painter = painterResource(R.drawable.icon_hyphen_bold),
-                tint = BezierTheme.colors.txtBlackDark,
+                tint = BezierTheme.colorsV3.iconNeutral,
                 contentDescription = null,
         )
 
@@ -200,7 +200,7 @@ fun SectionLabelWithAllContentsPreview() {
                         .padding(5.dp)
                         .size(20.dp),
                 painter = painterResource(R.drawable.icon_cancel),
-                tint = BezierTheme.colors.txtBlackDark,
+                tint = BezierTheme.colorsV3.iconNeutral,
                 contentDescription = null,
         )
     }
