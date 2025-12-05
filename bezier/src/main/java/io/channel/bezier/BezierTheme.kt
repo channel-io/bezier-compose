@@ -58,12 +58,12 @@ object BezierTheme {
         @Deprecated("Please Migrate colorsV3")
         get() = LocalColors.current
 
-    val colorsV3: BezierColorV3
+    val colorsV3: BezierSemanticColorV3
         @Composable
         @ReadOnlyComposable
         get() = LocalColorsV3.current
 
-    fun getColorsV3(): BezierColorV3 {
+    fun getColorsV3(): BezierSemanticColorV3 {
         return if (isDark) {
             darkColorV3()
         } else {

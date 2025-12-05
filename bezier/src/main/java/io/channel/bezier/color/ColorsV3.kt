@@ -2,7 +2,7 @@ package io.channel.bezier.color
 
 import androidx.compose.ui.graphics.Color
 
-class BezierColorV3(
+class BezierSemanticColorV3(
         val borderAbsoluteWhite: Color,
         val borderAction: Color,
         val borderActionLight: Color,
@@ -142,7 +142,7 @@ class BezierColorV3(
         val textWarning: Color,
 )
 
-internal fun lightColorV3() = BezierColorV3(
+internal fun lightColorV3() = BezierSemanticColorV3(
         borderAbsoluteWhite = BezierGlobalColor.White100,
         borderAction = BezierGlobalColor.Blue400,
         borderActionLight = BezierGlobalColor.Blue400_30,
@@ -282,7 +282,7 @@ internal fun lightColorV3() = BezierColorV3(
         textWarning = BezierGlobalColor.Orange400,
 )
 
-internal fun darkColorV3() = BezierColorV3(
+internal fun darkColorV3() = BezierSemanticColorV3(
         borderAbsoluteWhite = BezierGlobalColor.White100,
         borderAction = BezierGlobalColor.Blue300,
         borderActionLight = BezierGlobalColor.Blue300_30,
