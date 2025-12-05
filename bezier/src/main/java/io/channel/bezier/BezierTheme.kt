@@ -15,7 +15,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
-import io.channel.bezier.color.Colors
+import io.channel.bezier.color.*
 import io.channel.bezier.color.darkColors
 import io.channel.bezier.color.lightColors
 
@@ -31,8 +31,16 @@ fun BezierTheme(
         }
     }
 
+    val colorsV3 = remember(isDark) {
+        when (isDark) {
+            true -> DarkColor()
+            else -> LightColor()
+        }
+    }
+
     CompositionLocalProvider(
             LocalColors provides colors,
+            LocalColorsV3 provides colorsV3,
             LocalIndication provides rememberRipple(),
             LocalRippleTheme provides BezierRippleTheme,
     ) {
@@ -45,12 +53,29 @@ object BezierTheme {
     val colors: Colors
         @Composable
         @ReadOnlyComposable
+        @Deprecated("Please Migrate colorsV3")
         get() = LocalColors.current
+
+    val colorsV3: BezierSemanticColorV3
+        @Composable
+        @ReadOnlyComposable
+        get() = LocalColorsV3.current
+
+    fun getColorsV3(): BezierSemanticColorV3 {
+        return if (isDark) {
+            DarkColor()
+        } else {
+            LightColor()
+        }
+    }
 
     var isDark by mutableStateOf(false)
 }
 
 internal val LocalColors = staticCompositionLocalOf { lightColors() }
+
+internal val LocalColorsV3 = staticCompositionLocalOf<BezierSemanticColorV3> { LightColor() }
+
 
 private object BezierRippleTheme : RippleTheme {
     @Composable

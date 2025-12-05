@@ -1,127 +1,278 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- bg -->
-    <color name="bg_grey_darkest">@color/white</color>
-    <color name="bg_grey_dark">@color/grey500</color>
-    <color name="bg_grey_light">@color/grey700</color>
-    <color name="bg_grey_lighter">@color/grey800</color>
-    <color name="bg_grey_lightest">@color/grey850</color>
-    <color name="inverted_bg_grey_lighter">@color/grey100</color>
+    <color name="textNeutral">#ccffffff</color>
 
-    <color name="bg_black_darkest">@color/white_60</color>
-    <color name="bg_black_darker">@color/white_40</color>
-    <color name="bg_black_dark">@color/white_20</color>
-    <color name="bg_black_light">@color/white_12</color>
-    <color name="bg_black_lighter">@color/white_8</color>
-    <color name="bg_black_lightest">@color/white_5</color>
+    <color name="textNeutralHeaviest">#ffffffff</color>
 
-    <color name="bg_white_high">@color/grey700</color>
-    <color name="bg_white_low">@color/grey800</color>
-    <color name="bg_white_normal">@color/grey900</color>
+    <color name="textNeutralLight">#99ffffff</color>
 
-    <!-- bdr -->
-    <color name="bdr_black_light">@color/white_12</color>
-    <color name="bdr_black_lightest">@color/white_5</color>
+    <color name="textNeutralLighter">#66ffffff</color>
 
-    <!-- shdw -->
-    <color name="shdw_xlarge">@color/black_60</color>
-    <color name="shdw_large">@color/black_40</color>
-    <color name="shdw_medium">@color/black_20</color>
-    <color name="shdw_small">@color/black_15</color>
-    <color name="shdw_base">@color/black_8</color>
-    <color name="shdw_base_inner">@color/white_8</color>
+    <color name="fillNeutralHeaviest">#e5ffffff</color>
 
-    <!-- txt -->
-    <color name="txt_black_darkest">@color/white_80</color>
-    <color name="txt_black_darker">@color/white_60</color>
-    <color name="txt_black_dark">@color/white_40</color>
+    <color name="fillNeutralHeavier">#66ffffff</color>
 
-    <!-- dim -->
-    <color name="bg_white_dim_dark">@color/black_60</color>
+    <color name="fillNeutralHeavy">#33ffffff</color>
 
-    <color name="txt_white_normal">@color/grey900</color>
+    <color name="fillNeutralLight">#14ffffff</color>
 
-    <!-- bgtxt -->
-    <color name="bgtxt_red_dark">@color/red400</color>
-    <color name="bgtxt_red_normal">@color/red300</color>
-    <color name="bgtxt_red_light">@color/red300_40</color>
-    <color name="bgtxt_red_lighter">@color/red300_30</color>
-    <color name="bgtxt_red_lightest">@color/red300_20</color>
+    <color name="fillNeutralLighter">#0dffffff</color>
 
-    <color name="bgtxt_cobalt_dark">@color/cobalt400</color>
-    <color name="bgtxt_cobalt_normal">@color/cobalt300</color>
-    <color name="bgtxt_cobalt_light">@color/cobalt300_40</color>
-    <color name="bgtxt_cobalt_lighter">@color/cobalt300_30</color>
-    <color name="bgtxt_cobalt_lightest">@color/cobalt300_20</color>
+    <color name="fillNeutralLightest">#08ffffff</color>
 
-    <color name="bgtxt_green_dark">@color/green400</color>
-    <color name="bgtxt_green_normal">@color/green300</color>
-    <color name="bgtxt_green_light">@color/green300_40</color>
-    <color name="bgtxt_green_lighter">@color/green300_30</color>
-    <color name="bgtxt_green_lightest">@color/green300_20</color>
-    <color name="inverted_bgtxt_green_normal">@color/green400</color>
+    <color name="iconNeutral">#66ffffff</color>
 
-    <color name="bgtxt_teal_dark">@color/teal400</color>
-    <color name="bgtxt_teal_normal">@color/teal300</color>
-    <color name="bgtxt_teal_light">@color/teal300_40</color>
-    <color name="bgtxt_teal_lighter">@color/teal300_30</color>
-    <color name="bgtxt_teal_lightest">@color/teal300_20</color>
+    <color name="iconAction">#ff6b6eff</color>
 
-    <color name="bgtxt_orange_dark">@color/orange400</color>
-    <color name="bgtxt_orange_normal">@color/orange300</color>
-    <color name="bgtxt_orange_light">@color/orange300_40</color>
-    <color name="bgtxt_orange_lighter">@color/orange300_30</color>
-    <color name="bgtxt_orange_lightest">@color/orange300_20</color>
+    <color name="iconSuccess">#ff4bc16c</color>
 
-    <color name="bgtxt_yellow_dark">@color/yellow400</color>
-    <color name="bgtxt_yellow_normal">@color/yellow300</color>
-    <color name="bgtxt_yellow_light">@color/yellow300_40</color>
-    <color name="bgtxt_yellow_lighter">@color/yellow300_30</color>
-    <color name="bgtxt_yellow_lightest">@color/yellow300_20</color>
+    <color name="iconHighlight">#ff5cadef</color>
 
-    <color name="bgtxt_olive_dark">@color/olive400</color>
-    <color name="bgtxt_olive_normal">@color/olive300</color>
-    <color name="bgtxt_olive_light">@color/olive300_40</color>
-    <color name="bgtxt_olive_lighter">@color/olive300_30</color>
-    <color name="bgtxt_olive_lightest">@color/olive300_20</color>
+    <color name="iconWarning">#fff79847</color>
 
-    <color name="bgtxt_pink_dark">@color/pink400</color>
-    <color name="bgtxt_pink_normal">@color/pink300</color>
-    <color name="bgtxt_pink_light">@color/pink300_40</color>
-    <color name="bgtxt_pink_lighter">@color/pink300_30</color>
-    <color name="bgtxt_pink_lightest">@color/pink300_20</color>
+    <color name="iconCritical">#fff26060</color>
 
-    <color name="bgtxt_navy_dark">@color/navy400</color>
-    <color name="bgtxt_navy_normal">@color/navy300</color>
-    <color name="bgtxt_navy_light">@color/navy300_40</color>
-    <color name="bgtxt_navy_lighter">@color/navy300_30</color>
-    <color name="bgtxt_navy_lightest">@color/navy300_20</color>
+    <color name="iconNeutralHeavy">#99ffffff</color>
 
-    <color name="bgtxt_blue_dark">@color/blue400</color>
-    <color name="bgtxt_blue_normal">@color/blue300</color>
-    <color name="bgtxt_blue_light">@color/blue300_40</color>
-    <color name="bgtxt_blue_lighter">@color/blue300_30</color>
-    <color name="bgtxt_blue_lightest">@color/blue300_20</color>
+    <color name="iconNeutralHeavier">#ccffffff</color>
 
-    <color name="bgtxt_purple_dark">@color/purple400</color>
-    <color name="bgtxt_purple_normal">@color/purple300</color>
-    <color name="bgtxt_purple_light">@color/purple300_40</color>
-    <color name="bgtxt_purple_lighter">@color/purple300_30</color>
-    <color name="bgtxt_purple_lightest">@color/purple300_20</color>
+    <color name="iconAccentBlue">#ff6b6eff</color>
 
-    <color name="bgtxt_absolute_white_dark">@color/white</color>
-    <color name="bgtxt_absolute_white_normal">@color/white_90</color>
-    <color name="bgtxt_absolute_white_light">@color/white_60</color>
-    <color name="bgtxt_absolute_white_lighter">@color/white_40</color>
-    <color name="bgtxt_absolute_white_lightest">@color/white_20</color>
+    <color name="iconAccentCobalt">#ff5cadef</color>
 
-    <color name="bgtxt_absolute_black_dark">@color/black</color>
-    <color name="bgtxt_absolute_black_normal">@color/black_85</color>
-    <color name="bgtxt_absolute_black_light">@color/black_60</color>
-    <color name="bgtxt_absolute_black_lighter">@color/black_40</color>
-    <color name="bgtxt_absolute_black_lightest">@color/black_20</color>
+    <color name="iconAccentGreen">#ff4bc16c</color>
 
-    <color name="bg_transparent">@color/white_0</color>
+    <color name="iconAccentRed">#fff26060</color>
+
+    <color name="iconAccentOrange">#fff79847</color>
+
+    <color name="iconAccentYellow">#fff0be27</color>
+
+    <color name="iconAccentOlive">#ffb7c427</color>
+
+    <color name="iconAccentTeal">#ff40d3c5</color>
+
+    <color name="iconAccentNavy">#ff6f7bc8</color>
+
+    <color name="iconAccentPurple">#ffa970ff</color>
+
+    <color name="iconAccentPink">#ffec6fd3</color>
+
+    <color name="iconAbsoluteWhite">#ffffffff</color>
+
+    <color name="borderNeutral">#1fffffff</color>
+
+    <color name="borderNeutralHeavy">#66ffffff</color>
+
+    <color name="borderAction">#ff6b6eff</color>
+
+    <color name="borderWarning">#fff79847</color>
+
+    <color name="borderActionLight">#4d6b6eff</color>
+
+    <color name="borderDetachHighest">#ff464748</color>
+
+    <color name="borderWarningLight">#4df79847</color>
+
+    <color name="borderDetachHigher">#ff313234</color>
+
+    <color name="borderAbsoluteWhite">#ffffffff</color>
+
+    <color name="fillAction">#ff6b6eff</color>
+
+    <color name="fillActionLight">#2e6b6eff</color>
+
+    <color name="fillActionLighter">#2e6b6eff</color>
+
+    <color name="fillSuccess">#ff4bc16c</color>
+
+    <color name="fillSuccessLight">#4d4bc16c</color>
+
+    <color name="fillSuccessLighter">#2e4bc16c</color>
+
+    <color name="fillHighlight">#ff5cadef</color>
+
+    <color name="fillHighlightLight">#4d5cadef</color>
+
+    <color name="fillHighlightLighter">#2e5cadef</color>
+
+    <color name="fillWarning">#fff79847</color>
+
+    <color name="fillWarningLight">#4df79847</color>
+
+    <color name="fillWarningLighter">#2ef79847</color>
+
+    <color name="fillCritical">#fff26060</color>
+
+    <color name="fillCriticalLight">#4df26060</color>
+
+    <color name="fillCriticalLighter">#2ef26060</color>
+
+    <color name="fillAccentBlueHeavy">#4d6b6eff</color>
+
+    <color name="fillAccentBlueHeavier">#ff6b6eff</color>
+
+    <color name="fillAccentCobaltHeavy">#4d5cadef</color>
+
+    <color name="fillAccentGreenHeavy">#4d4bc16c</color>
+
+    <color name="fillAccentRedHeavy">#4df26060</color>
+
+    <color name="fillAccentOrangeHeavy">#4df79847</color>
+
+    <color name="fillAccentBlue">#2e6b6eff</color>
+
+    <color name="fillAccentCobalt">#2e5cadef</color>
+
+    <color name="fillAccentYellowHeavy">#4df0be27</color>
+
+    <color name="fillAccentGreen">#2e4bc16c</color>
+
+    <color name="fillAccentCobaltHeavier">#ff5cadef</color>
+
+    <color name="fillAccentRed">#2ef26060</color>
+
+    <color name="fillAccentOrange">#2ef79847</color>
+
+    <color name="fillAccentOliveHeavy">#4db7c427</color>
+
+    <color name="fillAccentYellow">#2ef0be27</color>
+
+    <color name="fillAccentOlive">#2eb7c427</color>
+
+    <color name="fillAccentTealHeavy">#4d40d3c5</color>
+
+    <color name="fillAccentTeal">#2e40d3c5</color>
+
+    <color name="fillAccentGreenHeavier">#ff4bc16c</color>
+
+    <color name="fillAccentNavy">#2e6f7bc8</color>
+
+    <color name="fillAccentNavyHeavy">#4d6f7bc8</color>
+
+    <color name="fillAccentPurple">#2ea970ff</color>
+
+    <color name="fillAccentRedHeavier">#fff26060</color>
+
+    <color name="fillAccentPurpleHeavy">#4da970ff</color>
+
+    <color name="fillAccentOrangeHeavier">#fff79847</color>
+
+    <color name="fillAccentPink">#2eec6fd3</color>
+
+    <color name="fillAccentYellowHeavier">#fff0be27</color>
+
+    <color name="surfaceHighest">#ff464748</color>
+
+    <color name="fillAccentOliveHeavier">#ffb7c427</color>
+
+    <color name="fillAccentTealHeavier">#ff40d3c5</color>
+
+    <color name="fillAccentNavyHeavier">#ff6f7bc8</color>
+
+    <color name="fillAccentPurpleHeavier">#ffa970ff</color>
+
+    <color name="fillAccentPinkHeavy">#4dec6fd3</color>
+
+    <color name="surfaceHigher">#ff313234</color>
+
+    <color name="surfaceHigh">#ff2a2b2d</color>
+
+    <color name="fillAccentPinkHeavier">#ffec6fd3</color>
+
+    <color name="surfaceLow">#ff1a1a1c</color>
+
+    <color name="dimAbsoluteBlackHeavy">#99000000</color>
+
+    <color name="dimAbsoluteWhiteHeavy">#99ffffff</color>
+
+    <color name="textAction">#ff6b6eff</color>
+
+    <color name="textSuccess">#ff4bc16c</color>
+
+    <color name="surfaceLower">#ff000000</color>
+
+    <color name="textHighlight">#ff5cadef</color>
+
+    <color name="textWarning">#fff79847</color>
+
+    <color name="textCritical">#fff26060</color>
+
+    <color name="textAccentBlue">#ff6b6eff</color>
+
+    <color name="textAccentCobalt">#ff5cadef</color>
+
+    <color name="textAccentGreen">#ff4bc16c</color>
+
+    <color name="surfaceGlassHighest">#e5464748</color>
+
+    <color name="textAccentRed">#fff26060</color>
+
+    <color name="surfaceGlassHigher">#e5313234</color>
+
+    <color name="surfaceGlassHigh">#e52a2b2d</color>
+
+    <color name="surfaceGlass">#e5313234</color>
+
+    <color name="textAccentOrange">#fff79847</color>
+
+    <color name="textAccentYellow">#fff0be27</color>
+
+    <color name="textAccentTeal">#ff40d3c5</color>
+
+    <color name="textAccentNavy">#ff6f7bc8</color>
+
+    <color name="textAccentPurple">#ffa970ff</color>
+
+    <color name="textAccentPink">#ffec6fd3</color>
+
+    <color name="surfaceAccentBlue">#ff6b6eff</color>
+
+    <color name="surfaceAccentCobalt">#ff5cadef</color>
+
+    <color name="surfaceAccentGreen">#ff4bc16c</color>
+
+    <color name="surfaceAccentRed">#fff26060</color>
+
+    <color name="surfaceAccentOrange">#fff79847</color>
+
+    <color name="surfaceAccentYellow">#fff0be27</color>
+
+    <color name="surfaceAccentTeal">#ff40d3c5</color>
+
+    <color name="surfaceAccentNavy">#ff6f7bc8</color>
+
+    <color name="surfaceAccentPurple">#ffa970ff</color>
+
+    <color name="surfaceAccentPink">#ffec6fd3</color>
+
+    <color name="textAbsoluteWhite">#ffffffff</color>
+
+    <color name="textAbsoluteBlack">#ff000000</color>
+
+    <color name="fillAbsoluteWhite">#ffffffff</color>
+
+    <color name="fillAbsoluteBlackLight">#33000000</color>
+
+    <color name="surface">#ff242428</color>
+
+    <color name="dimAbsoluteBlack">#66000000</color>
+
+    <color name="shadowXlarge">#4d000000</color>
+
+    <color name="shadowLarge">#38000000</color>
+
+    <color name="shadowMedium">#26000000</color>
+
+    <color name="shadowSmall">#14000000</color>
+
+    <color name="shadowBase">#0d000000</color>
+
+    <color name="shadowBaseInner">#1fffffff</color>
+
+    <color name="dimAbsoluteWhite">#66ffffff</color>
+
+    <color name="borderDetachHigh">#ff2a2b2d</color>
 
 </resources>

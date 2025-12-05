@@ -126,16 +126,16 @@ class Tag @JvmOverloads constructor(
         @Composable
         fun getColor(): androidx.compose.ui.graphics.Color {
             return when (this) {
-                TagColor.Normal -> BezierTheme.colors.bgBlackLighter
-                TagColor.Red -> BezierTheme.colors.bgtxtRedLighter
-                TagColor.Orange -> BezierTheme.colors.bgtxtOrangeLighter
-                TagColor.Yellow -> BezierTheme.colors.bgtxtYellowLighter
-                TagColor.Olive -> BezierTheme.colors.bgtxtOliveLighter
-                TagColor.Green -> BezierTheme.colors.bgtxtGreenLighter
-                TagColor.Cobalt -> BezierTheme.colors.bgtxtCobaltLighter
-                TagColor.Purple -> BezierTheme.colors.bgtxtPurpleLighter
-                TagColor.Pink -> BezierTheme.colors.bgtxtPinkLighter
-                TagColor.Navy -> BezierTheme.colors.bgtxtNavyLighter
+                TagColor.Normal -> BezierTheme.colorsV3.fillNeutralLight
+                TagColor.Red -> BezierTheme.colorsV3.fillAccentRedHeavy
+                TagColor.Orange -> BezierTheme.colorsV3.fillAccentOrangeHeavy
+                TagColor.Yellow -> BezierTheme.colorsV3.fillAccentYellowHeavy
+                TagColor.Olive -> BezierTheme.colorsV3.fillAccentOliveHeavy
+                TagColor.Green -> BezierTheme.colorsV3.fillAccentGreenHeavy
+                TagColor.Cobalt -> BezierTheme.colorsV3.fillAccentCobaltHeavy
+                TagColor.Purple -> BezierTheme.colorsV3.fillAccentPurpleHeavy
+                TagColor.Pink -> BezierTheme.colorsV3.fillAccentPinkHeavy
+                TagColor.Navy -> BezierTheme.colorsV3.fillAccentNavyHeavy
             }
         }
 
@@ -171,7 +171,7 @@ fun Tag(
                         .padding(horizontal = 2.dp)
                         .weight(1f, false),
                 fontSize = size.textSize,
-                color = colorResource(id = R.color.txt_black_darkest),
+                color = colorResource(id = R.color.textNeutral),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
         )
@@ -187,7 +187,7 @@ fun Tag(
                             ),
                     painter = painterResource(id = R.drawable.icon_cancel),
                     contentDescription = null,
-                    tint = colorResource(id = R.color.txt_black_darker),
+                    tint = colorResource(id = R.color.textNeutralLight),
             )
         }
     }
