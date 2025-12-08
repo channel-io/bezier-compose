@@ -15,11 +15,15 @@
 
     <color name="fillNeutralHeavy">#33ffffff</color>
 
+    <color name="stateDefault">#33ffffff</color>
+
     <color name="fillNeutralLight">#14ffffff</color>
 
     <color name="fillNeutralLighter">#0dffffff</color>
 
     <color name="fillNeutralLightest">#08ffffff</color>
+
+    <color name="fillNeutralTransparent">#00ffffff</color>
 
     <color name="iconNeutral">#66ffffff</color>
 
@@ -65,15 +69,7 @@
 
     <color name="borderNeutralHeavy">#66ffffff</color>
 
-    <color name="borderAction">#ff6b6eff</color>
-
-    <color name="borderWarning">#fff79847</color>
-
-    <color name="borderActionLight">#4d6b6eff</color>
-
     <color name="borderDetachHighest">#ff464748</color>
-
-    <color name="borderWarningLight">#4df79847</color>
 
     <color name="borderDetachHigher">#ff313234</color>
 
@@ -81,21 +77,27 @@
 
     <color name="fillAction">#ff6b6eff</color>
 
-    <color name="fillActionLight">#2e6b6eff</color>
+    <color name="fillActionLight">#4d6b6eff</color>
 
     <color name="fillActionLighter">#2e6b6eff</color>
 
     <color name="fillSuccess">#ff4bc16c</color>
 
+    <color name="fillActionTransparent">#006b6eff</color>
+
     <color name="fillSuccessLight">#4d4bc16c</color>
 
     <color name="fillSuccessLighter">#2e4bc16c</color>
+
+    <color name="fillSuccessTransparent">#004bc16c</color>
 
     <color name="fillHighlight">#ff5cadef</color>
 
     <color name="fillHighlightLight">#4d5cadef</color>
 
     <color name="fillHighlightLighter">#2e5cadef</color>
+
+    <color name="fillHighlightTransparent">#005cadef</color>
 
     <color name="fillWarning">#fff79847</color>
 
@@ -105,6 +107,8 @@
 
     <color name="fillCritical">#fff26060</color>
 
+    <color name="fillWarningTransparent">#00f79847</color>
+
     <color name="fillCriticalLight">#4df26060</color>
 
     <color name="fillCriticalLighter">#2ef26060</color>
@@ -113,7 +117,11 @@
 
     <color name="fillAccentBlueHeavier">#ff6b6eff</color>
 
+    <color name="fillAccentBlueTransparent">#006b6eff</color>
+
     <color name="fillAccentCobaltHeavy">#4d5cadef</color>
+
+    <color name="fillCriticalTransparent">#00f26060</color>
 
     <color name="fillAccentGreenHeavy">#4d4bc16c</color>
 
@@ -127,9 +135,9 @@
 
     <color name="fillAccentYellowHeavy">#4df0be27</color>
 
-    <color name="fillAccentGreen">#2e4bc16c</color>
-
     <color name="fillAccentCobaltHeavier">#ff5cadef</color>
+
+    <color name="fillAccentGreen">#2e4bc16c</color>
 
     <color name="fillAccentRed">#2ef26060</color>
 
@@ -139,47 +147,59 @@
 
     <color name="fillAccentYellow">#2ef0be27</color>
 
-    <color name="fillAccentOlive">#2eb7c427</color>
-
     <color name="fillAccentTealHeavy">#4d40d3c5</color>
+
+    <color name="fillAccentOlive">#2eb7c427</color>
 
     <color name="fillAccentTeal">#2e40d3c5</color>
 
     <color name="fillAccentGreenHeavier">#ff4bc16c</color>
 
-    <color name="fillAccentNavy">#2e6f7bc8</color>
-
     <color name="fillAccentNavyHeavy">#4d6f7bc8</color>
+
+    <color name="fillAccentNavy">#2e6f7bc8</color>
 
     <color name="fillAccentPurple">#2ea970ff</color>
 
     <color name="fillAccentRedHeavier">#fff26060</color>
 
-    <color name="fillAccentPurpleHeavy">#4da970ff</color>
+    <color name="fillAccentRedTransparent">#00f26060</color>
 
     <color name="fillAccentOrangeHeavier">#fff79847</color>
 
-    <color name="fillAccentPink">#2eec6fd3</color>
+    <color name="fillAccentPurpleHeavy">#4da970ff</color>
 
-    <color name="fillAccentYellowHeavier">#fff0be27</color>
+    <color name="fillAccentPink">#2eec6fd3</color>
 
     <color name="surfaceHighest">#ff464748</color>
 
+    <color name="fillAccentYellowHeavier">#fff0be27</color>
+
     <color name="fillAccentOliveHeavier">#ffb7c427</color>
+
+    <color name="fillAccentOliveTransparent">#00b7c427</color>
 
     <color name="fillAccentTealHeavier">#ff40d3c5</color>
 
+    <color name="fillAccentTealTransparent">#0040d3c5</color>
+
     <color name="fillAccentNavyHeavier">#ff6f7bc8</color>
+
+    <color name="fillAccentNavyTransparent">#006f7bc8</color>
 
     <color name="fillAccentPurpleHeavier">#ffa970ff</color>
 
-    <color name="fillAccentPinkHeavy">#4dec6fd3</color>
+    <color name="fillAccentPurpleTransparent">#00a970ff</color>
 
     <color name="surfaceHigher">#ff313234</color>
 
-    <color name="surfaceHigh">#ff2a2b2d</color>
+    <color name="fillAccentPinkHeavy">#4dec6fd3</color>
 
     <color name="fillAccentPinkHeavier">#ffec6fd3</color>
+
+    <color name="surfaceHigh">#ff2a2b2d</color>
+
+    <color name="fillAccentPinkTransparent">#00ec6fd3</color>
 
     <color name="surfaceLow">#ff1a1a1c</color>
 
@@ -189,9 +209,9 @@
 
     <color name="textAction">#ff6b6eff</color>
 
-    <color name="textSuccess">#ff4bc16c</color>
-
     <color name="surfaceLower">#ff000000</color>
+
+    <color name="textSuccess">#ff4bc16c</color>
 
     <color name="textHighlight">#ff5cadef</color>
 
@@ -203,9 +223,9 @@
 
     <color name="textAccentCobalt">#ff5cadef</color>
 
-    <color name="textAccentGreen">#ff4bc16c</color>
-
     <color name="surfaceGlassHighest">#e5464748</color>
+
+    <color name="textAccentGreen">#ff4bc16c</color>
 
     <color name="textAccentRed">#fff26060</color>
 
@@ -218,6 +238,8 @@
     <color name="textAccentOrange">#fff79847</color>
 
     <color name="textAccentYellow">#fff0be27</color>
+
+    <color name="textAccentOlive">#ffb7c427</color>
 
     <color name="textAccentTeal">#ff40d3c5</color>
 
@@ -253,26 +275,45 @@
 
     <color name="fillAbsoluteWhite">#ffffffff</color>
 
+    <color name="fillAbsoluteTransparent">#00ffffff</color>
+
     <color name="fillAbsoluteBlackLight">#33000000</color>
 
     <color name="surface">#ff242428</color>
 
     <color name="dimAbsoluteBlack">#66000000</color>
 
-    <color name="shadowXlarge">#4d000000</color>
+    <color name="fillAbsoluteBlackTransparent">#00000000</color>
 
-    <color name="shadowLarge">#38000000</color>
+    <color name="elevationXlarge">#4d000000</color>
 
-    <color name="shadowMedium">#26000000</color>
+    <color name="elevationLarge">#38000000</color>
 
-    <color name="shadowSmall">#14000000</color>
+    <color name="elevationMedium">#26000000</color>
 
-    <color name="shadowBase">#0d000000</color>
+    <color name="elevationSmall">#14000000</color>
 
-    <color name="shadowBaseInner">#1fffffff</color>
+    <color name="elevationBase">#0d000000</color>
+
+    <color name="elevationBaseInner">#1fffffff</color>
+
+    <color name="stateAction">#ff6b6eff</color>
+
+    <color name="stateWarning">#fff79847</color>
+
+    <color name="stateActionLight">#4d6b6eff</color>
+
+    <color name="stateWarningLight">#4df79847</color>
 
     <color name="dimAbsoluteWhite">#66ffffff</color>
 
     <color name="borderDetachHigh">#ff2a2b2d</color>
 
+    <color name="fillAccentYellowTransparent">#00f0be27</color>
+
+    <color name="fillAccentOrangeTransparent">#00f79847</color>
+
+    <color name="fillAccentGreenTransparent">#004bc16c</color>
+
+    <color name="fillAccentCobaltTransparent">#005cadef</color>
 </resources>
