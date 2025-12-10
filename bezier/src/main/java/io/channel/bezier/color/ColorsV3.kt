@@ -94,6 +94,7 @@ interface BezierSemanticColorV3 {
     val fillWarningLight: Color
     val fillWarningLighter: Color
     val fillWarningTransparent: Color
+    val iconAbsoluteBlack: Color
     val iconAbsoluteWhite: Color
     val iconAccentBlue: Color
     val iconAccentCobalt: Color
@@ -255,6 +256,7 @@ internal class LightColor : BezierSemanticColorV3 {
     override val fillWarningLight: Color = BezierGlobalColor.Orange400_20
     override val fillWarningLighter: Color = BezierGlobalColor.Orange400_10
     override val fillWarningTransparent: Color = BezierGlobalColor.Orange400_0
+    override val iconAbsoluteBlack: Color = BezierGlobalColor.Black100
     override val iconAbsoluteWhite: Color = BezierGlobalColor.White100
     override val iconAccentBlue: Color = BezierGlobalColor.Blue400
     override val iconAccentCobalt: Color = BezierGlobalColor.Cobalt400
@@ -416,6 +418,7 @@ internal class DarkColor : BezierSemanticColorV3 {
     override val fillWarningLight: Color = BezierGlobalColor.Orange300_30
     override val fillWarningLighter: Color = BezierGlobalColor.Orange300_18
     override val fillWarningTransparent: Color = BezierGlobalColor.Orange300_0
+    override val iconAbsoluteBlack: Color = BezierGlobalColor.Black100
     override val iconAbsoluteWhite: Color = BezierGlobalColor.White100
     override val iconAccentBlue: Color = BezierGlobalColor.Blue300
     override val iconAccentCobalt: Color = BezierGlobalColor.Cobalt300

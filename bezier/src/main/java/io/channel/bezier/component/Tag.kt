@@ -171,7 +171,7 @@ fun Tag(
                         .padding(horizontal = 2.dp)
                         .weight(1f, false),
                 fontSize = size.textSize,
-                color = colorResource(id = R.color.textNeutral),
+                color = colorResource(id = R.color.text_neutral),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
         )
@@ -187,7 +187,7 @@ fun Tag(
                             ),
                     painter = painterResource(id = R.drawable.icon_cancel),
                     contentDescription = null,
-                    tint = colorResource(id = R.color.textNeutralLight),
+                    tint = colorResource(id = R.color.text_neutral_light),
             )
         }
     }

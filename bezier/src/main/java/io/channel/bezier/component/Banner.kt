@@ -314,19 +314,19 @@ enum class BannerType(
         @ColorRes val descriptionColor: Int,
 ) {
     Inner(
-            backgroundColor = R.color.surfaceLow,
+            backgroundColor = R.color.surface_low,
             elevation = 0.dp,
-            descriptionColor = R.color.textNeutralLight,
+            descriptionColor = R.color.text_neutral_light,
     ),
     Floating(
-            backgroundColor = R.color.fillNeutralLighter,
+            backgroundColor = R.color.fill_neutral_lighter,
             elevation = 20.dp,
-            descriptionColor = R.color.textNeutral,
+            descriptionColor = R.color.text_neutral,
     ),
     Card(
-            backgroundColor = R.color.surfaceHigh,
+            backgroundColor = R.color.surface_high,
             elevation = 6.dp,
-            descriptionColor = R.color.textNeutral,
+            descriptionColor = R.color.text_neutral,
     ),
 }
 
