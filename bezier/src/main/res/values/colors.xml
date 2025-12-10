@@ -1,319 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="textNeutral">#d9000000</color>
-
-    <color name="textNeutralHeaviest">#ff000000</color>
-
-    <color name="textNeutralLight">#99000000</color>
-
-    <color name="textNeutralLighter">#66000000</color>
-
-    <color name="fillNeutralHeaviest">#d9000000</color>
-
-    <color name="fillNeutralHeavier">#66000000</color>
-
-    <color name="fillNeutralHeavy">#26000000</color>
-
-    <color name="stateDefault">#26000000</color>
-
-    <color name="fillNeutralLight">#0d000000</color>
-
-    <color name="fillNeutralLighter">#08000000</color>
-
-    <color name="fillNeutralLightest">#03000000</color>
-
-    <color name="fillNeutralTransparent">#00000000</color>
-
-    <color name="iconNeutral">#66000000</color>
-
-    <color name="iconAction">#ff6157ea</color>
-
-    <color name="iconSuccess">#ff20ab55</color>
-
-    <color name="iconHighlight">#ff3292e3</color>
-
-    <color name="iconWarning">#ffe67f2b</color>
-
-    <color name="iconCritical">#ffe1535d</color>
-
-    <color name="iconNeutralHeavy">#99000000</color>
-
-    <color name="iconNeutralHeavier">#d9000000</color>
-
-    <color name="iconAccentBlue">#ff6157ea</color>
-
-    <color name="iconAccentCobalt">#ff3292e3</color>
-
-    <color name="iconAccentGreen">#ff20ab55</color>
-
-    <color name="iconAccentRed">#ffe1535d</color>
-
-    <color name="iconAccentOrange">#ffe67f2b</color>
-
-    <color name="iconAccentYellow">#ffedae0d</color>
-
-    <color name="iconAccentOlive">#ffa9b110</color>
-
-    <color name="iconAccentTeal">#ff09b2ac</color>
-
-    <color name="iconAccentNavy">#ff424fab</color>
-
-    <color name="iconAccentPurple">#ff8e57e7</color>
-
-    <color name="iconAccentPink">#ffd64bb5</color>
-
-    <color name="iconAbsoluteWhite">#ffffffff</color>
-
-    <color name="borderNeutral">#14000000</color>
-
-    <color name="borderNeutralHeavy">#66000000</color>
-
-    <color name="borderDetachHighest">#ffffffff</color>
-
-    <color name="borderDetachHigher">#ffffffff</color>
-
-    <color name="borderAbsoluteWhite">#ffffffff</color>
-
-    <color name="fillAction">#ff6157ea</color>
-
-    <color name="fillActionLight">#336157ea</color>
-
-    <color name="fillActionLighter">#1a6157ea</color>
-
-    <color name="fillSuccess">#ff20ab55</color>
-
-    <color name="fillActionTransparent">#006157ea</color>
-
-    <color name="fillSuccessLight">#3320ab55</color>
-
-    <color name="fillSuccessLighter">#1a20ab55</color>
-
-    <color name="fillSuccessTransparent">#0020ab55</color>
-
-    <color name="fillHighlight">#ff3292e3</color>
-
-    <color name="fillHighlightLight">#333292e3</color>
-
-    <color name="fillHighlightLighter">#1a3292e3</color>
-
-    <color name="fillHighlightTransparent">#003292e3</color>
-
-    <color name="fillWarning">#ffe67f2b</color>
-
-    <color name="fillWarningLight">#33e67f2b</color>
-
-    <color name="fillWarningLighter">#1ae67f2b</color>
-
-    <color name="fillCritical">#ffe1535d</color>
-
-    <color name="fillWarningTransparent">#00e67f2b</color>
-
-    <color name="fillCriticalLight">#33e1535d</color>
-
-    <color name="fillCriticalLighter">#1ae1535d</color>
-
-    <color name="fillAccentBlueHeavy">#336157ea</color>
-
-    <color name="fillAccentBlueHeavier">#ff6157ea</color>
-
-    <color name="fillAccentBlueTransparent">#006157ea</color>
-
-    <color name="fillAccentCobaltHeavy">#333292e3</color>
-
-    <color name="fillCriticalTransparent">#00e1535d</color>
-
-    <color name="fillAccentGreenHeavy">#3320ab55</color>
-
-    <color name="fillAccentRedHeavy">#33e1535d</color>
-
-    <color name="fillAccentOrangeHeavy">#33e67f2b</color>
-
-    <color name="fillAccentBlue">#1a6157ea</color>
-
-    <color name="fillAccentCobalt">#1a3292e3</color>
-
-    <color name="fillAccentYellowHeavy">#33edae0d</color>
-
-    <color name="fillAccentCobaltHeavier">#ff3292e3</color>
-
-    <color name="fillAccentGreen">#1a20ab55</color>
-
-    <color name="fillAccentRed">#1ae1535d</color>
-
-    <color name="fillAccentOrange">#1ae67f2b</color>
-
-    <color name="fillAccentOliveHeavy">#33a9b110</color>
-
-    <color name="fillAccentYellow">#1aedae0d</color>
-
-    <color name="fillAccentTealHeavy">#3309b2ac</color>
-
-    <color name="fillAccentOlive">#1aa9b110</color>
-
-    <color name="fillAccentTeal">#1a09b2ac</color>
-
-    <color name="fillAccentGreenHeavier">#ff20ab55</color>
-
-    <color name="fillAccentNavyHeavy">#33424fab</color>
-
-    <color name="fillAccentNavy">#1a424fab</color>
-
-    <color name="fillAccentPurple">#1a8e57e7</color>
-
-    <color name="fillAccentRedHeavier">#ffe1535d</color>
-
-    <color name="fillAccentRedTransparent">#00e1535d</color>
-
-    <color name="fillAccentOrangeHeavier">#ffe67f2b</color>
-
-    <color name="fillAccentPurpleHeavy">#338e57e7</color>
-
-    <color name="fillAccentPink">#1ad64bb5</color>
-
-    <color name="surfaceHighest">#ffffffff</color>
-
-    <color name="fillAccentYellowHeavier">#ffedae0d</color>
-
-    <color name="fillAccentOliveHeavier">#ffa9b110</color>
-
-    <color name="fillAccentOliveTransparent">#00a9b110</color>
-
-    <color name="fillAccentTealHeavier">#ff09b2ac</color>
-
-    <color name="fillAccentTealTransparent">#0009b2ac</color>
-
-    <color name="fillAccentNavyHeavier">#ff424fab</color>
-
-    <color name="fillAccentNavyTransparent">#00424fab</color>
-
-    <color name="fillAccentPurpleHeavier">#ff8e57e7</color>
-
-    <color name="fillAccentPurpleTransparent">#008e57e7</color>
-
-    <color name="surfaceHigher">#ffffffff</color>
-
-    <color name="fillAccentPinkHeavy">#33d64bb5</color>
-
-    <color name="fillAccentPinkHeavier">#ffd64bb5</color>
-
-    <color name="surfaceHigh">#ffffffff</color>
-
-    <color name="fillAccentPinkTransparent">#00d64bb5</color>
-
-    <color name="surfaceLow">#fffbfbfb</color>
-
-    <color name="dimAbsoluteBlackHeavy">#99000000</color>
-
-    <color name="dimAbsoluteWhiteHeavy">#99ffffff</color>
-
-    <color name="textAction">#ff6157ea</color>
-
-    <color name="surfaceLower">#fff7f7f8</color>
-
-    <color name="textSuccess">#ff20ab55</color>
-
-    <color name="textHighlight">#ff3292e3</color>
-
-    <color name="textWarning">#ffe67f2b</color>
-
-    <color name="textCritical">#ffe1535d</color>
-
-    <color name="textAccentBlue">#ff6157ea</color>
-
-    <color name="textAccentCobalt">#ff3292e3</color>
-
-    <color name="surfaceGlassHighest">#e5efeff0</color>
-
-    <color name="textAccentGreen">#ff20ab55</color>
-
-    <color name="textAccentRed">#ffe1535d</color>
-
-    <color name="surfaceGlassHigher">#e5f7f7f8</color>
-
-    <color name="surfaceGlassHigh">#e5ffffff</color>
-
-    <color name="surfaceGlass">#e5ffffff</color>
-
-    <color name="textAccentOrange">#ffe67f2b</color>
-
-    <color name="textAccentYellow">#ffedae0d</color>
-
-    <color name="textAccentOlive">#ffa9b110</color>
-
-    <color name="textAccentTeal">#ff09b2ac</color>
-
-    <color name="textAccentNavy">#ff424fab</color>
-
-    <color name="textAccentPurple">#ff8e57e7</color>
-
-    <color name="textAccentPink">#ffd64bb5</color>
-
-    <color name="surfaceAccentBlue">#ff6157ea</color>
-
-    <color name="surfaceAccentCobalt">#ff3292e3</color>
-
-    <color name="surfaceAccentGreen">#ff20ab55</color>
-
-    <color name="surfaceAccentRed">#ffe1535d</color>
-
-    <color name="surfaceAccentOrange">#ffe67f2b</color>
-
-    <color name="surfaceAccentYellow">#ffedae0d</color>
-
-    <color name="surfaceAccentTeal">#ff09b2ac</color>
-
-    <color name="surfaceAccentNavy">#ff424fab</color>
-
-    <color name="surfaceAccentPurple">#ff8e57e7</color>
-
-    <color name="surfaceAccentPink">#ffd64bb5</color>
-
-    <color name="textAbsoluteWhite">#ffffffff</color>
-
-    <color name="textAbsoluteBlack">#ff000000</color>
-
-    <color name="fillAbsoluteWhite">#ffffffff</color>
-
-    <color name="fillAbsoluteTransparent">#00ffffff</color>
-
-    <color name="fillAbsoluteBlackLight">#33000000</color>
-
-    <color name="surface">#ffffffff</color>
-
-    <color name="dimAbsoluteBlack">#66000000</color>
-
-    <color name="fillAbsoluteBlackTransparent">#00000000</color>
-
-    <color name="elevationXlarge">#4d000000</color>
-
-    <color name="elevationLarge">#38000000</color>
-
-    <color name="elevationMedium">#26000000</color>
-
-    <color name="elevationSmall">#14000000</color>
-
-    <color name="elevationBase">#0d000000</color>
-
-    <color name="elevationBaseInner">#1fffffff</color>
-
-    <color name="stateAction">#ff6157ea</color>
-
-    <color name="stateWarning">#ffe67f2b</color>
-
-    <color name="stateActionLight">#4d6157ea</color>
-
-    <color name="stateWarningLight">#4de67f2b</color>
-
-    <color name="dimAbsoluteWhite">#66ffffff</color>
-
-    <color name="borderDetachHigh">#ffffffff</color>
-
-    <color name="fillAccentYellowTransparent">#00edae0d</color>
-
-    <color name="fillAccentOrangeTransparent">#00e67f2b</color>
-
-    <color name="fillAccentGreenTransparent">#0020ab55</color>
-
-    <color name="fillAccentCobaltTransparent">#003292e3</color>
-
+    <color name="text_neutral">@color/black_85</color>
+    <color name="text_neutral_heaviest">@color/black_100</color>
+    <color name="text_neutral_light">@color/black_60</color>
+    <color name="text_neutral_lighter">@color/black_40</color>
+    <color name="fill_neutral_heaviest">@color/black_85</color>
+    <color name="fill_neutral_heavier">@color/black_40</color>
+    <color name="fill_neutral_heavy">@color/black_15</color>
+    <color name="state_default">@color/black_15</color>
+    <color name="fill_neutral_light">@color/black_5</color>
+    <color name="fill_neutral_lighter">@color/black_3</color>
+    <color name="fill_neutral_lightest">@color/black_1</color>
+    <color name="fill_neutral_transparent">@color/black_0</color>
+    <color name="icon_neutral">@color/black_40</color>
+    <color name="icon_action">@color/blue_400</color>
+    <color name="icon_success">@color/green_400</color>
+    <color name="icon_highlight">@color/cobalt_400</color>
+    <color name="icon_warning">@color/orange_400</color>
+    <color name="icon_critical">@color/red_400</color>
+    <color name="icon_neutral_heavy">@color/black_60</color>
+    <color name="icon_neutral_heavier">@color/black_85</color>
+    <color name="icon_accent_blue">@color/blue_400</color>
+    <color name="icon_accent_cobalt">@color/cobalt_400</color>
+    <color name="icon_accent_green">@color/green_400</color>
+    <color name="icon_accent_red">@color/red_400</color>
+    <color name="icon_accent_orange">@color/orange_400</color>
+    <color name="icon_accent_yellow">@color/yellow_400</color>
+    <color name="icon_accent_olive">@color/olive_400</color>
+    <color name="icon_accent_teal">@color/teal_400</color>
+    <color name="icon_accent_navy">@color/navy_400</color>
+    <color name="icon_accent_purple">@color/purple_400</color>
+    <color name="icon_accent_pink">@color/pink_400</color>
+    <color name="icon_absolute_white">@color/white_100</color>
+    <color name="icon_absolute_black">@color/black_100</color>
+    <color name="border_neutral">@color/black_8</color>
+    <color name="border_neutral_heavy">@color/black_40</color>
+    <color name="border_detach_highest">@color/white_100</color>
+    <color name="border_absolute_white">@color/white_100</color>
+    <color name="border_detach_higher">@color/white_100</color>
+    <color name="fill_action_light">@color/blue_400_20</color>
+    <color name="fill_action">@color/blue_400</color>
+    <color name="fill_action_lighter">@color/blue_400_10</color>
+    <color name="fill_action_transparent">@color/blue_400_0</color>
+    <color name="fill_success">@color/green_400</color>
+    <color name="fill_success_light">@color/green_400_20</color>
+    <color name="fill_success_lighter">@color/green_400_10</color>
+    <color name="fill_highlight">@color/cobalt_400</color>
+    <color name="fill_success_transparent">@color/green_400_0</color>
+    <color name="fill_highlight_light">@color/cobalt_400_20</color>
+    <color name="fill_highlight_lighter">@color/cobalt_400_10</color>
+    <color name="fill_highlight_transparent">@color/cobalt_400_0</color>
+    <color name="fill_warning">@color/orange_400</color>
+    <color name="fill_warning_light">@color/orange_400_20</color>
+    <color name="fill_warning_lighter">@color/orange_400_10</color>
+    <color name="fill_warning_transparent">@color/orange_400_0</color>
+    <color name="fill_critical">@color/red_400</color>
+    <color name="fill_critical_light">@color/red_400_20</color>
+    <color name="fill_critical_lighter">@color/red_400_10</color>
+    <color name="fill_accent_blue_heavy">@color/blue_400_20</color>
+    <color name="fill_accent_blue_heavier">@color/blue_400</color>
+    <color name="fill_accent_blue_transparent">@color/blue_400_0</color>
+    <color name="fill_accent_cobalt_heavy">@color/cobalt_400_20</color>
+    <color name="fill_critical_transparent">@color/red_400_0</color>
+    <color name="fill_accent_green_heavy">@color/green_400_20</color>
+    <color name="fill_accent_red_heavy">@color/red_400_20</color>
+    <color name="fill_accent_blue">@color/blue_400_10</color>
+    <color name="fill_accent_orange_heavy">@color/orange_400_20</color>
+    <color name="fill_accent_cobalt">@color/cobalt_400_10</color>
+    <color name="fill_accent_green">@color/green_400_10</color>
+    <color name="fill_accent_yellow_heavy">@color/yellow_400_20</color>
+    <color name="fill_accent_cobalt_heavier">@color/cobalt_400</color>
+    <color name="fill_accent_red">@color/red_400_10</color>
+    <color name="fill_accent_olive_heavy">@color/olive_400_20</color>
+    <color name="fill_accent_orange">@color/orange_400_10</color>
+    <color name="fill_accent_yellow">@color/yellow_400_10</color>
+    <color name="fill_accent_olive">@color/olive_400_10</color>
+    <color name="fill_accent_teal_heavy">@color/teal_400_20</color>
+    <color name="fill_accent_green_heavier">@color/green_400</color>
+    <color name="fill_accent_teal">@color/teal_400_10</color>
+    <color name="fill_accent_navy_heavy">@color/navy_400_20</color>
+    <color name="fill_accent_navy">@color/navy_400_10</color>
+    <color name="fill_accent_purple">@color/purple_400_10</color>
+    <color name="fill_accent_red_heavier">@color/red_400</color>
+    <color name="fill_accent_red_transparent">@color/red_400_0</color>
+    <color name="fill_accent_purple_heavy">@color/purple_400_20</color>
+    <color name="fill_accent_orange_heavier">@color/orange_400</color>
+    <color name="fill_accent_pink">@color/pink_400_10</color>
+    <color name="surface_highest">@color/white_100</color>
+    <color name="fill_accent_yellow_heavier">@color/yellow_400</color>
+    <color name="fill_accent_olive_heavier">@color/olive_400</color>
+    <color name="fill_accent_olive_transparent">@color/olive_400_0</color>
+    <color name="fill_accent_teal_heavier">@color/teal_400</color>
+    <color name="fill_accent_teal_transparent">@color/teal_400_0</color>
+    <color name="fill_accent_navy_heavier">@color/navy_400</color>
+    <color name="fill_accent_navy_transparent">@color/navy_400_0</color>
+    <color name="fill_accent_purple_heavier">@color/purple_400</color>
+    <color name="fill_accent_purple_transparent">@color/purple_400_0</color>
+    <color name="fill_accent_pink_heavy">@color/pink_400_20</color>
+    <color name="surface_higher">@color/white_100</color>
+    <color name="surface_high">@color/white_100</color>
+    <color name="fill_accent_pink_heavier">@color/pink_400</color>
+    <color name="fill_accent_pink_transparent">@color/pink_400_0</color>
+    <color name="surface_low">@color/grey_50</color>
+    <color name="dim_absolute_black_heavy">@color/black_60</color>
+    <color name="dim_absolute_white_heavy">@color/white_60</color>
+    <color name="text_action">@color/blue_400</color>
+    <color name="text_success">@color/green_400</color>
+    <color name="surface_lower">@color/grey_100</color>
+    <color name="text_highlight">@color/cobalt_400</color>
+    <color name="text_warning">@color/orange_400</color>
+    <color name="text_critical">@color/red_400</color>
+    <color name="text_accent_blue">@color/blue_400</color>
+    <color name="text_accent_cobalt">@color/cobalt_400</color>
+    <color name="text_accent_green">@color/green_400</color>
+    <color name="surface_glass_highest">@color/grey_alpha_200_90</color>
+    <color name="text_accent_red">@color/red_400</color>
+    <color name="surface_glass_higher">@color/grey_alpha_100_90</color>
+    <color name="surface_glass_high">@color/white_90</color>
+    <color name="surface_glass">@color/white_90</color>
+    <color name="text_accent_orange">@color/orange_400</color>
+    <color name="text_accent_yellow">@color/yellow_400</color>
+    <color name="text_accent_olive">@color/olive_400</color>
+    <color name="text_accent_teal">@color/teal_400</color>
+    <color name="text_accent_navy">@color/navy_400</color>
+    <color name="text_accent_purple">@color/purple_400</color>
+    <color name="text_accent_pink">@color/pink_400</color>
+    <color name="surface_accent_blue">@color/blue_400</color>
+    <color name="surface_accent_cobalt">@color/cobalt_400</color>
+    <color name="surface_accent_green">@color/green_400</color>
+    <color name="surface_accent_red">@color/red_400</color>
+    <color name="surface_accent_orange">@color/orange_400</color>
+    <color name="surface_accent_yellow">@color/yellow_400</color>
+    <color name="surface_accent_olive">@color/olive_400</color>
+    <color name="surface_accent_teal">@color/teal_400</color>
+    <color name="surface_accent_navy">@color/navy_400</color>
+    <color name="surface_accent_purple">@color/purple_400</color>
+    <color name="surface_accent_pink">@color/pink_400</color>
+    <color name="text_absolute_white">@color/white_100</color>
+    <color name="text_absolute_black">@color/black_100</color>
+    <color name="fill_absolute_white">@color/white_100</color>
+    <color name="fill_absolute_white_light">@color/white_20</color>
+    <color name="fill_absolute_white_transparent">@color/white_0</color>
+    <color name="surface">@color/white_100</color>
+    <color name="fill_absolute_black_light">@color/black_20</color>
+    <color name="dim_absolute_black">@color/black_40</color>
+    <color name="fill_absolute_black_transparent">@color/black_0</color>
+    <color name="elevation_xlarge">@color/black_30</color>
+    <color name="elevation_large">@color/black_22</color>
+    <color name="elevation_medium">@color/black_15</color>
+    <color name="elevation_small">@color/black_8</color>
+    <color name="elevation_base">@color/black_5</color>
+    <color name="elevation_base_inner">@color/white_12</color>
+    <color name="state_action">@color/blue_400</color>
+    <color name="state_warning">@color/orange_400</color>
+    <color name="state_action_light">@color/blue_400_30</color>
+    <color name="state_warning_light">@color/orange_400_30</color>
+    <color name="fill_absolute_black">@color/black_100</color>
+    <color name="dim_absolute_white">@color/white_40</color>
+    <color name="border_detach_high">@color/white_100</color>
+    <color name="fill_accent_yellow_transparent">@color/yellow_400_0</color>
+    <color name="fill_accent_orange_transparent">@color/orange_400_0</color>
+    <color name="fill_accent_green_transparent">@color/green_400_0</color>
+    <color name="fill_accent_cobalt_transparent">@color/cobalt_400_0</color>
 </resources>
