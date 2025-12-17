@@ -1,15 +1,14 @@
 [versions]
-agp = "8.2.0"
-kotlin = "1.9.0"
-core-ktx = "1.10.1"
+agp = "8.7.3"
+kotlin = "2.0.21"
+core-ktx = "1.15.0"
 junit = "4.13.2"
-androidx-test-ext-junit = "1.1.5"
-espresso-core = "3.5.1"
-lifecycle-runtime-ktx = "2.6.1"
-activity-compose = "1.7.0"
-compose-bom = "2023.08.00"
-compose-compiler = "1.5.1"
-coil = "2.4.0"
+androidx-test-ext-junit = "1.2.1"
+espresso-core = "3.6.1"
+lifecycle-runtime-ktx = "2.8.7"
+activity-compose = "1.9.3"
+compose-bom = "2025.12.00"
+coil = "2.7.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -33,4 +32,5 @@ coil-gif = { group = "io.coil-kt", name = "coil-gif", version.ref = "coil" }
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
