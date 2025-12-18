@@ -4,7 +4,7 @@ import androidx.compose.foundation.LocalIndication
 import androidx.compose.material.LocalContentColor
 import androidx.compose.material.LocalRippleConfiguration
 import androidx.compose.material.RippleConfiguration
-import androidx.compose.material.RippleDefaults
+import androidx.compose.material.ripple.RippleAlpha
 import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -33,8 +33,13 @@ fun BezierTheme(
     val contentColor = LocalContentColor.current
     val rippleConfiguration = remember(isDark, contentColor) {
         RippleConfiguration(
-                color = RippleDefaults.rippleColor(contentColor, isDark),
-                rippleAlpha = RippleDefaults.rippleAlpha(contentColor, isDark),
+                color = contentColor,
+                rippleAlpha = RippleAlpha(
+                        pressedAlpha = 0.24f,
+                        focusedAlpha = 0.24f,
+                        draggedAlpha = 0.16f,
+                        hoveredAlpha = 0.08f,
+                ),
         )
     }
     CompositionLocalProvider(
