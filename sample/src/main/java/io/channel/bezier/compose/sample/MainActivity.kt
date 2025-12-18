@@ -25,8 +25,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     BezierTheme {
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
             Text(
-                text = "Hello $name!",
-                modifier = modifier,
+                    text = "Hello $name!",
+                    modifier = modifier,
             )
         }
     }
