@@ -133,9 +133,9 @@ enum class ProgressBarColor(
         @Composable
         @ReadOnlyComposable
         get() = when (this) {
-            Green -> BezierTheme.colors.bgtxtGreenNormal
-            GreenAlt -> BezierTheme.colors.bgtxtGreenNormal
-            Grey -> BezierTheme.colors.bgBlackLight
+            Green -> BezierTheme.colorsV3.fillAccentGreenHeavier
+            GreenAlt -> BezierTheme.colorsV3.fillAccentGreenHeavier
+            Grey -> BezierTheme.colorsV3.fillNeutralLight
         }
 
     val endColor: Color
@@ -144,16 +144,16 @@ enum class ProgressBarColor(
         get() = when (this) {
             Green -> BezierTheme.colors.invertedBgtxtGreenNormal
             GreenAlt -> BezierTheme.colors.invertedBgtxtGreenNormal
-            Grey -> BezierTheme.colors.bgBlackDark
+            Grey -> BezierTheme.colorsV3.fillNeutralHeavy
         }
 
     val backgroundColor: Color
         @Composable
         @ReadOnlyComposable
         get() = when (this) {
-            Green -> BezierTheme.colors.bgBlackLight
-            GreenAlt -> BezierTheme.colors.bgtxtAbsoluteWhiteNormal
-            Grey -> BezierTheme.colors.bgBlackLight
+            Green -> BezierTheme.colorsV3.fillNeutralLight
+            GreenAlt -> BezierTheme.colorsV3.fillAbsoluteWhite
+            Grey -> BezierTheme.colorsV3.fillNeutralLight
         }
 
     companion object {

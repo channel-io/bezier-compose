@@ -94,7 +94,7 @@ private fun CardSectionGroup(
     Column(
             modifier = modifier
                     .shadow(3.dp, RoundedCornerShape(16.dp))
-                    .background(BezierTheme.colors.bgWhiteLow, RoundedCornerShape(16.dp))
+                    .background(BezierTheme.colorsV3.surfaceHigh, RoundedCornerShape(16.dp))
                     .padding(10.dp),
     ) {
         if (header != null) {
@@ -124,7 +124,7 @@ fun SectionGroupFooterScope.Description(
     Text(
             modifier = modifier.padding(top = 8.dp, start = 6.dp, end = 6.dp),
             text = description,
-            color = BezierTheme.colors.txtBlackDark,
+            color = BezierTheme.colorsV3.textNeutralLighter,
             fontSize = 14.sp,
     )
 }
@@ -138,7 +138,7 @@ fun SectionGroupFooterScope.Error(
     Text(
             modifier = modifier.padding(top = 8.dp, start = 6.dp, end = 6.dp),
             text = message,
-            color = BezierTheme.colors.bgtxtOrangeNormal,
+            color = BezierTheme.colorsV3.textAccentOrange,
             fontSize = 14.sp,
     )
 }
@@ -149,7 +149,7 @@ private fun SectionGroupDivider(modifier: Modifier = Modifier) {
             modifier = modifier
                     .fillMaxWidth()
                     .height(1.dp)
-                    .background(BezierTheme.colors.bdrBlackLight),
+                    .background(BezierTheme.colorsV3.borderNeutral),
     )
 }
 
@@ -178,12 +178,12 @@ private fun CardSectionGroupPreview() {
                     modifier = Modifier.padding(2.dp),
                     painter = painterResource(id = R.drawable.icon_person),
                     contentDescription = null,
-                    tint = BezierTheme.colors.txtBlackDarker,
+                    tint = BezierTheme.colorsV3.iconNeutral,
             )
             Spacer(modifier = Modifier.width(12.dp))
             Text(
                     text = "닝겐",
-                    color = BezierTheme.colors.txtBlackDarkest,
+                    color = BezierTheme.colorsV3.textNeutral,
                     fontSize = 16.sp,
             )
         }
@@ -198,12 +198,12 @@ private fun CardSectionGroupPreview() {
                     modifier = Modifier.padding(2.dp),
                     painter = painterResource(id = R.drawable.icon_lock),
                     contentDescription = null,
-                    tint = BezierTheme.colors.txtBlackDarker,
+                    tint = BezierTheme.colorsV3.iconNeutral,
             )
             Spacer(modifier = Modifier.width(12.dp))
             Text(
                     text = "나의 마음을 언!록!",
-                    color = BezierTheme.colors.txtBlackDarkest,
+                    color = BezierTheme.colorsV3.textNeutral,
                     fontSize = 16.sp,
             )
         }
@@ -229,7 +229,7 @@ private fun SolidSectionGroupPreview() {
         ) {
             Text(
                     text = "닝겐1",
-                    color = BezierTheme.colors.txtBlackDarkest,
+                    color = BezierTheme.colorsV3.textNeutral,
                     fontSize = 16.sp,
             )
         }
@@ -242,7 +242,7 @@ private fun SolidSectionGroupPreview() {
         ) {
             Text(
                     text = "닝겐2",
-                    color = BezierTheme.colors.txtBlackDarkest,
+                    color = BezierTheme.colorsV3.textNeutral,
                     fontSize = 16.sp,
             )
         }

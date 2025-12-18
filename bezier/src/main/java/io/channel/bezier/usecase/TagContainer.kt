@@ -99,7 +99,7 @@ private fun SingleLineTagContainer(
             Text(
                     text = "+${tagContainerElements.size - SINGLE_LINE_MAXIMUM_TAG_COUNT}",
                     fontSize = 13.sp,
-                    color = BezierTheme.colors.txtBlackDarker,
+                    color = BezierTheme.colorsV3.textNeutralLight,
                     maxLines = 1,
             )
         }

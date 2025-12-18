@@ -54,7 +54,7 @@ fun OutlineItem(
                         .alpha(toggle.iconAlpha),
                 painter = painterResource(id = icon),
                 contentDescription = null,
-                tint = BezierTheme.colors.txtBlackDark,
+                tint = BezierTheme.colorsV3.iconNeutral,
         )
 
         content()
@@ -75,20 +75,20 @@ private val OutlineToggle.iconAlpha: Float
 @Composable
 private fun OutlineItemPreview() = Column {
     OutlineItem(toggle = OutlineToggle.Leaf) {
-        Text(text = "Hello World 1", color = BezierTheme.colors.txtBlackDark)
+        Text(text = "Hello World 1", color = BezierTheme.colorsV3.textNeutralLighter)
     }
 
     OutlineItem(
             toggle = OutlineToggle.Expanded,
             onClickExpand = {},
     ) {
-        Text(text = "Hello World 2", color = BezierTheme.colors.txtBlackDark)
+        Text(text = "Hello World 2", color = BezierTheme.colorsV3.textNeutralLighter)
     }
 
     OutlineItem(
             toggle = OutlineToggle.Collapsed,
             onClickExpand = {},
     ) {
-        Text(text = "Hello World 3", color = BezierTheme.colors.txtBlackDark)
+        Text(text = "Hello World 3", color = BezierTheme.colorsV3.textNeutralLighter)
     }
 }
