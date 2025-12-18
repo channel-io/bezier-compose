@@ -4,7 +4,12 @@ import androidx.compose.animation.core.EaseInOut
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.AnchoredDraggableDefaults
+import androidx.compose.foundation.gestures.AnchoredDraggableState
+import androidx.compose.foundation.gestures.DraggableAnchors
 import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.anchoredDraggable
+import androidx.compose.foundation.gestures.animateTo
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -20,11 +25,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.FractionalThreshold
-import androidx.compose.material.SwipeableState
 import androidx.compose.material.Text
-import androidx.compose.material.swipeable
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.Stable
@@ -44,16 +45,17 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.extension.roundedBackground
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
 
-private val switchButtonOffset = 22.dp
 private const val SwitchOn = true
 private const val SwitchOff = false
 private const val TimeOutMilliSecond = 10000L
@@ -104,7 +106,6 @@ fun Switch(
     Switch(switchState, enabled && interactionEnable)
 }
 
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun Switch(
         state: SwitchState,
@@ -112,36 +113,39 @@ fun Switch(
 ) {
     val coroutineScope = rememberCoroutineScope()
 
-    val sizePx = with(LocalDensity.current) { switchButtonOffset.toPx() }
-    val anchors = remember(sizePx) {
-        mapOf(
-                0F to SwitchOff,
-                sizePx to SwitchOn,
-        )
+    LaunchedEffect(state) {
+        snapshotFlow { state.anchoredDraggableState.currentValue }
+                .drop(1)
+                .collect { state.checkValueChange() }
     }
 
     val checkedColor = BezierTheme.colors.bgtxtGreenNormal
     val uncheckedColor = BezierTheme.colors.bgBlackDark
     val backgroundColor by remember(state) {
-        derivedStateOf { lerp(uncheckedColor, checkedColor, (state.swipeableState.offset.value / sizePx).coerceIn(0F, 1F)) }
+        derivedStateOf { 
+            lerp(uncheckedColor, checkedColor, state.dragRate)
+        }
     }
+
+    val flingBehavior = AnchoredDraggableDefaults.flingBehavior(
+            state = state.anchoredDraggableState,
+            animationSpec = AnimationSpec,
+            positionalThreshold = { it * 0.3f }
+    )
 
     Row(
             modifier = Modifier
-                    .swipeable(
+                    .anchoredDraggable(
                             enabled = enabled,
-                            state = state.swipeableState,
-                            anchors = anchors,
-                            thresholds = { _, _ -> FractionalThreshold(0.3f) },
+                            state = state.anchoredDraggableState,
                             orientation = Orientation.Horizontal,
+                            flingBehavior = flingBehavior,
                     )
                     .clickable(
                             enabled = enabled,
                             interactionSource = remember { MutableInteractionSource() },
                             indication = null,
                     ) {
-                        state.onCheckChanged(!state.currentValue)
-
                         coroutineScope.launch {
                             state.switch()
                         }
@@ -158,7 +162,7 @@ fun Switch(
             Thumb(
                     modifier = Modifier
                             .offset {
-                                IntOffset(state.swipeableState.offset.value.roundToInt(), 0)
+                                IntOffset(state.anchoredDraggableState.requireOffset().roundToInt(), 0)
                             },
             )
         }
@@ -187,41 +191,47 @@ fun rememberSwitchState(
         initialValue: Boolean,
         onCheckedChange: ((Boolean) -> Unit)?
 ): SwitchState {
-    return remember {
+    val density = LocalDensity.current
+    val state = remember {
         SwitchState(
                 initialValue = initialValue,
                 onCheckedChange = onCheckedChange,
         )
     }
+    LaunchedEffect(density) {
+        state.anchoredDraggableState.updateAnchors(DraggableAnchors {
+            SwitchOff at 0f
+            SwitchOn at with(density) { 22.dp.toPx() }
+        })
+    }
+    return state
 }
 
 private val AnimationSpec = tween<Float>(durationMillis = 50)
+private val SwitchAnimationSpec = tween<Float>(durationMillis = 200, easing = EaseInOut)
 
-@OptIn(ExperimentalMaterialApi::class)
 @Stable
 class SwitchState(
         initialValue: Boolean,
         val onCheckedChange: ((Boolean) -> Unit)?,
 ) {
-    internal val swipeableState = SwipeableState(
+    private var lastValue: Boolean = initialValue
+    internal val anchoredDraggableState = AnchoredDraggableState(
             initialValue = initialValue,
-            animationSpec = AnimationSpec,
-            confirmStateChange = { curr ->
-                val result = if (currentValue != curr && onCheckedChange != null) {
-                    onCheckedChange.invoke(curr)
-
-                    true
-                } else {
-                    false
-                }
-
-                result
+            anchors = DraggableAnchors {
+                SwitchOff at 0f
+                SwitchOn at 22f
             },
     )
 
-    internal fun onCheckChanged(checked: Boolean) {
-        if (currentValue != checked) {
-            onCheckedChange?.invoke(checked)
+    internal val dragRate:Float
+        get() = anchoredDraggableState.progress(SwitchOff, SwitchOn)
+
+    internal fun checkValueChange() {
+        val newValue = anchoredDraggableState.currentValue
+        if (lastValue != newValue) {
+            lastValue = newValue
+            onCheckedChange?.invoke(newValue)
         }
     }
 
@@ -232,25 +242,19 @@ class SwitchState(
         get() = !currentValue
 
     val currentValue: Boolean
-        get() = swipeableState.currentValue
+        get() = anchoredDraggableState.currentValue
 
     suspend fun on() {
-        swipeableState.animateTo(
+        anchoredDraggableState.animateTo(
                 targetValue = SwitchOn,
-                anim = tween(
-                        durationMillis = 200,
-                        easing = EaseInOut,
-                ),
+                animationSpec = SwitchAnimationSpec,
         )
     }
 
     suspend fun off() {
-        swipeableState.animateTo(
+        anchoredDraggableState.animateTo(
                 targetValue = SwitchOff,
-                anim = tween(
-                        durationMillis = 200,
-                        easing = EaseInOut,
-                ),
+                animationSpec = SwitchAnimationSpec,
         )
     }
 
@@ -372,6 +376,7 @@ private fun SwitchStatelessPreview() {
         Row(
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
         ) {
+
             Switch(
                     checked = checked1,
                     onCheckedChange = {
