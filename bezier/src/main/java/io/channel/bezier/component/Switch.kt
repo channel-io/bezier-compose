@@ -55,7 +55,6 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
 
-private val switchButtonOffset = 22.dp
 private const val SwitchOn = true
 private const val SwitchOff = false
 private const val TimeOutMilliSecond = 10000L
@@ -145,8 +144,6 @@ fun Switch(
                             interactionSource = remember { MutableInteractionSource() },
                             indication = null,
                     ) {
-                        state.onCheckChanged(!state.currentValue)
-
                         coroutineScope.launch {
                             state.switch()
                         }
@@ -193,7 +190,7 @@ fun rememberSwitchState(
         onCheckedChange: ((Boolean) -> Unit)?
 ): SwitchState {
     val density = LocalDensity.current
-    return remember {
+    return remember(density) {
         SwitchState(
                 initialValue = initialValue,
                 density = density,
@@ -229,12 +226,6 @@ class SwitchState(
         if (lastValue != newValue) {
             lastValue = newValue
             onCheckedChange?.invoke(newValue)
-        }
-    }
-
-    internal fun onCheckChanged(checked: Boolean) {
-        if (currentValue != checked) {
-            onCheckedChange?.invoke(checked)
         }
     }
 
