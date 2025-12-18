@@ -31,9 +31,9 @@ fun BezierTheme(
     }
 
     val contentColor = if (isDark) {
-        BezierTheme.colors.bgtxtAbsoluteWhiteNormal
+        colors.bgtxtAbsoluteWhiteNormal
     } else {
-        BezierTheme.colors.bgtxtAbsoluteBlackNormal
+        colors.bgtxtAbsoluteBlackNormal
     }
 
     val rippleConfiguration = remember(isDark, contentColor) {
