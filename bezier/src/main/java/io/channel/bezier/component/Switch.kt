@@ -52,6 +52,7 @@ import io.channel.bezier.BezierTheme
 import io.channel.bezier.extension.roundedBackground
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
 
@@ -114,6 +115,7 @@ fun Switch(
 
     LaunchedEffect(state) {
         snapshotFlow { state.anchoredDraggableState.currentValue }
+                .drop(1)
                 .collect { state.checkValueChange() }
     }
 
@@ -190,13 +192,19 @@ fun rememberSwitchState(
         onCheckedChange: ((Boolean) -> Unit)?
 ): SwitchState {
     val density = LocalDensity.current
-    return remember(density) {
+    val state = remember {
         SwitchState(
                 initialValue = initialValue,
-                density = density,
                 onCheckedChange = onCheckedChange,
         )
     }
+    LaunchedEffect(density) {
+        state.anchoredDraggableState.updateAnchors(DraggableAnchors {
+            SwitchOff at 0f
+            SwitchOn at with(density) { 22.dp.toPx() }
+        })
+    }
+    return state
 }
 
 private val AnimationSpec = tween<Float>(durationMillis = 50)
@@ -205,21 +213,19 @@ private val SwitchAnimationSpec = tween<Float>(durationMillis = 200, easing = Ea
 @Stable
 class SwitchState(
         initialValue: Boolean,
-        density: Density,
         val onCheckedChange: ((Boolean) -> Unit)?,
 ) {
     private var lastValue: Boolean = initialValue
-    private val maxWidth = with(density) { 22.dp.toPx() }
     internal val anchoredDraggableState = AnchoredDraggableState(
             initialValue = initialValue,
             anchors = DraggableAnchors {
                 SwitchOff at 0f
-                SwitchOn at maxWidth
+                SwitchOn at 22f
             },
     )
 
     internal val dragRate:Float
-        get() = (anchoredDraggableState.requireOffset() / maxWidth).coerceIn(0f, 1f)
+        get() = anchoredDraggableState.progress(SwitchOff, SwitchOn)
 
     internal fun checkValueChange() {
         val newValue = anchoredDraggableState.currentValue
