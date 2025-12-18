@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "io.channel.bezier.compose.sample"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "io.channel.bezier.compose.sample"
         minSdk = 23
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
