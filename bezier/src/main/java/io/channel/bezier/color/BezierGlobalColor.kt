@@ -178,7 +178,7 @@ internal object BezierGlobalColor {
     val Pink400_20 = Color(0x33d64bb5)
     val Pink400_30 = Color(0x4dd64bb5)
     val Grey50 = Color(0xfffbfbfb)
-    val Grey508_0 = Color(0xccfbfbfb)
+    val Grey50_80 = Color(0xccfbfbfb)
     val Grey100 = Color(0xfff7f7f8)
     val Grey100_80 = Color(0xccf7f7f8)
     val Grey100_90 = Color(0xe5f7f7f8)
