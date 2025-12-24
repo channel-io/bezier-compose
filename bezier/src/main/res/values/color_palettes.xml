@@ -196,8 +196,8 @@
     <color name="grey_800_80">#cc303035</color>
     <color name="grey_800_90">#e5303035</color>
     <color name="grey_850">#ff2a2a2d</color>
-    <color name="grey_850_80">#cc2a2b2d</color>
-    <color name="grey_850_90">#e52a2b2d</color>
+    <color name="grey_850_80">#cc2a2a2d</color>
+    <color name="grey_850_90">#e52a2a2d</color>
     <color name="grey_900">#ff242428</color>
     <color name="grey_900_90">#e5242428</color>
     <color name="grey_900_0">#00242428</color>
