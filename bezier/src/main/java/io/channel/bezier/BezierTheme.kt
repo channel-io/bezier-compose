@@ -40,10 +40,10 @@ fun BezierTheme(
         RippleConfiguration(
                 color = contentColor,
                 rippleAlpha = RippleAlpha(
-                        pressedAlpha = 0.36f,
-                        focusedAlpha = 0.36f,
-                        draggedAlpha = 0.24f,
-                        hoveredAlpha = 0.12f,
+                        pressedAlpha = 0.24f,
+                        focusedAlpha = 0.24f,
+                        draggedAlpha = 0.16f,
+                        hoveredAlpha = 0.08f,
                 ),
         )
     }
