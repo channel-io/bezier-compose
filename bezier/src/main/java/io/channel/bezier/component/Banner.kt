@@ -314,7 +314,7 @@ enum class BannerType(
         @ColorRes val descriptionColor: Int,
 ) {
     Inner(
-            backgroundColor = R.color.surface_low,
+            backgroundColor = R.color.fill_neutral_lighter,
             elevation = 0.dp,
             descriptionColor = R.color.text_neutral_light,
     ),
