@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
     <color name="text_neutral">@color/white_80</color>
+    <color name="text_inverse">@color/black_85</color>
     <color name="text_neutral_heaviest">@color/white_100</color>
     <color name="text_neutral_light">@color/white_60</color>
     <color name="text_neutral_lighter">@color/white_40</color>
@@ -12,6 +13,7 @@
     <color name="icon_critical">@color/red_300</color>
     <color name="icon_neutral_heavy">@color/white_60</color>
     <color name="icon_neutral_heavier">@color/white_80</color>
+    <color name="icon_inverse_heavier">@color/black_85</color>
     <color name="icon_accent_blue">@color/blue_300</color>
     <color name="icon_accent_cobalt">@color/cobalt_300</color>
     <color name="icon_accent_green">@color/green_300</color>
@@ -30,7 +32,7 @@
     <color name="fill_highlight">@color/cobalt_300</color>
     <color name="fill_warning">@color/orange_300</color>
     <color name="fill_critical">@color/red_300</color>
-    <color name="fill_neutral_heaviest">@color/white_90</color>
+    <color name="fill_neutral_heaviest">@color/white_100</color>
     <color name="fill_neutral_heavier">@color/white_40</color>
     <color name="fill_neutral_heavy">@color/white_20</color>
     <color name="fill_neutral_light">@color/white_8</color>
@@ -55,6 +57,7 @@
     <color name="fill_grey_heavier">@color/grey_750</color>
     <color name="fill_grey_heavy">@color/grey_800</color>
     <color name="fill_grey">@color/grey_850</color>
+    <color name="fill_bright">@color/grey_650</color>
     <color name="fill_accent_blue">@color/blue_300_18</color>
     <color name="fill_accent_cobalt">@color/cobalt_300_18</color>
     <color name="fill_accent_green">@color/green_300_18</color>
@@ -108,7 +111,7 @@
     <color name="border_neutral">@color/white_12</color>
     <color name="border_neutral_heavy">@color/white_20</color>
     <color name="border_neutral_heavier">@color/white_40</color>
-    <color name="border_detach_highest">@color/grey_700</color>
+    <color name="border_detach_highest">@color/grey_750</color>
     <color name="border_absolute_white">@color/white_100</color>
     <color name="border_detach_higher">@color/grey_800</color>
     <color name="surface_highest">@color/grey_750</color>
@@ -124,8 +127,8 @@
     <color name="text_critical">@color/red_300</color>
     <color name="text_accent_blue">@color/blue_300</color>
     <color name="text_accent_cobalt">@color/cobalt_300</color>
-    <color name="surface_glass_highest">@color/grey_700_90</color>
     <color name="text_accent_green">@color/green_300</color>
+    <color name="surface_glass_highest">@color/grey_750_90</color>
     <color name="text_accent_red">@color/red_300</color>
     <color name="surface_glass_higher">@color/grey_800_90</color>
     <color name="surface_glass_high">@color/grey_850_90</color>
@@ -137,28 +140,17 @@
     <color name="text_accent_navy">@color/navy_300</color>
     <color name="text_accent_purple">@color/purple_300</color>
     <color name="text_accent_pink">@color/pink_300</color>
-    <color name="surface_accent_blue">@color/blue_300</color>
-    <color name="surface_accent_cobalt">@color/cobalt_300</color>
-    <color name="surface_accent_green">@color/green_300</color>
-    <color name="surface_accent_red">@color/red_300</color>
-    <color name="surface_accent_orange">@color/orange_300</color>
-    <color name="surface_accent_yellow">@color/yellow_300</color>
-    <color name="surface_accent_olive">@color/olive_300</color>
-    <color name="surface_accent_teal">@color/teal_300</color>
-    <color name="surface_accent_navy">@color/navy_300</color>
-    <color name="surface_accent_purple">@color/purple_300</color>
-    <color name="surface_accent_pink">@color/pink_300</color>
     <color name="text_absolute_white">@color/white_100</color>
     <color name="text_absolute_black">@color/black_100</color>
-    <color name="gradient_accent_green">@color/green_400</color>
     <color name="surface">@color/grey_900</color>
+    <color name="gradient_accent_green">@color/green_400</color>
+    <color name="border_detach">@color/grey_900</color>
     <color name="gradient_accent_green_light">@color/green_300</color>
     <color name="dim_absolute_black">@color/black_40</color>
-    <color name="border_detach">@color/grey_900</color>
     <color name="state_default">@color/white_20</color>
     <color name="state_action">@color/blue_300</color>
     <color name="state_warning">@color/orange_300</color>
-    <color name="state_action_light">@color/blue_300_30</color>
+    <color name="state_action_light">@color/blue_300_45</color>
     <color name="state_warning_light">@color/orange_300</color>
     <color name="elevation_xlarge">@color/black_30</color>
     <color name="elevation_large">@color/black_22</color>
