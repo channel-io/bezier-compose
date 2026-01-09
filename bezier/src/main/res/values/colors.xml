@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
     <color name="text_neutral">@color/black_85</color>
-    <color name="text_inverse">@color/white_100</color>
+    <color name="text_inverse">@color/white_80</color>
     <color name="text_neutral_heaviest">@color/black_100</color>
     <color name="text_neutral_light">@color/black_60</color>
     <color name="text_neutral_lighter">@color/black_40</color>
@@ -13,7 +13,7 @@
     <color name="icon_critical">@color/red_400</color>
     <color name="icon_neutral_heavy">@color/black_60</color>
     <color name="icon_neutral_heavier">@color/black_85</color>
-    <color name="icon_inverse_heavier">@color/white_100</color>
+    <color name="icon_inverse_heavier">@color/white_80</color>
     <color name="icon_accent_blue">@color/blue_400</color>
     <color name="icon_accent_cobalt">@color/cobalt_400</color>
     <color name="icon_accent_green">@color/green_400</color>
