@@ -15,16 +15,12 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Call
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.Email
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.rememberVectorPainter
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.layout.IntrinsicMeasurable
 import androidx.compose.ui.layout.IntrinsicMeasureScope
 import androidx.compose.ui.layout.Layout
@@ -259,7 +255,7 @@ private enum class ListItemWidthOppressionTarget {
 private fun ListItemContainerPreview() {
     ListItemContainer(
             modifier = Modifier.fillMaxWidth(),
-            leftContent = { Icon(painter = rememberVectorPainter(image = Icons.Default.Check), contentDescription = null) },
+            leftContent = { Icon(painter = painterResource(id = R.drawable.icon_check_bold), contentDescription = null) },
             centerContent = {
                 Text("Hello World puasdlfkjasldkfjasldkfj", maxLines = 1, overflow = TextOverflow.Ellipsis)
             },
@@ -286,7 +282,7 @@ fun ProfileEmailListItemPreview() {
                         .fillMaxWidth()
                         .clickable { }
                         .listItemPadding(),
-                leftContent = { Icon(painter = rememberVectorPainter(image = Icons.Default.Email), contentDescription = null) },
+                leftContent = { Icon(painter = painterResource(id = R.drawable.icon_email), contentDescription = null) },
                 centerContent = {
                     Text(
                             "Email",
@@ -312,7 +308,7 @@ fun ProfileEmailListItemPreview() {
                         .fillMaxWidth()
                         .clickable { }
                         .listItemPadding(),
-                leftContent = { Icon(painter = rememberVectorPainter(image = Icons.Default.Call), contentDescription = null) },
+                leftContent = { Icon(painter = painterResource(id = R.drawable.icon_call), contentDescription = null) },
                 centerContent = {
                     Text(
                             "Call",

@@ -2,10 +2,10 @@ package io.channel.bezier
 
 import androidx.compose.foundation.LocalIndication
 import androidx.compose.material.LocalContentColor
-import androidx.compose.material.ripple.LocalRippleTheme
+import androidx.compose.material.LocalRippleConfiguration
+import androidx.compose.material.RippleConfiguration
 import androidx.compose.material.ripple.RippleAlpha
-import androidx.compose.material.ripple.RippleTheme
-import androidx.compose.material.ripple.rememberRipple
+import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.ReadOnlyComposable
@@ -14,8 +14,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.staticCompositionLocalOf
-import androidx.compose.ui.graphics.Color
-import io.channel.bezier.color.*
+import io.channel.bezier.color.BezierSemanticColorV3
+import io.channel.bezier.color.Colors
+import io.channel.bezier.color.DarkColor
+import io.channel.bezier.color.LightColor
 import io.channel.bezier.color.darkColors
 import io.channel.bezier.color.lightColors
 
@@ -30,19 +32,35 @@ fun BezierTheme(
             false -> lightColors()
         }
     }
-
     val colorsV3 = remember(isDark) {
         when (isDark) {
             true -> DarkColor()
-            else -> LightColor()
+            false -> LightColor()
         }
     }
 
+    val contentColor = if (isDark) {
+        colorsV3.fillAbsoluteWhite
+    } else {
+        colorsV3.fillAbsoluteBlack
+    }
+
+    val rippleConfiguration = remember(isDark, contentColor) {
+        RippleConfiguration(
+                color = contentColor,
+                rippleAlpha = RippleAlpha(
+                        pressedAlpha = 0.12f,
+                        focusedAlpha = 0.12f,
+                        draggedAlpha = 0.08f,
+                        hoveredAlpha = 0.04f,
+                ),
+        )
+    }
     CompositionLocalProvider(
             LocalColors provides colors,
             LocalColorsV3 provides colorsV3,
-            LocalIndication provides rememberRipple(),
-            LocalRippleTheme provides BezierRippleTheme,
+            LocalIndication provides ripple(),
+            LocalRippleConfiguration provides rippleConfiguration,
     ) {
         content()
     }
@@ -75,18 +93,3 @@ object BezierTheme {
 internal val LocalColors = staticCompositionLocalOf { lightColors() }
 
 internal val LocalColorsV3 = staticCompositionLocalOf<BezierSemanticColorV3> { LightColor() }
-
-
-private object BezierRippleTheme : RippleTheme {
-    @Composable
-    override fun defaultColor(): Color = RippleTheme.defaultRippleColor(
-            contentColor = LocalContentColor.current,
-            lightTheme = !BezierTheme.isDark,
-    )
-
-    @Composable
-    override fun rippleAlpha(): RippleAlpha = RippleTheme.defaultRippleAlpha(
-            contentColor = LocalContentColor.current,
-            lightTheme = !BezierTheme.isDark,
-    )
-}

@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
-import androidx.compose.material.ripple.rememberRipple
+import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -45,7 +45,7 @@ fun OutlineItem(
                 modifier = Modifier
                         .clickable(
                                 enabled = onClickExpand != null && toggle != OutlineToggle.Leaf,
-                                indication = rememberRipple(radius = 12.dp),
+                                indication = ripple(radius = 12.dp),
                                 interactionSource = remember { MutableInteractionSource() },
                                 onClick = { onClickExpand?.invoke() },
                         )
