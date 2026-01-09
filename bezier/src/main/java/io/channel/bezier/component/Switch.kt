@@ -119,8 +119,8 @@ fun Switch(
                 .collect { state.checkValueChange() }
     }
 
-    val checkedColor = BezierTheme.colors.bgtxtGreenNormal
-    val uncheckedColor = BezierTheme.colors.bgBlackDark
+    val checkedColor = BezierTheme.colorsV3.fillAccentGreenHeavier
+    val uncheckedColor = BezierTheme.colorsV3.fillNeutralHeavy
     val backgroundColor by remember(state) {
         derivedStateOf { 
             lerp(uncheckedColor, checkedColor, state.dragRate)
@@ -181,7 +181,7 @@ private fun Thumb(
                             shape = CircleShape,
                     )
                     .background(
-                            color = BezierTheme.colors.bgtxtAbsoluteWhiteDark,
+                            color = BezierTheme.colorsV3.fillAbsoluteWhite,
                     ),
     )
 }
