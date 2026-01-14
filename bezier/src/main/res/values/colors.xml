@@ -56,6 +56,7 @@
     <color name="fill_critical_transparent">@color/red_400_0</color>
     <color name="fill_grey_heavier">@color/grey_200</color>
     <color name="fill_grey_heavy">@color/grey_100</color>
+    <color name="fill_grey_light">@color/grey_25</color>
     <color name="fill_grey">@color/grey_50</color>
     <color name="fill_bright">@color/grey_25</color>
     <color name="fill_accent_blue">@color/blue_400_10</color>

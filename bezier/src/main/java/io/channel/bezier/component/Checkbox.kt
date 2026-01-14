@@ -111,7 +111,7 @@ class Checkbox @JvmOverloads constructor(
         @Composable
         fun backgroundColor(type: Type, state: State): androidx.compose.ui.graphics.Color {
             if (state == State.Off) {
-                return BezierTheme.colorsV3.surface
+                return BezierTheme.colorsV3.fillGreyLight
             }
 
             return when (this) {

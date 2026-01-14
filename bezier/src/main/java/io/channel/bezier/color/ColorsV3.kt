@@ -82,6 +82,7 @@ interface BezierSemanticColorV3 {
     val fillCriticalLighter: Color
     val fillCriticalTransparent: Color
     val fillGrey: Color
+    val fillGreyLight: Color
     val fillGreyHeavier: Color
     val fillGreyHeavy: Color
     val fillHighlight: Color
@@ -164,6 +165,7 @@ interface BezierSemanticColorV3 {
     val textNeutralLighter: Color
     val textSuccess: Color
     val textWarning: Color
+
 }
 
 internal class LightColor : BezierSemanticColorV3 {
@@ -246,6 +248,7 @@ internal class LightColor : BezierSemanticColorV3 {
     override val fillCriticalLighter = BezierGlobalColor.Red400_10
     override val fillCriticalTransparent = BezierGlobalColor.Red400_0
     override val fillGrey = BezierGlobalColor.Grey50
+    override val fillGreyLight: Color = BezierGlobalColor.Grey25
     override val fillGreyHeavier = BezierGlobalColor.Grey200
     override val fillGreyHeavy = BezierGlobalColor.Grey100
     override val fillHighlight = BezierGlobalColor.Cobalt400
@@ -410,6 +413,7 @@ internal class DarkColor : BezierSemanticColorV3 {
     override val fillCriticalLighter = BezierGlobalColor.Red300_18
     override val fillCriticalTransparent = BezierGlobalColor.Red300_0
     override val fillGrey = BezierGlobalColor.Grey850
+    override val fillGreyLight: Color = BezierGlobalColor.Grey900
     override val fillGreyHeavier = BezierGlobalColor.Grey750
     override val fillGreyHeavy = BezierGlobalColor.Grey800
     override val fillHighlight = BezierGlobalColor.Cobalt300

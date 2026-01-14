@@ -110,6 +110,11 @@ fun TextField(
         else -> colorResource(type.innerFocusedBorderColorId)
     }
 
+    val backgroundColor = when {
+        focused -> colorResource(type.focusedBackColorId)
+        else -> colorResource(type.backColorId)
+    }
+
     val transformedText = remember(value, visualTransformation) {
         visualTransformation.filter(value.annotatedString)
     }
@@ -147,7 +152,7 @@ fun TextField(
                             shape = RoundedCornerShape(InnerBorderRadius),
                     )
                     .clip(RoundedCornerShape(8.dp))
-                    .background(colorResource(type.backColorId))
+                    .background(backgroundColor)
                     .padding(horizontal = 10.dp, vertical = size.verticalPadding),
             enabled = enabled,
             readOnly = readOnly,
@@ -312,6 +317,7 @@ fun TextField(
 
 enum class TextFieldType(
         @ColorRes val backColorId: Int,
+        @ColorRes val focusedBackColorId: Int,
         @ColorRes val borderColorId: Int,
         @ColorRes val outerFocusedBorderColorId: Int,
         @ColorRes val innerFocusedBorderColorId: Int,
@@ -320,6 +326,7 @@ enum class TextFieldType(
 ) {
     Primary(
             backColorId = R.color.fill_neutral_lightest,
+            focusedBackColorId = R.color.fill_grey_light,
             borderColorId = R.color.border_neutral,
             outerFocusedBorderColorId = R.color.border_neutral,
             innerFocusedBorderColorId = R.color.text_accent_blue,
@@ -328,6 +335,7 @@ enum class TextFieldType(
     ),
     Secondary(
             backColorId = R.color.fill_neutral_light,
+            focusedBackColorId = R.color.fill_neutral_light,
             borderColorId = R.color.fill_absolute_black_transparent,
             outerFocusedBorderColorId = R.color.fill_absolute_black_transparent,
             innerFocusedBorderColorId = R.color.fill_absolute_black_transparent,
@@ -336,6 +344,7 @@ enum class TextFieldType(
     ),
     Tertiary(
             backColorId = R.color.fill_absolute_black_transparent,
+            focusedBackColorId = R.color.fill_neutral_light,
             borderColorId = R.color.fill_absolute_black_transparent,
             outerFocusedBorderColorId = R.color.fill_absolute_black_transparent,
             innerFocusedBorderColorId = R.color.fill_absolute_black_transparent,
