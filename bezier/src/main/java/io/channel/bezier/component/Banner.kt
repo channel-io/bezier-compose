@@ -319,7 +319,7 @@ enum class BannerType(
             descriptionColor = R.color.text_neutral_light,
     ),
     Floating(
-            backgroundColor = R.color.fill_neutral_lighter,
+            backgroundColor = R.color.surface_higher,
             elevation = 20.dp,
             descriptionColor = R.color.text_neutral,
     ),
