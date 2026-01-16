@@ -79,7 +79,7 @@ fun SectionLabel(
         }
 
         if (rightContents != null) {
-            CompositionLocalProvider(LocalContentColor provides BezierTheme.colorsV3.textNeutralLighter) {
+            CompositionLocalProvider(LocalContentColor provides BezierTheme.colorsV3.iconNeutral) {
                 Row(
                         modifier = Modifier
                                 .padding(vertical = 1.dp),

@@ -329,9 +329,9 @@ enum class TextFieldType(
             focusedBackColorId = R.color.fill_grey_light,
             borderColorId = R.color.border_neutral,
             outerFocusedBorderColorId = R.color.border_neutral,
-            innerFocusedBorderColorId = R.color.text_accent_blue,
+            innerFocusedBorderColorId = R.color.fill_accent_blue_heavier,
             outerErrorBorderColorId = R.color.fill_neutral_light,
-            innerErrorBorderColorId = R.color.text_accent_orange,
+            innerErrorBorderColorId = R.color.fill_accent_orange_heavier,
     ),
     Secondary(
             backColorId = R.color.fill_neutral_light,
