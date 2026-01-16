@@ -277,7 +277,7 @@ enum class ButtonColor {
                     Green -> BezierTheme.colorsV3.fillAccentGreenHeavier
                     MonochromeLight -> BezierTheme.colorsV3.fillNeutralLight
                     MonochromeDark -> BezierTheme.colorsV3.fillNeutralHeaviest
-                    AbsoluteWhite -> BezierTheme.colors.bgTransparent
+                    AbsoluteWhite -> BezierTheme.colorsV3.fillAbsoluteWhiteTransparent
                     Orange -> BezierTheme.colorsV3.fillAccentOrangeHeavier
                 }
             }
@@ -289,7 +289,7 @@ enum class ButtonColor {
                     Cobalt -> BezierTheme.colorsV3.fillAccentCobaltHeavier
                     Green -> BezierTheme.colorsV3.fillAccentGreenHeavier
                     MonochromeLight, MonochromeDark -> BezierTheme.colorsV3.surfaceHigher
-                    AbsoluteWhite -> BezierTheme.colors.bgTransparent
+                    AbsoluteWhite -> BezierTheme.colorsV3.fillAbsoluteWhiteTransparent
                     Orange -> BezierTheme.colorsV3.fillAccentOrangeHeavier
                 }
             }
@@ -301,12 +301,12 @@ enum class ButtonColor {
                     Cobalt -> BezierTheme.colorsV3.fillAccentCobalt
                     Green -> BezierTheme.colorsV3.fillAccentGreen
                     MonochromeLight, MonochromeDark -> BezierTheme.colorsV3.fillNeutralLight
-                    AbsoluteWhite -> BezierTheme.colors.bgTransparent
+                    AbsoluteWhite -> BezierTheme.colorsV3.fillAbsoluteWhiteTransparent
                     Orange -> BezierTheme.colorsV3.fillAccentOrange
                 }
             }
 
-            ButtonType.Tertiary -> BezierTheme.colors.bgTransparent
+            ButtonType.Tertiary -> BezierTheme.colorsV3.fillAbsoluteWhiteTransparent
         }
     }
 
