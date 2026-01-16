@@ -344,7 +344,7 @@ enum class TextFieldType(
     ),
     Tertiary(
             backColorId = R.color.fill_absolute_black_transparent,
-            focusedBackColorId = R.color.fill_neutral_light,
+            focusedBackColorId = R.color.fill_absolute_black_transparent,
             borderColorId = R.color.fill_absolute_black_transparent,
             outerFocusedBorderColorId = R.color.fill_absolute_black_transparent,
             innerFocusedBorderColorId = R.color.fill_absolute_black_transparent,
