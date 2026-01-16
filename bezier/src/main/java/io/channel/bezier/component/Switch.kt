@@ -43,6 +43,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Density
@@ -112,6 +113,7 @@ fun Switch(
         enabled: Boolean = true,
 ) {
     val coroutineScope = rememberCoroutineScope()
+    val density = LocalDensity.current
 
     LaunchedEffect(state) {
         snapshotFlow { state.anchoredDraggableState.currentValue }
@@ -121,20 +123,28 @@ fun Switch(
 
     val checkedColor = BezierTheme.colorsV3.fillAccentGreenHeavier
     val uncheckedColor = BezierTheme.colorsV3.fillNeutralHeavy
-    val backgroundColor by remember(state) {
-        derivedStateOf { 
-            lerp(uncheckedColor, checkedColor, state.dragRate)
-        }
-    }
-
+    
     val flingBehavior = AnchoredDraggableDefaults.flingBehavior(
             state = state.anchoredDraggableState,
+            positionalThreshold = { it * 0.3f },
             animationSpec = AnimationSpec,
-            positionalThreshold = { it * 0.3f }
     )
 
     Row(
             modifier = Modifier
+                    .onSizeChanged { size ->
+                        val trackWidth = size.width.toFloat()
+                        val thumbSize = with(density) { 24.dp.toPx() }
+                        val maxOffset = trackWidth - thumbSize - with(density) { 4.dp.toPx() } // padding 2dp * 2
+                        
+                        state.anchoredDraggableState.updateAnchors(
+                                newAnchors = DraggableAnchors {
+                                    SwitchOff at 0f
+                                    SwitchOn at maxOffset
+                                },
+                                newTarget = state.anchoredDraggableState.currentValue
+                        )
+                    }
                     .anchoredDraggable(
                             enabled = enabled,
                             state = state.anchoredDraggableState,
@@ -156,7 +166,13 @@ fun Switch(
                         .width(50.dp)
                         .height(28.dp)
                         .alpha(if (enabled) 1f else 0.4f)
-                        .roundedBackground(backgroundColor = backgroundColor)
+                        .roundedBackground(
+                                backgroundColor = lerp(
+                                        uncheckedColor,
+                                        checkedColor,
+                                        state.dragRate
+                                )
+                        )
                         .padding(2.dp),
         ) {
             Thumb(
@@ -191,18 +207,11 @@ fun rememberSwitchState(
         initialValue: Boolean,
         onCheckedChange: ((Boolean) -> Unit)?
 ): SwitchState {
-    val density = LocalDensity.current
     val state = remember {
         SwitchState(
                 initialValue = initialValue,
                 onCheckedChange = onCheckedChange,
         )
-    }
-    LaunchedEffect(density) {
-        state.anchoredDraggableState.updateAnchors(DraggableAnchors {
-            SwitchOff at 0f
-            SwitchOn at with(density) { 22.dp.toPx() }
-        })
     }
     return state
 }
