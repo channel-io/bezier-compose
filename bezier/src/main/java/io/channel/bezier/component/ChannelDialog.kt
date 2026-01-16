@@ -77,7 +77,7 @@ private fun ChannelDialogLayout(
                     .padding(horizontal = 40.dp)
                     .widthIn(max = 480.dp)
                     .fillMaxWidth(),
-            color = BezierTheme.colorsV3.surface,
+            color = BezierTheme.colorsV3.surfaceHigher,
             shape = RoundedCornerShape(16.dp),
     ) {
         Column(
