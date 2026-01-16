@@ -248,7 +248,7 @@ private fun BannerLayout(
                             .padding(start = 6.dp, top = 5.dp, bottom = 5.dp)
                             .size(20.dp),
                     painter = leftIcon,
-                    tint = leftIconColor.takeOrElse { BezierTheme.colors.txtBlackDark },
+                    tint = leftIconColor.takeOrElse { BezierTheme.colorsV3.iconNeutral },
                     contentDescription = null,
             )
         }
@@ -262,7 +262,7 @@ private fun BannerLayout(
             if (type == BannerType.Inner && title != null) {
                 Text(
                         text = title,
-                        color = BezierTheme.colors.txtBlackDarker,
+                        color = BezierTheme.colorsV3.textNeutralLight,
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp,
                 )
@@ -292,7 +292,7 @@ private fun BannerLayout(
                             )
                             .padding(5.dp),
                     painter = painterResource(id = R.drawable.icon_cancel_small),
-                    tint = BezierTheme.colors.txtBlackDark,
+                    tint = BezierTheme.colorsV3.iconNeutral,
                     contentDescription = null,
             )
         } else if (onClick != null) {
@@ -301,7 +301,7 @@ private fun BannerLayout(
                             .size(30.dp)
                             .padding(5.dp),
                     painter = rightIcon ?: painterResource(id = R.drawable.icon_chevron_small_right),
-                    tint = BezierTheme.colors.txtBlackDark,
+                    tint = BezierTheme.colorsV3.iconNeutral,
                     contentDescription = null,
             )
         }
@@ -314,19 +314,19 @@ enum class BannerType(
         @ColorRes val descriptionColor: Int,
 ) {
     Inner(
-            backgroundColor = R.color.bg_black_lightest,
+            backgroundColor = R.color.fill_neutral_lighter,
             elevation = 0.dp,
-            descriptionColor = R.color.txt_black_darker,
+            descriptionColor = R.color.text_neutral_light,
     ),
     Floating(
-            backgroundColor = R.color.bg_grey_lighter,
+            backgroundColor = R.color.surface_higher,
             elevation = 20.dp,
-            descriptionColor = R.color.txt_black_darkest,
+            descriptionColor = R.color.text_neutral,
     ),
     Card(
-            backgroundColor = R.color.bg_white_low,
+            backgroundColor = R.color.surface_high,
             elevation = 6.dp,
-            descriptionColor = R.color.txt_black_darkest,
+            descriptionColor = R.color.text_neutral,
     ),
 }
 
@@ -339,7 +339,7 @@ private fun FloatingBannerPreview() {
             title = null,
             description = "componet ia properies, parent cmobil iespetc",
             leftIcon = painterResource(id = R.drawable.icon_lock),
-            leftIconColor = BezierTheme.colors.txtBlackDark,
+            leftIconColor = BezierTheme.colorsV3.textNeutralLighter,
             onRemove = {},
     )
 }
@@ -353,7 +353,7 @@ private fun CardBannerPreview() {
             title = null,
             description = "componet ia properies, parent cmobil iespetc",
             leftIcon = painterResource(id = R.drawable.icon_lock),
-            leftIconColor = BezierTheme.colors.txtBlackDark,
+            leftIconColor = BezierTheme.colorsV3.textNeutralLighter,
             onRemove = {},
     )
 }
@@ -368,14 +368,14 @@ private fun InnerBannerPreview() {
             title = "componet ia properies, palent",
             description = "shape viw imlaouy",
             leftIcon = painterResource(id = R.drawable.icon_lock),
-            leftIconColor = BezierTheme.colors.txtBlackDark,
+            leftIconColor = BezierTheme.colorsV3.textNeutralLighter,
             onRemove = {},
     ) {
         Box(
                 modifier = Modifier
                         .size(64.dp, 52.dp)
                         .background(
-                                color = BezierTheme.colors.bgtxtBlueNormal,
+                                color = BezierTheme.colorsV3.textAccentBlue,
                         ),
         )
     }
@@ -391,7 +391,7 @@ private fun InnerBannerWithoutTitlePreview() {
             title = null,
             description = "shape viw imlaouy",
             leftIcon = painterResource(id = R.drawable.icon_lock),
-            leftIconColor = BezierTheme.colors.txtBlackDark,
+            leftIconColor = BezierTheme.colorsV3.textNeutralLighter,
             onRemove = {},
     )
 }
@@ -424,14 +424,14 @@ private fun BannerOnRemovePreview() {
                 title = "componet ia properies, palent",
                 description = "shape viw imlaouy",
                 leftIcon = painterResource(id = R.drawable.icon_lock),
-                leftIconColor = BezierTheme.colors.txtBlackDark,
+                leftIconColor = BezierTheme.colorsV3.textNeutralLighter,
                 onRemove = { visibleState = false },
         ) {
             Box(
                     modifier = Modifier
                             .size(64.dp, 52.dp)
                             .background(
-                                    color = BezierTheme.colors.bgtxtBlueNormal,
+                                    color = BezierTheme.colorsV3.textAccentBlue,
                             ),
             )
         }
@@ -451,7 +451,7 @@ private fun BannerOnClickPreview() {
                 title = "componet ia properies, palent",
                 description = "shape viw imlaouy",
                 leftIcon = painterResource(id = R.drawable.icon_lock),
-                leftIconColor = BezierTheme.colors.txtBlackDark,
+                leftIconColor = BezierTheme.colorsV3.textNeutralLighter,
                 rightIcon = painterResource(id = R.drawable.icon_chat_edit),
                 onClick = {},
         ) {
@@ -459,7 +459,7 @@ private fun BannerOnClickPreview() {
                     modifier = Modifier
                             .size(64.dp, 52.dp)
                             .background(
-                                    color = BezierTheme.colors.bgtxtBlueNormal,
+                                    color = BezierTheme.colorsV3.textAccentBlue,
                             ),
             )
         }
@@ -479,7 +479,7 @@ private fun BannerOnClickOnRemovePreview() {
                 title = "componet ia properies, palent",
                 description = "shape viw imlaouy",
                 leftIcon = painterResource(id = R.drawable.icon_lock),
-                leftIconColor = BezierTheme.colors.txtBlackDark,
+                leftIconColor = BezierTheme.colorsV3.textNeutralLighter,
                 onClick = {},
                 onRemove = {},
         ) {
@@ -487,7 +487,7 @@ private fun BannerOnClickOnRemovePreview() {
                     modifier = Modifier
                             .size(64.dp, 52.dp)
                             .background(
-                                    color = BezierTheme.colors.bgtxtBlueNormal,
+                                    color = BezierTheme.colorsV3.textAccentBlue,
                             ),
             )
         }

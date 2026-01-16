@@ -77,7 +77,7 @@ private fun ChannelDialogLayout(
                     .padding(horizontal = 40.dp)
                     .widthIn(max = 480.dp)
                     .fillMaxWidth(),
-            color = BezierTheme.colors.bgWhiteNormal,
+            color = BezierTheme.colorsV3.surfaceHigher,
             shape = RoundedCornerShape(16.dp),
     ) {
         Column(
@@ -91,7 +91,7 @@ private fun ChannelDialogLayout(
                         LocalTextStyle provides TextStyle(
                                 fontSize = 16.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = BezierTheme.colors.txtBlackDarkest,
+                                color = BezierTheme.colorsV3.textNeutral,
                                 textAlign = TextAlign.Center,
                         ),
                 ) {
@@ -105,7 +105,7 @@ private fun ChannelDialogLayout(
                 CompositionLocalProvider(
                         LocalTextStyle provides TextStyle(
                                 fontSize = 14.sp,
-                                color = BezierTheme.colors.txtBlackDarkest,
+                                color = BezierTheme.colorsV3.textNeutral,
                                 textAlign = TextAlign.Center,
                         ),
                 ) {

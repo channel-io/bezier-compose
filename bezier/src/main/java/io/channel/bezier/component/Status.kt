@@ -29,12 +29,12 @@ sealed interface StatusType {
     sealed class ColoredStatus(val colorId: Int) : StatusType
     sealed class IconStatus(val iconId: Int, val tintColorId: Int) : StatusType
 
-    object Online : ColoredStatus(R.color.bgtxt_green_normal)
-    object Offline : ColoredStatus(R.color.bg_grey_dark)
-    object Paused : IconStatus(R.drawable.icon_moon_filled, R.color.bgtxt_yellow_normal)
-    object Lock : IconStatus(R.drawable.icon_lock, R.color.txt_black_darker)
-    object OnlineDoNotDisturb : IconStatus(R.drawable.icon_moon_filled, R.color.bgtxt_green_normal)
-    object OfflineDoNotDisturb : IconStatus(R.drawable.icon_moon_filled, R.color.bgtxt_yellow_normal)
+    data object Online : ColoredStatus(R.color.icon_accent_green)
+    data object Offline : ColoredStatus(R.color.icon_neutral)
+    data object Paused : IconStatus(R.drawable.icon_moon_filled, R.color.icon_accent_yellow)
+    data object Lock : IconStatus(R.drawable.icon_lock, R.color.icon_neutral_heavy)
+    data object OnlineDoNotDisturb : IconStatus(R.drawable.icon_moon_filled, R.color.icon_accent_green)
+    data object OfflineDoNotDisturb : IconStatus(R.drawable.icon_moon_filled, R.color.icon_accent_yellow)
 }
 
 enum class StatusSize(
@@ -55,7 +55,7 @@ fun Status(
             modifier = modifier
                     .size(size.size)
                     .background(
-                            color = colorResource(id = R.color.bg_white_high),
+                            color = colorResource(id = R.color.surface_highest),
                             shape = CircleShape,
                     )
                     .padding(size.borderWidth),

@@ -111,17 +111,17 @@ class Checkbox @JvmOverloads constructor(
         @Composable
         fun backgroundColor(type: Type, state: State): androidx.compose.ui.graphics.Color {
             if (state == State.Off) {
-                return BezierTheme.colors.bgWhiteNormal
+                return BezierTheme.colorsV3.fillGreyLight
             }
 
             return when (this) {
                 Normal -> when (type) {
-                    Type.Rectangle -> BezierTheme.colors.bgtxtGreenNormal
-                    Type.Circle -> BezierTheme.colors.bgtxtBlueNormal
+                    Type.Rectangle -> BezierTheme.colorsV3.fillAccentGreenHeavier
+                    Type.Circle -> BezierTheme.colorsV3.fillAccentBlueHeavier
                 }
 
-                Green -> BezierTheme.colors.bgtxtGreenNormal
-                Blue -> BezierTheme.colors.bgtxtBlueNormal
+                Green -> BezierTheme.colorsV3.fillAccentGreenHeavier
+                Blue -> BezierTheme.colorsV3.fillAccentBlueHeavier
             }
         }
 
@@ -191,7 +191,7 @@ fun Checkbox(
                         .clip(RoundedCornerShape(type.borderRadius))
                         .border(
                                 width = state.borderWidth,
-                                color = BezierTheme.colors.bdrBlackLight,
+                                color = BezierTheme.colorsV3.borderNeutral,
                                 shape = RoundedCornerShape(type.borderRadius),
                         )
                         .background(color.backgroundColor(type, state))
@@ -210,7 +210,7 @@ fun Checkbox(
                                 .clip(RoundedCornerShape(type.borderRadius)),
                         painter = painterResource(id = state.drawableRes),
                         contentDescription = null,
-                        tint = BezierTheme.colors.bgtxtAbsoluteWhiteDark,
+                        tint = BezierTheme.colorsV3.iconAbsoluteWhite,
                 )
             }
         }
@@ -220,7 +220,7 @@ fun Checkbox(
             Text(
                     text = text,
                     fontSize = 15.sp,
-                    color = BezierTheme.colors.txtBlackDarkest,
+                    color = BezierTheme.colorsV3.textNeutral,
             )
         }
     }

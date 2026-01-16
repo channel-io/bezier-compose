@@ -110,6 +110,11 @@ fun TextField(
         else -> colorResource(type.innerFocusedBorderColorId)
     }
 
+    val backgroundColor = when {
+        focused -> colorResource(type.focusedBackColorId)
+        else -> colorResource(type.backColorId)
+    }
+
     val transformedText = remember(value, visualTransformation) {
         visualTransformation.filter(value.annotatedString)
     }
@@ -147,7 +152,7 @@ fun TextField(
                             shape = RoundedCornerShape(InnerBorderRadius),
                     )
                     .clip(RoundedCornerShape(8.dp))
-                    .background(colorResource(type.backColorId))
+                    .background(backgroundColor)
                     .padding(horizontal = 10.dp, vertical = size.verticalPadding),
             enabled = enabled,
             readOnly = readOnly,
@@ -180,7 +185,7 @@ fun TextField(
                             Box(modifier = Modifier.align(Alignment.CenterStart)) {
                                 CompositionLocalProvider(
                                         LocalTextStyle provides TextStyle(
-                                                color = BezierTheme.colors.txtBlackDark,
+                                                color = BezierTheme.colorsV3.textNeutralLighter,
                                                 fontSize = 16.sp,
                                         ),
                                         content = placeholder,
@@ -213,7 +218,7 @@ fun TextField(
                                     BezierIcons.ViewOff.imageVector
                                 },
                                 contentDescription = null,
-                                tint = BezierTheme.colors.txtBlackDark,
+                                tint = BezierTheme.colorsV3.iconNeutral,
                         )
                     }
 
@@ -236,7 +241,7 @@ fun TextField(
                                         ),
                                 imageVector = BezierIcons.CancelCircleFilled.imageVector,
                                 contentDescription = null,
-                                tint = BezierTheme.colors.txtBlackDark,
+                                tint = BezierTheme.colorsV3.iconNeutral,
                         )
                     }
 
@@ -312,6 +317,7 @@ fun TextField(
 
 enum class TextFieldType(
         @ColorRes val backColorId: Int,
+        @ColorRes val focusedBackColorId: Int,
         @ColorRes val borderColorId: Int,
         @ColorRes val outerFocusedBorderColorId: Int,
         @ColorRes val innerFocusedBorderColorId: Int,
@@ -319,28 +325,31 @@ enum class TextFieldType(
         @ColorRes val innerErrorBorderColorId: Int,
 ) {
     Primary(
-            backColorId = R.color.bg_grey_lightest,
-            borderColorId = R.color.bdr_black_light,
-            outerFocusedBorderColorId = R.color.bgtxt_blue_light,
-            innerFocusedBorderColorId = R.color.bgtxt_blue_normal,
-            outerErrorBorderColorId = R.color.bgtxt_orange_light,
-            innerErrorBorderColorId = R.color.bgtxt_orange_normal,
+            backColorId = R.color.fill_neutral_lightest,
+            focusedBackColorId = R.color.fill_grey_light,
+            borderColorId = R.color.border_neutral,
+            outerFocusedBorderColorId = R.color.border_neutral,
+            innerFocusedBorderColorId = R.color.fill_accent_blue_heavier,
+            outerErrorBorderColorId = R.color.fill_neutral_light,
+            innerErrorBorderColorId = R.color.fill_accent_orange_heavier,
     ),
     Secondary(
-            backColorId = R.color.bg_black_lighter,
-            borderColorId = R.color.bg_transparent,
-            outerFocusedBorderColorId = R.color.bg_transparent,
-            innerFocusedBorderColorId = R.color.bg_transparent,
-            outerErrorBorderColorId = R.color.bg_transparent,
-            innerErrorBorderColorId = R.color.bg_transparent,
+            backColorId = R.color.fill_neutral_light,
+            focusedBackColorId = R.color.fill_neutral_light,
+            borderColorId = R.color.fill_absolute_black_transparent,
+            outerFocusedBorderColorId = R.color.fill_absolute_black_transparent,
+            innerFocusedBorderColorId = R.color.fill_absolute_black_transparent,
+            outerErrorBorderColorId = R.color.fill_absolute_black_transparent,
+            innerErrorBorderColorId = R.color.fill_absolute_black_transparent,
     ),
     Tertiary(
-            backColorId = R.color.bg_transparent,
-            borderColorId = R.color.bg_transparent,
-            outerFocusedBorderColorId = R.color.bg_transparent,
-            innerFocusedBorderColorId = R.color.bg_transparent,
-            outerErrorBorderColorId = R.color.bg_transparent,
-            innerErrorBorderColorId = R.color.bg_transparent,
+            backColorId = R.color.fill_absolute_black_transparent,
+            focusedBackColorId = R.color.fill_absolute_black_transparent,
+            borderColorId = R.color.fill_absolute_black_transparent,
+            outerFocusedBorderColorId = R.color.fill_absolute_black_transparent,
+            innerFocusedBorderColorId = R.color.fill_absolute_black_transparent,
+            outerErrorBorderColorId = R.color.fill_absolute_black_transparent,
+            innerErrorBorderColorId = R.color.fill_absolute_black_transparent,
     ),
 }
 
@@ -375,7 +384,7 @@ private fun TextFieldPreview() = Column(Modifier.background(color = Color.White)
                         modifier = Modifier.padding(2.dp),
                         imageVector = BezierIcons.Search.imageVector,
                         contentDescription = null,
-                        tint = BezierTheme.colors.txtBlackDark,
+                        tint = BezierTheme.colorsV3.textNeutralLighter,
                 )
             },
             rightContent = {
@@ -388,7 +397,7 @@ private fun TextFieldPreview() = Column(Modifier.background(color = Color.White)
                                     .size(20.dp),
                             imageVector = BezierIcons.ChevronDown.imageVector,
                             contentDescription = null,
-                            tint = BezierTheme.colors.txtBlackDark,
+                            tint = BezierTheme.colorsV3.textNeutralLighter,
                     )
                 }
             },
@@ -417,7 +426,7 @@ private fun TextFieldPreview() = Column(Modifier.background(color = Color.White)
                         modifier = Modifier.padding(2.dp),
                         imageVector = BezierIcons.Search.imageVector,
                         contentDescription = null,
-                        tint = BezierTheme.colors.txtBlackDark,
+                        tint = BezierTheme.colorsV3.textNeutralLighter,
                 )
             },
             rightContent = {
@@ -430,7 +439,7 @@ private fun TextFieldPreview() = Column(Modifier.background(color = Color.White)
                                     .size(20.dp),
                             imageVector = BezierIcons.ChevronDown.imageVector,
                             contentDescription = null,
-                            tint = BezierTheme.colors.txtBlackDark,
+                            tint = BezierTheme.colorsV3.textNeutralLighter,
                     )
                 }
             },
@@ -453,7 +462,7 @@ private fun TextFieldPreview() = Column(Modifier.background(color = Color.White)
                     Icon(
                             imageVector = BezierIcons.BookEditing.imageVector,
                             contentDescription = null,
-                            tint = BezierTheme.colors.txtBlackDark,
+                            tint = BezierTheme.colorsV3.textNeutralLighter,
                     )
                 },
         )
@@ -473,7 +482,7 @@ private fun TextFieldPreview() = Column(Modifier.background(color = Color.White)
                         modifier = Modifier.padding(2.dp),
                         imageVector = BezierIcons.Search.imageVector,
                         contentDescription = null,
-                        tint = BezierTheme.colors.txtBlackDark,
+                        tint = BezierTheme.colorsV3.textNeutralLighter,
                 )
             },
             rightContent = {
@@ -486,7 +495,7 @@ private fun TextFieldPreview() = Column(Modifier.background(color = Color.White)
                                     .size(20.dp),
                             imageVector = BezierIcons.ChevronDown.imageVector,
                             contentDescription = null,
-                            tint = BezierTheme.colors.txtBlackDark,
+                            tint = BezierTheme.colorsV3.textNeutralLighter,
                     )
                 }
             },

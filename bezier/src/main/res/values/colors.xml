@@ -1,127 +1,165 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <resources>
-
-    <!-- bg -->
-    <color name="bg_grey_darkest">@color/grey900</color>
-    <color name="bg_grey_dark">@color/grey500</color>
-    <color name="bg_grey_light">@color/grey200</color>
-    <color name="bg_grey_lighter">@color/grey100</color>
-    <color name="bg_grey_lightest">@color/grey50</color>
-    <color name="inverted_bg_grey_lighter">@color/grey800</color>
-
-    <color name="bg_black_darkest">@color/black_60</color>
-    <color name="bg_black_darker">@color/black_40</color>
-    <color name="bg_black_dark">@color/black_15</color>
-    <color name="bg_black_light">@color/black_8</color>
-    <color name="bg_black_lighter">@color/black_5</color>
-    <color name="bg_black_lightest">@color/black_3</color>
-
-    <color name="bg_white_high">@color/white</color>
-    <color name="bg_white_low">@color/white</color>
-    <color name="bg_white_normal">@color/white</color>
-
-    <!-- bdr -->
-    <color name="bdr_black_light">@color/black_8</color>
-    <color name="bdr_black_lightest">@color/black_3</color>
-
-    <!-- shdw -->
-    <color name="shdw_xlarge">@color/black_30</color>
-    <color name="shdw_large">@color/black_22</color>
-    <color name="shdw_medium">@color/black_15</color>
-    <color name="shdw_small">@color/black_8</color>
-    <color name="shdw_base">@color/black_5</color>
-    <color name="shdw_base_inner">@color/white_12</color>
-
-    <!-- txt -->
-    <color name="txt_black_darkest">@color/black_85</color>
-    <color name="txt_black_darker">@color/black_60</color>
-    <color name="txt_black_dark">@color/black_40</color>
-
-    <!-- dim -->
-    <color name="bg_white_dim_dark">@color/white_60</color>
-
-    <color name="txt_white_normal">@color/white</color>
-
-    <!-- bgtxt -->
-    <color name="bgtxt_red_dark">@color/red500</color>
-    <color name="bgtxt_red_normal">@color/red400</color>
-    <color name="bgtxt_red_light">@color/red400_30</color>
-    <color name="bgtxt_red_lighter">@color/red400_20</color>
-    <color name="bgtxt_red_lightest">@color/red400_10</color>
-
-    <color name="bgtxt_cobalt_dark">@color/cobalt500</color>
-    <color name="bgtxt_cobalt_normal">@color/cobalt400</color>
-    <color name="bgtxt_cobalt_light">@color/cobalt400_30</color>
-    <color name="bgtxt_cobalt_lighter">@color/cobalt400_20</color>
-    <color name="bgtxt_cobalt_lightest">@color/cobalt400_10</color>
-
-    <color name="bgtxt_green_dark">@color/green500</color>
-    <color name="bgtxt_green_normal">@color/green400</color>
-    <color name="bgtxt_green_light">@color/green400_30</color>
-    <color name="bgtxt_green_lighter">@color/green400_20</color>
-    <color name="bgtxt_green_lightest">@color/green400_10</color>
-    <color name="inverted_bgtxt_green_normal">@color/green300</color>
-
-    <color name="bgtxt_teal_dark">@color/teal500</color>
-    <color name="bgtxt_teal_normal">@color/teal400</color>
-    <color name="bgtxt_teal_light">@color/teal400_30</color>
-    <color name="bgtxt_teal_lighter">@color/teal400_20</color>
-    <color name="bgtxt_teal_lightest">@color/teal400_10</color>
-
-    <color name="bgtxt_orange_dark">@color/orange500</color>
-    <color name="bgtxt_orange_normal">@color/orange400</color>
-    <color name="bgtxt_orange_light">@color/orange400_30</color>
-    <color name="bgtxt_orange_lighter">@color/orange400_20</color>
-    <color name="bgtxt_orange_lightest">@color/orange400_10</color>
-
-    <color name="bgtxt_yellow_dark">@color/yellow500</color>
-    <color name="bgtxt_yellow_normal">@color/yellow400</color>
-    <color name="bgtxt_yellow_light">@color/yellow400_30</color>
-    <color name="bgtxt_yellow_lighter">@color/yellow400_20</color>
-    <color name="bgtxt_yellow_lightest">@color/yellow400_10</color>
-
-    <color name="bgtxt_olive_dark">@color/olive500</color>
-    <color name="bgtxt_olive_normal">@color/olive400</color>
-    <color name="bgtxt_olive_light">@color/olive400_30</color>
-    <color name="bgtxt_olive_lighter">@color/olive400_20</color>
-    <color name="bgtxt_olive_lightest">@color/olive400_10</color>
-
-    <color name="bgtxt_pink_dark">@color/pink500</color>
-    <color name="bgtxt_pink_normal">@color/pink400</color>
-    <color name="bgtxt_pink_light">@color/pink400_30</color>
-    <color name="bgtxt_pink_lighter">@color/pink400_20</color>
-    <color name="bgtxt_pink_lightest">@color/pink400_10</color>
-
-    <color name="bgtxt_navy_dark">@color/navy500</color>
-    <color name="bgtxt_navy_normal">@color/navy400</color>
-    <color name="bgtxt_navy_light">@color/navy400_30</color>
-    <color name="bgtxt_navy_lighter">@color/navy400_20</color>
-    <color name="bgtxt_navy_lightest">@color/navy400_10</color>
-
-    <color name="bgtxt_blue_dark">@color/blue500</color>
-    <color name="bgtxt_blue_normal">@color/blue400</color>
-    <color name="bgtxt_blue_light">@color/blue400_30</color>
-    <color name="bgtxt_blue_lighter">@color/blue400_20</color>
-    <color name="bgtxt_blue_lightest">@color/blue400_10</color>
-
-    <color name="bgtxt_purple_dark">@color/purple500</color>
-    <color name="bgtxt_purple_normal">@color/purple400</color>
-    <color name="bgtxt_purple_light">@color/purple400_30</color>
-    <color name="bgtxt_purple_lighter">@color/purple400_20</color>
-    <color name="bgtxt_purple_lightest">@color/purple400_10</color>
-
-    <color name="bgtxt_absolute_white_dark">@color/white</color>
-    <color name="bgtxt_absolute_white_normal">@color/white_90</color>
-    <color name="bgtxt_absolute_white_light">@color/white_60</color>
-    <color name="bgtxt_absolute_white_lighter">@color/white_40</color>
-    <color name="bgtxt_absolute_white_lightest">@color/white_20</color>
-
-    <color name="bgtxt_absolute_black_dark">@color/black</color>
-    <color name="bgtxt_absolute_black_normal">@color/black_85</color>
-    <color name="bgtxt_absolute_black_light">@color/black_60</color>
-    <color name="bgtxt_absolute_black_lighter">@color/black_40</color>
-    <color name="bgtxt_absolute_black_lightest">@color/black_20</color>
-
-    <color name="bg_transparent">@color/white_0</color>
-
+    <color name="text_neutral">@color/black_85</color>
+    <color name="text_inverse">@color/white_80</color>
+    <color name="text_neutral_heaviest">@color/black_100</color>
+    <color name="text_neutral_light">@color/black_60</color>
+    <color name="text_neutral_lighter">@color/black_40</color>
+    <color name="icon_neutral">@color/black_40</color>
+    <color name="icon_action">@color/blue_400</color>
+    <color name="icon_success">@color/green_400</color>
+    <color name="icon_highlight">@color/cobalt_400</color>
+    <color name="icon_warning">@color/orange_400</color>
+    <color name="icon_critical">@color/red_400</color>
+    <color name="icon_neutral_heavy">@color/black_60</color>
+    <color name="icon_neutral_heavier">@color/black_85</color>
+    <color name="icon_inverse_heavier">@color/white_80</color>
+    <color name="icon_accent_blue">@color/blue_400</color>
+    <color name="icon_accent_cobalt">@color/cobalt_400</color>
+    <color name="icon_accent_green">@color/green_400</color>
+    <color name="icon_accent_red">@color/red_400</color>
+    <color name="icon_accent_orange">@color/orange_400</color>
+    <color name="icon_accent_yellow">@color/yellow_400</color>
+    <color name="icon_accent_olive">@color/olive_400</color>
+    <color name="icon_accent_teal">@color/teal_400</color>
+    <color name="icon_accent_navy">@color/navy_400</color>
+    <color name="icon_accent_purple">@color/purple_400</color>
+    <color name="icon_accent_pink">@color/pink_400</color>
+    <color name="icon_absolute_white">@color/white_100</color>
+    <color name="icon_absolute_black">@color/black_100</color>
+    <color name="fill_action">@color/blue_400</color>
+    <color name="fill_success">@color/green_400</color>
+    <color name="fill_highlight">@color/cobalt_400</color>
+    <color name="fill_warning">@color/orange_400</color>
+    <color name="fill_critical">@color/red_400</color>
+    <color name="fill_neutral_heaviest">@color/black_85</color>
+    <color name="fill_neutral_heavier">@color/black_40</color>
+    <color name="fill_neutral_heavy">@color/black_15</color>
+    <color name="fill_neutral_light">@color/black_5</color>
+    <color name="fill_neutral_lighter">@color/black_3</color>
+    <color name="fill_neutral_lightest">@color/black_1</color>
+    <color name="fill_neutral_transparent">@color/black_0</color>
+    <color name="fill_action_light">@color/blue_400_20</color>
+    <color name="fill_action_lighter">@color/blue_400_10</color>
+    <color name="fill_action_transparent">@color/blue_400_0</color>
+    <color name="fill_success_light">@color/green_400_20</color>
+    <color name="fill_success_lighter">@color/green_400_10</color>
+    <color name="fill_success_transparent">@color/green_400_0</color>
+    <color name="fill_highlight_light">@color/cobalt_400_20</color>
+    <color name="fill_highlight_lighter">@color/cobalt_400_10</color>
+    <color name="fill_highlight_transparent">@color/cobalt_400_0</color>
+    <color name="fill_warning_light">@color/orange_400_20</color>
+    <color name="fill_warning_lighter">@color/orange_400_10</color>
+    <color name="fill_warning_transparent">@color/orange_400_0</color>
+    <color name="fill_critical_light">@color/red_400_20</color>
+    <color name="fill_critical_lighter">@color/red_400_10</color>
+    <color name="fill_critical_transparent">@color/red_400_0</color>
+    <color name="fill_grey_heavier">@color/grey_200</color>
+    <color name="fill_grey_heavy">@color/grey_100</color>
+    <color name="fill_grey_light">@color/grey_25</color>
+    <color name="fill_grey">@color/grey_50</color>
+    <color name="fill_bright">@color/grey_25</color>
+    <color name="fill_accent_blue">@color/blue_400_10</color>
+    <color name="fill_accent_cobalt">@color/cobalt_400_10</color>
+    <color name="fill_accent_green">@color/green_400_10</color>
+    <color name="fill_accent_red">@color/red_400_10</color>
+    <color name="fill_accent_orange">@color/orange_400_10</color>
+    <color name="fill_accent_yellow">@color/yellow_400_10</color>
+    <color name="fill_accent_olive">@color/olive_400_10</color>
+    <color name="fill_accent_teal">@color/teal_400_10</color>
+    <color name="fill_accent_navy">@color/navy_400_10</color>
+    <color name="fill_accent_purple">@color/purple_400_10</color>
+    <color name="fill_accent_pink">@color/pink_400_10</color>
+    <color name="fill_accent_blue_heavy">@color/blue_400_20</color>
+    <color name="fill_accent_blue_heavier">@color/blue_400</color>
+    <color name="fill_accent_blue_transparent">@color/blue_400_0</color>
+    <color name="fill_accent_cobalt_heavy">@color/cobalt_400_20</color>
+    <color name="fill_accent_cobalt_heavier">@color/cobalt_400</color>
+    <color name="fill_accent_cobalt_transparent">@color/cobalt_400_0</color>
+    <color name="fill_accent_green_heavy">@color/green_400_20</color>
+    <color name="fill_accent_green_heavier">@color/green_400</color>
+    <color name="fill_accent_green_transparent">@color/green_400_0</color>
+    <color name="fill_accent_red_heavy">@color/red_400_20</color>
+    <color name="fill_accent_red_heavier">@color/red_400</color>
+    <color name="fill_accent_red_transparent">@color/red_400_0</color>
+    <color name="fill_accent_orange_heavy">@color/orange_400_20</color>
+    <color name="fill_accent_orange_heavier">@color/orange_400</color>
+    <color name="fill_accent_orange_transparent">@color/orange_400_0</color>
+    <color name="fill_accent_yellow_heavy">@color/yellow_400_20</color>
+    <color name="fill_accent_yellow_heavier">@color/yellow_400</color>
+    <color name="fill_accent_yellow_transparent">@color/yellow_400_0</color>
+    <color name="fill_accent_olive_heavy">@color/olive_400_20</color>
+    <color name="fill_accent_olive_heavier">@color/olive_400</color>
+    <color name="fill_accent_olive_transparent">@color/olive_400_0</color>
+    <color name="fill_accent_teal_heavy">@color/teal_400_20</color>
+    <color name="fill_accent_teal_heavier">@color/teal_400</color>
+    <color name="fill_accent_teal_transparent">@color/teal_400_0</color>
+    <color name="fill_accent_navy_heavy">@color/navy_400_20</color>
+    <color name="fill_accent_navy_heavier">@color/navy_400</color>
+    <color name="fill_accent_navy_transparent">@color/navy_400_0</color>
+    <color name="fill_accent_purple_heavy">@color/purple_400_20</color>
+    <color name="fill_accent_purple_heavier">@color/purple_400</color>
+    <color name="fill_accent_purple_transparent">@color/purple_400_0</color>
+    <color name="fill_accent_pink_heavy">@color/pink_400_20</color>
+    <color name="fill_accent_pink_heavier">@color/pink_400</color>
+    <color name="fill_accent_pink_transparent">@color/pink_400_0</color>
+    <color name="fill_absolute_white">@color/white_100</color>
+    <color name="fill_absolute_black">@color/black_100</color>
+    <color name="fill_absolute_white_light">@color/white_20</color>
+    <color name="fill_absolute_white_transparent">@color/white_0</color>
+    <color name="fill_absolute_black_light">@color/black_20</color>
+    <color name="fill_absolute_black_transparent">@color/black_0</color>
+    <color name="border_neutral">@color/black_8</color>
+    <color name="border_neutral_heavy">@color/black_15</color>
+    <color name="border_neutral_heavier">@color/black_40</color>
+    <color name="border_detach_highest">@color/white_100</color>
+    <color name="border_absolute_white">@color/white_100</color>
+    <color name="border_detach_higher">@color/white_100</color>
+    <color name="surface_highest">@color/white_100</color>
+    <color name="surface_higher">@color/white_100</color>
+    <color name="surface_high">@color/white_100</color>
+    <color name="surface_low">@color/grey_50</color>
+    <color name="dim_absolute_black_heavy">@color/black_60</color>
+    <color name="dim_absolute_white_heavy">@color/white_60</color>
+    <color name="text_action">@color/blue_400</color>
+    <color name="text_success">@color/green_400</color>
+    <color name="text_highlight">@color/cobalt_400</color>
+    <color name="text_warning">@color/orange_400</color>
+    <color name="text_critical">@color/red_400</color>
+    <color name="text_accent_blue">@color/blue_400</color>
+    <color name="text_accent_cobalt">@color/cobalt_400</color>
+    <color name="text_accent_green">@color/green_400</color>
+    <color name="surface_glass_highest">@color/grey_200_90</color>
+    <color name="text_accent_red">@color/red_400</color>
+    <color name="surface_glass_higher">@color/grey_100_90</color>
+    <color name="surface_glass_high">@color/white_90</color>
+    <color name="surface_glass">@color/white_90</color>
+    <color name="text_accent_orange">@color/orange_400</color>
+    <color name="text_accent_yellow">@color/yellow_400</color>
+    <color name="text_accent_olive">@color/olive_400</color>
+    <color name="text_accent_teal">@color/teal_400</color>
+    <color name="text_accent_navy">@color/navy_400</color>
+    <color name="text_accent_purple">@color/purple_400</color>
+    <color name="text_accent_pink">@color/pink_400</color>
+    <color name="text_absolute_white">@color/white_100</color>
+    <color name="text_absolute_black">@color/black_100</color>
+    <color name="surface">@color/white_100</color>
+    <color name="gradient_accent_green">@color/green_400</color>
+    <color name="border_detach">@color/white_100</color>
+    <color name="gradient_accent_green_light">@color/green_300</color>
+    <color name="dim_absolute_black">@color/black_40</color>
+    <color name="state_default">@color/black_15</color>
+    <color name="state_action">@color/blue_400</color>
+    <color name="state_warning">@color/orange_400</color>
+    <color name="state_action_light">@color/blue_400_30</color>
+    <color name="state_warning_light">@color/orange_400_30</color>
+    <color name="elevation_xlarge">@color/black_30</color>
+    <color name="elevation_large">@color/black_22</color>
+    <color name="elevation_medium">@color/black_15</color>
+    <color name="elevation_small">@color/black_8</color>
+    <color name="elevation_base">@color/black_5</color>
+    <color name="elevation_base_inner">@color/white_12</color>
+    <color name="dim_absolute_white">@color/white_40</color>
+    <color name="border_detach_high">@color/white_100</color>
+    <color name="border_detach_low">@color/grey_50</color>
 </resources>
