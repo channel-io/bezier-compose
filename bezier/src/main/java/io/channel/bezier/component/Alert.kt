@@ -30,7 +30,7 @@ fun Alert(
                 modifier = modifier
                         .background(
                                 shape = CircleShape,
-                                color = BezierTheme.colors.bgtxtRedNormal,
+                                color = BezierTheme.colorsV3.fillAccentRedHeavier,
                         )
                         .padding(
                                 vertical = 2.dp,
@@ -48,7 +48,7 @@ fun Alert(
                             .widthIn(min = 10.dp),
                     text = alertCount,
                     fontWeight = FontWeight.Bold,
-                    color = BezierTheme.colors.bgtxtAbsoluteWhiteDark,
+                    color = BezierTheme.colorsV3.textAbsoluteWhite,
                     fontSize = 12.sp,
                     textAlign = TextAlign.Center,
             )
@@ -59,7 +59,7 @@ fun Alert(
                         .size(6.dp)
                         .background(
                                 shape = RoundedCornerShape(3.dp),
-                                color = BezierTheme.colors.bgtxtRedNormal,
+                                color = BezierTheme.colorsV3.fillAccentRedHeavier,
                         ),
         )
     }

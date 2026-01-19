@@ -143,7 +143,7 @@ fun Avatar(
                             .size(size.borderSize)
                             .background(
                                     shape = shape,
-                                    color = BezierTheme.colors.bgWhiteHigh,
+                                    color = BezierTheme.colorsV3.surfaceHighest,
                             )
                             .padding(size.borderWidth)
 
@@ -223,8 +223,8 @@ private fun AvatarMoreOverlayPreview() {
                         painter = painterResource(id = R.drawable.icon_more),
                         modifier = Modifier
                                 .fillMaxSize()
-                                .background(BezierTheme.colors.bgtxtAbsoluteBlackLighter),
-                        tint = BezierTheme.colors.bgtxtAbsoluteWhiteNormal,
+                                .background(BezierTheme.colorsV3.dimAbsoluteBlack),
+                        tint = BezierTheme.colorsV3.fillAbsoluteWhite,
                         contentDescription = null,
                 )
             },
