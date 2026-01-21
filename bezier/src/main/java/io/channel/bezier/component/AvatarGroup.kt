@@ -60,7 +60,7 @@ fun AvatarGroup(
                         otherProfileCount > 99 -> "99+"
                         else -> "$otherProfileCount"
                     },
-                    color = BezierTheme.colors.txtBlackDark,
+                    color = BezierTheme.colorsV3.textNeutralLighter,
                     fontSize = 16.sp,
             )
         }

@@ -60,7 +60,7 @@ fun KeyValueItem(
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
                         fontSize = 15.sp,
-                        color = BezierTheme.colors.txtBlackDarkest,
+                        color = BezierTheme.colorsV3.textNeutral,
                 )
             },
     )
@@ -93,14 +93,14 @@ fun KeyValueItem(
                             modifier = Modifier.size(20.dp),
                             imageVector = icon,
                             contentDescription = null,
-                            tint = BezierTheme.colors.txtBlackDark,
+                            tint = BezierTheme.colorsV3.iconNeutral,
                     )
                 }
 
                 Text(
                         modifier = Modifier.sizeIn(maxWidth = 152.dp),
                         text = key,
-                        color = BezierTheme.colors.txtBlackDark,
+                        color = BezierTheme.colorsV3.textNeutralLighter,
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp,
                         maxLines = 1,
@@ -123,7 +123,7 @@ fun KeyValueItem(
                                 .height(6.dp)
                                 .padding(end = 4.dp)
                                 .background(
-                                        color = BezierTheme.colors.bgGreyLight,
+                                        color = BezierTheme.colorsV3.fillNeutralLight,
                                         shape = RoundedCornerShape(2.dp),
                                 ),
                 )
@@ -196,7 +196,7 @@ private class KeyValueItemIconBuilderImpl : KeyValueItemIconBuilder {
         iconInfoList += IconInfo(
                 icon = BezierIcons.ChevronSmallRight.imageVector,
                 size = 24,
-                tint = { BezierTheme.colors.txtBlackDark },
+                tint = { BezierTheme.colorsV3.iconNeutral },
         )
     }
 }

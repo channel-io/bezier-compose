@@ -28,9 +28,9 @@ fun IconActionListItem(
         modifier: Modifier = Modifier,
         size: ListItemContainerSize = ListItemContainerSize.M,
         description: String? = null,
-        titleColor: Color = BezierTheme.colors.txtBlackDarkest,
+        titleColor: Color = BezierTheme.colorsV3.textNeutral,
         icon: Painter? = null,
-        iconColor: Color = BezierTheme.colors.txtBlackDarker,
+        iconColor: Color = BezierTheme.colorsV3.textNeutralLight,
         showNavigator: Boolean = true,
         content: @Composable () -> Unit = {},
 ) {
@@ -79,7 +79,7 @@ fun IconActionListItem(
                                     modifier = Modifier.weight(1f, false),
                                     text = description,
                                     fontSize = 16.sp,
-                                    color = BezierTheme.colors.txtBlackDark,
+                                    color = BezierTheme.colorsV3.textNeutralLighter,
                                     maxLines = 1,
                                     overflow = TextOverflow.Ellipsis,
                             )
@@ -90,7 +90,7 @@ fun IconActionListItem(
                                     modifier = Modifier.size(24.dp),
                                     painter = painterResource(id = R.drawable.icon_chevron_small_right),
                                     contentDescription = null,
-                                    tint = BezierTheme.colors.txtBlackDark,
+                                    tint = BezierTheme.colorsV3.textNeutralLighter,
                             )
                         }
                     }
