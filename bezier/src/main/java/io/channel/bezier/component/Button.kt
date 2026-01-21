@@ -288,7 +288,7 @@ enum class ButtonColor {
                     Red -> BezierTheme.colorsV3.fillAccentRedHeavier
                     Cobalt -> BezierTheme.colorsV3.fillAccentCobaltHeavier
                     Green -> BezierTheme.colorsV3.fillAccentGreenHeavier
-                    MonochromeLight, MonochromeDark -> BezierTheme.colorsV3.surfaceHigher
+                    MonochromeLight, MonochromeDark -> BezierTheme.colorsV3.fillBright
                     AbsoluteWhite -> BezierTheme.colorsV3.fillAbsoluteWhiteTransparent
                     Orange -> BezierTheme.colorsV3.fillAccentOrangeHeavier
                 }
