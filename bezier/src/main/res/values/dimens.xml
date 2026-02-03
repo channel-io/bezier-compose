@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Font Size -->
+    <dimen name="font_size_11">11sp</dimen>
+    <dimen name="font_size_12">12sp</dimen>
+    <dimen name="font_size_13">13sp</dimen>
+    <dimen name="font_size_14">14sp</dimen>
+    <dimen name="font_size_15">15sp</dimen>
+    <dimen name="font_size_16">16sp</dimen>
+    <dimen name="font_size_17">17sp</dimen>
+    <dimen name="font_size_18">18sp</dimen>
+    <dimen name="font_size_22">22sp</dimen>
+    <dimen name="font_size_24">24sp</dimen>
+    <dimen name="font_size_30">30sp</dimen>
+    <dimen name="font_size_36">36sp</dimen>
+
+    <!-- Line Height -->
+    <dimen name="line_height_16">16sp</dimen>
+    <dimen name="line_height_18">18sp</dimen>
+    <dimen name="line_height_20">20sp</dimen>
+    <dimen name="line_height_24">24sp</dimen>
+    <dimen name="line_height_28">28sp</dimen>
+    <dimen name="line_height_32">32sp</dimen>
+    <dimen name="line_height_36">36sp</dimen>
+    <dimen name="line_height_44">44sp</dimen>
+</resources>
