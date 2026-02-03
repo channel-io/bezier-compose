@@ -20,6 +20,7 @@ import io.channel.bezier.color.DarkColor
 import io.channel.bezier.color.LightColor
 import io.channel.bezier.color.darkColors
 import io.channel.bezier.color.lightColors
+import io.channel.bezier.typography.BezierTypography
 
 @Composable
 fun BezierTheme(
@@ -78,6 +79,8 @@ object BezierTheme {
         @Composable
         @ReadOnlyComposable
         get() = LocalColorsV3.current
+
+    val typography: BezierTypography = BezierTypography
 
     fun getColorsV3(): BezierSemanticColorV3 {
         return if (isDark) {
