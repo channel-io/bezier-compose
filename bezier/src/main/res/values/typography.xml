@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="BezierTextAppearance" parent="android:TextAppearance" />
+
     <!-- Heading Styles -->
     <style name="BezierTextAppearance.HeadingXLarge">
         <item name="android:textSize">@dimen/font_size_24</item>
