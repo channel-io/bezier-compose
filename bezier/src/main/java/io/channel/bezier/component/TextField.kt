@@ -40,6 +40,7 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.takeOrElse
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.TextLayoutResult
@@ -90,11 +91,15 @@ fun TextField(
         visualTransformation: VisualTransformation = VisualTransformation.None,
         onTextLayout: (TextLayoutResult) -> Unit = {},
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
-        cursorBrush: Brush = SolidColor(Color.Black),
+        cursorBrush: Brush? = null,
 ) {
     fun isPassword() =
             keyboardOptions.keyboardType == KeyboardType.Password
                     || keyboardOptions.keyboardType == KeyboardType.NumberPassword
+
+    val resolvedCursorBrush = cursorBrush ?: SolidColor(
+            textStyle.color.takeOrElse { BezierTheme.colorsV3.textNeutral }
+    )
 
     val focused by interactionSource.collectIsFocusedAsState()
 
@@ -168,7 +173,7 @@ fun TextField(
             },
             onTextLayout = onTextLayout,
             interactionSource = interactionSource,
-            cursorBrush = cursorBrush,
+            cursorBrush = resolvedCursorBrush,
             decorationBox = { innerTextField ->
                 Row(
                         verticalAlignment = Alignment.CenterVertically,
@@ -275,7 +280,7 @@ fun TextField(
         visualTransformation: VisualTransformation = VisualTransformation.None,
         onTextLayout: (TextLayoutResult) -> Unit = {},
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
-        cursorBrush: Brush = SolidColor(Color.Black),
+        cursorBrush: Brush? = null,
 ) {
     // BasicTextField String 오버로드의 코드를 일부 참고했습니다. BasicTextField와 코드가 다른 이유는 단순하게
     //   BasicTextField String 오버로드의 코드가 정확하게 무슨 일을 하는지 몰라서이므로 이게 명확해졌을 때는
