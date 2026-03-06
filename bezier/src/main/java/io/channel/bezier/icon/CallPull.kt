@@ -33,25 +33,25 @@ val BezierIcons.CallPull: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0xFF313234)),
+                        fill = SolidColor(Color(0x66000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(4.2f, 4.955f)
-                    curveTo(5.168f, 3.987f, 6.584f, 3.724f, 7.428000000000001f, 4.3100000000000005f)
+                    curveTo(5.1690000000000005f, 3.987f, 6.584f, 3.725f, 7.428000000000001f, 4.3100000000000005f)
                     curveTo(8.202000000000002f, 4.8260000000000005f, 9.365f, 6.283f, 9.365f, 7.537000000000001f)
-                    curveTo(9.365f, 8.828000000000001f, 7.738f, 9.811f, 7.751f, 10.442f)
-                    curveTo(7.763f, 11.074f, 8.458f, 12.718f, 9.871f, 14.132f)
-                    curveTo(11.286000000000001f, 15.546f, 12.93f, 16.24f, 13.561f, 16.252f)
-                    curveTo(14.193f, 16.265f, 15.175f, 14.639f, 16.467f, 14.639f)
+                    curveTo(9.365f, 8.828000000000001f, 7.739000000000001f, 9.811f, 7.751f, 10.443000000000001f)
+                    curveTo(7.763f, 11.074000000000002f, 8.458f, 12.718000000000002f, 9.872f, 14.132000000000001f)
+                    curveTo(11.286f, 15.546000000000001f, 12.93f, 16.241f, 13.562f, 16.253f)
+                    curveTo(14.193f, 16.265f, 15.176f, 14.639f, 16.467f, 14.639f)
                     curveTo(17.721f, 14.639f, 19.179f, 15.802f, 19.695f, 16.576f)
                     curveTo(20.28f, 17.42f, 20.017f, 18.836f, 19.049f, 19.804000000000002f)
-                    curveTo(17.435f, 21.418000000000003f, 12.916f, 21.418000000000003f, 7.7509999999999994f, 16.253f)
-                    curveTo(2.5859999999999985f, 11.087999999999997f, 2.586f, 6.569f, 4.2f, 4.955f)
-                    moveTo(15.242f, 2.707f)
-                    arcTo(1.0f, 1.0f, 225.99574461357759f, isMoreThanHalf = false, isPositiveArc = true, 16.656000000000002f, 4.1209999999999996f)
-                    lineTo(14.777f, 6.0f)
-                    lineTo(19.0f, 6.0f)
-                    arcTo(3.0f, 3.0f, 270.0147814320558f, isMoreThanHalf = false, isPositiveArc = true, 21.994f, 8.823f)
+                    curveTo(17.435f, 21.418000000000003f, 12.916f, 21.418000000000003f, 7.7509999999999994f, 16.254f)
+                    curveTo(2.5859999999999994f, 11.088000000000001f, 2.5859999999999994f, 6.569000000000001f, 4.201f, 4.955000000000002f)
+                    moveTo(15.242999999999999f, 2.7070000000000016f)
+                    arcTo(1.0f, 1.0f, 225.99574461357759f, isMoreThanHalf = false, isPositiveArc = true, 16.657f, 4.121000000000001f)
+                    lineTo(14.778f, 6.001000000000001f)
+                    lineTo(19.0f, 6.001000000000001f)
+                    arcTo(3.0f, 3.0f, 270.0136494327538f, isMoreThanHalf = false, isPositiveArc = true, 21.994f, 8.823f)
                     lineTo(22.0f, 9.0f)
                     lineTo(22.0f, 11.5f)
                     arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 20.0f, 11.5f)
@@ -60,9 +60,9 @@ val BezierIcons.CallPull: BezierIcon
                     lineTo(19.0f, 8.0f)
                     lineTo(14.879f, 8.0f)
                     lineTo(16.656f, 9.778f)
-                    arcTo(1.0f, 1.0f, 314.00425538642025f, isMoreThanHalf = true, isPositiveArc = true, 15.241999999999999f, 11.192f)
+                    arcTo(1.0f, 1.0f, 314.9797463823513f, isMoreThanHalf = true, isPositiveArc = true, 15.241999999999999f, 11.193000000000001f)
                     lineTo(12.414f, 8.364f)
-                    arcTo(2.0f, 2.0f, 134.9714109814372f, isMoreThanHalf = false, isPositiveArc = true, 12.312f, 5.644f)
+                    arcTo(2.0f, 2.0f, 134.9931752484008f, isMoreThanHalf = false, isPositiveArc = true, 12.312999999999999f, 5.644f)
                     lineTo(12.414f, 5.535f)
                     close()
                 }

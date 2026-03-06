@@ -33,27 +33,27 @@ val BezierIcons.ChatBubbleAltOff: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0xFF313234)),
+                        fill = SolidColor(Color(0x66000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(5.55f, 7.45f)
                     curveTo(4.26f, 8.696f, 3.5f, 10.304f, 3.5f, 12.0f)
-                    curveTo(3.5f, 14.283f, 4.844f, 16.374f, 7.036f, 17.679000000000002f)
+                    curveTo(3.5f, 14.283f, 4.844f, 16.375f, 7.036f, 17.679000000000002f)
                     lineTo(7.691f, 18.069000000000003f)
                     lineTo(7.4879999999999995f, 18.804000000000002f)
-                    curveTo(7.318f, 19.421000000000003f, 7.084f, 20.007f, 6.84f, 20.525000000000002f)
-                    curveTo(7.638f, 20.215000000000003f, 8.535f, 19.751f, 9.341999999999999f, 19.061000000000003f)
+                    curveTo(7.318f, 19.421000000000003f, 7.084f, 20.007f, 6.84f, 20.526000000000003f)
+                    curveTo(7.638f, 20.216000000000005f, 8.535f, 19.751000000000005f, 9.341999999999999f, 19.061000000000003f)
                     lineTo(9.703f, 18.752000000000002f)
                     lineTo(10.17f, 18.837000000000003f)
-                    quadTo(11.053f, 18.999000000000002f, 12.0f, 19.000000000000004f)
-                    curveTo(13.547f, 19.000000000000004f, 14.97f, 18.666000000000004f, 16.191f, 18.092000000000002f)
-                    lineTo(17.671f, 19.570000000000004f)
-                    arcTo(11.8f, 11.8f, 61.49887227457459f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 21.0f)
-                    quadTo(11.119f, 20.999f, 10.275f, 20.879f)
-                    curveTo(8.792f, 22.024f, 7.1770000000000005f, 22.583000000000002f, 6.1240000000000006f, 22.849f)
-                    arcTo(1.44f, 1.44f, 75.4183553040692f, isMoreThanHalf = false, isPositiveArc = true, 4.554f, 22.240000000000002f)
-                    arcTo(1.52f, 1.52f, 146.94683447128142f, isMoreThanHalf = false, isPositiveArc = true, 4.521f, 20.635f)
-                    curveTo(4.791f, 20.177000000000003f, 5.095f, 19.592000000000002f, 5.335f, 18.958000000000002f)
+                    quadTo(11.053f, 19.0f, 12.0f, 19.0f)
+                    curveTo(13.547f, 19.0f, 14.97f, 18.666f, 16.191f, 18.092f)
+                    lineTo(17.671f, 19.570999999999998f)
+                    arcTo(11.8f, 11.8f, 61.50898447651181f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 21.0f)
+                    arcTo(12.0f, 12.0f, 89.91348564034612f, isMoreThanHalf = false, isPositiveArc = true, 10.275f, 20.878f)
+                    curveTo(8.792f, 22.023f, 7.1770000000000005f, 22.582f, 6.1240000000000006f, 22.848f)
+                    arcTo(1.44f, 1.44f, 75.41835530406927f, isMoreThanHalf = false, isPositiveArc = true, 4.554f, 22.238999999999997f)
+                    arcTo(1.52f, 1.52f, 146.94683447128142f, isMoreThanHalf = false, isPositiveArc = true, 4.521f, 20.633999999999997f)
+                    curveTo(4.791f, 20.176f, 5.095f, 19.590999999999998f, 5.335f, 18.956999999999997f)
                     curveTo(3.031f, 17.335f, 1.5f, 14.848f, 1.5f, 12.0f)
                     curveTo(1.5f, 9.67f, 2.5069999999999997f, 7.6f, 4.134f, 6.034f)
                     close()
@@ -69,7 +69,7 @@ val BezierIcons.ChatBubbleAltOff: BezierIcon
                     arcTo(1.0f, 1.0f, 134.96812921607167f, isMoreThanHalf = false, isPositiveArc = true, 3.707f, 2.707f)
                     moveTo(12.0f, 5.0f)
                     curveTo(10.6f, 5.0f, 9.304f, 5.275f, 8.165f, 5.751f)
-                    lineTo(18.703f, 16.289f)
+                    lineTo(18.703f, 16.29f)
                     curveTo(19.837f, 15.083f, 20.5f, 13.581f, 20.5f, 12.0f)
                     curveTo(20.5f, 8.288f, 16.862000000000002f, 5.0f, 12.0f, 5.0f)
                 }

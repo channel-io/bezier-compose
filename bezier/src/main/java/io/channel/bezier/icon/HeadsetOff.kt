@@ -33,36 +33,36 @@ val BezierIcons.HeadsetOff: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0xFF313234)),
+                        fill = SolidColor(Color(0x66000000)),
                         strokeLineWidth = 1f,
                 ) {
-                    moveTo(5.786f, 4.165f)
-                    curveTo(9.712f, 1.0430000000000001f, 15.44f, 1.298f, 19.070999999999998f, 4.929f)
-                    curveTo(21.061f, 6.918f, 22.0f, 9.855f, 22.0f, 12.707f)
-                    curveTo(22.0f, 14.825000000000001f, 21.479f, 16.987000000000002f, 20.398f, 18.775f)
+                    moveTo(5.785f, 4.164f)
+                    curveTo(9.711f, 1.0429999999999997f, 15.44f, 1.2969999999999997f, 19.070999999999998f, 4.928f)
+                    curveTo(21.061f, 6.917f, 22.0f, 9.855f, 22.0f, 12.706f)
+                    curveTo(22.0f, 14.824f, 21.479f, 16.987f, 20.398f, 18.776f)
                     lineTo(21.546f, 19.924f)
                     arcTo(1.001f, 1.001f, 317.2668531396043f, isMoreThanHalf = false, isPositiveArc = true, 20.131999999999998f, 21.339f)
                     lineTo(2.81f, 4.018f)
                     arcTo(1.0f, 1.0f, 135.9957446135792f, isMoreThanHalf = false, isPositiveArc = true, 4.224f, 2.604f)
                     close()
-                    moveTo(5.216f, 7.837f)
-                    curveTo(4.42f, 9.23f, 4.0f, 10.947f, 4.0f, 12.707f)
-                    curveTo(4.0f, 13.264000000000001f, 4.042f, 13.817f, 4.125f, 14.357000000000001f)
-                    arcTo(3.0f, 3.0f, 239.75636679652993f, isMoreThanHalf = false, isPositiveArc = true, 7.758f, 14.828000000000001f)
+                    moveTo(5.215f, 7.836f)
+                    curveTo(4.42f, 9.23f, 4.0f, 10.946f, 4.0f, 12.706f)
+                    curveTo(4.0f, 13.264f, 4.042f, 13.817f, 4.125f, 14.356f)
+                    arcTo(3.0f, 3.0f, 239.75636679652993f, isMoreThanHalf = false, isPositiveArc = true, 7.758f, 14.827f)
                     lineTo(9.172f, 16.242f)
                     arcTo(3.0f, 3.0f, 315.0000007587814f, isMoreThanHalf = false, isPositiveArc = true, 4.929f, 20.485f)
-                    curveTo(2.939f, 18.496f, 2.0f, 15.56f, 2.0f, 12.707f)
-                    curveTo(2.0f, 10.487f, 2.572f, 8.218f, 3.762f, 6.383000000000001f)
+                    curveTo(2.939f, 18.495f, 2.0f, 15.558f, 2.0f, 12.706f)
+                    curveTo(2.0f, 10.487f, 2.572f, 8.218f, 3.762f, 6.382f)
                     close()
-                    moveTo(18.379f, 21.0f)
-                    arcTo(3.0f, 3.0f, 61.56070083622477f, isMoreThanHalf = false, isPositiveArc = true, 14.312000000000001f, 16.934f)
+                    moveTo(18.38f, 21.0f)
+                    arcTo(3.0f, 3.0f, 61.56070083622477f, isMoreThanHalf = false, isPositiveArc = true, 14.312999999999999f, 16.934f)
                     close()
-                    moveTo(17.657f, 6.343f)
-                    arcTo(8.0f, 8.0f, 314.97963042570314f, isMoreThanHalf = false, isPositiveArc = false, 7.214f, 5.593f)
-                    lineTo(16.35f, 14.729f)
-                    arcTo(3.0f, 3.0f, 227.7718697368821f, isMoreThanHalf = false, isPositiveArc = true, 19.876f, 14.357999999999999f)
-                    curveTo(19.958000000000002f, 13.817999999999998f, 20.0f, 13.264f, 20.0f, 12.707999999999998f)
-                    curveTo(20.0f, 10.245999999999999f, 19.183f, 7.8679999999999986f, 17.657f, 6.342999999999998f)
+                    moveTo(17.658f, 6.344f)
+                    arcTo(8.0f, 8.0f, 314.97963042570314f, isMoreThanHalf = false, isPositiveArc = false, 7.215000000000002f, 5.594f)
+                    lineTo(16.351f, 14.729f)
+                    arcTo(3.0f, 3.0f, 227.7718697368821f, isMoreThanHalf = false, isPositiveArc = true, 19.877f, 14.357999999999999f)
+                    curveTo(19.959f, 13.817999999999998f, 20.000999999999998f, 13.264f, 20.000999999999998f, 12.707999999999998f)
+                    curveTo(20.000999999999998f, 10.245999999999999f, 19.182999999999996f, 7.868999999999998f, 17.657999999999998f, 6.3439999999999985f)
                 }
             }.build().also {
                 _headsetOff = it

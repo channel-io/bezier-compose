@@ -33,7 +33,7 @@ val BezierIcons.Email: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0xFF313234)),
+                        fill = SolidColor(Color(0x66000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(15.6f, 4.0f)
@@ -44,10 +44,10 @@ val BezierIcons.Email: BezierIcon
                     lineTo(21.999f, 13.600000000000001f)
                     curveTo(21.999f, 15.840000000000002f, 22.0f, 16.96f, 21.564f, 17.816000000000003f)
                     arcTo(4.0f, 4.0f, 26.978972641721622f, isMoreThanHalf = false, isPositiveArc = true, 19.816f, 19.565f)
-                    curveTo(18.961f, 20.0f, 17.84f, 20.0f, 15.601f, 20.0f)
+                    curveTo(18.961f, 20.0f, 17.84f, 20.0f, 15.6f, 20.0f)
                     lineTo(8.4f, 20.0f)
-                    curveTo(6.16f, 20.0f, 5.040000000000001f, 20.0f, 4.183000000000001f, 19.564f)
-                    arcTo(4.0f, 4.0f, 117.000682627168f, isMoreThanHalf = false, isPositiveArc = true, 2.4350000000000005f, 17.816f)
+                    curveTo(6.16f, 20.0f, 5.040000000000001f, 20.0f, 4.184f, 19.564f)
+                    arcTo(4.0f, 4.0f, 117.000682627168f, isMoreThanHalf = false, isPositiveArc = true, 2.436f, 17.816f)
                     curveTo(2.0f, 16.961f, 2.0f, 15.84f, 2.0f, 13.6f)
                     lineTo(2.0f, 9.55f)
                     arcTo(1.0f, 1.0f, 177.88824625460646f, isMoreThanHalf = false, isPositiveArc = true, 2.002f, 9.440000000000001f)
@@ -62,11 +62,11 @@ val BezierIcons.Email: BezierIcon
                     curveTo(4.0f, 14.753f, 4.001f, 15.498f, 4.048f, 16.064f)
                     curveTo(4.092f, 16.608f, 4.168f, 16.809f, 4.218f, 16.908f)
                     arcTo(2.0f, 2.0f, 152.99931737283197f, isMoreThanHalf = false, isPositiveArc = false, 5.092f, 17.782f)
-                    curveTo(5.191f, 17.832f, 5.3919999999999995f, 17.908f, 5.935f, 17.952f)
+                    curveTo(5.1899999999999995f, 17.832f, 5.3919999999999995f, 17.908f, 5.935f, 17.952f)
                     curveTo(6.502f, 17.998f, 7.247f, 18.0f, 8.399999999999999f, 18.0f)
                     lineTo(15.599999999999998f, 18.0f)
                     curveTo(16.752999999999997f, 18.0f, 17.497999999999998f, 17.998f, 18.063999999999997f, 17.952f)
-                    curveTo(18.607999999999997f, 17.908f, 18.808999999999997f, 17.832f, 18.907999999999998f, 17.782f)
+                    curveTo(18.606999999999996f, 17.908f, 18.808999999999997f, 17.832f, 18.907999999999998f, 17.782f)
                     arcTo(2.0f, 2.0f, 62.999317372831996f, isMoreThanHalf = false, isPositiveArc = false, 19.781999999999996f, 16.908f)
                     curveTo(19.831999999999997f, 16.809f, 19.907999999999998f, 16.608f, 19.951999999999998f, 16.064f)
                     curveTo(19.997999999999998f, 15.498f, 19.999999999999996f, 14.753f, 19.999999999999996f, 13.6f)
@@ -74,7 +74,7 @@ val BezierIcons.Email: BezierIcon
                     close()
                     moveTo(8.4f, 6.0f)
                     curveTo(7.247f, 6.0f, 6.502000000000001f, 6.002f, 5.9350000000000005f, 6.048f)
-                    curveTo(5.392f, 6.092f, 5.191000000000001f, 6.168f, 5.0920000000000005f, 6.218f)
+                    curveTo(5.392f, 6.092f, 5.19f, 6.168f, 5.0920000000000005f, 6.218f)
                     arcTo(2.0f, 2.0f, 242.999317372832f, isMoreThanHalf = false, isPositiveArc = false, 4.218000000000001f, 7.092f)
                     curveTo(4.168000000000001f, 7.191f, 4.0920000000000005f, 7.3919999999999995f, 4.048000000000001f, 7.936f)
                     curveTo(4.026000000000001f, 8.204f, 4.014000000000001f, 8.513f, 4.008000000000001f, 8.886f)
@@ -85,7 +85,7 @@ val BezierIcons.Email: BezierIcon
                     curveTo(19.908f, 7.3919999999999995f, 19.832f, 7.190999999999999f, 19.782f, 7.091999999999999f)
                     arcTo(2.0f, 2.0f, 332.999317372832f, isMoreThanHalf = false, isPositiveArc = false, 18.908f, 6.217999999999999f)
                     curveTo(18.809f, 6.167999999999999f, 18.608f, 6.091999999999999f, 18.064f, 6.047999999999999f)
-                    curveTo(17.498f, 6.001999999999999f, 16.754f, 5.999999999999999f, 15.600999999999999f, 5.999999999999999f)
+                    curveTo(17.498f, 6.002f, 16.754f, 6.0f, 15.6f, 6.0f)
                     close()
                 }
             }.build().also {

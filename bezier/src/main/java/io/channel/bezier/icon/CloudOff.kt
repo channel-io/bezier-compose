@@ -33,7 +33,7 @@ val BezierIcons.CloudOff: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0xFF313234)),
+                        fill = SolidColor(Color(0x66000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(2.707f, 3.793f)
@@ -52,7 +52,7 @@ val BezierIcons.CloudOff: BezierIcon
                     lineTo(13.0f, 17.0f)
                     lineTo(15.0f, 19.0f)
                     lineTo(6.25f, 19.0f)
-                    arcTo(5.25f, 5.25f, 89.96159788602684f, isMoreThanHalf = false, isPositiveArc = true, 4.726f, 8.725f)
+                    arcTo(5.25f, 5.25f, 89.9976651680876f, isMoreThanHalf = false, isPositiveArc = true, 4.726f, 8.726f)
                     close()
                     moveTo(12.0f, 6.0f)
                     arcTo(4.0f, 4.0f, 270.0349847828938f, isMoreThanHalf = false, isPositiveArc = false, 8.46f, 8.133f)

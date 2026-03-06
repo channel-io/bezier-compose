@@ -33,28 +33,28 @@ val BezierIcons.UntagFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0xFF313234)),
+                        fill = SolidColor(Color(0x66000000)),
                         strokeLineWidth = 1f,
                 ) {
-                    moveTo(16.242f, 18.657f)
-                    lineTo(13.292000000000002f, 21.607f)
-                    arcTo(3.0f, 3.0f, 45.0221527787367f, isMoreThanHalf = false, isPositiveArc = true, 9.051000000000002f, 21.607f)
+                    moveTo(16.243f, 18.657f)
+                    lineTo(13.293f, 21.607f)
+                    arcTo(3.0f, 3.0f, 44.99514736576191f, isMoreThanHalf = false, isPositiveArc = true, 9.049999999999999f, 21.607f)
                     lineTo(3.394f, 15.95f)
                     arcTo(3.0f, 3.0f, 134.99514736576194f, isMoreThanHalf = false, isPositiveArc = true, 3.394f, 11.706999999999999f)
-                    lineTo(6.343f, 8.756999999999998f)
+                    lineTo(6.344f, 8.756999999999998f)
                     close()
                     moveTo(3.5f, 2.5f)
                     arcTo(1.0f, 1.0f, 225.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 4.914f, 2.5f)
-                    lineTo(8.757f, 6.343f)
-                    lineTo(12.293f, 2.808f)
-                    arcTo(1.0f, 1.0f, 224.99134648951636f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 2.515f)
-                    lineTo(20.485f, 2.515f)
-                    arcTo(2.0f, 2.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 22.485f, 4.515000000000001f)
-                    lineTo(22.485f, 12.0f)
-                    arcTo(1.0f, 1.0f, 0.01223660524386911f, isMoreThanHalf = false, isPositiveArc = true, 22.192f, 12.707f)
-                    lineTo(18.656f, 16.242f)
-                    lineTo(21.5f, 19.086000000000002f)
-                    arcTo(1.0f, 1.0f, 315.9957446135754f, isMoreThanHalf = false, isPositiveArc = true, 20.086f, 20.500000000000004f)
+                    lineTo(8.757f, 6.3420000000000005f)
+                    lineTo(12.293f, 2.8080000000000007f)
+                    arcTo(1.0f, 1.0f, 224.99134648951627f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 2.515f)
+                    lineTo(20.486f, 2.515f)
+                    arcTo(2.0f, 2.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 22.486f, 4.515000000000001f)
+                    lineTo(22.486f, 12.0f)
+                    curveTo(22.486f, 12.265f, 22.38f, 12.52f, 22.193f, 12.707f)
+                    lineTo(18.657f, 16.242f)
+                    lineTo(21.5f, 19.085f)
+                    arcTo(1.001f, 1.001f, 317.2668531396043f, isMoreThanHalf = false, isPositiveArc = true, 20.086f, 20.5f)
                     lineTo(3.5f, 3.914f)
                     arcTo(1.0f, 1.0f, 135.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 3.5f, 2.5f)
                     moveTo(17.0f, 6.0f)
