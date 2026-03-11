@@ -181,8 +181,9 @@ fun Tag(
                         .weight(1f, false)
                         .layout { measurable, constraints ->
                             val placeable = measurable.measure(constraints)
-                            layout(placeable.width, targetTextHeightPx) {
-                                val yOffset = (targetTextHeightPx - placeable.height) / 2
+                            val layoutHeight = targetTextHeightPx.coerceIn(constraints.minHeight, constraints.maxHeight)
+                            layout(placeable.width, layoutHeight) {
+                                val yOffset = (layoutHeight - placeable.height) / 2
                                 placeable.place(0, yOffset)
                             }
                         }
@@ -350,7 +351,9 @@ private fun TagLongTextPreview() {
     Column(modifier = Modifier.padding(8.dp)) {
         TagSize.values().forEach { size ->
             Tag(
-                    modifier = Modifier.padding(vertical = 2.dp),
+                    modifier = Modifier
+                            .padding(vertical = 2.dp)
+                            .width(120.dp),
                     text = "Very long tag label text",
                     size = size,
                     color = TagColor.Orange,
