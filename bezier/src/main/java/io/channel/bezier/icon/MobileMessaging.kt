@@ -33,7 +33,7 @@ val BezierIcons.MobileMessaging: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0xFF313234)),
+                        fill = SolidColor(Color(0x66000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(2.794f, 8.798f)
@@ -42,7 +42,7 @@ val BezierIcons.MobileMessaging: BezierIcon
                     curveTo(7.109f, 12.035f, 5.75f, 12.856f, 5.761f, 13.384f)
                     curveTo(5.772f, 13.912f, 6.352f, 15.284f, 7.533f, 16.466f)
                     curveTo(8.714f, 17.648000000000003f, 10.088000000000001f, 18.229f, 10.616f, 18.239f)
-                    curveTo(11.143999999999998f, 18.249000000000002f, 11.965f, 16.889f, 13.044f, 16.889f)
+                    curveTo(11.143999999999998f, 18.249000000000002f, 11.966f, 16.889f, 13.044f, 16.889f)
                     curveTo(14.092f, 16.889f, 15.31f, 17.862f, 15.741f, 18.509f)
                     curveTo(16.230999999999998f, 19.214f, 16.011f, 20.397f, 15.202f, 21.206f)
                     curveTo(13.853f, 22.555f, 10.077f, 22.556f, 5.760999999999999f, 18.239f)
@@ -64,8 +64,8 @@ val BezierIcons.MobileMessaging: BezierIcon
                     moveTo(16.25f, 6.937f)
                     arcTo(0.896f, 0.896f, 269.80873062380067f, isMoreThanHalf = false, isPositiveArc = false, 15.357f, 7.829000000000001f)
                     curveTo(15.357f, 8.321000000000002f, 15.758999999999999f, 8.723f, 16.25f, 8.723f)
-                    arcTo(0.896f, 0.896f, 89.80830311715711f, isMoreThanHalf = false, isPositiveArc = false, 17.143f, 7.829000000000001f)
-                    arcTo(0.896f, 0.896f, 359.74453367868165f, isMoreThanHalf = false, isPositiveArc = false, 16.25f, 6.937f)
+                    arcTo(0.896f, 0.896f, 89.87224994863428f, isMoreThanHalf = false, isPositiveArc = false, 17.144f, 7.829000000000001f)
+                    arcTo(0.896f, 0.896f, 359.7443558887998f, isMoreThanHalf = false, isPositiveArc = false, 16.25f, 6.937f)
                     moveTo(18.929f, 6.937f)
                     arcTo(0.896f, 0.896f, 269.80873062380067f, isMoreThanHalf = false, isPositiveArc = false, 18.035999999999998f, 7.829000000000001f)
                     curveTo(18.035999999999998f, 8.321000000000002f, 18.438f, 8.723f, 18.929f, 8.723f)

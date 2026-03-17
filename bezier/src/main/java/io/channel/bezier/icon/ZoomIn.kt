@@ -33,14 +33,14 @@ val BezierIcons.ZoomIn: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0xFF313234)),
+                        fill = SolidColor(Color(0x66000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(10.0f, 2.0f)
                     curveTo(14.411f, 2.0f, 18.0f, 5.59f, 18.0f, 10.0f)
                     arcTo(7.95f, 7.95f, 359.99959683076327f, isMoreThanHalf = false, isPositiveArc = true, 16.312f, 14.898f)
                     lineTo(21.707f, 20.293f)
-                    arcTo(1.0f, 1.0f, 314.0042553864246f, isMoreThanHalf = true, isPositiveArc = true, 20.293f, 21.707f)
+                    arcTo(1.0f, 1.0f, 315.9957446135754f, isMoreThanHalf = false, isPositiveArc = true, 20.293f, 21.707f)
                     lineTo(14.898f, 16.312f)
                     arcTo(7.95f, 7.95f, 51.9685743049438f, isMoreThanHalf = false, isPositiveArc = true, 10.0f, 18.0f)
                     curveTo(5.59f, 18.0f, 2.0f, 14.411f, 2.0f, 10.0f)

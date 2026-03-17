@@ -33,7 +33,7 @@ val BezierIcons.KeyboardHide: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0xFF313234)),
+                        fill = SolidColor(Color(0x66000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(15.606f, 17.831f)
