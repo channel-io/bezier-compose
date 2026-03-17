@@ -33,13 +33,13 @@ val BezierIcons.Exclusive: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0xFF313234)),
+                        fill = SolidColor(Color(0x66000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(7.0f, 4.802f)
-                    arcTo(0.8f, 0.8f, 180.02649464849685f, isMoreThanHalf = false, isPositiveArc = true, 8.365f, 4.236f)
-                    lineTo(11.293f, 7.163f)
-                    arcTo(1.0f, 1.0f, 315.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 11.293f, 8.577f)
+                    arcTo(0.8f, 0.8f, 179.9548632935188f, isMoreThanHalf = false, isPositiveArc = true, 8.365f, 4.234999999999999f)
+                    lineTo(11.293f, 7.162999999999999f)
+                    arcTo(1.0f, 1.0f, 315.00865166283796f, isMoreThanHalf = false, isPositiveArc = true, 11.293f, 8.577f)
                     lineTo(8.364999999999998f, 11.504999999999999f)
                     arcTo(0.8f, 0.8f, 45.06937302309456f, isMoreThanHalf = false, isPositiveArc = true, 7.0f, 10.939f)
                     lineTo(7.0f, 9.0f)
@@ -52,7 +52,7 @@ val BezierIcons.Exclusive: BezierIcon
                     lineTo(7.0f, 7.0f)
                     close()
                     moveTo(22.016f, 17.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 22.016f, 19.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 22.016f, 19.0f)
                     lineTo(14.015999999999998f, 19.0f)
                     arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 14.015999999999998f, 17.0f)
                     close()

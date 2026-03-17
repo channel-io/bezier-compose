@@ -33,7 +33,7 @@ val BezierIcons.AutoWriting: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0xFF313234)),
+                        fill = SolidColor(Color(0x66000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(18.97f, 5.03f)
@@ -64,16 +64,16 @@ val BezierIcons.AutoWriting: BezierIcon
                     close()
                     moveTo(6.72f, 2.184f)
                     arcTo(0.304f, 0.304f, 202.91954215156989f, isMoreThanHalf = false, isPositiveArc = true, 7.279999999999999f, 2.184f)
-                    lineTo(8.64f, 5.36f)
-                    lineTo(11.816f, 6.720000000000001f)
-                    arcTo(0.304f, 0.304f, 292.91954215156966f, isMoreThanHalf = false, isPositiveArc = true, 11.816f, 7.280000000000001f)
+                    lineTo(8.639999999999999f, 5.359f)
+                    lineTo(11.815999999999999f, 6.721f)
+                    arcTo(0.304f, 0.304f, 293.3987690434387f, isMoreThanHalf = false, isPositiveArc = true, 11.815999999999999f, 7.279f)
                     lineTo(8.64f, 8.64f)
-                    lineTo(7.28f, 11.816f)
-                    arcTo(0.304f, 0.304f, 22.91954215156989f, isMoreThanHalf = false, isPositiveArc = true, 6.720000000000001f, 11.816f)
+                    lineTo(7.28f, 11.817f)
+                    arcTo(0.304f, 0.304f, 22.91954215156989f, isMoreThanHalf = false, isPositiveArc = true, 6.720000000000001f, 11.817f)
                     lineTo(5.36f, 8.64f)
-                    lineTo(2.184f, 7.28f)
-                    arcTo(0.304f, 0.304f, 112.9195421515699f, isMoreThanHalf = false, isPositiveArc = true, 2.184f, 6.720000000000001f)
-                    lineTo(5.36f, 5.36f)
+                    lineTo(2.183f, 7.28f)
+                    arcTo(0.304f, 0.304f, 112.9195421515699f, isMoreThanHalf = false, isPositiveArc = true, 2.183f, 6.720000000000001f)
+                    lineTo(5.358f, 5.36f)
                     close()
                     moveTo(18.97f, 7.029f)
                     arcTo(1.0f, 1.0f, 269.98776339474546f, isMoreThanHalf = false, isPositiveArc = false, 18.262999999999998f, 7.322f)
