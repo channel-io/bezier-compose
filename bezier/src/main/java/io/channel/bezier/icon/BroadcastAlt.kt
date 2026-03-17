@@ -33,7 +33,7 @@ val BezierIcons.BroadcastAlt: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0xFF313234)),
+                        fill = SolidColor(Color(0x66000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(12.0f, 10.0f)
@@ -44,26 +44,26 @@ val BezierIcons.BroadcastAlt: BezierIcon
                     arcTo(1.997f, 1.997f, 119.79496450551063f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 10.0f)
                     moveTo(4.929f, 4.93f)
                     arcTo(1.0f, 1.0f, 225.99574461357972f, isMoreThanHalf = false, isPositiveArc = true, 6.343f, 6.343999999999999f)
-                    arcTo(8.0f, 8.0f, 224.99641207561024f, isMoreThanHalf = false, isPositiveArc = false, 6.343f, 17.657f)
-                    arcTo(1.0f, 1.0f, 315.99574461357753f, isMoreThanHalf = false, isPositiveArc = true, 4.929f, 19.071f)
-                    curveTo(1.0240000000000005f, 15.166000000000002f, 1.0240000000000005f, 8.835f, 4.929f, 4.9300000000000015f)
-                    moveTo(17.657f, 4.9300000000000015f)
-                    arcTo(1.0f, 1.0f, 225.0086516628379f, isMoreThanHalf = false, isPositiveArc = true, 19.071f, 4.9300000000000015f)
-                    curveTo(22.976000000000003f, 8.835f, 22.976000000000003f, 15.166000000000002f, 19.071f, 19.071f)
-                    arcTo(1.0f, 1.0f, 44.004255386424575f, isMoreThanHalf = true, isPositiveArc = true, 17.657f, 17.657f)
-                    arcTo(8.0f, 8.0f, 44.99641207561025f, isMoreThanHalf = false, isPositiveArc = false, 17.657f, 6.343999999999999f)
-                    arcTo(1.0f, 1.0f, 135.00865166283802f, isMoreThanHalf = false, isPositiveArc = true, 17.657f, 4.93f)
-                    moveTo(7.757f, 7.757999999999999f)
-                    arcTo(1.0f, 1.0f, 225.91140098557685f, isMoreThanHalf = false, isPositiveArc = true, 9.173f, 9.17f)
-                    arcTo(4.0f, 4.0f, 225.00147626156968f, isMoreThanHalf = false, isPositiveArc = false, 9.173f, 14.827f)
-                    arcTo(1.0f, 1.0f, 315.99574461357975f, isMoreThanHalf = false, isPositiveArc = true, 7.759f, 16.241f)
-                    arcTo(6.0f, 6.0f, 135.00189991213458f, isMoreThanHalf = false, isPositiveArc = true, 7.759f, 7.756f)
-                    moveTo(14.83f, 7.756f)
-                    arcTo(1.0f, 1.0f, 225.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 16.244f, 7.756f)
-                    arcTo(6.0f, 6.0f, 315.00189991213455f, isMoreThanHalf = false, isPositiveArc = true, 16.244f, 16.241f)
-                    arcTo(1.0f, 1.0f, 45.99574461357973f, isMoreThanHalf = false, isPositiveArc = true, 14.83f, 14.827f)
-                    arcTo(4.0f, 4.0f, 45.00147626156967f, isMoreThanHalf = false, isPositiveArc = false, 14.83f, 9.17f)
-                    arcTo(1.0f, 1.0f, 135.00865166283802f, isMoreThanHalf = false, isPositiveArc = true, 14.83f, 7.756f)
+                    arcTo(8.0f, 8.0f, 225.00147626156968f, isMoreThanHalf = false, isPositiveArc = false, 6.343f, 17.658f)
+                    arcTo(1.0f, 1.0f, 315.99574461357753f, isMoreThanHalf = false, isPositiveArc = true, 4.929f, 19.072000000000003f)
+                    curveTo(1.0240000000000005f, 15.166000000000002f, 1.0240000000000005f, 8.835000000000003f, 4.929f, 4.930000000000003f)
+                    moveTo(17.657f, 4.930000000000003f)
+                    arcTo(1.0f, 1.0f, 225.0086516628379f, isMoreThanHalf = false, isPositiveArc = true, 19.071f, 4.930000000000003f)
+                    curveTo(22.976000000000003f, 8.835000000000003f, 22.976000000000003f, 15.166000000000004f, 19.071f, 19.072000000000003f)
+                    arcTo(1.0f, 1.0f, 45.02025216075622f, isMoreThanHalf = true, isPositiveArc = true, 17.657f, 17.657000000000004f)
+                    arcTo(8.0f, 8.0f, 44.99641207561025f, isMoreThanHalf = false, isPositiveArc = false, 17.657f, 6.344000000000003f)
+                    arcTo(1.0f, 1.0f, 135.00865166283802f, isMoreThanHalf = false, isPositiveArc = true, 17.657f, 4.930000000000003f)
+                    moveTo(7.757f, 7.758000000000003f)
+                    arcTo(1.0f, 1.0f, 224.97974758928046f, isMoreThanHalf = false, isPositiveArc = true, 9.172f, 9.172000000000002f)
+                    arcTo(4.0f, 4.0f, 225.00147626156968f, isMoreThanHalf = false, isPositiveArc = false, 9.172f, 14.829000000000002f)
+                    arcTo(1.0f, 1.0f, 315.99574461357975f, isMoreThanHalf = false, isPositiveArc = true, 7.758000000000001f, 16.243000000000002f)
+                    arcTo(6.0f, 6.0f, 135.00189991213458f, isMoreThanHalf = false, isPositiveArc = true, 7.758000000000001f, 7.758000000000003f)
+                    moveTo(14.829f, 7.758000000000003f)
+                    arcTo(1.0f, 1.0f, 225.0086516628379f, isMoreThanHalf = false, isPositiveArc = true, 16.243000000000002f, 7.758000000000003f)
+                    arcTo(6.0f, 6.0f, 315.00189991213455f, isMoreThanHalf = false, isPositiveArc = true, 16.243000000000002f, 16.243000000000002f)
+                    arcTo(1.0f, 1.0f, 45.99574461357973f, isMoreThanHalf = false, isPositiveArc = true, 14.829000000000002f, 14.829000000000002f)
+                    arcTo(4.0f, 4.0f, 45.00147626156967f, isMoreThanHalf = false, isPositiveArc = false, 14.829000000000002f, 9.172000000000002f)
+                    arcTo(1.0f, 1.0f, 135.00865166283802f, isMoreThanHalf = false, isPositiveArc = true, 14.829000000000002f, 7.758000000000003f)
                 }
             }.build().also {
                 _broadcastAlt = it

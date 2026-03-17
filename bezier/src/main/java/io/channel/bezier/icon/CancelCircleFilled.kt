@@ -33,28 +33,28 @@ val BezierIcons.CancelCircleFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0xFF313234)),
+                        fill = SolidColor(Color(0x66000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(4.92f, 4.92f)
-                    curveTo(8.814f, 1.0270000000000001f, 15.185f, 1.0270000000000001f, 19.08f, 4.92f)
-                    curveTo(22.973f, 8.815f, 22.973f, 15.186f, 19.08f, 19.08f)
-                    curveTo(15.184999999999999f, 22.973999999999997f, 8.813999999999998f, 22.973999999999997f, 4.919999999999998f, 19.08f)
-                    curveTo(1.025999999999998f, 15.186f, 1.0269999999999984f, 8.814999999999998f, 4.919999999999998f, 4.919999999999998f)
-                    moveTo(16.241999999999997f, 7.757999999999998f)
-                    arcTo(1.0f, 1.0f, 314.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 14.827999999999998f, 7.757999999999998f)
+                    curveTo(8.815f, 1.0270000000000001f, 15.186f, 1.0270000000000001f, 19.08f, 4.92f)
+                    curveTo(22.973999999999997f, 8.815f, 22.973f, 15.185f, 19.08f, 19.08f)
+                    curveTo(15.185999999999998f, 22.973f, 8.814999999999998f, 22.973f, 4.919999999999998f, 19.08f)
+                    curveTo(1.0269999999999984f, 15.184999999999999f, 1.0269999999999984f, 8.814999999999998f, 4.919999999999998f, 4.919999999999998f)
+                    moveTo(16.243f, 7.757999999999998f)
+                    arcTo(1.0f, 1.0f, 315.0318707839283f, isMoreThanHalf = false, isPositiveArc = false, 14.828f, 7.757999999999998f)
                     lineTo(12.0f, 10.586f)
-                    lineTo(9.171f, 7.758f)
-                    arcTo(1.0f, 1.0f, 314.00425538642133f, isMoreThanHalf = false, isPositiveArc = false, 7.757f, 9.172f)
-                    lineTo(10.587f, 12.0f)
-                    lineTo(7.757f, 14.829f)
-                    arcTo(1.0f, 1.0f, 224.0042553864225f, isMoreThanHalf = false, isPositiveArc = false, 9.171f, 16.243000000000002f)
-                    lineTo(12.001f, 13.413000000000002f)
-                    lineTo(14.828f, 16.243000000000002f)
-                    arcTo(1.0f, 1.0f, 134.00425538642241f, isMoreThanHalf = false, isPositiveArc = false, 16.242f, 14.829000000000002f)
-                    lineTo(13.414000000000001f, 11.999000000000002f)
-                    lineTo(16.242f, 9.172000000000002f)
-                    arcTo(1.0f, 1.0f, 44.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 16.242f, 7.758000000000003f)
+                    lineTo(9.172f, 7.758f)
+                    arcTo(1.0f, 1.0f, 315.9957446135786f, isMoreThanHalf = true, isPositiveArc = false, 7.758000000000001f, 9.172f)
+                    lineTo(10.586f, 12.0f)
+                    lineTo(7.758000000000001f, 14.828f)
+                    arcTo(1.0f, 1.0f, 224.0042553864225f, isMoreThanHalf = false, isPositiveArc = false, 9.172f, 16.242f)
+                    lineTo(12.0f, 13.414f)
+                    lineTo(14.828f, 16.242f)
+                    arcTo(1.001f, 1.001f, 132.7331468603949f, isMoreThanHalf = false, isPositiveArc = false, 16.243f, 14.828000000000001f)
+                    lineTo(13.413f, 12.0f)
+                    lineTo(16.243000000000002f, 9.172f)
+                    arcTo(1.0f, 1.0f, 44.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 16.243000000000002f, 7.758000000000001f)
                 }
             }.build().also {
                 _cancelCircleFilled = it

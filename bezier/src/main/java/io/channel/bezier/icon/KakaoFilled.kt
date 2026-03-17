@@ -33,7 +33,7 @@ val BezierIcons.KakaoFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0xFF313234)),
+                        fill = SolidColor(Color(0x66000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(9.676f, 9.673f)
@@ -43,7 +43,7 @@ val BezierIcons.KakaoFilled: BezierIcon
                 }
 
                 path(
-                        fill = SolidColor(Color(0xFF313234)),
+                        fill = SolidColor(Color(0x66000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
