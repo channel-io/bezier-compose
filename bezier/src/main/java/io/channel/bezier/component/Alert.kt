@@ -47,7 +47,7 @@ fun Alert(
                     modifier = Modifier
                             .widthIn(min = 10.dp),
                     text = alertCount,
-                    fontWeight = FontWeight.Bold,
+                    fontWeight = FontWeight.SemiBold,
                     color = BezierTheme.colorsV3.textAbsoluteWhite,
                     fontSize = 12.sp,
                     textAlign = TextAlign.Center,

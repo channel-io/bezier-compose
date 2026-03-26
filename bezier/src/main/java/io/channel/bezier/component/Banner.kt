@@ -263,7 +263,7 @@ private fun BannerLayout(
                 Text(
                         text = title,
                         color = BezierTheme.colorsV3.textNeutralLight,
-                        fontWeight = FontWeight.Bold,
+                        fontWeight = FontWeight.SemiBold,
                         fontSize = 14.sp,
                 )
             }

@@ -100,7 +100,7 @@ fun Button(
                     text = text,
                     color = color.getTextColor(type),
                     fontSize = size.fontSize,
-                    fontWeight = FontWeight.Bold,
+                    fontWeight = FontWeight.SemiBold,
                     maxLines = 1,
                     textAlign = TextAlign.Center,
                     overflow = TextOverflow.Ellipsis,

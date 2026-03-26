@@ -68,7 +68,7 @@ fun SectionLabel(
                         overflow = TextOverflow.Ellipsis,
                         maxLines = 1,
                         fontSize = 14.sp,
-                        fontWeight = FontWeight.Bold,
+                        fontWeight = FontWeight.SemiBold,
                         color = BezierTheme.colorsV3.textNeutralLighter,
                 )
 

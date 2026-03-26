@@ -90,7 +90,7 @@ private fun ChannelDialogLayout(
                 CompositionLocalProvider(
                         LocalTextStyle provides TextStyle(
                                 fontSize = 16.sp,
-                                fontWeight = FontWeight.Bold,
+                                fontWeight = FontWeight.SemiBold,
                                 color = BezierTheme.colorsV3.textNeutral,
                                 textAlign = TextAlign.Center,
                         ),

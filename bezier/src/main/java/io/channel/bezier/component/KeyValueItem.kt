@@ -101,7 +101,7 @@ fun KeyValueItem(
                         modifier = Modifier.sizeIn(maxWidth = 152.dp),
                         text = key,
                         color = BezierTheme.colorsV3.textNeutralLighter,
-                        fontWeight = FontWeight.Bold,
+                        fontWeight = FontWeight.SemiBold,
                         fontSize = 14.sp,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
