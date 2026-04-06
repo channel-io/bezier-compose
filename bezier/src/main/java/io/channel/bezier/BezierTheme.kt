@@ -16,7 +16,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.staticCompositionLocalOf
 import io.channel.bezier.color.BezierSemanticColorV3
 import io.channel.bezier.color.Colors
-import io.channel.bezier.typography.BezierTypography
 import io.channel.bezier.color.DarkColor
 import io.channel.bezier.color.LightColor
 import io.channel.bezier.color.darkColors
@@ -87,8 +86,6 @@ object BezierTheme {
             LightColor()
         }
     }
-
-    val typography: BezierTypography = BezierTypography
 
     var isDark by mutableStateOf(false)
 }

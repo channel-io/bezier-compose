@@ -11,13 +11,14 @@ import androidx.compose.material.Divider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.channel.bezier.BezierTheme
-import io.channel.bezier.typography.BezierFontWeight
+import io.channel.bezier.component.BezierText
+import io.channel.bezier.typography.BezierTypo
+import io.channel.bezier.typography.BezierWeight
 
 @Composable
 private fun SectionHeader(title: String) {
@@ -32,15 +33,6 @@ private fun SectionHeader(title: String) {
     Spacer(modifier = Modifier.height(8.dp))
 }
 
-@Composable
-private fun TypographyItem(name: String, style: TextStyle) {
-    Text(
-        text = name,
-        style = style,
-        modifier = Modifier.padding(vertical = 4.dp),
-    )
-}
-
 @Preview(showBackground = true)
 @Composable
 fun TypographyPreview() {
@@ -53,52 +45,52 @@ fun TypographyPreview() {
         ) {
             // Display
             SectionHeader("Display")
-            TypographyItem("displayLarge", BezierTheme.typography.displayLarge)
-            TypographyItem("displayMedium", BezierTheme.typography.displayMedium)
+            BezierText(text = "displayLarge - 가나다라", typo = BezierTypo.displayLarge)
+            BezierText(text = "displayMedium - 가나다라", typo = BezierTypo.displayMedium)
 
             // Heading
             SectionHeader("Heading")
-            TypographyItem("headingXLarge", BezierTheme.typography.headingXLarge)
-            TypographyItem("headingLarge", BezierTheme.typography.headingLarge)
-            TypographyItem("headingMedium", BezierTheme.typography.headingMedium)
-            TypographyItem("headingSmall", BezierTheme.typography.headingSmall)
-            TypographyItem("headingXSmall", BezierTheme.typography.headingXSmall)
-            TypographyItem("headingXXSmall", BezierTheme.typography.headingXXSmall)
+            BezierText(text = "headingXLarge - 가나다라", typo = BezierTypo.headingXLarge)
+            BezierText(text = "headingLarge - 가나다라", typo = BezierTypo.headingLarge)
+            BezierText(text = "headingMedium - 가나다라", typo = BezierTypo.headingMedium)
+            BezierText(text = "headingSmall - 가나다라", typo = BezierTypo.headingSmall)
+            BezierText(text = "headingXSmall - 가나다라", typo = BezierTypo.headingXSmall)
+            BezierText(text = "headingXXSmall - 가나다라", typo = BezierTypo.headingXXSmall)
 
             // Text (Regular / Bold)
             SectionHeader("Text")
-            TypographyItem("textXXLarge (Regular)", BezierTheme.typography.textXXLarge())
-            TypographyItem("textXXLarge (Bold)", BezierTheme.typography.textXXLarge(BezierFontWeight.Bold))
-            TypographyItem("textXLarge (Regular)", BezierTheme.typography.textXLarge())
-            TypographyItem("textXLarge (Bold)", BezierTheme.typography.textXLarge(BezierFontWeight.Bold))
-            TypographyItem("textLarge (Regular)", BezierTheme.typography.textLarge())
-            TypographyItem("textLarge (Bold)", BezierTheme.typography.textLarge(BezierFontWeight.Bold))
-            TypographyItem("textMedium (Regular)", BezierTheme.typography.textMedium())
-            TypographyItem("textMedium (Bold)", BezierTheme.typography.textMedium(BezierFontWeight.Bold))
-            TypographyItem("textSmall (Regular)", BezierTheme.typography.textSmall())
-            TypographyItem("textSmall (Bold)", BezierTheme.typography.textSmall(BezierFontWeight.Bold))
-            TypographyItem("textXSmall (Regular)", BezierTheme.typography.textXSmall())
-            TypographyItem("textXSmall (Bold)", BezierTheme.typography.textXSmall(BezierFontWeight.Bold))
-            TypographyItem("textXXSmall (Regular)", BezierTheme.typography.textXXSmall())
-            TypographyItem("textXXSmall (Bold)", BezierTheme.typography.textXXSmall(BezierFontWeight.Bold))
+            BezierText(text = "textXXLarge (Regular)", typo = BezierTypo.textXXLarge)
+            BezierText(text = "textXXLarge (Bold)", typo = BezierTypo.textXXLarge, weight = BezierWeight.Bold)
+            BezierText(text = "textXLarge (Regular)", typo = BezierTypo.textXLarge)
+            BezierText(text = "textXLarge (Bold)", typo = BezierTypo.textXLarge, weight = BezierWeight.Bold)
+            BezierText(text = "textLarge (Regular)", typo = BezierTypo.textLarge)
+            BezierText(text = "textLarge (Bold)", typo = BezierTypo.textLarge, weight = BezierWeight.Bold)
+            BezierText(text = "textMedium (Regular)", typo = BezierTypo.textMedium)
+            BezierText(text = "textMedium (Bold)", typo = BezierTypo.textMedium, weight = BezierWeight.Bold)
+            BezierText(text = "textSmall (Regular)", typo = BezierTypo.textSmall)
+            BezierText(text = "textSmall (Bold)", typo = BezierTypo.textSmall, weight = BezierWeight.Bold)
+            BezierText(text = "textXSmall (Regular)", typo = BezierTypo.textXSmall)
+            BezierText(text = "textXSmall (Bold)", typo = BezierTypo.textXSmall, weight = BezierWeight.Bold)
+            BezierText(text = "textXXSmall (Regular)", typo = BezierTypo.textXXSmall)
+            BezierText(text = "textXXSmall (Bold)", typo = BezierTypo.textXXSmall, weight = BezierWeight.Bold)
 
             // Label
             SectionHeader("Label")
-            TypographyItem("labelLarge", BezierTheme.typography.labelLarge)
-            TypographyItem("labelMedium", BezierTheme.typography.labelMedium)
-            TypographyItem("labelSmall", BezierTheme.typography.labelSmall)
+            BezierText(text = "labelLarge - 가나다라", typo = BezierTypo.labelLarge)
+            BezierText(text = "labelMedium - 가나다라", typo = BezierTypo.labelMedium)
+            BezierText(text = "labelSmall - 가나다라", typo = BezierTypo.labelSmall)
 
             // Caption (Regular / Bold)
             SectionHeader("Caption")
-            TypographyItem("captionMedium (Regular)", BezierTheme.typography.captionMedium())
-            TypographyItem("captionMedium (Bold)", BezierTheme.typography.captionMedium(BezierFontWeight.Bold))
-            TypographyItem("captionSmall (Regular)", BezierTheme.typography.captionSmall())
-            TypographyItem("captionSmall (Bold)", BezierTheme.typography.captionSmall(BezierFontWeight.Bold))
+            BezierText(text = "captionMedium (Regular)", typo = BezierTypo.captionMedium)
+            BezierText(text = "captionMedium (Bold)", typo = BezierTypo.captionMedium, weight = BezierWeight.Bold)
+            BezierText(text = "captionSmall (Regular)", typo = BezierTypo.captionSmall)
+            BezierText(text = "captionSmall (Bold)", typo = BezierTypo.captionSmall, weight = BezierWeight.Bold)
 
             // Code
             SectionHeader("Code")
-            TypographyItem("codeMedium", BezierTheme.typography.codeMedium)
-            TypographyItem("codeSmall", BezierTheme.typography.codeSmall)
+            BezierText(text = "codeMedium - 가나다라", typo = BezierTypo.codeMedium)
+            BezierText(text = "codeSmall - 가나다라", typo = BezierTypo.codeSmall)
 
             Spacer(modifier = Modifier.height(16.dp))
         }
