@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="BezierTextAppearance" />
+
     <!-- Display -->
-    <style name="BezierTextAppearance.DisplayLarge" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.DisplayLarge">
         <item name="android:textSize">@dimen/bezier_font_size_36</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_44</item>
         <item name="android:letterSpacing">-0.011</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="BezierTextAppearance.DisplayMedium" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.DisplayMedium">
         <item name="android:textSize">@dimen/bezier_font_size_30</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_36</item>
         <item name="android:letterSpacing">-0.013</item>
@@ -17,42 +19,42 @@
     </style>
 
     <!-- Heading -->
-    <style name="BezierTextAppearance.HeadingXLarge" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.HeadingXLarge">
         <item name="android:textSize">@dimen/bezier_font_size_24</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_32</item>
         <item name="android:letterSpacing">-0.017</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="BezierTextAppearance.HeadingLarge" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.HeadingLarge">
         <item name="android:textSize">@dimen/bezier_font_size_22</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_28</item>
         <item name="android:letterSpacing">-0.018</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="BezierTextAppearance.HeadingMedium" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.HeadingMedium">
         <item name="android:textSize">@dimen/bezier_font_size_18</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_24</item>
         <item name="android:letterSpacing">0</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="BezierTextAppearance.HeadingSmall" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.HeadingSmall">
         <item name="android:textSize">@dimen/bezier_font_size_17</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_24</item>
         <item name="android:letterSpacing">-0.006</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="BezierTextAppearance.HeadingXSmall" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.HeadingXSmall">
         <item name="android:textSize">@dimen/bezier_font_size_16</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_24</item>
         <item name="android:letterSpacing">-0.006</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="BezierTextAppearance.HeadingXXSmall" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.HeadingXXSmall">
         <item name="android:textSize">@dimen/bezier_font_size_15</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_20</item>
         <item name="android:letterSpacing">-0.007</item>
@@ -60,7 +62,7 @@
     </style>
 
     <!-- Text -->
-    <style name="BezierTextAppearance.TextXXLarge" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.TextXXLarge">
         <item name="android:textSize">@dimen/bezier_font_size_17</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_24</item>
         <item name="android:letterSpacing">-0.006</item>
@@ -70,7 +72,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="BezierTextAppearance.TextXLarge" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.TextXLarge">
         <item name="android:textSize">@dimen/bezier_font_size_16</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_24</item>
         <item name="android:letterSpacing">-0.006</item>
@@ -80,7 +82,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="BezierTextAppearance.TextLarge" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.TextLarge">
         <item name="android:textSize">@dimen/bezier_font_size_15</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_20</item>
         <item name="android:letterSpacing">-0.007</item>
@@ -90,7 +92,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="BezierTextAppearance.TextMedium" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.TextMedium">
         <item name="android:textSize">@dimen/bezier_font_size_14</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_18</item>
         <item name="android:letterSpacing">0</item>
@@ -100,7 +102,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="BezierTextAppearance.TextSmall" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.TextSmall">
         <item name="android:textSize">@dimen/bezier_font_size_13</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_18</item>
         <item name="android:letterSpacing">0</item>
@@ -110,7 +112,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="BezierTextAppearance.TextXSmall" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.TextXSmall">
         <item name="android:textSize">@dimen/bezier_font_size_12</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_16</item>
         <item name="android:letterSpacing">0</item>
@@ -120,7 +122,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="BezierTextAppearance.TextXXSmall" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.TextXXSmall">
         <item name="android:textSize">@dimen/bezier_font_size_11</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_16</item>
         <item name="android:letterSpacing">0</item>
@@ -131,21 +133,21 @@
     </style>
 
     <!-- Label -->
-    <style name="BezierTextAppearance.LabelLarge" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.LabelLarge">
         <item name="android:textSize">@dimen/bezier_font_size_14</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_18</item>
         <item name="android:letterSpacing">0</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="BezierTextAppearance.LabelMedium" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.LabelMedium">
         <item name="android:textSize">@dimen/bezier_font_size_13</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_18</item>
         <item name="android:letterSpacing">0</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="BezierTextAppearance.LabelSmall" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.LabelSmall">
         <item name="android:textSize">@dimen/bezier_font_size_12</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_16</item>
         <item name="android:letterSpacing">0</item>
@@ -153,7 +155,7 @@
     </style>
 
     <!-- Caption -->
-    <style name="BezierTextAppearance.CaptionMedium" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.CaptionMedium">
         <item name="android:textSize">@dimen/bezier_font_size_12</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_16</item>
         <item name="android:letterSpacing">0</item>
@@ -163,7 +165,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="BezierTextAppearance.CaptionSmall" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.CaptionSmall">
         <item name="android:textSize">@dimen/bezier_font_size_11</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_16</item>
         <item name="android:letterSpacing">0</item>
@@ -174,14 +176,14 @@
     </style>
 
     <!-- Code -->
-    <style name="BezierTextAppearance.CodeMedium" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.CodeMedium">
         <item name="android:textSize">@dimen/bezier_font_size_14</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_18</item>
         <item name="android:letterSpacing">0</item>
         <item name="android:fontFamily">monospace</item>
     </style>
 
-    <style name="BezierTextAppearance.CodeSmall" parent="android:style/TextAppearance">
+    <style name="BezierTextAppearance.CodeSmall">
         <item name="android:textSize">@dimen/bezier_font_size_13</item>
         <item name="android:lineHeight">@dimen/bezier_line_height_18</item>
         <item name="android:letterSpacing">0</item>
