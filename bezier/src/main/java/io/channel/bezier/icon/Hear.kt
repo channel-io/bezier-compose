@@ -33,7 +33,7 @@ val BezierIcons.Hear: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(16.782f, 8.463f)
@@ -76,7 +76,7 @@ val BezierIcons.Hear: BezierIcon
                     curveTo(8.411f, 13.0f, 7.401f, 12.505f, 6.733f, 11.642f)
                     arcTo(3.52f, 3.52f, 142.34855466793854f, isMoreThanHalf = false, isPositiveArc = true, 6.119f, 8.584f)
                     arcTo(3.48f, 3.48f, 194.92915131644082f, isMoreThanHalf = false, isPositiveArc = true, 8.585f, 6.117999999999999f)
-                    arcTo(3.5f, 3.5f, 254.89296762388372f, isMoreThanHalf = false, isPositiveArc = true, 11.643f, 6.731999999999999f)
+                    arcTo(3.5f, 3.5f, 254.89296762388375f, isMoreThanHalf = false, isPositiveArc = true, 11.643f, 6.731999999999999f)
                     arcTo(3.48f, 3.48f, 307.5725950081192f, isMoreThanHalf = false, isPositiveArc = true, 13.001f, 9.5f)
                     lineTo(11.001f, 9.5f)
                     curveTo(11.001f, 9.033f, 10.789f, 8.6f, 10.418f, 8.313f)

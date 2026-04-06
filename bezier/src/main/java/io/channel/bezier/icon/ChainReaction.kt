@@ -33,14 +33,14 @@ val BezierIcons.ChainReaction: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(19.0f, 14.0f)
                     arcTo(3.0f, 3.0f, 269.89205059155245f, isMoreThanHalf = true, isPositiveArc = true, 17.955f, 19.81f)
                     arcTo(9.02f, 9.02f, 49.254370327717886f, isMoreThanHalf = false, isPositiveArc = true, 8.570999999999998f, 21.291f)
                     arcTo(1.0f, 1.0f, 114.09679040890406f, isMoreThanHalf = false, isPositiveArc = true, 9.348999999999998f, 19.449f)
-                    arcTo(7.02f, 7.02f, 112.77651285474987f, isMoreThanHalf = false, isPositiveArc = false, 16.403f, 18.497f)
+                    arcTo(7.02f, 7.02f, 112.77651285474985f, isMoreThanHalf = false, isPositiveArc = false, 16.403f, 18.497f)
                     arcTo(3.0f, 3.0f, 149.95876650348757f, isMoreThanHalf = false, isPositiveArc = true, 16.0f, 17.0f)
                     arcTo(3.0f, 3.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 19.0f, 14.0f)
                     moveTo(6.498f, 5.822f)

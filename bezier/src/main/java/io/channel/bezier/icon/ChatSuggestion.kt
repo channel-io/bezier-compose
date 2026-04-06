@@ -33,13 +33,13 @@ val BezierIcons.ChatSuggestion: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(12.0f, 3.0f)
                     curveTo(17.631f, 3.0f, 22.5f, 6.875f, 22.5f, 12.0f)
                     curveTo(22.5f, 17.125f, 17.631f, 21.0f, 12.0f, 21.0f)
-                    arcTo(12.0f, 12.0f, 89.88060283664295f, isMoreThanHalf = false, isPositiveArc = true, 10.275f, 20.879f)
+                    arcTo(12.0f, 12.0f, 89.88060283664294f, isMoreThanHalf = false, isPositiveArc = true, 10.275f, 20.879f)
                     curveTo(8.792f, 22.024f, 7.1770000000000005f, 22.583000000000002f, 6.1240000000000006f, 22.849f)
                     arcTo(1.44f, 1.44f, 75.4183553040692f, isMoreThanHalf = false, isPositiveArc = true, 4.554f, 22.240000000000002f)
                     arcTo(1.52f, 1.52f, 146.94683447128142f, isMoreThanHalf = false, isPositiveArc = true, 4.521f, 20.635f)
@@ -73,7 +73,7 @@ val BezierIcons.ChatSuggestion: BezierIcon
                     lineTo(7.666000000000001f, 12.251000000000001f)
                     arcTo(0.273f, 0.273f, 113.15944920377794f, isMoreThanHalf = false, isPositiveArc = true, 7.666000000000001f, 11.749f)
                     lineTo(9.421000000000001f, 10.996f)
-                    arcTo(3.0f, 3.0f, 66.79155999620785f, isMoreThanHalf = false, isPositiveArc = false, 10.996f, 9.421000000000001f)
+                    arcTo(3.0f, 3.0f, 66.79155999620784f, isMoreThanHalf = false, isPositiveArc = false, 10.996f, 9.421000000000001f)
                     close()
                 }
             }.build().also {

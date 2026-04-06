@@ -33,7 +33,7 @@ val BezierIcons.BreaktimeFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(20.0f, 6.996f)
@@ -48,7 +48,7 @@ val BezierIcons.BreaktimeFilled: BezierIcon
                     lineTo(4.0f, 21.0f)
                     arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 4.0f, 19.0f)
                     lineTo(6.115f, 19.0f)
-                    arcTo(6.98f, 6.98f, 134.18611834432693f, isMoreThanHalf = false, isPositiveArc = true, 4.0f, 13.996f)
+                    arcTo(6.98f, 6.98f, 134.18611834432696f, isMoreThanHalf = false, isPositiveArc = true, 4.0f, 13.996f)
                     lineTo(4.0f, 7.996f)
                     arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 5.0f, 6.996f)
                     close()

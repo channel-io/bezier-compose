@@ -33,7 +33,7 @@ val BezierIcons.ChatPush: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(4.936f, 4.923f)
@@ -50,7 +50,7 @@ val BezierIcons.ChatPush: BezierIcon
                     lineTo(18.868f, 17.762999999999998f)
                     curveTo(18.65f, 17.107999999999997f, 18.718f, 16.391f, 19.061f, 15.747999999999998f)
                     arcTo(7.95f, 7.95f, 28.164304332338453f, isMoreThanHalf = false, isPositiveArc = false, 19.914f, 10.813999999999997f)
-                    arcTo(5.5f, 5.5f, 75.12319795752084f, isMoreThanHalf = false, isPositiveArc = false, 21.785f, 9.910999999999996f)
+                    arcTo(5.5f, 5.5f, 75.12319795752083f, isMoreThanHalf = false, isPositiveArc = false, 21.785f, 9.910999999999996f)
                     lineTo(21.797f, 9.959999999999996f)
                     curveTo(22.267f, 12.292999999999996f, 21.931f, 14.619999999999996f, 20.826f, 16.687999999999995f)
                     curveTo(20.778000000000002f, 16.777999999999995f, 20.707f, 16.955999999999996f, 20.766000000000002f, 17.131999999999994f)

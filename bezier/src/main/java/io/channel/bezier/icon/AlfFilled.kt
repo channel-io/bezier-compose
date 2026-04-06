@@ -33,7 +33,7 @@ val BezierIcons.AlfFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(12.0f, 14.628f)
@@ -68,7 +68,7 @@ val BezierIcons.AlfFilled: BezierIcon
                     lineTo(9.74f, 14.962000000000002f)
                     lineTo(8.57f, 17.004f)
                     lineTo(8.566f, 17.011000000000003f)
-                    arcTo(2.99f, 2.99f, 30.242678323497405f, isMoreThanHalf = false, isPositiveArc = true, 5.279000000000001f, 18.411f)
+                    arcTo(2.99f, 2.99f, 30.242678323497408f, isMoreThanHalf = false, isPositiveArc = true, 5.279000000000001f, 18.411f)
                     arcTo(2.96f, 2.96f, 103.61663298148409f, isMoreThanHalf = false, isPositiveArc = true, 3.402000000000001f, 16.996000000000002f)
                     arcTo(3.0f, 3.0f, 150.00422701984775f, isMoreThanHalf = false, isPositiveArc = true, 3.1220000000000008f, 14.650000000000002f)
                     arcTo(3.0f, 3.0f, 196.2584467371706f, isMoreThanHalf = false, isPositiveArc = true, 5.979000000000001f, 12.490000000000002f)
@@ -82,7 +82,7 @@ val BezierIcons.AlfFilled: BezierIcon
                     curveTo(9.963000000000001f, 10.147000000000002f, 9.888000000000002f, 10.430000000000001f, 9.74f, 10.687000000000001f)
                     arcTo(1.62f, 1.62f, 29.429868389342158f, isMoreThanHalf = false, isPositiveArc = true, 8.33f, 11.511000000000001f)
                     lineTo(5.978f, 11.511000000000001f)
-                    arcTo(3.0f, 3.0f, 90.61826588075797f, isMoreThanHalf = false, isPositiveArc = true, 3.1279999999999997f, 9.343f)
+                    arcTo(3.0f, 3.0f, 90.61826588075796f, isMoreThanHalf = false, isPositiveArc = true, 3.1279999999999997f, 9.343f)
                     arcTo(3.0f, 3.0f, 163.58403740608722f, isMoreThanHalf = false, isPositiveArc = true, 3.4059999999999997f, 6.997999999999999f)
                     arcTo(2.96f, 2.96f, 209.51041193676562f, isMoreThanHalf = false, isPositiveArc = true, 5.282f, 5.58f)
                     moveTo(15.431f, 6.993f)
@@ -92,7 +92,7 @@ val BezierIcons.AlfFilled: BezierIcon
                     arcTo(3.0f, 3.0f, 16.25844673717062f, isMoreThanHalf = false, isPositiveArc = true, 18.021f, 11.51f)
                     lineTo(18.008f, 11.509f)
                     lineTo(15.67f, 11.509f)
-                    arcTo(1.62f, 1.62f, 90.01368210750792f, isMoreThanHalf = false, isPositiveArc = true, 14.26f, 10.686f)
+                    arcTo(1.62f, 1.62f, 90.0136821075079f, isMoreThanHalf = false, isPositiveArc = true, 14.26f, 10.686f)
                     arcTo(1.64f, 1.64f, 149.7945499010368f, isMoreThanHalf = false, isPositiveArc = true, 14.257f, 9.041f)
                     lineTo(14.259f, 9.038f)
                     lineTo(15.429f, 6.996f)

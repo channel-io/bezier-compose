@@ -33,7 +33,7 @@ val BezierIcons.GroupFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(8.985f, 12.0f)
@@ -54,7 +54,7 @@ val BezierIcons.GroupFilled: BezierIcon
                     arcTo(2.926f, 2.926f, 91.0786372713391f, isMoreThanHalf = false, isPositiveArc = true, 16.485f, 7.0f)
                     moveTo(8.985f, 4.0f)
                     arcTo(3.6f, 3.6f, 270.0159145677636f, isMoreThanHalf = true, isPositiveArc = true, 8.982999999999999f, 11.2f)
-                    arcTo(3.6f, 3.6f, 90.01591642003608f, isMoreThanHalf = false, isPositiveArc = true, 8.985f, 4.0f)
+                    arcTo(3.6f, 3.6f, 90.01591642003606f, isMoreThanHalf = false, isPositiveArc = true, 8.985f, 4.0f)
                 }
             }.build().also {
                 _groupFilled = it

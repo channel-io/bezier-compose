@@ -33,7 +33,7 @@ val BezierIcons.Live: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(20.0f, 5.0f)
@@ -67,7 +67,7 @@ val BezierIcons.Live: BezierIcon
                     arcTo(0.25f, 0.25f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 10.25f, 8.5f)
                     close()
                     moveTo(11.31f, 8.5f)
-                    arcTo(0.25f, 0.25f, 270.15648316805226f, isMoreThanHalf = false, isPositiveArc = false, 11.065000000000001f, 8.803f)
+                    arcTo(0.25f, 0.25f, 270.1564831680523f, isMoreThanHalf = false, isPositiveArc = false, 11.065000000000001f, 8.803f)
                     lineTo(12.458000000000002f, 15.303f)
                     arcTo(0.25f, 0.25f, 167.7604641129055f, isMoreThanHalf = false, isPositiveArc = false, 12.702000000000002f, 15.5f)
                     lineTo(13.798000000000002f, 15.5f)

@@ -33,7 +33,7 @@ val BezierIcons.MarkerPen: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(11.085f, 3.0f)
@@ -48,7 +48,7 @@ val BezierIcons.MarkerPen: BezierIcon
                     lineTo(18.013f, 3.0f)
                     lineTo(20.323f, 3.0f)
                     lineTo(13.68f, 14.505f)
-                    arcTo(2.79f, 2.79f, 29.76157739935114f, isMoreThanHalf = false, isPositiveArc = true, 11.046f, 15.902000000000001f)
+                    arcTo(2.79f, 2.79f, 29.761577399351147f, isMoreThanHalf = false, isPositiveArc = true, 11.046f, 15.902000000000001f)
                     curveTo(10.751999999999999f, 15.882000000000001f, 10.475999999999999f, 16.052f, 10.328f, 16.308f)
                     lineTo(8.888f, 18.804f)
                     lineTo(8.486f, 19.5f)
@@ -58,7 +58,7 @@ val BezierIcons.MarkerPen: BezierIcon
                     lineTo(4.19f, 14.94f)
                     lineTo(4.191000000000001f, 14.94f)
                     lineTo(5.133000000000001f, 13.309f)
-                    arcTo(0.8f, 0.8f, 30.356429049600404f, isMoreThanHalf = false, isPositiveArc = false, 5.131000000000001f, 12.497f)
+                    arcTo(0.8f, 0.8f, 30.35642904960041f, isMoreThanHalf = false, isPositiveArc = false, 5.131000000000001f, 12.497f)
                     curveTo(4.607000000000001f, 11.6f, 4.4140000000000015f, 10.553f, 4.934000000000001f, 9.653f)
                     lineTo(8.775f, 3.0f)
                     close()

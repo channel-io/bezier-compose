@@ -33,7 +33,7 @@ val BezierIcons.Soccerball: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(15.804f, 13.236f)
@@ -45,7 +45,7 @@ val BezierIcons.Soccerball: BezierIcon
                 }
 
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -56,7 +56,7 @@ val BezierIcons.Soccerball: BezierIcon
                     quadTo(2.002f, 10.964f, 2.203f, 9.986f)
                     arcTo(9.989f, 9.989f, 191.60921549190275f, isMoreThanHalf = false, isPositiveArc = true, 4.09f, 5.88f)
                     arcTo(10.03f, 10.03f, 217.76074784945203f, isMoreThanHalf = false, isPositiveArc = true, 8.536999999999999f, 2.616f)
-                    arcTo(10.0f, 10.0f, 249.78452383408302f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 2.0f)
+                    arcTo(10.0f, 10.0f, 249.78452383408305f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 2.0f)
                     quadTo(12.48f, 2.0f, 12.95f, 2.044f)
                     arcTo(10.0f, 10.0f, 275.4057539871578f, isMoreThanHalf = false, isPositiveArc = true, 15.462f, 2.615f)
                     arcTo(10.0f, 10.0f, 290.25506193096055f, isMoreThanHalf = false, isPositiveArc = true, 22.0f, 12.0f)
@@ -66,7 +66,7 @@ val BezierIcons.Soccerball: BezierIcon
                     curveTo(4.050999999999999f, 10.270999999999999f, 4.494f, 8.902f, 5.2299999999999995f, 7.736f)
                     lineTo(8.472999999999999f, 7.265f)
                     lineTo(9.953999999999999f, 4.263999999999999f)
-                    arcTo(8.0f, 8.0f, 255.23953026503142f, isMoreThanHalf = false, isPositiveArc = true, 12.001f, 4.0f)
+                    arcTo(8.0f, 8.0f, 255.23953026503145f, isMoreThanHalf = false, isPositiveArc = true, 12.001f, 4.0f)
                     curveTo(12.706999999999999f, 4.0f, 13.392999999999999f, 4.091f, 14.046f, 4.263f)
                     lineTo(15.526f, 7.265f)
                     lineTo(18.771f, 7.734999999999999f)

@@ -33,7 +33,7 @@ val BezierIcons.SortDescending: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(19.019f, 10.0f)
@@ -42,7 +42,7 @@ val BezierIcons.SortDescending: BezierIcon
                     lineTo(22.964f, 16.671000000000003f)
                     lineTo(19.073999999999998f, 20.561000000000003f)
                     arcTo(1.5f, 1.5f, 45.07241357642326f, isMoreThanHalf = false, isPositiveArc = true, 18.014f, 20.999000000000002f)
-                    arcTo(1.5f, 1.5f, 89.97398022898744f, isMoreThanHalf = false, isPositiveArc = true, 16.954f, 20.561000000000003f)
+                    arcTo(1.5f, 1.5f, 89.97398022898743f, isMoreThanHalf = false, isPositiveArc = true, 16.954f, 20.561000000000003f)
                     lineTo(13.064f, 16.671000000000003f)
                     lineTo(14.479f, 15.257000000000003f)
                     lineTo(17.015f, 17.794000000000004f)

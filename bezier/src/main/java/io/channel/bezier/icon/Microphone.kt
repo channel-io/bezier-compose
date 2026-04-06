@@ -33,7 +33,7 @@ val BezierIcons.Microphone: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(19.0f, 13.0f)
@@ -42,7 +42,7 @@ val BezierIcons.Microphone: BezierIcon
                     lineTo(13.0f, 23.0f)
                     lineTo(11.0f, 23.0f)
                     lineTo(11.0f, 20.936f)
-                    arcTo(8.0f, 8.0f, 97.17597267194618f, isMoreThanHalf = false, isPositiveArc = true, 4.062f, 13.998000000000001f)
+                    arcTo(8.0f, 8.0f, 97.17597267194617f, isMoreThanHalf = false, isPositiveArc = true, 4.062f, 13.998000000000001f)
                     curveTo(3.993f, 13.45f, 4.448f, 13.0f, 5.0f, 13.0f)
                     curveTo(5.552f, 13.0f, 5.991f, 13.451f, 6.082f, 13.996f)
                     arcTo(6.002f, 6.002f, 170.4029647399896f, isMoreThanHalf = false, isPositiveArc = false, 17.918f, 13.996f)

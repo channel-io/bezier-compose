@@ -33,7 +33,7 @@ val BezierIcons.WifiOff: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(3.814f, 1.807f)
@@ -50,7 +50,7 @@ val BezierIcons.WifiOff: BezierIcon
                     arcTo(0.517f, 0.517f, 131.54495568990436f, isMoreThanHalf = false, isPositiveArc = false, 20.596999999999998f, 10.925f)
                     lineTo(21.938f, 9.510000000000002f)
                     curveTo(22.147f, 9.290000000000001f, 22.137999999999998f, 8.940000000000001f, 21.91f, 8.740000000000002f)
-                    arcTo(14.94f, 14.94f, 311.4387017159682f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 5.0f)
+                    arcTo(14.94f, 14.94f, 311.43870171596814f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 5.0f)
                     curveTo(10.891f, 5.0f, 9.81f, 5.12f, 8.77f, 5.349f)
                     lineTo(5.228f, 1.807f)
                     arcTo(1.0f, 1.0f, 314.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 3.814f, 1.807f)
@@ -58,7 +58,7 @@ val BezierIcons.WifiOff: BezierIcon
                     arcTo(15.0f, 15.0f, 228.5966740908328f, isMoreThanHalf = false, isPositiveArc = true, 5.606f, 6.427f)
                     lineTo(7.898f, 8.72f)
                     curveTo(6.497999999999999f, 9.23f, 5.218f, 9.992f, 4.118f, 10.953000000000001f)
-                    arcTo(0.517f, 0.517f, 48.37536552562175f, isMoreThanHalf = false, isPositiveArc = true, 3.4030000000000005f, 10.926000000000002f)
+                    arcTo(0.517f, 0.517f, 48.37536552562176f, isMoreThanHalf = false, isPositiveArc = true, 3.4030000000000005f, 10.926000000000002f)
                     lineTo(2.062f, 9.51f)
                     arcTo(0.535f, 0.535f, 136.01967965912553f, isMoreThanHalf = false, isPositiveArc = true, 2.09f, 8.74f)
                     moveTo(5.532f, 12.373f)

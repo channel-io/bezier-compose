@@ -33,7 +33,7 @@ val BezierIcons.WeatherThunder: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(14.28f, 11.534f)
@@ -67,7 +67,7 @@ val BezierIcons.WeatherThunder: BezierIcon
                     lineTo(8.004999999999999f, 15.006999999999998f)
                     lineTo(8.004999999999999f, 17.006999999999998f)
                     lineTo(6.019f, 17.006999999999998f)
-                    arcTo(5.026f, 5.026f, 90.07977086453367f, isMoreThanHalf = false, isPositiveArc = true, 1.0f, 11.986f)
+                    arcTo(5.026f, 5.026f, 90.07977086453366f, isMoreThanHalf = false, isPositiveArc = true, 1.0f, 11.986f)
                     lineTo(1.0f, 11.642000000000001f)
                     arcTo(5.025f, 5.025f, 180.05698239990795f, isMoreThanHalf = false, isPositiveArc = true, 6.02f, 6.622000000000002f)
                     lineTo(6.3839999999999995f, 6.622000000000002f)

@@ -33,7 +33,7 @@ val BezierIcons.ChevronDownBold: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -42,7 +42,7 @@ val BezierIcons.ChevronDownBold: BezierIcon
                     lineTo(13.059999999999999f, 16.56f)
                     arcTo(1.5f, 1.5f, 45.03565071645426f, isMoreThanHalf = false, isPositiveArc = true, 10.939999999999998f, 16.56f)
                     lineTo(4.939999999999998f, 10.559999999999999f)
-                    arcTo(1.5f, 1.5f, 137.02162456471535f, isMoreThanHalf = false, isPositiveArc = true, 7.059999999999998f, 8.439999999999998f)
+                    arcTo(1.5f, 1.5f, 137.02162456471538f, isMoreThanHalf = false, isPositiveArc = true, 7.059999999999998f, 8.439999999999998f)
                     lineTo(12.0f, 13.378f)
                     lineTo(16.94f, 8.437999999999999f)
                     arcTo(1.5f, 1.5f, 225.03565071645426f, isMoreThanHalf = false, isPositiveArc = true, 19.060000000000002f, 8.437999999999999f)

@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from svg.path import parse_path, Arc, CubicBezier, Line, Move, Close
+from svg.path import parse_path, Arc, CubicBezier, Line, Move, Close, QuadraticBezier
 from xml.dom.minidom import parse
 
 VECTOR_XML_INPUT_DIR = 'bezier/src/main/res/drawable'
@@ -12,6 +12,7 @@ CODE_TEMPLATE = """@file:Suppress("ObjectPropertyName", "UnusedReceiverParameter
 
 package io.channel.bezier.icon
 
+import androidx.annotation.DrawableRes
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
@@ -24,21 +25,27 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
+import io.channel.bezier.BezierIcons
+import io.channel.bezier.compose.R
 
-val BezierIcon.{icon_name}: ImageVector
-    get() {{
-        return {temp_var} ?: ImageVector.Builder(
-                name = "{icon_name}",
-                defaultWidth = 24.dp,
-                defaultHeight = 24.dp,
-                viewportWidth = 24f,
-                viewportHeight = 24f,
-        ).apply {{
+val BezierIcons.{icon_name}: BezierIcon
+    get() = object : BezierIcon {{
+        @DrawableRes
+        override val resourceId: Int = R.drawable.{drawable_name}
+        override val imageVector: ImageVector
+            get() = {temp_var} ?: ImageVector.Builder(
+                    name = "{icon_name}",
+                    defaultWidth = 24.dp,
+                    defaultHeight = 24.dp,
+                    viewportWidth = 24f,
+                    viewportHeight = 24f,
+            ).apply {{
 {builder}
-        }}.build().also {{
-            {temp_var} = it
-        }}
+            }}.build().also {{
+                {temp_var} = it
+            }}
     }}
+
 
 private var {temp_var}: ImageVector? = null
 
@@ -47,7 +54,7 @@ private var {temp_var}: ImageVector? = null
 private fun {icon_name}IconPreview() {{
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcon.{icon_name},
+            imageVector = BezierIcons.{icon_name}.imageVector,
             contentDescription = null,
     )
 }}
@@ -72,17 +79,22 @@ def compose_color(color: str | None, alpha: float = -1) -> str | None:
     if color[0] != '#':
         raise ValueError('color should start with #')
 
+    if len(color) == 4:  # #RGB -> #RRGGBB
+        color = '#' + color[1]*2 + color[2]*2 + color[3]*2
+    elif len(color) == 5:  # #ARGB -> #AARRGGBB
+        color = '#' + color[1]*2 + color[2]*2 + color[3]*2 + color[4]*2
+
     if len(color) == 7:  # RGB
         if alpha == -1:
             alpha = 1
         return 'Color(0x{}{})'.format(format(int(alpha * 255), 'X'), color[1:].upper())
-    elif len(color) == 9:  # ARGB
-        return 'Color(0x{})'.format(color[1:].upper())
+    elif len(color) == 9:  # ARGB - strip embedded alpha, force to FF
+        return 'Color(0xFF{})'.format(color[3:].upper())
     else:
         raise ValueError('invalid color value: {}'.format(color))
 
 
-def transform_xml_into_vector_code(xml_path: str, icon_accessor_name: str, kt_write_path: str):
+def transform_xml_into_vector_code(xml_path: str, icon_name: str, drawable_name: str, kt_write_path: str):
     class PathInfo:
         def __init__(self, fill_type, fill_color, fill_alpha, stroke_color, stroke_alpha):
             self.fill_type = fill_type
@@ -139,6 +151,9 @@ def transform_xml_into_vector_code(xml_path: str, icon_accessor_name: str, kt_wr
                                   .format(path.radius.real, path.radius.imag, path.theta,
                                           kotlin_bool(path.arc), kotlin_bool(path.sweep),
                                           path.end.real, path.end.imag))
+            elif isinstance(path, QuadraticBezier):
+                code_lines.append('quadTo({}f, {}f, {}f, {}f)'
+                                  .format(path.control.real, path.control.imag, path.end.real, path.end.imag))
             else:
                 raise TypeError('This script does not support this type of SVG path element:\n    ' + str(path))
 
@@ -154,7 +169,7 @@ def transform_xml_into_vector_code(xml_path: str, icon_accessor_name: str, kt_wr
         path_info = entry[0]
         lines = entry[1]
 
-        path_builder_code = '\n'.join(' ' * 16 + line for line in lines)
+        path_builder_code = '\n'.join(' ' * 20 + line for line in lines)
 
         path_arguments = {
             'fill': 'SolidColor({})'.format(compose_color(path_info.fill_color, float(path_info.fill_alpha)))
@@ -171,21 +186,22 @@ def transform_xml_into_vector_code(xml_path: str, icon_accessor_name: str, kt_wr
         if path_info.fill_type == 'evenOdd':
             path_arguments['pathFillType'] = 'PathFillType.EvenOdd'
 
-        return ' ' * 12 + 'path(\n' + \
+        return ' ' * 16 + 'path(\n' + \
             ''.join(
                 list(map(
-                    lambda arg_entry: ' ' * 20 + arg_entry[0] + ' = ' + arg_entry[1] + ',\n',
+                    lambda arg_entry: ' ' * 24 + arg_entry[0] + ' = ' + arg_entry[1] + ',\n',
                     path_arguments.items()))
             ) +\
-            ' ' * 12 + ') {\n' + path_builder_code + '\n' + ' ' * 12 + '}'
+            ' ' * 16 + ') {\n' + path_builder_code + '\n' + ' ' * 16 + '}'
 
     # noinspection PyTypeChecker
     actual_builder_code = '\n\n'.join(list(map(path_entry_to_code, paths.items())))
 
     with open(kt_write_path, 'w') as f:
         f.write(CODE_TEMPLATE.format(
-            icon_name=icon_accessor_name,
-            temp_var='_' + icon_accessor_name[0].lower() + icon_accessor_name[1:],
+            icon_name=icon_name,
+            drawable_name=drawable_name,
+            temp_var='_' + icon_name[0].lower() + icon_name[1:],
             builder=actual_builder_code
         ))
 
@@ -204,6 +220,7 @@ for root, dirs, files in os.walk(project_rel_path_to_abs_path(VECTOR_XML_INPUT_D
 
             transform_xml_into_vector_code(
                 xml_path=os.path.join(root, file),
-                icon_accessor_name=icon_name,
+                icon_name=icon_name,
+                drawable_name=filename,
                 kt_write_path=write_path
             )

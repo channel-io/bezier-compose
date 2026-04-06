@@ -33,7 +33,7 @@ val BezierIcons.Kakao: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(6.05f, 13.295f)
@@ -48,7 +48,7 @@ val BezierIcons.Kakao: BezierIcon
                     lineTo(5.872f, 12.898f)
                     curveTo(5.877f, 13.048f, 5.941f, 13.190999999999999f, 6.05f, 13.294f)
                     moveTo(12.776f, 13.335f)
-                    arcTo(0.5f, 0.5f, 111.46468119497878f, isMoreThanHalf = false, isPositiveArc = false, 12.985f, 13.369000000000002f)
+                    arcTo(0.5f, 0.5f, 111.46468119497877f, isMoreThanHalf = false, isPositiveArc = false, 12.985f, 13.369000000000002f)
                     lineTo(14.872f, 13.363000000000001f)
                     arcTo(0.535f, 0.535f, 96.55740203003279f, isMoreThanHalf = true, isPositiveArc = false, 14.872f, 12.3f)
                     lineTo(13.614f, 12.3f)
@@ -65,10 +65,10 @@ val BezierIcons.Kakao: BezierIcon
                     lineTo(16.991000000000003f, 11.401f)
                     lineTo(18.356f, 13.206f)
                     arcTo(0.55f, 0.55f, 143.93529410878864f, isMoreThanHalf = false, isPositiveArc = false, 18.816000000000003f, 13.432f)
-                    arcTo(0.54f, 0.54f, 92.21976857917994f, isMoreThanHalf = false, isPositiveArc = false, 19.168000000000003f, 13.319f)
+                    arcTo(0.54f, 0.54f, 92.21976857917993f, isMoreThanHalf = false, isPositiveArc = false, 19.168000000000003f, 13.319f)
                     arcTo(0.6f, 0.6f, 52.31399692605764f, isMoreThanHalf = false, isPositiveArc = false, 19.318f, 13.149000000000001f)
                     arcTo(0.6f, 0.6f, 30.4607554638519f, isMoreThanHalf = false, isPositiveArc = false, 19.394000000000002f, 12.935f)
-                    arcTo(0.56f, 0.56f, 8.404152233310285f, isMoreThanHalf = false, isPositiveArc = false, 19.281000000000002f, 12.508000000000001f)
+                    arcTo(0.56f, 0.56f, 8.404152233310286f, isMoreThanHalf = false, isPositiveArc = false, 19.281000000000002f, 12.508000000000001f)
                     lineTo(17.853f, 10.621f)
                     lineTo(19.173000000000002f, 9.294f)
                     arcTo(0.44f, 0.44f, 46.01399497117912f, isMoreThanHalf = false, isPositiveArc = false, 19.306f, 8.942f)
@@ -83,7 +83,7 @@ val BezierIcons.Kakao: BezierIcon
                 }
 
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -97,7 +97,7 @@ val BezierIcons.Kakao: BezierIcon
                     lineTo(7.726999999999999f, 12.539f)
                     curveTo(7.550999999999999f, 13.086f, 7.701999999999999f, 13.288f, 7.864999999999999f, 13.363f)
                     quadTo(8.042f, 13.443f, 8.237f, 13.445f)
-                    arcTo(0.47f, 0.47f, 96.94187054510273f, isMoreThanHalf = false, isPositiveArc = false, 8.715f, 13.187000000000001f)
+                    arcTo(0.47f, 0.47f, 96.94187054510272f, isMoreThanHalf = false, isPositiveArc = false, 8.715f, 13.187000000000001f)
                     lineTo(9.004f, 12.432f)
                     lineTo(10.796f, 12.432f)
                     lineTo(11.059999999999999f, 13.193f)

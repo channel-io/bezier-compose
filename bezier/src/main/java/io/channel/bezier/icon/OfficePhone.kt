@@ -33,7 +33,7 @@ val BezierIcons.OfficePhone: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(10.0f, 13.667f)
@@ -43,7 +43,7 @@ val BezierIcons.OfficePhone: BezierIcon
                     lineTo(12.0f, 14.333f)
                     arcTo(0.667f, 0.667f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 11.333f, 15.0f)
                     lineTo(10.667f, 15.0f)
-                    arcTo(0.667f, 0.667f, 90.00000000000003f, isMoreThanHalf = false, isPositiveArc = true, 10.0f, 14.333f)
+                    arcTo(0.667f, 0.667f, 90.00000000000001f, isMoreThanHalf = false, isPositiveArc = true, 10.0f, 14.333f)
                     close()
                     moveTo(10.667f, 16.0f)
                     arcTo(0.667f, 0.667f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 10.0f, 16.667f)
@@ -61,7 +61,7 @@ val BezierIcons.OfficePhone: BezierIcon
                     lineTo(15.0f, 14.333f)
                     arcTo(0.667f, 0.667f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 14.333f, 15.0f)
                     lineTo(13.667f, 15.0f)
-                    arcTo(0.667f, 0.667f, 90.00000000000003f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 14.333f)
+                    arcTo(0.667f, 0.667f, 90.00000000000001f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 14.333f)
                     close()
                     moveTo(13.667f, 16.0f)
                     arcTo(0.667f, 0.667f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 13.0f, 16.667f)
@@ -93,7 +93,7 @@ val BezierIcons.OfficePhone: BezierIcon
                 }
 
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {

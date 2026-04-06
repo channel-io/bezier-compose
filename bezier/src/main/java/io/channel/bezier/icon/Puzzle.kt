@@ -33,7 +33,7 @@ val BezierIcons.Puzzle: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -73,7 +73,7 @@ val BezierIcons.Puzzle: BezierIcon
                     curveTo(3.4669999999999996f, 14.321000000000002f, 3.63f, 14.355000000000002f, 3.9589999999999996f, 14.421000000000001f)
                     lineTo(4.199f, 14.47f)
                     quadTo(4.343f, 14.5f, 4.5f, 14.5f)
-                    arcTo(1.5f, 1.5f, 89.9039666802728f, isMoreThanHalf = true, isPositiveArc = false, 4.199f, 11.53f)
+                    arcTo(1.5f, 1.5f, 89.90396668027279f, isMoreThanHalf = true, isPositiveArc = false, 4.199f, 11.53f)
                     lineTo(3.9589999999999996f, 11.578999999999999f)
                     curveTo(3.6299999999999994f, 11.645f, 3.4659999999999997f, 11.678999999999998f, 3.3369999999999997f, 11.634999999999998f)
                     arcTo(0.5f, 0.5f, 109.09477896082745f, isMoreThanHalf = false, isPositiveArc = true, 3.069f, 11.414999999999997f)

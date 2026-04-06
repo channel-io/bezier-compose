@@ -33,7 +33,7 @@ val BezierIcons.Hourglass3: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(17.0f, 2.0f)
@@ -84,7 +84,7 @@ val BezierIcons.Hourglass3: BezierIcon
                     lineTo(14.693f, 8.322f)
                     lineTo(12.765f, 10.611999999999998f)
                     arcTo(1.0f, 1.0f, 40.16565043722487f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 10.966999999999999f)
-                    arcTo(1.0f, 1.0f, 90.0014604719923f, isMoreThanHalf = false, isPositiveArc = true, 11.235f, 10.610999999999999f)
+                    arcTo(1.0f, 1.0f, 90.00146047199229f, isMoreThanHalf = false, isPositiveArc = true, 11.235f, 10.610999999999999f)
                     lineTo(9.307f, 8.322f)
                     lineTo(9.035f, 8.0f)
                     close()

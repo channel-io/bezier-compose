@@ -33,7 +33,7 @@ val BezierIcons.LinkCopy: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(10.0f, 5.0f)
@@ -74,11 +74,11 @@ val BezierIcons.LinkCopy: BezierIcon
                     curveTo(8.32f, 3.006f, 9.08f, 3.0f, 10.0f, 3.0f)
                     close()
                     moveTo(10.785f, 7.332f)
-                    arcTo(4.153f, 4.153f, 225.01198741366926f, isMoreThanHalf = false, isPositiveArc = true, 16.657f, 7.332f)
+                    arcTo(4.153f, 4.153f, 225.0119874136693f, isMoreThanHalf = false, isPositiveArc = true, 16.657f, 7.332f)
                     arcTo(1.0f, 1.0f, 315.0202536176486f, isMoreThanHalf = false, isPositiveArc = true, 15.242f, 8.746f)
                     arcTo(2.15f, 2.15f, 315.0460132718115f, isMoreThanHalf = false, isPositiveArc = false, 12.199000000000002f, 8.746f)
                     lineTo(9.629000000000001f, 11.316f)
-                    arcTo(2.152f, 2.152f, 223.60681133100937f, isMoreThanHalf = false, isPositiveArc = false, 12.672f, 14.358f)
+                    arcTo(2.152f, 2.152f, 223.60681133100934f, isMoreThanHalf = false, isPositiveArc = false, 12.672f, 14.358f)
                     arcTo(1.0f, 1.0f, 225.99574461357972f, isMoreThanHalf = false, isPositiveArc = true, 14.086f, 15.772f)
                     arcTo(4.15f, 4.15f, 45.0f, isMoreThanHalf = true, isPositiveArc = true, 8.216000000000001f, 9.902000000000001f)
                     close()

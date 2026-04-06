@@ -33,7 +33,7 @@ val BezierIcons.RefreshCircleFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -45,7 +45,7 @@ val BezierIcons.RefreshCircleFilled: BezierIcon
                     arcTo(4.99f, 4.99f, 314.76359020523216f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 7.114f)
                     arcTo(5.03f, 5.03f, 269.92031970209234f, isMoreThanHalf = false, isPositiveArc = false, 6.977f, 12.137f)
                     arcTo(5.03f, 5.03f, 179.92031970208996f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 17.16f)
-                    arcTo(5.03f, 5.03f, 89.92033667546097f, isMoreThanHalf = false, isPositiveArc = false, 17.023f, 12.138f)
+                    arcTo(5.03f, 5.03f, 89.92033667546096f, isMoreThanHalf = false, isPositiveArc = false, 17.023f, 12.138f)
                     lineTo(18.273f, 12.138f)
                     arcTo(6.28f, 6.28f, 0.07295273220389978f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 18.41f)
                     arcTo(6.28f, 6.28f, 90.0638182914954f, isMoreThanHalf = false, isPositiveArc = true, 5.727f, 12.138f)

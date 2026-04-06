@@ -33,7 +33,7 @@ val BezierIcons.LegacyChannelFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -52,11 +52,11 @@ val BezierIcons.LegacyChannelFilled: BezierIcon
                     moveTo(17.863f, 14.055f)
                     arcTo(6.66f, 6.66f, 28.276267997628807f, isMoreThanHalf = false, isPositiveArc = true, 11.992999999999999f, 17.56f)
                     lineTo(11.987999999999998f, 17.56f)
-                    arcTo(6.67f, 6.67f, 90.01081015027373f, isMoreThanHalf = false, isPositiveArc = true, 6.117999999999998f, 14.055f)
+                    arcTo(6.67f, 6.67f, 90.01081015027371f, isMoreThanHalf = false, isPositiveArc = true, 6.117999999999998f, 14.055f)
                     arcTo(0.5f, 0.5f, 152.21067007295218f, isMoreThanHalf = false, isPositiveArc = true, 6.304999999999998f, 13.392f)
                     lineTo(8.095999999999998f, 12.318999999999999f)
                     arcTo(0.506f, 0.506f, 239.7078053939179f, isMoreThanHalf = false, isPositiveArc = true, 8.803999999999998f, 12.53f)
-                    arcTo(3.58f, 3.58f, 152.88377889938914f, isMoreThanHalf = false, isPositiveArc = false, 15.177f, 12.53f)
+                    arcTo(3.58f, 3.58f, 152.8837788993891f, isMoreThanHalf = false, isPositiveArc = false, 15.177f, 12.53f)
                     arcTo(0.507f, 0.507f, 206.6378898499879f, isMoreThanHalf = false, isPositiveArc = true, 15.885f, 12.318999999999999f)
                     lineTo(17.676f, 13.392f)
                     curveTo(17.906f, 13.53f, 17.988999999999997f, 13.822f, 17.863f, 14.055f)

@@ -33,7 +33,7 @@ val BezierIcons.GroupRemoveFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(8.985f, 12.0f)
@@ -51,7 +51,7 @@ val BezierIcons.GroupRemoveFilled: BezierIcon
                     curveTo(15.695000000000004f, 13.542f, 16.085000000000004f, 13.5f, 16.485000000000003f, 13.5f)
                     moveTo(8.985f, 4.0f)
                     arcTo(3.6f, 3.6f, 270.0159145677636f, isMoreThanHalf = true, isPositiveArc = true, 8.982999999999999f, 11.2f)
-                    arcTo(3.6f, 3.6f, 90.01591642003608f, isMoreThanHalf = false, isPositiveArc = true, 8.985f, 4.0f)
+                    arcTo(3.6f, 3.6f, 90.01591642003606f, isMoreThanHalf = false, isPositiveArc = true, 8.985f, 4.0f)
                     moveTo(19.407f, 4.273f)
                     arcTo(0.934f, 0.934f, 227.08617452223837f, isMoreThanHalf = false, isPositiveArc = true, 20.727f, 5.593f)
                     lineTo(18.82f, 7.5f)

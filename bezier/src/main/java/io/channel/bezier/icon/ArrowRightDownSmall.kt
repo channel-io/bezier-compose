@@ -33,11 +33,11 @@ val BezierIcons.ArrowRightDownSmall: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(7.05f, 7.05f)
-                    arcTo(1.0f, 1.0f, 224.99134833716204f, isMoreThanHalf = false, isPositiveArc = false, 7.05f, 8.464f)
+                    arcTo(1.0f, 1.0f, 224.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 7.05f, 8.464f)
                     lineTo(13.829f, 15.243f)
                     lineTo(8.464f, 15.243f)
                     arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 8.464f, 17.243000000000002f)

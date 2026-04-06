@@ -33,14 +33,14 @@ val BezierIcons.PersonFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(11.987f, 12.0f)
                     curveTo(17.335f, 12.0f, 21.701999999999998f, 16.198f, 21.974f, 21.478f)
                     arcTo(0.507f, 0.507f, 358.30460570617333f, isMoreThanHalf = false, isPositiveArc = true, 21.467f, 22.0f)
                     lineTo(2.508f, 22.0f)
-                    arcTo(0.507f, 0.507f, 89.86190396704419f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 21.478f)
+                    arcTo(0.507f, 0.507f, 89.86190396704417f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 21.478f)
                     curveTo(2.272f, 16.198f, 6.64f, 12.0f, 11.987f, 12.0f)
                     moveTo(11.987f, 2.0f)
                     arcTo(4.5f, 4.5f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 11.987f, 11.002f)

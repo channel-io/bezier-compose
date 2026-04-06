@@ -33,7 +33,7 @@ val BezierIcons.HandThumbdownFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(16.777f, 20.976f)
@@ -62,7 +62,7 @@ val BezierIcons.HandThumbdownFilled: BezierIcon
                     curveTo(3.0f, 14.62f, 3.0f, 14.48f, 3.0f, 14.2f)
                     lineTo(3.0f, 5.8f)
                     curveTo(3.0f, 5.52f, 3.0f, 5.38f, 3.054f, 5.273f)
-                    arcTo(0.5f, 0.5f, 207.13174528167258f, isMoreThanHalf = false, isPositiveArc = true, 3.2729999999999997f, 5.055f)
+                    arcTo(0.5f, 0.5f, 207.13174528167255f, isMoreThanHalf = false, isPositiveArc = true, 3.2729999999999997f, 5.055f)
                     curveTo(3.38f, 5.0f, 3.52f, 5.0f, 3.8f, 5.0f)
                     lineTo(5.199999999999999f, 5.0f)
                     curveTo(5.4799999999999995f, 5.0f, 5.619999999999999f, 5.0f, 5.726999999999999f, 5.055f)

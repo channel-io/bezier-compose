@@ -33,14 +33,14 @@ val BezierIcons.HandThumbup: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(18.25f, 5.967f)
                     arcTo(4.0f, 4.0f, 270.0018167471665f, isMoreThanHalf = false, isPositiveArc = true, 21.995f, 11.372f)
                     lineTo(19.745f, 17.372f)
-                    arcTo(4.02f, 4.02f, 20.761061914037768f, isMoreThanHalf = false, isPositiveArc = true, 16.0f, 19.967f)
+                    arcTo(4.02f, 4.02f, 20.76106191403777f, isMoreThanHalf = false, isPositiveArc = true, 16.0f, 19.967f)
                     lineTo(13.323f, 19.967f)
                     arcTo(7.9f, 7.9f, 90.04280059424806f, isMoreThanHalf = false, isPositiveArc = true, 10.4f, 19.404f)
                     arcTo(6.97f, 6.97f, 111.63660662862071f, isMoreThanHalf = false, isPositiveArc = true, 6.0f, 12.904f)

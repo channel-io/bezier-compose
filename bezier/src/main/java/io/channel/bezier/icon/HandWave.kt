@@ -33,7 +33,7 @@ val BezierIcons.HandWave: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(18.0f, 3.0f)
@@ -45,11 +45,11 @@ val BezierIcons.HandWave: BezierIcon
                     lineTo(1.0f, 17.004f)
                     arcTo(4.997f, 4.997f, 179.94269846647128f, isMoreThanHalf = false, isPositiveArc = false, 5.992f, 21.996000000000002f)
                     lineTo(5.992f, 19.996000000000002f)
-                    arcTo(2.996f, 2.996f, 90.07644539289811f, isMoreThanHalf = false, isPositiveArc = true, 3.0f, 17.004f)
+                    arcTo(2.996f, 2.996f, 90.0764453928981f, isMoreThanHalf = false, isPositiveArc = true, 3.0f, 17.004f)
                 }
 
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -65,10 +65,10 @@ val BezierIcons.HandWave: BezierIcon
                     arcTo(2.506f, 2.506f, 224.8865238116737f, isMoreThanHalf = false, isPositiveArc = false, 2.15f, 10.248000000000001f)
                     lineTo(2.53f, 10.628000000000002f)
                     quadTo(2.3299999999999996f, 10.760000000000002f, 2.1519999999999997f, 10.935000000000002f)
-                    arcTo(2.5f, 2.5f, 225.1543356760945f, isMoreThanHalf = false, isPositiveArc = false, 1.4149999999999996f, 12.710000000000003f)
+                    arcTo(2.5f, 2.5f, 225.15433567609446f, isMoreThanHalf = false, isPositiveArc = false, 1.4149999999999996f, 12.710000000000003f)
                     curveTo(1.4149999999999996f, 13.381000000000002f, 1.6749999999999996f, 14.012000000000002f, 2.1489999999999996f, 14.487000000000002f)
                     lineTo(7.2219999999999995f, 19.561f)
-                    arcTo(7.8f, 7.8f, 135.09171706181914f, isMoreThanHalf = false, isPositiveArc = false, 9.686f, 21.229f)
+                    arcTo(7.8f, 7.8f, 135.0917170618191f, isMoreThanHalf = false, isPositiveArc = false, 9.686f, 21.229f)
                     arcTo(6.966f, 6.966f, 113.38865977316547f, isMoreThanHalf = false, isPositiveArc = false, 17.393f, 19.744999999999997f)
                     lineTo(17.945f, 19.194999999999997f)
                     arcTo(6.95f, 6.95f, 45.16779828418531f, isMoreThanHalf = false, isPositiveArc = false, 19.995f, 14.248999999999997f)
@@ -87,7 +87,7 @@ val BezierIcons.HandWave: BezierIcon
                     lineTo(7.450000000000004f, 15.546999999999997f)
                     lineTo(8.864000000000004f, 14.132999999999997f)
                     lineTo(3.565000000000004f, 8.832999999999998f)
-                    arcTo(0.503f, 0.503f, 134.78489107437593f, isMoreThanHalf = false, isPositiveArc = true, 3.561000000000004f, 8.122999999999998f)
+                    arcTo(0.503f, 0.503f, 134.78489107437596f, isMoreThanHalf = false, isPositiveArc = true, 3.561000000000004f, 8.122999999999998f)
                     arcTo(0.497f, 0.497f, 224.5741165849066f, isMoreThanHalf = false, isPositiveArc = true, 4.272000000000004f, 8.125999999999998f)
                     lineTo(9.572000000000003f, 13.425999999999998f)
                     lineTo(10.986000000000002f, 12.011999999999999f)

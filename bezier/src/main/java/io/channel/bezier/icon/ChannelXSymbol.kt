@@ -33,7 +33,7 @@ val BezierIcons.ChannelXSymbol: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -43,7 +43,7 @@ val BezierIcons.ChannelXSymbol: BezierIcon
                     lineTo(22.0f, 14.721f)
                     arcTo(7.28f, 7.28f, 0.007869758937798297f, isMoreThanHalf = false, isPositiveArc = true, 14.721f, 22.0f)
                     lineTo(9.279f, 22.0f)
-                    arcTo(7.28f, 7.28f, 90.00786975894012f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 14.721f)
+                    arcTo(7.28f, 7.28f, 90.0078697589401f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 14.721f)
                     lineTo(2.0f, 9.279f)
                     arcTo(7.28f, 7.28f, 180.0078697589378f, isMoreThanHalf = false, isPositiveArc = true, 9.279f, 2.0f)
                     moveTo(16.149f, 13.888f)
@@ -54,7 +54,7 @@ val BezierIcons.ChannelXSymbol: BezierIcon
                     quadTo(10.772000000000004f, 15.148999999999997f, 10.542000000000003f, 15.316999999999998f)
                     arcTo(11.7f, 11.7f, 53.69915162116926f, isMoreThanHalf = false, isPositiveArc = true, 8.141000000000004f, 16.677f)
                     curveTo(8.018000000000004f, 16.73f, 7.697000000000004f, 16.847f, 7.443000000000003f, 16.938f)
-                    arcTo(0.41f, 0.41f, 70.1774954605035f, isMoreThanHalf = false, isPositiveArc = true, 6.934000000000003f, 16.729f)
+                    arcTo(0.41f, 0.41f, 70.17749546050348f, isMoreThanHalf = false, isPositiveArc = true, 6.934000000000003f, 16.729f)
                     lineTo(6.115000000000003f, 15.020999999999999f)
                     arcTo(0.36f, 0.36f, 154.24612790985077f, isMoreThanHalf = false, isPositiveArc = true, 6.335000000000003f, 14.52f)
                     lineTo(6.339000000000002f, 14.52f)

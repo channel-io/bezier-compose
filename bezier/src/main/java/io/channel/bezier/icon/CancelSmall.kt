@@ -33,7 +33,7 @@ val BezierIcons.CancelSmall: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -44,7 +44,7 @@ val BezierIcons.CancelSmall: BezierIcon
                     arcTo(1.0f, 1.0f, 314.0456004492186f, isMoreThanHalf = false, isPositiveArc = false, 7.05f, 8.464f)
                     lineTo(10.586f, 12.0f)
                     lineTo(7.05f, 15.535f)
-                    arcTo(1.0f, 1.0f, 225.99574461357642f, isMoreThanHalf = true, isPositiveArc = false, 8.464f, 16.949f)
+                    arcTo(1.0f, 1.0f, 225.99574461357645f, isMoreThanHalf = true, isPositiveArc = false, 8.464f, 16.949f)
                     lineTo(12.0f, 13.414f)
                     lineTo(15.536f, 16.95f)
                     arcTo(1.0f, 1.0f, 134.97974638235135f, isMoreThanHalf = false, isPositiveArc = false, 16.95f, 15.535f)

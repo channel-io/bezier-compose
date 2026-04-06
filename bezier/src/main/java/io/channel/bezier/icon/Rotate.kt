@@ -33,7 +33,7 @@ val BezierIcons.Rotate: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -46,7 +46,7 @@ val BezierIcons.Rotate: BezierIcon
                     lineTo(8.13f, 9.468f)
                     arcTo(0.5f, 0.5f, 89.98782980263407f, isMoreThanHalf = false, isPositiveArc = false, 8.483f, 8.614f)
                     lineTo(6.39f, 6.52f)
-                    arcTo(7.94f, 7.94f, 225.2305264117296f, isMoreThanHalf = false, isPositiveArc = true, 12.003f, 4.217f)
+                    arcTo(7.94f, 7.94f, 225.23052641172958f, isMoreThanHalf = false, isPositiveArc = true, 12.003f, 4.217f)
                     curveTo(16.414f, 4.217f, 20.003f, 7.805999999999999f, 20.003f, 12.216999999999999f)
                     curveTo(20.003f, 16.628f, 16.414f, 20.217f, 12.003f, 20.217f)
                     curveTo(7.93f, 20.217f, 4.558f, 17.157f, 4.065f, 13.215f)

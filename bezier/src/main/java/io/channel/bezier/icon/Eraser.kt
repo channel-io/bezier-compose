@@ -33,7 +33,7 @@ val BezierIcons.Eraser: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(10.657f, 2.149f)
@@ -45,7 +45,7 @@ val BezierIcons.Eraser: BezierIcon
                     lineTo(20.0f, 20.0f)
                     lineTo(10.0f, 20.0f)
                     lineTo(10.005f, 19.994f)
-                    arcTo(3.0f, 3.0f, 88.91469037102408f, isMoreThanHalf = false, isPositiveArc = true, 7.829000000000001f, 19.118f)
+                    arcTo(3.0f, 3.0f, 88.91469037102407f, isMoreThanHalf = false, isPositiveArc = true, 7.829000000000001f, 19.118f)
                     lineTo(2.8790000000000004f, 14.168f)
                     arcTo(3.0f, 3.0f, 135.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 2.8790000000000004f, 9.925999999999998f)
                     close()

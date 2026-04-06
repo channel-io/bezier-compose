@@ -33,7 +33,7 @@ val BezierIcons.HashtagLarge: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -42,7 +42,7 @@ val BezierIcons.HashtagLarge: BezierIcon
                     lineTo(10.455f, 7.0f)
                     lineTo(15.42f, 7.0f)
                     lineTo(16.017f, 3.816f)
-                    arcTo(1.0f, 1.0f, 190.6020591464783f, isMoreThanHalf = false, isPositiveArc = true, 17.983f, 4.184f)
+                    arcTo(1.0f, 1.0f, 190.60205914647833f, isMoreThanHalf = false, isPositiveArc = true, 17.983f, 4.184f)
                     lineTo(17.455f, 7.0f)
                     lineTo(20.0f, 7.0f)
                     arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 20.0f, 9.0f)

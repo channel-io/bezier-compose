@@ -33,13 +33,13 @@ val BezierIcons.TriangleRightCircleFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(10.266f, 16.667f)
                     curveTo(10.251f, 16.667f, 10.238f, 16.661f, 10.223f, 16.659000000000002f)
-                    arcTo(0.3f, 0.3f, 95.85939005211156f, isMoreThanHalf = false, isPositiveArc = true, 10.035f, 16.566000000000003f)
+                    arcTo(0.3f, 0.3f, 95.85939005211155f, isMoreThanHalf = false, isPositiveArc = true, 10.035f, 16.566000000000003f)
                     arcTo(0.28f, 0.28f, 134.70600687898482f, isMoreThanHalf = false, isPositiveArc = true, 9.952f, 16.371000000000002f)
                     lineTo(9.952f, 7.65f)
                     curveTo(9.952f, 7.57f, 9.988f, 7.507000000000001f, 10.035f, 7.456f)

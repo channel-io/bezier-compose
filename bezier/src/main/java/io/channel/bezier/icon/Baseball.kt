@@ -33,7 +33,7 @@ val BezierIcons.Baseball: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -47,7 +47,7 @@ val BezierIcons.Baseball: BezierIcon
                     arcTo(8.97f, 8.97f, 314.09692333978904f, isMoreThanHalf = false, isPositiveArc = true, 10.0f, 12.0f)
                     arcTo(8.97f, 8.97f, 359.91670890443055f, isMoreThanHalf = false, isPositiveArc = true, 7.273f, 18.454f)
                     arcTo(7.96f, 7.96f, 126.31458333836001f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 20.0f)
-                    arcTo(7.96f, 7.96f, 90.09315901133525f, isMoreThanHalf = false, isPositiveArc = false, 16.727f, 18.454f)
+                    arcTo(7.96f, 7.96f, 90.09315901133523f, isMoreThanHalf = false, isPositiveArc = false, 16.727f, 18.454f)
                     arcTo(8.97f, 8.97f, 134.10580615549586f, isMoreThanHalf = false, isPositiveArc = true, 14.0f, 12.0f)
                     arcTo(8.97f, 8.97f, 179.91651189423587f, isMoreThanHalf = false, isPositiveArc = true, 16.728f, 5.545f)
                     arcTo(7.96f, 7.96f, 306.3024781388996f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 4.0f)

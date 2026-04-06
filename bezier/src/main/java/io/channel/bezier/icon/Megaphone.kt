@@ -33,7 +33,7 @@ val BezierIcons.Megaphone: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -63,7 +63,7 @@ val BezierIcons.Megaphone: BezierIcon
                     lineTo(3.7600000000000002f, 20.4f)
                     arcTo(0.5f, 0.5f, 191.53696025088894f, isMoreThanHalf = false, isPositiveArc = false, 4.25f, 21.0f)
                     lineTo(6.571f, 21.0f)
-                    arcTo(0.8f, 0.8f, 89.96950191493939f, isMoreThanHalf = false, isPositiveArc = false, 7.354f, 20.362f)
+                    arcTo(0.8f, 0.8f, 89.96950191493937f, isMoreThanHalf = false, isPositiveArc = false, 7.354f, 20.362f)
                     lineTo(8.255f, 16.0f)
                     lineTo(12.773f, 16.0f)
                     arcTo(0.86f, 0.86f, 269.99221679848733f, isMoreThanHalf = false, isPositiveArc = true, 13.201f, 16.114f)

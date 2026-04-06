@@ -33,14 +33,14 @@ val BezierIcons.Pencil: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(14.99f, 2.97f)
                     arcTo(4.257f, 4.257f, 225.7369082750439f, isMoreThanHalf = false, isPositiveArc = true, 20.990000000000002f, 9.01f)
                     lineTo(7.5f, 22.5f)
                     lineTo(2.2729999999999997f, 22.477f)
-                    arcTo(1.0f, 1.0f, 90.22918372737823f, isMoreThanHalf = false, isPositiveArc = true, 1.2769999999999997f, 21.477f)
+                    arcTo(1.0f, 1.0f, 90.22918372737821f, isMoreThanHalf = false, isPositiveArc = true, 1.2769999999999997f, 21.477f)
                     lineTo(1.277f, 16.5f)
                     close()
                     moveTo(3.277f, 17.336f)

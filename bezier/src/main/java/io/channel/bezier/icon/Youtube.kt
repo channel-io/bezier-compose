@@ -33,7 +33,7 @@ val BezierIcons.Youtube: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -43,7 +43,7 @@ val BezierIcons.Youtube: BezierIcon
                     close()
                     moveTo(21.906f, 9.027f)
                     arcTo(3.99f, 3.99f, 356.36842756126606f, isMoreThanHalf = false, isPositiveArc = false, 18.345f, 5.311999999999999f)
-                    arcTo(63.0f, 63.0f, 275.705076739269f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 5.0f)
+                    arcTo(63.0f, 63.0f, 275.70507673926903f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 5.0f)
                     curveTo(9.79f, 5.0f, 7.66f, 5.109f, 5.655f, 5.311f)
                     arcTo(3.995f, 3.995f, 263.8965155352465f, isMoreThanHalf = false, isPositiveArc = false, 2.0930000000000004f, 9.027000000000001f)
                     arcTo(46.0f, 46.0f, 183.64572385432396f, isMoreThanHalf = false, isPositiveArc = false, 2.0930000000000004f, 14.877f)

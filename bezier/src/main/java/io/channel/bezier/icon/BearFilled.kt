@@ -33,7 +33,7 @@ val BezierIcons.BearFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -83,7 +83,7 @@ val BezierIcons.BearFilled: BezierIcon
                     arcTo(1.0f, 1.0f, 263.2170094969429f, isMoreThanHalf = false, isPositiveArc = false, 10.0f, 17.0f)
                     curveTo(10.768f, 17.0f, 11.47f, 16.711f, 12.0f, 16.236f)
                     arcTo(3.0f, 3.0f, 131.81226229827593f, isMoreThanHalf = false, isPositiveArc = false, 14.0f, 17.0f)
-                    arcTo(1.0f, 1.0f, 89.93644867091155f, isMoreThanHalf = false, isPositiveArc = false, 14.117f, 15.007f)
+                    arcTo(1.0f, 1.0f, 89.93644867091153f, isMoreThanHalf = false, isPositiveArc = false, 14.117f, 15.007f)
                     lineTo(14.0f, 15.0f)
                     arcTo(1.0f, 1.0f, 90.00755821444265f, isMoreThanHalf = false, isPositiveArc = true, 13.007f, 14.117f)
                     lineTo(13.0f, 14.0f)

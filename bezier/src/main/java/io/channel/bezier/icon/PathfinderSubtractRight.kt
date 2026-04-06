@@ -33,7 +33,7 @@ val BezierIcons.PathfinderSubtractRight: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -53,7 +53,7 @@ val BezierIcons.PathfinderSubtractRight: BezierIcon
                     lineTo(12.0f, 21.0f)
                     lineTo(17.454f, 21.0f)
                     lineTo(17.689f, 20.994f)
-                    arcTo(4.545f, 4.545f, 87.03648989739315f, isMoreThanHalf = false, isPositiveArc = false, 21.993000000000002f, 16.689f)
+                    arcTo(4.545f, 4.545f, 87.03648989739314f, isMoreThanHalf = false, isPositiveArc = false, 21.993000000000002f, 16.689f)
                     lineTo(22.000000000000004f, 16.454f)
                     lineTo(22.0f, 11.0f)
                     arcTo(4.547f, 4.547f, 359.9890197182895f, isMoreThanHalf = false, isPositiveArc = false, 17.689f, 6.46f)
@@ -65,7 +65,7 @@ val BezierIcons.PathfinderSubtractRight: BezierIcon
                     lineTo(20.0f, 16.454f)
                     arcTo(2.546f, 2.546f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 17.454f, 19.0f)
                     lineTo(12.0f, 19.0f)
-                    arcTo(2.546f, 2.546f, 90.00000000000001f, isMoreThanHalf = false, isPositiveArc = true, 9.454f, 16.454f)
+                    arcTo(2.546f, 2.546f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 9.454f, 16.454f)
                     lineTo(9.454f, 11.0f)
                     arcTo(2.546f, 2.546f, 180.02250423446608f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 8.455f)
                 }

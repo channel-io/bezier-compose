@@ -33,7 +33,7 @@ val BezierIcons.VolumeOffFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(4.88f, 7.0f)
@@ -41,7 +41,7 @@ val BezierIcons.VolumeOffFilled: BezierIcon
                     lineTo(15.0f, 21.0f)
                     arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 14.0f, 22.0f)
                     lineTo(13.0f, 22.0f)
-                    arcTo(1.0f, 1.0f, 90.01223660525449f, isMoreThanHalf = false, isPositiveArc = true, 12.293f, 21.707f)
+                    arcTo(1.0f, 1.0f, 90.01223660525447f, isMoreThanHalf = false, isPositiveArc = true, 12.293f, 21.707f)
                     lineTo(7.586f, 17.0f)
                     lineTo(3.0f, 17.0f)
                     arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 16.0f)

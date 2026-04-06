@@ -33,7 +33,7 @@ val BezierIcons.HandThumbdown: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -61,7 +61,7 @@ val BezierIcons.HandThumbdown: BezierIcon
                     arcTo(0.5f, 0.5f, 315.0086516628379f, isMoreThanHalf = false, isPositiveArc = true, 15.641000000000002f, 20.844f)
                     arcTo(0.498f, 0.498f, 44.778153488770116f, isMoreThanHalf = false, isPositiveArc = true, 14.934000000000001f, 20.844f)
                     lineTo(9.464000000000002f, 15.375f)
-                    arcTo(4.97f, 4.97f, 134.8642113091954f, isMoreThanHalf = false, isPositiveArc = true, 8.0f, 11.839f)
+                    arcTo(4.97f, 4.97f, 134.86421130919544f, isMoreThanHalf = false, isPositiveArc = true, 8.0f, 11.839f)
                     lineTo(8.0f, 11.063f)
                     arcTo(4.98f, 4.98f, 179.83677019622857f, isMoreThanHalf = false, isPositiveArc = true, 11.143f, 6.420000000000001f)
                     arcTo(5.9f, 5.9f, 248.2505330665033f, isMoreThanHalf = false, isPositiveArc = true, 13.323f, 6.000000000000001f)
@@ -70,14 +70,14 @@ val BezierIcons.HandThumbdown: BezierIcon
                 }
 
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(2.054f, 14.727f)
                     curveTo(2.0f, 14.62f, 2.0f, 14.48f, 2.0f, 14.2f)
                     lineTo(2.0f, 5.8f)
                     curveTo(2.0f, 5.52f, 2.0f, 5.38f, 2.054f, 5.273f)
-                    arcTo(0.5f, 0.5f, 207.13174528167258f, isMoreThanHalf = false, isPositiveArc = true, 2.2729999999999997f, 5.055f)
+                    arcTo(0.5f, 0.5f, 207.13174528167255f, isMoreThanHalf = false, isPositiveArc = true, 2.2729999999999997f, 5.055f)
                     curveTo(2.38f, 5.0f, 2.52f, 5.0f, 2.8f, 5.0f)
                     lineTo(4.199999999999999f, 5.0f)
                     curveTo(4.4799999999999995f, 5.0f, 4.619999999999999f, 5.0f, 4.726999999999999f, 5.055f)

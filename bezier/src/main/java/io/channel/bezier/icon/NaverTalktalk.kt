@@ -33,7 +33,7 @@ val BezierIcons.NaverTalktalk: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -44,7 +44,7 @@ val BezierIcons.NaverTalktalk: BezierIcon
                     arcTo(12.36f, 12.36f, 46.64843727173607f, isMoreThanHalf = false, isPositiveArc = true, 11.993000000000002f, 22.16f)
                     curveTo(10.356000000000002f, 22.334f, 8.703000000000003f, 22.327f, 7.068000000000002f, 22.139f)
                     arcTo(23.7f, 23.7f, 97.907687944198f, isMoreThanHalf = false, isPositiveArc = true, 2.517000000000002f, 21.04f)
-                    arcTo(0.93f, 0.93f, 109.29611764703301f, isMoreThanHalf = false, isPositiveArc = true, 2.0920000000000023f, 19.589f)
+                    arcTo(0.93f, 0.93f, 109.296117647033f, isMoreThanHalf = false, isPositiveArc = true, 2.0920000000000023f, 19.589f)
                     arcTo(9.0f, 9.0f, 38.26146584482214f, isMoreThanHalf = false, isPositiveArc = false, 3.2950000000000026f, 17.567f)
                     arcTo(2.3f, 2.3f, 20.955536953614534f, isMoreThanHalf = false, isPositiveArc = false, 3.2220000000000026f, 15.752f)
                     arcTo(9.72f, 9.72f, 154.18668821210508f, isMoreThanHalf = false, isPositiveArc = true, 5.202000000000003f, 4.545f)

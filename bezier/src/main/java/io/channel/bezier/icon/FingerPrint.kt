@@ -33,7 +33,7 @@ val BezierIcons.FingerPrint: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(20.46f, 18.3f)
@@ -106,7 +106,7 @@ val BezierIcons.FingerPrint: BezierIcon
                     curveTo(16.964999999999996f, 11.836f, 17.026999999999994f, 12.763f, 16.909999999999993f, 14.08f)
                     curveTo(16.859999999999992f, 14.63f, 17.269999999999992f, 15.11f, 17.819999999999993f, 15.16f)
                     moveTo(8.36f, 22.33f)
-                    arcTo(0.99f, 0.99f, 89.634919390316f, isMoreThanHalf = false, isPositiveArc = true, 7.59f, 21.97f)
+                    arcTo(0.99f, 0.99f, 89.63491939031599f, isMoreThanHalf = false, isPositiveArc = true, 7.59f, 21.97f)
                     arcTo(1.0f, 1.0f, 139.82870456623937f, isMoreThanHalf = false, isPositiveArc = true, 7.71f, 20.56f)
                     curveTo(8.17f, 20.169999999999998f, 8.59f, 19.73f, 8.96f, 19.229999999999997f)
                     curveTo(9.5f, 18.509999999999998f, 9.940000000000001f, 17.669999999999998f, 10.270000000000001f, 16.749999999999996f)
@@ -126,7 +126,7 @@ val BezierIcons.FingerPrint: BezierIcon
                     close()
                     moveTo(11.26f, 22.78f)
                     curveTo(11.446f, 22.926000000000002f, 11.66f, 22.997f, 11.875f, 23.0f)
-                    arcTo(1.02f, 1.02f, 88.80629954707773f, isMoreThanHalf = false, isPositiveArc = false, 12.64f, 22.63f)
+                    arcTo(1.02f, 1.02f, 88.80629954707771f, isMoreThanHalf = false, isPositiveArc = false, 12.64f, 22.63f)
                     curveTo(16.41f, 17.97f, 15.950000000000001f, 11.93f, 15.93f, 11.669999999999998f)
                     curveTo(15.75f, 9.58f, 14.05f, 8.0f, 11.96f, 8.0f)
                     curveTo(11.840000000000002f, 8.0f, 11.72f, 8.01f, 11.600000000000001f, 8.02f)

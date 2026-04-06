@@ -33,7 +33,7 @@ val BezierIcons.ImageFailed: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(22.24f, 3.868f)
@@ -76,7 +76,7 @@ val BezierIcons.ImageFailed: BezierIcon
                     close()
                     moveTo(7.986f, 6.0f)
                     arcTo(2.0f, 2.0f, 270.0286331027778f, isMoreThanHalf = true, isPositiveArc = true, 7.984f, 10.001999999999999f)
-                    arcTo(2.0f, 2.0f, 90.02863403839442f, isMoreThanHalf = false, isPositiveArc = true, 7.986f, 5.999999999999999f)
+                    arcTo(2.0f, 2.0f, 90.0286340383944f, isMoreThanHalf = false, isPositiveArc = true, 7.986f, 5.999999999999999f)
                 }
             }.build().also {
                 _imageFailed = it

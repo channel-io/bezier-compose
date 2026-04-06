@@ -33,7 +33,7 @@ val BezierIcons.TriangleLeftCircleFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -47,7 +47,7 @@ val BezierIcons.TriangleLeftCircleFilled: BezierIcon
                     quadTo(14.020999999999999f, 16.584999999999997f, 13.999f, 16.601f)
                     arcTo(0.3f, 0.3f, 53.237286093726254f, isMoreThanHalf = false, isPositiveArc = true, 13.851f, 16.659f)
                     curveTo(13.836f, 16.660999999999998f, 13.823f, 16.668f, 13.808000000000002f, 16.666999999999998f)
-                    arcTo(0.3f, 0.3f, 91.6498062746004f, isMoreThanHalf = false, isPositiveArc = true, 13.63f, 16.601999999999997f)
+                    arcTo(0.3f, 0.3f, 91.64980627460038f, isMoreThanHalf = false, isPositiveArc = true, 13.63f, 16.601999999999997f)
                     lineTo(8.4f, 12.241999999999997f)
                     arcTo(0.3f, 0.3f, 129.79554135618025f, isMoreThanHalf = false, isPositiveArc = true, 8.4f, 11.780999999999997f)
                     lineTo(13.63f, 7.420999999999997f)

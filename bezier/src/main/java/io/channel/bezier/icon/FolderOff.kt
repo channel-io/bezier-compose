@@ -33,14 +33,14 @@ val BezierIcons.FolderOff: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(1.707f, 2.703f)
                     arcTo(1.0f, 1.0f, 224.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 1.707f, 4.117f)
                     lineTo(18.677f, 21.087f)
-                    arcTo(1.0f, 1.0f, 134.04560044921752f, isMoreThanHalf = false, isPositiveArc = false, 20.092f, 19.674f)
+                    arcTo(1.0f, 1.0f, 134.04560044921755f, isMoreThanHalf = false, isPositiveArc = false, 20.092f, 19.674f)
                     lineTo(19.392f, 18.974f)
                     arcTo(3.0f, 3.0f, 82.49188213039632f, isMoreThanHalf = false, isPositiveArc = false, 22.0f, 16.0f)
                     lineTo(22.0f, 8.0f)
@@ -74,7 +74,7 @@ val BezierIcons.FolderOff: BezierIcon
                 }
 
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(2.0f, 6.0f)

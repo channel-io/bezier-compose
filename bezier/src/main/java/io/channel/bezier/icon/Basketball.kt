@@ -33,7 +33,7 @@ val BezierIcons.Basketball: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -42,7 +42,7 @@ val BezierIcons.Basketball: BezierIcon
                     arcTo(10.0f, 10.0f, 227.24073949642582f, isMoreThanHalf = false, isPositiveArc = false, 3.876f, 6.17f)
                     arcTo(9.96f, 9.96f, 215.74294890383695f, isMoreThanHalf = false, isPositiveArc = false, 2.0f, 12.0f)
                     curveTo(2.0f, 14.175f, 2.695f, 16.189f, 3.875f, 17.83f)
-                    arcTo(10.0f, 10.0f, 144.32316824530645f, isMoreThanHalf = false, isPositiveArc = false, 5.209f, 19.34f)
+                    arcTo(10.0f, 10.0f, 144.32316824530648f, isMoreThanHalf = false, isPositiveArc = false, 5.209f, 19.34f)
                     arcTo(9.97f, 9.97f, 132.84476098538602f, isMoreThanHalf = false, isPositiveArc = false, 12.001f, 22.0f)
                     curveTo(17.523f, 22.0f, 22.000999999999998f, 17.523f, 22.000999999999998f, 12.0f)
                     curveTo(22.000999999999998f, 6.477f, 17.523f, 2.0f, 12.0f, 2.0f)
@@ -54,7 +54,7 @@ val BezierIcons.Basketball: BezierIcon
                     arcTo(8.97f, 8.97f, 318.1182864779407f, isMoreThanHalf = false, isPositiveArc = true, 8.945f, 11.0f)
                     lineTo(11.0f, 11.0f)
                     lineTo(11.0f, 4.062f)
-                    arcTo(7.97f, 7.97f, 262.88274082011316f, isMoreThanHalf = false, isPositiveArc = false, 6.708f, 6.0f)
+                    arcTo(7.97f, 7.97f, 262.8827408201132f, isMoreThanHalf = false, isPositiveArc = false, 6.708f, 6.0f)
                     moveTo(4.062f, 13.0f)
                     lineTo(6.93f, 13.0f)
                     arcTo(6.97f, 6.97f, 8.146364920898026f, isMoreThanHalf = false, isPositiveArc = true, 5.3759999999999994f, 16.485f)
@@ -77,7 +77,7 @@ val BezierIcons.Basketball: BezierIcon
                     lineTo(13.0f, 13.0f)
                     lineTo(13.0f, 19.938f)
                     arcTo(7.97f, 7.97f, 82.8827408201132f, isMoreThanHalf = false, isPositiveArc = false, 17.292f, 18.0f)
-                    arcTo(8.97f, 8.97f, 138.11828647794073f, isMoreThanHalf = false, isPositiveArc = true, 15.055000000000001f, 13.0f)
+                    arcTo(8.97f, 8.97f, 138.1182864779407f, isMoreThanHalf = false, isPositiveArc = true, 15.055000000000001f, 13.0f)
                     moveTo(18.625f, 16.485f)
                     arcTo(6.97f, 6.97f, 140.09657958045116f, isMoreThanHalf = false, isPositiveArc = true, 17.072f, 13.0f)
                     lineTo(19.939999999999998f, 13.0f)

@@ -33,7 +33,7 @@ val BezierIcons.Calendar: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(19.5f, 3.0f)
@@ -52,22 +52,22 @@ val BezierIcons.Calendar: BezierIcon
                     close()
                     moveTo(7.865f, 14.525f)
                     arcTo(1.237f, 1.237f, 270.04629873692085f, isMoreThanHalf = true, isPositiveArc = true, 7.863f, 17.0f)
-                    arcTo(1.237f, 1.237f, 90.04630048254066f, isMoreThanHalf = false, isPositiveArc = true, 7.865f, 14.525f)
+                    arcTo(1.237f, 1.237f, 90.04630048254064f, isMoreThanHalf = false, isPositiveArc = true, 7.865f, 14.525f)
                     moveTo(11.995000000000001f, 14.525f)
                     curveTo(12.678f, 14.525f, 13.231000000000002f, 15.08f, 13.231000000000002f, 15.763f)
                     arcTo(1.237f, 1.237f, 0.046318339331536944f, isMoreThanHalf = true, isPositiveArc = true, 11.994000000000002f, 14.525f)
                     moveTo(16.122f, 14.525f)
                     arcTo(1.238f, 1.238f, 269.99999921219916f, isMoreThanHalf = true, isPositiveArc = true, 16.122f, 17.001f)
-                    arcTo(1.238f, 1.238f, 90.00000157560174f, isMoreThanHalf = false, isPositiveArc = true, 16.122f, 14.525000000000002f)
+                    arcTo(1.238f, 1.238f, 90.00000157560173f, isMoreThanHalf = false, isPositiveArc = true, 16.122f, 14.525000000000002f)
                     moveTo(7.864000000000001f, 10.573000000000002f)
                     arcTo(1.237f, 1.237f, 270.04629873692085f, isMoreThanHalf = true, isPositiveArc = true, 7.862000000000001f, 13.048000000000002f)
-                    arcTo(1.237f, 1.237f, 90.04630048254066f, isMoreThanHalf = false, isPositiveArc = true, 7.864000000000001f, 10.573000000000002f)
+                    arcTo(1.237f, 1.237f, 90.04630048254064f, isMoreThanHalf = false, isPositiveArc = true, 7.864000000000001f, 10.573000000000002f)
                     moveTo(11.994f, 10.573000000000002f)
                     arcTo(1.237f, 1.237f, 268.3942157277626f, isMoreThanHalf = true, isPositiveArc = true, 11.993f, 13.046000000000003f)
                     arcTo(1.237f, 1.237f, 91.62911751274788f, isMoreThanHalf = false, isPositiveArc = true, 11.993f, 10.573000000000004f)
                     moveTo(16.121000000000002f, 10.573000000000004f)
                     arcTo(1.238f, 1.238f, 269.99999842439826f, isMoreThanHalf = true, isPositiveArc = true, 16.121000000000002f, 13.049000000000003f)
-                    arcTo(1.238f, 1.238f, 90.00000157560174f, isMoreThanHalf = false, isPositiveArc = true, 16.121000000000002f, 10.573000000000004f)
+                    arcTo(1.238f, 1.238f, 90.00000157560173f, isMoreThanHalf = false, isPositiveArc = true, 16.121000000000002f, 10.573000000000004f)
                 }
             }.build().also {
                 _calendar = it

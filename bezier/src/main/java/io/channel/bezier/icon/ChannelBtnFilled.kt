@@ -33,7 +33,7 @@ val BezierIcons.ChannelBtnFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(14.72f, 2.0f)
@@ -46,7 +46,7 @@ val BezierIcons.ChannelBtnFilled: BezierIcon
                     arcTo(7.28f, 7.28f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 9.28f, 2.0f)
                     close()
                     moveTo(12.007f, 6.0f)
-                    arcTo(6.0f, 6.0f, 270.0286510764378f, isMoreThanHalf = false, isPositiveArc = false, 6.004f, 12.001999999999999f)
+                    arcTo(6.0f, 6.0f, 270.0286510764379f, isMoreThanHalf = false, isPositiveArc = false, 6.004f, 12.001999999999999f)
                     curveTo(6.004f, 15.305f, 8.704f, 18.000999999999998f, 12.007f, 18.000999999999998f)
                     curveTo(12.828999999999999f, 18.000999999999998f, 13.611f, 17.834999999999997f, 14.325f, 17.534999999999997f)
                     arcTo(2.24f, 2.24f, 247.53112590197156f, isMoreThanHalf = false, isPositiveArc = true, 15.729f, 17.432999999999996f)
@@ -64,7 +64,7 @@ val BezierIcons.ChannelBtnFilled: BezierIcon
                     arcTo(0.3f, 0.3f, 300.6439236503886f, isMoreThanHalf = false, isPositiveArc = true, 15.523f, 13.232f)
                     arcTo(4.0f, 4.0f, 28.294258430544048f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 15.336f)
                     lineTo(11.996f, 15.336f)
-                    arcTo(4.0f, 4.0f, 90.015748537205f, isMoreThanHalf = false, isPositiveArc = true, 8.475000000000001f, 13.232f)
+                    arcTo(4.0f, 4.0f, 90.01574853720498f, isMoreThanHalf = false, isPositiveArc = true, 8.475000000000001f, 13.232f)
                     arcTo(0.3f, 0.3f, 152.1256437180179f, isMoreThanHalf = false, isPositiveArc = true, 8.585f, 12.834999999999999f)
                     close()
                 }

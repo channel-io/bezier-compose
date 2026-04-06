@@ -33,14 +33,14 @@ val BezierIcons.Shine: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(17.73f, 10.464f)
                     arcTo(0.25f, 0.25f, 23.073918065630725f, isMoreThanHalf = false, isPositiveArc = true, 17.27f, 10.464f)
                     lineTo(16.15f, 7.85f)
                     lineTo(13.535999999999998f, 6.7299999999999995f)
-                    arcTo(0.25f, 0.25f, 113.073918065631f, isMoreThanHalf = false, isPositiveArc = true, 13.535999999999998f, 6.27f)
+                    arcTo(0.25f, 0.25f, 113.07391806563099f, isMoreThanHalf = false, isPositiveArc = true, 13.535999999999998f, 6.27f)
                     lineTo(16.15f, 5.1499999999999995f)
                     lineTo(17.27f, 2.5359999999999996f)
                     arcTo(0.25f, 0.25f, 203.07391806563072f, isMoreThanHalf = false, isPositiveArc = true, 17.73f, 2.5359999999999996f)

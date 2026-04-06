@@ -33,7 +33,7 @@ val BezierIcons.Wechat: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -45,7 +45,7 @@ val BezierIcons.Wechat: BezierIcon
                     arcTo(0.269f, 0.269f, 349.9516793640191f, isMoreThanHalf = false, isPositiveArc = true, 20.758000000000003f, 21.201999999999998f)
                     lineTo(19.205000000000002f, 20.354999999999997f)
                     arcTo(1.08f, 1.08f, 297.7378664413977f, isMoreThanHalf = false, isPositiveArc = false, 18.445f, 20.261999999999997f)
-                    arcTo(8.0f, 8.0f, 77.09704520669392f, isMoreThanHalf = false, isPositiveArc = true, 16.665f, 20.464f)
+                    arcTo(8.0f, 8.0f, 77.0970452066939f, isMoreThanHalf = false, isPositiveArc = true, 16.665f, 20.464f)
                     curveTo(13.018999999999998f, 20.464f, 10.062999999999999f, 18.009999999999998f, 10.062999999999999f, 14.982f)
                     curveTo(10.062999999999999f, 11.954f, 13.018f, 9.5f, 16.664f, 9.5f)
                     moveTo(8.944f, 3.0f)
@@ -64,7 +64,7 @@ val BezierIcons.Wechat: BezierIcon
                     curveTo(1.0f, 5.955f, 4.556f, 3.0f, 8.943f, 3.0f)
                     moveTo(14.402999999999999f, 12.297f)
                     arcTo(0.896f, 0.896f, 269.9680277259894f, isMoreThanHalf = true, isPositiveArc = false, 14.403999999999998f, 14.089f)
-                    arcTo(0.896f, 0.896f, 89.99999893652638f, isMoreThanHalf = false, isPositiveArc = false, 14.403999999999998f, 12.297f)
+                    arcTo(0.896f, 0.896f, 89.99999893652637f, isMoreThanHalf = false, isPositiveArc = false, 14.403999999999998f, 12.297f)
                     moveTo(18.788999999999998f, 12.297f)
                     arcTo(0.895f, 0.895f, 269.9359827495243f, isMoreThanHalf = true, isPositiveArc = false, 18.790999999999997f, 14.087f)
                     arcTo(0.895f, 0.895f, 89.93598204227375f, isMoreThanHalf = false, isPositiveArc = false, 18.788999999999998f, 12.297f)

@@ -33,11 +33,11 @@ val BezierIcons.ChatEdit: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(11.0f, 4.281f)
-                    arcTo(7.7f, 7.7f, 262.782620605666f, isMoreThanHalf = false, isPositiveArc = false, 6.503f, 6.494999999999999f)
+                    arcTo(7.7f, 7.7f, 262.78262060566607f, isMoreThanHalf = false, isPositiveArc = false, 6.503f, 6.494999999999999f)
                     arcTo(7.73f, 7.73f, 225.1670723620781f, isMoreThanHalf = false, isPositiveArc = false, 4.223000000000001f, 11.997f)
                     curveTo(4.223000000000001f, 14.067f, 5.037000000000001f, 16.019f, 6.5120000000000005f, 17.491f)
                     arcTo(7.7f, 7.7f, 135.28096421470448f, isMoreThanHalf = false, isPositiveArc = false, 12.009f, 19.773f)
@@ -59,10 +59,10 @@ val BezierIcons.ChatEdit: BezierIcon
                     arcTo(2.2f, 2.2f, 284.2641666796407f, isMoreThanHalf = false, isPositiveArc = false, 15.875999999999998f, 21.223f)
                     arcTo(9.9f, 9.9f, 67.14825832754039f, isMoreThanHalf = false, isPositiveArc = true, 12.01f, 22.0f)
                     lineTo(12.004f, 22.0f)
-                    arcTo(9.95f, 9.95f, 89.92168147111038f, isMoreThanHalf = false, isPositiveArc = true, 4.938999999999999f, 19.07f)
+                    arcTo(9.95f, 9.95f, 89.92168147111036f, isMoreThanHalf = false, isPositiveArc = true, 4.938999999999999f, 19.07f)
                     arcTo(9.94f, 9.94f, 134.77506691592495f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 12.003f)
                     arcTo(9.94f, 9.94f, 179.83445258047095f, isMoreThanHalf = false, isPositiveArc = true, 4.929f, 4.928f)
-                    arcTo(9.92f, 9.92f, 224.83330101521696f, isMoreThanHalf = false, isPositiveArc = true, 11.0f, 2.049f)
+                    arcTo(9.92f, 9.92f, 224.83330101521693f, isMoreThanHalf = false, isPositiveArc = true, 11.0f, 2.049f)
                     close()
                     moveTo(16.373f, 3.38f)
                     arcTo(3.003f, 3.003f, 224.99999924264725f, isMoreThanHalf = true, isPositiveArc = true, 20.62f, 7.627f)

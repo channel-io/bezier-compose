@@ -33,7 +33,7 @@ val BezierIcons.LineChart: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(20.35f, 6.0f)
@@ -42,7 +42,7 @@ val BezierIcons.LineChart: BezierIcon
                     arcTo(2.242f, 2.242f, 340.8081861664283f, isMoreThanHalf = false, isPositiveArc = true, 14.95f, 16.5f)
                     arcTo(2.25f, 2.25f, 89.98845366518704f, isMoreThanHalf = false, isPositiveArc = true, 12.751999999999999f, 13.767f)
                     lineTo(10.066999999999998f, 11.081f)
-                    arcTo(2.25f, 2.25f, 71.4147169136615f, isMoreThanHalf = false, isPositiveArc = true, 8.931f, 11.158999999999999f)
+                    arcTo(2.25f, 2.25f, 71.41471691366148f, isMoreThanHalf = false, isPositiveArc = true, 8.931f, 11.158999999999999f)
                     lineTo(5.687999999999999f, 15.100999999999999f)
                     arcTo(2.25f, 2.25f, 335.03363503830866f, isMoreThanHalf = true, isPositiveArc = true, 4.125999999999999f, 13.851999999999999f)
                     lineTo(7.3359999999999985f, 9.95f)

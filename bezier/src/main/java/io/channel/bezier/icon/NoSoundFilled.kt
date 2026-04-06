@@ -33,7 +33,7 @@ val BezierIcons.NoSoundFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(12.829f, 2.008f)
@@ -43,7 +43,7 @@ val BezierIcons.NoSoundFilled: BezierIcon
                     lineTo(14.96f, 21.0f)
                     arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 13.96f, 22.0f)
                     lineTo(12.96f, 22.0f)
-                    arcTo(1.0f, 1.0f, 90.01223660525449f, isMoreThanHalf = false, isPositiveArc = true, 12.253f, 21.707f)
+                    arcTo(1.0f, 1.0f, 90.01223660525447f, isMoreThanHalf = false, isPositiveArc = true, 12.253f, 21.707f)
                     lineTo(7.545f, 16.999000000000002f)
                     lineTo(2.96f, 16.999000000000002f)
                     arcTo(1.0f, 1.0f, 90.00755821444268f, isMoreThanHalf = false, isPositiveArc = true, 1.967f, 16.116000000000003f)

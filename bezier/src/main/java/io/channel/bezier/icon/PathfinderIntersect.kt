@@ -33,7 +33,7 @@ val BezierIcons.PathfinderIntersect: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -62,7 +62,7 @@ val BezierIcons.PathfinderIntersect: BezierIcon
                     moveTo(20.0f, 17.454f)
                     arcTo(2.546f, 2.546f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 17.454f, 20.0f)
                     lineTo(12.0f, 20.0f)
-                    arcTo(2.546f, 2.546f, 90.00000000000001f, isMoreThanHalf = false, isPositiveArc = true, 9.454f, 17.454f)
+                    arcTo(2.546f, 2.546f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 9.454f, 17.454f)
                     lineTo(9.454f, 16.546f)
                     lineTo(12.0f, 16.546f)
                     lineTo(12.234f, 16.538999999999998f)

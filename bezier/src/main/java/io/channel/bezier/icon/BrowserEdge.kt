@@ -33,12 +33,12 @@ val BezierIcons.BrowserEdge: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(4.11f, 8.624f)
                     curveTo(5.88f, 7.206f, 8.022f, 6.97f, 9.436f, 7.222f)
-                    arcTo(6.4f, 6.4f, 280.06388372824927f, isMoreThanHalf = false, isPositiveArc = true, 12.347999999999999f, 8.552f)
+                    arcTo(6.4f, 6.4f, 280.0638837282493f, isMoreThanHalf = false, isPositiveArc = true, 12.347999999999999f, 8.552f)
                     arcTo(5.1f, 5.1f, 308.6437220118293f, isMoreThanHalf = false, isPositiveArc = true, 13.662999999999998f, 10.135f)
                     arcTo(2.49f, 2.49f, 311.662879742025f, isMoreThanHalf = false, isPositiveArc = false, 11.293f, 9.61f)
                     curveTo(10.5f, 9.772f, 9.652999999999999f, 10.232999999999999f, 8.931999999999999f, 10.911999999999999f)

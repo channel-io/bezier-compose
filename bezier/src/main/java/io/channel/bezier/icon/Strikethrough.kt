@@ -33,7 +33,7 @@ val BezierIcons.Strikethrough: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -44,7 +44,7 @@ val BezierIcons.Strikethrough: BezierIcon
                     lineTo(4.0f, 11.0f)
                     arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 4.0f, 13.0f)
                     lineTo(12.785f, 13.0f)
-                    arcTo(2.758f, 2.758f, 269.9568499147442f, isMoreThanHalf = false, isPositiveArc = true, 14.502f, 17.918f)
+                    arcTo(2.758f, 2.758f, 269.9568499147443f, isMoreThanHalf = false, isPositiveArc = true, 14.502f, 17.918f)
                     curveTo(12.622f, 19.422f, 9.872f, 19.192f, 8.298000000000002f, 17.393f)
                     lineTo(8.253000000000002f, 17.341f)
                     arcTo(1.0f, 1.0f, 318.83023893063563f, isMoreThanHalf = false, isPositiveArc = false, 6.747000000000002f, 18.658f)

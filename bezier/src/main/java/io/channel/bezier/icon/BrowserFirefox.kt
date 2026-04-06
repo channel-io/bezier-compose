@@ -33,7 +33,7 @@ val BezierIcons.BrowserFirefox: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -170,7 +170,7 @@ val BezierIcons.BrowserFirefox: BezierIcon
                     quadTo(4.697000000000001f, 5.743f, 4.73f, 5.680000000000001f)
                     arcTo(2.9f, 2.9f, 240.62798055894666f, isMoreThanHalf = false, isPositiveArc = false, 4.045f, 6.215000000000001f)
                     lineTo(3.975f, 6.288000000000001f)
-                    arcTo(6.7f, 6.7f, 222.95678463204834f, isMoreThanHalf = false, isPositiveArc = false, 2.72f, 8.215f)
+                    arcTo(6.7f, 6.7f, 222.9567846320483f, isMoreThanHalf = false, isPositiveArc = false, 2.72f, 8.215f)
                     curveTo(2.237f, 9.379f, 1.995f, 10.716999999999999f, 2.0f, 12.056000000000001f)
                     quadTo(2.003f, 12.656f, 2.07f, 13.247000000000002f)
                     lineTo(2.078f, 13.310000000000002f)

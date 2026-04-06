@@ -33,7 +33,7 @@ val BezierIcons.WifiPoor: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(8.98f, 16.015f)
@@ -47,7 +47,7 @@ val BezierIcons.WifiPoor: BezierIcon
                 }
 
                 path(
-                        fill = SolidColor(Color(0x1E000000)),
+                        fill = SolidColor(Color(0x4C000000)),
                         strokeLineWidth = 1f,
                         strokeAlpha = 0.3f,
                 ) {
@@ -66,7 +66,7 @@ val BezierIcons.WifiPoor: BezierIcon
                     arcTo(0.517f, 0.517f, 131.54495568990436f, isMoreThanHalf = false, isPositiveArc = false, 20.596999999999998f, 10.925f)
                     lineTo(21.938f, 9.510000000000002f)
                     curveTo(22.147f, 9.290000000000001f, 22.137999999999998f, 8.940000000000001f, 21.91f, 8.740000000000002f)
-                    arcTo(14.94f, 14.94f, 311.4387017159682f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 5.0f)
+                    arcTo(14.94f, 14.94f, 311.43870171596814f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 5.0f)
                     arcTo(14.94f, 14.94f, 270.08603266656394f, isMoreThanHalf = false, isPositiveArc = false, 2.09f, 8.74f)
                     arcTo(0.535f, 0.535f, 228.14545090033627f, isMoreThanHalf = false, isPositiveArc = false, 2.062f, 9.51f)
                     lineTo(3.4029999999999996f, 10.925f)

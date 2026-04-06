@@ -33,7 +33,7 @@ val BezierIcons.ChannelXSymbolAlt: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(21.61f, 16.148f)
@@ -51,13 +51,13 @@ val BezierIcons.ChannelXSymbolAlt: BezierIcon
                     curveTo(17.491000000000003f, 9.227f, 17.675f, 9.112f, 17.844f, 9.001f)
                     curveTo(18.052f, 8.881f, 18.328000000000003f, 8.711f, 18.539f, 8.602f)
                     arcTo(14.6f, 14.6f, 241.44480178776638f, isMoreThanHalf = false, isPositiveArc = true, 20.482000000000003f, 7.722f)
-                    arcTo(19.0f, 19.0f, 250.6229653961739f, isMoreThanHalf = false, isPositiveArc = true, 21.496000000000002f, 7.397f)
+                    arcTo(19.0f, 19.0f, 250.62296539617392f, isMoreThanHalf = false, isPositiveArc = true, 21.496000000000002f, 7.397f)
                     lineTo(21.503000000000004f, 7.397f)
                     arcTo(0.6f, 0.6f, 72.93965441424115f, isMoreThanHalf = false, isPositiveArc = false, 21.868000000000002f, 6.564f)
                     lineTo(20.507f, 3.725f)
                     arcTo(0.683f, 0.683f, 334.3224237253515f, isMoreThanHalf = false, isPositiveArc = false, 19.661f, 3.378f)
                     arcTo(29.0f, 29.0f, 250.71085530387967f, isMoreThanHalf = false, isPositiveArc = false, 18.501f, 3.8120000000000003f)
-                    arcTo(19.4f, 19.4f, 247.267529036362f, isMoreThanHalf = false, isPositiveArc = false, 13.761000000000001f, 6.651f)
+                    arcTo(19.4f, 19.4f, 247.26752903636202f, isMoreThanHalf = false, isPositiveArc = false, 13.761000000000001f, 6.651f)
                     arcTo(6.65f, 6.65f, 333.12636152786916f, isMoreThanHalf = false, isPositiveArc = false, 9.892000000000001f, 3.335f)
                     curveTo(6.9620000000000015f, 2.3609999999999998f, 3.7220000000000013f, 3.577f, 2.1050000000000013f, 6.1419999999999995f)
                     arcTo(0.682f, 0.682f, 212.18673880587272f, isMoreThanHalf = false, isPositiveArc = false, 2.3910000000000013f, 7.122f)
@@ -82,7 +82,7 @@ val BezierIcons.ChannelXSymbolAlt: BezierIcon
                     arcTo(0.683f, 0.683f, 154.32242372535157f, isMoreThanHalf = false, isPositiveArc = false, 4.3389999999999995f, 19.893f)
                     arcTo(29.0f, 29.0f, 70.71085530387964f, isMoreThanHalf = false, isPositiveArc = false, 5.499f, 19.459f)
                     arcTo(19.4f, 19.4f, 67.2756596812328f, isMoreThanHalf = false, isPositiveArc = false, 10.239f, 16.621f)
-                    arcTo(6.65f, 6.65f, 153.12636152786916f, isMoreThanHalf = false, isPositiveArc = false, 14.108f, 19.936999999999998f)
+                    arcTo(6.65f, 6.65f, 153.1263615278692f, isMoreThanHalf = false, isPositiveArc = false, 14.108f, 19.936999999999998f)
                     curveTo(17.038f, 20.910999999999998f, 20.278f, 19.694f, 21.895f, 17.128999999999998f)
                     arcTo(0.683f, 0.683f, 32.0921551285216f, isMoreThanHalf = false, isPositiveArc = false, 21.608999999999998f, 16.148999999999997f)
                 }

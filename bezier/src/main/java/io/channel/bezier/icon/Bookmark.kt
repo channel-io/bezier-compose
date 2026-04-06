@@ -33,7 +33,7 @@ val BezierIcons.Bookmark: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -52,7 +52,7 @@ val BezierIcons.Bookmark: BezierIcon
                     curveTo(19.107f, 3.0f, 20.002f, 3.892f, 20.003999999999998f, 4.995f)
                     curveTo(20.014f, 9.344999999999999f, 20.035999999999998f, 19.455000000000002f, 20.035999999999998f, 21.45f)
                     curveTo(20.035999999999998f, 22.044999999999998f, 19.698999999999998f, 22.567999999999998f, 19.157999999999998f, 22.814999999999998f)
-                    arcTo(1.49f, 1.49f, 65.19641440250575f, isMoreThanHalf = false, isPositiveArc = true, 17.551999999999996f, 22.583999999999996f)
+                    arcTo(1.49f, 1.49f, 65.19641440250577f, isMoreThanHalf = false, isPositiveArc = true, 17.551999999999996f, 22.583999999999996f)
                     lineTo(12.0f, 17.762f)
                     lineTo(6.448f, 22.583f)
                     curveTo(6.167000000000001f, 22.826999999999998f, 5.821000000000001f, 22.953f, 5.469f, 22.953f)

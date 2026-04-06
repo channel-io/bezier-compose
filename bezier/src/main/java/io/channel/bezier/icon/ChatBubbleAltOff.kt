@@ -33,7 +33,7 @@ val BezierIcons.ChatBubbleAltOff: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(5.55f, 7.45f)
@@ -60,7 +60,7 @@ val BezierIcons.ChatBubbleAltOff: BezierIcon
                     moveTo(3.707f, 2.707f)
                     arcTo(1.0f, 1.0f, 225.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 5.1209999999999996f, 2.707f)
                     lineTo(6.663f, 4.25f)
-                    arcTo(11.9f, 11.9f, 243.5026843370157f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 3.0f)
+                    arcTo(11.9f, 11.9f, 243.50268433701567f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 3.0f)
                     curveTo(17.631f, 3.0f, 22.5f, 6.875f, 22.5f, 12.0f)
                     curveTo(22.5f, 14.204f, 21.597f, 16.175f, 20.122f, 17.708f)
                     lineTo(22.092f, 19.677999999999997f)

@@ -33,14 +33,14 @@ val BezierIcons.Plane: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(12.0f, 2.0f)
                     arcTo(1.5f, 1.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 13.5f, 3.5f)
                     lineTo(13.5f, 9.333f)
                     lineTo(21.555f, 14.703f)
-                    arcTo(1.0f, 1.0f, 303.71071401021305f, isMoreThanHalf = false, isPositiveArc = true, 22.0f, 15.535f)
+                    arcTo(1.0f, 1.0f, 303.7107140102131f, isMoreThanHalf = false, isPositiveArc = true, 22.0f, 15.535f)
                     lineTo(22.0f, 16.653f)
                     arcTo(0.25f, 0.25f, 359.7372401014377f, isMoreThanHalf = false, isPositiveArc = true, 21.67f, 16.891f)
                     lineTo(13.500000000000002f, 14.165999999999999f)

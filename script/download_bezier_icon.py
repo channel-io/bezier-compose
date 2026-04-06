@@ -1,4 +1,5 @@
 import os
+import re
 import requests
 import xml.etree.ElementTree as ElementTree
 import subprocess
@@ -65,6 +66,18 @@ def download_icon_set():
         print(f"({count} / {total}) {key} {url} {icon_name}")
 
         download_file(url, f"icon_{icon_name}.svg")
+
+    # Strip fill-opacity from SVGs before vd-tool conversion.
+    # fill-opacity comes from the default color token (color-icon-neutral) and is unintentional.
+    # Intentional transparency (e.g. wifi icons) uses the 'opacity' attribute, which is preserved.
+    for svg_file in os.listdir(temp_path):
+        if svg_file.endswith('.svg'):
+            svg_path = os.path.join(temp_path, svg_file)
+            with open(svg_path, 'r') as f:
+                content = f.read()
+            content = re.sub(r'\s*fill-opacity="[^"]*"', '', content)
+            with open(svg_path, 'w') as f:
+                f.write(content)
 
     subprocess.call(["vd-tool", "-c", "-in", temp_path, "-out", drawable_path])
 

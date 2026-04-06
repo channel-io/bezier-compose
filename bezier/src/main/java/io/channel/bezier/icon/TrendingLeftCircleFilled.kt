@@ -33,7 +33,7 @@ val BezierIcons.TrendingLeftCircleFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(12.0f, 2.0f)
@@ -46,7 +46,7 @@ val BezierIcons.TrendingLeftCircleFilled: BezierIcon
                     lineTo(6.15f, 11.635f)
                     arcTo(0.52f, 0.52f, 224.65889770565386f, isMoreThanHalf = false, isPositiveArc = false, 6.15f, 12.366f)
                     lineTo(11.316f, 17.531f)
-                    arcTo(0.4f, 0.4f, 135.23503292824864f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 17.25f)
+                    arcTo(0.4f, 0.4f, 135.23503292824861f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 17.25f)
                     lineTo(12.0f, 14.0f)
                     lineTo(16.642f, 14.0f)
                     curveTo(16.839f, 14.0f, 16.999f, 13.776f, 16.999f, 13.5f)

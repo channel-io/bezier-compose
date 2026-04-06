@@ -33,7 +33,7 @@ val BezierIcons.HandPush: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(6.439f, 2.742f)
@@ -44,12 +44,12 @@ val BezierIcons.HandPush: BezierIcon
                     arcTo(3.96f, 3.96f, 314.9459481212965f, isMoreThanHalf = false, isPositiveArc = false, 7.853000000000001f, 4.156000000000001f)
                     arcTo(3.97f, 3.97f, 224.81231988150367f, isMoreThanHalf = false, isPositiveArc = false, 7.852f, 9.751000000000001f)
                     lineTo(6.44f, 11.167f)
-                    arcTo(6.0f, 6.0f, 134.92056606321742f, isMoreThanHalf = false, isPositiveArc = true, 5.896000000000001f, 10.544f)
+                    arcTo(6.0f, 6.0f, 134.92056606321745f, isMoreThanHalf = false, isPositiveArc = true, 5.896000000000001f, 10.544f)
                     curveTo(4.113000000000001f, 8.189f, 4.346000000000001f, 4.8340000000000005f, 6.439000000000001f, 2.742000000000001f)
                 }
 
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
@@ -79,7 +79,7 @@ val BezierIcons.HandPush: BezierIcon
                     lineTo(10.753f, 19.808999999999997f)
                     arcTo(4.4f, 4.4f, 135.0049739503919f, isMoreThanHalf = false, isPositiveArc = false, 13.863f, 21.098f)
                     lineTo(14.548f, 21.098f)
-                    arcTo(4.395f, 4.395f, 90.02399000972973f, isMoreThanHalf = false, isPositiveArc = false, 18.631f, 18.334f)
+                    arcTo(4.395f, 4.395f, 90.02399000972972f, isMoreThanHalf = false, isPositiveArc = false, 18.631f, 18.334f)
                     curveTo(18.875f, 17.723f, 19.001f, 17.070999999999998f, 19.001f, 16.416f)
                     lineTo(19.001f, 15.818f)
                     curveTo(19.001f, 15.088f, 18.548000000000002f, 14.436f, 17.864f, 14.18f)

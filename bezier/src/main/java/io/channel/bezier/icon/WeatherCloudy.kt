@@ -33,13 +33,13 @@ val BezierIcons.WeatherCloudy: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(10.0f, 6.453f)
                     curveTo(11.47f, 6.453f, 12.85f, 7.174f, 13.692f, 8.381f)
                     lineTo(14.15f, 9.037f)
-                    arcTo(4.98f, 4.98f, 283.3240828495892f, isMoreThanHalf = false, isPositiveArc = true, 16.969f, 10.872f)
+                    arcTo(4.98f, 4.98f, 283.3240828495893f, isMoreThanHalf = false, isPositiveArc = true, 16.969f, 10.872f)
                     arcTo(5.07f, 5.07f, 270.4407029699851f, isMoreThanHalf = false, isPositiveArc = true, 22.0f, 15.936f)
                     arcTo(5.07f, 5.07f, 0.06776559773172768f, isMoreThanHalf = false, isPositiveArc = true, 16.936f, 21.0f)
                     lineTo(8.216f, 21.0f)

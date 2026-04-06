@@ -33,7 +33,7 @@ val BezierIcons.MoonFilled: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(20.64f, 17.037f)
@@ -42,7 +42,7 @@ val BezierIcons.MoonFilled: BezierIcon
                     curveTo(8.531f, 3.8130000000000006f, 7.745000000000001f, 2.9010000000000007f, 6.963000000000001f, 3.3580000000000005f)
                     arcTo(10.0f, 10.0f, 239.75490999085474f, isMoreThanHalf = false, isPositiveArc = false, 2.0f, 12.0f)
                     curveTo(2.0f, 17.523f, 6.477f, 22.0f, 12.0f, 22.0f)
-                    arcTo(10.0f, 10.0f, 90.00695299235853f, isMoreThanHalf = false, isPositiveArc = false, 20.64f, 17.037f)
+                    arcTo(10.0f, 10.0f, 90.00695299235852f, isMoreThanHalf = false, isPositiveArc = false, 20.64f, 17.037f)
                 }
             }.build().also {
                 _moonFilled = it
