@@ -11,45 +11,44 @@ enum class BezierWeight {
     Bold,
 }
 
-@Suppress("EnumEntryName")
 enum class BezierTypo(
-    val fontSize: TextUnit,
-    val lineHeight: TextUnit,
-    val letterSpacing: TextUnit,
-    val fixedWeight: FontWeight? = null,
-    val isMonospace: Boolean = false,
+     val fontSize: TextUnit,
+     val lineHeight: TextUnit,
+     val letterSpacing: TextUnit,
+     val fixedWeight: FontWeight? = null,
+     val isMonospace: Boolean = false,
 ) {
     // Display (fixed Bold)
-    displayLarge(BezierFontSize.Size36, BezierLineHeight.Size44, BezierLetterSpacing.Tighter, fixedWeight = FontWeight.Bold),
-    displayMedium(BezierFontSize.Size30, BezierLineHeight.Size36, BezierLetterSpacing.Tighter, fixedWeight = FontWeight.Bold),
+    DisplayLarge(BezierFontSize.Size36, BezierLineHeight.Size44, BezierLetterSpacing.Tighter, fixedWeight = FontWeight.Bold),
+    DisplayMedium(BezierFontSize.Size30, BezierLineHeight.Size36, BezierLetterSpacing.Tighter, fixedWeight = FontWeight.Bold),
 
     // Heading (fixed Bold)
-    headingXLarge(BezierFontSize.Size24, BezierLineHeight.Size32, BezierLetterSpacing.Tighter, fixedWeight = FontWeight.Bold),
-    headingLarge(BezierFontSize.Size22, BezierLineHeight.Size28, BezierLetterSpacing.Tighter, fixedWeight = FontWeight.Bold),
-    headingMedium(BezierFontSize.Size18, BezierLineHeight.Size24, BezierLetterSpacing.Normal, fixedWeight = FontWeight.Bold),
-    headingSmall(BezierFontSize.Size17, BezierLineHeight.Size24, BezierLetterSpacing.Tight, fixedWeight = FontWeight.Bold),
-    headingXSmall(BezierFontSize.Size16, BezierLineHeight.Size24, BezierLetterSpacing.Tight, fixedWeight = FontWeight.Bold),
-    headingXXSmall(BezierFontSize.Size15, BezierLineHeight.Size20, BezierLetterSpacing.Tight, fixedWeight = FontWeight.Bold),
+    HeadingXLarge(BezierFontSize.Size24, BezierLineHeight.Size32, BezierLetterSpacing.Tighter, fixedWeight = FontWeight.Bold),
+    HeadingLarge(BezierFontSize.Size22, BezierLineHeight.Size28, BezierLetterSpacing.Tighter, fixedWeight = FontWeight.Bold),
+    HeadingMedium(BezierFontSize.Size18, BezierLineHeight.Size24, BezierLetterSpacing.Normal, fixedWeight = FontWeight.Bold),
+    HeadingSmall(BezierFontSize.Size17, BezierLineHeight.Size24, BezierLetterSpacing.Tight, fixedWeight = FontWeight.Bold),
+    HeadingXSmall(BezierFontSize.Size16, BezierLineHeight.Size24, BezierLetterSpacing.Tight, fixedWeight = FontWeight.Bold),
+    HeadingXXSmall(BezierFontSize.Size15, BezierLineHeight.Size20, BezierLetterSpacing.Tight, fixedWeight = FontWeight.Bold),
 
     // Text (weight param supported)
-    textXXLarge(BezierFontSize.Size17, BezierLineHeight.Size24, BezierLetterSpacing.Tight),
-    textXLarge(BezierFontSize.Size16, BezierLineHeight.Size24, BezierLetterSpacing.Tight),
-    textLarge(BezierFontSize.Size15, BezierLineHeight.Size20, BezierLetterSpacing.Tight),
-    textMedium(BezierFontSize.Size14, BezierLineHeight.Size18, BezierLetterSpacing.Normal),
-    textSmall(BezierFontSize.Size13, BezierLineHeight.Size18, BezierLetterSpacing.Normal),
-    textXSmall(BezierFontSize.Size12, BezierLineHeight.Size16, BezierLetterSpacing.Normal),
-    textXXSmall(BezierFontSize.Size11, BezierLineHeight.Size16, BezierLetterSpacing.Normal),
+    TextXXLarge(BezierFontSize.Size17, BezierLineHeight.Size24, BezierLetterSpacing.Tight),
+    TextXLarge(BezierFontSize.Size16, BezierLineHeight.Size24, BezierLetterSpacing.Tight),
+    TextLarge(BezierFontSize.Size15, BezierLineHeight.Size20, BezierLetterSpacing.Tight),
+    TextMedium(BezierFontSize.Size14, BezierLineHeight.Size18, BezierLetterSpacing.Normal),
+    TextSmall(BezierFontSize.Size13, BezierLineHeight.Size18, BezierLetterSpacing.Normal),
+    TextXSmall(BezierFontSize.Size12, BezierLineHeight.Size16, BezierLetterSpacing.Normal),
+    TextXXSmall(BezierFontSize.Size11, BezierLineHeight.Size16, BezierLetterSpacing.Normal),
 
     // Label (fixed Bold)
-    labelLarge(BezierFontSize.Size14, BezierLineHeight.Size18, BezierLetterSpacing.Normal, fixedWeight = FontWeight.Bold),
-    labelMedium(BezierFontSize.Size13, BezierLineHeight.Size18, BezierLetterSpacing.Normal, fixedWeight = FontWeight.Bold),
-    labelSmall(BezierFontSize.Size12, BezierLineHeight.Size16, BezierLetterSpacing.Normal, fixedWeight = FontWeight.Bold),
+    LabelLarge(BezierFontSize.Size14, BezierLineHeight.Size18, BezierLetterSpacing.Normal, fixedWeight = FontWeight.Bold),
+    LabelMedium(BezierFontSize.Size13, BezierLineHeight.Size18, BezierLetterSpacing.Normal, fixedWeight = FontWeight.Bold),
+    LabelSmall(BezierFontSize.Size12, BezierLineHeight.Size16, BezierLetterSpacing.Normal, fixedWeight = FontWeight.Bold),
 
     // Caption (weight param supported)
-    captionMedium(BezierFontSize.Size12, BezierLineHeight.Size16, BezierLetterSpacing.Normal),
-    captionSmall(BezierFontSize.Size11, BezierLineHeight.Size16, BezierLetterSpacing.Normal),
+    CaptionMedium(BezierFontSize.Size12, BezierLineHeight.Size16, BezierLetterSpacing.Normal),
+    CaptionSmall(BezierFontSize.Size11, BezierLineHeight.Size16, BezierLetterSpacing.Normal),
 
     // Code (fixed Normal, monospace)
-    codeMedium(BezierFontSize.Size14, BezierLineHeight.Size18, BezierLetterSpacing.Normal, fixedWeight = FontWeight.Normal, isMonospace = true),
-    codeSmall(BezierFontSize.Size13, BezierLineHeight.Size18, BezierLetterSpacing.Normal, fixedWeight = FontWeight.Normal, isMonospace = true),
+    CodeMedium(BezierFontSize.Size14, BezierLineHeight.Size18, BezierLetterSpacing.Normal, fixedWeight = FontWeight.Normal, isMonospace = true),
+    CodeSmall(BezierFontSize.Size13, BezierLineHeight.Size18, BezierLetterSpacing.Normal, fixedWeight = FontWeight.Normal, isMonospace = true),
 }

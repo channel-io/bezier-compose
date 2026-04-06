@@ -11,6 +11,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import io.channel.bezier.BezierTheme
+import io.channel.bezier.extension.ifTrue
 import io.channel.bezier.typography.BezierTypo
 import io.channel.bezier.typography.BezierWeight
 
@@ -40,7 +41,7 @@ fun BezierText(
             lineHeight = typo.lineHeight,
             letterSpacing = typo.letterSpacing,
             fontWeight = resolvedWeight,
-            fontFamily = if (typo.isMonospace) FontFamily.Monospace else null,
+            fontFamily = typo.isMonospace.ifTrue(FontFamily.Monospace, null),
             color = color,
             textAlign = textAlign ?: TextAlign.Unspecified,
             textDecoration = textDecoration,
