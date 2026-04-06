@@ -13,11 +13,11 @@ enum class BezierWeight {
 
 @Suppress("EnumEntryName")
 enum class BezierTypo(
-    internal val fontSize: TextUnit,
-    internal val lineHeight: TextUnit,
-    internal val letterSpacing: TextUnit,
-    internal val fixedWeight: FontWeight? = null,
-    internal val isMonospace: Boolean = false,
+    val fontSize: TextUnit,
+    val lineHeight: TextUnit,
+    val letterSpacing: TextUnit,
+    val fixedWeight: FontWeight? = null,
+    val isMonospace: Boolean = false,
 ) {
     // Display (fixed Bold)
     displayLarge(BezierFontSize.Size36, BezierLineHeight.Size44, BezierLetterSpacing.Tighter, fixedWeight = FontWeight.Bold),
