@@ -11,6 +11,7 @@ enum class BezierWeight {
     Bold,
 }
 
+@Suppress("EnumEntryName")
 enum class BezierTypo(
     internal val fontSize: TextUnit,
     internal val lineHeight: TextUnit,
