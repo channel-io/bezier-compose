@@ -5,17 +5,19 @@ import android.util.AttributeSet
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.BasicText
+import androidx.compose.foundation.text.TextAutoSize
 import androidx.compose.material.Icon
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -23,9 +25,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.layout.layout
 import androidx.compose.ui.platform.AbstractComposeView
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.PlatformTextStyle
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
@@ -80,11 +87,12 @@ class Tag @JvmOverloads constructor(
             val layoutRadius: Dp,
             val padding: PaddingValues,
             val textSize: TextUnit,
+            val textAreaHeight: TextUnit,
     ) {
-        XS(0, 4.dp, PaddingValues(horizontal = 3.dp, vertical = 1.dp), 12.sp),
-        S(1, 6.dp, PaddingValues(horizontal = 3.dp, vertical = 2.dp), 14.sp),
-        M(2, 6.dp, PaddingValues(horizontal = 4.dp, vertical = 2.dp), 15.sp),
-        L(3, 6.dp, PaddingValues(horizontal = 6.dp, vertical = 3.dp), 16.sp);
+        XS(0, 4.dp, PaddingValues(horizontal = 3.dp, vertical = 1.dp), 12.sp, 16.sp),
+        S(1, 6.dp, PaddingValues(horizontal = 3.dp, vertical = 2.dp), 14.sp, 18.sp),
+        M(2, 6.dp, PaddingValues(horizontal = 4.dp, vertical = 2.dp), 15.sp, 20.sp),
+        L(3, 6.dp, PaddingValues(horizontal = 6.dp, vertical = 3.dp), 16.sp, 24.sp);
 
         companion object {
             fun fromId(id: Int): Size {
@@ -157,7 +165,6 @@ fun Tag(
 ) {
     Row(
             modifier = modifier
-                    .wrapContentSize()
                     .background(
                             color = color.getColor(),
                             shape = RoundedCornerShape(size.layoutRadius),
@@ -165,15 +172,30 @@ fun Tag(
                     .padding(size.padding),
             verticalAlignment = Alignment.CenterVertically,
     ) {
-        Text(
+        val targetTextHeightPx = with(LocalDensity.current) { size.textAreaHeight.roundToPx() }
+
+        BasicText(
                 text = text,
                 modifier = Modifier
                         .padding(horizontal = 2.dp)
-                        .weight(1f, false),
-                fontSize = size.textSize,
-                color = colorResource(id = R.color.text_neutral),
+                        .weight(1f, false)
+                        .layout { measurable, constraints ->
+                            val placeable = measurable.measure(constraints)
+                            val layoutHeight = targetTextHeightPx.coerceIn(constraints.minHeight, constraints.maxHeight)
+                            layout(placeable.width, layoutHeight) {
+                                val yOffset = (layoutHeight - placeable.height) / 2
+                                placeable.place(0, yOffset)
+                            }
+                        }
+                        .clipToBounds(),
+                style = TextStyle(
+                        fontSize = size.textSize,
+                        color = colorResource(id = R.color.text_neutral),
+                        platformStyle = PlatformTextStyle(includeFontPadding = false),
+                ),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
+                autoSize = TextAutoSize.StepBased(maxFontSize = size.textSize),
         )
 
         if (onRemove != null) {
@@ -251,6 +273,90 @@ private fun TagSizeVariantPreview() {
                     text = "Tag",
                     size = size,
                     color = TagColor.Pink,
+            )
+        }
+    }
+}
+
+@Preview(showBackground = true, name = "Size × Language")
+@Composable
+private fun TagSizeByLanguagePreview() {
+    val languages = listOf(
+            "EN" to "Tag",
+            "KO" to "태그",
+            "JA" to "タグ",
+            "ZH" to "标签",
+    )
+    Column(modifier = Modifier.padding(8.dp)) {
+        languages.forEach { (lang, label) ->
+            Row(
+                    modifier = Modifier.padding(vertical = 4.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+            ) {
+                BasicText(
+                        text = "$lang:",
+                        modifier = Modifier.width(32.dp),
+                        style = TextStyle(fontSize = 12.sp),
+                )
+                TagSize.values().forEach { size ->
+                    Tag(
+                            modifier = Modifier.padding(horizontal = 2.dp),
+                            text = "$label ${size.name}",
+                            size = size,
+                            color = TagColor.Cobalt,
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Preview(showBackground = true, name = "Size × Language + Close")
+@Composable
+private fun TagSizeByLanguageWithClosePreview() {
+    val languages = listOf(
+            "EN" to "Tag",
+            "KO" to "태그",
+            "JA" to "タグ",
+            "ZH" to "标签",
+    )
+    Column(modifier = Modifier.padding(8.dp)) {
+        languages.forEach { (lang, label) ->
+            Row(
+                    modifier = Modifier.padding(vertical = 4.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+            ) {
+                BasicText(
+                        text = "$lang:",
+                        modifier = Modifier.width(32.dp),
+                        style = TextStyle(fontSize = 12.sp),
+                )
+                TagSize.values().forEach { size ->
+                    Tag(
+                            modifier = Modifier.padding(horizontal = 2.dp),
+                            text = "$label ${size.name}",
+                            size = size,
+                            color = TagColor.Green,
+                            onRemove = { },
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Preview(showBackground = true, name = "Long Text")
+@Composable
+private fun TagLongTextPreview() {
+    Column(modifier = Modifier.padding(8.dp)) {
+        TagSize.values().forEach { size ->
+            Tag(
+                    modifier = Modifier
+                            .padding(vertical = 2.dp)
+                            .width(120.dp),
+                    text = "Very long tag label text",
+                    size = size,
+                    color = TagColor.Orange,
             )
         }
     }
