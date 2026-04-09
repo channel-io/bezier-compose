@@ -33,7 +33,7 @@ val BezierIcons.Lock: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(11.998f, 18.0f)
@@ -45,7 +45,7 @@ val BezierIcons.Lock: BezierIcon
                 }
 
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {

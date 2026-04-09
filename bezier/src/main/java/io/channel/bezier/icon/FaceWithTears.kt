@@ -33,7 +33,7 @@ val BezierIcons.FaceWithTears: BezierIcon
                     viewportHeight = 24f,
             ).apply {
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(14.015f, 9.72f)
@@ -44,7 +44,7 @@ val BezierIcons.FaceWithTears: BezierIcon
                 }
 
                 path(
-                        fill = SolidColor(Color(0x66000000)),
+                        fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
