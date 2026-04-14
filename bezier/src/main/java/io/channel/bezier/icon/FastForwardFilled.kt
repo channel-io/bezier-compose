@@ -35,6 +35,7 @@ val BezierIcons.FastForwardFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.0f, 5.705f)
                     arcTo(0.75f, 0.75f, 180.00416223137748f, isMoreThanHalf = false, isPositiveArc = true, 13.166f, 5.081f)

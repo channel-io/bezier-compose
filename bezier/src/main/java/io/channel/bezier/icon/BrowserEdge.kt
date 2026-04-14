@@ -35,6 +35,7 @@ val BezierIcons.BrowserEdge: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(4.11f, 8.624f)
                     curveTo(5.88f, 7.206f, 8.022f, 6.97f, 9.436f, 7.222f)
