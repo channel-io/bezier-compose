@@ -35,6 +35,7 @@ val BezierIcons.Edit: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(11.0f, 6.0f)
                     lineTo(9.4f, 6.0f)

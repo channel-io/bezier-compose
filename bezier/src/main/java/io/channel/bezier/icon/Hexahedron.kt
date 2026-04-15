@@ -35,6 +35,7 @@ val BezierIcons.Hexahedron: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(11.0f, 2.577f)
                     arcTo(2.0f, 2.0f, 240.0f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 2.577f)

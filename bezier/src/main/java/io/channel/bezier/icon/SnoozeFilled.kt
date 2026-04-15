@@ -35,6 +35,7 @@ val BezierIcons.SnoozeFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.0f, 2.0f)
                     curveTo(17.515f, 2.0f, 22.0f, 6.484f, 22.0f, 11.999f)

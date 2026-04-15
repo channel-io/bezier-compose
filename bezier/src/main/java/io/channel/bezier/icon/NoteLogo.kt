@@ -35,6 +35,7 @@ val BezierIcons.NoteLogo: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(18.858f, 2.946f)
                     curveTo(19.488f, 2.946f, 20.0f, 3.459f, 20.0f, 4.088f)
