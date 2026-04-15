@@ -82,6 +82,7 @@ fun TextField(
         enabled: Boolean = true,
         normalAlphaRegardlessOfEnabledState: Boolean = false,
         readOnly: Boolean = false,
+        textColor: Color = BezierTheme.colorsV3.textNeutral,
         textStyle: TextStyle = TextStyle.Default,
         keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
         keyboardActions: KeyboardActions = KeyboardActions.Default,
@@ -90,7 +91,7 @@ fun TextField(
         visualTransformation: VisualTransformation = VisualTransformation.None,
         onTextLayout: (TextLayoutResult) -> Unit = {},
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
-        cursorBrush: Brush = SolidColor(Color.Black),
+        cursorBrush: Brush = SolidColor(textColor),
 ) {
     fun isPassword() =
             keyboardOptions.keyboardType == KeyboardType.Password
@@ -156,7 +157,7 @@ fun TextField(
                     .padding(horizontal = 10.dp, vertical = size.verticalPadding),
             enabled = enabled,
             readOnly = readOnly,
-            textStyle = textStyle,
+            textStyle = textStyle.merge(TextStyle(color = textColor)),
             keyboardOptions = keyboardOptions,
             keyboardActions = keyboardActions,
             singleLine = singleLine,
@@ -267,6 +268,7 @@ fun TextField(
         enabled: Boolean = true,
         normalAlphaRegardlessOfEnabledState: Boolean = false,
         readOnly: Boolean = false,
+        textColor: Color = BezierTheme.colorsV3.textNeutral,
         textStyle: TextStyle = TextStyle.Default,
         keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
         keyboardActions: KeyboardActions = KeyboardActions.Default,
@@ -275,7 +277,7 @@ fun TextField(
         visualTransformation: VisualTransformation = VisualTransformation.None,
         onTextLayout: (TextLayoutResult) -> Unit = {},
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
-        cursorBrush: Brush = SolidColor(Color.Black),
+        cursorBrush: Brush = SolidColor(textColor),
 ) {
     // BasicTextField String 오버로드의 코드를 일부 참고했습니다. BasicTextField와 코드가 다른 이유는 단순하게
     //   BasicTextField String 오버로드의 코드가 정확하게 무슨 일을 하는지 몰라서이므로 이게 명확해졌을 때는
@@ -303,6 +305,7 @@ fun TextField(
             enabled = enabled,
             normalAlphaRegardlessOfEnabledState = normalAlphaRegardlessOfEnabledState,
             readOnly = readOnly,
+            textColor = textColor,
             textStyle = textStyle,
             keyboardOptions = keyboardOptions,
             keyboardActions = keyboardActions,
