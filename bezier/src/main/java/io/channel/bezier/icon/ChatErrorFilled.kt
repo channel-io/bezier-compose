@@ -35,26 +35,28 @@ val BezierIcons.ChatErrorFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(2.13f, 13.675f)
-                    arcTo(10.013f, 10.013f, 170.43637470390104f, isMoreThanHalf = false, isPositiveArc = true, 13.664f, 2.137f)
-                    curveTo(17.692f, 2.789f, 20.982f, 5.954000000000001f, 21.787f, 9.954f)
-                    curveTo(22.281f, 12.409f, 21.861f, 14.734000000000002f, 20.822f, 16.684f)
-                    curveTo(20.576f, 17.144000000000002f, 20.555999999999997f, 17.694000000000003f, 20.721999999999998f, 18.19f)
-                    lineTo(21.360999999999997f, 20.105f)
-                    arcTo(1.0f, 1.0f, 341.55699310801356f, isMoreThanHalf = false, isPositiveArc = true, 20.095999999999997f, 21.37f)
-                    lineTo(18.172999999999995f, 20.73f)
-                    curveTo(17.679999999999996f, 20.565f, 17.135999999999996f, 20.584f, 16.676999999999996f, 20.829f)
-                    curveTo(14.727999999999996f, 21.868000000000002f, 12.401999999999996f, 22.289f, 9.946999999999996f, 21.796f)
-                    curveTo(5.945999999999995f, 20.991f, 2.7809999999999953f, 17.703f, 2.1279999999999957f, 13.676f)
-                    moveTo(11.930999999999997f, 15.596f)
-                    arcTo(1.322f, 1.322f, 269.9566765537758f, isMoreThanHalf = true, isPositiveArc = false, 11.932999999999998f, 18.241f)
-                    arcTo(1.322f, 1.322f, 89.95667578105454f, isMoreThanHalf = false, isPositiveArc = false, 11.930999999999997f, 15.596f)
-                    moveTo(10.849999999999998f, 13.988f)
-                    lineTo(13.011999999999997f, 13.988f)
-                    lineTo(13.144999999999996f, 5.981f)
-                    lineTo(10.72f, 5.981f)
-                    close()
+                    moveTo(2.136f, 13.673f)
+                    arcTo(10.013f, 10.013f, 170.43637470390104f, isMoreThanHalf = false, isPositiveArc = true, 13.67f, 2.135f)
+                    curveTo(17.698999999999998f, 2.787f, 20.988f, 5.952999999999999f, 21.793f, 9.953f)
+                    curveTo(22.287f, 12.407f, 21.867f, 14.733f, 20.828f, 16.680999999999997f)
+                    curveTo(20.582f, 17.141999999999996f, 20.563f, 17.691999999999997f, 20.727999999999998f, 18.188f)
+                    lineTo(21.368f, 20.102999999999998f)
+                    arcTo(1.0f, 1.0f, 341.4890015986478f, isMoreThanHalf = false, isPositiveArc = true, 20.102999999999998f, 21.369f)
+                    lineTo(18.18f, 20.727f)
+                    curveTo(17.687f, 20.563f, 17.142f, 20.583000000000002f, 16.684f, 20.827f)
+                    curveTo(14.734000000000002f, 21.867f, 12.409f, 22.288f, 9.954f, 21.794f)
+                    curveTo(5.952000000000001f, 20.989f, 2.7880000000000003f, 17.701f, 2.1340000000000003f, 13.674000000000001f)
+                    moveTo(11.916f, 15.0f)
+                    arcTo(1.4f, 1.4f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 11.916f, 17.801000000000002f)
+                    arcTo(1.4f, 1.4f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 11.916f, 15.000000000000002f)
+                    moveTo(11.916f, 5.8000000000000025f)
+                    curveTo(11.103f, 5.8000000000000025f, 10.459f, 6.485000000000003f, 10.51f, 7.296000000000003f)
+                    lineTo(10.854f, 12.801000000000002f)
+                    arcTo(1.065f, 1.065f, 176.0733895038007f, isMoreThanHalf = false, isPositiveArc = false, 12.979f, 12.801000000000002f)
+                    lineTo(13.322f, 7.296000000000002f)
+                    arcTo(1.41f, 1.41f, 3.5375434763154434f, isMoreThanHalf = false, isPositiveArc = false, 11.915999999999999f, 5.799000000000002f)
                 }
             }.build().also {
                 _chatErrorFilled = it

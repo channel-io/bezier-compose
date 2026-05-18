@@ -35,20 +35,22 @@ val BezierIcons.ErrorFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.0f, 2.0f)
                     curveTo(17.515f, 2.0f, 22.0f, 6.486f, 22.0f, 12.0f)
                     curveTo(22.0f, 17.514f, 17.515f, 22.0f, 12.0f, 22.0f)
                     curveTo(6.484999999999999f, 22.0f, 2.0f, 17.514f, 2.0f, 12.0f)
                     curveTo(2.0f, 6.486000000000001f, 6.486f, 2.0f, 12.0f, 2.0f)
-                    moveTo(11.933f, 15.595f)
-                    arcTo(1.323f, 1.323f, 269.9566934891721f, isMoreThanHalf = true, isPositiveArc = false, 11.935f, 18.241f)
-                    arcTo(1.323f, 1.323f, 89.95669188983942f, isMoreThanHalf = false, isPositiveArc = false, 11.933f, 15.594999999999999f)
-                    moveTo(10.853f, 13.985999999999999f)
-                    lineTo(13.014f, 13.985999999999999f)
-                    lineTo(13.146999999999998f, 5.979999999999999f)
-                    lineTo(10.72f, 5.979999999999999f)
-                    close()
+                    moveTo(12.009f, 15.0f)
+                    arcTo(1.401f, 1.401f, 267.8350673092243f, isMoreThanHalf = false, isPositiveArc = false, 12.009f, 17.8f)
+                    arcTo(1.4f, 1.4f, 89.99999893300522f, isMoreThanHalf = false, isPositiveArc = false, 12.009f, 15.0f)
+                    moveTo(12.009f, 5.800000000000001f)
+                    arcTo(1.41f, 1.41f, 269.98726506693777f, isMoreThanHalf = false, isPositiveArc = false, 10.602f, 7.297000000000001f)
+                    lineTo(10.946f, 12.802f)
+                    arcTo(1.065f, 1.065f, 176.0733895038007f, isMoreThanHalf = false, isPositiveArc = false, 13.071f, 12.802f)
+                    lineTo(13.415f, 7.297f)
+                    arcTo(1.41f, 1.41f, 3.5375434763154434f, isMoreThanHalf = false, isPositiveArc = false, 12.009f, 5.8f)
                 }
             }.build().also {
                 _errorFilled = it

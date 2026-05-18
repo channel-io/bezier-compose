@@ -37,19 +37,20 @@ val BezierIcons.InfoFilled: BezierIcon
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(12.0f, 9.0f)
-                    arcTo(1.5f, 1.5f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 12.0f, 6.0f)
-                    arcTo(1.5f, 1.5f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 9.0f)
-                    moveTo(11.0f, 18.0f)
-                    lineTo(13.0f, 18.0f)
-                    lineTo(13.0f, 10.0f)
-                    lineTo(11.0f, 10.0f)
-                    close()
                     moveTo(12.0f, 2.0f)
-                    curveTo(6.486f, 2.0f, 2.0f, 6.486f, 2.0f, 12.0f)
-                    curveTo(2.0f, 17.514f, 6.486f, 22.0f, 12.0f, 22.0f)
-                    curveTo(17.514f, 22.0f, 22.0f, 17.514f, 22.0f, 12.0f)
-                    curveTo(22.0f, 6.486000000000001f, 17.515f, 2.0f, 12.0f, 2.0f)
+                    curveTo(17.515f, 2.0f, 22.0f, 6.486f, 22.0f, 12.0f)
+                    curveTo(22.0f, 17.514f, 17.515f, 22.0f, 12.0f, 22.0f)
+                    curveTo(6.484999999999999f, 22.0f, 2.0f, 17.514f, 2.0f, 12.0f)
+                    curveTo(2.0f, 6.486000000000001f, 6.486f, 2.0f, 12.0f, 2.0f)
+                    moveTo(11.95f, 10.5f)
+                    arcTo(1.1f, 1.1f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 10.85f, 11.6f)
+                    lineTo(10.85f, 16.4f)
+                    arcTo(1.1f, 1.1f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 13.05f, 16.4f)
+                    lineTo(13.05f, 11.599999999999998f)
+                    arcTo(1.1f, 1.1f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 11.950000000000001f, 10.499999999999998f)
+                    moveTo(11.950000000000001f, 6.499999999999998f)
+                    arcTo(1.251f, 1.251f, 267.7089323692404f, isMoreThanHalf = false, isPositiveArc = false, 11.950000000000001f, 8.999999999999998f)
+                    arcTo(1.25f, 1.25f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 11.950000000000001f, 6.499999999999998f)
                 }
             }.build().also {
                 _infoFilled = it
