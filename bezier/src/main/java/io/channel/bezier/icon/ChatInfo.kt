@@ -35,20 +35,6 @@ val BezierIcons.ChatInfo: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
-                ) {
-                    moveTo(12.0f, 6.0f)
-                    arcTo(1.5f, 1.5f, 269.9618024053784f, isMoreThanHalf = true, isPositiveArc = true, 12.002f, 9.0f)
-                    arcTo(1.5f, 1.5f, 89.96180323325515f, isMoreThanHalf = false, isPositiveArc = true, 12.0f, 6.0f)
-                    moveTo(13.0f, 18.0f)
-                    lineTo(11.0f, 18.0f)
-                    lineTo(11.0f, 10.0f)
-                    lineTo(13.0f, 10.0f)
-                    close()
-                }
-
-                path(
-                        fill = SolidColor(Color(0xFF000000)),
-                        strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(20.765f, 17.132f)
@@ -77,6 +63,21 @@ val BezierIcons.ChatInfo: BezierIcon
                     curveTo(12.443f, 4.0f, 12.894f, 4.036f, 13.345f, 4.11f)
                     arcTo(7.945f, 7.945f, 279.36797247901984f, isMoreThanHalf = false, isPositiveArc = true, 19.835f, 10.354f)
                     curveTo(20.212f, 12.229f, 19.945f, 14.094f, 19.061f, 15.747f)
+                }
+
+                path(
+                        fill = SolidColor(Color(0xFF000000)),
+                        strokeLineWidth = 1f,
+                ) {
+                    moveTo(11.95f, 10.5f)
+                    arcTo(1.1f, 1.1f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 13.049999999999999f, 11.6f)
+                    lineTo(13.049999999999999f, 16.4f)
+                    arcTo(1.1f, 1.1f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 10.849999999999998f, 16.4f)
+                    lineTo(10.849999999999998f, 11.599999999999998f)
+                    arcTo(1.1f, 1.1f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 11.949999999999998f, 10.499999999999998f)
+                    moveTo(11.95f, 6.5f)
+                    arcTo(1.25f, 1.25f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 11.95f, 9.0f)
+                    arcTo(1.25f, 1.25f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 11.95f, 6.5f)
                 }
             }.build().also {
                 _chatInfo = it

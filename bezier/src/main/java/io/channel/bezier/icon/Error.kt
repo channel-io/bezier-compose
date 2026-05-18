@@ -36,6 +36,22 @@ val BezierIcons.Error: BezierIcon
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
+                    moveTo(11.91f, 15.0f)
+                    arcTo(1.4f, 1.4f, 270.0409247643434f, isMoreThanHalf = true, isPositiveArc = true, 11.908f, 17.8f)
+                    arcTo(1.4f, 1.4f, 90.02046374019818f, isMoreThanHalf = false, isPositiveArc = true, 11.908999999999999f, 15.0f)
+                    moveTo(11.91f, 5.8f)
+                    arcTo(1.41f, 1.41f, 270.09400090486446f, isMoreThanHalf = false, isPositiveArc = true, 13.315f, 7.297f)
+                    lineTo(12.972f, 12.802f)
+                    arcTo(1.065f, 1.065f, 3.9266104961992974f, isMoreThanHalf = false, isPositiveArc = true, 10.847f, 12.802f)
+                    lineTo(10.503f, 7.297f)
+                    arcTo(1.41f, 1.41f, 176.46245652368458f, isMoreThanHalf = false, isPositiveArc = true, 11.909f, 5.8f)
+                }
+
+                path(
+                        fill = SolidColor(Color(0xFF000000)),
+                        strokeLineWidth = 1f,
+                        pathFillType = PathFillType.EvenOdd,
+                ) {
                     moveTo(12.0f, 2.0f)
                     curveTo(17.515f, 2.0f, 22.0f, 6.486f, 22.0f, 12.0f)
                     curveTo(22.0f, 17.514f, 17.515f, 22.0f, 12.0f, 22.0f)
@@ -46,14 +62,6 @@ val BezierIcons.Error: BezierIcon
                     curveTo(4.0f, 16.41f, 7.59f, 20.0f, 12.0f, 20.0f)
                     curveTo(16.41f, 20.0f, 20.0f, 16.41f, 20.0f, 12.0f)
                     curveTo(20.0f, 7.59f, 16.41f, 4.0f, 12.0f, 4.0f)
-                    moveTo(11.933f, 15.595f)
-                    arcTo(1.324f, 1.324f, 272.7275974632065f, isMoreThanHalf = false, isPositiveArc = true, 11.933f, 18.240000000000002f)
-                    arcTo(1.323f, 1.323f, 91.57527502998398f, isMoreThanHalf = false, isPositiveArc = true, 11.933f, 15.595000000000002f)
-                    moveTo(13.147f, 5.980000000000002f)
-                    lineTo(13.014f, 13.986000000000002f)
-                    lineTo(10.852f, 13.986000000000002f)
-                    lineTo(10.72f, 5.98f)
-                    close()
                 }
             }.build().also {
                 _error = it

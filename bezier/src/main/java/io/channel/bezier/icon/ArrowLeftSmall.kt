@@ -20,13 +20,13 @@ import io.channel.bezier.BezierIcon
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.compose.R
 
-val BezierIcons.SendFilled: BezierIcon
+val BezierIcons.ArrowLeftSmall: BezierIcon
     get() = object : BezierIcon {
         @DrawableRes
-        override val resourceId: Int = R.drawable.icon_send_filled
+        override val resourceId: Int = R.drawable.icon_arrow_left_small
         override val imageVector: ImageVector
-            get() = _sendFilled ?: ImageVector.Builder(
-                    name = "SendFilled",
+            get() = _arrowLeftSmall ?: ImageVector.Builder(
+                    name = "ArrowLeftSmall",
                     defaultWidth = 24.dp,
                     defaultHeight = 24.dp,
                     viewportWidth = 24f,
@@ -36,36 +36,33 @@ val BezierIcons.SendFilled: BezierIcon
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
-                    moveTo(3.505f, 5.598f)
-                    curveTo(2.682f, 3.391f, 5.047f, 1.3479999999999999f, 7.111f, 2.485f)
-                    lineTo(20.753f, 10.003f)
-                    curveTo(22.526f, 10.98f, 22.499f, 13.538f, 20.706f, 14.478f)
-                    lineTo(6.91f, 21.708f)
-                    curveTo(4.823f, 22.8f, 2.501f, 20.71f, 3.37f, 18.52f)
-                    lineTo(5.45f, 13.279f)
-                    lineTo(5.51f, 13.127f)
-                    quadTo(5.553f, 13.132000000000001f, 5.5969999999999995f, 13.133000000000001f)
-                    lineTo(14.289f, 13.124f)
-                    arcTo(1.0f, 1.0f, 90.54429244081939f, isMoreThanHalf = false, isPositiveArc = false, 14.308f, 11.124f)
-                    lineTo(5.615f, 11.134f)
-                    lineTo(5.585f, 11.134f)
-                    lineTo(5.475f, 10.881f)
-                    close()
+                    moveTo(19.0f, 12.0f)
+                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 18.0f, 11.0f)
+                    lineTo(8.414f, 11.0f)
+                    lineTo(12.207f, 7.207f)
+                    arcTo(1.0f, 1.0f, 44.00425538642027f, isMoreThanHalf = false, isPositiveArc = false, 10.793000000000001f, 5.793f)
+                    lineTo(5.293000000000001f, 11.293f)
+                    arcTo(1.0f, 1.0f, 224.99134833716198f, isMoreThanHalf = false, isPositiveArc = false, 5.293000000000001f, 12.706999999999999f)
+                    lineTo(10.793000000000001f, 18.207f)
+                    arcTo(1.0f, 1.0f, 134.00425538642241f, isMoreThanHalf = false, isPositiveArc = false, 12.207f, 16.793f)
+                    lineTo(8.414f, 13.0f)
+                    lineTo(18.0f, 13.0f)
+                    arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 19.0f, 12.0f)
                 }
             }.build().also {
-                _sendFilled = it
+                _arrowLeftSmall = it
             }
     }
 
 
-private var _sendFilled: ImageVector? = null
+private var _arrowLeftSmall: ImageVector? = null
 
 @Preview(showBackground = true)
 @Composable
-private fun SendFilledIconPreview() {
+private fun ArrowLeftSmallIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcons.SendFilled.imageVector,
+            imageVector = BezierIcons.ArrowLeftSmall.imageVector,
             contentDescription = null,
     )
 }
