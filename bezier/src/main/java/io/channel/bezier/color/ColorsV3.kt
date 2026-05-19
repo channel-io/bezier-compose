@@ -89,6 +89,7 @@ interface BezierSemanticColorV3 {
     val fillHighlightLight: Color
     val fillHighlightLighter: Color
     val fillHighlightTransparent: Color
+    val fillNeutral: Color
     val fillNeutralHeavier: Color
     val fillNeutralHeaviest: Color
     val fillNeutralHeavy: Color
@@ -255,6 +256,7 @@ internal class LightColor : BezierSemanticColorV3 {
     override val fillHighlightLight = BezierGlobalColor.Cobalt400_20
     override val fillHighlightLighter = BezierGlobalColor.Cobalt400_10
     override val fillHighlightTransparent = BezierGlobalColor.Cobalt400_0
+    override val fillNeutral = BezierGlobalColor.Black8
     override val fillNeutralHeavier = BezierGlobalColor.Black40
     override val fillNeutralHeaviest = BezierGlobalColor.Black85
     override val fillNeutralHeavy = BezierGlobalColor.Black15
@@ -288,7 +290,7 @@ internal class LightColor : BezierSemanticColorV3 {
     override val iconAction = BezierGlobalColor.Blue400
     override val iconCritical = BezierGlobalColor.Red400
     override val iconHighlight = BezierGlobalColor.Cobalt400
-    override val iconInverseHeavier = BezierGlobalColor.White80
+    override val iconInverseHeavier = BezierGlobalColor.White100
     override val iconNeutral = BezierGlobalColor.Black40
     override val iconNeutralHeavier = BezierGlobalColor.Black85
     override val iconNeutralHeavy = BezierGlobalColor.Black60
@@ -324,7 +326,7 @@ internal class LightColor : BezierSemanticColorV3 {
     override val textAction = BezierGlobalColor.Blue400
     override val textCritical = BezierGlobalColor.Red400
     override val textHighlight = BezierGlobalColor.Cobalt400
-    override val textInverse = BezierGlobalColor.White80
+    override val textInverse = BezierGlobalColor.White100
     override val textNeutral = BezierGlobalColor.Black85
     override val textNeutralHeaviest = BezierGlobalColor.Black100
     override val textNeutralLight = BezierGlobalColor.Black60
@@ -420,6 +422,7 @@ internal class DarkColor : BezierSemanticColorV3 {
     override val fillHighlightLight = BezierGlobalColor.Cobalt300_30
     override val fillHighlightLighter = BezierGlobalColor.Cobalt300_18
     override val fillHighlightTransparent = BezierGlobalColor.Cobalt300_0
+    override val fillNeutral = BezierGlobalColor.White12
     override val fillNeutralHeavier = BezierGlobalColor.White40
     override val fillNeutralHeaviest = BezierGlobalColor.White90
     override val fillNeutralHeavy = BezierGlobalColor.White20
