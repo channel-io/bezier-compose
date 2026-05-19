@@ -19,7 +19,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Icon
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -31,16 +30,16 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import io.channel.bezier.BezierIcon
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
+import io.channel.bezier.component.BezierText
 import io.channel.bezier.icon.Plus
+import io.channel.bezier.typography.BezierTypo
+import io.channel.bezier.typography.BezierWeight
 
 @Composable
 fun Button(
@@ -107,13 +106,11 @@ fun Button(
             Box(
                     modifier = Modifier.padding(horizontal = spec.textInnerHorizontalPadding),
             ) {
-                Text(
+                BezierText(
                         text = text,
+                        typo = size.typo,
+                        weight = BezierWeight.Bold,
                         color = colorSpec.foreground,
-                        fontSize = spec.fontSize,
-                        lineHeight = spec.lineHeight,
-                        fontWeight = FontWeight.SemiBold,
-                        letterSpacing = 0.sp,
                 )
             }
             if (trailingIcon != null) {
@@ -152,8 +149,6 @@ enum class ButtonSize {
                     horizontalPadding = 4.dp,
                     gap = 0.dp,
                     textInnerHorizontalPadding = 3.dp,
-                    fontSize = 13.sp,
-                    lineHeight = 18.sp,
             )
 
             Small -> ButtonLayoutSpec(
@@ -162,8 +157,6 @@ enum class ButtonSize {
                     horizontalPadding = 6.dp,
                     gap = 0.dp,
                     textInnerHorizontalPadding = 3.dp,
-                    fontSize = 14.sp,
-                    lineHeight = 18.sp,
             )
 
             Medium -> ButtonLayoutSpec(
@@ -172,8 +165,6 @@ enum class ButtonSize {
                     horizontalPadding = 10.dp,
                     gap = 2.dp,
                     textInnerHorizontalPadding = 4.dp,
-                    fontSize = 15.sp,
-                    lineHeight = 20.sp,
             )
 
             Large -> ButtonLayoutSpec(
@@ -182,8 +173,6 @@ enum class ButtonSize {
                     horizontalPadding = 12.dp,
                     gap = 2.dp,
                     textInnerHorizontalPadding = 4.dp,
-                    fontSize = 16.sp,
-                    lineHeight = 20.sp,
             )
 
             Xlarge -> ButtonLayoutSpec(
@@ -192,9 +181,16 @@ enum class ButtonSize {
                     horizontalPadding = 20.dp,
                     gap = 2.dp,
                     textInnerHorizontalPadding = 4.dp,
-                    fontSize = 16.sp,
-                    lineHeight = 20.sp,
             )
+        }
+
+    internal val typo: BezierTypo
+        get() = when (this) {
+            Xsmall -> BezierTypo.TextSmall
+            Small -> BezierTypo.TextMedium
+            Medium -> BezierTypo.TextLarge
+            Large -> BezierTypo.TextXLarge
+            Xlarge -> BezierTypo.TextXLarge
         }
 }
 
@@ -216,8 +212,6 @@ internal data class ButtonLayoutSpec(
         val horizontalPadding: Dp,
         val gap: Dp,
         val textInnerHorizontalPadding: Dp,
-        val fontSize: TextUnit,
-        val lineHeight: TextUnit,
 )
 
 internal data class ButtonColorSpec(
@@ -320,7 +314,11 @@ private fun ButtonMatrix(size: ButtonSize, sizeLabel: String) {
                             modifier = Modifier.width(cellWidth),
                             contentAlignment = Alignment.Center,
                     ) {
-                        Text(text = stateLabel, color = BezierTheme.colorsV3.textNeutral)
+                        BezierText(
+                                text = stateLabel,
+                                typo = BezierTypo.TextMedium,
+                                color = BezierTheme.colorsV3.textNeutral,
+                        )
                     }
                 }
             }
@@ -333,10 +331,11 @@ private fun ButtonMatrix(size: ButtonSize, sizeLabel: String) {
                                 contentAlignment = Alignment.CenterStart,
                         ) {
                             if (variantIndex == 0 && semanticIndex == 0) {
-                                Text(
+                                BezierText(
                                         text = sizeLabel,
+                                        typo = BezierTypo.TextMedium,
+                                        weight = BezierWeight.Bold,
                                         color = BezierTheme.colorsV3.textNeutral,
-                                        fontWeight = FontWeight.Bold,
                                 )
                             }
                         }
@@ -345,8 +344,9 @@ private fun ButtonMatrix(size: ButtonSize, sizeLabel: String) {
                                 contentAlignment = Alignment.CenterStart,
                         ) {
                             if (semanticIndex == 0) {
-                                Text(
+                                BezierText(
                                         text = variant.name.lowercase(),
+                                        typo = BezierTypo.TextMedium,
                                         color = BezierTheme.colorsV3.textNeutral,
                                 )
                             }
@@ -355,8 +355,9 @@ private fun ButtonMatrix(size: ButtonSize, sizeLabel: String) {
                                 modifier = Modifier.width(labelColWidth),
                                 contentAlignment = Alignment.CenterStart,
                         ) {
-                            Text(
+                            BezierText(
                                     text = semantic.name.lowercase(),
+                                    typo = BezierTypo.TextMedium,
                                     color = BezierTheme.colorsV3.textNeutral,
                             )
                         }
