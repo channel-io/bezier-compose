@@ -99,7 +99,7 @@ fun Button(
                 Icon(
                         modifier = Modifier.size(ButtonIconLength),
                         imageVector = leadingIcon.imageVector,
-                        tint = colorSpec.foreground,
+                        tint = colorSpec.iconColor,
                         contentDescription = null,
                 )
             }
@@ -110,14 +110,14 @@ fun Button(
                         text = text,
                         typo = size.typo,
                         weight = BezierWeight.Bold,
-                        color = colorSpec.foreground,
+                        color = colorSpec.textColor,
                 )
             }
             if (trailingIcon != null) {
                 Icon(
                         modifier = Modifier.size(ButtonIconLength),
                         imageVector = trailingIcon.imageVector,
-                        tint = colorSpec.foreground,
+                        tint = colorSpec.iconColor,
                         contentDescription = null,
                 )
             }
@@ -125,7 +125,7 @@ fun Button(
         if (isLoading) {
             CircularProgressIndicator(
                     modifier = Modifier.size(ButtonIconLength),
-                    color = colorSpec.foreground,
+                    color = colorSpec.iconColor,
                     strokeWidth = 2.dp,
             )
         }
@@ -216,7 +216,8 @@ internal data class ButtonLayoutSpec(
 
 internal data class ButtonColorSpec(
         val background: Color?,
-        val foreground: Color,
+        val textColor: Color,
+        val iconColor: Color,
         val border: Color?,
 )
 
@@ -227,19 +228,22 @@ internal fun buttonColorSpec(variant: ButtonVariant, semantic: ButtonSemantic): 
         ButtonVariant.Filled -> when (semantic) {
             ButtonSemantic.Primary -> ButtonColorSpec(
                     background = colors.fillNeutralHeaviest,
-                    foreground = colors.textInverse,
+                    textColor = colors.textInverse,
+                    iconColor = colors.iconInverseHeavier,
                     border = null,
             )
 
             ButtonSemantic.Secondary -> ButtonColorSpec(
                     background = colors.fillNeutralLight,
-                    foreground = colors.textNeutral,
+                    textColor = colors.textNeutral,
+                    iconColor = colors.iconNeutralHeavy,
                     border = null,
             )
 
             ButtonSemantic.Destructive -> ButtonColorSpec(
                     background = colors.fillAccentRedHeavier,
-                    foreground = colors.textInverse,
+                    textColor = colors.textInverse,
+                    iconColor = colors.iconInverseHeavier,
                     border = null,
             )
         }
@@ -247,19 +251,22 @@ internal fun buttonColorSpec(variant: ButtonVariant, semantic: ButtonSemantic): 
         ButtonVariant.Outlined -> when (semantic) {
             ButtonSemantic.Primary -> ButtonColorSpec(
                     background = null,
-                    foreground = colors.textNeutralHeaviest,
+                    textColor = colors.textNeutralHeaviest,
+                    iconColor = colors.iconNeutralHeavier,
                     border = colors.borderNeutral,
             )
 
             ButtonSemantic.Secondary -> ButtonColorSpec(
                     background = null,
-                    foreground = colors.textNeutralLight,
+                    textColor = colors.textNeutralLight,
+                    iconColor = colors.iconNeutral,
                     border = colors.borderNeutral,
             )
 
             ButtonSemantic.Destructive -> ButtonColorSpec(
                     background = null,
-                    foreground = colors.textAccentRed,
+                    textColor = colors.textAccentRed,
+                    iconColor = colors.iconAccentRed,
                     border = colors.borderNeutral,
             )
         }
@@ -267,19 +274,22 @@ internal fun buttonColorSpec(variant: ButtonVariant, semantic: ButtonSemantic): 
         ButtonVariant.Ghost -> when (semantic) {
             ButtonSemantic.Primary -> ButtonColorSpec(
                     background = null,
-                    foreground = colors.textNeutralLight,
+                    textColor = colors.textNeutralLight,
+                    iconColor = colors.iconNeutralHeavy,
                     border = null,
             )
 
             ButtonSemantic.Secondary -> ButtonColorSpec(
                     background = null,
-                    foreground = colors.textNeutralLighter,
+                    textColor = colors.textNeutralLighter,
+                    iconColor = colors.iconNeutral,
                     border = null,
             )
 
             ButtonSemantic.Destructive -> ButtonColorSpec(
                     background = null,
-                    foreground = colors.textAccentRed,
+                    textColor = colors.textAccentRed,
+                    iconColor = colors.iconAccentRed,
                     border = null,
             )
         }
