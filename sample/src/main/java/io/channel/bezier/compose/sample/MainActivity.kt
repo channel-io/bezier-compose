@@ -15,6 +15,8 @@ import androidx.compose.ui.Modifier
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.ui.NavDisplay
 import io.channel.bezier.BezierTheme
+import io.channel.bezier.compose.sample.playground.BadgePlaygroundKey
+import io.channel.bezier.compose.sample.playground.BadgePlaygroundScreen
 import io.channel.bezier.compose.sample.playground.ButtonPlaygroundKey
 import io.channel.bezier.compose.sample.playground.ButtonPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.ComponentListKey
@@ -50,6 +52,7 @@ private fun PlaygroundApp() {
                             ComponentListScreen(
                                     onSelectButton = { backStack.add(ButtonPlaygroundKey) },
                                     onSelectIconButton = { backStack.add(IconButtonPlaygroundKey) },
+                                    onSelectBadge = { backStack.add(BadgePlaygroundKey) },
                             )
                         }
                         entry<ButtonPlaygroundKey> {
@@ -57,6 +60,9 @@ private fun PlaygroundApp() {
                         }
                         entry<IconButtonPlaygroundKey> {
                             IconButtonPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<BadgePlaygroundKey> {
+                            BadgePlaygroundScreen(onBack = { backStack.removeLastOrNull() })
                         }
                     },
             )

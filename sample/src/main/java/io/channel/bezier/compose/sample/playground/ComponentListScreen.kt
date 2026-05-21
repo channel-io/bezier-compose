@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.dp
 fun ComponentListScreen(
         onSelectButton: () -> Unit,
         onSelectIconButton: () -> Unit,
+        onSelectBadge: () -> Unit,
 ) {
     Scaffold(
             topBar = { TopAppBar(title = { Text("v3 Components") }) },
@@ -30,6 +31,8 @@ fun ComponentListScreen(
             ComponentRow("Button", onClick = onSelectButton)
             Divider()
             ComponentRow("IconButton", onClick = onSelectIconButton)
+            Divider()
+            ComponentRow("Badge", onClick = onSelectBadge)
             Divider()
         }
     }
