@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material.Divider
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
@@ -19,9 +20,15 @@ fun ComponentListScreen(
         onSelectButton: () -> Unit,
         onSelectIconButton: () -> Unit,
         onSelectBadge: () -> Unit,
+        onSelectTag: () -> Unit,
 ) {
     Scaffold(
-            topBar = { TopAppBar(title = { Text("v3 Components") }) },
+            topBar = {
+                TopAppBar(
+                        modifier = Modifier.statusBarsPadding(),
+                        title = { Text("v3 Components") },
+                )
+            },
     ) { padding ->
         Column(
                 modifier = Modifier
@@ -33,6 +40,8 @@ fun ComponentListScreen(
             ComponentRow("IconButton", onClick = onSelectIconButton)
             Divider()
             ComponentRow("Badge", onClick = onSelectBadge)
+            Divider()
+            ComponentRow("Tag", onClick = onSelectTag)
             Divider()
         }
     }

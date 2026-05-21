@@ -7,7 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.systemBarsPadding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
@@ -23,6 +23,8 @@ import io.channel.bezier.compose.sample.playground.ComponentListKey
 import io.channel.bezier.compose.sample.playground.ComponentListScreen
 import io.channel.bezier.compose.sample.playground.IconButtonPlaygroundKey
 import io.channel.bezier.compose.sample.playground.IconButtonPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.TagPlaygroundKey
+import io.channel.bezier.compose.sample.playground.TagPlaygroundScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +46,7 @@ private fun PlaygroundApp() {
         ) {
             val backStack = remember { mutableStateListOf<Any>(ComponentListKey) }
             NavDisplay(
-                    modifier = Modifier.systemBarsPadding(),
+                    modifier = Modifier.statusBarsPadding(),
                     backStack = backStack,
                     onBack = { backStack.removeLastOrNull() },
                     entryProvider = entryProvider {
@@ -53,6 +55,7 @@ private fun PlaygroundApp() {
                                     onSelectButton = { backStack.add(ButtonPlaygroundKey) },
                                     onSelectIconButton = { backStack.add(IconButtonPlaygroundKey) },
                                     onSelectBadge = { backStack.add(BadgePlaygroundKey) },
+                                    onSelectTag = { backStack.add(TagPlaygroundKey) },
                             )
                         }
                         entry<ButtonPlaygroundKey> {
@@ -63,6 +66,9 @@ private fun PlaygroundApp() {
                         }
                         entry<BadgePlaygroundKey> {
                             BadgePlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<TagPlaygroundKey> {
+                            TagPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
                         }
                     },
             )
