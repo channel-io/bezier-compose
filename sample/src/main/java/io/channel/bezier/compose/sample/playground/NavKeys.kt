@@ -5,3 +5,5 @@ data object ButtonPlaygroundKey
 data object IconButtonPlaygroundKey
 data object BadgePlaygroundKey
 data object TagPlaygroundKey
+data object AvatarPlaygroundKey
+data object AvatarGroupPlaygroundKey
