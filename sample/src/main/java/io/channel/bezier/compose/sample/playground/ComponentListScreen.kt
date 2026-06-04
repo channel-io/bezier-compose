@@ -21,6 +21,8 @@ fun ComponentListScreen(
         onSelectIconButton: () -> Unit,
         onSelectBadge: () -> Unit,
         onSelectTag: () -> Unit,
+        onSelectAvatar: () -> Unit,
+        onSelectAvatarGroup: () -> Unit,
 ) {
     Scaffold(
             topBar = {
@@ -42,6 +44,10 @@ fun ComponentListScreen(
             ComponentRow("Badge", onClick = onSelectBadge)
             Divider()
             ComponentRow("Tag", onClick = onSelectTag)
+            Divider()
+            ComponentRow("Avatar", onClick = onSelectAvatar)
+            Divider()
+            ComponentRow("AvatarGroup", onClick = onSelectAvatarGroup)
             Divider()
         }
     }

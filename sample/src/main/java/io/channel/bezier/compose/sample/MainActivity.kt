@@ -15,6 +15,10 @@ import androidx.compose.ui.Modifier
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.ui.NavDisplay
 import io.channel.bezier.BezierTheme
+import io.channel.bezier.compose.sample.playground.AvatarGroupPlaygroundKey
+import io.channel.bezier.compose.sample.playground.AvatarGroupPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.AvatarPlaygroundKey
+import io.channel.bezier.compose.sample.playground.AvatarPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.BadgePlaygroundKey
 import io.channel.bezier.compose.sample.playground.BadgePlaygroundScreen
 import io.channel.bezier.compose.sample.playground.ButtonPlaygroundKey
@@ -56,6 +60,8 @@ private fun PlaygroundApp() {
                                     onSelectIconButton = { backStack.add(IconButtonPlaygroundKey) },
                                     onSelectBadge = { backStack.add(BadgePlaygroundKey) },
                                     onSelectTag = { backStack.add(TagPlaygroundKey) },
+                                    onSelectAvatar = { backStack.add(AvatarPlaygroundKey) },
+                                    onSelectAvatarGroup = { backStack.add(AvatarGroupPlaygroundKey) },
                             )
                         }
                         entry<ButtonPlaygroundKey> {
@@ -69,6 +75,12 @@ private fun PlaygroundApp() {
                         }
                         entry<TagPlaygroundKey> {
                             TagPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<AvatarPlaygroundKey> {
+                            AvatarPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<AvatarGroupPlaygroundKey> {
+                            AvatarGroupPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
                         }
                     },
             )
