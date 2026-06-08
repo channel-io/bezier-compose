@@ -124,7 +124,11 @@ fun Button(
         if (isLoading) {
             Spinner(
                     size = size.spinnerSize,
-                    color = BezierTheme.colorsV3.fillBright,
+                    color = if (variant == ButtonVariant.Filled) {
+                        BezierTheme.colorsV3.fillBright
+                    } else {
+                        colorSpec.textColor
+                    },
             )
         }
     }
@@ -194,10 +198,10 @@ enum class ButtonSize {
     internal val spinnerSize: SpinnerSize
         get() = when (this) {
             Xsmall -> SpinnerSize.Size12
-            Small -> SpinnerSize.Size16
-            Medium -> SpinnerSize.Size20
-            Large -> SpinnerSize.Size24
-            Xlarge -> SpinnerSize.Size30
+            Small -> SpinnerSize.Size12
+            Medium -> SpinnerSize.Size12
+            Large -> SpinnerSize.Size16
+            Xlarge -> SpinnerSize.Size20
         }
 }
 

@@ -84,7 +84,14 @@ fun IconButton(
                 contentDescription = contentDescription,
         )
         if (isLoading) {
-            Spinner(size = size.spinnerSize)
+            Spinner(
+                    size = size.spinnerSize,
+                    color = if (variant == IconButtonVariant.Filled) {
+                        BezierTheme.colorsV3.fillBright
+                    } else {
+                        BezierTheme.colorsV3.iconNeutral
+                    },
+            )
         }
     }
 }
@@ -117,9 +124,9 @@ enum class IconButtonSize {
     internal val spinnerSize: SpinnerSize
         get() = when (this) {
             Xsmall -> SpinnerSize.Size12
-            Small -> SpinnerSize.Size16
-            Medium -> SpinnerSize.Size20
-            Large -> SpinnerSize.Size24
+            Small -> SpinnerSize.Size12
+            Medium -> SpinnerSize.Size12
+            Large -> SpinnerSize.Size16
         }
 }
 
