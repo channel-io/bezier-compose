@@ -35,23 +35,24 @@ val BezierIcons.ErrorTriangleFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(8.987f, 4.1f)
-                    curveTo(10.342f, 1.8069999999999995f, 13.658999999999999f, 1.8069999999999995f, 15.013f, 4.1f)
-                    lineTo(21.88f, 15.719999999999999f)
-                    curveTo(23.258f, 18.052f, 21.576f, 21.0f, 18.866f, 21.0f)
-                    lineTo(5.134f, 21.0f)
-                    curveTo(2.4240000000000004f, 21.0f, 0.7410000000000005f, 18.052f, 2.1200000000000006f, 15.719999999999999f)
+                    moveTo(8.987f, 4.319f)
+                    curveTo(10.342f, 2.027f, 13.658999999999999f, 2.027f, 15.013f, 4.319f)
+                    lineTo(21.878999999999998f, 15.939f)
+                    curveTo(23.256999999999998f, 18.272f, 21.575999999999997f, 21.219f, 18.866999999999997f, 21.22f)
+                    lineTo(5.133f, 21.22f)
+                    curveTo(2.423f, 21.22f, 0.7430000000000003f, 18.272f, 2.121f, 15.939f)
                     close()
-                    moveTo(12.001f, 16.0f)
-                    arcTo(1.4f, 1.4f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 12.001f, 18.801000000000002f)
-                    arcTo(1.4f, 1.4f, 89.99999893300522f, isMoreThanHalf = false, isPositiveArc = false, 12.001f, 16.001f)
-                    moveTo(12.0f, 6.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 11.0f, 7.0f)
-                    lineTo(11.0f, 13.0f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 13.0f, 13.0f)
-                    lineTo(13.0f, 7.0f)
-                    arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 6.0f)
+                    moveTo(11.999f, 15.927f)
+                    arcTo(1.293f, 1.293f, 273.8814882890362f, isMoreThanHalf = true, isPositiveArc = false, 12.0f, 18.506999999999998f)
+                    arcTo(1.293f, 1.293f, 86.07409638023273f, isMoreThanHalf = false, isPositiveArc = false, 11.999f, 15.926999999999998f)
+                    moveTo(11.999f, 7.218999999999998f)
+                    arcTo(1.3f, 1.3f, 269.9818740597939f, isMoreThanHalf = false, isPositiveArc = false, 10.702f, 8.600999999999997f)
+                    lineTo(11.019f, 13.678999999999998f)
+                    arcTo(0.982f, 0.982f, 176.34261549260657f, isMoreThanHalf = false, isPositiveArc = false, 12.979f, 13.678999999999998f)
+                    lineTo(13.296f, 8.600999999999999f)
+                    arcTo(1.3f, 1.3f, 3.572318665531427f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 7.22f)
                 }
             }.build().also {
                 _errorTriangleFilled = it

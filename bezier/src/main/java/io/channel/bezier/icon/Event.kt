@@ -35,6 +35,7 @@ val BezierIcons.Event: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(6.243f, 5.332f)
                     arcTo(7.54f, 7.54f, 213.91760720141556f, isMoreThanHalf = false, isPositiveArc = true, 18.756999999999998f, 5.332f)

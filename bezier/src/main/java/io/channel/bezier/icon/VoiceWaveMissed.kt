@@ -35,6 +35,7 @@ val BezierIcons.VoiceWaveMissed: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(11.0f, 12.0f)
                     lineTo(11.0f, 19.5f)
@@ -45,7 +46,7 @@ val BezierIcons.VoiceWaveMissed: BezierIcon
                     arcTo(1.0f, 1.0f, 225.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 5.1209999999999996f, 2.293f)
                     lineTo(8.0f, 5.172f)
                     lineTo(8.0f, 4.5f)
-                    arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = false, isPositiveArc = true, 11.0f, 4.5f)
+                    arcTo(1.5f, 1.5f, 180.0f, isMoreThanHalf = true, isPositiveArc = true, 11.0f, 4.5f)
                     lineTo(11.0f, 8.172f)
                     lineTo(13.0f, 10.172f)
                     lineTo(13.0f, 7.5f)

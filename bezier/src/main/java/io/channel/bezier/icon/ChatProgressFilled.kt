@@ -35,6 +35,7 @@ val BezierIcons.ChatProgressFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.003f, 2.003f)
                     curveTo(17.506999999999998f, 2.003f, 21.997f, 6.501f, 21.997f, 12.006f)

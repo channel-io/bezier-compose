@@ -35,26 +35,27 @@ val BezierIcons.GooglePlay: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(16.682f, 16.044f)
                     lineTo(8.115999999999998f, 20.778f)
-                    curveTo(7.065999999999998f, 21.358999999999998f, 5.8359999999999985f, 20.933f, 5.2879999999999985f, 20.008f)
-                    lineTo(13.099999999999998f, 12.686f)
+                    curveTo(7.065999999999998f, 21.357999999999997f, 5.8359999999999985f, 20.933f, 5.288999999999998f, 20.008f)
+                    lineTo(13.098999999999997f, 12.686f)
                     close()
                     moveTo(12.368f, 12.0f)
-                    lineTo(5.0f, 18.907f)
+                    lineTo(5.0f, 18.908f)
                     lineTo(5.0f, 5.092f)
                     close()
                     moveTo(20.991f, 10.337f)
-                    curveTo(22.299f, 11.06f, 22.299f, 12.94f, 20.991f, 13.663f)
-                    lineTo(17.602f, 15.535f)
-                    lineTo(13.833f, 12.0f)
+                    curveTo(22.299f, 11.06f, 22.299f, 12.939f, 20.991f, 13.661999999999999f)
+                    lineTo(17.601f, 15.533999999999999f)
+                    lineTo(13.832f, 12.0f)
                     lineTo(17.603f, 8.464f)
                     close()
                     moveTo(5.288f, 3.99f)
-                    curveTo(5.836f, 3.0660000000000003f, 7.066000000000001f, 2.64f, 8.116f, 3.22f)
-                    lineTo(16.682000000000002f, 7.954000000000001f)
-                    lineTo(13.100000000000001f, 11.312000000000001f)
+                    arcTo(2.104f, 2.104f, 210.64432921560402f, isMoreThanHalf = false, isPositiveArc = true, 8.116f, 3.221f)
+                    lineTo(16.682000000000002f, 7.955f)
+                    lineTo(13.100000000000001f, 11.313f)
                     close()
                 }
             }.build().also {

@@ -35,20 +35,22 @@ val BezierIcons.SendFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(21.324f, 11.116f)
-                    lineTo(5.736000000000002f, 2.1159999999999997f)
-                    arcTo(1.0f, 1.0f, 300.0170457847088f, isMoreThanHalf = false, isPositiveArc = false, 4.265000000000002f, 3.2219999999999995f)
-                    lineTo(6.185000000000002f, 10.995999999999999f)
-                    lineTo(17.330000000000002f, 11.631999999999998f)
-                    lineTo(17.330000000000002f, 12.333999999999998f)
-                    lineTo(6.182000000000002f, 12.995999999999999f)
-                    lineTo(4.206000000000002f, 20.771f)
-                    arcTo(0.998f, 0.998f, 194.38891439569517f, isMoreThanHalf = false, isPositiveArc = false, 5.176000000000002f, 22.017f)
-                    curveTo(5.347000000000002f, 22.017f, 5.520000000000002f, 21.973f, 5.676000000000002f, 21.884f)
-                    lineTo(21.324f, 12.848f)
-                    arcTo(1.0f, 1.0f, 59.99708906881194f, isMoreThanHalf = false, isPositiveArc = false, 21.324f, 11.116000000000001f)
+                    moveTo(3.505f, 5.598f)
+                    curveTo(2.682f, 3.391f, 5.047f, 1.3479999999999999f, 7.111f, 2.485f)
+                    lineTo(20.753f, 10.003f)
+                    curveTo(22.526f, 10.98f, 22.499f, 13.538f, 20.706f, 14.478f)
+                    lineTo(6.91f, 21.708f)
+                    curveTo(4.823f, 22.8f, 2.501f, 20.71f, 3.37f, 18.52f)
+                    lineTo(5.45f, 13.279f)
+                    lineTo(5.51f, 13.127f)
+                    quadTo(5.553f, 13.132000000000001f, 5.5969999999999995f, 13.133000000000001f)
+                    lineTo(14.289f, 13.124f)
+                    arcTo(1.0f, 1.0f, 90.54429244081939f, isMoreThanHalf = false, isPositiveArc = false, 14.308f, 11.124f)
+                    lineTo(5.615f, 11.134f)
+                    lineTo(5.585f, 11.134f)
+                    lineTo(5.475f, 10.881f)
+                    close()
                 }
             }.build().also {
                 _sendFilled = it
