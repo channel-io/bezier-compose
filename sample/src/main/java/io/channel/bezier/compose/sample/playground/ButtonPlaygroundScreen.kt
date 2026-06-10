@@ -81,8 +81,8 @@ fun ButtonPlaygroundScreen(onBack: () -> Unit) {
                         isActive = isActive,
                         isLoading = isLoading,
                         enabled = enabled,
-                        leadingIcon = if (showLeadingIcon) BezierIcons.Plus else null,
-                        trailingIcon = if (showTrailingIcon) BezierIcons.Plus else null,
+                        leadingContent = if (showLeadingIcon) BezierIcons.Plus else null,
+                        trailingContent = if (showTrailingIcon) BezierIcons.Plus else null,
                 )
             }
 
