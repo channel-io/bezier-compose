@@ -40,9 +40,9 @@ enum class BezierTypo(
     TextXXSmall(fontSize = BezierFontSize.Size11, lineHeight = BezierLineHeight.Size16, letterSpacing = BezierLetterSpacing.Normal),
 
     // Label (fixed Bold)
-    LabelLarge(fontSize = BezierFontSize.Size14, lineHeight = BezierLineHeight.Size18, letterSpacing = BezierLetterSpacing.Normal, fixedWeight = FontWeight.Bold),
-    LabelMedium(fontSize = BezierFontSize.Size13, lineHeight = BezierLineHeight.Size18, letterSpacing = BezierLetterSpacing.Normal, fixedWeight = FontWeight.Bold),
-    LabelSmall(fontSize = BezierFontSize.Size12, lineHeight = BezierLineHeight.Size16, letterSpacing = BezierLetterSpacing.Normal, fixedWeight = FontWeight.Bold),
+    LabelLarge(fontSize = BezierFontSize.Size15, lineHeight = BezierLineHeight.Size20, letterSpacing = BezierLetterSpacing.Normal, fixedWeight = FontWeight.Bold),
+    LabelMedium(fontSize = BezierFontSize.Size14, lineHeight = BezierLineHeight.Size20, letterSpacing = BezierLetterSpacing.Normal, fixedWeight = FontWeight.Bold),
+    LabelSmall(fontSize = BezierFontSize.Size13, lineHeight = BezierLineHeight.Size18, letterSpacing = BezierLetterSpacing.Normal, fixedWeight = FontWeight.Bold),
 
     // Caption (weight param supported)
     CaptionMedium(fontSize = BezierFontSize.Size12, lineHeight = BezierLineHeight.Size16, letterSpacing = BezierLetterSpacing.Normal),

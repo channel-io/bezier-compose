@@ -51,8 +51,8 @@ fun Button(
         isActive: Boolean = false,
         isLoading: Boolean = false,
         enabled: Boolean = true,
-        leadingIcon: BezierIcon? = null,
-        trailingIcon: BezierIcon? = null,
+        leadingContent: BezierIcon? = null,
+        trailingContent: BezierIcon? = null,
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
 ) {
 
@@ -94,10 +94,10 @@ fun Button(
                 horizontalArrangement = Arrangement.spacedBy(spec.gap),
                 verticalAlignment = Alignment.CenterVertically,
         ) {
-            if (leadingIcon != null) {
+            if (leadingContent != null) {
                 Icon(
                         modifier = Modifier.size(ButtonIconLength),
-                        imageVector = leadingIcon.imageVector,
+                        imageVector = leadingContent.imageVector,
                         tint = colorSpec.iconColor,
                         contentDescription = null,
                 )
@@ -112,10 +112,10 @@ fun Button(
                         color = colorSpec.textColor,
                 )
             }
-            if (trailingIcon != null) {
+            if (trailingContent != null) {
                 Icon(
                         modifier = Modifier.size(ButtonIconLength),
-                        imageVector = trailingIcon.imageVector,
+                        imageVector = trailingContent.imageVector,
                         tint = colorSpec.iconColor,
                         contentDescription = null,
                 )
@@ -188,9 +188,9 @@ enum class ButtonSize {
 
     internal val typo: BezierTypo
         get() = when (this) {
-            Xsmall -> BezierTypo.TextSmall
-            Small -> BezierTypo.TextMedium
-            Medium -> BezierTypo.TextLarge
+            Xsmall -> BezierTypo.LabelSmall
+            Small -> BezierTypo.LabelMedium
+            Medium -> BezierTypo.LabelLarge
             Large -> BezierTypo.TextXLarge
             Xlarge -> BezierTypo.TextXLarge
         }
@@ -389,8 +389,8 @@ private fun ButtonMatrix(size: ButtonSize, sizeLabel: String) {
                                     size = size,
                                     variant = variant,
                                     semantic = semantic,
-                                    leadingIcon = BezierIcons.Plus,
-                                    trailingIcon = BezierIcons.Plus,
+                                    leadingContent = BezierIcons.Plus,
+                                    trailingContent = BezierIcons.Plus,
                             )
                         }
                         ButtonStateCell(cellWidth) {
@@ -400,8 +400,8 @@ private fun ButtonMatrix(size: ButtonSize, sizeLabel: String) {
                                     size = size,
                                     variant = variant,
                                     semantic = semantic,
-                                    leadingIcon = BezierIcons.Plus,
-                                    trailingIcon = BezierIcons.Plus,
+                                    leadingContent = BezierIcons.Plus,
+                                    trailingContent = BezierIcons.Plus,
                                     interactionSource = pressedInteractionSource(),
                             )
                         }
@@ -412,8 +412,8 @@ private fun ButtonMatrix(size: ButtonSize, sizeLabel: String) {
                                     size = size,
                                     variant = variant,
                                     semantic = semantic,
-                                    leadingIcon = BezierIcons.Plus,
-                                    trailingIcon = BezierIcons.Plus,
+                                    leadingContent = BezierIcons.Plus,
+                                    trailingContent = BezierIcons.Plus,
                                     isActive = true,
                             )
                         }
@@ -424,8 +424,8 @@ private fun ButtonMatrix(size: ButtonSize, sizeLabel: String) {
                                     size = size,
                                     variant = variant,
                                     semantic = semantic,
-                                    leadingIcon = BezierIcons.Plus,
-                                    trailingIcon = BezierIcons.Plus,
+                                    leadingContent = BezierIcons.Plus,
+                                    trailingContent = BezierIcons.Plus,
                                     enabled = false,
                             )
                         }
@@ -436,8 +436,8 @@ private fun ButtonMatrix(size: ButtonSize, sizeLabel: String) {
                                     size = size,
                                     variant = variant,
                                     semantic = semantic,
-                                    leadingIcon = BezierIcons.Plus,
-                                    trailingIcon = BezierIcons.Plus,
+                                    leadingContent = BezierIcons.Plus,
+                                    trailingContent = BezierIcons.Plus,
                                     isLoading = true,
                             )
                         }
