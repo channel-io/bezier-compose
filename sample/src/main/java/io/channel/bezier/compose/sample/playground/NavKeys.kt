@@ -7,3 +7,4 @@ data object BadgePlaygroundKey
 data object TagPlaygroundKey
 data object AvatarPlaygroundKey
 data object AvatarGroupPlaygroundKey
+data object SpinnerPlaygroundKey

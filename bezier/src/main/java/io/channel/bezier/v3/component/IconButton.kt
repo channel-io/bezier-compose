@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -85,11 +84,13 @@ fun IconButton(
                 contentDescription = contentDescription,
         )
         if (isLoading) {
-            CircularProgressIndicator(
-                    modifier = Modifier.size(size.spinnerLength),
-                    color = colorSpec.iconColor,
-                    backgroundColor = BezierTheme.colorsV3.borderNeutral,
-                    strokeWidth = 2.dp,
+            Spinner(
+                    size = size.spinnerSize,
+                    color = if (variant == IconButtonVariant.Filled) {
+                        BezierTheme.colorsV3.fillBright
+                    } else {
+                        BezierTheme.colorsV3.iconNeutral
+                    },
             )
         }
     }
@@ -120,12 +121,12 @@ enum class IconButtonSize {
     internal val iconLength: Dp
         get() = containerLength - padding * 2
 
-    internal val spinnerLength: Dp
+    internal val spinnerSize: SpinnerSize
         get() = when (this) {
-            Xsmall -> 12.dp
-            Small -> 14.dp
-            Medium -> 16.dp
-            Large -> 18.dp
+            Xsmall -> SpinnerSize.Size12
+            Small -> SpinnerSize.Size12
+            Medium -> SpinnerSize.Size12
+            Large -> SpinnerSize.Size16
         }
 }
 

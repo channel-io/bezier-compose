@@ -27,6 +27,8 @@ import io.channel.bezier.compose.sample.playground.ComponentListKey
 import io.channel.bezier.compose.sample.playground.ComponentListScreen
 import io.channel.bezier.compose.sample.playground.IconButtonPlaygroundKey
 import io.channel.bezier.compose.sample.playground.IconButtonPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.SpinnerPlaygroundKey
+import io.channel.bezier.compose.sample.playground.SpinnerPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.TagPlaygroundKey
 import io.channel.bezier.compose.sample.playground.TagPlaygroundScreen
 
@@ -62,6 +64,7 @@ private fun PlaygroundApp() {
                                     onSelectTag = { backStack.add(TagPlaygroundKey) },
                                     onSelectAvatar = { backStack.add(AvatarPlaygroundKey) },
                                     onSelectAvatarGroup = { backStack.add(AvatarGroupPlaygroundKey) },
+                                    onSelectSpinner = { backStack.add(SpinnerPlaygroundKey) },
                             )
                         }
                         entry<ButtonPlaygroundKey> {
@@ -81,6 +84,9 @@ private fun PlaygroundApp() {
                         }
                         entry<AvatarGroupPlaygroundKey> {
                             AvatarGroupPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<SpinnerPlaygroundKey> {
+                            SpinnerPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
                         }
                     },
             )
