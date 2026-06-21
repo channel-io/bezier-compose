@@ -19,6 +19,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -78,6 +79,8 @@ private fun BadgeText(text: String, size: BadgeSize, color: Color) {
                 typo = BezierTypo.TextXSmall,
                 weight = BezierWeight.Regular,
                 color = color,
+                overflow = TextOverflow.Ellipsis,
+                maxLines = 1,
         )
 
         BadgeSize.Small -> BezierText(
@@ -85,6 +88,8 @@ private fun BadgeText(text: String, size: BadgeSize, color: Color) {
                 typo = BezierTypo.TextMedium,
                 weight = BezierWeight.Regular,
                 color = color,
+                overflow = TextOverflow.Ellipsis,
+                maxLines = 1,
         )
 
         BadgeSize.Medium -> Text(
@@ -96,6 +101,8 @@ private fun BadgeText(text: String, size: BadgeSize, color: Color) {
                         fontWeight = FontWeight.Normal,
                         color = color,
                 ),
+                overflow = TextOverflow.Ellipsis,
+                maxLines = 1,
         )
 
         BadgeSize.Large -> Text(
@@ -107,6 +114,8 @@ private fun BadgeText(text: String, size: BadgeSize, color: Color) {
                         fontWeight = FontWeight.Normal,
                         color = color,
                 ),
+                overflow = TextOverflow.Ellipsis,
+                maxLines = 1,
         )
     }
 }

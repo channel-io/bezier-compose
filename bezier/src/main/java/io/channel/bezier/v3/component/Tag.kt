@@ -19,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -83,6 +84,8 @@ private fun TagLabel(text: String, size: TagSize, color: Color) {
                 typo = BezierTypo.TextXSmall,
                 weight = BezierWeight.Regular,
                 color = color,
+                overflow = TextOverflow.Ellipsis,
+                maxLines = 1,
         )
 
         TagSize.Small -> BezierText(
@@ -90,6 +93,8 @@ private fun TagLabel(text: String, size: TagSize, color: Color) {
                 typo = BezierTypo.TextMedium,
                 weight = BezierWeight.Regular,
                 color = color,
+                overflow = TextOverflow.Ellipsis,
+                maxLines = 1,
         )
 
         TagSize.Medium -> Text(
@@ -99,6 +104,8 @@ private fun TagLabel(text: String, size: TagSize, color: Color) {
                 lineHeight = 18.sp,
                 letterSpacing = (-0.1).sp,
                 fontWeight = FontWeight.Normal,
+                overflow = TextOverflow.Ellipsis,
+                maxLines = 1,
         )
 
         TagSize.Large -> Text(
@@ -108,6 +115,8 @@ private fun TagLabel(text: String, size: TagSize, color: Color) {
                 lineHeight = 20.sp,
                 letterSpacing = (-0.1).sp,
                 fontWeight = FontWeight.Normal,
+                overflow = TextOverflow.Ellipsis,
+                maxLines = 1,
         )
     }
 }
