@@ -41,7 +41,7 @@ fun Avatar(
         size: AvatarSize = AvatarSize.Size16,
         enabled: Boolean = true,
         showBorder: Boolean = false,
-        status: AvatarStatusType? = null,
+        status: StatusType? = null,
         contentDescription: String? = null,
 ) {
     val layout = size.layout
@@ -74,7 +74,7 @@ fun Avatar(
         )
 
         if (status != null) {
-            AvatarStatus(
+            Status(
                     type = status,
                     size = layout.statusSize,
                     modifier = Modifier.offset(x = layout.statusOffsetX, y = layout.statusOffsetY),
@@ -116,24 +116,24 @@ enum class AvatarSize {
 
     internal val layout: AvatarLayoutSpec
         get() = when (this) {
-            Size16 -> AvatarLayoutSpec(16.dp, 1.dp, AvatarStatusSize.Small, 12.dp, 12.dp)
-            Size20 -> AvatarLayoutSpec(20.dp, 1.dp, AvatarStatusSize.Small, 14.dp, 14.dp)
-            Size24 -> AvatarLayoutSpec(24.dp, 1.5.dp, AvatarStatusSize.Small, 18.dp, 18.dp)
-            Size30 -> AvatarLayoutSpec(30.dp, 1.5.dp, AvatarStatusSize.Medium, 21.dp, 20.dp)
-            Size36 -> AvatarLayoutSpec(36.dp, 1.5.dp, AvatarStatusSize.Medium, 26.dp, 26.dp)
-            Size42 -> AvatarLayoutSpec(42.dp, 2.dp, AvatarStatusSize.Medium, 32.dp, 32.dp)
-            Size48 -> AvatarLayoutSpec(48.dp, 2.dp, AvatarStatusSize.Medium, 36.dp, 37.dp)
-            Size72 -> AvatarLayoutSpec(72.dp, 2.5.dp, AvatarStatusSize.Large, 55.dp, 54.dp)
-            Size90 -> AvatarLayoutSpec(90.dp, 3.dp, AvatarStatusSize.XLarge, 68.dp, 68.dp)
-            Size120 -> AvatarLayoutSpec(120.dp, 3.5.dp, AvatarStatusSize.XLarge, 96.dp, 94.dp)
-            Size160 -> AvatarLayoutSpec(160.dp, 4.dp, AvatarStatusSize.XLarge, 132.dp, 129.dp)
+            Size16 -> AvatarLayoutSpec(16.dp, 1.dp, StatusSize.Small, 12.dp, 12.dp)
+            Size20 -> AvatarLayoutSpec(20.dp, 1.dp, StatusSize.Small, 14.dp, 14.dp)
+            Size24 -> AvatarLayoutSpec(24.dp, 1.5.dp, StatusSize.Small, 18.dp, 18.dp)
+            Size30 -> AvatarLayoutSpec(30.dp, 1.5.dp, StatusSize.Medium, 21.dp, 20.dp)
+            Size36 -> AvatarLayoutSpec(36.dp, 1.5.dp, StatusSize.Medium, 26.dp, 26.dp)
+            Size42 -> AvatarLayoutSpec(42.dp, 2.dp, StatusSize.Medium, 32.dp, 32.dp)
+            Size48 -> AvatarLayoutSpec(48.dp, 2.dp, StatusSize.Medium, 36.dp, 37.dp)
+            Size72 -> AvatarLayoutSpec(72.dp, 2.5.dp, StatusSize.Large, 55.dp, 54.dp)
+            Size90 -> AvatarLayoutSpec(90.dp, 3.dp, StatusSize.XLarge, 68.dp, 68.dp)
+            Size120 -> AvatarLayoutSpec(120.dp, 3.5.dp, StatusSize.XLarge, 96.dp, 94.dp)
+            Size160 -> AvatarLayoutSpec(160.dp, 4.dp, StatusSize.XLarge, 132.dp, 129.dp)
         }
 }
 
 internal data class AvatarLayoutSpec(
         val length: Dp,
         val borderWidth: Dp,
-        val statusSize: AvatarStatusSize,
+        val statusSize: StatusSize,
         val statusOffsetX: Dp,
         val statusOffsetY: Dp,
 )
@@ -142,7 +142,7 @@ internal data class AvatarLayoutSpec(
 private fun AvatarMatrix(
         enabled: Boolean,
         showBorder: Boolean,
-        status: AvatarStatusType?,
+        status: StatusType?,
 ) {
     val previewImage = ColorPainter(Color(0xFFB6CED6))
 
@@ -189,8 +189,8 @@ private fun AvatarMatrixDisabledPreview() = AvatarMatrix(enabled = false, showBo
 
 @Preview(showBackground = true, widthDp = 320, heightDp = 1200)
 @Composable
-private fun AvatarMatrixBorderStatusPreview() = AvatarMatrix(enabled = true, showBorder = true, status = AvatarStatusType.Online)
+private fun AvatarMatrixBorderStatusPreview() = AvatarMatrix(enabled = true, showBorder = true, status = StatusType.Online)
 
 @Preview(showBackground = true, widthDp = 320, heightDp = 1200, uiMode = UI_MODE_NIGHT_YES)
 @Composable
-private fun AvatarMatrixDarkPreview() = AvatarMatrix(enabled = true, showBorder = true, status = AvatarStatusType.OnlineDnd)
+private fun AvatarMatrixDarkPreview() = AvatarMatrix(enabled = true, showBorder = true, status = StatusType.OnlineDnd)

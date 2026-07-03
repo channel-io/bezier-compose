@@ -19,33 +19,26 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.painter.ColorPainter
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.icon.ArrowLeft
-import io.channel.bezier.v3.component.Avatar
-import io.channel.bezier.v3.component.AvatarSize
 import io.channel.bezier.v3.component.IconButton
 import io.channel.bezier.v3.component.IconButtonSize
 import io.channel.bezier.v3.component.IconButtonVariant
+import io.channel.bezier.v3.component.Status
+import io.channel.bezier.v3.component.StatusSize
 import io.channel.bezier.v3.component.StatusType
 
 @Composable
-fun AvatarPlaygroundScreen(onBack: () -> Unit) {
-    var size by remember { mutableStateOf(AvatarSize.Size48) }
-    var enabled by remember { mutableStateOf(true) }
-    var showBorder by remember { mutableStateOf(false) }
-    var showStatus by remember { mutableStateOf(false) }
-    var statusType by remember { mutableStateOf(StatusType.Online) }
-
-    val previewPainter = remember { ColorPainter(Color(0xFFB6CED6)) }
+fun StatusPlaygroundScreen(onBack: () -> Unit) {
+    var type by remember { mutableStateOf(StatusType.Online) }
+    var size by remember { mutableStateOf(StatusSize.XLarge) }
 
     Scaffold(
             topBar = {
                 TopAppBar(
-                        title = { Text("Avatar") },
+                        title = { Text("Status") },
                         navigationIcon = {
                             IconButton(
                                     icon = BezierIcons.ArrowLeft,
@@ -71,23 +64,13 @@ fun AvatarPlaygroundScreen(onBack: () -> Unit) {
                             .padding(32.dp),
                     contentAlignment = Alignment.Center,
             ) {
-                Avatar(
-                        image = previewPainter,
-                        size = size,
-                        enabled = enabled,
-                        showBorder = showBorder,
-                        status = if (showStatus) statusType else null,
-                        contentDescription = "preview",
-                )
+                Status(type = type, size = size)
             }
 
             Divider()
 
-            EnumControl("Size", AvatarSize.values(), size) { size = it }
-            BooleanControl("enabled", enabled) { enabled = it }
-            BooleanControl("showBorder", showBorder) { showBorder = it }
-            BooleanControl("showStatus", showStatus) { showStatus = it }
-            EnumControl("statusType", StatusType.values(), statusType) { statusType = it }
+            EnumControl("type", StatusType.values(), type) { type = it }
+            EnumControl("Size", StatusSize.values(), size) { size = it }
         }
     }
 }
