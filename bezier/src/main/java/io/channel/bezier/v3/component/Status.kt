@@ -21,10 +21,10 @@ import io.channel.bezier.icon.Lock
 import io.channel.bezier.icon.MoonFilled
 
 @Composable
-internal fun AvatarStatus(
-        type: AvatarStatusType,
-        size: AvatarStatusSize,
+fun Status(
+        type: StatusType,
         modifier: Modifier = Modifier,
+        size: StatusSize = StatusSize.Small,
 ) {
     val colors = BezierTheme.colorsV3
     val layout = size.layout
@@ -39,22 +39,22 @@ internal fun AvatarStatus(
             contentAlignment = Alignment.Center,
     ) {
         when (type) {
-            AvatarStatusType.Online,
-            AvatarStatusType.Offline -> Box(
+            StatusType.Online,
+            StatusType.Offline -> Box(
                     modifier = Modifier
                             .size(layout.inner)
                             .clip(CircleShape)
                             .background(innerColor),
             )
 
-            AvatarStatusType.Lock -> Icon(
+            StatusType.Lock -> Icon(
                     modifier = Modifier.size(layout.inner),
                     imageVector = BezierIcons.Lock.imageVector,
                     tint = innerColor,
                     contentDescription = null,
             )
 
-            AvatarStatusType.OnlineDnd, AvatarStatusType.OfflineDnd -> Icon(
+            StatusType.OnlineDnd, StatusType.OfflineDnd -> Icon(
                     modifier = Modifier.size(layout.inner),
                     imageVector = BezierIcons.MoonFilled.imageVector,
                     tint = innerColor,
@@ -64,7 +64,7 @@ internal fun AvatarStatus(
     }
 }
 
-enum class AvatarStatusType {
+enum class StatusType {
     Online,
     Offline,
     Lock,
@@ -81,36 +81,36 @@ enum class AvatarStatusType {
     }
 }
 
-internal enum class AvatarStatusSize {
+enum class StatusSize {
     Small,
     Medium,
     Large,
     XLarge;
 
-    internal val layout: AvatarStatusLayoutSpec
+    internal val layout: StatusLayoutSpec
         get() = when (this) {
-            Small -> AvatarStatusLayoutSpec(
+            Small -> StatusLayoutSpec(
                     container = 8.dp,
                     padding = 2.dp,
                     inner = 6.dp,
                     cornerRadius = 4.dp,
             )
 
-            Medium -> AvatarStatusLayoutSpec(
+            Medium -> StatusLayoutSpec(
                     container = 12.dp,
                     padding = 2.dp,
                     inner = 8.dp,
                     cornerRadius = 6.dp,
             )
 
-            Large -> AvatarStatusLayoutSpec(
+            Large -> StatusLayoutSpec(
                     container = 16.dp,
                     padding = 3.dp,
                     inner = 12.dp,
                     cornerRadius = 8.dp,
             )
 
-            XLarge -> AvatarStatusLayoutSpec(
+            XLarge -> StatusLayoutSpec(
                     container = 24.dp,
                     padding = 2.dp,
                     inner = 18.dp,
@@ -119,7 +119,7 @@ internal enum class AvatarStatusSize {
         }
 }
 
-internal data class AvatarStatusLayoutSpec(
+internal data class StatusLayoutSpec(
         val container: Dp,
         val padding: Dp,
         val inner: Dp,
