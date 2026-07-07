@@ -245,7 +245,7 @@ internal fun buttonColorSpec(variant: ButtonVariant, semantic: ButtonSemantic): 
             )
 
             ButtonSemantic.Secondary -> ButtonColorSpec(
-                    background = colors.fillNeutralLight,
+                    background = colors.fillNeutral,
                     textColor = colors.textNeutral,
                     iconColor = colors.iconNeutralHeavy,
                     border = null,
