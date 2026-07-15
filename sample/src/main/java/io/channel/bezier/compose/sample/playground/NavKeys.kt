@@ -10,3 +10,4 @@ data object AvatarGroupPlaygroundKey
 data object SpinnerPlaygroundKey
 data object StatusPlaygroundKey
 data object DividerPlaygroundKey
+data object ToastPlaygroundKey
