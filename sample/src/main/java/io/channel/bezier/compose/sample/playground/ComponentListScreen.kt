@@ -25,6 +25,7 @@ fun ComponentListScreen(
         onSelectAvatarGroup: () -> Unit,
         onSelectSpinner: () -> Unit,
         onSelectStatus: () -> Unit,
+        onSelectDivider: () -> Unit,
 ) {
     Scaffold(
             topBar = {
@@ -54,6 +55,8 @@ fun ComponentListScreen(
             ComponentRow("Spinner", onClick = onSelectSpinner)
             Divider()
             ComponentRow("Status", onClick = onSelectStatus)
+            Divider()
+            ComponentRow("Divider", onClick = onSelectDivider)
             Divider()
         }
     }
