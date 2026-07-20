@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.material.RadioButton
+import androidx.compose.material.Slider
 import androidx.compose.material.Switch
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -16,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import kotlin.math.roundToInt
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -72,5 +74,26 @@ internal fun BooleanControl(
     ) {
         Text(text = label, fontWeight = FontWeight.Bold)
         Switch(checked = value, onCheckedChange = onValueChange)
+    }
+}
+
+@Composable
+internal fun SliderControl(
+        label: String,
+        value: Int,
+        valueRange: IntRange,
+        onValueChange: (Int) -> Unit,
+) {
+    Column(
+            modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp, vertical = 8.dp),
+    ) {
+        Text(text = "$label: $value", fontWeight = FontWeight.Bold)
+        Slider(
+                value = value.toFloat(),
+                onValueChange = { onValueChange(it.roundToInt()) },
+                valueRange = valueRange.first.toFloat()..valueRange.last.toFloat(),
+        )
     }
 }

@@ -8,6 +8,7 @@ data object TagPlaygroundKey
 data object AvatarPlaygroundKey
 data object AvatarGroupPlaygroundKey
 data object SpinnerPlaygroundKey
+data object ProgressBarPlaygroundKey
 data object StatusPlaygroundKey
 data object SwitchPlaygroundKey
 data object DividerPlaygroundKey

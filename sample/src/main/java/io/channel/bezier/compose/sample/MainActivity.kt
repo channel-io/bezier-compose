@@ -29,6 +29,8 @@ import io.channel.bezier.compose.sample.playground.DividerPlaygroundKey
 import io.channel.bezier.compose.sample.playground.DividerPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.IconButtonPlaygroundKey
 import io.channel.bezier.compose.sample.playground.IconButtonPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.ProgressBarPlaygroundKey
+import io.channel.bezier.compose.sample.playground.ProgressBarPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.SpinnerPlaygroundKey
 import io.channel.bezier.compose.sample.playground.SpinnerPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.StatusPlaygroundKey
@@ -73,6 +75,7 @@ private fun PlaygroundApp() {
                                     onSelectAvatar = { backStack.add(AvatarPlaygroundKey) },
                                     onSelectAvatarGroup = { backStack.add(AvatarGroupPlaygroundKey) },
                                     onSelectSpinner = { backStack.add(SpinnerPlaygroundKey) },
+                                    onSelectProgressBar = { backStack.add(ProgressBarPlaygroundKey) },
                                     onSelectStatus = { backStack.add(StatusPlaygroundKey) },
                                     onSelectSwitch = { backStack.add(SwitchPlaygroundKey) },
                                     onSelectDivider = { backStack.add(DividerPlaygroundKey) },
@@ -99,6 +102,9 @@ private fun PlaygroundApp() {
                         }
                         entry<SpinnerPlaygroundKey> {
                             SpinnerPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<ProgressBarPlaygroundKey> {
+                            ProgressBarPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
                         }
                         entry<StatusPlaygroundKey> {
                             StatusPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
