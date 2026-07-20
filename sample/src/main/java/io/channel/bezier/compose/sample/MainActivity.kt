@@ -25,6 +25,8 @@ import io.channel.bezier.compose.sample.playground.ButtonPlaygroundKey
 import io.channel.bezier.compose.sample.playground.ButtonPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.ComponentListKey
 import io.channel.bezier.compose.sample.playground.ComponentListScreen
+import io.channel.bezier.compose.sample.playground.DividerPlaygroundKey
+import io.channel.bezier.compose.sample.playground.DividerPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.IconButtonPlaygroundKey
 import io.channel.bezier.compose.sample.playground.IconButtonPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.SpinnerPlaygroundKey
@@ -35,6 +37,8 @@ import io.channel.bezier.compose.sample.playground.SwitchPlaygroundKey
 import io.channel.bezier.compose.sample.playground.SwitchPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.TagPlaygroundKey
 import io.channel.bezier.compose.sample.playground.TagPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.ToastPlaygroundKey
+import io.channel.bezier.compose.sample.playground.ToastPlaygroundScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,6 +75,8 @@ private fun PlaygroundApp() {
                                     onSelectSpinner = { backStack.add(SpinnerPlaygroundKey) },
                                     onSelectStatus = { backStack.add(StatusPlaygroundKey) },
                                     onSelectSwitch = { backStack.add(SwitchPlaygroundKey) },
+                                    onSelectDivider = { backStack.add(DividerPlaygroundKey) },
+                                    onSelectToast = { backStack.add(ToastPlaygroundKey) },
                             )
                         }
                         entry<ButtonPlaygroundKey> {
@@ -99,6 +105,12 @@ private fun PlaygroundApp() {
                         }
                         entry<SwitchPlaygroundKey> {
                             SwitchPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<DividerPlaygroundKey> {
+                            DividerPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<ToastPlaygroundKey> {
+                            ToastPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
                         }
                     },
             )
