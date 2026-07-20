@@ -35,6 +35,8 @@ import io.channel.bezier.compose.sample.playground.StatusPlaygroundKey
 import io.channel.bezier.compose.sample.playground.StatusPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.TagPlaygroundKey
 import io.channel.bezier.compose.sample.playground.TagPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.ToastPlaygroundKey
+import io.channel.bezier.compose.sample.playground.ToastPlaygroundScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,6 +73,7 @@ private fun PlaygroundApp() {
                                     onSelectSpinner = { backStack.add(SpinnerPlaygroundKey) },
                                     onSelectStatus = { backStack.add(StatusPlaygroundKey) },
                                     onSelectDivider = { backStack.add(DividerPlaygroundKey) },
+                                    onSelectToast = { backStack.add(ToastPlaygroundKey) },
                             )
                         }
                         entry<ButtonPlaygroundKey> {
@@ -99,6 +102,9 @@ private fun PlaygroundApp() {
                         }
                         entry<DividerPlaygroundKey> {
                             DividerPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<ToastPlaygroundKey> {
+                            ToastPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
                         }
                     },
             )

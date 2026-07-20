@@ -26,6 +26,7 @@ fun ComponentListScreen(
         onSelectSpinner: () -> Unit,
         onSelectStatus: () -> Unit,
         onSelectDivider: () -> Unit,
+        onSelectToast: () -> Unit,
 ) {
     Scaffold(
             topBar = {
@@ -57,6 +58,8 @@ fun ComponentListScreen(
             ComponentRow("Status", onClick = onSelectStatus)
             Divider()
             ComponentRow("Divider", onClick = onSelectDivider)
+            Divider()
+            ComponentRow("Toast", onClick = onSelectToast)
             Divider()
         }
     }
