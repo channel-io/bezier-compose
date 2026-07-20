@@ -13,9 +13,16 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.graphics.drawOutline
+import androidx.compose.ui.graphics.drawscope.Fill
+import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.graphics.isSpecified
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -82,4 +89,27 @@ fun Modifier.shimmer(
                     end = Offset(x = translateAnimation.value, y = translateAnimation.value),
             ),
     )
+}
+
+fun Modifier.outsideBorder(
+        color: Color,
+        borderWidth: Dp,
+        shape: Shape,
+        gap: Dp = 0.dp,
+        stroke: Boolean = false,
+): Modifier = drawBehind {
+    val borderWidthPx = borderWidth.toPx()
+    val expandPx = gap.toPx() + borderWidthPx
+    val grownSize = Size(
+            width = size.width + expandPx * 2,
+            height = size.height + expandPx * 2,
+    )
+    val outline = shape.createOutline(grownSize, layoutDirection, this)
+    translate(left = -expandPx, top = -expandPx) {
+        drawOutline(
+                outline = outline,
+                color = color,
+                style = if (stroke) Stroke(width = borderWidthPx) else Fill,
+        )
+    }
 }
