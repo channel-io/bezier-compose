@@ -25,6 +25,7 @@ fun ComponentListScreen(
         onSelectAvatarGroup: () -> Unit,
         onSelectSpinner: () -> Unit,
         onSelectStatus: () -> Unit,
+        onSelectSwitch: () -> Unit,
         onSelectDivider: () -> Unit,
         onSelectToast: () -> Unit,
 ) {
@@ -56,6 +57,8 @@ fun ComponentListScreen(
             ComponentRow("Spinner", onClick = onSelectSpinner)
             Divider()
             ComponentRow("Status", onClick = onSelectStatus)
+            Divider()
+            ComponentRow("Switch", onClick = onSelectSwitch)
             Divider()
             ComponentRow("Divider", onClick = onSelectDivider)
             Divider()
