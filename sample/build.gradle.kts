@@ -55,6 +55,8 @@ dependencies {
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
     implementation(libs.material)
+    implementation(libs.material3)
+    implementation(libs.bottomsheetdialog.compose)
     implementation(libs.navigation3.runtime)
     implementation(libs.navigation3.ui)
     testImplementation(libs.junit)

@@ -25,8 +25,12 @@ import io.channel.bezier.compose.sample.playground.ButtonPlaygroundKey
 import io.channel.bezier.compose.sample.playground.ButtonPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.ComponentListKey
 import io.channel.bezier.compose.sample.playground.ComponentListScreen
+import io.channel.bezier.compose.sample.playground.HolixBottomSheetPlaygroundKey
+import io.channel.bezier.compose.sample.playground.HolixBottomSheetPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.IconButtonPlaygroundKey
 import io.channel.bezier.compose.sample.playground.IconButtonPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.MaterialBottomSheetPlaygroundKey
+import io.channel.bezier.compose.sample.playground.MaterialBottomSheetPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.SpinnerPlaygroundKey
 import io.channel.bezier.compose.sample.playground.SpinnerPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.StatusPlaygroundKey
@@ -68,6 +72,8 @@ private fun PlaygroundApp() {
                                     onSelectAvatarGroup = { backStack.add(AvatarGroupPlaygroundKey) },
                                     onSelectSpinner = { backStack.add(SpinnerPlaygroundKey) },
                                     onSelectStatus = { backStack.add(StatusPlaygroundKey) },
+                                    onSelectHolixBottomSheet = { backStack.add(HolixBottomSheetPlaygroundKey) },
+                                    onSelectMaterialBottomSheet = { backStack.add(MaterialBottomSheetPlaygroundKey) },
                             )
                         }
                         entry<ButtonPlaygroundKey> {
@@ -93,6 +99,12 @@ private fun PlaygroundApp() {
                         }
                         entry<StatusPlaygroundKey> {
                             StatusPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<HolixBottomSheetPlaygroundKey> {
+                            HolixBottomSheetPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<MaterialBottomSheetPlaygroundKey> {
+                            MaterialBottomSheetPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
                         }
                     },
             )

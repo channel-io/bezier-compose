@@ -25,6 +25,8 @@ fun ComponentListScreen(
         onSelectAvatarGroup: () -> Unit,
         onSelectSpinner: () -> Unit,
         onSelectStatus: () -> Unit,
+        onSelectHolixBottomSheet: () -> Unit,
+        onSelectMaterialBottomSheet: () -> Unit,
 ) {
     Scaffold(
             topBar = {
@@ -54,6 +56,10 @@ fun ComponentListScreen(
             ComponentRow("Spinner", onClick = onSelectSpinner)
             Divider()
             ComponentRow("Status", onClick = onSelectStatus)
+            Divider()
+            ComponentRow("Holix BottomSheet (중첩)", onClick = onSelectHolixBottomSheet)
+            Divider()
+            ComponentRow("Material BottomSheet (중첩)", onClick = onSelectMaterialBottomSheet)
             Divider()
         }
     }

@@ -9,3 +9,5 @@ data object AvatarPlaygroundKey
 data object AvatarGroupPlaygroundKey
 data object SpinnerPlaygroundKey
 data object StatusPlaygroundKey
+data object HolixBottomSheetPlaygroundKey
+data object MaterialBottomSheetPlaygroundKey
