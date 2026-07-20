@@ -13,3 +13,4 @@ data object StatusPlaygroundKey
 data object SwitchPlaygroundKey
 data object DividerPlaygroundKey
 data object ToastPlaygroundKey
+data object CardPlaygroundKey
