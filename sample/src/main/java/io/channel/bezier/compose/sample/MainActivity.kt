@@ -23,6 +23,8 @@ import io.channel.bezier.compose.sample.playground.BadgePlaygroundKey
 import io.channel.bezier.compose.sample.playground.BadgePlaygroundScreen
 import io.channel.bezier.compose.sample.playground.ButtonPlaygroundKey
 import io.channel.bezier.compose.sample.playground.ButtonPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.BottomSheetContentPlaygroundKey
+import io.channel.bezier.compose.sample.playground.BottomSheetContentPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.CardPlaygroundKey
 import io.channel.bezier.compose.sample.playground.CardPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.TextInputPlaygroundKey
@@ -86,6 +88,7 @@ private fun PlaygroundApp() {
                                     onSelectToast = { backStack.add(ToastPlaygroundKey) },
                                     onSelectCard = { backStack.add(CardPlaygroundKey) },
                                     onSelectTextInput = { backStack.add(TextInputPlaygroundKey) },
+                                    onSelectBottomSheetContent = { backStack.add(BottomSheetContentPlaygroundKey) },
                             )
                         }
                         entry<ButtonPlaygroundKey> {
@@ -129,6 +132,9 @@ private fun PlaygroundApp() {
                         }
                         entry<TextInputPlaygroundKey> {
                             TextInputPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<BottomSheetContentPlaygroundKey> {
+                            BottomSheetContentPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
                         }
                     },
             )

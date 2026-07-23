@@ -15,3 +15,4 @@ data object DividerPlaygroundKey
 data object ToastPlaygroundKey
 data object CardPlaygroundKey
 data object TextInputPlaygroundKey
+data object BottomSheetContentPlaygroundKey
