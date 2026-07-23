@@ -30,6 +30,7 @@ fun ComponentListScreen(
         onSelectDivider: () -> Unit,
         onSelectToast: () -> Unit,
         onSelectCard: () -> Unit,
+        onSelectTextInput: () -> Unit,
         onSelectBottomSheetContent: () -> Unit,
 ) {
     Scaffold(
@@ -70,6 +71,8 @@ fun ComponentListScreen(
             ComponentRow("Toast", onClick = onSelectToast)
             Divider()
             ComponentRow("Card", onClick = onSelectCard)
+            Divider()
+            ComponentRow("TextInput", onClick = onSelectTextInput)
             Divider()
             ComponentRow("BottomSheetContent", onClick = onSelectBottomSheetContent)
             Divider()
