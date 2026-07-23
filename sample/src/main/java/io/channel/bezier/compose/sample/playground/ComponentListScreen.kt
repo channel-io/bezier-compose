@@ -24,7 +24,20 @@ fun ComponentListScreen(
         onSelectAvatar: () -> Unit,
         onSelectAvatarGroup: () -> Unit,
         onSelectSpinner: () -> Unit,
+        onSelectProgressBar: () -> Unit,
         onSelectStatus: () -> Unit,
+        onSelectSwitch: () -> Unit,
+        onSelectDivider: () -> Unit,
+        onSelectToast: () -> Unit,
+        onSelectCard: () -> Unit,
+        onSelectSection: () -> Unit,
+        onSelectTextInput: () -> Unit,
+        onSelectBanner: () -> Unit,
+        onSelectBaseItem: () -> Unit,
+        onSelectCheckbox: () -> Unit,
+        onSelectFloatingBanner: () -> Unit,
+        onSelectItems: () -> Unit,
+        onSelectTextArea: () -> Unit,
 ) {
     Scaffold(
             topBar = {
@@ -53,7 +66,33 @@ fun ComponentListScreen(
             Divider()
             ComponentRow("Spinner", onClick = onSelectSpinner)
             Divider()
+            ComponentRow("ProgressBar", onClick = onSelectProgressBar)
+            Divider()
             ComponentRow("Status", onClick = onSelectStatus)
+            Divider()
+            ComponentRow("Switch", onClick = onSelectSwitch)
+            Divider()
+            ComponentRow("Divider", onClick = onSelectDivider)
+            Divider()
+            ComponentRow("Toast", onClick = onSelectToast)
+            Divider()
+            ComponentRow("Card", onClick = onSelectCard)
+            Divider()
+            ComponentRow("Section", onClick = onSelectSection)
+            Divider()
+            ComponentRow("TextInput", onClick = onSelectTextInput)
+            Divider()
+            ComponentRow("Banner", onClick = onSelectBanner)
+            Divider()
+            ComponentRow("BaseItem", onClick = onSelectBaseItem)
+            Divider()
+            ComponentRow("Checkbox", onClick = onSelectCheckbox)
+            Divider()
+            ComponentRow("FloatingBanner", onClick = onSelectFloatingBanner)
+            Divider()
+            ComponentRow("Items", onClick = onSelectItems)
+            Divider()
+            ComponentRow("TextArea", onClick = onSelectTextArea)
             Divider()
         }
     }

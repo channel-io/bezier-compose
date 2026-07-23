@@ -131,6 +131,7 @@ interface BezierSemanticColorV3 {
     val iconWarning: Color
     val stateAction: Color
     val stateActionLight: Color
+    val stateActive: Color
     val stateDefault: Color
     val stateWarning: Color
     val stateWarningLight: Color
@@ -298,6 +299,7 @@ internal class LightColor : BezierSemanticColorV3 {
     override val iconWarning = BezierGlobalColor.Orange400
     override val stateAction = BezierGlobalColor.Blue400
     override val stateActionLight = BezierGlobalColor.Blue400_30
+    override val stateActive = BezierGlobalColor.Black85
     override val stateDefault = BezierGlobalColor.Black15
     override val stateWarning = BezierGlobalColor.Orange400
     override val stateWarningLight = BezierGlobalColor.Orange400_30
@@ -464,6 +466,7 @@ internal class DarkColor : BezierSemanticColorV3 {
     override val iconWarning = BezierGlobalColor.Orange300
     override val stateAction = BezierGlobalColor.Blue300
     override val stateActionLight = BezierGlobalColor.Blue300_45
+    override val stateActive = BezierGlobalColor.White80
     override val stateDefault = BezierGlobalColor.White20
     override val stateWarning = BezierGlobalColor.Orange300
     override val stateWarningLight = BezierGlobalColor.Orange300
