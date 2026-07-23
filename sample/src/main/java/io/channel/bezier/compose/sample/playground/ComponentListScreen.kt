@@ -32,6 +32,12 @@ fun ComponentListScreen(
         onSelectCard: () -> Unit,
         onSelectSection: () -> Unit,
         onSelectTextInput: () -> Unit,
+        onSelectBanner: () -> Unit,
+        onSelectBaseItem: () -> Unit,
+        onSelectCheckbox: () -> Unit,
+        onSelectFloatingBanner: () -> Unit,
+        onSelectItems: () -> Unit,
+        onSelectTextArea: () -> Unit,
 ) {
     Scaffold(
             topBar = {
@@ -75,6 +81,18 @@ fun ComponentListScreen(
             ComponentRow("Section", onClick = onSelectSection)
             Divider()
             ComponentRow("TextInput", onClick = onSelectTextInput)
+            Divider()
+            ComponentRow("Banner", onClick = onSelectBanner)
+            Divider()
+            ComponentRow("BaseItem", onClick = onSelectBaseItem)
+            Divider()
+            ComponentRow("Checkbox", onClick = onSelectCheckbox)
+            Divider()
+            ComponentRow("FloatingBanner", onClick = onSelectFloatingBanner)
+            Divider()
+            ComponentRow("Items", onClick = onSelectItems)
+            Divider()
+            ComponentRow("TextArea", onClick = onSelectTextArea)
             Divider()
         }
     }
