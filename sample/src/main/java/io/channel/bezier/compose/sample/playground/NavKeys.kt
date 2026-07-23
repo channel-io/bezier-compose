@@ -8,4 +8,17 @@ data object TagPlaygroundKey
 data object AvatarPlaygroundKey
 data object AvatarGroupPlaygroundKey
 data object SpinnerPlaygroundKey
+data object ProgressBarPlaygroundKey
 data object StatusPlaygroundKey
+data object SwitchPlaygroundKey
+data object DividerPlaygroundKey
+data object ToastPlaygroundKey
+data object CardPlaygroundKey
+data object SectionPlaygroundKey
+data object TextInputPlaygroundKey
+data object BannerPlaygroundKey
+data object BaseItemPlaygroundKey
+data object CheckboxPlaygroundKey
+data object FloatingBannerPlaygroundKey
+data object ItemsPlaygroundKey
+data object TextAreaPlaygroundKey

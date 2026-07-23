@@ -14,12 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.drawBehind
-import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.graphics.drawOutline
-import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.painter.ColorPainter
 import androidx.compose.ui.graphics.painter.Painter
@@ -29,6 +24,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.component.BezierText
+import io.channel.bezier.extension.outsideBorder
 import io.channel.bezier.shape.SmoothRoundedCornerShape
 import io.channel.bezier.typography.BezierTypo
 
@@ -80,22 +76,6 @@ fun Avatar(
                     modifier = Modifier.offset(x = layout.statusOffsetX, y = layout.statusOffsetY),
             )
         }
-    }
-}
-
-private fun Modifier.outsideBorder(
-        color: Color,
-        borderWidth: Dp,
-        shape: Shape,
-) = drawBehind {
-    val borderWidthPx = borderWidth.toPx()
-    val grownSize = Size(
-            width = size.width + borderWidthPx * 2,
-            height = size.height + borderWidthPx * 2,
-    )
-    val outline = shape.createOutline(grownSize, layoutDirection, this)
-    translate(left = -borderWidthPx, top = -borderWidthPx) {
-        drawOutline(outline = outline, color = color)
     }
 }
 

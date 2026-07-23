@@ -149,7 +149,7 @@ internal fun iconButtonColorSpec(variant: IconButtonVariant): IconButtonColorSpe
                 iconColor = colors.iconNeutral,
         )
         IconButtonVariant.Filled -> IconButtonColorSpec(
-                background = colors.fillNeutralLight,
+                background = colors.fillNeutral,
                 iconColor = colors.iconNeutralHeavy,
         )
     }
