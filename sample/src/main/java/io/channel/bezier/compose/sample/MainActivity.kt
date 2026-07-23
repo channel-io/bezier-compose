@@ -35,6 +35,8 @@ import io.channel.bezier.compose.sample.playground.IconButtonPlaygroundKey
 import io.channel.bezier.compose.sample.playground.IconButtonPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.ProgressBarPlaygroundKey
 import io.channel.bezier.compose.sample.playground.ProgressBarPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.SectionPlaygroundKey
+import io.channel.bezier.compose.sample.playground.SectionPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.SpinnerPlaygroundKey
 import io.channel.bezier.compose.sample.playground.SpinnerPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.StatusPlaygroundKey
@@ -85,6 +87,7 @@ private fun PlaygroundApp() {
                                     onSelectDivider = { backStack.add(DividerPlaygroundKey) },
                                     onSelectToast = { backStack.add(ToastPlaygroundKey) },
                                     onSelectCard = { backStack.add(CardPlaygroundKey) },
+                                    onSelectSection = { backStack.add(SectionPlaygroundKey) },
                                     onSelectTextInput = { backStack.add(TextInputPlaygroundKey) },
                             )
                         }
@@ -126,6 +129,9 @@ private fun PlaygroundApp() {
                         }
                         entry<CardPlaygroundKey> {
                             CardPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<SectionPlaygroundKey> {
+                            SectionPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
                         }
                         entry<TextInputPlaygroundKey> {
                             TextInputPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
