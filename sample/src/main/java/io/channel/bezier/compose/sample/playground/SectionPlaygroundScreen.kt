@@ -2,10 +2,12 @@ package io.channel.bezier.compose.sample.playground
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Icon
@@ -20,6 +22,8 @@ import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.icon.ArrowLeft
 import io.channel.bezier.icon.Bookmark
+import io.channel.bezier.icon.ChevronSmallRight
+import io.channel.bezier.icon.Folder
 import io.channel.bezier.icon.Plus
 import io.channel.bezier.icon.Star
 import io.channel.bezier.v3.component.BaseItem
@@ -29,6 +33,7 @@ import io.channel.bezier.v3.component.IconButton
 import io.channel.bezier.v3.component.IconButtonSize
 import io.channel.bezier.v3.component.IconButtonVariant
 import io.channel.bezier.v3.component.Section
+import io.channel.bezier.v3.component.SectionLabelColor
 import io.channel.bezier.v3.component.SectionVariant
 
 @Composable
@@ -65,6 +70,15 @@ fun SectionPlaygroundScreen(onBack: () -> Unit) {
             }
 
             Section(
+                    label = "Label with leading & trailing",
+                    labelLeadingContent = { PlaygroundLabelIcon(BezierIcons.Folder) },
+                    labelTrailingContent = { PlaygroundLabelIcon(BezierIcons.ChevronSmallRight) },
+            ) {
+                PlaygroundSectionItem(BezierIcons.Plus, "Add item")
+                PlaygroundSectionItem(BezierIcons.Star, "Favorites")
+            }
+
+            Section(
                     label = "Card",
                     variant = SectionVariant.Card,
             ) {
@@ -73,6 +87,16 @@ fun SectionPlaygroundScreen(onBack: () -> Unit) {
                 PlaygroundSectionItem(BezierIcons.Star, "Favorites")
                 Divider(sideIndent = false, parallelIndent = false)
                 PlaygroundSectionItem(BezierIcons.Bookmark, "Bookmarks")
+            }
+
+            Section(
+                    label = "Neutral light (overlay)",
+                    labelColor = SectionLabelColor.NeutralLight,
+                    variant = SectionVariant.Card,
+            ) {
+                PlaygroundSectionItem(BezierIcons.Plus, "Add item")
+                Divider(sideIndent = false, parallelIndent = false)
+                PlaygroundSectionItem(BezierIcons.Star, "Favorites")
             }
 
             Section(variant = SectionVariant.Card) {
@@ -100,4 +124,16 @@ private fun PlaygroundSectionItem(
                 )
             },
     )
+}
+
+@Composable
+private fun PlaygroundLabelIcon(icon: BezierIcon) {
+    Box(modifier = Modifier.size(20.dp)) {
+        Icon(
+                modifier = Modifier.fillMaxSize(),
+                imageVector = icon.imageVector,
+                tint = BezierTheme.colorsV3.iconNeutralHeavier,
+                contentDescription = null,
+        )
+    }
 }
