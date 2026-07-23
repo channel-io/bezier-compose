@@ -16,3 +16,9 @@ data object ToastPlaygroundKey
 data object CardPlaygroundKey
 data object SectionPlaygroundKey
 data object TextInputPlaygroundKey
+data object BannerPlaygroundKey
+data object BaseItemPlaygroundKey
+data object CheckboxPlaygroundKey
+data object FloatingBannerPlaygroundKey
+data object ItemsPlaygroundKey
+data object TextAreaPlaygroundKey
