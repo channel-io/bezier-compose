@@ -26,19 +26,25 @@ import io.channel.bezier.icon.ChevronSmallUpdown
 import io.channel.bezier.icon.Plus
 import io.channel.bezier.typography.BezierTypo
 
-enum class BaseItemPresetType {
-    Navigation,
-    Select,
-    MultiSelect,
-    Outlink,
-    Action,
+@Composable
+fun NavigationItem(
+        leadingIcon: BezierIcon,
+        label: String,
+        modifier: Modifier = Modifier,
+) {
+    BaseItem(
+            modifier = modifier,
+            label = label,
+            size = BaseItemSize.Medium,
+            leadingContent = { ItemLeadingIcon(leadingIcon) },
+            trailingContent = { ItemTrailingIcon(BezierIcons.ChevronSmallRight) },
+    )
 }
 
 @Composable
-fun BaseItemPreset(
+fun SelectItem(
         leadingIcon: BezierIcon,
         label: String,
-        type: BaseItemPresetType,
         modifier: Modifier = Modifier,
         value: String? = null,
 ) {
@@ -46,100 +52,133 @@ fun BaseItemPreset(
             modifier = modifier,
             label = label,
             size = BaseItemSize.Medium,
-            leadingContent = {
-                Icon(
-                        modifier = Modifier.fillMaxSize(),
-                        imageVector = leadingIcon.imageVector,
-                        tint = BezierTheme.colorsV3.iconNeutralHeavier,
-                        contentDescription = null,
-                )
-            },
-            trailingContent = if (type == BaseItemPresetType.Action) {
-                null
-            } else {
-                { PresetTrailing(type = type, value = value) }
-            },
+            leadingContent = { ItemLeadingIcon(leadingIcon) },
+            trailingContent = { ItemValueTrailing(value = value, icon = BezierIcons.ChevronSmallUpdown) },
     )
 }
 
 @Composable
-private fun PresetTrailing(
-        type: BaseItemPresetType,
+fun MultiSelectItem(
+        leadingIcon: BezierIcon,
+        label: String,
+        modifier: Modifier = Modifier,
+        value: String? = null,
+) {
+    BaseItem(
+            modifier = modifier,
+            label = label,
+            size = BaseItemSize.Medium,
+            leadingContent = { ItemLeadingIcon(leadingIcon) },
+            trailingContent = { ItemValueTrailing(value = value, icon = BezierIcons.ChevronSmallUpdown) },
+    )
+}
+
+@Composable
+fun OutlinkItem(
+        leadingIcon: BezierIcon,
+        label: String,
+        modifier: Modifier = Modifier,
+) {
+    BaseItem(
+            modifier = modifier,
+            label = label,
+            size = BaseItemSize.Medium,
+            leadingContent = { ItemLeadingIcon(leadingIcon) },
+            trailingContent = { ItemTrailingIcon(BezierIcons.ArrowRightUpSmall) },
+    )
+}
+
+@Composable
+fun ActionItem(
+        leadingIcon: BezierIcon,
+        label: String,
+        modifier: Modifier = Modifier,
+) {
+    BaseItem(
+            modifier = modifier,
+            label = label,
+            size = BaseItemSize.Medium,
+            leadingContent = { ItemLeadingIcon(leadingIcon) },
+    )
+}
+
+@Composable
+private fun ItemLeadingIcon(icon: BezierIcon) {
+    Icon(
+            modifier = Modifier.fillMaxSize(),
+            imageVector = icon.imageVector,
+            tint = BezierTheme.colorsV3.iconNeutralHeavier,
+            contentDescription = null,
+    )
+}
+
+@Composable
+private fun ItemTrailingIcon(icon: BezierIcon) {
+    Icon(
+            modifier = Modifier.size(ItemTrailingIconSize),
+            imageVector = icon.imageVector,
+            tint = BezierTheme.colorsV3.iconNeutralHeavier,
+            contentDescription = null,
+    )
+}
+
+@Composable
+private fun ItemValueTrailing(
         value: String?,
+        icon: BezierIcon,
 ) {
     Row(
-            horizontalArrangement = Arrangement.spacedBy(PresetTrailingGap),
+            horizontalArrangement = Arrangement.spacedBy(ItemTrailingGap),
             verticalAlignment = Alignment.CenterVertically,
     ) {
-        val showValue = type == BaseItemPresetType.Select || type == BaseItemPresetType.MultiSelect
-        if (showValue && value != null) {
+        if (value != null) {
             BezierText(
                     text = value,
                     typo = BezierTypo.TextMedium,
                     color = BezierTheme.colorsV3.textNeutralLighter,
             )
         }
-
-        val trailingIcon = when (type) {
-            BaseItemPresetType.Navigation -> BezierIcons.ChevronSmallRight
-            BaseItemPresetType.Select -> BezierIcons.ChevronSmallUpdown
-            BaseItemPresetType.MultiSelect -> BezierIcons.ChevronSmallUpdown
-            BaseItemPresetType.Outlink -> BezierIcons.ArrowRightUpSmall
-            BaseItemPresetType.Action -> null
-        }
-        if (trailingIcon != null) {
-            Icon(
-                    modifier = Modifier.size(PresetTrailingIconSize),
-                    imageVector = trailingIcon.imageVector,
-                    tint = BezierTheme.colorsV3.iconNeutralHeavier,
-                    contentDescription = null,
-            )
-        }
+        ItemTrailingIcon(icon)
     }
 }
 
-private val PresetTrailingIconSize: Dp = 16.dp
-private val PresetTrailingGap: Dp = 4.dp
+private val ItemTrailingIconSize: Dp = 16.dp
+private val ItemTrailingGap: Dp = 4.dp
 
 @Composable
-private fun BaseItemPresetPreviewContent() {
+private fun ItemsPreviewContent() {
     BezierTheme {
         Column(
                 modifier = Modifier
                         .background(BezierTheme.colorsV3.surface)
                         .padding(24.dp),
         ) {
-            BaseItemPreset(
+            NavigationItem(
                     modifier = Modifier.width(328.dp),
                     leadingIcon = BezierIcons.Plus,
                     label = "Center content",
-                    type = BaseItemPresetType.Navigation,
             )
-            BaseItemPreset(
+            SelectItem(
                     modifier = Modifier.width(328.dp),
                     leadingIcon = BezierIcons.Plus,
                     label = "Center content",
-                    type = BaseItemPresetType.Select,
                     value = "Value",
             )
-            BaseItemPreset(
+            MultiSelectItem(
                     modifier = Modifier.width(328.dp),
                     leadingIcon = BezierIcons.Plus,
                     label = "Center content",
-                    type = BaseItemPresetType.MultiSelect,
                     value = "Value1, Value2",
             )
-            BaseItemPreset(
+            OutlinkItem(
                     modifier = Modifier.width(328.dp),
                     leadingIcon = BezierIcons.Plus,
                     label = "Center content",
-                    type = BaseItemPresetType.Outlink,
             )
-            BaseItemPreset(
+            ActionItem(
                     modifier = Modifier.width(328.dp),
                     leadingIcon = BezierIcons.Plus,
                     label = "Center content",
-                    type = BaseItemPresetType.Action,
             )
         }
     }
@@ -147,8 +186,8 @@ private fun BaseItemPresetPreviewContent() {
 
 @Preview(showBackground = true, widthDp = 400)
 @Composable
-private fun BaseItemPresetPreview() = BaseItemPresetPreviewContent()
+private fun ItemsPreview() = ItemsPreviewContent()
 
 @Preview(showBackground = true, widthDp = 400, uiMode = UI_MODE_NIGHT_YES)
 @Composable
-private fun BaseItemPresetDarkPreview() = BaseItemPresetPreviewContent()
+private fun ItemsDarkPreview() = ItemsPreviewContent()
