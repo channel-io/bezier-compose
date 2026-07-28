@@ -52,7 +52,7 @@ fun Modal(
 }
 
 @Composable
-private fun ModalLayout(
+internal fun ModalLayout(
         modifier: Modifier = Modifier,
         content: @Composable ColumnScope.() -> Unit,
 ) {
