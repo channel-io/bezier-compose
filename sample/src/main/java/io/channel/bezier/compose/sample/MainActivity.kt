@@ -45,6 +45,8 @@ import io.channel.bezier.compose.sample.playground.IconButtonPlaygroundKey
 import io.channel.bezier.compose.sample.playground.IconButtonPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.ItemsPlaygroundKey
 import io.channel.bezier.compose.sample.playground.ItemsPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.ModalPlaygroundKey
+import io.channel.bezier.compose.sample.playground.ModalPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.ProgressBarPlaygroundKey
 import io.channel.bezier.compose.sample.playground.ProgressBarPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.SectionPlaygroundKey
@@ -107,6 +109,7 @@ private fun PlaygroundApp() {
                                     onSelectFloatingBanner = { backStack.add(FloatingBannerPlaygroundKey) },
                                     onSelectItems = { backStack.add(ItemsPlaygroundKey) },
                                     onSelectTextArea = { backStack.add(TextAreaPlaygroundKey) },
+                                    onSelectModal = { backStack.add(ModalPlaygroundKey) },
                             )
                         }
                         entry<ButtonPlaygroundKey> {
@@ -171,6 +174,9 @@ private fun PlaygroundApp() {
                         }
                         entry<TextAreaPlaygroundKey> {
                             TextAreaPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<ModalPlaygroundKey> {
+                            ModalPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
                         }
                     },
             )

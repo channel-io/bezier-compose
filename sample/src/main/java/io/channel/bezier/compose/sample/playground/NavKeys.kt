@@ -22,3 +22,4 @@ data object CheckboxPlaygroundKey
 data object FloatingBannerPlaygroundKey
 data object ItemsPlaygroundKey
 data object TextAreaPlaygroundKey
+data object ModalPlaygroundKey

@@ -38,6 +38,7 @@ fun ComponentListScreen(
         onSelectFloatingBanner: () -> Unit,
         onSelectItems: () -> Unit,
         onSelectTextArea: () -> Unit,
+        onSelectModal: () -> Unit,
 ) {
     Scaffold(
             topBar = {
@@ -93,6 +94,8 @@ fun ComponentListScreen(
             ComponentRow("Items", onClick = onSelectItems)
             Divider()
             ComponentRow("TextArea", onClick = onSelectTextArea)
+            Divider()
+            ComponentRow("Modal", onClick = onSelectModal)
             Divider()
         }
     }
