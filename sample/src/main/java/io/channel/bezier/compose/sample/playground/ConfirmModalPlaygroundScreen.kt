@@ -38,6 +38,7 @@ fun ConfirmModalPlaygroundScreen(onBack: () -> Unit) {
     var buttonLayout by remember { mutableStateOf(ConfirmModalButtonLayout.Horizontal) }
     var destructive by remember { mutableStateOf(false) }
     var hasDescription by remember { mutableStateOf(true) }
+    var hasCancel by remember { mutableStateOf(true) }
     var hasAltAction by remember { mutableStateOf(false) }
     var hasCustomContent by remember { mutableStateOf(false) }
     var cancellable by remember { mutableStateOf(true) }
@@ -86,6 +87,7 @@ fun ConfirmModalPlaygroundScreen(onBack: () -> Unit) {
             ) { buttonLayout = it }
             BooleanControl("destructive", destructive) { destructive = it }
             BooleanControl("hasDescription", hasDescription) { hasDescription = it }
+            BooleanControl("hasCancel", hasCancel) { hasCancel = it }
             BooleanControl("hasAltAction", hasAltAction) { hasAltAction = it }
             BooleanControl("hasCustomContent", hasCustomContent) { hasCustomContent = it }
             BooleanControl("cancellable", cancellable) { cancellable = it }
@@ -97,10 +99,10 @@ fun ConfirmModalPlaygroundScreen(onBack: () -> Unit) {
                 title = "Dialog Title",
                 confirmText = if (destructive) "Delete" else "Confirm",
                 onConfirmClick = { visible = false },
-                cancelText = "Cancel",
-                onCancelClick = { visible = false },
                 onDismissRequest = { visible = false },
                 description = "Description text goes here.".takeIf { hasDescription },
+                cancelText = "Cancel".takeIf { hasCancel },
+                onCancelClick = { visible = false },
                 altActionText = "Alt Action".takeIf { hasAltAction },
                 onAltActionClick = { visible = false },
                 destructive = destructive,

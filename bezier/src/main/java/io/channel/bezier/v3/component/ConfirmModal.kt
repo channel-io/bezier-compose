@@ -29,11 +29,11 @@ fun ConfirmModal(
         title: String,
         confirmText: String,
         onConfirmClick: () -> Unit,
-        cancelText: String,
-        onCancelClick: () -> Unit,
         onDismissRequest: () -> Unit,
         modifier: Modifier = Modifier,
         description: String? = null,
+        cancelText: String? = null,
+        onCancelClick: () -> Unit = {},
         altActionText: String? = null,
         onAltActionClick: () -> Unit = {},
         destructive: Boolean = false,
@@ -108,7 +108,7 @@ private fun ConfirmModalContent(
 private fun ConfirmModalButtons(
         confirmText: String,
         onConfirmClick: () -> Unit,
-        cancelText: String,
+        cancelText: String?,
         onCancelClick: () -> Unit,
         altActionText: String?,
         onAltActionClick: () -> Unit,
@@ -143,13 +143,15 @@ private fun ConfirmModalButtons(
                 )
             }
 
-            Button(
-                    modifier = Modifier.fillMaxWidth(),
-                    text = cancelText,
-                    onClick = onCancelClick,
-                    size = ButtonSize.Large,
-                    semantic = ButtonSemantic.Secondary,
-            )
+            if (cancelText != null) {
+                Button(
+                        modifier = Modifier.fillMaxWidth(),
+                        text = cancelText,
+                        onClick = onCancelClick,
+                        size = ButtonSize.Large,
+                        semantic = ButtonSemantic.Secondary,
+                )
+            }
         }
     } else {
         Row(
@@ -158,13 +160,15 @@ private fun ConfirmModalButtons(
                         .padding(top = ConfirmModalButtonsTopPadding),
                 horizontalArrangement = Arrangement.spacedBy(ConfirmModalHorizontalButtonGap),
         ) {
-            Button(
-                    modifier = Modifier.weight(1f),
-                    text = cancelText,
-                    onClick = onCancelClick,
-                    size = ButtonSize.Large,
-                    semantic = ButtonSemantic.Secondary,
-            )
+            if (cancelText != null) {
+                Button(
+                        modifier = Modifier.weight(1f),
+                        text = cancelText,
+                        onClick = onCancelClick,
+                        size = ButtonSize.Large,
+                        semantic = ButtonSemantic.Secondary,
+                )
+            }
 
             Button(
                     modifier = Modifier.weight(1f),
@@ -187,6 +191,7 @@ private val ConfirmModalVerticalButtonGap: Dp = 10.dp
 private fun ConfirmModalPreviewContent(
         destructive: Boolean,
         buttonLayout: ConfirmModalButtonLayout,
+        cancelText: String? = "Cancel",
         altActionText: String? = null,
 ) {
     BezierTheme {
@@ -205,7 +210,7 @@ private fun ConfirmModalPreviewContent(
                 ConfirmModalButtons(
                         confirmText = if (destructive) "Delete" else "Confirm",
                         onConfirmClick = {},
-                        cancelText = "Cancel",
+                        cancelText = cancelText,
                         onCancelClick = {},
                         altActionText = altActionText,
                         onAltActionClick = {},
@@ -243,6 +248,23 @@ private fun ConfirmModalVerticalPreview() = ConfirmModalPreviewContent(
 private fun ConfirmModalAltActionPreview() = ConfirmModalPreviewContent(
         destructive = true,
         buttonLayout = ConfirmModalButtonLayout.Vertical,
+        altActionText = "Alt Action",
+)
+
+@Preview(showBackground = true)
+@Composable
+private fun ConfirmModalConfirmOnlyPreview() = ConfirmModalPreviewContent(
+        destructive = false,
+        buttonLayout = ConfirmModalButtonLayout.Horizontal,
+        cancelText = null,
+)
+
+@Preview(showBackground = true)
+@Composable
+private fun ConfirmModalVerticalAltActionWithoutCancelPreview() = ConfirmModalPreviewContent(
+        destructive = false,
+        buttonLayout = ConfirmModalButtonLayout.Vertical,
+        cancelText = null,
         altActionText = "Alt Action",
 )
 
