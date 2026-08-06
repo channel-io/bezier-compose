@@ -39,6 +39,7 @@ import io.channel.bezier.BezierTheme
 import io.channel.bezier.component.BezierText
 import io.channel.bezier.dimension.BezierLetterSpacing
 import io.channel.bezier.icon.Plus
+import io.channel.bezier.interaction.BezierComponentInteraction
 import io.channel.bezier.typography.BezierTypo
 import io.channel.bezier.typography.BezierWeight
 
@@ -88,7 +89,10 @@ fun Button(
                             interactionSource = interactionSource,
                             indication = null,
                             enabled = enabled && !isLoading,
-                            onClick = onClick,
+                            onClick = {
+                                BezierComponentInteraction.notify("ButtonV3", text)
+                                onClick()
+                            },
                     )
                     .padding(horizontal = spec.horizontalPadding),
             contentAlignment = Alignment.Center,

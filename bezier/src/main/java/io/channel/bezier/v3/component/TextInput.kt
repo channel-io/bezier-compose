@@ -49,6 +49,7 @@ import io.channel.bezier.component.BezierText
 import io.channel.bezier.icon.CancelCircleFilled
 import io.channel.bezier.icon.View
 import io.channel.bezier.icon.ViewOff
+import io.channel.bezier.interaction.BezierComponentInteraction
 import io.channel.bezier.typography.BezierTypo
 
 private val HorizontalPadding = 10.dp
@@ -188,7 +189,10 @@ private fun SystemIcon(
                             interactionSource = remember { MutableInteractionSource() },
                             indication = null,
                             enabled = enabled,
-                            onClick = onClick,
+                            onClick = {
+                                BezierComponentInteraction.notify("TextInputV3", icon.imageVector.name)
+                                onClick()
+                            },
                     ),
             imageVector = icon.imageVector,
             contentDescription = null,

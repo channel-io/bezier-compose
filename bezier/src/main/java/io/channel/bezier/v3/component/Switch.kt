@@ -35,6 +35,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.component.BezierText
+import io.channel.bezier.interaction.BezierComponentInteraction
 import io.channel.bezier.typography.BezierTypo
 
 private val TrackWidth = 50.dp
@@ -100,7 +101,10 @@ fun Switch(
                                         interactionSource = interactionSource,
                                         indication = null,
                                         enabled = enabled,
-                                        onClick = { onCheckedChange(!checked) },
+                                        onClick = {
+                                            BezierComponentInteraction.notify("SwitchV3", null)
+                                            onCheckedChange(!checked)
+                                        },
                                 )
                             } else {
                                 Modifier

@@ -29,6 +29,7 @@ import io.channel.bezier.component.BezierText
 import io.channel.bezier.extension.outsideBorder
 import io.channel.bezier.icon.CheckBold
 import io.channel.bezier.icon.HyphenBold
+import io.channel.bezier.interaction.BezierComponentInteraction
 import io.channel.bezier.typography.BezierTypo
 
 @Composable
@@ -45,7 +46,10 @@ fun Checkbox(
     Row(
             modifier = modifier
                     .graphicsLayer(alpha = if (enabled) 1f else 0.4f)
-                    .clickable(enabled = enabled, onClick = onClick)
+                    .clickable(enabled = enabled) {
+                        BezierComponentInteraction.notify("CheckboxV3", label)
+                        onClick()
+                    }
                     .padding(vertical = CheckboxRowVerticalPadding),
             horizontalArrangement = Arrangement.spacedBy(CheckboxGap),
             verticalAlignment = Alignment.CenterVertically,
