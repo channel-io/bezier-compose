@@ -62,6 +62,7 @@ import io.channel.bezier.icon.ChevronDown
 import io.channel.bezier.icon.Search
 import io.channel.bezier.icon.View
 import io.channel.bezier.icon.ViewOff
+import io.channel.bezier.interaction.BezierComponentInteraction
 
 val TextFieldOuterBorderWidth = 3.dp
 val TextFieldOuterBorderRadius = 8.dp + TextFieldOuterBorderWidth
@@ -210,6 +211,12 @@ fun TextField(
                                                 interactionSource = remember { MutableInteractionSource() },
                                                 indication = null,
                                                 onClick = {
+                                                    val toggleIcon = if (isPasswordVisible) {
+                                                        BezierIcons.View
+                                                    } else {
+                                                        BezierIcons.ViewOff
+                                                    }
+                                                    BezierComponentInteraction.notify("TextFieldV1", toggleIcon.imageVector.name)
                                                     isPasswordVisible = !isPasswordVisible
                                                 },
                                         ),
@@ -237,6 +244,7 @@ fun TextField(
                                                 interactionSource = remember { MutableInteractionSource() },
                                                 indication = null,
                                                 onClick = {
+                                                    BezierComponentInteraction.notify("TextFieldV1", BezierIcons.CancelCircleFilled.imageVector.name)
                                                     onValueChange(TextFieldValue())
                                                 },
                                         ),

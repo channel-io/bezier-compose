@@ -38,6 +38,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
+import io.channel.bezier.interaction.BezierComponentInteraction
 
 @Composable
 fun Banner(
@@ -85,6 +86,7 @@ fun Banner(
 ) {
     BannerLayout(
             type = type,
+            label = null,
             description = {
                 Text(
                         text = description,
@@ -121,6 +123,7 @@ fun Banner(
 ) {
     BannerLayout(
             type = type,
+            label = description,
             description = {
                 Text(
                         text = description,
@@ -154,6 +157,7 @@ fun Banner(
 ) {
     BannerLayout(
             type = type,
+            label = null,
             description = {
                 Text(
                         text = description,
@@ -187,6 +191,7 @@ fun Banner(
 ) {
     BannerLayout(
             type = type,
+            label = description,
             description = {
                 Text(
                         text = description,
@@ -208,6 +213,7 @@ fun Banner(
 @Composable
 private fun BannerLayout(
         type: BannerType,
+        label: String?,
         description: @Composable () -> Unit,
         modifier: Modifier,
         title: String?,
@@ -235,7 +241,10 @@ private fun BannerLayout(
                     .background(colorResource(id = type.backgroundColor))
                     .let {
                         if (onClick != null) {
-                            it.clickable(onClick = onClick)
+                            it.clickable {
+                                BezierComponentInteraction.notify("BannerV1", label)
+                                onClick.invoke()
+                            }
                         } else {
                             it
                         }
@@ -288,7 +297,10 @@ private fun BannerLayout(
                             .clickable(
                                     interactionSource = remember { MutableInteractionSource() },
                                     indication = null,
-                                    onClick = onRemove,
+                                    onClick = {
+                                        BezierComponentInteraction.notify("BannerV1", null)
+                                        onRemove.invoke()
+                                    },
                             )
                             .padding(5.dp),
                     painter = painterResource(id = R.drawable.icon_cancel_small),

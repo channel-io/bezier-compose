@@ -51,6 +51,7 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.extension.roundedBackground
+import io.channel.bezier.interaction.BezierComponentInteraction
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.drop
@@ -156,6 +157,7 @@ fun Switch(
                             interactionSource = remember { MutableInteractionSource() },
                             indication = null,
                     ) {
+                        BezierComponentInteraction.notify("SwitchV1", null)
                         coroutineScope.launch {
                             state.switch()
                         }

@@ -33,6 +33,7 @@ import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
 import io.channel.bezier.extension.ifTrue
 import io.channel.bezier.extension.orElse
+import io.channel.bezier.interaction.BezierComponentInteraction
 
 typealias CheckboxType = Checkbox.Type
 typealias CheckboxState = Checkbox.State
@@ -181,6 +182,7 @@ fun Checkbox(
                             indication = null,
                             enabled = enabled,
                     ) {
+                        BezierComponentInteraction.notify("CheckboxV1", text)
                         onStateChange(state.toggle())
                     },
             verticalAlignment = Alignment.CenterVertically,
@@ -200,6 +202,7 @@ fun Checkbox(
                                 indication = ripple(),
                                 enabled = enabled,
                         ) {
+                            BezierComponentInteraction.notify("CheckboxV1", text)
                             onStateChange(state.toggle())
                         },
         ) {
