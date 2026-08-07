@@ -62,7 +62,7 @@ fun Banner(
                     .then(
                             if (onClick != null) {
                                 Modifier.clickable {
-                                    BezierComponentInteraction.notify("BannerV3", description)
+                                    BezierComponentInteraction.notify("Banner", "V3", description)
                                     onClick.invoke()
                                 }
                             } else {
@@ -114,7 +114,7 @@ fun Banner(
                                         Modifier
                                                 .clip(CircleShape)
                                                 .clickable {
-                                                    BezierComponentInteraction.notify("BannerV3", trailingIcon.imageVector.name)
+                                                    BezierComponentInteraction.notify("Banner", "V3", trailingIcon.imageVector.name)
                                                     onDismiss.invoke()
                                                 }
                                     } else {

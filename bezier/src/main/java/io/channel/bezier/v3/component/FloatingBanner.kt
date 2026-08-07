@@ -66,7 +66,7 @@ fun FloatingBanner(
                     .let {
                         if (clickArea == FloatingBannerClickArea.Full && onClick != null) {
                             it.clickable {
-                                BezierComponentInteraction.notify("FloatingBannerV3", description)
+                                BezierComponentInteraction.notify("FloatingBanner", "V3", description)
                                 onClick.invoke()
                             }
                         } else {
@@ -118,7 +118,7 @@ fun FloatingBanner(
                                     it
                                             .clip(CircleShape)
                                             .clickable {
-                                                BezierComponentInteraction.notify("FloatingBannerV3", actionIcon.imageVector.name)
+                                                BezierComponentInteraction.notify("FloatingBanner", "V3", actionIcon.imageVector.name)
                                                 onClick.invoke()
                                             }
                                 } else {

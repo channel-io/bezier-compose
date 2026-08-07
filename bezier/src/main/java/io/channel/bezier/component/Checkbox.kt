@@ -182,7 +182,7 @@ fun Checkbox(
                             indication = null,
                             enabled = enabled,
                     ) {
-                        BezierComponentInteraction.notify("CheckboxV1", text)
+                        BezierComponentInteraction.notify("Checkbox", "V1", text)
                         onStateChange(state.toggle())
                     },
             verticalAlignment = Alignment.CenterVertically,
@@ -202,7 +202,7 @@ fun Checkbox(
                                 indication = ripple(),
                                 enabled = enabled,
                         ) {
-                            BezierComponentInteraction.notify("CheckboxV1", text)
+                            BezierComponentInteraction.notify("Checkbox", "V1", text)
                             onStateChange(state.toggle())
                         },
         ) {

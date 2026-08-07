@@ -102,7 +102,7 @@ fun Switch(
                                         indication = null,
                                         enabled = enabled,
                                         onClick = {
-                                            BezierComponentInteraction.notify("SwitchV3", null)
+                                            BezierComponentInteraction.notify("Switch", "V3", null)
                                             onCheckedChange(!checked)
                                         },
                                 )

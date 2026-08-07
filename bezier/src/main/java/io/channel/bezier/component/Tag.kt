@@ -207,7 +207,7 @@ fun Tag(
                                     interactionSource = remember { MutableInteractionSource() },
                                     indication = null,
                                     onClick = {
-                                        BezierComponentInteraction.notify("TagV1", null)
+                                        BezierComponentInteraction.notify("Tag", "V1", null)
                                         onRemove.invoke()
                                     },
                             ),

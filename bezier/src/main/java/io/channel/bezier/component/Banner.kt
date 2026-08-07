@@ -242,7 +242,7 @@ private fun BannerLayout(
                     .let {
                         if (onClick != null) {
                             it.clickable {
-                                BezierComponentInteraction.notify("BannerV1", label)
+                                BezierComponentInteraction.notify("Banner", "V1", label)
                                 onClick.invoke()
                             }
                         } else {
@@ -298,7 +298,7 @@ private fun BannerLayout(
                                     interactionSource = remember { MutableInteractionSource() },
                                     indication = null,
                                     onClick = {
-                                        BezierComponentInteraction.notify("BannerV1", null)
+                                        BezierComponentInteraction.notify("Banner", "V1", null)
                                         onRemove.invoke()
                                     },
                             )

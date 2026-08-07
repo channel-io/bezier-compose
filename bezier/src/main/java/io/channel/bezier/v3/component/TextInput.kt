@@ -190,7 +190,7 @@ private fun SystemIcon(
                             indication = null,
                             enabled = enabled,
                             onClick = {
-                                BezierComponentInteraction.notify("TextInputV3", icon.imageVector.name)
+                                BezierComponentInteraction.notify("TextInput", "V3", icon.imageVector.name)
                                 onClick()
                             },
                     ),

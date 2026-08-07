@@ -6,10 +6,10 @@ import androidx.compose.ui.semantics.SemanticsPropertyReceiver
 object BezierComponentInteraction {
 
     @Volatile
-    var onComponentClick: ((component: String, label: String?) -> Unit)? = null
+    var onComponentClick: ((component: String, version: String?, label: String?) -> Unit)? = null
 
-    internal fun notify(component: String, label: String?) {
-        onComponentClick?.invoke(component, label)
+    internal fun notify(component: String, version: String?, label: String?) {
+        onComponentClick?.invoke(component, version, label)
     }
 }
 

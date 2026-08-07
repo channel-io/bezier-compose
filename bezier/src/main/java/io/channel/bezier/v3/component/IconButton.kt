@@ -73,7 +73,7 @@ fun IconButton(
                             indication = null,
                             enabled = enabled && !isLoading,
                             onClick = {
-                                BezierComponentInteraction.notify("IconButtonV3", icon.imageVector.name)
+                                BezierComponentInteraction.notify("IconButton", "V3", icon.imageVector.name)
                                 onClick()
                             },
                     ),

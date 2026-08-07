@@ -47,7 +47,7 @@ fun Checkbox(
             modifier = modifier
                     .graphicsLayer(alpha = if (enabled) 1f else 0.4f)
                     .clickable(enabled = enabled) {
-                        BezierComponentInteraction.notify("CheckboxV3", label)
+                        BezierComponentInteraction.notify("Checkbox", "V3", label)
                         onClick()
                     }
                     .padding(vertical = CheckboxRowVerticalPadding),

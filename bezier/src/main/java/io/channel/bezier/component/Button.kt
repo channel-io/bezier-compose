@@ -78,7 +78,7 @@ fun Button(
                             indication = indication,
                             enabled = enabled,
                     ) {
-                        BezierComponentInteraction.notify("ButtonV1", text)
+                        BezierComponentInteraction.notify("Button", "V1", text)
                         onClick.invoke()
                     }
                     .padding(

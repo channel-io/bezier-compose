@@ -49,7 +49,7 @@ fun OutlineItem(
                                 indication = ripple(radius = 12.dp),
                                 interactionSource = remember { MutableInteractionSource() },
                                 onClick = {
-                                    BezierComponentInteraction.notify("OutlineItemV1", null)
+                                    BezierComponentInteraction.notify("OutlineItem", "V1", null)
                                     onClickExpand?.invoke()
                                 },
                         )

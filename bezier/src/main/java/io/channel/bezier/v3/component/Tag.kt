@@ -66,7 +66,7 @@ fun Tag(
                             .size(TagCancelIconLength)
                             .clip(CircleShape)
                             .clickable {
-                                BezierComponentInteraction.notify("TagV3", BezierIcons.CancelSmall.imageVector.name)
+                                BezierComponentInteraction.notify("Tag", "V3", BezierIcons.CancelSmall.imageVector.name)
                                 onDelete.invoke()
                             },
             ) {

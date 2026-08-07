@@ -216,7 +216,7 @@ fun TextField(
                                                     } else {
                                                         BezierIcons.ViewOff
                                                     }
-                                                    BezierComponentInteraction.notify("TextFieldV1", toggleIcon.imageVector.name)
+                                                    BezierComponentInteraction.notify("TextField", "V1", toggleIcon.imageVector.name)
                                                     isPasswordVisible = !isPasswordVisible
                                                 },
                                         ),
@@ -244,7 +244,7 @@ fun TextField(
                                                 interactionSource = remember { MutableInteractionSource() },
                                                 indication = null,
                                                 onClick = {
-                                                    BezierComponentInteraction.notify("TextFieldV1", BezierIcons.CancelCircleFilled.imageVector.name)
+                                                    BezierComponentInteraction.notify("TextField", "V1", BezierIcons.CancelCircleFilled.imageVector.name)
                                                     onValueChange(TextFieldValue())
                                                 },
                                         ),

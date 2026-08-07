@@ -90,7 +90,7 @@ fun Button(
                             indication = null,
                             enabled = enabled && !isLoading,
                             onClick = {
-                                BezierComponentInteraction.notify("ButtonV3", text)
+                                BezierComponentInteraction.notify("Button", "V3", text)
                                 onClick()
                             },
                     )

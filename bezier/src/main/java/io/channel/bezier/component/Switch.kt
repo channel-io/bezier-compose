@@ -157,7 +157,7 @@ fun Switch(
                             interactionSource = remember { MutableInteractionSource() },
                             indication = null,
                     ) {
-                        BezierComponentInteraction.notify("SwitchV1", null)
+                        BezierComponentInteraction.notify("Switch", "V1", null)
                         coroutineScope.launch {
                             state.switch()
                         }
