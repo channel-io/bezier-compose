@@ -49,6 +49,8 @@ import io.channel.bezier.compose.sample.playground.ConfirmModalPlaygroundKey
 import io.channel.bezier.compose.sample.playground.ConfirmModalPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.ModalPlaygroundKey
 import io.channel.bezier.compose.sample.playground.ModalPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.SearchPlaygroundKey
+import io.channel.bezier.compose.sample.playground.SearchPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.ProgressBarPlaygroundKey
 import io.channel.bezier.compose.sample.playground.ProgressBarPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.SectionPlaygroundKey
@@ -113,6 +115,7 @@ private fun PlaygroundApp() {
                                     onSelectTextArea = { backStack.add(TextAreaPlaygroundKey) },
                                     onSelectModal = { backStack.add(ModalPlaygroundKey) },
                                     onSelectConfirmModal = { backStack.add(ConfirmModalPlaygroundKey) },
+                                    onSelectSearch = { backStack.add(SearchPlaygroundKey) },
                             )
                         }
                         entry<ButtonPlaygroundKey> {
@@ -183,6 +186,9 @@ private fun PlaygroundApp() {
                         }
                         entry<ConfirmModalPlaygroundKey> {
                             ConfirmModalPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<SearchPlaygroundKey> {
+                            SearchPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
                         }
                     },
             )
