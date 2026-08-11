@@ -9,7 +9,7 @@ object BezierComponentInteraction {
     var onComponentClick: ((component: String, version: String?, label: String?) -> Unit)? = null
 
     internal fun notify(component: String, version: String?, label: String?) {
-        onComponentClick?.invoke(component, version, label)
+        runCatching { onComponentClick?.invoke(component, version, label) }
     }
 }
 

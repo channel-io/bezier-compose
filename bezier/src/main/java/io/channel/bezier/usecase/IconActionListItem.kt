@@ -16,13 +16,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.semantics.semantics
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
 import io.channel.bezier.component.Badge
 import io.channel.bezier.component.ListItemContainer
 import io.channel.bezier.component.ListItemContainerSize
-import io.channel.bezier.interaction.bezierComponent
 
 @Composable
 fun IconActionListItem(
@@ -37,7 +35,7 @@ fun IconActionListItem(
         content: @Composable () -> Unit = {},
 ) {
     ListItemContainer(
-            modifier = modifier.semantics { bezierComponent = "IconActionListItem" },
+            modifier = modifier,
             size = size,
             leftContent = icon?.let {
                 {
