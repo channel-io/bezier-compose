@@ -86,7 +86,7 @@ fun Banner(
 ) {
     BannerLayout(
             type = type,
-            label = null,
+            descriptionText = null,
             description = {
                 Text(
                         text = description,
@@ -123,7 +123,7 @@ fun Banner(
 ) {
     BannerLayout(
             type = type,
-            label = description,
+            descriptionText = description,
             description = {
                 Text(
                         text = description,
@@ -157,7 +157,7 @@ fun Banner(
 ) {
     BannerLayout(
             type = type,
-            label = null,
+            descriptionText = null,
             description = {
                 Text(
                         text = description,
@@ -191,7 +191,7 @@ fun Banner(
 ) {
     BannerLayout(
             type = type,
-            label = description,
+            descriptionText = description,
             description = {
                 Text(
                         text = description,
@@ -213,7 +213,7 @@ fun Banner(
 @Composable
 private fun BannerLayout(
         type: BannerType,
-        label: String?,
+        descriptionText: String?,
         description: @Composable () -> Unit,
         modifier: Modifier,
         title: String?,
@@ -242,7 +242,7 @@ private fun BannerLayout(
                     .let {
                         if (onClick != null) {
                             it.clickable {
-                                BezierComponentInteraction.notify("Banner", "V1", label)
+                                BezierComponentInteraction.notify("Banner", "V1", descriptionText)
                                 onClick.invoke()
                             }
                         } else {
