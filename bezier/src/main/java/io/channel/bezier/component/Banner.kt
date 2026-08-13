@@ -86,7 +86,6 @@ fun Banner(
 ) {
     BannerLayout(
             type = type,
-            descriptionText = null,
             description = {
                 Text(
                         text = description,
@@ -99,7 +98,12 @@ fun Banner(
             leftIcon = icon,
             leftIconColor = iconColor,
             rightIcon = null,
-            onClick = onClick,
+            onClick = onClick?.let { original ->
+                {
+                    BezierComponentInteraction.notify("Banner", "V1", null)
+                    original.invoke()
+                }
+            },
             onRemove = onRemove,
             content = content,
     )
@@ -123,7 +127,6 @@ fun Banner(
 ) {
     BannerLayout(
             type = type,
-            descriptionText = description,
             description = {
                 Text(
                         text = description,
@@ -136,7 +139,12 @@ fun Banner(
             leftIcon = icon,
             leftIconColor = iconColor,
             rightIcon = null,
-            onClick = onClick,
+            onClick = onClick?.let { original ->
+                {
+                    BezierComponentInteraction.notify("Banner", "V1", description)
+                    original.invoke()
+                }
+            },
             onRemove = onRemove,
             content = content,
     )
@@ -157,7 +165,6 @@ fun Banner(
 ) {
     BannerLayout(
             type = type,
-            descriptionText = null,
             description = {
                 Text(
                         text = description,
@@ -170,7 +177,12 @@ fun Banner(
             leftIcon = leftIcon,
             leftIconColor = leftIconColor,
             rightIcon = rightIcon,
-            onClick = onClick,
+            onClick = onClick?.let { original ->
+                {
+                    BezierComponentInteraction.notify("Banner", "V1", null)
+                    original.invoke()
+                }
+            },
             onRemove = onRemove,
             content = content,
     )
@@ -191,7 +203,6 @@ fun Banner(
 ) {
     BannerLayout(
             type = type,
-            descriptionText = description,
             description = {
                 Text(
                         text = description,
@@ -204,7 +215,12 @@ fun Banner(
             leftIcon = leftIcon,
             leftIconColor = leftIconColor,
             rightIcon = rightIcon,
-            onClick = onClick,
+            onClick = onClick?.let { original ->
+                {
+                    BezierComponentInteraction.notify("Banner", "V1", description)
+                    original.invoke()
+                }
+            },
             onRemove = onRemove,
             content = content,
     )
@@ -213,7 +229,6 @@ fun Banner(
 @Composable
 private fun BannerLayout(
         type: BannerType,
-        descriptionText: String?,
         description: @Composable () -> Unit,
         modifier: Modifier,
         title: String?,
@@ -241,10 +256,7 @@ private fun BannerLayout(
                     .background(colorResource(id = type.backgroundColor))
                     .let {
                         if (onClick != null) {
-                            it.clickable {
-                                BezierComponentInteraction.notify("Banner", "V1", descriptionText)
-                                onClick.invoke()
-                            }
+                            it.clickable(onClick = onClick)
                         } else {
                             it
                         }
