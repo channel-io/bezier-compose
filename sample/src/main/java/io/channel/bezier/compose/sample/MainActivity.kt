@@ -39,6 +39,8 @@ import io.channel.bezier.compose.sample.playground.ComponentListKey
 import io.channel.bezier.compose.sample.playground.ComponentListScreen
 import io.channel.bezier.compose.sample.playground.DividerPlaygroundKey
 import io.channel.bezier.compose.sample.playground.DividerPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.DropdownMenuPlaygroundKey
+import io.channel.bezier.compose.sample.playground.DropdownMenuPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.FloatingBannerPlaygroundKey
 import io.channel.bezier.compose.sample.playground.FloatingBannerPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.IconButtonPlaygroundKey
@@ -116,6 +118,7 @@ private fun PlaygroundApp() {
                                     onSelectModal = { backStack.add(ModalPlaygroundKey) },
                                     onSelectConfirmModal = { backStack.add(ConfirmModalPlaygroundKey) },
                                     onSelectSearch = { backStack.add(SearchPlaygroundKey) },
+                                    onSelectDropdownMenu = { backStack.add(DropdownMenuPlaygroundKey) },
                             )
                         }
                         entry<ButtonPlaygroundKey> {
@@ -189,6 +192,9 @@ private fun PlaygroundApp() {
                         }
                         entry<SearchPlaygroundKey> {
                             SearchPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<DropdownMenuPlaygroundKey> {
+                            DropdownMenuPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
                         }
                     },
             )
