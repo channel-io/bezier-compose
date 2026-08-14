@@ -55,6 +55,8 @@ import io.channel.bezier.compose.sample.playground.SearchPlaygroundKey
 import io.channel.bezier.compose.sample.playground.SearchPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.ProgressBarPlaygroundKey
 import io.channel.bezier.compose.sample.playground.ProgressBarPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.CollapsibleSectionPlaygroundKey
+import io.channel.bezier.compose.sample.playground.CollapsibleSectionPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.SectionPlaygroundKey
 import io.channel.bezier.compose.sample.playground.SectionPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.SpinnerPlaygroundKey
@@ -108,6 +110,7 @@ private fun PlaygroundApp() {
                                     onSelectToast = { backStack.add(ToastPlaygroundKey) },
                                     onSelectCard = { backStack.add(CardPlaygroundKey) },
                                     onSelectSection = { backStack.add(SectionPlaygroundKey) },
+                                    onSelectCollapsibleSection = { backStack.add(CollapsibleSectionPlaygroundKey) },
                                     onSelectTextInput = { backStack.add(TextInputPlaygroundKey) },
                                     onSelectBanner = { backStack.add(BannerPlaygroundKey) },
                                     onSelectBaseItem = { backStack.add(BaseItemPlaygroundKey) },
@@ -162,6 +165,9 @@ private fun PlaygroundApp() {
                         }
                         entry<SectionPlaygroundKey> {
                             SectionPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<CollapsibleSectionPlaygroundKey> {
+                            CollapsibleSectionPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
                         }
                         entry<TextInputPlaygroundKey> {
                             TextInputPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
