@@ -2,6 +2,7 @@ package io.channel.bezier.v3.component
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,10 +13,16 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
@@ -25,6 +32,7 @@ import io.channel.bezier.BezierIcon
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.component.BezierText
+import io.channel.bezier.icon.ChevronSmallDown
 import io.channel.bezier.icon.ChevronSmallRight
 import io.channel.bezier.icon.Folder
 import io.channel.bezier.icon.Plus
@@ -32,45 +40,40 @@ import io.channel.bezier.typography.BezierTypo
 import io.channel.bezier.typography.BezierWeight
 
 @Composable
-fun Section(
+fun CollapsibleSection(
+        label: String,
+        open: Boolean,
+        onOpenChange: ((Boolean) -> Unit)?,
         modifier: Modifier = Modifier,
-        label: String? = null,
         labelColor: SectionLabelColor = SectionLabelColor.NeutralDark,
         labelLeadingContent: (@Composable () -> Unit)? = null,
         labelTrailingContent: (@Composable () -> Unit)? = null,
-        variant: SectionVariant = SectionVariant.Solid,
         content: @Composable () -> Unit,
 ) {
     Column(
             modifier = modifier.fillMaxWidth(),
     ) {
-        if (label != null) {
-            SectionLabel(
-                    label = label,
-                    color = labelColor,
-                    leadingContent = labelLeadingContent,
-                    trailingContent = labelTrailingContent,
-            )
-        }
+        CollapsibleSectionLabel(
+                label = label,
+                color = labelColor,
+                open = open,
+                onOpenChange = onOpenChange,
+                leadingContent = labelLeadingContent,
+                trailingContent = labelTrailingContent,
+        )
 
-        when (variant) {
-            SectionVariant.Solid -> Column(
-                    modifier = Modifier.fillMaxWidth(),
-                    content = { content() },
-            )
-
-            SectionVariant.Card -> Card(
-                    modifier = Modifier.fillMaxWidth(),
-                    content = content,
-            )
+        if (open) {
+            content()
         }
     }
 }
 
 @Composable
-private fun SectionLabel(
+private fun CollapsibleSectionLabel(
         label: String,
         color: SectionLabelColor,
+        open: Boolean,
+        onOpenChange: ((Boolean) -> Unit)?,
         leadingContent: (@Composable () -> Unit)?,
         trailingContent: (@Composable () -> Unit)?,
         modifier: Modifier = Modifier,
@@ -78,18 +81,28 @@ private fun SectionLabel(
     Row(
             modifier = modifier
                     .fillMaxWidth()
-                    .heightIn(min = SectionLabelMinHeight)
-                    .padding(horizontal = SectionLabelHorizontalPadding),
-            horizontalArrangement = Arrangement.spacedBy(SectionLabelTrailingGap),
+                    .clip(CollapsibleSectionLabelShape)
+                    .then(
+                            if (onOpenChange != null) {
+                                Modifier.clickable { onOpenChange(!open) }
+                            } else {
+                                Modifier
+                            },
+                    )
+                    .heightIn(min = LabelMinHeight)
+                    .padding(horizontal = LabelHorizontalPadding),
+            horizontalArrangement = Arrangement.spacedBy(LabelTrailingGap),
             verticalAlignment = Alignment.CenterVertically,
     ) {
         Row(
-                modifier = Modifier.weight(1f),
-                horizontalArrangement = Arrangement.spacedBy(SectionLabelLeadingGap),
+                modifier = Modifier
+                        .weight(1f)
+                        .heightIn(min = CenterContentMinHeight),
+                horizontalArrangement = Arrangement.spacedBy(CenterContentGap),
                 verticalAlignment = Alignment.CenterVertically,
         ) {
             if (leadingContent != null) {
-                Box(modifier = Modifier.size(SectionLabelSlotSize)) {
+                Box(modifier = Modifier.size(LeadingContentSize)) {
                     leadingContent()
                 }
             }
@@ -101,14 +114,25 @@ private fun SectionLabel(
                     color = color.textColor(),
                     overflow = TextOverflow.Ellipsis,
                     maxLines = 1,
-                    modifier = Modifier.weight(1f),
+                    modifier = Modifier.weight(1f, fill = false),
+            )
+
+            Icon(
+                    modifier = Modifier.size(ChevronSize),
+                    imageVector = if (open) {
+                        BezierIcons.ChevronSmallDown.imageVector
+                    } else {
+                        BezierIcons.ChevronSmallRight.imageVector
+                    },
+                    tint = color.chevronColor(),
+                    contentDescription = null,
             )
         }
 
         if (trailingContent != null) {
             Box(
-                    modifier = Modifier.height(SectionLabelSlotSize),
-                    contentAlignment = Alignment.Center,
+                    modifier = Modifier.height(TrailingContentHeight),
+                    contentAlignment = Alignment.CenterEnd,
             ) {
                 trailingContent()
             }
@@ -116,31 +140,28 @@ private fun SectionLabel(
     }
 }
 
-enum class SectionVariant {
-    Solid,
-    Card,
+@Composable
+private fun SectionLabelColor.chevronColor(): Color = when (this) {
+    SectionLabelColor.NeutralDark -> BezierTheme.colorsV3.iconNeutralHeavier
+    SectionLabelColor.NeutralLight -> BezierTheme.colorsV3.iconNeutral
 }
 
-enum class SectionLabelColor {
-    NeutralDark,
-    NeutralLight,
-}
+private val LabelMinHeight: Dp = 32.dp
+private val LabelHorizontalPadding: Dp = 10.dp
+private val LabelTrailingGap: Dp = 4.dp
+private val CenterContentGap: Dp = 8.dp
+private val CenterContentMinHeight: Dp = 24.dp
+private val LeadingContentSize: Dp = 20.dp
+private val ChevronSize: Dp = 16.dp
+private val TrailingContentHeight: Dp = 20.dp
+private val CollapsibleSectionLabelShape = RoundedCornerShape(8.dp)
 
 @Composable
-internal fun SectionLabelColor.textColor(): Color = when (this) {
-    SectionLabelColor.NeutralDark -> BezierTheme.colorsV3.textNeutral
-    SectionLabelColor.NeutralLight -> BezierTheme.colorsV3.textNeutralLighter
-}
-
-private val SectionLabelMinHeight: Dp = 32.dp
-private val SectionLabelHorizontalPadding: Dp = 10.dp
-private val SectionLabelLeadingGap: Dp = 8.dp
-private val SectionLabelTrailingGap: Dp = 4.dp
-private val SectionLabelSlotSize: Dp = 20.dp
-
-@Composable
-private fun SectionPreviewContent() {
+private fun CollapsibleSectionPreviewContent() {
     BezierTheme {
+        var firstOpen by remember { mutableStateOf(true) }
+        var secondOpen by remember { mutableStateOf(false) }
+
         Column(
                 modifier = Modifier
                         .background(BezierTheme.colorsV3.surfaceLow)
@@ -148,33 +169,33 @@ private fun SectionPreviewContent() {
                         .padding(24.dp),
                 verticalArrangement = Arrangement.spacedBy(24.dp),
         ) {
-            Section(
+            CollapsibleSection(
                     label = "Section Label",
-                    labelLeadingContent = { SectionPreviewIcon(BezierIcons.Folder) },
-                    labelTrailingContent = { SectionPreviewIcon(BezierIcons.ChevronSmallRight) },
+                    open = firstOpen,
+                    onOpenChange = { firstOpen = it },
+                    labelLeadingContent = { CollapsibleSectionPreviewIcon(BezierIcons.Folder) },
             ) {
                 repeat(3) {
                     BaseItem(
+                            modifier = Modifier.fillMaxWidth(),
                             label = "Label",
-                            size = BaseItemSize.Small,
-                            leadingContent = { SectionPreviewIcon(BezierIcons.Plus) },
+                            size = BaseItemSize.Medium,
+                            leadingContent = { CollapsibleSectionPreviewIcon(BezierIcons.Plus) },
                     )
                 }
             }
 
-            Section(
+            CollapsibleSection(
                     label = "Overlay Label",
+                    open = secondOpen,
+                    onOpenChange = { secondOpen = it },
                     labelColor = SectionLabelColor.NeutralLight,
-                    variant = SectionVariant.Card,
             ) {
-                repeat(4) { index ->
-                    if (index > 0) {
-                        Divider(sideIndent = false, parallelIndent = false)
-                    }
+                repeat(2) {
                     BaseItem(
+                            modifier = Modifier.fillMaxWidth(),
                             label = "Label",
                             size = BaseItemSize.Medium,
-                            leadingContent = { SectionPreviewIcon(BezierIcons.Plus) },
                     )
                 }
             }
@@ -183,7 +204,7 @@ private fun SectionPreviewContent() {
 }
 
 @Composable
-private fun SectionPreviewIcon(icon: BezierIcon) {
+private fun CollapsibleSectionPreviewIcon(icon: BezierIcon) {
     Icon(
             modifier = Modifier.fillMaxSize(),
             imageVector = icon.imageVector,
@@ -194,8 +215,8 @@ private fun SectionPreviewIcon(icon: BezierIcon) {
 
 @Preview(showBackground = true, widthDp = 400)
 @Composable
-private fun SectionPreview() = SectionPreviewContent()
+private fun CollapsibleSectionPreview() = CollapsibleSectionPreviewContent()
 
 @Preview(showBackground = true, widthDp = 400, uiMode = UI_MODE_NIGHT_YES)
 @Composable
-private fun SectionDarkPreview() = SectionPreviewContent()
+private fun CollapsibleSectionDarkPreview() = CollapsibleSectionPreviewContent()
