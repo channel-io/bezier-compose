@@ -15,6 +15,7 @@ data object DividerPlaygroundKey
 data object ToastPlaygroundKey
 data object CardPlaygroundKey
 data object SectionPlaygroundKey
+data object CollapsibleSectionPlaygroundKey
 data object TextInputPlaygroundKey
 data object BannerPlaygroundKey
 data object BaseItemPlaygroundKey

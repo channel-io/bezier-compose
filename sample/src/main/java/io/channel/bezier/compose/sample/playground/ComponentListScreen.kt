@@ -31,6 +31,7 @@ fun ComponentListScreen(
         onSelectToast: () -> Unit,
         onSelectCard: () -> Unit,
         onSelectSection: () -> Unit,
+        onSelectCollapsibleSection: () -> Unit,
         onSelectTextInput: () -> Unit,
         onSelectBanner: () -> Unit,
         onSelectBaseItem: () -> Unit,
@@ -81,6 +82,8 @@ fun ComponentListScreen(
             ComponentRow("Card", onClick = onSelectCard)
             Divider()
             ComponentRow("Section", onClick = onSelectSection)
+            Divider()
+            ComponentRow("CollapsibleSection", onClick = onSelectCollapsibleSection)
             Divider()
             ComponentRow("TextInput", onClick = onSelectTextInput)
             Divider()
