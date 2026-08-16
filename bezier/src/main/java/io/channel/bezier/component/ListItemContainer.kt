@@ -38,7 +38,9 @@ import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.semantics.semantics
 import io.channel.bezier.compose.R
+import io.channel.bezier.interaction.bezierComponent
 import kotlin.math.max
 
 @Composable
@@ -53,6 +55,7 @@ fun ListItemContainer(
 ) {
     Column(
             modifier = modifier
+                    .semantics { bezierComponent = "ListItemContainer" }
                     .fillMaxWidth()
                     .heightIn(min = size.minHeight)
                     .padding(start = 6.dp)

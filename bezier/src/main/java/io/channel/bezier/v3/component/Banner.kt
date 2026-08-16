@@ -34,6 +34,7 @@ import io.channel.bezier.icon.ErrorDiamondFilled
 import io.channel.bezier.icon.Info
 import io.channel.bezier.icon.Lightbulb
 import io.channel.bezier.icon.Limit
+import io.channel.bezier.interaction.BezierComponentInteraction
 import io.channel.bezier.typography.BezierTypo
 import io.channel.bezier.typography.BezierWeight
 
@@ -60,7 +61,10 @@ fun Banner(
                     .background(colorSpec.background)
                     .then(
                             if (onClick != null) {
-                                Modifier.clickable(onClick = onClick)
+                                Modifier.clickable {
+                                    BezierComponentInteraction.notify("Banner", "V3", description)
+                                    onClick.invoke()
+                                }
                             } else {
                                 Modifier
                             }
@@ -109,7 +113,10 @@ fun Banner(
                                     if (onDismiss != null) {
                                         Modifier
                                                 .clip(CircleShape)
-                                                .clickable(onClick = onDismiss)
+                                                .clickable {
+                                                    BezierComponentInteraction.notify("Banner", "V3", trailingIcon.imageVector.name)
+                                                    onDismiss.invoke()
+                                                }
                                     } else {
                                         Modifier
                                     }

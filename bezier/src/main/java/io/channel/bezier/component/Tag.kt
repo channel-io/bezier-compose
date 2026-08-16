@@ -43,6 +43,7 @@ import androidx.core.content.res.use
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
 import io.channel.bezier.extension.orElse
+import io.channel.bezier.interaction.BezierComponentInteraction
 
 typealias TagSize = Tag.Size
 typealias TagColor = Tag.Color
@@ -205,7 +206,10 @@ fun Tag(
                             .clickable(
                                     interactionSource = remember { MutableInteractionSource() },
                                     indication = null,
-                                    onClick = onRemove,
+                                    onClick = {
+                                        BezierComponentInteraction.notify("Tag", "V1", null)
+                                        onRemove.invoke()
+                                    },
                             ),
                     painter = painterResource(id = R.drawable.icon_cancel),
                     contentDescription = null,

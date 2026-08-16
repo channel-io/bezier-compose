@@ -17,35 +17,27 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.icon.ArrowLeft
-import io.channel.bezier.icon.Plus
-import io.channel.bezier.v3.component.Button
-import io.channel.bezier.v3.component.ButtonSemantic
-import io.channel.bezier.v3.component.ButtonSize
-import io.channel.bezier.v3.component.ButtonVariant
 import io.channel.bezier.v3.component.IconButton
 import io.channel.bezier.v3.component.IconButtonSize
 import io.channel.bezier.v3.component.IconButtonVariant
+import io.channel.bezier.v3.component.Search
 
 @Composable
-fun ButtonPlaygroundScreen(onBack: () -> Unit) {
-    var size by remember { mutableStateOf(ButtonSize.Medium) }
-    var variant by remember { mutableStateOf(ButtonVariant.Filled) }
-    var semantic by remember { mutableStateOf(ButtonSemantic.Primary) }
-    var isLoading by remember { mutableStateOf(false) }
+fun SearchPlaygroundScreen(onBack: () -> Unit) {
+    var value by remember { mutableStateOf("") }
     var enabled by remember { mutableStateOf(true) }
-    var showLeadingIcon by remember { mutableStateOf(true) }
-    var showTrailingIcon by remember { mutableStateOf(true) }
+    var allowClear by remember { mutableStateOf(true) }
+    var cancelButton by remember { mutableStateOf(false) }
 
     Scaffold(
             topBar = {
                 TopAppBar(
-                        title = { Text("Button") },
+                        title = { Text("Search") },
                         navigationIcon = {
                             IconButton(
                                     icon = BezierIcons.ArrowLeft,
@@ -69,30 +61,24 @@ fun ButtonPlaygroundScreen(onBack: () -> Unit) {
                             .fillMaxWidth()
                             .background(BezierTheme.colorsV3.surfaceLow)
                             .padding(32.dp),
-                    contentAlignment = Alignment.Center,
             ) {
-                Button(
-                        text = "Label",
-                        onClick = {},
-                        size = size,
-                        variant = variant,
-                        semantic = semantic,
-                        isLoading = isLoading,
+                Search(
+                        value = value,
+                        onValueChange = { value = it },
                         enabled = enabled,
-                        leadingContent = if (showLeadingIcon) BezierIcons.Plus else null,
-                        trailingContent = if (showTrailingIcon) BezierIcons.Plus else null,
+                        placeholder = "Search by name, email, phone",
+                        allowClear = allowClear,
+                        cancelText = if (cancelButton) "Cancel" else null,
+                        onCancelClick = { value = "" },
+                        modifier = Modifier.fillMaxWidth(),
                 )
             }
 
             Divider()
 
-            EnumControl("Size", ButtonSize.values(), size) { size = it }
-            EnumControl("Variant", ButtonVariant.values(), variant) { variant = it }
-            EnumControl("Semantic", ButtonSemantic.values(), semantic) { semantic = it }
-            BooleanControl("isLoading", isLoading) { isLoading = it }
             BooleanControl("enabled", enabled) { enabled = it }
-            BooleanControl("leadingIcon", showLeadingIcon) { showLeadingIcon = it }
-            BooleanControl("trailingIcon", showTrailingIcon) { showTrailingIcon = it }
+            BooleanControl("allowClear", allowClear) { allowClear = it }
+            BooleanControl("cancelButton", cancelButton) { cancelButton = it }
         }
     }
 }

@@ -30,11 +30,14 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.component.BezierText
+import io.channel.bezier.interaction.BezierComponentInteraction
 import io.channel.bezier.typography.BezierTypo
 
 private val TrackWidth = 50.dp
@@ -55,6 +58,7 @@ fun Switch(
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         hasError: Boolean = false,
+        contentDescription: String? = null,
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
 ) {
     val colors = BezierTheme.colorsV3
@@ -86,6 +90,12 @@ fun Switch(
     Box(
             modifier = modifier
                     .size(width = TrackWidth, height = TrackHeight)
+                    .then(
+                            when (contentDescription) {
+                                null -> Modifier
+                                else -> Modifier.semantics { this.contentDescription = contentDescription }
+                            },
+                    )
                     .then(errorBorderModifier)
                     .graphicsLayer { alpha = if (enabled) 1f else DisabledAlpha }
                     .drawBehind {
@@ -100,7 +110,10 @@ fun Switch(
                                         interactionSource = interactionSource,
                                         indication = null,
                                         enabled = enabled,
-                                        onClick = { onCheckedChange(!checked) },
+                                        onClick = {
+                                            BezierComponentInteraction.notify("Switch", "V3", contentDescription)
+                                            onCheckedChange(!checked)
+                                        },
                                 )
                             } else {
                                 Modifier

@@ -29,6 +29,7 @@ import io.channel.bezier.BezierTheme
 import io.channel.bezier.color.BezierSemanticColorV3
 import io.channel.bezier.component.BezierText
 import io.channel.bezier.icon.CancelSmall
+import io.channel.bezier.interaction.BezierComponentInteraction
 import io.channel.bezier.typography.BezierTypo
 import io.channel.bezier.typography.BezierWeight
 
@@ -64,7 +65,10 @@ fun Tag(
                     modifier = Modifier
                             .size(TagCancelIconLength)
                             .clip(CircleShape)
-                            .clickable(onClick = onDelete),
+                            .clickable {
+                                BezierComponentInteraction.notify("Tag", "V3", BezierIcons.CancelSmall.imageVector.name)
+                                onDelete.invoke()
+                            },
             ) {
                 Icon(
                         imageVector = BezierIcons.CancelSmall.imageVector,

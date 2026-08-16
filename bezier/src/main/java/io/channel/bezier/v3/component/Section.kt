@@ -127,7 +127,7 @@ enum class SectionLabelColor {
 }
 
 @Composable
-private fun SectionLabelColor.textColor(): Color = when (this) {
+internal fun SectionLabelColor.textColor(): Color = when (this) {
     SectionLabelColor.NeutralDark -> BezierTheme.colorsV3.textNeutral
     SectionLabelColor.NeutralLight -> BezierTheme.colorsV3.textNeutralLighter
 }
