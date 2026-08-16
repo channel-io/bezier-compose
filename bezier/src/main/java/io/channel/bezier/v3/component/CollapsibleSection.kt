@@ -36,6 +36,7 @@ import io.channel.bezier.icon.ChevronSmallDown
 import io.channel.bezier.icon.ChevronSmallRight
 import io.channel.bezier.icon.Folder
 import io.channel.bezier.icon.Plus
+import io.channel.bezier.interaction.BezierComponentInteraction
 import io.channel.bezier.typography.BezierTypo
 import io.channel.bezier.typography.BezierWeight
 
@@ -84,7 +85,10 @@ private fun CollapsibleSectionLabel(
                     .clip(CollapsibleSectionLabelShape)
                     .then(
                             if (onOpenChange != null) {
-                                Modifier.clickable { onOpenChange(!open) }
+                                Modifier.clickable {
+                                    BezierComponentInteraction.notify("CollapsibleSection", "V3", label)
+                                    onOpenChange(!open)
+                                }
                             } else {
                                 Modifier
                             },

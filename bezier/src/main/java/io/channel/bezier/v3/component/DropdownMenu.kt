@@ -67,6 +67,7 @@ import io.channel.bezier.BezierTheme
 import io.channel.bezier.component.BezierText
 import io.channel.bezier.icon.Plus
 import io.channel.bezier.icon.Trash
+import io.channel.bezier.interaction.BezierComponentInteraction
 import io.channel.bezier.typography.BezierTypo
 import io.channel.bezier.typography.BezierWeight
 
@@ -244,7 +245,10 @@ fun DropdownMenuItem(
                             interactionSource = interactionSource,
                             indication = null,
                             enabled = enabled,
-                            onClick = onClick,
+                            onClick = {
+                                BezierComponentInteraction.notify("DropdownMenuItem", "V3", label)
+                                onClick()
+                            },
                     )
                     .padding(
                             horizontal = ItemHorizontalPadding,
