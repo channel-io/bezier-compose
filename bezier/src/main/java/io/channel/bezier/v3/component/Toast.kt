@@ -1,8 +1,6 @@
 package io.channel.bezier.v3.component
 
-import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.background
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -24,7 +22,6 @@ import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcon
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
-import io.channel.bezier.color.DarkColor
 import io.channel.bezier.component.BezierText
 import io.channel.bezier.icon.CheckCircleFilled
 import io.channel.bezier.icon.ErrorDiamondFilled
@@ -37,9 +34,7 @@ fun Toast(
         modifier: Modifier = Modifier,
         preset: ToastPreset = ToastPreset.Info,
 ) {
-    val isAmbientDark = BezierTheme.colorsV3 is DarkColor
-
-    BezierTheme(isDark = !isAmbientDark) {
+    BezierTheme(isDark = !BezierTheme.isDark) {
         val colors = BezierTheme.colorsV3
         val iconSource = preset.iconSource
         val iconColor = preset.iconColor()
@@ -113,8 +108,10 @@ enum class ToastPreset {
 }
 
 @Composable
-private fun ToastMatrix() {
-    BezierTheme(isDark = isSystemInDarkTheme()) {
+private fun ToastMatrix(isDark: Boolean) {
+    BezierTheme.isDark = isDark
+
+    BezierTheme {
         Column(
                 modifier = Modifier
                         .background(BezierTheme.colorsV3.surface)
@@ -134,8 +131,8 @@ private fun ToastMatrix() {
 
 @Preview(showBackground = true, widthDp = 520)
 @Composable
-private fun ToastMatrixLightPreview() = ToastMatrix()
+private fun ToastMatrixLightPreview() = ToastMatrix(isDark = false)
 
-@Preview(showBackground = true, widthDp = 520, uiMode = UI_MODE_NIGHT_YES)
+@Preview(showBackground = true, widthDp = 520)
 @Composable
-private fun ToastMatrixDarkPreview() = ToastMatrix()
+private fun ToastMatrixDarkPreview() = ToastMatrix(isDark = true)
