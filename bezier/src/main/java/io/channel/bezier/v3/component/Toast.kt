@@ -1,6 +1,5 @@
 package io.channel.bezier.v3.component
 
-import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -9,12 +8,13 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
-import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
@@ -34,42 +34,49 @@ fun Toast(
         modifier: Modifier = Modifier,
         preset: ToastPreset = ToastPreset.Info,
 ) {
-    val colors = BezierTheme.colorsV3
-    val iconSource = preset.iconSource
+    BezierTheme(isDark = !BezierTheme.isDark) {
+        val colors = BezierTheme.colorsV3
+        val iconSource = preset.iconSource
+        val iconColor = preset.iconColor()
 
-    Row(
-            modifier = modifier
-                    .widthIn(max = ToastMaxWidth)
-                    .heightIn(min = ToastMinHeight)
-                    .clip(CircleShape)
-                    .background(colors.fillGreyHeavier)
-                    .padding(horizontal = preset.horizontalPadding, vertical = ToastVerticalPadding),
-            horizontalArrangement = Arrangement.spacedBy(ToastIconTextGap),
-            verticalAlignment = Alignment.CenterVertically,
-    ) {
-        if (iconSource != null) {
-            Icon(
-                    modifier = Modifier.size(ToastIconLength),
-                    imageVector = iconSource.imageVector,
-                    tint = colors.iconNeutralHeavy,
-                    contentDescription = null,
+        Row(
+                modifier = modifier
+                        .widthIn(max = ToastMaxWidth)
+                        .heightIn(min = ToastMinHeight)
+                        .clip(RoundedCornerShape(ToastCornerRadius))
+                        .background(colors.surfaceGlass)
+                        .padding(horizontal = preset.horizontalPadding, vertical = ToastVerticalPadding),
+                horizontalArrangement = Arrangement.spacedBy(ToastIconTextGap),
+                verticalAlignment = Alignment.Top,
+        ) {
+            if (iconSource != null && iconColor != null) {
+                Icon(
+                        modifier = Modifier.size(ToastIconLength),
+                        imageVector = iconSource.imageVector,
+                        tint = iconColor,
+                        contentDescription = null,
+                )
+            }
+            BezierText(
+                    modifier = Modifier
+                            .weight(1f, fill = false)
+                            .padding(vertical = ToastTextVerticalPadding),
+                    text = text,
+                    typo = BezierTypo.TextMedium,
+                    weight = BezierWeight.Bold,
+                    color = colors.textNeutral,
+                    overflow = TextOverflow.Ellipsis,
+                    maxLines = ToastMaxLines,
             )
         }
-        BezierText(
-                modifier = Modifier.weight(1f, fill = false),
-                text = text,
-                typo = BezierTypo.TextMedium,
-                weight = BezierWeight.Bold,
-                color = colors.textNeutral,
-                overflow = TextOverflow.Ellipsis,
-                maxLines = ToastMaxLines,
-        )
     }
 }
 
 private val ToastMaxWidth: Dp = 460.dp
 private val ToastMinHeight: Dp = 40.dp
-private val ToastVerticalPadding: Dp = 10.dp
+private val ToastCornerRadius: Dp = 20.dp
+private val ToastVerticalPadding: Dp = 12.dp
+private val ToastTextVerticalPadding: Dp = 1.dp
 private val ToastIconTextGap: Dp = 6.dp
 private val ToastIconLength: Dp = 20.dp
 private const val ToastMaxLines: Int = 2
@@ -91,10 +98,19 @@ enum class ToastPreset {
             Info -> 14.dp
             Success, Error -> 12.dp
         }
+
+    @Composable
+    internal fun iconColor(): Color? = when (this) {
+        Info -> null
+        Success -> BezierTheme.colorsV3.iconAccentGreen
+        Error -> BezierTheme.colorsV3.iconAccentRed
+    }
 }
 
 @Composable
-private fun ToastMatrix() {
+private fun ToastMatrix(isDark: Boolean) {
+    BezierTheme.isDark = isDark
+
     BezierTheme {
         Column(
                 modifier = Modifier
@@ -115,8 +131,8 @@ private fun ToastMatrix() {
 
 @Preview(showBackground = true, widthDp = 520)
 @Composable
-private fun ToastMatrixLightPreview() = ToastMatrix()
+private fun ToastMatrixLightPreview() = ToastMatrix(isDark = false)
 
-@Preview(showBackground = true, widthDp = 520, uiMode = UI_MODE_NIGHT_YES)
+@Preview(showBackground = true, widthDp = 520)
 @Composable
-private fun ToastMatrixDarkPreview() = ToastMatrix()
+private fun ToastMatrixDarkPreview() = ToastMatrix(isDark = true)

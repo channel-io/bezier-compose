@@ -10,6 +10,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.takeOrElse
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.extension.ifTrue
 import io.channel.bezier.typography.BezierTypo
@@ -27,9 +29,11 @@ fun BezierText(
     overflow: TextOverflow = TextOverflow.Clip,
     maxLines: Int = Int.MAX_VALUE,
     minLines: Int = 1,
+    letterSpacing: TextUnit = TextUnit.Unspecified,
 ) {
     val resolvedWeight = typo.fixedWeight ?: when (weight) {
         BezierWeight.Regular -> FontWeight.Normal
+        BezierWeight.Medium -> FontWeight.Medium
         BezierWeight.Bold -> FontWeight.Bold
     }
 
@@ -39,7 +43,7 @@ fun BezierText(
         style = TextStyle(
             fontSize = typo.fontSize,
             lineHeight = typo.lineHeight,
-            letterSpacing = typo.letterSpacing,
+            letterSpacing = letterSpacing.takeOrElse { typo.letterSpacing },
             fontWeight = resolvedWeight,
             fontFamily = typo.isMonospace.ifTrue(FontFamily.Monospace, null),
             color = color,

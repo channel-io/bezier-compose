@@ -1,5 +1,6 @@
 package io.channel.bezier.compose.sample
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -74,6 +75,11 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
+
+        // Toast 처럼 전역 BezierTheme.isDark 를 읽는 컴포넌트가 있어 시스템 테마를 전역에 반영한다.
+        BezierTheme.isDark = (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) ==
+                Configuration.UI_MODE_NIGHT_YES
+
         setContent {
             PlaygroundApp()
         }
