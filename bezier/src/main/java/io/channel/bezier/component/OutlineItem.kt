@@ -19,6 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
+import io.channel.bezier.interaction.BezierComponentInteraction
 
 private val IndentWidth = 12.dp
 
@@ -47,7 +48,10 @@ fun OutlineItem(
                                 enabled = onClickExpand != null && toggle != OutlineToggle.Leaf,
                                 indication = ripple(radius = 12.dp),
                                 interactionSource = remember { MutableInteractionSource() },
-                                onClick = { onClickExpand?.invoke() },
+                                onClick = {
+                                    BezierComponentInteraction.notify("OutlineItem", "V1", null)
+                                    onClickExpand?.invoke()
+                                },
                         )
                         .padding(6.dp)
                         .size(24.dp)

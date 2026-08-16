@@ -20,8 +20,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.semantics.semantics
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
+import io.channel.bezier.interaction.bezierComponent
 
 @Composable
 fun SectionLabel(
@@ -33,6 +35,7 @@ fun SectionLabel(
 ) {
     Row(
             modifier = modifier
+                    .semantics { bezierComponent = "SectionLabel" }
                     .sizeIn(minHeight = 32.dp),
             verticalAlignment = Alignment.CenterVertically,
     ) {

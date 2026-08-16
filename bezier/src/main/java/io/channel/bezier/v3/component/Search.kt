@@ -42,6 +42,7 @@ import io.channel.bezier.BezierTheme
 import io.channel.bezier.component.BezierText
 import io.channel.bezier.icon.CancelCircleFilled
 import io.channel.bezier.icon.Search
+import io.channel.bezier.interaction.BezierComponentInteraction
 import io.channel.bezier.typography.BezierTypo
 
 private val Height = 40.dp
@@ -148,7 +149,10 @@ fun Search(
                                             .clickable(
                                                     interactionSource = remember { MutableInteractionSource() },
                                                     indication = null,
-                                                    onClick = { onValueChange("") },
+                                                    onClick = {
+                                                        BezierComponentInteraction.notify("Search", "V3", BezierIcons.CancelCircleFilled.imageVector.name)
+                                                        onValueChange("")
+                                                    },
                                             ),
                                     imageVector = BezierIcons.CancelCircleFilled.imageVector,
                                     contentDescription = null,
@@ -167,7 +171,10 @@ fun Search(
                                     interactionSource = remember { MutableInteractionSource() },
                                     indication = null,
                                     enabled = enabled,
-                                    onClick = onCancelClick,
+                                    onClick = {
+                                        BezierComponentInteraction.notify("Search", "V3", cancelText)
+                                        onCancelClick()
+                                    },
                             )
                             .padding(horizontal = CancelHorizontalPadding),
                     contentAlignment = Alignment.Center,

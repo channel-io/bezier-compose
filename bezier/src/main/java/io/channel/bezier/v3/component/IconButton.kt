@@ -34,6 +34,7 @@ import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.component.BezierText
 import io.channel.bezier.icon.Plus
+import io.channel.bezier.interaction.BezierComponentInteraction
 import io.channel.bezier.typography.BezierTypo
 
 @Composable
@@ -71,7 +72,10 @@ fun IconButton(
                             interactionSource = interactionSource,
                             indication = null,
                             enabled = enabled && !isLoading,
-                            onClick = onClick,
+                            onClick = {
+                                BezierComponentInteraction.notify("IconButton", "V3", icon.imageVector.name)
+                                onClick()
+                            },
                     ),
             contentAlignment = Alignment.Center,
     ) {
