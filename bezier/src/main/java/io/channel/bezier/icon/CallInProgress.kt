@@ -35,7 +35,6 @@ val BezierIcons.CallInProgress: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(4.2f, 4.955f)
                     curveTo(5.168f, 3.987f, 6.584f, 3.725f, 7.428000000000001f, 4.3100000000000005f)

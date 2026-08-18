@@ -37,12 +37,12 @@ val BezierIcons.TriangleRightLarge: BezierIcon
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(8.682f, 19.314f)
-                    lineTo(18.464f, 12.466000000000001f)
-                    arcTo(0.8f, 0.8f, 54.94283160760498f, isMoreThanHalf = false, isPositiveArc = false, 18.448999999999998f, 11.146f)
+                    lineTo(18.463f, 12.466000000000001f)
+                    arcTo(0.8f, 0.8f, 54.94283160760498f, isMoreThanHalf = false, isPositiveArc = false, 18.448f, 11.146f)
                     lineTo(8.666f, 4.623f)
                     arcTo(0.8f, 0.8f, 303.6246621306019f, isMoreThanHalf = false, isPositiveArc = false, 7.423f, 5.289000000000001f)
                     lineTo(7.423f, 18.657f)
-                    arcTo(0.8f, 0.8f, 180.0555679278878f, isMoreThanHalf = false, isPositiveArc = false, 8.682f, 19.313f)
+                    arcTo(0.8f, 0.8f, 180.00545931917713f, isMoreThanHalf = false, isPositiveArc = false, 8.681000000000001f, 19.313f)
                 }
             }.build().also {
                 _triangleRightLarge = it

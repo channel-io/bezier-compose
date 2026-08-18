@@ -40,7 +40,7 @@ val BezierIcons.CheckAll: BezierIcon
                     arcTo(0.994f, 0.994f, 315.01107600751345f, isMoreThanHalf = false, isPositiveArc = false, 21.892f, 5.703f)
                     lineTo(11.367f, 16.228f)
                     lineTo(7.073000000000001f, 11.934000000000001f)
-                    arcTo(0.993f, 0.993f, 315.02039606994344f, isMoreThanHalf = false, isPositiveArc = false, 5.668000000000001f, 13.338000000000001f)
+                    arcTo(0.993f, 0.993f, 315.0203983601688f, isMoreThanHalf = true, isPositiveArc = false, 5.668000000000001f, 13.338000000000001f)
                     lineTo(10.659f, 18.331000000000003f)
                     arcTo(1.0f, 1.0f, 135.03187078392838f, isMoreThanHalf = false, isPositiveArc = false, 12.074000000000002f, 18.331000000000003f)
                     lineTo(23.297f, 7.109f)
@@ -51,10 +51,10 @@ val BezierIcons.CheckAll: BezierIcon
                     arcTo(0.993f, 0.993f, 225.0f, isMoreThanHalf = true, isPositiveArc = false, 12.067000000000002f, 13.373f)
                     lineTo(18.332f, 7.108999999999999f)
                     arcTo(0.994f, 0.994f, 45.01107600751351f, isMoreThanHalf = false, isPositiveArc = false, 18.332f, 5.702999999999999f)
-                    moveTo(0.703f, 13.339f)
-                    arcTo(0.993f, 0.993f, 135.00000105941407f, isMoreThanHalf = false, isPositiveArc = true, 2.108f, 11.934000000000001f)
-                    lineTo(7.105f, 16.931f)
-                    arcTo(0.993f, 0.993f, 314.9999995674961f, isMoreThanHalf = true, isPositiveArc = true, 5.7f, 18.336f)
+                    moveTo(0.702f, 13.339f)
+                    arcTo(0.993f, 0.993f, 135.02038164397086f, isMoreThanHalf = true, isPositiveArc = true, 2.1079999999999997f, 11.934000000000001f)
+                    lineTo(7.104f, 16.931f)
+                    arcTo(0.993f, 0.993f, 314.97960384511225f, isMoreThanHalf = false, isPositiveArc = true, 5.7f, 18.336f)
                     close()
                 }
             }.build().also {
