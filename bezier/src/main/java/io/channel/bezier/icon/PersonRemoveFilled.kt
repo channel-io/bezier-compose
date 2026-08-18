@@ -35,11 +35,10 @@ val BezierIcons.PersonRemoveFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(11.014f, 13.0f)
                     arcTo(8.0f, 8.0f, 269.99918448248246f, isMoreThanHalf = false, isPositiveArc = true, 18.997f, 20.477f)
-                    arcTo(0.503f, 0.503f, 357.7199284693964f, isMoreThanHalf = false, isPositiveArc = true, 18.491f, 21.0f)
+                    arcTo(0.504f, 0.504f, 357.83890034415015f, isMoreThanHalf = false, isPositiveArc = true, 18.491f, 21.0f)
                     lineTo(3.537f, 21.0f)
                     arcTo(0.504f, 0.504f, 89.7318831413524f, isMoreThanHalf = false, isPositiveArc = true, 3.0309999999999997f, 20.477f)
                     arcTo(8.0f, 8.0f, 183.74838485135953f, isMoreThanHalf = false, isPositiveArc = true, 11.014f, 13.0f)

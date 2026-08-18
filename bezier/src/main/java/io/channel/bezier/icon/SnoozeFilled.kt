@@ -35,12 +35,11 @@ val BezierIcons.SnoozeFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(12.0f, 2.0f)
                     curveTo(17.515f, 2.0f, 22.0f, 6.484f, 22.0f, 11.999f)
                     curveTo(22.0f, 17.514000000000003f, 17.515f, 21.999000000000002f, 12.0f, 21.999000000000002f)
-                    curveTo(6.484f, 21.999000000000002f, 2.0f, 17.514000000000003f, 2.0f, 11.999000000000002f)
+                    curveTo(6.484999999999999f, 21.999000000000002f, 2.0f, 17.514000000000003f, 2.0f, 11.999000000000002f)
                     curveTo(2.0f, 6.484000000000002f, 6.485f, 2.0f, 12.0f, 2.0f)
                     moveTo(13.0f, 6.0f)
                     arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 7.0f)
@@ -53,8 +52,8 @@ val BezierIcons.SnoozeFilled: BezierIcon
                     arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 13.0f, 6.0f)
                     moveTo(4.929f, 0.707f)
                     arcTo(1.0f, 1.0f, 225.99574461357918f, isMoreThanHalf = false, isPositiveArc = true, 6.343f, 2.121f)
-                    lineTo(3.514f, 4.95f)
-                    arcTo(1.0f, 1.0f, 45.020252410719486f, isMoreThanHalf = true, isPositiveArc = true, 2.1f, 3.535f)
+                    lineTo(3.515f, 4.95f)
+                    arcTo(1.0f, 1.0f, 44.99999914717512f, isMoreThanHalf = true, isPositiveArc = true, 2.1f, 3.535f)
                     close()
                     moveTo(17.657f, 0.707f)
                     arcTo(1.0f, 1.0f, 225.0086516628379f, isMoreThanHalf = false, isPositiveArc = true, 19.071f, 0.707f)

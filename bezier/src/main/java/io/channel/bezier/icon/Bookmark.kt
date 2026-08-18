@@ -35,7 +35,6 @@ val BezierIcons.Bookmark: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(14.45f, 2.0f)
                     curveTo(15.274f, 2.0f, 15.952f, 1.999f, 16.502f, 2.044f)

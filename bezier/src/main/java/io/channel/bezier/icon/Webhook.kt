@@ -35,7 +35,6 @@ val BezierIcons.Webhook: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(16.91f, 14.01f)
                     arcTo(2.001f, 2.001f, 271.8114742883606f, isMoreThanHalf = false, isPositiveArc = true, 16.91f, 18.009999999999998f)

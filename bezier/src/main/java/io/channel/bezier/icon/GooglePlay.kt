@@ -35,7 +35,6 @@ val BezierIcons.GooglePlay: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(16.682f, 16.044f)
                     lineTo(8.115999999999998f, 20.778f)
@@ -44,13 +43,13 @@ val BezierIcons.GooglePlay: BezierIcon
                     close()
                     moveTo(12.368f, 12.0f)
                     lineTo(5.0f, 18.908f)
-                    lineTo(5.0f, 5.092f)
+                    lineTo(5.0f, 5.093f)
                     close()
-                    moveTo(20.991f, 10.337f)
-                    curveTo(22.299f, 11.06f, 22.299f, 12.939f, 20.991f, 13.661999999999999f)
-                    lineTo(17.601f, 15.533999999999999f)
-                    lineTo(13.832f, 12.0f)
-                    lineTo(17.603f, 8.464f)
+                    moveTo(20.991f, 10.336f)
+                    curveTo(22.299f, 11.059000000000001f, 22.299f, 12.939f, 20.991f, 13.662f)
+                    lineTo(17.601f, 15.534f)
+                    lineTo(13.831f, 12.0f)
+                    lineTo(17.602f, 8.463000000000001f)
                     close()
                     moveTo(5.288f, 3.99f)
                     arcTo(2.104f, 2.104f, 210.64432921560402f, isMoreThanHalf = false, isPositiveArc = true, 8.116f, 3.221f)

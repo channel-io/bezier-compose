@@ -37,7 +37,7 @@ val BezierIcons.TrendingDown: BezierIcon
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(11.634f, 17.849f)
-                    arcTo(0.52f, 0.52f, 134.73640179187367f, isMoreThanHalf = false, isPositiveArc = false, 12.366f, 17.849f)
+                    arcTo(0.52f, 0.52f, 134.65889770565386f, isMoreThanHalf = false, isPositiveArc = false, 12.365f, 17.849f)
                     lineTo(17.531f, 12.683f)
                     arcTo(0.4f, 0.4f, 45.23535937987709f, isMoreThanHalf = false, isPositiveArc = false, 17.247999999999998f, 11.999f)
                     lineTo(13.997999999999998f, 11.999f)

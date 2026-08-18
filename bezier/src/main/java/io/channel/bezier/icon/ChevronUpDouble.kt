@@ -37,7 +37,7 @@ val BezierIcons.ChevronUpDouble: BezierIcon
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(4.35f, 17.24f)
-                    arcTo(1.0f, 1.0f, 229.46084911220484f, isMoreThanHalf = true, isPositiveArc = false, 5.6499999999999995f, 18.759999999999998f)
+                    arcTo(1.0f, 1.0f, 229.46084740482826f, isMoreThanHalf = false, isPositiveArc = false, 5.6499999999999995f, 18.759999999999998f)
                     lineTo(12.0f, 13.316f)
                     lineTo(18.35f, 18.758000000000003f)
                     arcTo(1.0f, 1.0f, 132.73523939138175f, isMoreThanHalf = true, isPositiveArc = false, 19.650000000000002f, 17.240000000000002f)

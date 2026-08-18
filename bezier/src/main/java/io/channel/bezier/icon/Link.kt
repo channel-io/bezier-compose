@@ -50,7 +50,7 @@ val BezierIcons.Link: BezierIcon
                     moveTo(14.121f, 9.879f)
                     arcTo(6.0f, 6.0f, 314.99810008786545f, isMoreThanHalf = false, isPositiveArc = false, 5.636000000000001f, 9.879f)
                     lineTo(4.222000000000001f, 11.293f)
-                    arcTo(6.0f, 6.0f, 224.53339662837672f, isMoreThanHalf = false, isPositiveArc = false, 12.707f, 19.778f)
+                    arcTo(6.0f, 6.0f, 225.46660337162328f, isMoreThanHalf = true, isPositiveArc = false, 12.707f, 19.778f)
                     lineTo(13.571000000000002f, 18.913999999999998f)
                     arcTo(1.0f, 1.0f, 44.00425538642249f, isMoreThanHalf = false, isPositiveArc = false, 12.157000000000002f, 17.499999999999996f)
                     lineTo(11.293000000000001f, 18.363999999999997f)

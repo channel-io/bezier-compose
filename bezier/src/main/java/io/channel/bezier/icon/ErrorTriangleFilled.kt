@@ -45,14 +45,14 @@ val BezierIcons.ErrorTriangleFilled: BezierIcon
                     curveTo(2.423f, 21.22f, 0.7430000000000003f, 18.272f, 2.121f, 15.939f)
                     close()
                     moveTo(11.999f, 15.927f)
-                    arcTo(1.293f, 1.293f, 273.8814882890362f, isMoreThanHalf = true, isPositiveArc = false, 12.0f, 18.506999999999998f)
-                    arcTo(1.293f, 1.293f, 86.07409638023273f, isMoreThanHalf = false, isPositiveArc = false, 11.999f, 15.926999999999998f)
-                    moveTo(11.999f, 7.218999999999998f)
-                    arcTo(1.3f, 1.3f, 269.9818740597939f, isMoreThanHalf = false, isPositiveArc = false, 10.702f, 8.600999999999997f)
-                    lineTo(11.019f, 13.678999999999998f)
-                    arcTo(0.982f, 0.982f, 176.34261549260657f, isMoreThanHalf = false, isPositiveArc = false, 12.979f, 13.678999999999998f)
-                    lineTo(13.296f, 8.600999999999999f)
-                    arcTo(1.3f, 1.3f, 3.572318665531427f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 7.22f)
+                    arcTo(1.292f, 1.292f, 272.738887385976f, isMoreThanHalf = true, isPositiveArc = false, 12.0f, 18.508f)
+                    arcTo(1.292f, 1.292f, 86.78943574821331f, isMoreThanHalf = false, isPositiveArc = false, 11.999f, 15.927999999999999f)
+                    moveTo(11.999f, 7.219999999999999f)
+                    arcTo(1.3f, 1.3f, 269.9818740597939f, isMoreThanHalf = false, isPositiveArc = false, 10.702f, 8.601999999999999f)
+                    lineTo(11.019f, 13.68f)
+                    arcTo(0.982f, 0.982f, 176.34261549260657f, isMoreThanHalf = false, isPositiveArc = false, 12.979f, 13.68f)
+                    lineTo(13.296f, 8.602f)
+                    arcTo(1.3f, 1.3f, 3.616476134851242f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 7.22f)
                 }
             }.build().also {
                 _errorTriangleFilled = it
