@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.component.BezierText
-import io.channel.bezier.interaction.bezierComponent
+import io.channel.bezier.interaction.interactionComponent
 import io.channel.bezier.typography.BezierTypo
 
 @Composable
@@ -40,7 +40,7 @@ fun BaseItem(
 ) {
     Row(
             modifier = modifier
-                    .semantics { bezierComponent = "BaseItem" }
+                    .semantics { interactionComponent = "BaseItem" }
                     .clip(RoundedCornerShape(BaseItemCornerRadius))
                     .heightIn(min = size.minHeight)
                     .padding(
