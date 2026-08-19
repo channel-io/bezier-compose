@@ -35,7 +35,6 @@ val BezierIcons.Wechat: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(16.664f, 9.5f)
                     curveTo(20.309f, 9.5f, 23.264000000000003f, 11.955f, 23.264000000000003f, 14.982f)

@@ -59,7 +59,7 @@ val BezierIcons.Goal: BezierIcon
                     arcTo(1.0f, 1.0f, 45.008653510483754f, isMoreThanHalf = false, isPositiveArc = false, 8.0f, 19.086f)
                     lineTo(8.0f, 17.413999999999998f)
                     lineTo(11.483f, 13.930999999999997f)
-                    arcTo(2.003f, 2.003f, 104.8694863917013f, isMoreThanHalf = false, isPositiveArc = false, 14.0f, 12.0f)
+                    arcTo(2.002f, 2.002f, 104.90661701445087f, isMoreThanHalf = false, isPositiveArc = false, 14.0f, 12.0f)
                     arcTo(2.0f, 2.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 10.0f)
                 }
             }.build().also {

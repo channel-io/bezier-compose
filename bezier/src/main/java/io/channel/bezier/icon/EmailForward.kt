@@ -35,7 +35,6 @@ val BezierIcons.EmailForward: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(20.0f, 13.225f)
                     curveTo(20.0f, 12.581f, 20.752f, 12.258f, 21.192f, 12.713f)

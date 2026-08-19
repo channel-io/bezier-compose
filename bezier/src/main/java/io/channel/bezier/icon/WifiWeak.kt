@@ -41,7 +41,7 @@ val BezierIcons.WifiWeak: BezierIcon
                     lineTo(11.637f, 19.617f)
                     arcTo(0.5f, 0.5f, 136.55209973030455f, isMoreThanHalf = false, isPositiveArc = false, 12.363f, 19.617f)
                     lineTo(15.061f, 16.769000000000002f)
-                    curveTo(15.269f, 16.549000000000003f, 15.261f, 16.199f, 15.02f, 16.015f)
+                    curveTo(15.27f, 16.549000000000003f, 15.261f, 16.199f, 15.02f, 16.015f)
                     arcTo(4.98f, 4.98f, 307.23278812143695f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 15.0f)
                     curveTo(10.866f, 15.0f, 9.82f, 15.378f, 8.98f, 16.015f)
                     moveTo(16.44f, 14.588f)

@@ -61,7 +61,7 @@ val BezierIcons.Siren: BezierIcon
                     moveTo(19.121f, 2.7070000000000007f)
                     arcTo(1.0f, 1.0f, 225.99574461357759f, isMoreThanHalf = false, isPositiveArc = true, 20.535f, 4.121f)
                     lineTo(19.121f, 5.535f)
-                    arcTo(1.0f, 1.0f, 44.004255386422344f, isMoreThanHalf = true, isPositiveArc = true, 17.706999999999997f, 4.121f)
+                    arcTo(1.0f, 1.0f, 45.995744613577585f, isMoreThanHalf = false, isPositiveArc = true, 17.706999999999997f, 4.121f)
                     close()
                     moveTo(12.0f, 0.0f)
                     arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 13.0f, 1.0f)

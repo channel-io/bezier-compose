@@ -13,9 +13,9 @@ object BezierComponentInteraction {
     }
 }
 
-val BezierComponentKey = SemanticsPropertyKey<String>(
-        name = "BezierComponent",
+val InteractionComponentKey = SemanticsPropertyKey<String>(
+        name = "InteractionComponent",
         mergePolicy = { parent, child -> parent ?: child },
 )
 
-var SemanticsPropertyReceiver.bezierComponent by BezierComponentKey
+var SemanticsPropertyReceiver.interactionComponent by InteractionComponentKey

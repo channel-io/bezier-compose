@@ -35,7 +35,6 @@ val BezierIcons.EmailUnsubscribed: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(19.5f, 13.0f)
                     arcTo(4.5f, 4.5f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 19.5f, 22.0f)

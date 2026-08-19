@@ -35,25 +35,24 @@ val BezierIcons.Email: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(15.6f, 4.0f)
                     curveTo(17.84f, 4.0f, 18.96f, 4.0f, 19.816f, 4.436f)
                     arcTo(4.0f, 4.0f, 297.000682627168f, isMoreThanHalf = false, isPositiveArc = true, 21.564f, 6.184f)
                     curveTo(21.933f, 6.907f, 21.99f, 7.82f, 21.999f, 9.438f)
-                    arcTo(1.0f, 1.0f, 356.7897569669757f, isMoreThanHalf = false, isPositiveArc = true, 21.999f, 9.55f)
+                    quadTo(22.002f, 9.495000000000001f, 21.999f, 9.55f)
                     lineTo(21.999f, 13.600000000000001f)
                     curveTo(21.999f, 15.840000000000002f, 22.0f, 16.96f, 21.564f, 17.816000000000003f)
                     arcTo(4.0f, 4.0f, 26.978972641721622f, isMoreThanHalf = false, isPositiveArc = true, 19.816f, 19.565f)
                     curveTo(18.961f, 20.0f, 17.84f, 20.0f, 15.601f, 20.0f)
                     lineTo(8.4f, 20.0f)
-                    curveTo(6.16f, 20.0f, 5.040000000000001f, 20.0f, 4.183000000000001f, 19.564f)
-                    arcTo(4.0f, 4.0f, 117.000682627168f, isMoreThanHalf = false, isPositiveArc = true, 2.4350000000000005f, 17.816f)
+                    curveTo(6.16f, 20.0f, 5.040000000000001f, 20.0f, 4.184f, 19.564f)
+                    arcTo(4.0f, 4.0f, 116.9789726417216f, isMoreThanHalf = false, isPositiveArc = true, 2.435f, 17.816f)
                     curveTo(2.0f, 16.961f, 2.0f, 15.84f, 2.0f, 13.6f)
                     lineTo(2.0f, 9.55f)
                     arcTo(1.0f, 1.0f, 177.88824625460646f, isMoreThanHalf = false, isPositiveArc = true, 2.002f, 9.440000000000001f)
                     curveTo(2.0109999999999997f, 7.820000000000001f, 2.0679999999999996f, 6.907000000000002f, 2.436f, 6.184000000000001f)
-                    arcTo(4.0f, 4.0f, 207.00068262716798f, isMoreThanHalf = false, isPositiveArc = true, 4.184f, 4.436000000000001f)
+                    arcTo(4.0f, 4.0f, 207.0117411735782f, isMoreThanHalf = false, isPositiveArc = true, 4.1850000000000005f, 4.436000000000001f)
                     curveTo(5.04f, 4.0f, 6.16f, 4.0f, 8.4f, 4.0f)
                     close()
                     moveTo(13.342f, 14.447f)

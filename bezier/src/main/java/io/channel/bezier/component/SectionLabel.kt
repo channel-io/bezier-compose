@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.semantics.semantics
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
-import io.channel.bezier.interaction.bezierComponent
+import io.channel.bezier.interaction.interactionComponent
 
 @Composable
 fun SectionLabel(
@@ -35,7 +35,7 @@ fun SectionLabel(
 ) {
     Row(
             modifier = modifier
-                    .semantics { bezierComponent = "SectionLabel" }
+                    .semantics { interactionComponent = "SectionLabel" }
                     .sizeIn(minHeight = 32.dp),
             verticalAlignment = Alignment.CenterVertically,
     ) {
