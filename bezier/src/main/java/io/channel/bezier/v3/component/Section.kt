@@ -17,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
@@ -26,6 +27,7 @@ import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.component.BezierText
 import io.channel.bezier.icon.ChevronSmallRight
+import io.channel.bezier.interaction.interactionComponent
 import io.channel.bezier.icon.Folder
 import io.channel.bezier.icon.Plus
 import io.channel.bezier.typography.BezierTypo
@@ -77,6 +79,7 @@ private fun SectionLabel(
 ) {
     Row(
             modifier = modifier
+                    .semantics { interactionComponent = "Section" }
                     .fillMaxWidth()
                     .heightIn(min = SectionLabelMinHeight)
                     .padding(horizontal = SectionLabelHorizontalPadding),
