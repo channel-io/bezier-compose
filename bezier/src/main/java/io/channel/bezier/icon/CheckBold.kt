@@ -37,13 +37,13 @@ val BezierIcons.CheckBold: BezierIcon
                         strokeLineWidth = 1f,
                         pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(10.0f, 14.063f)
-                    lineTo(17.070999999999998f, 6.993f)
-                    arcTo(1.5f, 1.5f, 223.39306813950847f, isMoreThanHalf = true, isPositiveArc = true, 19.191999999999997f, 9.113f)
+                    moveTo(10.0f, 14.064f)
+                    lineTo(17.070999999999998f, 6.992f)
+                    arcTo(1.5f, 1.5f, 225.01350306432136f, isMoreThanHalf = true, isPositiveArc = true, 19.191999999999997f, 9.114f)
                     lineTo(10.462999999999997f, 17.843f)
                     arcTo(0.655f, 0.655f, 45.01916425610011f, isMoreThanHalf = false, isPositiveArc = true, 9.536999999999997f, 17.843f)
                     lineTo(4.806999999999997f, 13.113f)
-                    arcTo(1.5f, 1.5f, 134.0316354095093f, isMoreThanHalf = true, isPositiveArc = true, 6.928999999999997f, 10.992999999999999f)
+                    arcTo(1.5f, 1.5f, 136.0223917241707f, isMoreThanHalf = false, isPositiveArc = true, 6.928999999999997f, 10.992999999999999f)
                     close()
                 }
             }.build().also {
