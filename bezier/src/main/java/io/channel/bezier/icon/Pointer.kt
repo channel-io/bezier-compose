@@ -20,13 +20,13 @@ import io.channel.bezier.BezierIcon
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.compose.R
 
-val BezierIcons.LightningFilled: BezierIcon
+val BezierIcons.Pointer: BezierIcon
     get() = object : BezierIcon {
         @DrawableRes
-        override val resourceId: Int = R.drawable.icon_lightning_filled
+        override val resourceId: Int = R.drawable.icon_pointer
         override val imageVector: ImageVector
-            get() = _lightningFilled ?: ImageVector.Builder(
-                    name = "LightningFilled",
+            get() = _pointer ?: ImageVector.Builder(
+                    name = "Pointer",
                     defaultWidth = 24.dp,
                     defaultHeight = 24.dp,
                     viewportWidth = 24f,
@@ -35,33 +35,37 @@ val BezierIcons.LightningFilled: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
+                        pathFillType = PathFillType.EvenOdd,
                 ) {
-                    moveTo(16.557f, 3.354f)
-                    curveTo(17.18f, 1.936f, 15.38f, 0.705f, 14.285f, 1.8f)
-                    lineTo(5.0f, 11.086f)
-                    curveTo(3.74f, 12.346f, 4.632f, 14.5f, 6.414f, 14.5f)
-                    lineTo(9.884f, 14.5f)
-                    lineTo(7.61f, 20.078f)
-                    curveTo(6.98f, 21.624f, 8.966000000000001f, 22.887999999999998f, 10.100000000000001f, 21.663f)
-                    lineTo(19.179000000000002f, 11.859f)
-                    curveTo(20.364f, 10.579f, 19.456000000000003f, 8.499f, 17.711000000000002f, 8.499f)
-                    lineTo(14.293000000000003f, 8.499f)
+                    moveTo(3.063f, 5.973f)
+                    curveTo(2.4320000000000004f, 4.366f, 3.9960000000000004f, 2.768f, 5.616f, 3.3649999999999998f)
+                    lineTo(21.144f, 9.084999999999999f)
+                    curveTo(22.886f, 9.726999999999999f, 22.889999999999997f, 12.189f, 21.151f, 12.835999999999999f)
+                    lineTo(15.093f, 15.092999999999998f)
+                    lineTo(12.806000000000001f, 21.232f)
+                    curveTo(12.166f, 22.951999999999998f, 9.742f, 22.971999999999998f, 9.071000000000002f, 21.265f)
+                    close()
+                    moveTo(20.453f, 10.963f)
+                    lineTo(4.925f, 5.24f)
+                    lineTo(10.931999999999999f, 20.533f)
+                    lineTo(13.218999999999998f, 14.394000000000002f)
+                    arcTo(2.0f, 2.0f, 200.43162999153657f, isMoreThanHalf = false, isPositiveArc = true, 14.394999999999998f, 13.218000000000002f)
                     close()
                 }
             }.build().also {
-                _lightningFilled = it
+                _pointer = it
             }
     }
 
 
-private var _lightningFilled: ImageVector? = null
+private var _pointer: ImageVector? = null
 
 @Preview(showBackground = true)
 @Composable
-private fun LightningFilledIconPreview() {
+private fun PointerIconPreview() {
     Icon(
             modifier = Modifier.size(128.dp),
-            imageVector = BezierIcons.LightningFilled.imageVector,
+            imageVector = BezierIcons.Pointer.imageVector,
             contentDescription = null,
     )
 }

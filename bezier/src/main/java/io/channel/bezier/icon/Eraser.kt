@@ -45,7 +45,7 @@ val BezierIcons.Eraser: BezierIcon
                     lineTo(20.0f, 20.0f)
                     lineTo(10.0f, 20.0f)
                     lineTo(10.005f, 19.995f)
-                    arcTo(2.99f, 2.99f, 88.81449051303471f, isMoreThanHalf = false, isPositiveArc = true, 7.828000000000001f, 19.119f)
+                    arcTo(3.0f, 3.0f, 88.89594715993162f, isMoreThanHalf = false, isPositiveArc = true, 7.828000000000001f, 19.119f)
                     lineTo(2.878000000000001f, 14.169f)
                     arcTo(3.0f, 3.0f, 135.008651662838f, isMoreThanHalf = false, isPositiveArc = true, 2.878000000000001f, 9.927f)
                     close()
@@ -61,7 +61,7 @@ val BezierIcons.Eraser: BezierIcon
                     lineTo(7.121000000000001f, 8.513f)
                     lineTo(13.486f, 14.876999999999999f)
                     lineTo(18.435000000000002f, 9.927f)
-                    arcTo(1.0f, 1.0f, 45.0318707839283f, isMoreThanHalf = false, isPositiveArc = false, 18.435000000000002f, 8.512f)
+                    arcTo(1.0f, 1.0f, 44.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 18.435000000000002f, 8.513f)
                     close()
                 }
             }.build().also {
