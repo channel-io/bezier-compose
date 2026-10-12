@@ -21,7 +21,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
-import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.draw.dropShadow
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
@@ -30,10 +30,12 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.graphics.shadow.Shadow
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.component.BezierText
@@ -45,10 +47,19 @@ private val TrackHeight = 28.dp
 private val ThumbSize = 24.dp
 private val ThumbPadding = 2.dp
 private val ThumbTravel = TrackWidth - ThumbSize - ThumbPadding * 2
-private val ThumbElevation = 6.dp
+private val ThumbShadowRadius = 4.dp
+private val ThumbShadowSpread = 0.dp
+private val ThumbShadowOffsetY = 2.dp
+private val ThumbShadowColor = Color.Black.copy(alpha = 0.25f)
 private val ErrorRingGap = 3.dp
 private val ErrorRingBorder = 1.5.dp
 private const val DisabledAlpha = 0.4f
+private val ThumbShadow = Shadow(
+        radius = ThumbShadowRadius,
+        color = ThumbShadowColor,
+        spread = ThumbShadowSpread,
+        offset = DpOffset(0.dp, ThumbShadowOffsetY),
+)
 private val ThumbAnimationSpec = tween<Float>(durationMillis = 200, easing = EaseInOut)
 
 @Composable
@@ -128,9 +139,9 @@ fun Switch(
                             translationY = ThumbPadding.toPx()
                         }
                         .size(ThumbSize)
-                        .shadow(
-                                elevation = ThumbElevation,
+                        .dropShadow(
                                 shape = CircleShape,
+                                shadow = ThumbShadow,
                         )
                         .background(
                                 color = thumbColor,
