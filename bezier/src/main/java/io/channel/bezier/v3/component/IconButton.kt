@@ -96,7 +96,7 @@ fun IconButton(
         if (isLoading) {
             Spinner(
                     size = size.spinnerSize,
-                    color = colorSpec.spinnerColor,
+                    color = colorSpec.iconColor,
             )
         }
     }
@@ -151,7 +151,6 @@ enum class IconButtonSemantic {
 internal data class IconButtonColorSpec(
         val background: Color?,
         val iconColor: Color,
-        val spinnerColor: Color,
         val border: Color?,
 )
 
@@ -163,21 +162,18 @@ internal fun iconButtonColorSpec(variant: IconButtonVariant, semantic: IconButto
             IconButtonSemantic.Primary -> IconButtonColorSpec(
                     background = null,
                     iconColor = colors.iconNeutralHeavier,
-                    spinnerColor = colors.iconNeutral,
                     border = null,
             )
 
             IconButtonSemantic.Secondary -> IconButtonColorSpec(
                     background = null,
                     iconColor = colors.iconNeutral,
-                    spinnerColor = colors.iconNeutral,
                     border = null,
             )
 
             IconButtonSemantic.Destructive -> IconButtonColorSpec(
                     background = null,
                     iconColor = colors.textAccentRed,
-                    spinnerColor = colors.textAccentRed,
                     border = null,
             )
         }
@@ -186,21 +182,18 @@ internal fun iconButtonColorSpec(variant: IconButtonVariant, semantic: IconButto
             IconButtonSemantic.Primary -> IconButtonColorSpec(
                     background = colors.fillNeutralHeaviest,
                     iconColor = colors.iconInverseHeavier,
-                    spinnerColor = colors.fillBright,
                     border = null,
             )
 
             IconButtonSemantic.Secondary -> IconButtonColorSpec(
                     background = colors.fillNeutral,
                     iconColor = colors.iconNeutralHeavy,
-                    spinnerColor = colors.fillBright,
                     border = null,
             )
 
             IconButtonSemantic.Destructive -> IconButtonColorSpec(
                     background = colors.fillAccentRedHeavier,
                     iconColor = colors.iconInverseHeavier,
-                    spinnerColor = colors.iconInverseHeavier,
                     border = null,
             )
         }
@@ -209,21 +202,18 @@ internal fun iconButtonColorSpec(variant: IconButtonVariant, semantic: IconButto
             IconButtonSemantic.Primary -> IconButtonColorSpec(
                     background = null,
                     iconColor = colors.iconNeutralHeavier,
-                    spinnerColor = colors.iconNeutral,
                     border = colors.borderNeutral,
             )
 
             IconButtonSemantic.Secondary -> IconButtonColorSpec(
                     background = null,
                     iconColor = colors.iconNeutral,
-                    spinnerColor = colors.iconNeutral,
                     border = colors.borderNeutral,
             )
 
             IconButtonSemantic.Destructive -> IconButtonColorSpec(
                     background = null,
                     iconColor = colors.textAccentRed,
-                    spinnerColor = colors.textAccentRed,
                     border = colors.borderNeutral,
             )
         }
