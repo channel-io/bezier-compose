@@ -2,6 +2,7 @@ package io.channel.bezier.v3.component
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.PressInteraction
@@ -44,15 +45,16 @@ fun IconButton(
         modifier: Modifier = Modifier,
         size: IconButtonSize = IconButtonSize.Medium,
         variant: IconButtonVariant = IconButtonVariant.Ghost,
+        semantic: IconButtonSemantic = IconButtonSemantic.Secondary,
         isActive: Boolean = false,
         isLoading: Boolean = false,
         enabled: Boolean = true,
         contentDescription: String? = null,
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
 ) {
-    val colorSpec = iconButtonColorSpec(variant)
+    val colorSpec = iconButtonColorSpec(variant, semantic)
     val isPressed by interactionSource.collectIsPressedAsState()
-    val showOverlay = (isPressed || isActive) && variant == IconButtonVariant.Ghost
+    val showOverlay = (isPressed || isActive) && variant != IconButtonVariant.Filled
     val containerAlpha = if (enabled) 1f else 0.4f
 
     Box(
@@ -66,6 +68,10 @@ fun IconButton(
                     )
                     .then(
                             if (showOverlay) Modifier.background(Color.Black.copy(alpha = 0.05f))
+                            else Modifier,
+                    )
+                    .then(
+                            if (colorSpec.border != null) Modifier.border(width = 1.dp, color = colorSpec.border, shape = CircleShape)
                             else Modifier,
                     )
                     .clickable(
@@ -90,11 +96,7 @@ fun IconButton(
         if (isLoading) {
             Spinner(
                     size = size.spinnerSize,
-                    color = if (variant == IconButtonVariant.Filled) {
-                        BezierTheme.colorsV3.fillBright
-                    } else {
-                        BezierTheme.colorsV3.iconNeutral
-                    },
+                    color = colorSpec.iconColor,
             )
         }
     }
@@ -137,25 +139,84 @@ enum class IconButtonSize {
 enum class IconButtonVariant {
     Ghost,
     Filled,
+    Outlined,
+}
+
+enum class IconButtonSemantic {
+    Primary,
+    Secondary,
+    Destructive,
 }
 
 internal data class IconButtonColorSpec(
         val background: Color?,
         val iconColor: Color,
+        val border: Color?,
 )
 
 @Composable
-internal fun iconButtonColorSpec(variant: IconButtonVariant): IconButtonColorSpec {
+internal fun iconButtonColorSpec(variant: IconButtonVariant, semantic: IconButtonSemantic): IconButtonColorSpec {
     val colors = BezierTheme.colorsV3
     return when (variant) {
-        IconButtonVariant.Ghost -> IconButtonColorSpec(
-                background = null,
-                iconColor = colors.iconNeutral,
-        )
-        IconButtonVariant.Filled -> IconButtonColorSpec(
-                background = colors.fillNeutral,
-                iconColor = colors.iconNeutralHeavy,
-        )
+        IconButtonVariant.Ghost -> when (semantic) {
+            IconButtonSemantic.Primary -> IconButtonColorSpec(
+                    background = null,
+                    iconColor = colors.iconNeutralHeavier,
+                    border = null,
+            )
+
+            IconButtonSemantic.Secondary -> IconButtonColorSpec(
+                    background = null,
+                    iconColor = colors.iconNeutral,
+                    border = null,
+            )
+
+            IconButtonSemantic.Destructive -> IconButtonColorSpec(
+                    background = null,
+                    iconColor = colors.textAccentRed,
+                    border = null,
+            )
+        }
+
+        IconButtonVariant.Filled -> when (semantic) {
+            IconButtonSemantic.Primary -> IconButtonColorSpec(
+                    background = colors.fillNeutralHeaviest,
+                    iconColor = colors.iconInverseHeavier,
+                    border = null,
+            )
+
+            IconButtonSemantic.Secondary -> IconButtonColorSpec(
+                    background = colors.fillNeutral,
+                    iconColor = colors.iconNeutralHeavy,
+                    border = null,
+            )
+
+            IconButtonSemantic.Destructive -> IconButtonColorSpec(
+                    background = colors.fillAccentRedHeavier,
+                    iconColor = colors.iconInverseHeavier,
+                    border = null,
+            )
+        }
+
+        IconButtonVariant.Outlined -> when (semantic) {
+            IconButtonSemantic.Primary -> IconButtonColorSpec(
+                    background = null,
+                    iconColor = colors.iconNeutralHeavier,
+                    border = colors.borderNeutral,
+            )
+
+            IconButtonSemantic.Secondary -> IconButtonColorSpec(
+                    background = null,
+                    iconColor = colors.iconNeutral,
+                    border = colors.borderNeutral,
+            )
+
+            IconButtonSemantic.Destructive -> IconButtonColorSpec(
+                    background = null,
+                    iconColor = colors.textAccentRed,
+                    border = colors.borderNeutral,
+            )
+        }
     }
 }
 
@@ -181,7 +242,7 @@ private fun IconButtonMatrix(size: IconButtonSize, sizeLabel: String) {
                 verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Box(modifier = Modifier.width(labelColWidth * 2))
+                Box(modifier = Modifier.width(labelColWidth * 3))
                 listOf("default", "pressed", "active", "disabled", "loading").forEach { stateLabel ->
                     Box(
                             modifier = Modifier.width(cellWidth),
@@ -197,43 +258,57 @@ private fun IconButtonMatrix(size: IconButtonSize, sizeLabel: String) {
             }
 
             IconButtonVariant.values().forEachIndexed { variantIndex, variant ->
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Box(
-                            modifier = Modifier.width(labelColWidth),
-                            contentAlignment = Alignment.CenterStart,
-                    ) {
-                        if (variantIndex == 0) {
+                IconButtonSemantic.values().forEachIndexed { semanticIndex, semantic ->
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Box(
+                                modifier = Modifier.width(labelColWidth),
+                                contentAlignment = Alignment.CenterStart,
+                        ) {
+                            if (variantIndex == 0 && semanticIndex == 0) {
+                                BezierText(
+                                        text = sizeLabel,
+                                        typo = BezierTypo.TextMedium,
+                                        color = BezierTheme.colorsV3.textNeutral,
+                                )
+                            }
+                        }
+                        Box(
+                                modifier = Modifier.width(labelColWidth),
+                                contentAlignment = Alignment.CenterStart,
+                        ) {
+                            if (semanticIndex == 0) {
+                                BezierText(
+                                        text = variant.name.lowercase(),
+                                        typo = BezierTypo.TextMedium,
+                                        color = BezierTheme.colorsV3.textNeutral,
+                                )
+                            }
+                        }
+                        Box(
+                                modifier = Modifier.width(labelColWidth),
+                                contentAlignment = Alignment.CenterStart,
+                        ) {
                             BezierText(
-                                    text = sizeLabel,
+                                    text = semantic.name.lowercase(),
                                     typo = BezierTypo.TextMedium,
                                     color = BezierTheme.colorsV3.textNeutral,
                             )
                         }
-                    }
-                    Box(
-                            modifier = Modifier.width(labelColWidth),
-                            contentAlignment = Alignment.CenterStart,
-                    ) {
-                        BezierText(
-                                text = variant.name.lowercase(),
-                                typo = BezierTypo.TextMedium,
-                                color = BezierTheme.colorsV3.textNeutral,
-                        )
-                    }
-                    IconButtonCell(cellWidth) {
-                        IconButton(icon = BezierIcons.Plus, onClick = {}, size = size, variant = variant)
-                    }
-                    IconButtonCell(cellWidth) {
-                        IconButton(icon = BezierIcons.Plus, onClick = {}, size = size, variant = variant, interactionSource = pressedInteractionSource())
-                    }
-                    IconButtonCell(cellWidth) {
-                        IconButton(icon = BezierIcons.Plus, onClick = {}, size = size, variant = variant, isActive = true)
-                    }
-                    IconButtonCell(cellWidth) {
-                        IconButton(icon = BezierIcons.Plus, onClick = {}, size = size, variant = variant, enabled = false)
-                    }
-                    IconButtonCell(cellWidth) {
-                        IconButton(icon = BezierIcons.Plus, onClick = {}, size = size, variant = variant, isLoading = true)
+                        IconButtonCell(cellWidth) {
+                            IconButton(icon = BezierIcons.Plus, onClick = {}, size = size, variant = variant, semantic = semantic)
+                        }
+                        IconButtonCell(cellWidth) {
+                            IconButton(icon = BezierIcons.Plus, onClick = {}, size = size, variant = variant, semantic = semantic, interactionSource = pressedInteractionSource())
+                        }
+                        IconButtonCell(cellWidth) {
+                            IconButton(icon = BezierIcons.Plus, onClick = {}, size = size, variant = variant, semantic = semantic, isActive = true)
+                        }
+                        IconButtonCell(cellWidth) {
+                            IconButton(icon = BezierIcons.Plus, onClick = {}, size = size, variant = variant, semantic = semantic, enabled = false)
+                        }
+                        IconButtonCell(cellWidth) {
+                            IconButton(icon = BezierIcons.Plus, onClick = {}, size = size, variant = variant, semantic = semantic, isLoading = true)
+                        }
                     }
                 }
             }
@@ -251,23 +326,23 @@ private fun IconButtonCell(width: Dp, content: @Composable () -> Unit) {
     }
 }
 
-@Preview(showBackground = true, widthDp = 700)
+@Preview(showBackground = true, widthDp = 800)
 @Composable
 private fun IconButtonMatrixXsmallPreview() = IconButtonMatrix(IconButtonSize.Xsmall, "xsmall")
 
-@Preview(showBackground = true, widthDp = 700)
+@Preview(showBackground = true, widthDp = 800)
 @Composable
 private fun IconButtonMatrixSmallPreview() = IconButtonMatrix(IconButtonSize.Small, "small")
 
-@Preview(showBackground = true, widthDp = 700)
+@Preview(showBackground = true, widthDp = 800)
 @Composable
 private fun IconButtonMatrixMediumPreview() = IconButtonMatrix(IconButtonSize.Medium, "medium")
 
-@Preview(showBackground = true, widthDp = 700)
+@Preview(showBackground = true, widthDp = 800)
 @Composable
 private fun IconButtonMatrixLargePreview() = IconButtonMatrix(IconButtonSize.Large, "large")
 
-@Preview(showBackground = true, widthDp = 700)
-@Preview(showBackground = true, widthDp = 700, uiMode = UI_MODE_NIGHT_YES)
+@Preview(showBackground = true, widthDp = 800)
+@Preview(showBackground = true, widthDp = 800, uiMode = UI_MODE_NIGHT_YES)
 @Composable
 private fun IconButtonMatrixMediumDarkPreview() = IconButtonMatrix(IconButtonSize.Medium, "medium")
