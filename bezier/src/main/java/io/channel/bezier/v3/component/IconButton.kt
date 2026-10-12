@@ -2,6 +2,7 @@ package io.channel.bezier.v3.component
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.PressInteraction
@@ -53,7 +54,7 @@ fun IconButton(
 ) {
     val colorSpec = iconButtonColorSpec(variant, semantic)
     val isPressed by interactionSource.collectIsPressedAsState()
-    val showOverlay = (isPressed || isActive) && variant == IconButtonVariant.Ghost
+    val showOverlay = (isPressed || isActive) && variant != IconButtonVariant.Filled
     val containerAlpha = if (enabled) 1f else 0.4f
 
     Box(
@@ -67,6 +68,10 @@ fun IconButton(
                     )
                     .then(
                             if (showOverlay) Modifier.background(Color.Black.copy(alpha = 0.05f))
+                            else Modifier,
+                    )
+                    .then(
+                            if (colorSpec.border != null) Modifier.border(width = 1.dp, color = colorSpec.border, shape = CircleShape)
                             else Modifier,
                     )
                     .clickable(
@@ -134,6 +139,7 @@ enum class IconButtonSize {
 enum class IconButtonVariant {
     Ghost,
     Filled,
+    Outlined,
 }
 
 enum class IconButtonSemantic {
@@ -146,6 +152,7 @@ internal data class IconButtonColorSpec(
         val background: Color?,
         val iconColor: Color,
         val spinnerColor: Color,
+        val border: Color?,
 )
 
 @Composable
@@ -157,18 +164,21 @@ internal fun iconButtonColorSpec(variant: IconButtonVariant, semantic: IconButto
                     background = null,
                     iconColor = colors.iconNeutralHeavier,
                     spinnerColor = colors.iconNeutral,
+                    border = null,
             )
 
             IconButtonSemantic.Secondary -> IconButtonColorSpec(
                     background = null,
                     iconColor = colors.iconNeutral,
                     spinnerColor = colors.iconNeutral,
+                    border = null,
             )
 
             IconButtonSemantic.Destructive -> IconButtonColorSpec(
                     background = null,
                     iconColor = colors.textAccentRed,
                     spinnerColor = colors.textAccentRed,
+                    border = null,
             )
         }
 
@@ -177,18 +187,44 @@ internal fun iconButtonColorSpec(variant: IconButtonVariant, semantic: IconButto
                     background = colors.fillNeutralHeaviest,
                     iconColor = colors.iconInverseHeavier,
                     spinnerColor = colors.fillBright,
+                    border = null,
             )
 
             IconButtonSemantic.Secondary -> IconButtonColorSpec(
                     background = colors.fillNeutral,
                     iconColor = colors.iconNeutralHeavy,
                     spinnerColor = colors.fillBright,
+                    border = null,
             )
 
             IconButtonSemantic.Destructive -> IconButtonColorSpec(
                     background = colors.fillAccentRedHeavier,
                     iconColor = colors.iconInverseHeavier,
                     spinnerColor = colors.iconInverseHeavier,
+                    border = null,
+            )
+        }
+
+        IconButtonVariant.Outlined -> when (semantic) {
+            IconButtonSemantic.Primary -> IconButtonColorSpec(
+                    background = null,
+                    iconColor = colors.iconNeutralHeavier,
+                    spinnerColor = colors.iconNeutral,
+                    border = colors.borderNeutral,
+            )
+
+            IconButtonSemantic.Secondary -> IconButtonColorSpec(
+                    background = null,
+                    iconColor = colors.iconNeutral,
+                    spinnerColor = colors.iconNeutral,
+                    border = colors.borderNeutral,
+            )
+
+            IconButtonSemantic.Destructive -> IconButtonColorSpec(
+                    background = null,
+                    iconColor = colors.textAccentRed,
+                    spinnerColor = colors.textAccentRed,
+                    border = colors.borderNeutral,
             )
         }
     }
