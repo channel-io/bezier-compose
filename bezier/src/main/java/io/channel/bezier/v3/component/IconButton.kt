@@ -137,6 +137,7 @@ enum class IconButtonVariant {
 }
 
 enum class IconButtonSemantic {
+    Primary,
     Secondary,
     Destructive,
 }
@@ -152,6 +153,12 @@ internal fun iconButtonColorSpec(variant: IconButtonVariant, semantic: IconButto
     val colors = BezierTheme.colorsV3
     return when (variant) {
         IconButtonVariant.Ghost -> when (semantic) {
+            IconButtonSemantic.Primary -> IconButtonColorSpec(
+                    background = null,
+                    iconColor = colors.iconNeutralHeavier,
+                    spinnerColor = colors.iconNeutral,
+            )
+
             IconButtonSemantic.Secondary -> IconButtonColorSpec(
                     background = null,
                     iconColor = colors.iconNeutral,
@@ -166,6 +173,12 @@ internal fun iconButtonColorSpec(variant: IconButtonVariant, semantic: IconButto
         }
 
         IconButtonVariant.Filled -> when (semantic) {
+            IconButtonSemantic.Primary -> IconButtonColorSpec(
+                    background = colors.fillNeutralHeaviest,
+                    iconColor = colors.iconInverseHeavier,
+                    spinnerColor = colors.fillBright,
+            )
+
             IconButtonSemantic.Secondary -> IconButtonColorSpec(
                     background = colors.fillNeutral,
                     iconColor = colors.iconNeutralHeavy,
