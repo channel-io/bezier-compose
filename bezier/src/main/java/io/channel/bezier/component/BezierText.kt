@@ -14,7 +14,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.takeOrElse
 import io.channel.bezier.BezierTheme
-import io.channel.bezier.extension.ifTrue
 import io.channel.bezier.typography.BezierTypo
 import io.channel.bezier.typography.BezierWeight
 
@@ -99,7 +98,7 @@ private fun resolveBezierTextStyle(
         lineHeight = typo.lineHeight,
         letterSpacing = letterSpacing.takeOrElse { typo.letterSpacing },
         fontWeight = resolvedWeight,
-        fontFamily = typo.isMonospace.ifTrue(FontFamily.Monospace, null),
+        fontFamily = if (typo.isMonospace) FontFamily.Monospace else null,
         color = color,
         textAlign = textAlign ?: TextAlign.Unspecified,
         textDecoration = textDecoration,
