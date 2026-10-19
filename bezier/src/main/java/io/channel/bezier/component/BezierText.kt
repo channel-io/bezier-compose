@@ -32,24 +32,16 @@ fun BezierText(
     minLines: Int = 1,
     letterSpacing: TextUnit = TextUnit.Unspecified,
 ) {
-    val resolvedWeight = typo.fixedWeight ?: when (weight) {
-        BezierWeight.Regular -> FontWeight.Normal
-        BezierWeight.Medium -> FontWeight.Medium
-        BezierWeight.Bold -> FontWeight.Bold
-    }
-
     Text(
         text = text,
         modifier = modifier,
-        style = TextStyle(
-            fontSize = typo.fontSize,
-            lineHeight = typo.lineHeight,
-            letterSpacing = letterSpacing.takeOrElse { typo.letterSpacing },
-            fontWeight = resolvedWeight,
-            fontFamily = typo.isMonospace.ifTrue(FontFamily.Monospace, null),
+        style = resolveBezierTextStyle(
+            typo = typo,
+            weight = weight,
             color = color,
-            textAlign = textAlign ?: TextAlign.Unspecified,
+            textAlign = textAlign,
             textDecoration = textDecoration,
+            letterSpacing = letterSpacing,
         ),
         overflow = overflow,
         maxLines = maxLines,
@@ -71,27 +63,45 @@ fun BezierText(
     minLines: Int = 1,
     letterSpacing: TextUnit = TextUnit.Unspecified,
 ) {
+    Text(
+        text = text,
+        modifier = modifier,
+        style = resolveBezierTextStyle(
+            typo = typo,
+            weight = weight,
+            color = color,
+            textAlign = textAlign,
+            textDecoration = textDecoration,
+            letterSpacing = letterSpacing,
+        ),
+        overflow = overflow,
+        maxLines = maxLines,
+        minLines = minLines,
+    )
+}
+
+private fun resolveBezierTextStyle(
+    typo: BezierTypo,
+    weight: BezierWeight,
+    color: Color,
+    textAlign: TextAlign?,
+    textDecoration: TextDecoration?,
+    letterSpacing: TextUnit,
+): TextStyle {
     val resolvedWeight = typo.fixedWeight ?: when (weight) {
         BezierWeight.Regular -> FontWeight.Normal
         BezierWeight.Medium -> FontWeight.Medium
         BezierWeight.Bold -> FontWeight.Bold
     }
 
-    Text(
-        text = text,
-        modifier = modifier,
-        style = TextStyle(
-            fontSize = typo.fontSize,
-            lineHeight = typo.lineHeight,
-            letterSpacing = letterSpacing.takeOrElse { typo.letterSpacing },
-            fontWeight = resolvedWeight,
-            fontFamily = typo.isMonospace.ifTrue(FontFamily.Monospace, null),
-            color = color,
-            textAlign = textAlign ?: TextAlign.Unspecified,
-            textDecoration = textDecoration,
-        ),
-        overflow = overflow,
-        maxLines = maxLines,
-        minLines = minLines,
+    return TextStyle(
+        fontSize = typo.fontSize,
+        lineHeight = typo.lineHeight,
+        letterSpacing = letterSpacing.takeOrElse { typo.letterSpacing },
+        fontWeight = resolvedWeight,
+        fontFamily = typo.isMonospace.ifTrue(FontFamily.Monospace, null),
+        color = color,
+        textAlign = textAlign ?: TextAlign.Unspecified,
+        textDecoration = textDecoration,
     )
 }
