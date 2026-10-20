@@ -10,7 +10,12 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -32,6 +37,41 @@ fun ConfirmModal(
         onDismissRequest: () -> Unit,
         modifier: Modifier = Modifier,
         description: String? = null,
+        cancelText: String? = null,
+        onCancelClick: () -> Unit = {},
+        altActionText: String? = null,
+        onAltActionClick: () -> Unit = {},
+        destructive: Boolean = false,
+        buttonLayout: ConfirmModalButtonLayout = ConfirmModalButtonLayout.Horizontal,
+        cancellable: Boolean = true,
+        customContent: (@Composable () -> Unit)? = null,
+) {
+    ConfirmModal(
+            title = AnnotatedString(title),
+            confirmText = confirmText,
+            onConfirmClick = onConfirmClick,
+            onDismissRequest = onDismissRequest,
+            modifier = modifier,
+            description = description?.let { AnnotatedString(it) },
+            cancelText = cancelText,
+            onCancelClick = onCancelClick,
+            altActionText = altActionText,
+            onAltActionClick = onAltActionClick,
+            destructive = destructive,
+            buttonLayout = buttonLayout,
+            cancellable = cancellable,
+            customContent = customContent,
+    )
+}
+
+@Composable
+fun ConfirmModal(
+        title: AnnotatedString,
+        confirmText: String,
+        onConfirmClick: () -> Unit,
+        onDismissRequest: () -> Unit,
+        modifier: Modifier = Modifier,
+        description: AnnotatedString? = null,
         cancelText: String? = null,
         onCancelClick: () -> Unit = {},
         altActionText: String? = null,
@@ -72,8 +112,8 @@ fun ConfirmModal(
 
 @Composable
 private fun ConfirmModalContent(
-        title: String,
-        description: String?,
+        title: AnnotatedString,
+        description: AnnotatedString?,
 ) {
     val textColor = BezierTheme.colorsV3.textNeutral
 
@@ -203,8 +243,8 @@ private fun ConfirmModalPreviewContent(
         ) {
             ModalLayout {
                 ConfirmModalContent(
-                        title = "Dialog Title",
-                        description = "Description text goes here.",
+                        title = AnnotatedString("Dialog Title"),
+                        description = AnnotatedString("Description text goes here."),
                 )
 
                 ConfirmModalButtons(
@@ -274,3 +314,38 @@ private fun ConfirmModalDarkPreview() = ConfirmModalPreviewContent(
         destructive = false,
         buttonLayout = ConfirmModalButtonLayout.Horizontal,
 )
+
+@Preview(showBackground = true)
+@Composable
+private fun ConfirmModalAnnotatedStringPreview() {
+    BezierTheme {
+        ModalLayout {
+            ConfirmModalContent(
+                    title = buildAnnotatedString {
+                        append("Delete ")
+                        withStyle(SpanStyle(color = BezierTheme.colorsV3.textNeutralLight)) {
+                            append("this item")
+                        }
+                        append("?")
+                    },
+                    description = buildAnnotatedString {
+                        append("This action ")
+                        withStyle(SpanStyle(fontWeight = FontWeight.Bold)) {
+                            append("cannot be undone")
+                        }
+                        append(".")
+                    },
+            )
+            ConfirmModalButtons(
+                    confirmText = "Delete",
+                    onConfirmClick = {},
+                    cancelText = "Cancel",
+                    onCancelClick = {},
+                    altActionText = null,
+                    onAltActionClick = {},
+                    destructive = true,
+                    buttonLayout = ConfirmModalButtonLayout.Horizontal,
+            )
+        }
+    }
+}
