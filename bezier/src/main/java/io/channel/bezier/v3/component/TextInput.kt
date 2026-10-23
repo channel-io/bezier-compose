@@ -46,6 +46,7 @@ import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.color.BezierSemanticColorV3
 import io.channel.bezier.component.BezierText
+import io.channel.bezier.component.rememberStringTextFieldValue
 import io.channel.bezier.icon.CancelCircleFilled
 import io.channel.bezier.icon.View
 import io.channel.bezier.icon.ViewOff
@@ -103,9 +104,11 @@ fun TextInput(
         VisualTransformation.None
     }
 
+    val (textFieldValue, onTextFieldValueChange) = rememberStringTextFieldValue(value, onValueChange)
+
     BasicTextField(
-            value = value,
-            onValueChange = onValueChange,
+            value = textFieldValue,
+            onValueChange = onTextFieldValueChange,
             modifier = modifier
                     .height(size.height)
                     .widthIn(min = MinWidth)
