@@ -22,11 +22,15 @@ internal fun rememberStringTextFieldValue(
         textFieldValueState.copy(text = value, selection = TextRange(value.length))
     }
 
+    var lastTextValue by remember(value) { mutableStateOf(value) }
+
     return textFieldValue to { newTextFieldValue: TextFieldValue ->
-        val lastText = textFieldValue.text
         textFieldValueState = newTextFieldValue
 
-        if (lastText != newTextFieldValue.text) {
+        val textChangedSinceLastInvocation = lastTextValue != newTextFieldValue.text
+        lastTextValue = newTextFieldValue.text
+
+        if (textChangedSinceLastInvocation) {
             onValueChange(newTextFieldValue.text)
         }
     }
