@@ -97,11 +97,11 @@ fun BaseItem(
 }
 
 enum class BaseItemSize(
-        val minHeight: Dp,
-        val horizontalPadding: Dp,
-        val verticalPadding: Dp,
-        val leadingContentSize: Dp,
-        val supportsDescription: Boolean,
+        internal val minHeight: Dp,
+        internal val horizontalPadding: Dp,
+        internal val verticalPadding: Dp,
+        internal val leadingContentSize: Dp,
+        internal val supportsDescription: Boolean,
 ) {
     Small(
             minHeight = 40.dp,
