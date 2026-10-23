@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.color.BezierSemanticColorV3
 import io.channel.bezier.component.BezierText
+import io.channel.bezier.component.rememberStringTextFieldValue
 import io.channel.bezier.typography.BezierTypo
 
 @Composable
@@ -56,9 +57,11 @@ fun TextArea(
         else -> TextAreaState.Default
     }
 
+    val (textFieldValue, onTextFieldValueChange) = rememberStringTextFieldValue(value, onValueChange)
+
     BasicTextField(
-            value = value,
-            onValueChange = onValueChange,
+            value = textFieldValue,
+            onValueChange = onTextFieldValueChange,
             modifier = modifier
                     .fillMaxWidth()
                     .widthIn(min = TextAreaMinWidth)
