@@ -240,9 +240,9 @@ enum class TextInputVariant {
 }
 
 enum class TextInputSize(
-        val height: Dp,
-        val verticalPadding: Dp,
-        val cornerRadius: Dp,
+        internal val height: Dp,
+        internal val verticalPadding: Dp,
+        internal val cornerRadius: Dp,
 ) {
     Small(height = 40.dp, verticalPadding = 5.dp, cornerRadius = 12.dp),
     Medium(height = 48.dp, verticalPadding = 7.dp, cornerRadius = 14.dp),
