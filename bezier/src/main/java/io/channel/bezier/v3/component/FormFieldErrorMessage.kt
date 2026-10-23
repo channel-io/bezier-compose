@@ -23,7 +23,7 @@ import io.channel.bezier.icon.ErrorDiamondFilled
 import io.channel.bezier.typography.BezierTypo
 
 @Composable
-fun FormFieldErrorMessage(
+internal fun FormFieldErrorMessage(
         text: String,
         modifier: Modifier = Modifier,
 ) {
