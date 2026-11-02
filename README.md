@@ -4,7 +4,12 @@ ChannelTalk의 Bezier DesignSystem을 Jetpack Compose로 구현한 레포지토�
 
 ## 요구 사항
 
-minSdk = 21
+minSdk = 23
+
+## KMP 전환
+
+Android·Wasm·iOS 타깃 구성과 컴파일 검증은 [KMP 빌드 가이드](KMP.md)를 참고해주세요.
+공유 API는 단계적으로 전환 중이며 전체 컴포넌트의 브라우저 지원은 아직 완료되지 않았습니다.
 
 ## 설치하기
 
