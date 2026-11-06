@@ -1,3 +1,4 @@
+import org.gradle.api.component.ComponentWithVariants
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -66,4 +67,13 @@ androidComponents {
 
 composeCompiler {
     reportsDestination = layout.buildDirectory.dir("compose_compiler")
+}
+
+gradle.projectsEvaluated {
+    publishing.publications.create<MavenPublication>("androidCompatibility") {
+        // 기존 Android 소비자의 com.github.channel-io:bezier-compose 좌표 호환성을 유지합니다.
+        artifactId = "bezier-compose"
+        val multiplatform = components["kotlin"] as ComponentWithVariants
+        from(multiplatform.variants.single { it.name == "android" })
+    }
 }
