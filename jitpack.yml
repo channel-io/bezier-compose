@@ -1,2 +1,8 @@
 jdk:
   - openjdk17
+
+# Keep the legacy Android coordinate compatible. Publishing all KMP targets here
+# makes JitPack replace it with an aggregate POM containing incompatible platforms.
+# Publish the other KMP targets through the distribution setup in MOB-8416.
+install:
+  - ./gradlew :bezier:publishAndroidPublicationToMavenLocal -Pgroup="$GROUP" -Pversion="$VERSION"

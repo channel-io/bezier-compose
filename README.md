@@ -4,7 +4,7 @@ ChannelTalk의 Bezier DesignSystem을 Jetpack Compose로 구현한 레포지토�
 
 ## 요구 사항
 
-minSdk = 21
+minSdk = 23
 
 ## 설치하기
 
