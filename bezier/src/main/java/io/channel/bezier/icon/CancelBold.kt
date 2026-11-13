@@ -40,7 +40,7 @@ val BezierIcons.CancelBold: BezierIcon
                     arcTo(1.5f, 1.5f, 224.991348337162f, isMoreThanHalf = false, isPositiveArc = false, 4.929f, 7.050000000000001f)
                     lineTo(9.879f, 12.0f)
                     lineTo(4.928999999999999f, 16.95f)
-                    arcTo(1.5f, 1.5f, 223.39306813951018f, isMoreThanHalf = false, isPositiveArc = false, 7.05f, 19.07f)
+                    arcTo(1.5f, 1.5f, 226.5799119225265f, isMoreThanHalf = true, isPositiveArc = false, 7.05f, 19.07f)
                     lineTo(12.0f, 14.120000000000001f)
                     lineTo(16.95f, 19.07f)
                     arcTo(1.5f, 1.5f, 134.00425538641872f, isMoreThanHalf = false, isPositiveArc = false, 19.070999999999998f, 16.949f)

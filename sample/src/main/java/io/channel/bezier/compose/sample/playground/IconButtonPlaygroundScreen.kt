@@ -25,6 +25,7 @@ import io.channel.bezier.BezierTheme
 import io.channel.bezier.icon.ArrowLeft
 import io.channel.bezier.icon.Plus
 import io.channel.bezier.v3.component.IconButton
+import io.channel.bezier.v3.component.IconButtonSemantic
 import io.channel.bezier.v3.component.IconButtonSize
 import io.channel.bezier.v3.component.IconButtonVariant
 
@@ -32,6 +33,7 @@ import io.channel.bezier.v3.component.IconButtonVariant
 fun IconButtonPlaygroundScreen(onBack: () -> Unit) {
     var size by remember { mutableStateOf(IconButtonSize.Medium) }
     var variant by remember { mutableStateOf(IconButtonVariant.Ghost) }
+    var semantic by remember { mutableStateOf(IconButtonSemantic.Secondary) }
     var isActive by remember { mutableStateOf(false) }
     var isLoading by remember { mutableStateOf(false) }
     var enabled by remember { mutableStateOf(true) }
@@ -70,6 +72,7 @@ fun IconButtonPlaygroundScreen(onBack: () -> Unit) {
                         onClick = {},
                         size = size,
                         variant = variant,
+                        semantic = semantic,
                         isActive = isActive,
                         isLoading = isLoading,
                         enabled = enabled,
@@ -81,6 +84,7 @@ fun IconButtonPlaygroundScreen(onBack: () -> Unit) {
 
             EnumControl("Size", IconButtonSize.values(), size) { size = it }
             EnumControl("Variant", IconButtonVariant.values(), variant) { variant = it }
+            EnumControl("Semantic", IconButtonSemantic.values(), semantic) { semantic = it }
             BooleanControl("isActive", isActive) { isActive = it }
             BooleanControl("isLoading", isLoading) { isLoading = it }
             BooleanControl("enabled", enabled) { enabled = it }

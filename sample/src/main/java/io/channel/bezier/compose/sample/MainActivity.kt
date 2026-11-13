@@ -1,5 +1,6 @@
 package io.channel.bezier.compose.sample
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -21,22 +22,46 @@ import io.channel.bezier.compose.sample.playground.AvatarPlaygroundKey
 import io.channel.bezier.compose.sample.playground.AvatarPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.BadgePlaygroundKey
 import io.channel.bezier.compose.sample.playground.BadgePlaygroundScreen
+import io.channel.bezier.compose.sample.playground.BannerPlaygroundKey
+import io.channel.bezier.compose.sample.playground.BannerPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.BaseItemPlaygroundKey
+import io.channel.bezier.compose.sample.playground.BaseItemPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.ButtonPlaygroundKey
 import io.channel.bezier.compose.sample.playground.ButtonPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.BottomSheetContentPlaygroundKey
 import io.channel.bezier.compose.sample.playground.BottomSheetContentPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.CardPlaygroundKey
 import io.channel.bezier.compose.sample.playground.CardPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.CheckboxPlaygroundKey
+import io.channel.bezier.compose.sample.playground.CheckboxPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.TextAreaPlaygroundKey
+import io.channel.bezier.compose.sample.playground.TextAreaPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.TextInputPlaygroundKey
 import io.channel.bezier.compose.sample.playground.TextInputPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.ComponentListKey
 import io.channel.bezier.compose.sample.playground.ComponentListScreen
 import io.channel.bezier.compose.sample.playground.DividerPlaygroundKey
 import io.channel.bezier.compose.sample.playground.DividerPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.DropdownMenuPlaygroundKey
+import io.channel.bezier.compose.sample.playground.DropdownMenuPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.FloatingBannerPlaygroundKey
+import io.channel.bezier.compose.sample.playground.FloatingBannerPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.IconButtonPlaygroundKey
 import io.channel.bezier.compose.sample.playground.IconButtonPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.ItemsPlaygroundKey
+import io.channel.bezier.compose.sample.playground.ItemsPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.ConfirmModalPlaygroundKey
+import io.channel.bezier.compose.sample.playground.ConfirmModalPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.ModalPlaygroundKey
+import io.channel.bezier.compose.sample.playground.ModalPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.SearchPlaygroundKey
+import io.channel.bezier.compose.sample.playground.SearchPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.ProgressBarPlaygroundKey
 import io.channel.bezier.compose.sample.playground.ProgressBarPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.CollapsibleSectionPlaygroundKey
+import io.channel.bezier.compose.sample.playground.CollapsibleSectionPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.SectionPlaygroundKey
+import io.channel.bezier.compose.sample.playground.SectionPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.SpinnerPlaygroundKey
 import io.channel.bezier.compose.sample.playground.SpinnerPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.StatusPlaygroundKey
@@ -52,6 +77,11 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
+
+        // Toast 처럼 전역 BezierTheme.isDark 를 읽는 컴포넌트가 있어 시스템 테마를 전역에 반영한다.
+        BezierTheme.isDark = (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) ==
+                Configuration.UI_MODE_NIGHT_YES
+
         setContent {
             PlaygroundApp()
         }
@@ -87,7 +117,19 @@ private fun PlaygroundApp() {
                                     onSelectDivider = { backStack.add(DividerPlaygroundKey) },
                                     onSelectToast = { backStack.add(ToastPlaygroundKey) },
                                     onSelectCard = { backStack.add(CardPlaygroundKey) },
+                                    onSelectSection = { backStack.add(SectionPlaygroundKey) },
+                                    onSelectCollapsibleSection = { backStack.add(CollapsibleSectionPlaygroundKey) },
                                     onSelectTextInput = { backStack.add(TextInputPlaygroundKey) },
+                                    onSelectBanner = { backStack.add(BannerPlaygroundKey) },
+                                    onSelectBaseItem = { backStack.add(BaseItemPlaygroundKey) },
+                                    onSelectCheckbox = { backStack.add(CheckboxPlaygroundKey) },
+                                    onSelectFloatingBanner = { backStack.add(FloatingBannerPlaygroundKey) },
+                                    onSelectItems = { backStack.add(ItemsPlaygroundKey) },
+                                    onSelectTextArea = { backStack.add(TextAreaPlaygroundKey) },
+                                    onSelectModal = { backStack.add(ModalPlaygroundKey) },
+                                    onSelectConfirmModal = { backStack.add(ConfirmModalPlaygroundKey) },
+                                    onSelectSearch = { backStack.add(SearchPlaygroundKey) },
+                                    onSelectDropdownMenu = { backStack.add(DropdownMenuPlaygroundKey) },
                                     onSelectBottomSheetContent = { backStack.add(BottomSheetContentPlaygroundKey) },
                             )
                         }
@@ -130,8 +172,44 @@ private fun PlaygroundApp() {
                         entry<CardPlaygroundKey> {
                             CardPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
                         }
+                        entry<SectionPlaygroundKey> {
+                            SectionPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<CollapsibleSectionPlaygroundKey> {
+                            CollapsibleSectionPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
                         entry<TextInputPlaygroundKey> {
                             TextInputPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<BannerPlaygroundKey> {
+                            BannerPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<BaseItemPlaygroundKey> {
+                            BaseItemPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<CheckboxPlaygroundKey> {
+                            CheckboxPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<FloatingBannerPlaygroundKey> {
+                            FloatingBannerPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<ItemsPlaygroundKey> {
+                            ItemsPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<TextAreaPlaygroundKey> {
+                            TextAreaPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<ModalPlaygroundKey> {
+                            ModalPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<ConfirmModalPlaygroundKey> {
+                            ConfirmModalPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<SearchPlaygroundKey> {
+                            SearchPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<DropdownMenuPlaygroundKey> {
+                            DropdownMenuPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
                         }
                         entry<BottomSheetContentPlaygroundKey> {
                             BottomSheetContentPlaygroundScreen(onBack = { backStack.removeLastOrNull() })

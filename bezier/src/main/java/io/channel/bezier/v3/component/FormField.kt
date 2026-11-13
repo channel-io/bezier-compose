@@ -30,7 +30,7 @@ enum class FormFieldLabelPosition {
 }
 
 @Composable
-internal fun FormField(
+fun FormField(
         labelPosition: FormFieldLabelPosition = FormFieldLabelPosition.Top,
         label: String? = null,
         description: String? = null,

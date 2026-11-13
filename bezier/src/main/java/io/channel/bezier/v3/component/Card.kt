@@ -1,6 +1,5 @@
 package io.channel.bezier.v3.component
 
-import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -30,7 +29,7 @@ fun Card(
     Column(
             modifier = modifier
                     .clip(shape)
-                    .background(BezierTheme.colorsV3.surface)
+                    .background(BezierTheme.colorsV3.surfaceHigh)
                     .border(
                             width = CardBorderWidth,
                             color = BezierTheme.colorsV3.borderNeutral,
@@ -49,25 +48,23 @@ private val CardVerticalPadding: Dp = 2.dp
 
 @Composable
 private fun CardPreviewContent() {
-    BezierTheme {
-        Column(
-                modifier = Modifier
-                        .background(BezierTheme.colorsV3.surfaceLow)
-                        .padding(24.dp),
-                verticalArrangement = Arrangement.spacedBy(16.dp),
-        ) {
-            Card(modifier = Modifier.width(320.dp)) {
-                Box(
-                        modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(16.dp),
-                ) {
-                    BezierText(
-                            text = "Card content",
-                            typo = BezierTypo.TextMedium,
-                            color = BezierTheme.colorsV3.textNeutral,
-                    )
-                }
+    Column(
+            modifier = Modifier
+                    .background(BezierTheme.colorsV3.surfaceLow)
+                    .padding(24.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+    ) {
+        Card(modifier = Modifier.width(320.dp)) {
+            Box(
+                    modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(16.dp),
+            ) {
+                BezierText(
+                        text = "Card content",
+                        typo = BezierTypo.TextMedium,
+                        color = BezierTheme.colorsV3.textNeutral,
+                )
             }
         }
     }
@@ -77,6 +74,12 @@ private fun CardPreviewContent() {
 @Composable
 private fun CardPreview() = CardPreviewContent()
 
-@Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES)
+@Preview(showBackground = true)
 @Composable
-private fun CardDarkPreview() = CardPreviewContent()
+private fun CardDarkPreview() {
+    BezierTheme(
+            isDark = true,
+    ) {
+        CardPreviewContent()
+    }
+}

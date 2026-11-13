@@ -43,7 +43,7 @@ val BezierIcons.CheckCircleFilled: BezierIcon
                     lineTo(9.684f, 15.979999999999999f)
                     curveTo(10.078999999999999f, 16.36f, 10.700999999999999f, 16.363f, 11.1f, 15.987999999999998f)
                     lineTo(17.221f, 10.235999999999997f)
-                    arcTo(1.0f, 1.0f, 48.35026838514163f, isMoreThanHalf = true, isPositiveArc = false, 15.852f, 8.778999999999996f)
+                    arcTo(1.0f, 1.0f, 45.216893578305914f, isMoreThanHalf = false, isPositiveArc = false, 15.852f, 8.778999999999996f)
                     close()
                     moveTo(12.0f, 2.0f)
                     curveTo(6.486f, 2.0f, 2.0f, 6.486f, 2.0f, 12.0f)

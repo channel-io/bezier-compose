@@ -38,6 +38,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
+import io.channel.bezier.interaction.BezierComponentInteraction
 
 @Composable
 fun Banner(
@@ -97,7 +98,12 @@ fun Banner(
             leftIcon = icon,
             leftIconColor = iconColor,
             rightIcon = null,
-            onClick = onClick,
+            onClick = onClick?.let { original ->
+                {
+                    BezierComponentInteraction.notify("Banner", "V1", null)
+                    original.invoke()
+                }
+            },
             onRemove = onRemove,
             content = content,
     )
@@ -133,7 +139,12 @@ fun Banner(
             leftIcon = icon,
             leftIconColor = iconColor,
             rightIcon = null,
-            onClick = onClick,
+            onClick = onClick?.let { original ->
+                {
+                    BezierComponentInteraction.notify("Banner", "V1", description)
+                    original.invoke()
+                }
+            },
             onRemove = onRemove,
             content = content,
     )
@@ -166,7 +177,12 @@ fun Banner(
             leftIcon = leftIcon,
             leftIconColor = leftIconColor,
             rightIcon = rightIcon,
-            onClick = onClick,
+            onClick = onClick?.let { original ->
+                {
+                    BezierComponentInteraction.notify("Banner", "V1", null)
+                    original.invoke()
+                }
+            },
             onRemove = onRemove,
             content = content,
     )
@@ -199,7 +215,12 @@ fun Banner(
             leftIcon = leftIcon,
             leftIconColor = leftIconColor,
             rightIcon = rightIcon,
-            onClick = onClick,
+            onClick = onClick?.let { original ->
+                {
+                    BezierComponentInteraction.notify("Banner", "V1", description)
+                    original.invoke()
+                }
+            },
             onRemove = onRemove,
             content = content,
     )
@@ -288,7 +309,10 @@ private fun BannerLayout(
                             .clickable(
                                     interactionSource = remember { MutableInteractionSource() },
                                     indication = null,
-                                    onClick = onRemove,
+                                    onClick = {
+                                        BezierComponentInteraction.notify("Banner", "V1", null)
+                                        onRemove.invoke()
+                                    },
                             )
                             .padding(5.dp),
                     painter = painterResource(id = R.drawable.icon_cancel_small),

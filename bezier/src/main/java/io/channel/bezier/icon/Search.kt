@@ -43,7 +43,7 @@ val BezierIcons.Search: BezierIcon
                     arcTo(1.0f, 1.0f, 315.02025216075623f, isMoreThanHalf = true, isPositiveArc = true, 20.293000000000003f, 21.707f)
                     lineTo(14.903000000000002f, 16.317f)
                     arcTo(7.96f, 7.96f, 52.051827371120076f, isMoreThanHalf = false, isPositiveArc = true, 10.0f, 18.0f)
-                    arcTo(8.0f, 8.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 10.0f, 2.0f)
+                    arcTo(8.0f, 8.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 10.0f, 2.0f)
                     moveTo(10.0f, 4.0f)
                     arcTo(6.0f, 6.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 10.0f, 16.0f)
                     arcTo(6.0f, 6.0f, 90.0f, isMoreThanHalf = false, isPositiveArc = false, 10.0f, 4.0f)

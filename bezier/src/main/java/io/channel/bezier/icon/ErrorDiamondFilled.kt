@@ -60,7 +60,7 @@ val BezierIcons.ErrorDiamondFilled: BezierIcon
                     moveTo(12.0f, 6.0f)
                     arcTo(1.41f, 1.41f, 269.9466312037831f, isMoreThanHalf = false, isPositiveArc = false, 10.594f, 7.497f)
                     lineTo(10.937999999999999f, 13.001999999999999f)
-                    arcTo(1.064f, 1.064f, 176.48641983994528f, isMoreThanHalf = false, isPositiveArc = false, 13.062f, 13.001999999999999f)
+                    arcTo(1.065f, 1.065f, 175.69844526474122f, isMoreThanHalf = false, isPositiveArc = false, 13.062f, 13.001999999999999f)
                     lineTo(13.405999999999999f, 7.496999999999999f)
                     arcTo(1.41f, 1.41f, 3.5375434763154434f, isMoreThanHalf = false, isPositiveArc = false, 12.0f, 6.0f)
                 }

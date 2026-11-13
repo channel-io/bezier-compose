@@ -35,7 +35,6 @@ val BezierIcons.ListToggle: BezierIcon
                 path(
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
-                        pathFillType = PathFillType.EvenOdd,
                 ) {
                     moveTo(2.5f, 17.196f)
                     curveTo(2.5f, 16.904f, 2.825f, 16.73f, 3.068f, 16.892000000000003f)

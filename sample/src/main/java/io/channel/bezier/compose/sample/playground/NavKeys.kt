@@ -14,5 +14,17 @@ data object SwitchPlaygroundKey
 data object DividerPlaygroundKey
 data object ToastPlaygroundKey
 data object CardPlaygroundKey
+data object SectionPlaygroundKey
+data object CollapsibleSectionPlaygroundKey
 data object TextInputPlaygroundKey
+data object BannerPlaygroundKey
+data object BaseItemPlaygroundKey
+data object CheckboxPlaygroundKey
+data object FloatingBannerPlaygroundKey
+data object ItemsPlaygroundKey
+data object TextAreaPlaygroundKey
+data object ModalPlaygroundKey
+data object ConfirmModalPlaygroundKey
+data object SearchPlaygroundKey
+data object DropdownMenuPlaygroundKey
 data object BottomSheetContentPlaygroundKey

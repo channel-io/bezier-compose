@@ -58,7 +58,7 @@ val BezierIcons.Typography: BezierIcon
                     lineTo(18.0f, 5.0f)
                     arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 19.0f, 6.0f)
                     lineTo(19.0f, 7.0f)
-                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = false, isPositiveArc = false, 21.0f, 7.0f)
+                    arcTo(1.0f, 1.0f, 180.0f, isMoreThanHalf = true, isPositiveArc = false, 21.0f, 7.0f)
                     lineTo(21.0f, 4.0f)
                     arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 20.0f, 3.0f)
                     close()

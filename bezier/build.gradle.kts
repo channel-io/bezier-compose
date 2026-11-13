@@ -1,65 +1,69 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
-    alias(libs.plugins.androidLibrary)
-    alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.kotlinMultiplatform)
+    alias(libs.plugins.androidMultiplatformLibrary)
+    alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     `maven-publish`
 }
 
-android {
-    namespace = "io.channel.bezier.compose"
-    compileSdk = 36
-
-    defaultConfig {
+kotlin {
+    android {
+        namespace = "io.channel.bezier.compose"
+        compileSdk = 36
         minSdk = 23
+        compilerOptions { jvmTarget.set(JvmTarget.JVM_17) }
+        androidResources.enable = true
+        withHostTest {}
+        withDeviceTest {
+            instrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        }
+    }
+    @OptIn(org.jetbrains.kotlin.gradle.ExperimentalWasmDsl::class)
+    wasmJs { browser() }
+    iosArm64()
+    iosSimulatorArm64()
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
+    sourceSets {
+        commonMain.dependencies {
+            api(libs.multiplatform.foundation)
+            api(libs.multiplatform.ui)
+        }
+        commonTest.dependencies { implementation(kotlin("test")) }
+        androidMain {
+            // MOB-8411..8414에서 점진적으로 이동할 기존 Android 구현입니다.
+            kotlin.srcDir("src/main/java")
+            dependencies {
+                implementation(libs.core.ktx)
+                implementation(libs.material)
+                implementation(libs.ui.tooling.preview)
+                implementation(libs.coil)
+                implementation(libs.coil.gif)
+            }
+        }
+        getByName("androidHostTest") {
+            kotlin.srcDir("src/test/java")
+            dependencies { implementation(libs.junit) }
+        }
+        getByName("androidDeviceTest") {
+            kotlin.srcDir("src/androidTest/java")
+            dependencies {
+                implementation(libs.androidx.test.ext.junit)
+                implementation(libs.espresso.core)
+                implementation(libs.ui.test.junit4)
+            }
+        }
     }
+}
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = "17"
-    }
-    buildFeatures {
-        compose = true
+androidComponents {
+    onVariants { variant ->
+        // 아이콘 생성기와 기존 XML 소비자의 경로를 유지합니다.
+        variant.sources.res?.addStaticSourceDirectory("src/main/res")
     }
 }
 
 composeCompiler {
     reportsDestination = layout.buildDirectory.dir("compose_compiler")
-}
-
-dependencies {
-    implementation(libs.core.ktx)
-
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
-
-    // compose
-    implementation(platform(libs.compose.bom))
-    implementation(libs.ui)
-    implementation(libs.ui.graphics)
-    implementation(libs.ui.tooling.preview)
-    implementation(libs.material)
-    implementation(libs.coil)
-    implementation(libs.coil.gif)
-
-    debugImplementation(libs.ui.tooling)
-    androidTestImplementation(platform(libs.compose.bom))
-    androidTestImplementation(libs.ui.test.junit4)
-}
-
-
-afterEvaluate {
-    publishing {
-        publications {
-            register<MavenPublication>("release") {
-                from(components["release"])
-            }
-        }
-    }
 }

@@ -30,7 +30,19 @@ fun ComponentListScreen(
         onSelectDivider: () -> Unit,
         onSelectToast: () -> Unit,
         onSelectCard: () -> Unit,
+        onSelectSection: () -> Unit,
+        onSelectCollapsibleSection: () -> Unit,
         onSelectTextInput: () -> Unit,
+        onSelectBanner: () -> Unit,
+        onSelectBaseItem: () -> Unit,
+        onSelectCheckbox: () -> Unit,
+        onSelectFloatingBanner: () -> Unit,
+        onSelectItems: () -> Unit,
+        onSelectTextArea: () -> Unit,
+        onSelectModal: () -> Unit,
+        onSelectConfirmModal: () -> Unit,
+        onSelectSearch: () -> Unit,
+        onSelectDropdownMenu: () -> Unit,
         onSelectBottomSheetContent: () -> Unit,
 ) {
     Scaffold(
@@ -72,7 +84,31 @@ fun ComponentListScreen(
             Divider()
             ComponentRow("Card", onClick = onSelectCard)
             Divider()
+            ComponentRow("Section", onClick = onSelectSection)
+            Divider()
+            ComponentRow("CollapsibleSection", onClick = onSelectCollapsibleSection)
+            Divider()
             ComponentRow("TextInput", onClick = onSelectTextInput)
+            Divider()
+            ComponentRow("Banner", onClick = onSelectBanner)
+            Divider()
+            ComponentRow("BaseItem", onClick = onSelectBaseItem)
+            Divider()
+            ComponentRow("Checkbox", onClick = onSelectCheckbox)
+            Divider()
+            ComponentRow("FloatingBanner", onClick = onSelectFloatingBanner)
+            Divider()
+            ComponentRow("Items", onClick = onSelectItems)
+            Divider()
+            ComponentRow("TextArea", onClick = onSelectTextArea)
+            Divider()
+            ComponentRow("Modal", onClick = onSelectModal)
+            Divider()
+            ComponentRow("ConfirmModal", onClick = onSelectConfirmModal)
+            Divider()
+            ComponentRow("Search", onClick = onSelectSearch)
+            Divider()
+            ComponentRow("DropdownMenu", onClick = onSelectDropdownMenu)
             Divider()
             ComponentRow("BottomSheetContent", onClick = onSelectBottomSheetContent)
             Divider()

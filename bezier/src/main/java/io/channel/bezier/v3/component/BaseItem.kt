@@ -18,12 +18,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.component.BezierText
+import io.channel.bezier.interaction.interactionComponent
 import io.channel.bezier.typography.BezierTypo
 
 @Composable
@@ -38,6 +40,7 @@ fun BaseItem(
 ) {
     Row(
             modifier = modifier
+                    .semantics { interactionComponent = "BaseItem" }
                     .clip(RoundedCornerShape(BaseItemCornerRadius))
                     .heightIn(min = size.minHeight)
                     .padding(
@@ -94,11 +97,11 @@ fun BaseItem(
 }
 
 enum class BaseItemSize(
-        val minHeight: Dp,
-        val horizontalPadding: Dp,
-        val verticalPadding: Dp,
-        val leadingContentSize: Dp,
-        val supportsDescription: Boolean,
+        internal val minHeight: Dp,
+        internal val horizontalPadding: Dp,
+        internal val verticalPadding: Dp,
+        internal val leadingContentSize: Dp,
+        internal val supportsDescription: Boolean,
 ) {
     Small(
             minHeight = 40.dp,

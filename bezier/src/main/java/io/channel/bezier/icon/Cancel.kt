@@ -37,7 +37,7 @@ val BezierIcons.Cancel: BezierIcon
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(19.071f, 6.343f)
-                    arcTo(1.0f, 1.0f, 44.004255386422344f, isMoreThanHalf = false, isPositiveArc = false, 17.657f, 4.929f)
+                    arcTo(1.0f, 1.0f, 45.995744613577585f, isMoreThanHalf = true, isPositiveArc = false, 17.657f, 4.929f)
                     lineTo(12.0f, 10.586f)
                     lineTo(6.343f, 4.929f)
                     arcTo(1.0f, 1.0f, 313.1596653490923f, isMoreThanHalf = false, isPositiveArc = false, 4.93f, 6.343f)
@@ -46,7 +46,7 @@ val BezierIcons.Cancel: BezierIcon
                     arcTo(1.0f, 1.0f, 225.99574461357759f, isMoreThanHalf = true, isPositiveArc = false, 6.343f, 19.071f)
                     lineTo(12.0f, 13.414f)
                     lineTo(17.657f, 19.070999999999998f)
-                    arcTo(1.0f, 1.0f, 135.99574461357543f, isMoreThanHalf = true, isPositiveArc = false, 19.071f, 17.656999999999996f)
+                    arcTo(1.0f, 1.0f, 134.00425538642457f, isMoreThanHalf = false, isPositiveArc = false, 19.071f, 17.656999999999996f)
                     lineTo(13.414f, 12.0f)
                     close()
                 }

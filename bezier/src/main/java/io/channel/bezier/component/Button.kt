@@ -39,6 +39,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.compose.R
+import io.channel.bezier.interaction.BezierComponentInteraction
 
 @Composable
 fun Button(
@@ -77,6 +78,7 @@ fun Button(
                             indication = indication,
                             enabled = enabled,
                     ) {
+                        BezierComponentInteraction.notify("Button", "V1", text)
                         onClick.invoke()
                     }
                     .padding(

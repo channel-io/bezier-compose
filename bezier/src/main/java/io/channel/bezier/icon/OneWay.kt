@@ -37,15 +37,15 @@ val BezierIcons.OneWay: BezierIcon
                         strokeLineWidth = 1f,
                 ) {
                     moveTo(6.22f, 8.365f)
-                    arcTo(0.8f, 0.8f, 225.06935656292802f, isMoreThanHalf = false, isPositiveArc = true, 7.585f, 8.932f)
-                    lineTo(7.585f, 11.0f)
-                    lineTo(20.001f, 11.0f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 20.001f, 13.0f)
-                    lineTo(7.584f, 13.0f)
-                    lineTo(7.584f, 15.068999999999999f)
-                    arcTo(0.8f, 0.8f, 0.09803685975767427f, isMoreThanHalf = false, isPositiveArc = true, 6.218999999999999f, 15.633999999999999f)
-                    lineTo(3.2909999999999995f, 12.706999999999999f)
-                    arcTo(1.0f, 1.0f, 135.00865166283802f, isMoreThanHalf = false, isPositiveArc = true, 3.2909999999999995f, 11.293f)
+                    curveTo(6.724f, 7.861000000000001f, 7.586f, 8.219f, 7.586f, 8.932f)
+                    lineTo(7.586f, 11.0f)
+                    lineTo(20.0f, 11.0f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = false, isPositiveArc = true, 20.0f, 13.0f)
+                    lineTo(7.586f, 13.0f)
+                    lineTo(7.586f, 15.068f)
+                    arcTo(0.8f, 0.8f, 359.9549101409432f, isMoreThanHalf = false, isPositiveArc = true, 6.220000000000001f, 15.634f)
+                    lineTo(3.2930000000000006f, 12.707f)
+                    arcTo(1.0f, 1.0f, 135.00865166283802f, isMoreThanHalf = false, isPositiveArc = true, 3.2930000000000006f, 11.293000000000001f)
                     close()
                 }
             }.build().also {

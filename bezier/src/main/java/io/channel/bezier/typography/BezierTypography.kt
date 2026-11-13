@@ -8,6 +8,7 @@ import io.channel.bezier.dimension.BezierLineHeight
 
 enum class BezierWeight {
     Regular,
+    Medium,
     Bold,
 }
 

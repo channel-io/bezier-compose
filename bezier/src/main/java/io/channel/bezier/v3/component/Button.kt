@@ -4,6 +4,7 @@ import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.PressInteraction
 import androidx.compose.foundation.interaction.collectIsPressedAsState
@@ -36,7 +37,9 @@ import io.channel.bezier.BezierIcon
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.component.BezierText
+import io.channel.bezier.dimension.BezierLetterSpacing
 import io.channel.bezier.icon.Plus
+import io.channel.bezier.interaction.BezierComponentInteraction
 import io.channel.bezier.typography.BezierTypo
 import io.channel.bezier.typography.BezierWeight
 
@@ -48,7 +51,6 @@ fun Button(
         size: ButtonSize = ButtonSize.Medium,
         variant: ButtonVariant = ButtonVariant.Filled,
         semantic: ButtonSemantic = ButtonSemantic.Primary,
-        isActive: Boolean = false,
         isLoading: Boolean = false,
         enabled: Boolean = true,
         leadingContent: BezierIcon? = null,
@@ -59,8 +61,11 @@ fun Button(
     val spec = size.spec
     val colorSpec = buttonColorSpec(variant, semantic)
     val isPressed by interactionSource.collectIsPressedAsState()
-    val showOverlay = (isPressed || isActive) && variant != ButtonVariant.Filled
+    val showOverlay = isPressed && variant != ButtonVariant.Filled
     val containerAlpha = if (enabled) 1f else 0.4f
+    val backgroundColor = colorSpec.background?.let { background ->
+        if (isLoading) background.copy(alpha = background.alpha * 0.4f) else background
+    }
 
     Box(
             modifier = modifier
@@ -69,7 +74,7 @@ fun Button(
                     .graphicsLayer(alpha = containerAlpha)
                     .clip(CircleShape)
                     .then(
-                            if (colorSpec.background != null) Modifier.background(colorSpec.background)
+                            if (backgroundColor != null) Modifier.background(backgroundColor)
                             else Modifier,
                     )
                     .then(
@@ -84,7 +89,10 @@ fun Button(
                             interactionSource = interactionSource,
                             indication = null,
                             enabled = enabled && !isLoading,
-                            onClick = onClick,
+                            onClick = {
+                                BezierComponentInteraction.notify("Button", "V3", text)
+                                onClick()
+                            },
                     )
                     .padding(horizontal = spec.horizontalPadding),
             contentAlignment = Alignment.Center,
@@ -98,7 +106,7 @@ fun Button(
                 Icon(
                         modifier = Modifier.size(ButtonIconLength),
                         imageVector = leadingContent.imageVector,
-                        tint = colorSpec.iconColor,
+                        tint = colorSpec.textColor,
                         contentDescription = null,
                 )
             }
@@ -108,15 +116,16 @@ fun Button(
                 BezierText(
                         text = text,
                         typo = size.typo,
-                        weight = BezierWeight.Bold,
+                        weight = size.weight,
                         color = colorSpec.textColor,
+                        letterSpacing = BezierLetterSpacing.Normal,
                 )
             }
             if (trailingContent != null) {
                 Icon(
                         modifier = Modifier.size(ButtonIconLength),
                         imageVector = trailingContent.imageVector,
-                        tint = colorSpec.iconColor,
+                        tint = colorSpec.textColor,
                         contentDescription = null,
                 )
             }
@@ -124,11 +133,7 @@ fun Button(
         if (isLoading) {
             Spinner(
                     size = size.spinnerSize,
-                    color = if (variant == ButtonVariant.Filled) {
-                        BezierTheme.colorsV3.fillBright
-                    } else {
-                        colorSpec.textColor
-                    },
+                    color = colorSpec.textColor,
             )
         }
     }
@@ -195,6 +200,12 @@ enum class ButtonSize {
             Xlarge -> BezierTypo.TextXLarge
         }
 
+    internal val weight: BezierWeight
+        get() = when (this) {
+            Xsmall, Small, Medium -> BezierWeight.Bold
+            Large, Xlarge -> BezierWeight.Medium
+        }
+
     internal val spinnerSize: SpinnerSize
         get() = when (this) {
             Xsmall -> SpinnerSize.Size12
@@ -228,7 +239,6 @@ internal data class ButtonLayoutSpec(
 internal data class ButtonColorSpec(
         val background: Color?,
         val textColor: Color,
-        val iconColor: Color,
         val border: Color?,
 )
 
@@ -240,21 +250,18 @@ internal fun buttonColorSpec(variant: ButtonVariant, semantic: ButtonSemantic): 
             ButtonSemantic.Primary -> ButtonColorSpec(
                     background = colors.fillNeutralHeaviest,
                     textColor = colors.textInverse,
-                    iconColor = colors.iconInverseHeavier,
                     border = null,
             )
 
             ButtonSemantic.Secondary -> ButtonColorSpec(
                     background = colors.fillNeutral,
                     textColor = colors.textNeutral,
-                    iconColor = colors.iconNeutralHeavy,
                     border = null,
             )
 
             ButtonSemantic.Destructive -> ButtonColorSpec(
                     background = colors.fillAccentRedHeavier,
-                    textColor = colors.textInverse,
-                    iconColor = colors.iconInverseHeavier,
+                    textColor = colors.textAbsoluteWhite,
                     border = null,
             )
         }
@@ -263,21 +270,18 @@ internal fun buttonColorSpec(variant: ButtonVariant, semantic: ButtonSemantic): 
             ButtonSemantic.Primary -> ButtonColorSpec(
                     background = null,
                     textColor = colors.textNeutralHeaviest,
-                    iconColor = colors.iconNeutralHeavier,
                     border = colors.borderNeutral,
             )
 
             ButtonSemantic.Secondary -> ButtonColorSpec(
                     background = null,
                     textColor = colors.textNeutralLight,
-                    iconColor = colors.iconNeutral,
                     border = colors.borderNeutral,
             )
 
             ButtonSemantic.Destructive -> ButtonColorSpec(
                     background = null,
                     textColor = colors.textAccentRed,
-                    iconColor = colors.iconAccentRed,
                     border = colors.borderNeutral,
             )
         }
@@ -286,21 +290,18 @@ internal fun buttonColorSpec(variant: ButtonVariant, semantic: ButtonSemantic): 
             ButtonSemantic.Primary -> ButtonColorSpec(
                     background = null,
                     textColor = colors.textNeutralLight,
-                    iconColor = colors.iconNeutralHeavy,
                     border = null,
             )
 
             ButtonSemantic.Secondary -> ButtonColorSpec(
                     background = null,
                     textColor = colors.textNeutralLighter,
-                    iconColor = colors.iconNeutral,
                     border = null,
             )
 
             ButtonSemantic.Destructive -> ButtonColorSpec(
                     background = null,
                     textColor = colors.textAccentRed,
-                    iconColor = colors.iconAccentRed,
                     border = null,
             )
         }
@@ -321,7 +322,7 @@ private fun ButtonMatrix(size: ButtonSize, sizeLabel: String) {
     val labelColWidth = 88.dp
     val cellWidth = 132.dp
 
-    BezierTheme {
+    BezierTheme(isDark = isSystemInDarkTheme()) {
         Column(
                 modifier = Modifier
                         .background(BezierTheme.colorsV3.surface)
@@ -330,7 +331,7 @@ private fun ButtonMatrix(size: ButtonSize, sizeLabel: String) {
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Box(modifier = Modifier.width(labelColWidth * 3))
-                listOf("default", "pressed", "active", "disabled", "loading").forEach { stateLabel ->
+                listOf("default", "pressed", "disabled", "loading").forEach { stateLabel ->
                     Box(
                             modifier = Modifier.width(cellWidth),
                             contentAlignment = Alignment.Center,
@@ -403,18 +404,6 @@ private fun ButtonMatrix(size: ButtonSize, sizeLabel: String) {
                                     leadingContent = BezierIcons.Plus,
                                     trailingContent = BezierIcons.Plus,
                                     interactionSource = pressedInteractionSource(),
-                            )
-                        }
-                        ButtonStateCell(cellWidth) {
-                            Button(
-                                    text = "Label",
-                                    onClick = {},
-                                    size = size,
-                                    variant = variant,
-                                    semantic = semantic,
-                                    leadingContent = BezierIcons.Plus,
-                                    trailingContent = BezierIcons.Plus,
-                                    isActive = true,
                             )
                         }
                         ButtonStateCell(cellWidth) {

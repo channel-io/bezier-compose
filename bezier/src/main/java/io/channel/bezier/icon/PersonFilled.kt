@@ -38,12 +38,12 @@ val BezierIcons.PersonFilled: BezierIcon
                 ) {
                     moveTo(11.987f, 12.0f)
                     curveTo(17.335f, 12.0f, 21.701999999999998f, 16.198f, 21.974f, 21.478f)
-                    arcTo(0.507f, 0.507f, 358.30460570617333f, isMoreThanHalf = false, isPositiveArc = true, 21.467f, 22.0f)
-                    lineTo(2.508f, 22.0f)
-                    arcTo(0.507f, 0.507f, 89.86190396704419f, isMoreThanHalf = false, isPositiveArc = true, 2.0f, 21.478f)
+                    arcTo(0.51f, 0.51f, 358.65083928450997f, isMoreThanHalf = false, isPositiveArc = true, 21.467f, 22.0f)
+                    lineTo(2.507f, 22.0f)
+                    arcTo(0.507f, 0.507f, 90.08792591853587f, isMoreThanHalf = false, isPositiveArc = true, 2.0010000000000003f, 21.478f)
                     curveTo(2.272f, 16.198f, 6.64f, 12.0f, 11.987f, 12.0f)
                     moveTo(11.987f, 2.0f)
-                    arcTo(4.5f, 4.5f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 11.987f, 11.002f)
+                    arcTo(4.5f, 4.5f, 270.0f, isMoreThanHalf = true, isPositiveArc = true, 11.987f, 11.0f)
                     arcTo(4.5f, 4.5f, 90.0f, isMoreThanHalf = false, isPositiveArc = true, 11.987f, 2.0f)
                 }
             }.build().also {

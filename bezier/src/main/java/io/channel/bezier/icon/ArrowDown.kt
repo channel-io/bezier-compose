@@ -36,18 +36,18 @@ val BezierIcons.ArrowDown: BezierIcon
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
-                    moveTo(10.986f, 20.773f)
-                    arcTo(1.5f, 1.5f, 133.23560714898218f, isMoreThanHalf = false, isPositiveArc = false, 13.041f, 20.773f)
-                    lineTo(20.698f, 13.577f)
-                    arcTo(1.0f, 1.0f, 48.35026838514163f, isMoreThanHalf = true, isPositiveArc = false, 19.329f, 12.12f)
-                    lineTo(12.996f, 18.07f)
-                    quadTo(13.0f, 18.036f, 13.0f, 18.0f)
+                    moveTo(10.987f, 20.773f)
+                    arcTo(1.5f, 1.5f, 133.18320012524003f, isMoreThanHalf = false, isPositiveArc = false, 13.04f, 20.773f)
+                    lineTo(20.698999999999998f, 13.576f)
+                    arcTo(1.0f, 1.0f, 47.21657521144042f, isMoreThanHalf = true, isPositiveArc = false, 19.328999999999997f, 12.119f)
+                    lineTo(12.994999999999997f, 18.07f)
+                    quadTo(13.0f, 18.037f, 13.0f, 18.0f)
                     lineTo(13.0f, 4.0f)
                     arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = false, 11.0f, 4.0f)
                     lineTo(11.0f, 18.0f)
-                    lineTo(11.002f, 18.044f)
-                    lineTo(4.698f, 12.120000000000001f)
-                    arcTo(1.0f, 1.0f, 314.7831064216941f, isMoreThanHalf = true, isPositiveArc = false, 3.3290000000000006f, 13.577000000000002f)
+                    lineTo(11.002f, 18.043f)
+                    lineTo(4.698f, 12.119f)
+                    arcTo(1.0f, 1.0f, 312.78342478855734f, isMoreThanHalf = false, isPositiveArc = false, 3.3280000000000003f, 13.576f)
                     close()
                 }
             }.build().also {

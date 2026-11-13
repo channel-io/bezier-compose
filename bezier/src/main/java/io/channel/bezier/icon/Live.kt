@@ -75,7 +75,7 @@ val BezierIcons.Live: BezierIcon
                     lineTo(15.436000000000002f, 8.803f)
                     arcTo(0.25f, 0.25f, 12.239801815537781f, isMoreThanHalf = false, isPositiveArc = false, 15.191000000000003f, 8.5f)
                     lineTo(14.212000000000003f, 8.5f)
-                    arcTo(0.25f, 0.25f, 270.0505877384129f, isMoreThanHalf = false, isPositiveArc = false, 13.965000000000003f, 8.71f)
+                    arcTo(0.25f, 0.25f, 270.08820483679796f, isMoreThanHalf = false, isPositiveArc = false, 13.965000000000003f, 8.709f)
                     lineTo(13.300000000000004f, 12.704f)
                     curveTo(13.290000000000004f, 12.76f, 13.210000000000004f, 12.76f, 13.200000000000005f, 12.704f)
                     lineTo(12.535000000000004f, 8.709f)

@@ -72,7 +72,7 @@ val BezierIcons.GoalOff: BezierIcon
                     curveTo(22.0f, 6.486f, 17.514f, 2.0f, 12.0f, 2.0f)
                     curveTo(9.55f, 2.0f, 7.303f, 2.886f, 5.562f, 4.354f)
                     lineTo(4.122f, 2.9130000000000003f)
-                    arcTo(1.0f, 1.0f, 315.0202524107195f, isMoreThanHalf = false, isPositiveArc = false, 2.707f, 4.327f)
+                    arcTo(1.0f, 1.0f, 315.0202536176487f, isMoreThanHalf = true, isPositiveArc = false, 2.707f, 4.327f)
                     lineTo(19.677f, 21.296999999999997f)
                     arcTo(1.0f, 1.0f, 134.04560044921752f, isMoreThanHalf = false, isPositiveArc = false, 21.092f, 19.883999999999997f)
                     close()

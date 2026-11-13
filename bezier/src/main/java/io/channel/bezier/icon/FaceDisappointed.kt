@@ -36,7 +36,7 @@ val BezierIcons.FaceDisappointed: BezierIcon
                         fill = SolidColor(Color(0xFF000000)),
                         strokeLineWidth = 1f,
                 ) {
-                    moveTo(12.911f, 17.296f)
+                    moveTo(12.91f, 17.296f)
                     lineTo(12.974f, 17.354f)
                     lineTo(12.954f, 17.354f)
                     curveTo(12.762f, 17.291f, 12.452f, 17.247f, 12.003f, 17.247f)
@@ -53,9 +53,9 @@ val BezierIcons.FaceDisappointed: BezierIcon
                     moveTo(9.449f, 5.886f)
                     lineTo(9.423f, 5.936f)
                     curveTo(9.359f, 6.046f, 9.215f, 6.236f, 8.977f, 6.435f)
-                    curveTo(8.481f, 6.853f, 7.797000000000001f, 7.108f, 6.854f, 7.108f)
-                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 6.854f, 9.108f)
-                    curveTo(8.274000000000001f, 9.108f, 9.413f, 8.683f, 10.265f, 7.965000000000001f)
+                    curveTo(8.481f, 6.853f, 7.797000000000001f, 7.108f, 6.853f, 7.108f)
+                    arcTo(1.0f, 1.0f, 270.0f, isMoreThanHalf = true, isPositiveArc = false, 6.853f, 9.108f)
+                    curveTo(8.274f, 9.108f, 9.413f, 8.683f, 10.265f, 7.965000000000001f)
                     curveTo(10.797f, 7.517f, 11.118f, 7.055000000000001f, 11.276f, 6.698f)
                     arcTo(1.0f, 1.0f, 25.458671453998306f, isMoreThanHalf = true, isPositiveArc = false, 9.449f, 5.886f)
                     moveTo(8.786f, 13.93f)

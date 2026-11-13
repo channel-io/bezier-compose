@@ -57,8 +57,8 @@ val BezierIcons.Strikethrough: BezierIcon
                     lineTo(11.215f, 11.0f)
                     arcTo(2.758f, 2.758f, 89.95684991474423f, isMoreThanHalf = false, isPositiveArc = true, 9.498f, 6.082f)
                     curveTo(11.378f, 4.577999999999999f, 14.128f, 4.808f, 15.701999999999998f, 6.607f)
-                    lineTo(15.746999999999998f, 6.658f)
-                    arcTo(1.0f, 1.0f, 138.8302395339639f, isMoreThanHalf = false, isPositiveArc = false, 17.252999999999997f, 5.341f)
+                    lineTo(15.746999999999998f, 6.659f)
+                    arcTo(1.0f, 1.0f, 138.8302395339639f, isMoreThanHalf = false, isPositiveArc = false, 17.252999999999997f, 5.342f)
                     close()
                 }
             }.build().also {

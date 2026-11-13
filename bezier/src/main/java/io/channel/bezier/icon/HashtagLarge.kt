@@ -56,7 +56,7 @@ val BezierIcons.HashtagLarge: BezierIcon
                     lineTo(13.545f, 17.0f)
                     lineTo(8.58f, 17.0f)
                     lineTo(7.9830000000000005f, 20.184f)
-                    arcTo(1.0f, 1.0f, 10.602059338331731f, isMoreThanHalf = false, isPositiveArc = true, 6.017f, 19.816000000000003f)
+                    arcTo(1.0f, 1.0f, 10.602057247325128f, isMoreThanHalf = true, isPositiveArc = true, 6.017f, 19.816000000000003f)
                     lineTo(6.545f, 17.0f)
                     lineTo(4.0f, 17.0f)
                     arcTo(1.0f, 1.0f, 90.0f, isMoreThanHalf = true, isPositiveArc = true, 4.0f, 15.0f)

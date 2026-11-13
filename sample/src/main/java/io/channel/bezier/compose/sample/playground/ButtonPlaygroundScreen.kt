@@ -37,7 +37,6 @@ fun ButtonPlaygroundScreen(onBack: () -> Unit) {
     var size by remember { mutableStateOf(ButtonSize.Medium) }
     var variant by remember { mutableStateOf(ButtonVariant.Filled) }
     var semantic by remember { mutableStateOf(ButtonSemantic.Primary) }
-    var isActive by remember { mutableStateOf(false) }
     var isLoading by remember { mutableStateOf(false) }
     var enabled by remember { mutableStateOf(true) }
     var showLeadingIcon by remember { mutableStateOf(true) }
@@ -78,7 +77,6 @@ fun ButtonPlaygroundScreen(onBack: () -> Unit) {
                         size = size,
                         variant = variant,
                         semantic = semantic,
-                        isActive = isActive,
                         isLoading = isLoading,
                         enabled = enabled,
                         leadingContent = if (showLeadingIcon) BezierIcons.Plus else null,
@@ -91,7 +89,6 @@ fun ButtonPlaygroundScreen(onBack: () -> Unit) {
             EnumControl("Size", ButtonSize.values(), size) { size = it }
             EnumControl("Variant", ButtonVariant.values(), variant) { variant = it }
             EnumControl("Semantic", ButtonSemantic.values(), semantic) { semantic = it }
-            BooleanControl("isActive", isActive) { isActive = it }
             BooleanControl("isLoading", isLoading) { isLoading = it }
             BooleanControl("enabled", enabled) { enabled = it }
             BooleanControl("leadingIcon", showLeadingIcon) { showLeadingIcon = it }

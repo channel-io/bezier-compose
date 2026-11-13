@@ -40,7 +40,7 @@ val BezierIcons.Lightbulb: BezierIcon
                     arcTo(6.04f, 6.04f, 257.88798632368105f, isMoreThanHalf = false, isPositiveArc = true, 15.782f, 6.3420000000000005f)
                     arcTo(5.98f, 5.98f, 308.9834368992529f, isMoreThanHalf = false, isPositiveArc = true, 18.0f, 11.0f)
                     arcTo(5.96f, 5.96f, 359.87121657863645f, isMoreThanHalf = false, isPositiveArc = true, 15.69f, 15.725f)
-                    curveTo(15.259f, 16.062f, 15.0f, 16.625f, 15.0f, 17.230999999999998f)
+                    curveTo(15.258f, 16.062f, 15.0f, 16.625f, 15.0f, 17.230999999999998f)
                     lineTo(15.0f, 21.0f)
                     arcTo(1.0f, 1.0f, 0.0f, isMoreThanHalf = false, isPositiveArc = true, 14.0f, 22.0f)
                     lineTo(10.0f, 22.0f)

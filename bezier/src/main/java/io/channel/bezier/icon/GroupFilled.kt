@@ -40,7 +40,7 @@ val BezierIcons.GroupFilled: BezierIcon
                     arcTo(8.0f, 8.0f, 270.0058768061088f, isMoreThanHalf = false, isPositiveArc = true, 16.967f, 19.476f)
                     arcTo(0.503f, 0.503f, 357.6058938815124f, isMoreThanHalf = false, isPositiveArc = true, 16.461f, 20.0f)
                     lineTo(1.507f, 20.0f)
-                    arcTo(0.503f, 0.503f, 89.60826099085968f, isMoreThanHalf = false, isPositiveArc = true, 1.001f, 19.476f)
+                    arcTo(0.504f, 0.504f, 89.72747930682036f, isMoreThanHalf = false, isPositiveArc = true, 1.001f, 19.476f)
                     arcTo(8.0f, 8.0f, 183.7555615890434f, isMoreThanHalf = false, isPositiveArc = true, 8.985f, 12.0f)
                     moveTo(16.485f, 13.5f)
                     arcTo(6.5f, 6.5f, 270.00815493169506f, isMoreThanHalf = false, isPositiveArc = true, 22.963f, 19.477f)

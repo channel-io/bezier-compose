@@ -4,14 +4,16 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.takeOrElse
 import io.channel.bezier.BezierTheme
-import io.channel.bezier.extension.ifTrue
 import io.channel.bezier.typography.BezierTypo
 import io.channel.bezier.typography.BezierWeight
 
@@ -27,27 +29,78 @@ fun BezierText(
     overflow: TextOverflow = TextOverflow.Clip,
     maxLines: Int = Int.MAX_VALUE,
     minLines: Int = 1,
+    letterSpacing: TextUnit = TextUnit.Unspecified,
 ) {
-    val resolvedWeight = typo.fixedWeight ?: when (weight) {
-        BezierWeight.Regular -> FontWeight.Normal
-        BezierWeight.Bold -> FontWeight.Bold
-    }
-
     Text(
         text = text,
         modifier = modifier,
-        style = TextStyle(
-            fontSize = typo.fontSize,
-            lineHeight = typo.lineHeight,
-            letterSpacing = typo.letterSpacing,
-            fontWeight = resolvedWeight,
-            fontFamily = typo.isMonospace.ifTrue(FontFamily.Monospace, null),
+        style = resolveBezierTextStyle(
+            typo = typo,
+            weight = weight,
             color = color,
-            textAlign = textAlign ?: TextAlign.Unspecified,
+            textAlign = textAlign,
             textDecoration = textDecoration,
+            letterSpacing = letterSpacing,
         ),
         overflow = overflow,
         maxLines = maxLines,
         minLines = minLines,
+    )
+}
+
+@Composable
+fun BezierText(
+    text: AnnotatedString,
+    typo: BezierTypo,
+    modifier: Modifier = Modifier,
+    weight: BezierWeight = BezierWeight.Regular,
+    color: Color = BezierTheme.colorsV3.textNeutral,
+    textAlign: TextAlign? = null,
+    textDecoration: TextDecoration? = null,
+    overflow: TextOverflow = TextOverflow.Clip,
+    maxLines: Int = Int.MAX_VALUE,
+    minLines: Int = 1,
+    letterSpacing: TextUnit = TextUnit.Unspecified,
+) {
+    Text(
+        text = text,
+        modifier = modifier,
+        style = resolveBezierTextStyle(
+            typo = typo,
+            weight = weight,
+            color = color,
+            textAlign = textAlign,
+            textDecoration = textDecoration,
+            letterSpacing = letterSpacing,
+        ),
+        overflow = overflow,
+        maxLines = maxLines,
+        minLines = minLines,
+    )
+}
+
+private fun resolveBezierTextStyle(
+    typo: BezierTypo,
+    weight: BezierWeight,
+    color: Color,
+    textAlign: TextAlign?,
+    textDecoration: TextDecoration?,
+    letterSpacing: TextUnit,
+): TextStyle {
+    val resolvedWeight = typo.fixedWeight ?: when (weight) {
+        BezierWeight.Regular -> FontWeight.Normal
+        BezierWeight.Medium -> FontWeight.Medium
+        BezierWeight.Bold -> FontWeight.Bold
+    }
+
+    return TextStyle(
+        fontSize = typo.fontSize,
+        lineHeight = typo.lineHeight,
+        letterSpacing = letterSpacing.takeOrElse { typo.letterSpacing },
+        fontWeight = resolvedWeight,
+        fontFamily = if (typo.isMonospace) FontFamily.Monospace else null,
+        color = color,
+        textAlign = textAlign ?: TextAlign.Unspecified,
+        textDecoration = textDecoration,
     )
 }

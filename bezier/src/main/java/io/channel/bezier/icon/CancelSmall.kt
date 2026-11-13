@@ -47,7 +47,7 @@ val BezierIcons.CancelSmall: BezierIcon
                     arcTo(1.0f, 1.0f, 225.99574461357642f, isMoreThanHalf = true, isPositiveArc = false, 8.464f, 16.949f)
                     lineTo(12.0f, 13.414f)
                     lineTo(15.536f, 16.95f)
-                    arcTo(1.0f, 1.0f, 134.97974638235135f, isMoreThanHalf = false, isPositiveArc = false, 16.95f, 15.535f)
+                    arcTo(1.0f, 1.0f, 134.97974758928052f, isMoreThanHalf = true, isPositiveArc = false, 16.95f, 15.535f)
                     lineTo(13.414f, 12.0f)
                     close()
                 }
