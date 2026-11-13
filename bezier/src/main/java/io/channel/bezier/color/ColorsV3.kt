@@ -2,6 +2,8 @@ package io.channel.bezier.color
 
 import androidx.compose.ui.graphics.Color
 
+// core-bezier-system 의 specs/tokens 에서 자동 생성된 파일입니다. 직접 수정하지 마세요.
+
 interface BezierSemanticColorV3 {
     val borderAbsoluteWhite: Color
     val borderDetach: Color
@@ -17,7 +19,7 @@ interface BezierSemanticColorV3 {
     val dimAbsoluteWhite: Color
     val dimAbsoluteWhiteHeavy: Color
     val elevationBase: Color
-    val elevationBase_inner: Color
+    val elevationBaseInner: Color
     val elevationLarge: Color
     val elevationMedium: Color
     val elevationSmall: Color
@@ -82,9 +84,9 @@ interface BezierSemanticColorV3 {
     val fillCriticalLighter: Color
     val fillCriticalTransparent: Color
     val fillGrey: Color
-    val fillGreyLight: Color
     val fillGreyHeavier: Color
     val fillGreyHeavy: Color
+    val fillGreyLight: Color
     val fillHighlight: Color
     val fillHighlightLight: Color
     val fillHighlightLighter: Color
@@ -105,8 +107,6 @@ interface BezierSemanticColorV3 {
     val fillWarningLight: Color
     val fillWarningLighter: Color
     val fillWarningTransparent: Color
-    val gradientAccentGreen: Color
-    val gradientAccentGreen_light: Color
     val iconAbsoluteBlack: Color
     val iconAbsoluteWhite: Color
     val iconAccentBlue: Color
@@ -129,12 +129,10 @@ interface BezierSemanticColorV3 {
     val iconNeutralHeavy: Color
     val iconSuccess: Color
     val iconWarning: Color
-    val stateAction: Color
-    val stateActionLight: Color
     val stateActive: Color
     val stateDefault: Color
+    val stateFocus: Color
     val stateWarning: Color
-    val stateWarningLight: Color
     val surface: Color
     val surfaceGlass: Color
     val surfaceGlassHigh: Color
@@ -167,7 +165,6 @@ interface BezierSemanticColorV3 {
     val textNeutralLighter: Color
     val textSuccess: Color
     val textWarning: Color
-
 }
 
 internal class LightColor : BezierSemanticColorV3 {
@@ -185,7 +182,7 @@ internal class LightColor : BezierSemanticColorV3 {
     override val dimAbsoluteWhite = BezierGlobalColor.White40
     override val dimAbsoluteWhiteHeavy = BezierGlobalColor.White60
     override val elevationBase = BezierGlobalColor.Black5
-    override val elevationBase_inner = BezierGlobalColor.White12
+    override val elevationBaseInner = BezierGlobalColor.White12
     override val elevationLarge = BezierGlobalColor.Black22
     override val elevationMedium = BezierGlobalColor.Black15
     override val elevationSmall = BezierGlobalColor.Black8
@@ -250,9 +247,9 @@ internal class LightColor : BezierSemanticColorV3 {
     override val fillCriticalLighter = BezierGlobalColor.Red400_10
     override val fillCriticalTransparent = BezierGlobalColor.Red400_0
     override val fillGrey = BezierGlobalColor.Grey50
-    override val fillGreyLight: Color = BezierGlobalColor.Grey25
     override val fillGreyHeavier = BezierGlobalColor.Grey200
     override val fillGreyHeavy = BezierGlobalColor.Grey100
+    override val fillGreyLight = BezierGlobalColor.Grey25
     override val fillHighlight = BezierGlobalColor.Cobalt400
     override val fillHighlightLight = BezierGlobalColor.Cobalt400_20
     override val fillHighlightLighter = BezierGlobalColor.Cobalt400_10
@@ -273,8 +270,6 @@ internal class LightColor : BezierSemanticColorV3 {
     override val fillWarningLight = BezierGlobalColor.Orange400_20
     override val fillWarningLighter = BezierGlobalColor.Orange400_10
     override val fillWarningTransparent = BezierGlobalColor.Orange400_0
-    override val gradientAccentGreen = BezierGlobalColor.Green400
-    override val gradientAccentGreen_light = BezierGlobalColor.Green300
     override val iconAbsoluteBlack = BezierGlobalColor.Black100
     override val iconAbsoluteWhite = BezierGlobalColor.White100
     override val iconAccentBlue = BezierGlobalColor.Blue400
@@ -297,12 +292,10 @@ internal class LightColor : BezierSemanticColorV3 {
     override val iconNeutralHeavy = BezierGlobalColor.Black60
     override val iconSuccess = BezierGlobalColor.Green400
     override val iconWarning = BezierGlobalColor.Orange400
-    override val stateAction = BezierGlobalColor.Blue400
-    override val stateActionLight = BezierGlobalColor.Blue400_30
     override val stateActive = BezierGlobalColor.Black85
     override val stateDefault = BezierGlobalColor.Black15
+    override val stateFocus = BezierGlobalColor.Black40
     override val stateWarning = BezierGlobalColor.Orange400
-    override val stateWarningLight = BezierGlobalColor.Orange400_30
     override val surface = BezierGlobalColor.White100
     override val surfaceGlass = BezierGlobalColor.White90
     override val surfaceGlassHigh = BezierGlobalColor.White90
@@ -352,7 +345,7 @@ internal class DarkColor : BezierSemanticColorV3 {
     override val dimAbsoluteWhite = BezierGlobalColor.White40
     override val dimAbsoluteWhiteHeavy = BezierGlobalColor.White80
     override val elevationBase = BezierGlobalColor.Black5
-    override val elevationBase_inner = BezierGlobalColor.White12
+    override val elevationBaseInner = BezierGlobalColor.White12
     override val elevationLarge = BezierGlobalColor.Black22
     override val elevationMedium = BezierGlobalColor.Black15
     override val elevationSmall = BezierGlobalColor.Black8
@@ -417,16 +410,16 @@ internal class DarkColor : BezierSemanticColorV3 {
     override val fillCriticalLighter = BezierGlobalColor.Red300_18
     override val fillCriticalTransparent = BezierGlobalColor.Red300_0
     override val fillGrey = BezierGlobalColor.Grey850
-    override val fillGreyLight: Color = BezierGlobalColor.Grey900
     override val fillGreyHeavier = BezierGlobalColor.Grey750
     override val fillGreyHeavy = BezierGlobalColor.Grey800
+    override val fillGreyLight = BezierGlobalColor.Grey900
     override val fillHighlight = BezierGlobalColor.Cobalt300
     override val fillHighlightLight = BezierGlobalColor.Cobalt300_30
     override val fillHighlightLighter = BezierGlobalColor.Cobalt300_18
     override val fillHighlightTransparent = BezierGlobalColor.Cobalt300_0
     override val fillNeutral = BezierGlobalColor.White12
     override val fillNeutralHeavier = BezierGlobalColor.White40
-    override val fillNeutralHeaviest = BezierGlobalColor.White90
+    override val fillNeutralHeaviest = BezierGlobalColor.White100
     override val fillNeutralHeavy = BezierGlobalColor.White20
     override val fillNeutralLight = BezierGlobalColor.White8
     override val fillNeutralLighter = BezierGlobalColor.White5
@@ -440,8 +433,6 @@ internal class DarkColor : BezierSemanticColorV3 {
     override val fillWarningLight = BezierGlobalColor.Orange300_30
     override val fillWarningLighter = BezierGlobalColor.Orange300_18
     override val fillWarningTransparent = BezierGlobalColor.Orange300_0
-    override val gradientAccentGreen = BezierGlobalColor.Green400
-    override val gradientAccentGreen_light = BezierGlobalColor.Green300
     override val iconAbsoluteBlack = BezierGlobalColor.Black100
     override val iconAbsoluteWhite = BezierGlobalColor.White100
     override val iconAccentBlue = BezierGlobalColor.Blue300
@@ -464,12 +455,10 @@ internal class DarkColor : BezierSemanticColorV3 {
     override val iconNeutralHeavy = BezierGlobalColor.White60
     override val iconSuccess = BezierGlobalColor.Green300
     override val iconWarning = BezierGlobalColor.Orange300
-    override val stateAction = BezierGlobalColor.Blue300
-    override val stateActionLight = BezierGlobalColor.Blue300_45
-    override val stateActive = BezierGlobalColor.White80
+    override val stateActive = BezierGlobalColor.White40
     override val stateDefault = BezierGlobalColor.White20
+    override val stateFocus = BezierGlobalColor.White40
     override val stateWarning = BezierGlobalColor.Orange300
-    override val stateWarningLight = BezierGlobalColor.Orange300
     override val surface = BezierGlobalColor.Grey900
     override val surfaceGlass = BezierGlobalColor.Grey800_90
     override val surfaceGlassHigh = BezierGlobalColor.Grey850_90
