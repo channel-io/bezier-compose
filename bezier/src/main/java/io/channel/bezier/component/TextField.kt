@@ -287,22 +287,11 @@ fun TextField(
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         cursorBrush: Brush = SolidColor(textColor),
 ) {
-    // BasicTextField String 오버로드의 코드를 일부 참고했습니다. BasicTextField와 코드가 다른 이유는 단순하게
-    //   BasicTextField String 오버로드의 코드가 정확하게 무슨 일을 하는지 몰라서이므로 이게 명확해졌을 때는
-    //   넣어도 좋습니다.
-    var textFieldValueState by remember { mutableStateOf(TextFieldValue(text = value)) }
-    val textFieldValue = textFieldValueState.copy(text = value)
+    val (textFieldValue, onTextFieldValueChange) = rememberStringTextFieldValue(value, onValueChange)
 
     TextField(
             value = textFieldValue,
-            onValueChange = {
-                val lastText = textFieldValue.text
-                textFieldValueState = it
-
-                if (lastText != it.text) {
-                    onValueChange(it.text)
-                }
-            },
+            onValueChange = onTextFieldValueChange,
             modifier = modifier,
             type = type,
             size = size,

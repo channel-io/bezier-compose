@@ -40,6 +40,7 @@ import androidx.compose.ui.unit.dp
 import io.channel.bezier.BezierIcons
 import io.channel.bezier.BezierTheme
 import io.channel.bezier.component.BezierText
+import io.channel.bezier.component.rememberStringTextFieldValue
 import io.channel.bezier.icon.CancelCircleFilled
 import io.channel.bezier.icon.Search
 import io.channel.bezier.interaction.BezierComponentInteraction
@@ -89,6 +90,8 @@ fun Search(
         )
     }
 
+    val (textFieldValue, onTextFieldValueChange) = rememberStringTextFieldValue(value, onValueChange)
+
     Row(
             modifier = modifier
                     .height(Height)
@@ -99,8 +102,8 @@ fun Search(
             horizontalArrangement = Arrangement.spacedBy(FieldGap),
     ) {
         BasicTextField(
-                value = value,
-                onValueChange = onValueChange,
+                value = textFieldValue,
+                onValueChange = onTextFieldValueChange,
                 modifier = Modifier
                         .weight(1f)
                         .fillMaxHeight()
