@@ -1,23 +1,16 @@
 package io.channel.bezier.shape
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.size
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Outline
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
+import kotlin.math.PI
 import kotlin.math.abs
 import kotlin.math.ceil
 import kotlin.math.cos
@@ -30,7 +23,7 @@ import kotlin.math.sqrt
 
 private val Sqrt2 = sqrt(2f)
 private const val Iterations = 360
-private const val PiFloat = Math.PI.toFloat()
+private const val PiFloat = PI.toFloat()
 
 /**
  * @param radius 부드럽게 할 모서리의 반지름입니다. 기반이 되는 Superellipse의 정의에서는 반지름을 파라미터로 받지 않기
@@ -208,93 +201,4 @@ private class Superellipse(
 
 private enum class SuperellipseDirection {
     BottomRight, BottomLeft, TopRight, TopLeft;
-}
-
-@Preview
-@Composable
-private fun SmoothCornerPreview1() {
-    SquareSmoothCornerPreviewHelper(shape = SmoothRoundedCornerShape(radius = 16.dp))
-}
-
-@Preview
-@Composable
-private fun SmoothCornerPreview2() {
-    SquareSmoothCornerPreviewHelper(shape = SmoothRoundedCornerShape(radius = 16.dp, smoothTopLeft = false))
-}
-
-@Preview
-@Composable
-private fun SmoothCornerPreview3() {
-    SquareSmoothCornerPreviewHelper(
-            shape = SmoothRoundedCornerShape(
-                    radius = 16.dp,
-                    smoothTopLeft = false,
-                    smoothTopRight = false,
-                    smoothBottomRight = false,
-                    smoothBottomLeft = false,
-            ),
-    )
-}
-
-@Preview
-@Composable
-private fun SmoothCornerPreview4() {
-    SquareSmoothCornerPreviewHelper(shape = SmoothRoundedCornerShape(radius = 16.dp))
-}
-
-@Preview
-@Composable
-private fun SmoothCornerPreview5() {
-    RectangleSmoothCornerPreviewHelper(
-            shape = SmoothRoundedCornerShape(
-                    radius = 16.dp,
-                    smoothBottomRight = false,
-                    smoothBottomLeft = false,
-            ),
-    )
-}
-
-@Preview
-@Composable
-private fun SmoothCornerPreview6() {
-    RectangleSmoothCornerPreviewHelper(shape = SmoothRoundedCornerShape(radius = 16.dp))
-}
-
-@Preview
-@Composable
-private fun SmoothCornerPreview7() {
-    RectangleSmoothCornerPreviewHelper(shape = SmoothRoundedCornerShape(bottomLeftRadius = 16.dp, bottomRightRadius = 16.dp))
-}
-
-@Preview
-@Composable
-private fun SmoothCornerPreview8() {
-    RectangleSmoothCornerPreviewHelper(
-            shape = SmoothRoundedCornerShape(
-                    bottomLeftRadius = 16.dp,
-                    bottomRightRadius = 16.dp,
-                    topLeftRadius = 1.dp,
-                    topRightRadius = 1.dp,
-            ),
-    )
-}
-
-@Composable
-private fun SquareSmoothCornerPreviewHelper(shape: Shape) {
-    Box(
-            modifier = Modifier
-                    .size(36.dp)
-                    .clip(shape)
-                    .background(Color.Yellow),
-    )
-}
-
-@Composable
-private fun RectangleSmoothCornerPreviewHelper(shape: Shape) {
-    Box(
-            modifier = Modifier
-                    .size(width = 36.dp, height = 100.dp)
-                    .clip(shape)
-                    .background(Color.Yellow),
-    )
 }

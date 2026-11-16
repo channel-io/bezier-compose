@@ -27,3 +27,4 @@ data object ModalPlaygroundKey
 data object ConfirmModalPlaygroundKey
 data object SearchPlaygroundKey
 data object DropdownMenuPlaygroundKey
+data object BottomSheetContentPlaygroundKey

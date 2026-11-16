@@ -51,7 +51,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntRect
 import androidx.compose.ui.unit.IntSize
@@ -150,7 +149,6 @@ private fun DropdownMenuOverlay(
                 radius = OverlayShadowRadius,
                 color = elevationColor,
                 spread = 0.dp,
-                offset = DpOffset(0.dp, OverlayShadowOffsetY),
         )
     }
 
@@ -374,8 +372,7 @@ private val OverlayMinWidth: Dp = 160.dp
 private val OverlayMaxWidth: Dp = 280.dp
 private val OverlayPadding: Dp = 10.dp
 private val OverlayCornerRadius: Dp = 32.dp
-private val OverlayShadowRadius: Dp = 20.dp
-private val OverlayShadowOffsetY: Dp = 4.dp
+private val OverlayShadowRadius: Dp = 10.dp
 private val OverlayTriggerGap: Dp = 8.dp
 private val OverlayScreenMargin: Dp = 16.dp
 private val OverlayShape = RoundedCornerShape(OverlayCornerRadius)

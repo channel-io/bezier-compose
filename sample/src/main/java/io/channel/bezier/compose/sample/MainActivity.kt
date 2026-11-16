@@ -28,6 +28,8 @@ import io.channel.bezier.compose.sample.playground.BaseItemPlaygroundKey
 import io.channel.bezier.compose.sample.playground.BaseItemPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.ButtonPlaygroundKey
 import io.channel.bezier.compose.sample.playground.ButtonPlaygroundScreen
+import io.channel.bezier.compose.sample.playground.BottomSheetContentPlaygroundKey
+import io.channel.bezier.compose.sample.playground.BottomSheetContentPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.CardPlaygroundKey
 import io.channel.bezier.compose.sample.playground.CardPlaygroundScreen
 import io.channel.bezier.compose.sample.playground.CheckboxPlaygroundKey
@@ -128,6 +130,7 @@ private fun PlaygroundApp() {
                                     onSelectConfirmModal = { backStack.add(ConfirmModalPlaygroundKey) },
                                     onSelectSearch = { backStack.add(SearchPlaygroundKey) },
                                     onSelectDropdownMenu = { backStack.add(DropdownMenuPlaygroundKey) },
+                                    onSelectBottomSheetContent = { backStack.add(BottomSheetContentPlaygroundKey) },
                             )
                         }
                         entry<ButtonPlaygroundKey> {
@@ -207,6 +210,9 @@ private fun PlaygroundApp() {
                         }
                         entry<DropdownMenuPlaygroundKey> {
                             DropdownMenuPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
+                        }
+                        entry<BottomSheetContentPlaygroundKey> {
+                            BottomSheetContentPlaygroundScreen(onBack = { backStack.removeLastOrNull() })
                         }
                     },
             )

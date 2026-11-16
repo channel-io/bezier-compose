@@ -6,7 +6,7 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    // Kotlin/Wasm의 Node·Yarn 설치 작업은 프로젝트에 배포용 Ivy 저장소를 추가합니다.
     repositories {
         google()
         mavenCentral()
