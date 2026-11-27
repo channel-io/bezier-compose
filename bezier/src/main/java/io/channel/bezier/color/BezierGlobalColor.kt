@@ -2,6 +2,8 @@ package io.channel.bezier.color
 
 import androidx.compose.ui.graphics.Color
 
+// core-bezier-system 의 specs/tokens 에서 자동 생성된 파일입니다. 직접 수정하지 마세요.
+
 internal object BezierGlobalColor {
     val Black0: Color = Color(0x00000000)
     val Black1: Color = Color(0x03000000)
@@ -76,8 +78,8 @@ internal object BezierGlobalColor {
     val Grey300: Color = Color(0xFFE2E2E4)
     val Grey400: Color = Color(0xFFCFCFD1)
     val Grey50: Color = Color(0xFFFBFBFB)
-    val Grey50_80: Color = Color(0xCCFBFBFB)
     val Grey500: Color = Color(0xFFA7A7AA)
+    val Grey50_80: Color = Color(0xCCFBFBFB)
     val Grey600: Color = Color(0xFF79797E)
     val Grey650: Color = Color(0xFF5A5A5F)
     val Grey700: Color = Color(0xFF3B3B3F)
